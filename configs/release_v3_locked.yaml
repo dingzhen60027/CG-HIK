@@ -1,0 +1,43 @@
+protocol_version: release_v3_locked
+backend: torchscript_exact
+source_config: paper_v2.yaml
+latency_pilot_config: latency_pilot_v3.yaml
+latency_pilot_output: ../outputs/latency_pilot_v3
+output_directory: ../outputs/release_v3_locked
+
+robots: [panda, ur5e]
+training_seeds: [17, 29, 43]
+
+runtime:
+  device: cuda:0
+  dtype: float32
+  cuda_visible_devices: "0"
+  intra_op_threads: 8
+  inter_op_threads: 1
+
+validation:
+  point_split: risk_validation
+  point_queries_per_category: 150
+  point_sampling_seed: 7317
+  trajectory_split: seed_validation
+  trajectory_count: 8
+  trajectory_sampling_seed: 7318
+  warmup_iterations: 25
+  method_order_seed: 7319
+
+# Copied verbatim from configs/latency_pilot_v3.yaml.  The release runner
+# asserts equality with that file before exporting any artifact.
+equivalence:
+  seed_max_abs_tolerance: 0.000001
+  risk_probability_max_abs_tolerance: 0.000000000001
+  risk_score_max_abs_tolerance: 0.000000000001
+  routing_action_agreement_min: 1.0
+  metric_abs_tolerance: 0.000000000001
+  point_mean_function_evaluations_abs_tolerance: 0.05
+  trajectory_mean_function_evaluations_abs_tolerance: 0.01
+
+protected_outputs:
+  - paper_v2_*
+  - paper_v2_aggregate
+  - latency_pilot_v3
+

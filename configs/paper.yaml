@@ -1,0 +1,92 @@
+experiment_name: paper_v1
+output_root: ../outputs
+seed: 17
+device: cuda
+
+robots:
+  ur5e:
+    urdf: /home/eric/isaacsim/extsDeprecated/isaacsim.robot_motion.motion_generation/motion_policy_configs/universal_robots/ur5e/ur5e.urdf
+    base_link: base_link
+    end_link: tool0
+  panda:
+    urdf: /home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/robots/panda_arm.urdf
+    base_link: panda_link0
+    end_link: panda_link8
+
+data:
+  dt: 0.02
+  sigma_samples: 5000
+  seed_train: {trajectories: 2000, steps_per_trajectory: 100, seed: 101, margin: 0.1}
+  seed_validation: {trajectories: 200, steps_per_trajectory: 100, seed: 102, margin: 0.1}
+  risk_train: {samples: 60000, seed: 201, challenge_fraction: 0.6}
+  risk_validation: {samples: 20000, seed: 202, challenge_fraction: 0.6}
+  calibration: {samples: 20000, seed: 203, challenge_fraction: 0.6}
+  risk_test: {samples: 20000, seed: 204, challenge_fraction: 0.6}
+  test_id: {trajectories: 200, steps_per_trajectory: 100, seed: 301, margin: 0.1}
+
+seed_model:
+  members: 5
+  hidden_sizes: [256, 256, 256]
+  max_delta: 0.25
+  epochs: 30
+  batch_size: 1024
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  joint_loss_weight: 1.0
+  fk_position_weight: 0.1
+  fk_orientation_weight: 0.1
+  seed: 17
+
+solver:
+  position_tolerance: 0.001
+  orientation_tolerance: 0.00872664626
+  lambda_min: 0.0001
+  lambda_max: 0.1
+  max_joint_step: 0.1
+  orientation_weight: 0.35
+
+verifier:
+  position_tolerance: 0.001
+  orientation_tolerance: 0.00872664626
+  joint_limit_tolerance: 0.000000001
+  velocity_tolerance: 0.0001
+  enforce_velocity: true
+
+risk:
+  label_budget: 50
+
+gate:
+  easy_probability: 0.80
+  easy_fail_ceiling: 0.05
+  medium_fail_ceiling: 0.25
+  easy_iterations: 8
+  medium_candidates: 3
+  medium_iterations: 15
+  hard_candidates: 5
+  hard_iterations: 25
+
+fallback:
+  position_tolerance: 0.001
+  orientation_tolerance: 0.00872664626
+  orientation_weight: 0.35
+  max_function_evaluations: 100
+  seed_count: 3
+
+ablations:
+  enabled: true
+  fixed_damping: 0.01
+
+evaluation:
+  cpu_threads: 1
+  warmup_iterations: 1000
+  timing_repeats: 5
+  seed_bank_size: 100000
+  id_count: 20000
+  per_stress_category: 5000
+  test_seed: 9001
+  bootstrap_samples: 10000
+  paths:
+    paths_per_type: 25
+    steps: 200
+    seed: 9002
+    amplitude: 0.03

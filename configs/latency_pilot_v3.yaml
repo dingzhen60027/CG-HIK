@@ -1,0 +1,52 @@
+protocol_version: latency_pilot_v3
+source_config: paper_v2.yaml
+source_experiment: paper_v2_seed17
+training_seed: 17
+robots: [ur5e, panda]
+output_directory: ../outputs/latency_pilot_v3
+
+validation:
+  point_split: risk_validation
+  point_queries_per_category: 150
+  point_sampling_seed: 7317
+  trajectory_split: seed_validation
+  trajectory_count: 8
+  trajectory_sampling_seed: 7318
+  warmup_iterations: 200
+  point_timing_repeats: 3
+  method_order_seed: 7319
+
+thread_probe:
+  candidates:
+    - [1, 1]
+    - [2, 1]
+    - [4, 1]
+    - [8, 1]
+    - [1, 2]
+    - [2, 2]
+    - [1, 16]
+    - [16, 16]
+  warmup_iterations: 300
+  timing_repeats: 1200
+
+equivalence:
+  seed_max_abs_tolerance: 0.000001
+  risk_probability_max_abs_tolerance: 0.000000000001
+  risk_score_max_abs_tolerance: 0.000000000001
+  routing_action_agreement_min: 1.0
+  metric_abs_tolerance: 0.000000000001
+  point_mean_function_evaluations_abs_tolerance: 0.05
+  trajectory_mean_function_evaluations_abs_tolerance: 0.01
+
+validation_targets:
+  feasible_p95_ratio_max: 1.15
+  feasible_p95_reduction_vs_eager_min: 0.30
+  feasible_success_gap_min: -0.01
+  rejectable_rejection_min: 0.95
+  fail_auroc_min: 0.75
+  fail_ece_max: 0.10
+  false_reject_rate_max: 0.02
+  reject_recall_min: 0.95
+  nonreject_macro_f1_min: 0.30
+  trajectory_completion_gap_min: -0.10
+  trajectory_command_spike_max: 0.0

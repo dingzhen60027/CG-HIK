@@ -1,0 +1,73 @@
+experiment_name: smoke
+output_root: ../outputs
+seed: 17
+device: cpu
+
+robots:
+  toy:
+    urdf: ../tests/assets/toy_arm.urdf
+    base_link: base
+    end_link: tool
+
+data:
+  dt: 0.02
+  sigma_samples: 100
+  seed_train: {trajectories: 20, steps_per_trajectory: 10, seed: 101, margin: 0.1}
+  seed_validation: {trajectories: 4, steps_per_trajectory: 10, seed: 102, margin: 0.1}
+  risk_train: {samples: 160, seed: 201, challenge_fraction: 0.7}
+  risk_validation: {samples: 60, seed: 202, challenge_fraction: 0.7}
+  calibration: {samples: 60, seed: 203, challenge_fraction: 0.7}
+  risk_test: {samples: 80, seed: 204, challenge_fraction: 0.7}
+  test_id: {trajectories: 4, steps_per_trajectory: 10, seed: 301, margin: 0.1}
+
+seed_model:
+  members: 2
+  hidden_sizes: [32, 32]
+  max_delta: 0.25
+  epochs: 3
+  batch_size: 64
+  learning_rate: 0.002
+  fk_position_weight: 0.1
+  fk_orientation_weight: 0.1
+  seed: 17
+
+solver:
+  position_tolerance: 0.001
+  orientation_tolerance: 0.00872664626
+  lambda_min: 0.0001
+  lambda_max: 0.1
+  max_joint_step: 0.1
+  orientation_weight: 0.35
+
+verifier:
+  position_tolerance: 0.001
+  orientation_tolerance: 0.00872664626
+  enforce_velocity: true
+
+risk:
+  label_budget: 50
+
+gate: {}
+
+fallback:
+  max_function_evaluations: 100
+  seed_count: 3
+
+ablations:
+  enabled: false
+  fixed_damping: 0.01
+
+evaluation:
+  cpu_threads: 1
+  warmup_iterations: 5
+  timing_repeats: 1
+  seed_bank_size: 150
+  id_count: 8
+  per_stress_category: 4
+  test_seed: 9001
+  bootstrap_samples: 500
+  paths:
+    paths_per_type: 0
+    steps: 8
+    seed: 9002
+    amplitude: 0.005

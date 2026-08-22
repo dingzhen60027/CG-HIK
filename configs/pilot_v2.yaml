@@ -1,0 +1,108 @@
+protocol_version: 2
+experiment_name: pilot_v2_4
+output_root: ../outputs
+seed: 17
+device: cuda
+
+robots:
+  ur5e:
+    urdf: /home/eric/isaacsim/extsDeprecated/isaacsim.robot_motion.motion_generation/motion_policy_configs/universal_robots/ur5e/ur5e.urdf
+    base_link: base_link
+    end_link: tool0
+  panda:
+    urdf: /home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/robots/panda_arm.urdf
+    base_link: panda_link0
+    end_link: panda_link8
+
+data:
+  dt: 0.02
+  sigma_samples: 1000
+  seed_train: {trajectories: 300, steps_per_trajectory: 30, seed: 401, margin: 0.1}
+  seed_validation: {trajectories: 60, steps_per_trajectory: 20, seed: 402, margin: 0.1}
+  risk_train: {samples: 3000, seed: 4201, challenge_fraction: 0.55, hard_valid_fraction: 0.15}
+  risk_validation: {samples: 1000, seed: 4202, challenge_fraction: 0.55, hard_valid_fraction: 0.15}
+  calibration: {samples: 1000, seed: 4203, challenge_fraction: 0.55, hard_valid_fraction: 0.15}
+  policy_validation: {samples: 1000, seed: 4204, challenge_fraction: 0.55, hard_valid_fraction: 0.15}
+  risk_test: {samples: 1500, seed: 4205, challenge_fraction: 0.55, hard_valid_fraction: 0.15}
+  test_id: {trajectories: 200, steps_per_trajectory: 1, seed: 403, margin: 0.1}
+
+seed_model:
+  members: 5
+  hidden_sizes: [128, 128]
+  max_delta: 0.25
+  epochs: 5
+  batch_size: 1024
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  joint_loss_weight: 1.0
+  fk_position_weight: 0.1
+  fk_orientation_weight: 0.1
+  seed: 17
+
+seed_validation: {pose_samples: 600}
+
+solver:
+  position_tolerance: 0.001
+  orientation_tolerance: 0.00872664626
+  lambda_min: 0.0001
+  lambda_max: 0.1
+  max_joint_step: 0.1
+  orientation_weight: 0.35
+
+verifier:
+  position_tolerance: 0.001
+  orientation_tolerance: 0.00872664626
+  joint_limit_tolerance: 0.000000001
+  velocity_tolerance: 0.0001
+  enforce_velocity: true
+
+cascade:
+  easy_iterations: 1
+  medium_iterations: 1
+  hard_iterations: 25
+  hard_learned_candidates: 1
+  fallback_seed_count: 1
+  escalate_on_failure: true
+
+action_gate:
+  easy_probability: 0.70
+  hard_probability: 0.45
+  reject_probability: 0.85
+
+threshold_guard:
+  quantile_grid: [0.99, 0.995, 0.9975, 0.999, 0.9995, 1.0]
+
+policy_selection:
+  max_false_reject_rate: 0.01
+  min_reject_recall: 0.95
+  easy_probability_grid: [0.60, 0.70, 0.80]
+  hard_probability_grid: [0.35, 0.45, 0.55]
+  reject_probability_grid: [0.80, 0.85, 0.90, 0.95, 0.99]
+
+fallback:
+  position_tolerance: 0.001
+  orientation_tolerance: 0.00872664626
+  orientation_weight: 0.35
+  max_function_evaluations: 40
+
+ablations:
+  enabled: false
+  fixed_damping: 0.01
+
+evaluation:
+  cpu_threads: 1
+  warmup_iterations: 10
+  timing_repeats: 1
+  synchronize_cuda: true
+  method_order_seed: 9100
+  seed_bank_size: 5000
+  id_count: 200
+  per_stress_category: 100
+  hard_valid_count: 100
+  hard_valid_seed: 49010
+  test_seed: 49001
+  bootstrap_samples: 1000
+  reference_trajectories:
+    paths_per_type: 2
+    steps: 40
+    seed: 49020
