@@ -1,0 +1,86 @@
+protocol_version: test_v3_locked
+source_config: paper_v2.yaml
+release_directory: ../outputs/release_v3_locked
+aggregate_directory: ../outputs/test_v3_aggregate
+
+robots: [panda, ur5e]
+training_seeds: [17, 29, 43]
+backend: torchscript_exact
+
+runtime:
+  device: cuda:0
+  cuda_visible_devices: "0"
+  intra_op_threads: 8
+  inter_op_threads: 1
+
+data:
+  dt: 0.02
+  id_count: 5000
+  per_stress_category: 1000
+  hard_valid_count: 2000
+  trajectory_paths_per_type: 10
+  trajectory_steps: 150
+  hard_screening_release_seed: 17
+  hard_screening_easy_iterations: 1
+  hard_screening_robust_iterations: 25
+  expected_total_queries: 18000
+  expected_point_queries: 12000
+  expected_feasible_points: 10000
+  expected_rejectable_points: 2000
+  expected_trajectories: 40
+  seed_derivation: sha256_release_commit_robot_role_uint32
+
+timing:
+  warmup_iterations: 200
+  primary_point_repeats: 3
+  comparator_point_repeats: 1
+  method_order_seed_role: method_order
+  deadline_ms: 20.0
+  tail_thresholds_ms: [10.0, 20.0, 50.0, 100.0]
+  eager_diagnostic_enabled: true
+  eager_diagnostic_eligible_for_selection: false
+
+statistics:
+  bootstrap_samples: 10000
+  bootstrap_seed_role: bootstrap
+
+# Copied from the frozen paper_v2 claim gate.  These values are asserted by
+# the runner and are not selectable on test_v3.
+claim_gate:
+  feasible_success_gap_min: -0.01
+  rejectable_rejection_min: 0.95
+  feasible_fev_reduction_min: 0.10
+  feasible_p95_ratio_max: 1.25
+  rejectable_fev_reduction_min: 0.50
+  rejectable_latency_reduction_min: 0.50
+  fail_auroc_min: 0.75
+  fail_ece_max: 0.10
+  false_reject_rate_max: 0.02
+  reject_recall_min: 0.95
+  nonreject_macro_f1_min: 0.30
+  trajectory_completion_gap_min: -0.10
+  trajectory_command_spike_max: 0.0
+  threshold_success_gap_min: -0.01
+  threshold_fev_reduction_min: 0.05
+  threshold_p95_ratio_max: 1.25
+
+methods:
+  - dls_previous_1x50
+  - learned_1x25
+  - fixed_robust_cascade
+  - threshold_guard_cascade
+  - trf_previous
+  - proposed_v2
+  - ablation_no_history
+  - ablation_single_member
+  - ablation_no_uncertainty
+  - ablation_uncalibrated
+  - ablation_no_reject
+  - ablation_no_fallback
+  - ablation_fixed_damping
+
+protected_outputs:
+  - paper_v2_*
+  - paper_v2_aggregate
+  - latency_pilot_v3
+  - release_v3_locked
