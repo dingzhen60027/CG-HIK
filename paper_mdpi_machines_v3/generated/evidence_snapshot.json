@@ -1,0 +1,246 @@
+{
+  "formal_test": {
+    "paper_gate_pass": false,
+    "per_run_feasible_point_queries": 10000,
+    "per_run_point_queries": 12000,
+    "per_run_rejectable_point_queries": 2000,
+    "per_run_trajectories": 40,
+    "per_trajectory_frames": 150,
+    "robot_summary": {
+      "panda": {
+        "feasible_fev_reduction_mean": 0.28207275657960607,
+        "feasible_p95_reduction_mean": -0.356960727060944,
+        "reject_recall_range": [
+          0.9888947646747752,
+          0.9891563078550648
+        ],
+        "rejectable_fev_reduction_mean": 0.9998660857500405,
+        "rejectable_p95_reduction_mean": 0.9900142857229705,
+        "risk_auroc_range": [
+          0.9974047824332131,
+          0.9980001806469402
+        ],
+        "risk_ece_range": [
+          0.0009062130195996695,
+          0.0012342609648365067
+        ]
+      },
+      "ur5e": {
+        "feasible_fev_reduction_mean": 0.33743782617485335,
+        "feasible_p95_reduction_mean": -0.6028164354511321,
+        "reject_recall_range": [
+          0.9997326203208556,
+          0.9997326203208556
+        ],
+        "rejectable_fev_reduction_mean": 1.0,
+        "rejectable_p95_reduction_mean": 0.9777876004144928,
+        "risk_auroc_range": [
+          0.9999999506679559,
+          0.9999999835559853
+        ],
+        "risk_ece_range": [
+          2.35904349003897e-05,
+          5.8777736743128706e-05
+        ]
+      }
+    },
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "runtime_test_reused_across_seeds_within_robot": true,
+    "training_seeds": [
+      17,
+      29,
+      43
+    ]
+  },
+  "latency_pilot_v3": {
+    "all_robots_pass": true,
+    "numerical_equivalence_all_pass": true,
+    "rows": [
+      {
+        "backend": "torchscript_exact",
+        "baseline_p50_ms": 1.6696695,
+        "baseline_p95_ms": 3.35836435,
+        "baseline_p99_ms": 4.385925399999999,
+        "equivalence_all_pass": true,
+        "p95_ratio": 0.7908646808974132,
+        "p95_reduction_vs_eager": 0.45171060579806044,
+        "proposed_p50_ms": 1.9221195,
+        "proposed_p95_ms": 2.6560117499999985,
+        "proposed_p99_ms": 4.6968833999999955,
+        "robot": "panda",
+        "split": "validation_only",
+        "training_seed": 17
+      },
+      {
+        "backend": "torchscript_exact",
+        "baseline_p50_ms": 1.5536240000000001,
+        "baseline_p95_ms": 3.0902960999999998,
+        "baseline_p99_ms": 3.3398679499999995,
+        "equivalence_all_pass": true,
+        "p95_ratio": 0.8754445083757507,
+        "p95_reduction_vs_eager": 0.4173216993354337,
+        "proposed_p50_ms": 1.8070795,
+        "proposed_p95_ms": 2.7053827499999996,
+        "proposed_p99_ms": 3.31492898,
+        "robot": "ur5e",
+        "split": "validation_only",
+        "training_seed": 17
+      }
+    ],
+    "selected_backend": "torchscript_exact",
+    "split": "validation_only",
+    "test_v3_started": false,
+    "training_seed": 17
+  },
+  "schema_version": 1,
+  "source_manifest": {
+    "outputs/latency_pilot_v3/latency_breakdown.json": {
+      "sha256": "460d851d576bbfd67003396519980beea7f15cf5f96278a33186377f64994e57",
+      "size_bytes": 37025349
+    },
+    "outputs/latency_pilot_v3/numerical_equivalence.json": {
+      "sha256": "31ba6810b5ba19416e0f7f053fb3d20e33d312a330680e7572238f62a1faa51a",
+      "size_bytes": 54152
+    },
+    "outputs/latency_pilot_v3/paired_latency_summary.json": {
+      "sha256": "9176e82ba63b303cf623bec1e2a726ffa273661f6a7429cf7d015b6e9d59761e",
+      "size_bytes": 13294
+    },
+    "outputs/latency_pilot_v3/run_manifest.json": {
+      "sha256": "8291589fe5eee2f70badf20500ea725ca4b229f8a70f20ae4244c15533a278d8",
+      "size_bytes": 54667
+    },
+    "outputs/latency_pilot_v3/validation_gate_v3.json": {
+      "sha256": "eebbd2a199d4e5183bcf5799c138b80d6417f4c8c4743658cf5831f4ff50e0c5",
+      "size_bytes": 3167
+    },
+    "outputs/paper_v2_aggregate/paper_gate_v2.json": {
+      "sha256": "c0141caf2477eb01cff9564788bc0f98365c69c28bbdb35413094349d4e35ed5",
+      "size_bytes": 5618
+    },
+    "outputs/paper_v2_seed17/panda/results/claim_gate_v2.json": {
+      "sha256": "bf59e8e40bc4b5e17b27825978f43ee18f6720f94176f0ea6ffe7fc6c962c512",
+      "size_bytes": 4050
+    },
+    "outputs/paper_v2_seed17/panda/results/cluster_statistics_v2.json": {
+      "sha256": "d75f9b081daa32d4c4ddd99e8cadf9c45270a4f67ec772d17577f869aa5c9d3d",
+      "size_bytes": 1112
+    },
+    "outputs/paper_v2_seed17/panda/results/query_results_v2.jsonl": {
+      "sha256": "7492a7badf470f01b4c7c18f4b871c580e6dff03b0f52cbefd7c91d660bb6616",
+      "size_bytes": 227996828
+    },
+    "outputs/paper_v2_seed17/panda/results/risk_metrics.json": {
+      "sha256": "c29747a1ee1f54300cf28f2d128aa9bd1b4755eaf871bffdcf5eddd5c6d25aa0",
+      "size_bytes": 1159
+    },
+    "outputs/paper_v2_seed17/panda/results/summary_v2.json": {
+      "sha256": "94b6a8e17729c42a8244321dca81717a2e91155512a1342a1544056072dce232",
+      "size_bytes": 113706
+    },
+    "outputs/paper_v2_seed17/ur5e/results/claim_gate_v2.json": {
+      "sha256": "ab63ea77688dbb8fe351b9d0e1224f084f42bb2f53670dd1c271de41b627edb1",
+      "size_bytes": 4083
+    },
+    "outputs/paper_v2_seed17/ur5e/results/cluster_statistics_v2.json": {
+      "sha256": "cf60820c42a13a6f40b8743cd4292313460d383e07813d343077c327444eebc3",
+      "size_bytes": 1139
+    },
+    "outputs/paper_v2_seed17/ur5e/results/query_results_v2.jsonl": {
+      "sha256": "de5d5e9f58793e375153b206642ad15dc5d344cccd0c27627343bf703fe5f60a",
+      "size_bytes": 226699053
+    },
+    "outputs/paper_v2_seed17/ur5e/results/risk_metrics.json": {
+      "sha256": "17712e07038dba49fb6fe2591a06026d6ceda343d7473f61581627ad96eee5c6",
+      "size_bytes": 1140
+    },
+    "outputs/paper_v2_seed17/ur5e/results/summary_v2.json": {
+      "sha256": "f47d95a42ffd8e2f83215d91223bfe3cb372429b07f96a4c0c29e86c578d9fbb",
+      "size_bytes": 114466
+    },
+    "outputs/paper_v2_seed29/panda/results/claim_gate_v2.json": {
+      "sha256": "e1c2f70f9a59cccdd6ac7745bcc56402d73b20b43e48ac58dd3a324a334f0c37",
+      "size_bytes": 4048
+    },
+    "outputs/paper_v2_seed29/panda/results/cluster_statistics_v2.json": {
+      "sha256": "2527685faeb21b834ecf999192aeff4fbe9f0314fad87b39847a291246f16bef",
+      "size_bytes": 1126
+    },
+    "outputs/paper_v2_seed29/panda/results/query_results_v2.jsonl": {
+      "sha256": "90d0989dd861c84bae34a250db15e8c1ea09bb794ce8e8eb945881b846db9a5f",
+      "size_bytes": 228073722
+    },
+    "outputs/paper_v2_seed29/panda/results/risk_metrics.json": {
+      "sha256": "e4ab236773965f023fabf2901e4ca94d3d1ca54f1810e5302da835621558b4d0",
+      "size_bytes": 1157
+    },
+    "outputs/paper_v2_seed29/panda/results/summary_v2.json": {
+      "sha256": "fea052343c43ec5994a083cd54c412c423b4124b6ba656d675f42a3e9578f39f",
+      "size_bytes": 113831
+    },
+    "outputs/paper_v2_seed29/ur5e/results/claim_gate_v2.json": {
+      "sha256": "2327698e9fbc5d5e3c84d60206ba741453eb333a7ae30c6e159631e67882b1bb",
+      "size_bytes": 4074
+    },
+    "outputs/paper_v2_seed29/ur5e/results/cluster_statistics_v2.json": {
+      "sha256": "517b4d8f4b422d3d8bd5baa40782316ad40b7a84578b329a28629b366119b918",
+      "size_bytes": 1114
+    },
+    "outputs/paper_v2_seed29/ur5e/results/query_results_v2.jsonl": {
+      "sha256": "3fd835f266ff16d8f574de8d86cac4f1265289405630ff7da5b0471a1be93b98",
+      "size_bytes": 226656987
+    },
+    "outputs/paper_v2_seed29/ur5e/results/risk_metrics.json": {
+      "sha256": "a9723d85966b695250b4495504c50ddcbfde723ddff04be2dfd672254c00eb76",
+      "size_bytes": 1136
+    },
+    "outputs/paper_v2_seed29/ur5e/results/summary_v2.json": {
+      "sha256": "39e0837c7fe524abb49a99c22483ddb5ce2bfcf011407cd8fa6cdb2834ee605c",
+      "size_bytes": 113757
+    },
+    "outputs/paper_v2_seed43/panda/results/claim_gate_v2.json": {
+      "sha256": "2ee4def42d52b10f600c2e32bf489e00034a2e60b20317a43e22950140317dde",
+      "size_bytes": 4065
+    },
+    "outputs/paper_v2_seed43/panda/results/cluster_statistics_v2.json": {
+      "sha256": "baa9276f2d214f2f848660d1bfa22f04dc5f8f90d084d4a75c3550edb687bb23",
+      "size_bytes": 1123
+    },
+    "outputs/paper_v2_seed43/panda/results/query_results_v2.jsonl": {
+      "sha256": "37cacaec81dc1e369f6631920150421645b217f2be17fefebf16ac43814cad15",
+      "size_bytes": 228950072
+    },
+    "outputs/paper_v2_seed43/panda/results/risk_metrics.json": {
+      "sha256": "76bc9cb296cb852a4608efb710cdaf95eed33fbc5ebb822f5094c3dbcf1c6180",
+      "size_bytes": 1160
+    },
+    "outputs/paper_v2_seed43/panda/results/summary_v2.json": {
+      "sha256": "b6447bf6309f530d8a933c02171c2f3192858ebb431c2335c785f8fc0aa00118",
+      "size_bytes": 114013
+    },
+    "outputs/paper_v2_seed43/ur5e/results/claim_gate_v2.json": {
+      "sha256": "b0c66b8034544f2d3d776531a0be0bb83ab42fb1bd058ec919f1ea4ce8437a41",
+      "size_bytes": 4057
+    },
+    "outputs/paper_v2_seed43/ur5e/results/cluster_statistics_v2.json": {
+      "sha256": "22ed003383478291e045e48a9acc26f8b52431c2bcfa5870ae0764898a3506d0",
+      "size_bytes": 1117
+    },
+    "outputs/paper_v2_seed43/ur5e/results/query_results_v2.jsonl": {
+      "sha256": "1b79c9bae0d1913b46eaafc9da59e95e427bd5f8abc91b76f92049063d1fd725",
+      "size_bytes": 226645925
+    },
+    "outputs/paper_v2_seed43/ur5e/results/risk_metrics.json": {
+      "sha256": "c988d11c33cae20a091997b3900ecd32d908b34e21cd2c4519b2edb1e29892c3",
+      "size_bytes": 1139
+    },
+    "outputs/paper_v2_seed43/ur5e/results/summary_v2.json": {
+      "sha256": "6bd79d4ca14c3b1994da38b59ce6386a75ac93de6683e7070ee2484a1021424c",
+      "size_bytes": 113858
+    }
+  },
+  "title": "Confidence-Gated Solver Budgeting for Verified Hybrid Inverse Kinematics"
+}

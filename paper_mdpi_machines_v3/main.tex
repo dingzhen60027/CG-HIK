@@ -1,0 +1,1010 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage[margin=18mm]{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\definecolor{mdpiblue}{HTML}{1F5A94}
+\definecolor{draftred}{HTML}{A33A45}
+\hypersetup{colorlinks=true,citecolor=mdpiblue,linkcolor=mdpiblue,urlcolor=mdpiblue}
+\captionsetup{font=small,labelfont=bf}
+\setlist{nosep,leftmargin=*}
+\graphicspath{{figures/}}
+\input{generated/paper_numbers.tex}
+
+\newcommand{\method}{CG-HIK}
+\newcommand{\authorinput}[1]{\textcolor{draftred}{[AUTHOR INPUT NEEDED: #1]}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Pre-submission draft for \textit{Machines}}
+\rhead{Independent optimized test\_v3 absent}
+\cfoot{\thepage}
+\setlength{\headheight}{14pt}
+
+\title{\textbf{Confidence-Gated Solver Budgeting for Kinematically Verified Hybrid Inverse Kinematics: A Two-Robot Evaluation with Three Training-Seed Sensitivity Runs}}
+\author{\authorinput{full author names and ORCID identifiers}\\
+\small \authorinput{affiliations and corresponding-author email}}
+\date{Pre-submission manuscript, 23 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fcolorbox{draftred}{white}{\parbox{0.92\textwidth}{\small\textbf{Evidence-status notice.}
+The six \texttt{paper\_v2} runs are frozen formal tests. The runtime remediation in
+\texttt{latency\_pilot\_v3} is validation-only and is not presented as an independent
+test result. The original formal feasible-latency claim gate failed, deployment
+packaging is not yet complete for all six artifacts, and a fresh one-shot
+\texttt{test\_v3} has not been started. This notice must be updated only after the
+preregistered release and test gates pass.}}
+\end{center}
+
+\begin{abstract}
+Inverse kinematics (IK) for online robot control is not only a geometric root-finding
+problem: a runtime system must choose among solution basins, allocate a bounded
+numerical budget, reject futile requests, and verify every command before execution.
+We propose confidence-gated hybrid IK (\method), in which a five-member
+history-conditioned seed ensemble supplies candidate joint increments and a calibrated
+four-action classifier selects the entry point of a shared solver cascade
+(easy, medium, hard, or reject). Adaptive damped least squares, heterogeneous
+trust-region fallback seeds, and a common kinematic verifier remain responsible for
+refinement and acceptance. The primary comparison changes only the entry action: the
+fixed robust cascade always starts at the cheapest stage, whereas \method\ may skip
+work or reject without solving. A frozen protocol evaluated one robot-specific test
+set for Franka Panda and one for UR5e; each was reused across training seeds 17, 29,
+and 43 to measure model sensitivity rather than independent data replication. Each
+run contained 10,000 feasible point queries, 2,000 unreachable or constructed
+one-frame-inadmissible point queries, and forty 150-frame trajectories. Feasible-query
+success was unchanged in all six comparisons, while mean
+function evaluations fell by \PandaFEVReduction{} for Panda and \URFEVReduction{} for
+UR5e, averaged descriptively over the three seed runs. Rejectable-query P95 latency
+fell by \PandaRejectLatencyReduction{} and \URRejectLatencyReduction{}, respectively,
+and every accepted trajectory command satisfied the verifier's one-frame velocity
+inequality by construction. However, the eager
+learned-risk implementation increased feasible-query P95 latency by
+\PandaFormalLatencyIncrease{} and \URFormalLatencyIncrease{}, so the prespecified
+formal latency gate failed. A subsequent validation-only, numerically equivalent
+TorchScript export reduced proposed-method P95 latency versus the eager implementation
+by \PandaPilotReduction{} and \URPilotReduction{} and achieved proposed/fixed P95
+ratios of \PandaPilotRatio{} and \URPilotRatio{}. These optimized latency results
+remain subject to a new independent test, and packaging of all six deployment artifacts
+is incomplete. The evidence supports treating learned IK as a resource-allocation
+layer within a kinematically verified numerical system, rather than as a replacement
+for geometric solvers.
+\end{abstract}
+
+\noindent\textbf{Keywords:} inverse kinematics; manipulator control; hybrid solver;
+confidence calibration; adaptive computation; damped least squares; runtime
+verification; failure rejection
+
+\section{Introduction}
+
+Robot task planners, teleoperation interfaces, imitation-learning policies, and
+vision--language--action systems commonly specify motion in Cartesian task space,
+whereas a manipulator is actuated in joint space. Inverse kinematics therefore remains
+the interface between a transferable end-effector command and a robot-specific joint
+command. This interface becomes consequential in closed-loop control: a single
+discontinuous branch switch can create a joint-velocity spike, a near-singular update
+can amplify numerical error, and a slow failure on an unreachable request can consume
+an entire control period.
+
+The forward map $x=f(q)$ is generally single-valued, but its inverse is better written
+as the set
+\begin{equation}
+  \mathcal{S}(x)=\{q\in\mathcal{Q}: f(q)=x\}.
+\end{equation}
+For a six-degree-of-freedom (DOF) arm, $\mathcal{S}(x)$ may contain several discrete
+branches; for a redundant arm, it can contain a continuous self-motion manifold.
+During online execution, the problem is not to solve one isolated pose but to choose a
+sequence $q_{1:T}$ that is geometrically accurate, joint-limit admissible, and locally
+continuous. A useful abstraction is
+\begin{equation}
+q_{1:T}^{\star}=\arg\min_{q_{1:T}}\sum_{t=1}^{T}
+  \lambda_p\ell_{\mathrm{pose}}(q_t,x_t)
+ +\lambda_s\ell_{\mathrm{step}}(q_t,q_{t-1})
+ +\lambda_l\ell_{\mathrm{limit}}(q_t),
+\end{equation}
+subject to hard command-admissibility tests. Even when each target is reachable, the
+chosen numerical basin and the computation allocated to it determine whether the
+online sequence is executable.
+
+Classical damped least-squares (DLS) methods stabilize Jacobian inversion near
+singularities \cite{wampler1986dls,nakamura1986singularity,chiaverini1994review}, but
+they remain local and initialization-sensitive. Portfolio solvers such as TRAC-IK
+combine numerical strategies to reduce false negatives \cite{beeson2015tracik};
+variable-step and restart strategies likewise show that fixed numerical policies are
+not optimal for every query \cite{colan2024variablestep}. At the same time, learned IK
+has progressed from single-output regression to generative solution-set modelling
+\cite{ames2022ikflow,limoyo2025ggik}, path-level generation
+\cite{morgan2024cppflow}, and history-conditioned joint-increment policies
+\cite{yang2026mimik}. The most defensible role for learning is consequently not to
+certify a configuration, but to predict a useful solution basin and how much numerical
+work a query is likely to require.
+
+Recent hybrid methods use learned approximations as warm starts followed by numerical
+refinement \cite{habekost2023cycleik,jayabalan2026hybrid,jlidi2026xgnn}. However, a
+typical pipeline still applies a fixed candidate count, iteration limit, and fallback
+policy to every query. This leaves three coupled questions unresolved: when is a
+learned seed trustworthy, how much solver budget should the query receive, and when
+should the system refuse rather than spend computation on a command that cannot pass
+the execution contract?
+
+This paper studies those questions as runtime resource allocation. The contributions
+are:
+\begin{enumerate}
+  \item a portfolio-specific four-action label (easy, medium, hard, reject) defined by
+  the first solver stage that produces a kinematically verified command, rather than by arbitrary
+  iteration bins or reachability alone;
+  \item a controlled primary comparison in which the proposed and fixed methods share
+  the same seed ensemble, numerical stages, seed bank, fallback, and verifier, and
+  differ only in their calibrated entry action;
+  \item a frozen two-robot, three-training-seed evaluation that reports feasible
+  success, function evaluations (FEV), rejection, tail latency, trajectory completion,
+  verifier interceptions, null ablations, and the failed formal latency claim gate;
+  \item a validation-only implementation study that identifies fixed risk-inference
+  overhead, exports an exact TorchScript seed ensemble and vectorized frozen risk
+  model, and checks routing and numerical equivalence; this is remediation evidence,
+  not an independent optimized-latency result.
+\end{enumerate}
+
+The central claim is deliberately bounded: learned models allocate computation;
+classical geometry refines and verifies the command. The present benchmark establishes
+this claim under exact URDF kinematics. It does not establish collision safety,
+physics-based controller tracking, acceleration or torque compliance, or physical
+robot reliability.
+
+\section{Related Work}
+
+\subsection{Numerical IK, singularities, and solver portfolios}
+
+Jacobian inverse and pseudoinverse updates are efficient in well-conditioned local
+regions but can generate large joint velocities near rank loss. DLS reformulates the
+update to trade Cartesian residual against joint-step magnitude
+\cite{wampler1986dls,nakamura1986singularity}. Chiaverini et al. demonstrated variable
+damping, weighted DLS, online singular-value estimation, and feedback correction on an
+industrial manipulator \cite{chiaverini1994review}. These ideas remain essential
+numerical foundations, but damping does not identify a globally appropriate branch or
+guarantee recovery from a poor basin.
+
+Practical solvers therefore introduce redundancy above the local update. TRAC-IK runs
+an improved Jacobian route and a sequential quadratic programming route concurrently
+\cite{beeson2015tracik}. IKSel retrieves and reorders seed configurations and reselects
+distant seeds after failure \cite{yuan2025iksel}. RelaxedIK formulates IK as real-time
+motion synthesis with pose, smoothness, collision, singularity, and continuity terms
+\cite{rakita2018relaxedik}. Modern geometric decomposition can also return all branches
+for broad classes of 6R arms with very low numerical overhead \cite{elias2025ikgeo},
+whereas viability-aware QP formulations can directly encode joint range, velocity,
+acceleration, and collision constraints \cite{zhang2026viability}. These are important
+capabilities beyond the exact-kinematics portfolio evaluated here. Collectively, the
+methods motivate a solver-system view, but they do not learn a calibrated
+query-specific entry action over a fixed, auditable portfolio.
+
+\subsection{Learning solution sets and trajectories}
+
+A pose-only regression $x\mapsto q$ is mismatched to a one-to-many inverse. IKFlow uses
+conditional normalizing flows to sample diverse configurations and can hand candidates
+to a numerical solver for refinement \cite{ames2022ikflow}. GGIK encodes manipulators
+as distance-geometric graphs, enabling multi-solution generation and cross-robot
+generalization \cite{limoyo2025ggik}. CppFlow lifts candidate generation to Cartesian
+paths, coupling a generative model to path-level search and numerical optimization
+\cite{morgan2024cppflow}. These works primarily improve proposal coverage.
+
+History conditioning localizes branch choice. Predicting $\Delta q_t$ from the current
+state and target pose turns a global inverse into a local motion decision. MimicIK uses
+this formulation with conditional flow matching and FK consistency on teleoperation
+data \cite{yang2026mimik}; because it is currently a preprint, its deployment claims
+are treated as a trend signal rather than settled evidence. In our system, history
+conditioning is used for proposals, while a separate learned action model predicts
+the required numerical stage and an explicit verifier retains the acceptance decision.
+
+\subsection{Hybrid learning and numerical refinement}
+
+CycleIK combines neural prediction, FK-aware objectives, and optional SLSQP or genetic
+refinement \cite{habekost2023cycleik}. Recent engineering studies similarly position
+soft-computing or graph-network predictions as initializers for Jacobian-based methods
+\cite{jayabalan2026hybrid,jlidi2026xgnn}. These systems support the division of labor
+used here: data-driven models provide a global prior, and numerical geometry supplies
+precision. The present work differs by learning an action over a shared cascade,
+enforcing data-split separation for calibration and policy selection, comparing against
+an identical fixed-entry cascade, and retaining failure rejection as a first-class
+runtime outcome.
+
+\subsection{Runtime confidence and failure detection}
+
+Calibration turns classifier scores into in-distribution action probabilities, but it
+does not by itself establish out-of-distribution (OOD) awareness. In manipulation
+policy deployment, runtime failure detectors have combined epistemic signals,
+sequential OOD detection, and conformal calibration to decide when a policy should be
+escalated \cite{xu2025faildetect}. Our present confidence values are narrower: they are
+isotonic-calibrated probabilities for four portfolio actions on the declared synthetic
+distribution. They are used to choose a solver entry or a zero-solve refusal; no OOD
+detector or model-deferral action is evaluated. A two-sided policy that separates
+high-confidence command rejection from uncertainty-triggered solver escalation is
+therefore future work, not a contribution claimed by this experiment.
+
+Table~\ref{tab:positioning} separates the present contribution from adjacent IK
+capabilities. The table describes functionality rather than empirical superiority,
+because IK-Geo, viability QP, generative path IK, and \method\ solve different problem
+contracts.
+
+\begin{table}[H]
+\centering
+\caption{Functional positioning relative to adjacent IK paradigms. A check mark denotes
+an explicit method capability, not a result from the present benchmark.}
+\label{tab:positioning}
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccc l}
+\toprule
+Paradigm & Multiple solutions & Numerical refinement & Query-adaptive entry & Explicit refusal & OOD deferral & Acceptance scope \\
+\midrule
+IK-Geo \cite{elias2025ikgeo} & \checkmark & -- & -- & -- & -- & geometric IK \\
+Viability QP \cite{zhang2026viability} & -- & \checkmark & -- & infeasibility & -- & encoded state/collision constraints \\
+IKFlow/CppFlow \cite{ames2022ikflow,morgan2024cppflow} & \checkmark & \checkmark & -- & -- & -- & pose/path constraints \\
+\method\ (this work) & candidate set & \checkmark & \checkmark & \checkmark & -- & pose, limits, one-frame velocity \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\section{Materials and Methods}
+
+\subsection{Online IK query and acceptance contract}
+
+At frame $t$, a query is
+\begin{equation}
+  \xi_t=(x_t^d,q_{t-1},\Delta t), \qquad x_t^d\in SE(3),
+\end{equation}
+with $\Delta t=0.02$ s. A candidate $q_t$ is accepted only if it is finite and
+\begin{align}
+ \|p(q_t)-p_t^d\|_2 &\leq 1~\mathrm{mm},\\
+ \theta(R(q_t)^\top R_t^d) &\leq 0.5^{\circ},\\
+ q_{\min} &\leq q_t\leq q_{\max},\\
+ |q_t-q_{t-1}| &\leq \dot q_{\max}\Delta t+10^{-4}.
+\end{align}
+The last inequality is evaluated with the robot's joint-difference convention. A
+numerical solver's convergence flag is insufficient; all four conditions are checked
+by the common verifier before a configuration can be returned.
+
+\subsection{History-conditioned candidate proposal}
+
+The proposal network consumes the normalized previous joint state, target position,
+and a continuous 6D rotation representation:
+\begin{equation}
+  z_t=[\bar q_{t-1},p_t^d,\rho_6(R_t^d)].
+\end{equation}
+Five multilayer perceptrons (three hidden layers of 256 units) predict joint
+increments. For member $m=1,\ldots,5$,
+\begin{equation}
+  \Delta\hat q_t^{(m)}\in[-0.25,0.25]^n.
+\end{equation}
+Each member is trained on a bootstrap resample with a Huber joint-increment loss and
+forward-kinematics position and orientation penalties. Deep-ensemble disagreement
+provides mean and maximum uncertainty features \cite{lakshminarayanan2017ensembles}.
+Candidates are clipped to the URDF limits, scored by pose residual, joint change, and
+joint-limit margin, and deduplicated at a maximum joint-distance threshold of 0.05 rad.
+
+The proposal is not accepted directly. Its best candidate and ensemble diagnostics
+are inputs to the action model, and every numerical result is checked by the same
+verifier.
+
+\subsection{Portfolio-specific action labels and calibrated risk model}
+
+For a known-feasible, one-frame-continuous query, the oracle label is the first stage of
+the locked cascade that produces a kinematically verified configuration. Queries that
+are generated as outside a conservative radial reach bound or are designated
+one-frame-inadmissible are labelled reject without spending solver work during label
+creation. If all stages fail on a nominally feasible query, the label is also reject.
+Thus \emph{easy}, \emph{medium}, and \emph{hard} name entry levels of this locked
+portfolio; they are not intrinsic categories of IK difficulty. Likewise, \emph{reject}
+means ``do not invoke this portfolio for this generated request'', not a general proof
+of physical or collision-aware unreachability.
+
+The nine-dimensional risk feature vector is
+\begin{equation}
+r_t=[e_p,e_R,u_{\mathrm{mean}},u_{\max},\sigma_{\min},m_q,
+      \|\Delta q\|_2,d_p,d_R],
+\end{equation}
+where $e_p,e_R$ are the best seed's pose errors, $u$ denotes ensemble disagreement,
+$\sigma_{\min}$ is the candidate Jacobian's minimum singular value, $m_q$ is its
+minimum normalized joint margin, $\Delta q$ is its joint change, and $d_p,d_R$ are
+Cartesian step distances from the previous state.
+
+An MLP classifier and a histogram gradient-boosting classifier were fitted on
+\texttt{risk\_train}; model family was selected by negative log likelihood on
+\texttt{risk\_validation}. The selected four-class probabilities were independently
+isotonic-calibrated on \texttt{calibration} and renormalized. Throughout this paper,
+\emph{confidence} means these in-distribution calibrated action probabilities; it is
+not an OOD guarantee. Calibration is relevant because routing thresholds consume
+probability values, not only class ranks
+\cite{guo2017calibration}. The action thresholds were selected once on a dedicated
+\texttt{policy\_validation} split, subject to false rejection no greater than 1\% and
+reject recall at least 95\%, before either classifier-test or runtime-test evaluation.
+
+With calibrated probabilities $P_E,P_H,P_R$, the gate is
+\begin{equation}
+a(r_t)=
+\begin{cases}
+\text{reject}, & P_R\geq\tau_R,\\
+\text{easy},   & P_E\geq\tau_E,\\
+\text{hard},   & P_H\geq\tau_H\ \text{or hard is the largest non-reject class},\\
+\text{medium}, & \text{otherwise}.
+\end{cases}
+\end{equation}
+The threshold grid was frozen before test. No threshold reported here was modified in
+response to formal test or latency-pilot outcomes.
+
+\subsection{Shared numerical cascade}
+
+Table~\ref{tab:actions} defines the locked entry actions. The fixed robust baseline
+always enters at easy and escalates on failure. The proposed method enters at the
+predicted action; all later stages, budgets, candidates, fallback solvers, and
+verification logic are identical. This construction isolates work skipped by routing.
+
+\begin{table}[H]
+\centering
+\caption{Locked action and escalation contract.}
+\label{tab:actions}
+\begin{tabularx}{\textwidth}{lY C{25mm} Y}
+\toprule
+Action & First numerical stage & Initial budget & Escalation after failure \\
+\midrule
+Easy & Previous-state adaptive DLS & 1 iteration & Medium, then hard \\
+Medium & Best history-conditioned learned seed with DLS & 1 iteration & Hard \\
+Hard & Learned and previous seeds with DLS, followed by heterogeneous TRF seeds & 25 iterations per DLS seed & Bounded fallback only \\
+Reject & No numerical solve & 0 & None \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+At a DLS iteration, the weighted update is
+\begin{equation}
+\Delta q=J_w^\top(J_wJ_w^\top+\lambda^2I)^{-1}e_w.
+\end{equation}
+The damping is a smooth function of the minimum Jacobian singular value,
+\begin{equation}
+\lambda(\sigma)=\lambda_{\min}+
+(\lambda_{\max}-\lambda_{\min})
+\left(1-\operatorname{clip}\left(\frac{\sigma}{\sigma_0},0,1\right)\right)^2,
+\end{equation}
+with $\lambda_{\min}=10^{-4}$, $\lambda_{\max}=0.1$, and $\sigma_0=0.05$.
+Backtracking scales $(1,0.5,0.25,0.1)$ are tried and the per-joint update is clipped at
+0.1 rad. Adaptive damping is a numerical foundation rather than a claimed novelty.
+
+The hard stage attempts DLS from the best learned seed and previous state, then uses a
+bounded trust-region reflective (TRF) solver from previous, learned, and up to two
+KD-tree-retrieved seeds. The TRF budget is 100 function evaluations. Only a
+verifier-accepted result ends the cascade.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure1_architecture.pdf}
+\caption{Architecture of \method. The proposal and calibrated gate allocate
+computation; the numerical cascade generates configurations, and the common verifier
+alone admits a command. Reject is an explicit zero-solve action.}
+\label{fig:architecture}
+\end{figure}
+
+\subsection{Exact-export latency remediation}
+
+Formal \texttt{paper\_v2} used the original eager inference path. After its outputs and
+claims were frozen, a separate validation-only pilot decomposed per-query latency into
+feature preparation, NumPy/PyTorch conversion, seed inference, uncertainty/risk
+inference, routing, numerical solve, verification, serialization, and total
+end-to-end time. Timing used \texttt{perf\_counter\_ns}; warmup preceded measurement;
+baseline and proposed queries were paired and interleaved; disk writing was excluded
+from timed intervals.
+
+Implementation changes did not alter the algorithm: models were set to evaluation and
+inference mode, contiguous float32 seed inputs were preallocated, static normalization
+and robot features were cached, repeated geometry was removed, and the five frozen
+members were executed in one exact TorchScript call. The histogram gradient-boosting
+trees and isotonic calibrators were exported as frozen numerical parameters and
+evaluated without per-tree Python dispatch. The selected backend was
+\texttt{torchscript\_exact}; a single-member path was diagnostic only and was
+ineligible for selection.
+
+Numerical equivalence required maximum seed, probability, and risk-score errors within
+the frozen tolerances; 100\% routing-action, accepted-command, fallback, FEV, and
+verification-reason agreement; and unchanged success, rejection, calibration, and
+trajectory metrics. This pilot selected an implementation, not an algorithm or
+threshold.
+
+\section{Experimental Design}
+
+\subsection{Robots, software, and data separation}
+
+Experiments used exact URDF kinematics for a 7-DOF Franka Panda and a 6-DOF UR5e. FK,
+Jacobians, and URDF limits were evaluated with Pinocchio
+\cite{carpentier2019pinocchio}; neural models used PyTorch \cite{paszke2019pytorch};
+the risk model used scikit-learn \cite{pedregosa2011sklearn}; TRF and supporting
+numerical routines used SciPy \cite{virtanen2020scipy}. Formal tests ran on Linux with
+Python 3.12.13, NumPy 2.4.4, SciPy 1.17.0, scikit-learn 1.9.0, Pinocchio 3.9.0,
+PyTorch 2.11.0+cu128, CUDA 12.8, and an NVIDIA Quadro RTX 8000.
+
+Each robot and training seed used the split roles in Table~\ref{tab:splits}. The
+runtime test was independently generated and locked; the same test queries were reused
+across training seeds within each robot so seed differences measure model sensitivity,
+not three independent test datasets.
+
+\begin{table}[H]
+\centering
+\caption{Data split roles and sizes per robot and training seed.}
+\label{tab:splits}
+\begin{tabular}{lrl}
+\toprule
+Split & Samples & Sole permitted use \\
+\midrule
+Seed train & 200,000 & Fit five seed members \\
+Seed validation & 20,000 & Seed diagnostics and trajectory pilot source \\
+Risk train & 60,000 & Fit action classifier \\
+Risk validation & 15,000 & Select classifier family \\
+Calibration & 15,000 & Fit isotonic calibration \\
+Policy validation & 15,000 & Select action thresholds/guard quantile \\
+Risk test & 20,000 & One-time action and calibration metrics \\
+Runtime test points & 12,000 & One-time solver evaluation \\
+Runtime test trajectories & 40 $\times$ 150 & Closed-loop kinematic sequences \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The experiment contains four evidence layers that must not be pooled
+(Table~\ref{tab:provenance}). In particular, favorable optimized latency comes from a
+validation pilot, not from the formal eager test. The subsequent release attempt was a
+packaging/equivalence gate rather than a performance experiment: it stopped at
+UR5e/seed 43 because frozen offline probability and risk-score discrepancies of
+$1.26\times10^{-12}$ and $1.14\times10^{-12}$ exceeded the locked $10^{-12}$ limits,
+although sampled runtime actions and outcomes agreed exactly. It generated no
+\texttt{test\_v3} evidence.
+
+\begin{table}[H]
+\centering
+\caption{Evidence provenance and permitted interpretation.}
+\label{tab:provenance}
+\small
+\begin{tabularx}{\textwidth}{l C{26mm} C{18mm} Y}
+\toprule
+Evidence layer & Robots/seeds & Split & Permitted use \\
+\midrule
+\texttt{paper\_v2} formal & both / 17, 29, 43 & locked test & success, FEV, rejection, eager latency, and descriptive paths \\
+\texttt{latency\_pilot\_v3} & both / 17 & validation only & profile and select an equivalent inference implementation \\
+\texttt{release\_v3\_locked} & stopped at UR5e/43 & no new test & deployment-equivalence diagnostic only \\
+\texttt{test\_v3} & absent & absent & no optimized independent claim \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Point tests comprised 5,000 local in-distribution queries, 1,000 each near singularity,
+near a joint limit, and near the sampled workspace boundary, 2,000 hard-valid queries,
+1,000 constructed large-step queries, and 1,000 radially unreachable queries. For each
+large-step case, the previous and target configurations were sampled independently
+inside a 10\% joint-limit margin; target FK made the pose reachable, but the record was
+designated one-frame-inadmissible by construction. This does not prove that no alternate
+IK branch lies inside the velocity bound. For each unreachable case, the target radius
+was sampled uniformly from $[r_{\mathrm{ub}}+0.05,r_{\mathrm{ub}}+0.25]$ m, where
+$r_{\mathrm{ub}}$ is the sum of kinematic-chain joint-origin translation norms plus all
+prismatic travel. The two rejectable strata are therefore controlled stress tests with
+generation cues, not an estimate of natural failures or OOD robustness.
+Hard-valid queries were screened using only the previous-state numerical solver: they
+failed the one-iteration easy stage and passed the 25-iteration stage while retaining
+a known velocity-feasible reference. Trajectories comprised ten paths from each of
+four families (smooth multi-joint, wrist/orientation, low-manipulability, and
+joint-limit-skimming), with 150 frames per path. Targets were obtained by FK from
+independently generated velocity-feasible references; tested solvers were not used to
+filter the trajectories.
+
+\subsection{Comparators and ablations}
+
+The primary pair was \texttt{proposed\_v2} and
+\texttt{fixed\_robust\_cascade}. Four additional primary comparators were conventional
+previous-state DLS, learned-seed DLS, a validation-constrained Cartesian-step threshold
+guard attached to the same cascade, and previous-state TRF. Seven diagnostic ablations
+removed history, retained one ensemble member, removed disagreement features, removed
+calibration, disabled explicit rejection, disabled fallback, or replaced adaptive with
+fixed damping. Thus the full benchmark contained six main methods and seven ablations,
+not thirteen unrelated learned models.
+
+The threshold guard's quantile was chosen on \texttt{policy\_validation} under the same
+false-reject and reject-recall constraints as the learned gate. It provides an
+interpretable comparison for the question of whether Cartesian step magnitude alone is
+sufficient for resource allocation.
+
+\subsection{Outcomes and statistical analysis}
+
+Primary point outcomes were kinematically verified success on known-feasible queries,
+mean function evaluations (FEV) on those queries, correct rejection and FEV on
+rejectable queries, and whole-trajectory completion. In DLS, one FEV is each call to FK
+at the current iterate, a backtracking trial, or the terminal check; Jacobian/SVD work,
+candidate scoring, risk inference, and final verification are excluded. For TRF, FEV is
+SciPy's residual-call counter \texttt{nfev}; its post-solve pose check is excluded. A
+query's FEV is summed over every executed solver attempt. This counter is therefore a
+portfolio-specific numerical-work proxy, not a hardware-independent FLOP count.
+
+Tail latency was stratified into feasible and rejectable point queries. Secondary
+outcomes included hard-valid success, P99 latency, fallback use, verifier interceptions,
+pose error, frame acceptance, and command-spike rate. For an accepted trajectory frame,
+\emph{spike} is
+$\mathbb{1}[\exists j:|q_{t,j}-q_{t-1,j}|>\dot q_{\max,j}\Delta t+10^{-4}]$;
+the reported rate uses all trajectory frames as its denominator and rejected frames
+contribute false. Because this is exactly the verifier's velocity inequality, a zero
+accepted-command spike rate is an acceptance invariant, not independent evidence of
+acceleration, jerk, or perceptual smoothness.
+
+The point query (with its generating identifier) was the independent unit for point
+estimands; the complete path was the independent unit for trajectory completion. Frames
+after a tracking failure were not pooled into point success. Paired 95\% confidence
+intervals used 10,000 cluster-bootstrap resamples. The generating trajectory identifier
+defined a cluster; it is unique for point queries and shared by all frames of a path.
+Cluster effects were proposed-minus-fixed means. The bootstrap resampled clusters with
+replacement, and the two-sided sign-flip test randomly multiplied each cluster effect
+by $-1$ or $+1$; its Monte Carlo value used the finite-sampling correction
+$(b+1)/(10{,}000+1)$. Holm's step-down procedure corrected the three prespecified point
+comparisons: feasible success, feasible FEV, and rejectable acceptance. Exact adjusted
+$p$ values are reported where inference was prespecified. Training seed is a sensitivity
+replicate; no inferential test treats the three seeds as three independent datasets.
+Latency summaries are empirical batch-one P50/P95/P99 statistics and are not averaged
+into a query-level hypothesis test. Formal timing used 200 warmup iterations, five
+repeats per method/query with the median retained, deterministic per-query method-order
+randomization, one configured CPU thread, and CUDA synchronization around each solve.
+The 20 ms value defines the kinematic velocity contract; it is not a measured hard
+wall-clock deadline. Deadline-miss frequency, CPU affinity, and real-time scheduling
+were not prespecified outcomes.
+
+The formal paper-level gate required the same effect direction on both robots and all
+three seeds, plus prespecified success, rejection, risk, trajectory, and latency limits.
+A failed threshold was reported without test-set retuning. The validation-only runtime
+pilot used 750 paired feasible queries per robot for selected-backend latency, plus
+locked category and trajectory subsets for equivalence and outcome gates.
+
+\section{Results}
+
+\subsection{Held-out action risk was well separated and calibrated}
+
+Across Panda seeds, reject AUROC ranged from 0.9974 to 0.9980, reject expected
+calibration error (ECE) ranged from $9.06\times10^{-4}$ to
+$1.23\times10^{-3}$, and reject recall ranged from 0.9889 to 0.9892. UR5e reject
+AUROC exceeded 0.99999995 in all three runs, ECE ranged from
+$2.36\times10^{-5}$ to $5.88\times10^{-5}$, and reject recall was 0.99973.
+Held-out false-reject rate was zero in five runs and $6.15\times10^{-5}$ in UR5e seed
+29. These metrics passed the frozen risk gates, but non-reject macro-F1 remained
+approximately 0.59--0.64, showing that fine-grained effort prediction was materially
+harder than reject detection.
+
+The proposed runtime did not rely on the classifier's class decision as proof of an IK
+solution. Non-reject actions entered the shared numerical cascade, and the common
+verifier retained the final decision.
+
+\subsection{The gate preserved feasible success and reduced numerical work}
+
+Figure~\ref{fig:formal}a--b reports the six primary paired comparisons. Panda feasible
+success was 99.99\% for both methods in every run; UR5e feasible success was 100\% for
+both methods in every run. The proposed-minus-fixed success difference was therefore
+0 percentage points in all six runs, within the prespecified $-1$ percentage-point
+margin.
+
+Mean FEV fell in every run. Panda per-run reductions were 28.50\%, 28.04\%, and
+28.08\% (descriptive mean \PandaFEVReduction{}); UR5e reductions were 33.54\%,
+33.77\%, and 33.92\% (descriptive mean \URFEVReduction{}). The paired mean FEV
+differences ranged from $-1.506$ to $-1.469$ evaluations for Panda and $-2.015$ to
+$-1.993$ for UR5e. Every cluster-bootstrap interval excluded zero; the Holm-adjusted
+sign-flip value was $p=0.000300$ in each run. Table~\ref{tab:primary} summarizes the
+descriptive three-seed means without treating them as independent datasets.
+
+\begin{table}[H]
+\centering
+\caption{Primary formal-test outcomes. Values are descriptive means over three
+training-seed runs on the same locked test set within each robot. FEV is function
+evaluations. Each P95 entry is the mean of three per-run percentiles, not a pooled
+percentile.}
+\label{tab:primary}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrr}
+\toprule
+Robot & Method & Feas. success (\%) & Feas. FEV & Feas. P95 (ms) & Reject FEV & Reject P95 (ms) & Traj. completion (\%) \\
+\midrule
+Panda & Fixed & 99.99 & 5.265 & 3.447 & 393.680 & 354.315 & 100.00 \\
+Panda & Proposed & 99.99 & 3.780 & 4.679 & 0.053 & 3.539 & 100.00 \\
+UR5e & Fixed & 100.00 & 5.942 & 3.153 & 218.183 & 158.305 & 96.67 \\
+UR5e & Proposed & 100.00 & 3.937 & 5.055 & 0.000 & 3.516 & 97.50 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\subsection{Declared comparators bound the originality claim}
+
+Table~\ref{tab:comparators} makes all six declared methods visible under the same
+frozen eager timing protocol. Previous-state DLS had the lowest feasible P95, but did
+not match the shared cascade's success on the full feasible mixture for either robot
+and completed only 95\% of UR5e paths. Previous-state TRF was especially weak on Panda.
+The Cartesian-step guard rejected the constructed stress strata cheaply, but its
+feasible success was 0.92 and 0.87 percentage points below \method\ on Panda and UR5e;
+on hard-valid queries the gaps were 4.58 and 4.12 points. Thus the evidence supports a
+portfolio-specific trade-off: learned routing retained the robust cascade's feasible
+success while skipping numerical work. It does not support a claim that the eager
+implementation is the fastest IK method overall.
+
+\begin{table}[H]
+\centering
+\caption{Declared formal-test comparators. Values are descriptive means over three
+training-seed sensitivity runs on one locked test set per robot. P95 is batch-one eager
+latency; all methods rejected all constructed rejectable queries.}
+\label{tab:comparators}
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrr}
+\toprule
+Robot & Method & Feas. success (\%) & Hard-valid success (\%) & Feas. FEV & Feas. P95 (ms) & Traj. completion (\%) \\
+\midrule
+Panda & Previous-state DLS & 99.667 & 100.000 & 3.428 & 1.201 & 100.0 \\
+Panda & Previous-state TRF & 84.650 & 57.100 & 77.370 & 86.997 & 85.0 \\
+Panda & Learned seed + fixed DLS & 99.253 & 97.800 & 3.393 & 2.219 & 100.0 \\
+Panda & Cartesian-step guard & 99.073 & 95.417 & 5.146 & 3.445 & 100.0 \\
+Panda & Fixed robust cascade & 99.990 & 100.000 & 5.265 & 3.447 & 100.0 \\
+Panda & \method & 99.990 & 100.000 & 3.780 & 4.679 & 100.0 \\
+\midrule
+UR5e & Previous-state DLS & 99.853 & 100.000 & 3.617 & 1.092 & 95.0 \\
+UR5e & Previous-state TRF & 99.810 & 99.200 & 5.191 & 4.717 & 100.0 \\
+UR5e & Learned seed + fixed DLS & 99.820 & 99.700 & 3.591 & 2.040 & 97.5 \\
+UR5e & Cartesian-step guard & 99.127 & 95.883 & 5.827 & 3.156 & 96.7 \\
+UR5e & Fixed robust cascade & 100.000 & 100.000 & 5.942 & 3.153 & 96.7 \\
+UR5e & \method & 100.000 & 100.000 & 3.937 & 5.055 & 97.5 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure2_formal_results.pdf}
+\caption{Frozen formal-test outcomes. (\textbf{a}) Mean function evaluations on
+10,000 feasible point queries per run. Each line is one training seed and is paired
+within robot. (\textbf{b}) Proposed-minus-fixed feasible-success difference; the
+dashed line is the prespecified non-inferiority margin. (\textbf{c}) Rejectable-query
+P95 latency reduction for 2,000 rejectable points per run. (\textbf{d}) The negative
+formal result: eager proposed inference exceeded the allowed feasible P95 overhead in
+all six runs. Three seeds share one locked test set per robot and are sensitivity runs,
+not three independent test datasets.}
+\label{fig:formal}
+\end{figure}
+
+\subsection{Explicit rejection removed futile work and reduced verifier load}
+
+Both fixed and proposed systems rejected every radially unreachable or constructed
+one-frame-inadmissible test query, so rejectable acceptance difference was zero. The difference
+was computational: the fixed cascade attempted the full path from its easy entry,
+whereas the proposed gate usually issued reject with zero solver calls. Mean
+rejectable-query FEV fell by 100\% in all UR5e runs and by 100\%, 100\%, and 99.96\%
+in Panda. Rejectable P95 latency fell by 98.90--99.06\% for Panda and
+97.72--97.88\% for UR5e (Figure~\ref{fig:formal}c).
+
+The verifier also exposed why convergence alone is an unsafe acceptance rule under the
+defined command contract. The fixed cascade produced 933--944 verifier interceptions
+per Panda run and 954--961 per UR5e run. The proposed system reduced these counts to
+1--2 for Panda and zero for UR5e, primarily by not executing predictably futile
+large-step actions. These are kinematic contract interceptions, not collision or torque
+safety claims.
+
+\subsection{Trajectory outcomes were retained}
+
+All Panda fixed and proposed runs completed all forty trajectories. UR5e fixed
+completion was 95.0\%, 97.5\%, and 97.5\% across seeds;
+proposed completion was 97.5\% in all three, yielding one +2.5 percentage-point
+difference and two ties. The recorded command-spike rate was zero throughout, as
+required for accepted frames by the shared velocity verifier. Because the
+complete path was the independent unit, the 6,000 trajectory frames per run were not
+pooled into the 10,000-point feasible-success estimand.
+
+These forty-path results per robot are descriptive; no path-level equivalence or
+non-inferiority claim is made. They document closed-loop completion under the tested
+URDF and per-frame velocity contract. They do not establish low-level controller
+tracking, acceleration/jerk feasibility, perceptual smoothness, or hardware performance.
+
+\subsection{Ablations identified one strong mechanism and several null components}
+
+Figure~\ref{fig:ablations} retains the null and negative ablations rather than selecting
+only supportive results. Disabling explicit rejection restored most rejectable-query
+work: descriptive mean FEV was 388.5 for Panda and 213.5 for UR5e, close to the fixed
+cascade's 393.7 and 218.2. This confirms that the reject action, rather than faster
+failure inside the numerical solver, produced the rejectable-query saving.
+
+Disabling fallback reduced descriptive feasible success from 99.99\% to 99.71\% for
+Panda and from 100\% to 99.88\% for UR5e, indicating a small but operational recovery
+role. Fixed damping was strongly unfavorable for Panda (99.13\% feasible success and
+7.03 mean FEV) but had lower feasible FEV on UR5e; adaptive damping is therefore
+retained as a robust shared foundation, not claimed as uniformly optimal.
+
+Removing history, retaining one member, removing uncertainty features, or removing
+calibration changed formal operational FEV only slightly. These ablations do not
+support a claim that each learned component is individually necessary for the tested
+runtime outcomes. The ensemble remains part of the frozen system because uncertainty
+and calibration were preregistered design components, but the paper makes no diversity
+or causal-necessity claim from these null comparisons.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure3_ablations.pdf}
+\caption{Diagnostic ablations. (\textbf{a,b}) Feasible-query mean FEV for Panda and
+UR5e. (\textbf{c,d}) Rejectable-query mean FEV. Bars show the descriptive mean plus or
+minus one seed standard deviation; dots show all three training-seed sensitivity runs.
+The no-reject ablation restores futile rejectable-query work, whereas several learned
+component removals are operationally close to the proposed method. No seed-level
+hypothesis test is asserted.}
+\label{fig:ablations}
+\end{figure}
+
+\subsection{The original formal feasible-latency claim failed}
+
+The formal test revealed a consistent negative result. Although numerical effort fell,
+eager learned inference added an approximately fixed per-query cost. Feasible P95
+latency increased in all six runs: by 31.8--38.1\% for Panda and 50.4--65.7\% for
+UR5e, exceeding the prespecified +25\% limit (Figure~\ref{fig:formal}d). The
+paper-level gate was therefore false. Thresholds, labels, risk rules, solver budgets,
+and claim limits were not changed after observing the failure.
+
+This finding separates algorithmic and implementation efficiency. The learned gate
+correctly avoided numerical evaluations, but the original histogram-gradient-boosting
+inference path dispatched hundreds of trees per sample in Python. Stage profiling on
+validation identified uncertainty/risk inference as the largest eager fixed stage at
+approximately 1.96--2.00 ms P95. Consequently, an optimized inference implementation
+was investigated without altering routing semantics.
+
+\subsection{Validation-only exact export met the runtime pilot gates}
+
+Figure~\ref{fig:latency} reports the implementation-only validation pilot. With the
+exact TorchScript backend, feasible proposed/fixed P95 ratios were
+\PandaPilotRatio{} for Panda and \URPilotRatio{} for UR5e, both below the locked 1.15
+target. Proposed P95 latency was 2.656 ms versus 3.358 ms fixed for Panda, and 2.705 ms
+versus 3.090 ms fixed for UR5e. Relative to the eager proposed implementation, P95 fell
+by \PandaPilotReduction{} and \URPilotReduction{}, exceeding the 30\% target.
+
+The exact backend achieved maximum risk-probability error below
+$4\times10^{-13}$, zero seed-output error under the stored comparison, 100\% route,
+acceptance, fallback, FEV, and verification-reason agreement, and unchanged success,
+rejection, AUROC, ECE, trajectory completion, and command-spike gates. After
+optimization, numerical solving rather than learned risk inference was the largest P95
+stage. A Panda outlier reached 306.46 ms because the solver consumed 373 function
+evaluations; it did not affect P95 but demonstrates that rare numerical tails remain a
+separate runtime concern.
+
+These results are validation-only and used training seed 17. They establish that an
+equivalent low-overhead implementation exists, but the subsequent locked release did
+not package all six artifacts under its strict offline equivalence tolerance. They do
+not independently confirm the optimized latency claim. A completed unchanged release
+and fresh preregistered \texttt{test\_v3} are required before replacing the formal
+latency conclusion.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figure4_latency_validation.pdf}
+\caption{Validation-only latency remediation using the selected exact TorchScript
+backend. (\textbf{a}) Proposed/fixed feasible P95 ratio; lower than 1.15 passes the
+pilot target. (\textbf{b}) reduction relative to the eager proposed implementation;
+both robots exceed 30\%. (\textbf{c}) stage-level P95 values, which are not additive.
+(\textbf{d}) paired end-to-end P50, P95, and P99. Each robot contains 750 paired
+feasible validation queries at training seed 17. No \texttt{test\_v3} inference is
+made.}
+\label{fig:latency}
+\end{figure}
+
+\section{Discussion}
+
+\subsection{IK as kinematically verified resource allocation}
+
+The results support a system-level interpretation of modern IK. The proposal stage
+locates candidate basins; the calibrated gate predicts a portfolio entry or refusal;
+the numerical cascade restores pose accuracy; and the verifier enforces a non-learned
+acceptance contract. No single module solves the full online problem. This division of
+labor is consistent with generative warm-start systems
+\cite{ames2022ikflow,habekost2023cycleik,morgan2024cppflow} and recent engineering
+hybrids \cite{jayabalan2026hybrid,jlidi2026xgnn}, but the action-gated formulation makes
+computation itself an explicit predicted variable.
+
+The fixed robust comparison is important. If the proposed method had been compared
+only with an unrelated DLS implementation, FEV savings could have resulted from
+different fallback availability, seed banks, or verification rules. Here the primary
+pair shares the entire portfolio and differs only in entry action. Therefore the
+observed reduction is attributable to skipping already-available early stages or to
+rejecting before numerical work, conditional on the frozen portfolio.
+
+The explicit reject action is also distinct from solver failure. A runtime solver that
+spends hundreds of FK evaluations before returning failure may be operationally
+unsuitable for a controller with a nominal 20 ms update interval, although this study
+did not measure hard deadline compliance. The learned gate recognized the two
+constructed rejectable strata with high recall, converted most of them into a
+zero-solve refusal, and retained the same final rejection rate as the robust cascade.
+This is refusal under a kinematic command contract, not a proof of global
+unreachability for arbitrary obstacles or dynamics.
+
+\subsection{Why the negative latency result matters}
+
+FEV is an algorithmic proxy, not end-to-end latency. The formal test demonstrates that
+reducing numerical evaluations does not guarantee a faster system when batch-one model
+inference is inefficient. Reporting only the FEV result would overstate the engineering
+claim. Conversely, discarding the method after the eager overhead would conflate
+algorithm semantics with a removable implementation path. The validation pilot
+resolves this distinction by preserving outputs and routing while replacing Python
+dispatch with frozen vectorized parameters and an exact exported ensemble.
+
+The correct evidential sequence is therefore formal negative result, validation-only
+remediation, locked deployment artifacts, and finally a fresh one-shot test. The
+optimized validation result is encouraging but cannot retroactively repair the frozen
+formal test. This sequence is more conservative than selecting a faster backend after
+examining test outcomes and then reporting it on the same queries.
+
+\subsection{Interpretation of null ablations}
+
+The null single-member, uncertainty, calibration, and no-history operational ablations
+limit the contribution claim. They do not show that these components are useless in
+other robots or distribution shifts; rather, this benchmark cannot attribute the
+primary FEV effect to any one of them. The strongest supported learned mechanism is the
+calibrated action gate as a whole, especially explicit rejection. Future work should
+use distribution shifts that create genuine disagreement and branch ambiguity if it
+aims to establish an ensemble-specific benefit.
+
+The threshold guard further illustrates this point. A Cartesian-step rule cheaply
+identified many rejectable queries but sacrificed approximately 0.9 percentage points
+of feasible success relative to the proposed method. The learned gate's value is not
+merely detecting a large pose change; its portfolio-aware labels encode whether the
+full verifier can be satisfied by a later stage.
+
+\subsection{Limitations and next validation steps}
+
+First, all formal evidence is kinematic. The URDF model is exact, collision checking is
+absent, and no controller, contact, torque, acceleration, sensor delay, or hardware
+uncertainty is simulated. Isaac Lab was the software environment source for robot
+assets, but the present benchmark is not an Isaac Lab physics experiment. Physics-based
+controller tracking should be evaluated as a separate locked phase with identical
+low-level control for all methods.
+
+Second, the point mixture is deliberately stratified and does not estimate natural
+deployment prevalence. Reported mixture means should not be interpreted as expected
+field performance without an application-specific query distribution. Third, the
+models are robot-specific and were trained separately for Panda and UR5e; the study
+does not demonstrate the cross-kinematic generalization targeted by GGIK
+\cite{limoyo2025ggik}. Fourth, the verifier enforces pose, limits, and one-frame
+velocity only. Self-collision, environment collision, acceleration, jerk, and torque
+must be added for broader admissibility claims.
+
+Fifth, three training seeds share one runtime test per robot. They demonstrate
+sensitivity consistency but do not provide six independent test datasets. Sixth, the
+optimized backend has been evaluated only on validation and only with seed 17. At the
+time of this draft, deployment packaging has not passed every robot/seed equivalence
+gate and no fresh optimized test has been started. The paper is not ready to replace
+the formal latency conclusion until all six artifacts are sealed and a preregistered
+\texttt{test\_v3} passes without threshold or claim-gate changes.
+
+Finally, the gate is reactive to one-step diagnostics. A future system could combine
+fast history tracking with path-level candidate selection, explicit singularity-domain
+transition management, collision-aware verification, and calibrated out-of-distribution
+detection. A particularly testable extension is two-sided abstention: high-confidence
+portfolio failure would trigger command rejection, whereas model uncertainty or OOD
+evidence would defer to the complete robust cascade rather than reject. That extension
+requires new counterfactual action labels, shifted validation sets, and a fresh locked
+test; none of its benefits are inferred from the present results. Such work should
+retain the same separation between proposal, selection, refinement, and verification.
+
+\section{Conclusions}
+
+This work reframes online inverse kinematics as kinematically verified allocation of
+solver effort. Across two robot-specific locked test sets and three training-seed
+sensitivity runs per robot, a calibrated
+history-conditioned gate preserved feasible-query success, reduced mean numerical
+evaluations, rejected futile queries before expensive fallback, and retained the tested
+descriptive trajectory outcomes relative to an otherwise identical fixed-entry
+cascade. The conventional-comparator results bound this claim: simpler DLS was faster
+in eager batch-one timing, whereas the Cartesian-step guard sacrificed feasible and
+hard-valid success. The common kinematic verifier, not the neural network, remained
+the authority for command acceptance.
+
+The study also produced a useful negative result: the original eager risk model erased
+the numerical saving on feasible-query P95 latency, causing the frozen formal claim
+gate to fail. An exact validation-only export removed most fixed overhead and met the
+pilot ratios on both robots without changing routing or numerical outcomes, but this
+result still requires completed packaging and independent optimized testing. The resulting conclusion is not
+that neural IK replaces numerical IK. Learning predicts where to start, how much work
+to allocate, and when to refuse; numerical geometry refines, verifies, and provides a
+bounded fallback.
+
+\section*{Author Contributions}
+\authorinput{use the CRediT taxonomy and assign conceptualization, methodology,
+software, validation, formal analysis, visualization, writing, supervision, and
+funding acquisition to named authors.}
+
+\section*{Funding}
+\authorinput{funding agency, grant number, and statement; write ``This research
+received no external funding'' only if factually correct.}
+
+\section*{Institutional Review Board Statement}
+Not applicable; the study used robot kinematic models and synthetic queries and did
+not involve humans or animals.
+
+\section*{Informed Consent Statement}
+Not applicable.
+
+\section*{Data Availability Statement}
+The manuscript source-data CSV files, extraction scripts, configuration files, and
+hash manifests are included in the reproducibility package. The frozen query-level
+outputs and model artifacts will be deposited at
+\authorinput{public repository and DOI/accession} before publication. The optimized
+\texttt{test\_v3} dataset and results are intentionally absent because that test has
+not been authorized or run at the time of this draft.
+
+\section*{Acknowledgments}
+\authorinput{acknowledgments, if any.}
+
+\section*{Use of Generative Artificial Intelligence}
+During manuscript preparation, the authors used OpenAI Codex to assist with language
+drafting, LaTeX preparation, code review, and reproducible figure generation. All
+scientific claims and numerical values were checked against frozen experiment outputs;
+the authors reviewed the resulting text and take full responsibility for the published
+content.
+
+\section*{Conflicts of Interest}
+The authors declare no conflict of interest. \authorinput{confirm this statement and
+add any relationships required by the journal.}
+
+\appendix
+\section{Per-Run Primary Results}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Exact per-run primary metrics from the frozen formal test. Latency is P95 in
+milliseconds.}
+\label{tab:perrun}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrr}
+\toprule
+Robot & Seed & Success fixed/proposed & FEV fixed/proposed & Feasible P95 fixed/proposed & Reject P95 reduction & Traj. fixed/proposed \\
+\midrule
+Panda & 17 & 0.9999/0.9999 & 5.282/3.777 & 3.372/4.444 & 0.9905 & 1.000/1.000 \\
+Panda & 29 & 0.9999/0.9999 & 5.279/3.799 & 3.399/4.694 & 0.9906 & 1.000/1.000 \\
+Panda & 43 & 0.9999/0.9999 & 5.233/3.764 & 3.571/4.899 & 0.9890 & 1.000/1.000 \\
+UR5e & 17 & 1.0000/1.0000 & 5.943/3.950 & 3.136/4.716 & 0.9788 & 0.950/0.975 \\
+UR5e & 29 & 1.0000/1.0000 & 5.945/3.937 & 3.169/5.251 & 0.9775 & 0.975/0.975 \\
+UR5e & 43 & 1.0000/1.0000 & 5.939/3.924 & 3.155/5.199 & 0.9772 & 0.975/0.975 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\section{Validation-Only Latency Table}
+
+\begin{table}[H]
+\centering
+\caption{Selected exact-backend feasible-query latency on validation only (750 paired
+queries per robot, training seed 17).}
+\label{tab:pilot}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Robot & Fixed P50 & Proposed P50 & Fixed P95 & Proposed P95 & Fixed P99 & Proposed P99 & P95 ratio \\
+\midrule
+Panda & 1.670 & 1.922 & 3.358 & 2.656 & 4.386 & 4.697 & 0.791 \\
+UR5e & 1.554 & 1.807 & 3.090 & 2.705 & 3.340 & 3.315 & 0.875 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}

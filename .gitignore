@@ -7,4 +7,13 @@ __pycache__/
 .ruff_cache/
 .venv/
 outputs/
-
+tmp/
+paper_mdpi_machines_v3/tmp/
+paper_mdpi_machines_v3/figures/*.tiff
+paper_mdpi_machines_v3/main.aux
+paper_mdpi_machines_v3/main.bbl
+paper_mdpi_machines_v3/main.blg
+paper_mdpi_machines_v3/main.fdb_latexmk
+paper_mdpi_machines_v3/main.fls
+paper_mdpi_machines_v3/main.log
+paper_mdpi_machines_v3/main.out

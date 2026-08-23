@@ -47,7 +47,7 @@ def test_frozen_hgb_and_isotonic_round_trip(tmp_path: Path) -> None:
     features = RiskDataset.load(root / "datasets/risk_validation.npz").features[:500]
     reference = model.predict_proba(features)
     candidate = loaded.predict_proba(features)
-    assert np.max(np.abs(reference - candidate)) <= 1e-12
+    np.testing.assert_array_equal(candidate, reference)
 
 
 def test_disk_loaded_torchscript_seed_round_trip(tmp_path: Path) -> None:
@@ -90,4 +90,3 @@ def test_disk_loaded_torchscript_seed_round_trip(tmp_path: Path) -> None:
         reference = source(torch.from_numpy(features)).numpy()
         candidate = loaded.module(torch.from_numpy(features)).numpy()
     assert np.array_equal(reference, candidate)
-

@@ -80,7 +80,7 @@ def test_vectorized_hgb_retains_probabilities_and_actions() -> None:
     optimized = VectorizedHGBRiskModel(model)
     reference = model.predict_proba(validation_x)
     actual = optimized.predict_proba(validation_x)
-    np.testing.assert_allclose(actual, reference, rtol=0.0, atol=1e-12)
+    np.testing.assert_array_equal(actual, reference)
     np.testing.assert_array_equal(np.argmax(actual, axis=1), np.argmax(reference, axis=1))
 
 

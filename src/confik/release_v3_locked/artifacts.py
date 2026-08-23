@@ -108,6 +108,9 @@ def load_frozen_risk(
         raise RuntimeError("frozen HGB tree dimensions are inconsistent")
     frozen._tree_ids = np.arange(frozen.tree_count, dtype=np.int64)
     frozen._single_indices = np.zeros(frozen.tree_count, dtype=np.int64)
+    frozen._raw_accumulator = np.empty(
+        (frozen.iterations + 1, frozen.n_classes), dtype=np.float64
+    )
     return frozen
 
 
@@ -191,4 +194,3 @@ def load_locked_seed_engine(
     engine._center = center
     engine._half_span = half_span
     return engine
-

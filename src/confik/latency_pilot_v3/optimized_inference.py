@@ -400,6 +400,9 @@ class VectorizedHGBRiskModel:
         ]
         self._tree_ids = np.arange(self.tree_count, dtype=np.int64)
         self._single_indices = np.zeros(self.tree_count, dtype=np.int64)
+        self._raw_accumulator = np.empty(
+            (self.iterations + 1, self.n_classes), dtype=np.float64
+        )
 
     def _raw_single(self, row: np.ndarray) -> np.ndarray:
         indices = self._single_indices
@@ -423,7 +426,19 @@ class VectorizedHGBRiskModel:
                 self.right[trees, nodes],
             )
         leaves = self.value[self._tree_ids, indices]
-        return self.baseline + leaves.reshape(self.iterations, self.n_classes).sum(axis=0)
+        # sklearn adds each boosting iteration to the baseline in order.  A
+        # reduction (``sum(axis=0)``) may use a different floating-point
+        # association; errors near an isotonic knot can then be amplified past
+        # the locked deployment tolerance.  ``accumulate`` preserves sklearn's
+        # left-to-right iteration order while retaining vectorized tree traversal.
+        self._raw_accumulator[0] = self.baseline
+        self._raw_accumulator[1:] = leaves.reshape(self.iterations, self.n_classes)
+        np.add.accumulate(
+            self._raw_accumulator,
+            axis=0,
+            out=self._raw_accumulator,
+        )
+        return self._raw_accumulator[-1].copy()
 
     def _calibrate(self, probabilities: np.ndarray) -> np.ndarray:
         calibrated = np.column_stack(
