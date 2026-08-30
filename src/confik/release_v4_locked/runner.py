@@ -868,6 +868,33 @@ def _formal_source_manifest(workspace: Path) -> dict[str, Any]:
     }
 
 
+def _verify_formal_source_stable(
+    workspace: Path, initial: Mapping[str, Any]
+) -> dict[str, Any]:
+    """Recheck the release source immediately before the atomic freeze."""
+
+    current = _formal_source_manifest(workspace)
+    stable_fields = (
+        "git_commit",
+        "git_tree",
+        "release_source_scope",
+        "release_source_scope_clean",
+        "runner_sha256",
+        "artifacts_sha256",
+    )
+    mismatched = {
+        field: {"initial": initial.get(field), "current": current.get(field)}
+        for field in stable_fields
+        if initial.get(field) != current.get(field)
+    }
+    if mismatched:
+        raise RuntimeError(
+            "formal v4 release source changed during validation: "
+            f"{mismatched}"
+        )
+    return current
+
+
 def run(config_path: str | Path, *, smoke: bool = False) -> dict[str, Any]:
     path = Path(config_path).resolve()
     config = _read_yaml(path)
@@ -1140,6 +1167,9 @@ def run(config_path: str | Path, *, smoke: bool = False) -> dict[str, Any]:
                 + _sha256_file(release_v3_root / "release_manifest.json")
             ).encode("ascii")
         ).hexdigest()
+        source_manifest_after = _verify_formal_source_stable(
+            workspace, source_manifest
+        )
         protected_after = _tree_snapshot(
             workspace / "outputs", [str(value) for value in config["protected_outputs"]]
         )
@@ -1160,6 +1190,8 @@ def run(config_path: str | Path, *, smoke: bool = False) -> dict[str, Any]:
             "test_v4_started": False,
             "formal_test_authorized_or_started": False,
             "source_manifest": source_manifest,
+            "source_manifest_after_validation": source_manifest_after,
+            "release_source_unchanged_during_validation": True,
             "artifact_manifest_sha256": _sha256_file(
                 staging / "artifact_manifest.json"
             ),

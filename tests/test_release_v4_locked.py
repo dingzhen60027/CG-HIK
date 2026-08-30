@@ -28,6 +28,7 @@ from confik.release_v4_locked.runner import (
     _module_batch,
     _numerical_equivalence,
     _runtime_equivalence,
+    _verify_formal_source_stable,
 )
 
 
@@ -290,3 +291,6 @@ def test_formal_source_manifest_allows_only_out_of_scope_user_changes(
     assert manifest["git_worktree_clean"] is False
     assert manifest["out_of_scope_changes_present"] is True
     assert manifest["out_of_scope_change_count"] == 1
+    with patch("confik.release_v4_locked.runner._git", side_effect=fake_git):
+        after = _verify_formal_source_stable(tmp_path, manifest)
+    assert after["git_commit"] == "commit-sha"
