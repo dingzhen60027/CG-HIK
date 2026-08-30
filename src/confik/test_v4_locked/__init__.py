@@ -17,6 +17,7 @@ from .data import (
     query_sha256,
     validate_dataset_contract,
 )
+from .benchmark import PRIMARY_METHODS, SENSITIVITY_METHODS, benchmark_role
 
 __all__ = [
     "TEST_V4_ROLES",
@@ -29,4 +30,7 @@ __all__ = [
     "query_keys",
     "query_sha256",
     "validate_dataset_contract",
+    "PRIMARY_METHODS",
+    "SENSITIVITY_METHODS",
+    "benchmark_role",
 ]
