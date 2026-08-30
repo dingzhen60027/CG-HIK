@@ -19,7 +19,7 @@ import os
 from pathlib import Path
 import shutil
 import traceback
-from typing import Any, Iterable, Mapping, Sequence
+from typing import Any, Mapping, Sequence
 
 import numpy as np
 from sklearn.metrics import average_precision_score, roc_auc_score
@@ -30,8 +30,9 @@ from ..config import resolve_path
 from ..experiments.provenance import environment_payload, source_tree_hash
 from .calibration import binary_calibration_metrics, sigmoid
 from .model import (
-    ACTION_NAMES,
     CALIBRATION_HEAD_NAMES,
+    FEATURE_NAMES,
+    LABEL_CONTRACT,
     CounterfactualPrediction,
     CounterfactualTrainingConfig,
     CounterfactualV4Predictor,
@@ -39,7 +40,7 @@ from .model import (
 from .policy import DECISION_ENTRIES, V4PolicyConfig
 
 
-PROTOCOL = "counterfactual_v4_validation_training_v1"
+PROTOCOL = "counterfactual_v4_validation_training_v2"
 ROLE_ORDER = (
     "risk_train_queries",
     "calibration_queries",
@@ -125,10 +126,20 @@ class RoleArrays:
         return int(self.features.shape[0])
 
     @property
-    def decision_deadline_success(self) -> np.ndarray:
-        return self.verified_success_before_deadline[:, : len(DECISION_ENTRIES)].astype(
+    def decision_verified_success(self) -> np.ndarray:
+        """Semantic solver-plus-verifier success for the learned action heads."""
+
+        return self.verified_success[:, : len(DECISION_ENTRIES)].astype(
             np.float32
         )
+
+    @property
+    def decision_deadline_success(self) -> np.ndarray:
+        """Deadline diagnostic; never a model or calibration target."""
+
+        return self.verified_success_before_deadline[
+            :, : len(DECISION_ENTRIES)
+        ].astype(np.float32)
 
     @property
     def fail_all(self) -> np.ndarray:
@@ -237,6 +248,11 @@ def _load_role(bulk_root: Path, robot: str, training_seed: int, role: str) -> Ro
             names = tuple(labels["feature_names"].astype(str).tolist())
             if actions != COLLECTED_ACTIONS or decisions != DECISION_ENTRIES:
                 raise RuntimeError(f"action schema mismatch: {labels_path}")
+            if names != FEATURE_NAMES:
+                raise RuntimeError(
+                    f"canonical feature schema mismatch: {labels_path}; "
+                    f"expected={FEATURE_NAMES}, got={names}"
+                )
             if feature_names is None:
                 feature_names = names
             elif feature_names != names:
@@ -273,6 +289,15 @@ def _load_role(bulk_root: Path, robot: str, training_seed: int, role: str) -> Ro
         raise RuntimeError(f"invalid feature matrix: {role_root}")
     if success.shape != expected_matrix or deadline.shape != expected_matrix:
         raise RuntimeError(f"invalid success label matrix: {role_root}")
+    decision_success = success[:, : len(DECISION_ENTRIES)]
+    if not np.array_equal(
+        decision_success,
+        np.repeat(decision_success[:, :1], len(DECISION_ENTRIES), axis=1),
+    ):
+        raise RuntimeError(
+            "semantic verified-success differs across terminal-fallback-invariant "
+            f"actions: {role_root}"
+        )
     if evaluations.shape != expected_matrix or fallback.shape != expected_matrix:
         raise RuntimeError(f"invalid solver label matrix: {role_root}")
     if latency_ns.shape != (*expected_matrix, 5):
@@ -335,9 +360,9 @@ def _calibration_report(
 ) -> dict[str, Any]:
     prediction = predictor.predict(role.features)
     probabilities = np.column_stack(
-        [prediction.deadline_success_probability, prediction.fail_all_probability]
+        [prediction.verified_success_probability[:, 0], prediction.fail_all_probability]
     )
-    targets = np.column_stack([role.decision_deadline_success, role.fail_all])
+    targets = np.column_stack([role.decision_verified_success[:, 0], role.fail_all])
     report = {
         name: _binary_discrimination(probabilities[:, index], targets[:, index])
         for index, name in enumerate(CALIBRATION_HEAD_NAMES)
@@ -385,12 +410,12 @@ def _route_actions(
     prediction: CounterfactualPrediction,
     config: V4PolicyConfig,
 ) -> np.ndarray:
-    count = prediction.deadline_success_probability.shape[0]
+    count = prediction.verified_success_probability.shape[0]
     if prediction.is_ood is None:
         raise RuntimeError("policy selection requires a calibrated OOD detector")
     is_ood = np.asarray(prediction.is_ood, dtype=bool)
     eligible = (
-        (prediction.deadline_success_probability >= config.minimum_success_probability)
+        (prediction.verified_success_probability >= config.minimum_success_probability)
         & (prediction.latency_p95_ms <= config.deadline_ms)
     )
     has_eligible = np.any(eligible, axis=1)
@@ -495,6 +520,10 @@ def _policy_metrics(
             else float(np.quantile(successful_command_samples, 0.95))
         ),
         "deadline_miss_rate": float(np.mean(~deadline_success & command_success)),
+        "eligibility_contract": (
+            "calibrated semantic verified-success probability meets the risk threshold "
+            "and predicted raw-repeat P95 latency is at most the 20 ms deadline"
+        ),
         "selection_latency_scope": (
             "raw five-repeat solver-plus-verifier labels; learned gate overhead excluded"
         ),
@@ -645,17 +674,19 @@ def _fit_robot(
     )
     predictor.fit(
         train.features,
-        train.decision_deadline_success,
+        train.decision_verified_success,
         train.decision_latency_samples_ms,
         train.fail_all,
     )
     if not predictor.training_provenance["formal_v4_eligible"]:
         raise RuntimeError("model did not preserve raw-repeat training provenance")
     raw = predictor.predict(calibration.features)
-    raw_logits = np.column_stack([raw.deadline_success_logits, raw.fail_all_logit])
+    raw_logits = np.column_stack(
+        [raw.verified_success_logits[:, 0], raw.fail_all_logit]
+    )
     predictor.calibrate(
         calibration.features,
-        calibration.decision_deadline_success,
+        calibration.decision_verified_success,
         calibration.fail_all,
         method="platt",
     )
@@ -688,7 +719,8 @@ def _fit_robot(
     actual = restored.predict(policy_role.features[: min(512, policy_role.count)])
     equivalence: dict[str, Any] = {}
     for name in (
-        "deadline_success_probability",
+        "verified_success_logits",
+        "verified_success_probability",
         "latency_p50_ms",
         "latency_p95_ms",
         "fail_all_probability",
@@ -704,9 +736,28 @@ def _fit_robot(
     equivalence["is_ood_exact"] = bool(
         np.array_equal(expected.is_ood, actual.is_ood)
     )
+    equivalence["shared_semantic_success_logits_exact"] = bool(
+        np.array_equal(
+            actual.verified_success_logits,
+            np.repeat(actual.verified_success_logits[:, :1], 3, axis=1),
+        )
+    )
+    equivalence["shared_semantic_success_probabilities_exact"] = bool(
+        np.array_equal(
+            actual.verified_success_probability,
+            np.repeat(actual.verified_success_probability[:, :1], 3, axis=1),
+        )
+    )
     if not all(
         row["exact"] for row in equivalence.values() if isinstance(row, dict)
-    ) or not equivalence["is_ood_exact"]:
+    ) or not all(
+        bool(equivalence[name])
+        for name in (
+            "is_ood_exact",
+            "shared_semantic_success_logits_exact",
+            "shared_semantic_success_probabilities_exact",
+        )
+    ):
         raise RuntimeError(f"saved model round-trip is not exact for {robot}")
 
     policy_path = output_dir / "policies" / f"{robot}_seed17_policy.json"
@@ -718,6 +769,8 @@ def _fit_robot(
             "policy_config": selected["config"],
             "selection_metrics": selected,
             "selection_role": "policy_validation_queries",
+            "label_contract": dict(LABEL_CONTRACT),
+            "shared_semantic_success_due_to_terminal_fallback_invariance": True,
             "test_data_loaded": False,
         },
     )
@@ -725,6 +778,9 @@ def _fit_robot(
     metrics = {
         "robot": robot,
         "training_seed": 17,
+        "feature_names": list(FEATURE_NAMES),
+        "label_contract": dict(LABEL_CONTRACT),
+        "shared_semantic_success_due_to_terminal_fallback_invariance": True,
         "split_counts": {role: values.count for role, values in roles.items()},
         "training_provenance": predictor.training_provenance,
         "reject_claim_support": {
@@ -783,16 +839,106 @@ def _fit_robot(
     return metrics
 
 
-def _verify_existing_candidate(output_root: Path) -> None:
+def _candidate_release_digest(
+    artifact_manifest_sha256: str,
+    config_sha256: str,
+    bulk_manifest_sha256: str,
+) -> str:
+    return sha256(
+        (artifact_manifest_sha256 + config_sha256 + bulk_manifest_sha256).encode(
+            "ascii"
+        )
+    ).hexdigest()
+
+
+def _verify_existing_candidate(
+    output_root: Path,
+    *,
+    config_path: Path,
+    bulk_root: Path,
+) -> None:
+    if output_root.is_symlink():
+        raise RuntimeError(f"candidate root cannot be a symlink: {output_root}")
     artifact_manifest = output_root / "artifact_manifest.json"
     run_manifest = output_root / "run_manifest.json"
-    if not artifact_manifest.is_file() or not run_manifest.is_file():
+    if (
+        not artifact_manifest.is_file()
+        or artifact_manifest.is_symlink()
+        or not run_manifest.is_file()
+        or run_manifest.is_symlink()
+    ):
         raise RuntimeError(f"candidate path exists but is not a sealed candidate: {output_root}")
     artifacts = json.loads(artifact_manifest.read_text(encoding="utf-8"))
-    for relative, metadata in artifacts["files"].items():
+    run = json.loads(run_manifest.read_text(encoding="utf-8"))
+    if artifacts.get("protocol") != PROTOCOL or artifacts.get("release_status") != (
+        "frozen_validation_candidate"
+    ):
+        raise RuntimeError("candidate artifact manifest has the wrong protocol or status")
+    if bool(artifacts.get("test_data_loaded", True)):
+        raise RuntimeError("candidate artifact manifest indicates forbidden test access")
+    if run.get("protocol") != PROTOCOL or run.get("status") != (
+        "frozen_validation_candidate"
+    ):
+        raise RuntimeError("candidate run manifest has the wrong protocol or status")
+    if bool(run.get("test_data_loaded", True)) or bool(
+        run.get("formal_test_authorized_or_started", True)
+    ):
+        raise RuntimeError("candidate run manifest violates the validation-only boundary")
+    artifact_manifest_sha256 = _sha256_file(artifact_manifest)
+    config_sha256 = _sha256_file(config_path)
+    bulk_manifest_sha256 = _sha256_file(bulk_root / "run_manifest.json")
+    if run.get("artifact_manifest_sha256") != artifact_manifest_sha256:
+        raise RuntimeError("candidate artifact-manifest hash chain is broken")
+    if run.get("config_path") != str(config_path) or run.get("config_sha256") != config_sha256:
+        raise RuntimeError("candidate was created from a different training config")
+    if run.get("bulk_root") != str(bulk_root) or run.get(
+        "bulk_manifest_sha256"
+    ) != bulk_manifest_sha256:
+        raise RuntimeError("candidate was created from a different bulk artifact")
+    if run.get("source_tree_sha256") != source_tree_hash():
+        raise RuntimeError("candidate source tree differs from the current training code")
+    if tuple(run.get("feature_names", ())) != FEATURE_NAMES:
+        raise RuntimeError("candidate feature schema is not canonical")
+    if run.get("label_contract") != LABEL_CONTRACT:
+        raise RuntimeError("candidate label contract is not semantic verified-success")
+    if not bool(
+        run.get("shared_semantic_success_due_to_terminal_fallback_invariance", False)
+    ):
+        raise RuntimeError("candidate does not enforce shared semantic-success outputs")
+    expected_release_digest = _candidate_release_digest(
+        artifact_manifest_sha256, config_sha256, bulk_manifest_sha256
+    )
+    if run.get("release_digest") != expected_release_digest:
+        raise RuntimeError("candidate release digest does not match its provenance chain")
+    files = artifacts.get("files")
+    if not isinstance(files, dict) or int(artifacts.get("file_count", -1)) != len(files):
+        raise RuntimeError("candidate artifact file inventory is malformed")
+    expected_files: set[str] = set()
+    for relative, metadata in files.items():
+        relative_path = Path(relative)
+        if relative_path.is_absolute() or ".." in relative_path.parts:
+            raise RuntimeError(f"unsafe candidate artifact path: {relative}")
         path = output_root / relative
-        if not path.is_file() or _sha256_file(path) != metadata["sha256"]:
+        if (
+            not path.is_file()
+            or path.is_symlink()
+            or path.stat().st_size != int(metadata["size"])
+            or _sha256_file(path) != metadata["sha256"]
+        ):
             raise RuntimeError(f"sealed candidate artifact changed: {path}")
+        expected_files.add(str(relative_path))
+    actual_files = {
+        str(path.relative_to(output_root))
+        for path in output_root.rglob("*")
+        if path.is_file()
+        and path not in {artifact_manifest, run_manifest}
+    }
+    if actual_files != expected_files:
+        raise RuntimeError(
+            "candidate payload inventory changed: "
+            f"missing={sorted(expected_files - actual_files)}, "
+            f"extra={sorted(actual_files - expected_files)}"
+        )
 
 
 def run(config_path: str | Path) -> Path:
@@ -802,7 +948,11 @@ def run(config_path: str | Path) -> Path:
         raise ValueError("v4 training config must be a YAML mapping")
     workspace, bulk_root, output_root = _validate_config(config, path)
     if output_root.exists():
-        _verify_existing_candidate(output_root)
+        _verify_existing_candidate(
+            output_root,
+            config_path=path,
+            bulk_root=bulk_root,
+        )
         print(f"[counterfactual-v4-train] sealed candidate already verified: {output_root}")
         return output_root
     bulk_manifest = _load_bulk_manifest(bulk_root)
@@ -821,7 +971,13 @@ def run(config_path: str | Path) -> Path:
     staging.mkdir(parents=True, exist_ok=False)
     try:
         all_roles: dict[str, dict[str, RoleArrays]] = {}
-        data_audit: dict[str, Any] = {"robots": {}, "test_data_loaded": False}
+        data_audit: dict[str, Any] = {
+            "robots": {},
+            "feature_names": list(FEATURE_NAMES),
+            "label_contract": dict(LABEL_CONTRACT),
+            "shared_semantic_success_due_to_terminal_fallback_invariance": True,
+            "test_data_loaded": False,
+        }
         for robot in config["robots"]:
             roles = {
                 role: _load_role(bulk_root, str(robot), int(config["training_seed"]), role)
@@ -845,6 +1001,22 @@ def run(config_path: str | Path) -> Path:
                         "raw_latency_shape": list(values.latency_samples_ns.shape),
                         "raw_latency_dtype": str(values.latency_samples_ns.dtype),
                         "fail_all_rate": float(np.mean(values.fail_all)),
+                        "semantic_verified_success_rates": {
+                            action: float(
+                                np.mean(values.verified_success[:, action_index])
+                            )
+                            for action_index, action in enumerate(DECISION_ENTRIES)
+                        },
+                        "deadline_success_diagnostic_rates": {
+                            action: float(
+                                np.mean(
+                                    values.verified_success_before_deadline[
+                                        :, action_index
+                                    ]
+                                )
+                            )
+                            for action_index, action in enumerate(DECISION_ENTRIES)
+                        },
                         "contract_feasible_semantic_fail_all_count": int(
                             np.sum(
                                 (values.fail_all > 0.5)
@@ -902,11 +1074,11 @@ def run(config_path: str | Path) -> Path:
         }
         _write_json(staging / "artifact_manifest.json", artifact_manifest)
         artifact_manifest_sha = _sha256_file(staging / "artifact_manifest.json")
-        release_digest = sha256(
-            (artifact_manifest_sha + _sha256_file(path) + _sha256_file(bulk_root / "run_manifest.json")).encode(
-                "ascii"
-            )
-        ).hexdigest()
+        release_digest = _candidate_release_digest(
+            artifact_manifest_sha,
+            _sha256_file(path),
+            _sha256_file(bulk_root / "run_manifest.json"),
+        )
         _write_json(
             staging / "run_manifest.json",
             {
@@ -924,6 +1096,13 @@ def run(config_path: str | Path) -> Path:
                 "roles": list(ROLE_ORDER),
                 "robots": list(config["robots"]),
                 "training_seed": int(config["training_seed"]),
+                "feature_names": list(FEATURE_NAMES),
+                "label_contract": dict(LABEL_CONTRACT),
+                "shared_semantic_success_due_to_terminal_fallback_invariance": True,
+                "eligibility_rule": (
+                    "semantic verified-success probability threshold AND predicted "
+                    "P95 latency <= deadline_ms"
+                ),
                 "latency_supervision": "raw latency_samples_ns converted once to ms",
                 "test_data_loaded": False,
                 "formal_test_authorized_or_started": False,

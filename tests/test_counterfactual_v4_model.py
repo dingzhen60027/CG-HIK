@@ -13,6 +13,7 @@ from confik.counterfactual_v4.calibration import (
 from confik.counterfactual_v4.model import (
     ACTION_NAMES,
     FEATURE_DIM,
+    FEATURE_NAMES,
     CounterfactualMultiHeadMLP,
     CounterfactualTrainingConfig,
     CounterfactualV4Predictor,
@@ -27,16 +28,11 @@ from confik.counterfactual_v4.ood import (
 def _synthetic(count: int, seed: int) -> tuple[np.ndarray, ...]:
     rng = np.random.default_rng(seed)
     features = rng.normal(size=(count, FEATURE_DIM)).astype(np.float32)
-    success_score = np.column_stack(
-        [
-            1.8 - 0.7 * features[:, 0],
-            1.2 - 0.5 * features[:, 1],
-            0.8 - 0.4 * features[:, 2],
-        ]
-    )
-    success = (success_score + rng.normal(scale=0.4, size=success_score.shape) > 0).astype(
-        np.float32
-    )
+    success_score = 1.2 - 0.4 * features[:, 0] - 0.2 * features[:, 1]
+    shared_success = (
+        success_score + rng.normal(scale=0.4, size=success_score.shape) > 0
+    ).astype(np.float32)
+    success = np.repeat(shared_success[:, None], len(ACTION_NAMES), axis=1)
     fail_all = np.all(success == 0.0, axis=1).astype(np.float32)
     base = np.column_stack(
         [
@@ -69,6 +65,8 @@ def test_architecture_shapes_positive_ordered_latency_and_pinball() -> None:
     outputs = model(torch.zeros(7, FEATURE_DIM))
     success, p50, p95, fail_all, embedding = outputs
     assert success.shape == (7, len(ACTION_NAMES))
+    assert torch.equal(success[:, 0], success[:, 1])
+    assert torch.equal(success[:, 0], success[:, 2])
     assert p50.shape == p95.shape == (7, len(ACTION_NAMES))
     assert fail_all.shape == (7,)
     assert embedding.shape == (7, 12)
@@ -87,12 +85,19 @@ def test_training_is_deterministic_and_round_trip_is_exact(tmp_path) -> None:
     first_raw = first.predict(validation[0])
     second_raw = second.predict(validation[0])
     np.testing.assert_array_equal(
-        first_raw.deadline_success_logits, second_raw.deadline_success_logits
+        first_raw.verified_success_logits, second_raw.verified_success_logits
     )
     np.testing.assert_array_equal(first_raw.latency_p50_ms, second_raw.latency_p50_ms)
+    np.testing.assert_array_equal(
+        first_raw.verified_success_logits,
+        np.repeat(first_raw.verified_success_logits[:, :1], 3, axis=1),
+    )
     assert np.all(first_raw.latency_p50_ms > 0.0)
     assert np.all(first_raw.latency_p95_ms > first_raw.latency_p50_ms)
     assert first.training_provenance == {
+        "action_success_target": "semantic_verified_success",
+        "shared_semantic_success_due_to_terminal_fallback_invariance": True,
+        "deadline_success_role": "diagnostic_only",
         "latency_training_source": "raw_samples",
         "latency_repeat_count": 7,
         "raw_sample_pinball": True,
@@ -109,8 +114,12 @@ def test_training_is_deterministic_and_round_trip_is_exact(tmp_path) -> None:
     assert restored.training_provenance == first.training_provenance
     expected = first.predict(validation[0])
     actual = restored.predict(validation[0])
+    np.testing.assert_array_equal(
+        actual.verified_success_probability,
+        np.repeat(actual.verified_success_probability[:, :1], 3, axis=1),
+    )
     for name in (
-        "deadline_success_probability",
+        "verified_success_probability",
         "latency_p50_ms",
         "latency_p95_ms",
         "fail_all_probability",
@@ -122,9 +131,7 @@ def test_training_is_deterministic_and_round_trip_is_exact(tmp_path) -> None:
 
     report = restored.calibration_metrics(validation[0], validation[1], validation[3])
     assert set(report) == {
-        "deadline_success_easy",
-        "deadline_success_medium",
-        "deadline_success_hard",
+        "verified_success_shared",
         "fail_all",
     }
     assert all(set(row) == {"ece", "brier", "nll", "coverage"} for row in report.values())
@@ -146,11 +153,49 @@ def test_raw_latency_shape_is_mandatory_and_aggregated_path_is_test_only() -> No
     p95 = np.quantile(samples, 0.95, axis=2)
     predictor.fit_aggregated_for_testing(features, success, p50, p95, fail_all)
     assert predictor.training_provenance == {
+        "action_success_target": "semantic_verified_success",
+        "shared_semantic_success_due_to_terminal_fallback_invariance": True,
+        "deadline_success_role": "diagnostic_only",
         "latency_training_source": "aggregated_test_only",
         "latency_repeat_count": None,
         "raw_sample_pinball": False,
         "formal_v4_eligible": False,
     }
+
+
+def test_serialized_model_locks_canonical_feature_and_semantic_label_contract(
+    tmp_path,
+) -> None:
+    train = _synthetic(32, 31)
+    predictor = CounterfactualV4Predictor(
+        CounterfactualTrainingConfig(hidden_sizes=(8,), epochs=2, batch_size=16)
+    ).fit(*train)
+    artifact = tmp_path / "semantic_v4.pt"
+    predictor.save(artifact)
+    payload = torch.load(artifact, map_location="cpu", weights_only=True)
+    assert tuple(payload["feature_names"]) == FEATURE_NAMES
+    assert payload["label_contract"] == {
+        "action_success_target": "semantic_verified_success",
+        "shared_semantic_success_due_to_terminal_fallback_invariance": True,
+        "deadline_success_role": "diagnostic_only",
+        "latency_target": "raw_repeat_p50_p95_pinball",
+    }
+
+    payload["feature_names"] = list(reversed(FEATURE_NAMES))
+    corrupted = tmp_path / "wrong_features.pt"
+    torch.save(payload, corrupted)
+    with pytest.raises(ValueError, match="feature schema"):
+        CounterfactualV4Predictor.load(corrupted)
+
+
+def test_formal_model_rejects_action_specific_semantic_success_labels() -> None:
+    features, success, samples, fail_all = _synthetic(24, 41)
+    success[0, 1] = 1.0 - success[0, 0]
+    predictor = CounterfactualV4Predictor(
+        CounterfactualTrainingConfig(hidden_sizes=(8,), epochs=1, batch_size=12)
+    )
+    with pytest.raises(ValueError, match="terminal-fallback invariance"):
+        predictor.fit(features, success, samples, fail_all)
 
 
 def test_platt_temperature_and_multihead_calibration_metrics() -> None:

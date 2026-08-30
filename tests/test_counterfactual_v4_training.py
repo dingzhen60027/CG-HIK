@@ -7,14 +7,26 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from confik.counterfactual_v4.model import CounterfactualPrediction
+from confik.counterfactual_v4.model import (
+    CALIBRATION_HEAD_NAMES,
+    FEATURE_NAMES,
+    LABEL_CONTRACT,
+    CounterfactualPrediction,
+)
+from confik.counterfactual_v4.policy import V4PolicyConfig
 from confik.counterfactual_v4.training_runner import (
     COLLECTED_ACTIONS,
     DECISION_ENTRIES,
+    PROTOCOL,
     RoleArrays,
+    _calibration_report,
+    _candidate_release_digest,
     _load_role,
+    _route_actions,
     _select_policy_configuration,
+    _verify_existing_candidate,
 )
+from confik.experiments.provenance import source_tree_hash
 
 
 def _hash(path: Path) -> str:
@@ -51,7 +63,7 @@ def _write_synthetic_role(root: Path, *, count: int = 8, repeats: int = 5) -> Pa
     with labels_path.open("wb") as handle:
         np.savez_compressed(
             handle,
-            feature_names=np.asarray([f"f{index}" for index in range(9)]),
+            feature_names=np.asarray(FEATURE_NAMES),
             action_names=np.asarray(COLLECTED_ACTIONS),
             decision_action_names=np.asarray(DECISION_ENTRIES),
             features=np.arange(count * 9, dtype=np.float64).reshape(count, 9),
@@ -134,8 +146,8 @@ def _policy_role() -> tuple[RoleArrays, CounterfactualPrediction]:
     probabilities = np.tile(np.asarray([0.98, 0.98, 0.98]), (count, 1))
     probabilities[-3:] = 0.05
     prediction = CounterfactualPrediction(
-        deadline_success_logits=np.zeros((count, 3)),
-        deadline_success_probability=probabilities,
+        verified_success_logits=np.zeros((count, 3)),
+        verified_success_probability=probabilities,
         latency_p50_ms=np.tile(np.asarray([2.5, 1.5, 0.8]), (count, 1)),
         latency_p95_ms=np.tile(np.asarray([3.0, 2.0, 1.0]), (count, 1)),
         fail_all_logit=np.zeros(count),
@@ -165,3 +177,130 @@ def test_policy_selection_uses_policy_role_and_enforces_hard_gates() -> None:
     # Zero margin permits the genuinely faster hard entry.
     assert selected["config"]["latency_tie_margin_ms"] == 0.0
     assert selected["route_counts"]["hard"] == 9
+
+
+def test_semantic_success_is_learned_while_deadline_is_a_separate_p95_gate() -> None:
+    count = 6
+    semantic_success = np.ones((count, 4), dtype=bool)
+    deadline_success = np.zeros((count, 4), dtype=bool)
+    latency = np.full((count, 4, 5), 25_000_000, dtype=np.int64)
+    role = RoleArrays(
+        features=np.zeros((count, 9), dtype=np.float32),
+        query_sha256=np.asarray([f"{index:064x}" for index in range(count)]),
+        category=np.asarray(["id"] * count),
+        expected_reachable=np.ones(count, dtype=bool),
+        continuity_feasible=np.ones(count, dtype=bool),
+        verified_success=semantic_success,
+        verified_success_before_deadline=deadline_success,
+        latency_samples_ns=latency,
+        function_evaluations=np.ones((count, 4), dtype=np.int64),
+        fallback_used=np.zeros((count, 4), dtype=bool),
+        source_files=(),
+    )
+    prediction = CounterfactualPrediction(
+        verified_success_logits=np.full((count, 3), 4.0),
+        verified_success_probability=np.full((count, 3), 0.98),
+        latency_p50_ms=np.full((count, 3), 18.0),
+        latency_p95_ms=np.full((count, 3), 25.0),
+        fail_all_logit=np.full(count, -4.0),
+        fail_all_probability=np.full(count, 0.02),
+        embedding=np.zeros((count, 4)),
+        ood_score=np.zeros(count),
+        is_ood=np.zeros(count, dtype=bool),
+    )
+
+    assert np.all(role.decision_verified_success == 1.0)
+    assert np.all(role.decision_deadline_success == 0.0)
+    routed = _route_actions(
+        prediction,
+        V4PolicyConfig(
+            minimum_success_probability=0.9,
+            reject_probability=0.9,
+            deadline_ms=20.0,
+            latency_tie_margin_ms=0.0,
+        ),
+    )
+    # Semantic success qualifies on risk, but P95 misses the deadline, so the
+    # policy defers instead of treating deadline failure as semantic failure.
+    assert np.all(routed == 4)
+
+    class StaticPredictor:
+        def predict(self, features: np.ndarray) -> CounterfactualPrediction:
+            assert features.shape == role.features.shape
+            return prediction
+
+    report = _calibration_report(StaticPredictor(), role)  # type: ignore[arg-type]
+    assert CALIBRATION_HEAD_NAMES[0] == "verified_success_shared"
+    assert report["verified_success_shared"]["positive_rate"] == 1.0
+
+
+def test_existing_candidate_reuse_requires_exact_provenance_and_inventory(
+    tmp_path: Path,
+) -> None:
+    output_root = tmp_path / "release_v4_candidate"
+    output_root.mkdir()
+    config_path = (tmp_path / "train.yaml").resolve()
+    config_path.write_text("protocol_version: 4\n", encoding="utf-8")
+    bulk_root = (tmp_path / "counterfactual_v4_bulk").resolve()
+    bulk_root.mkdir()
+    (bulk_root / "run_manifest.json").write_text(
+        json.dumps({"status": "complete"}), encoding="utf-8"
+    )
+    payload_path = output_root / "frozen_config.yaml"
+    payload_path.write_bytes(config_path.read_bytes())
+    files = {
+        payload_path.name: {
+            "sha256": _hash(payload_path),
+            "size": payload_path.stat().st_size,
+        }
+    }
+    artifact_manifest = output_root / "artifact_manifest.json"
+    artifact_manifest.write_text(
+        json.dumps(
+            {
+                "protocol": PROTOCOL,
+                "release_status": "frozen_validation_candidate",
+                "files": files,
+                "file_count": len(files),
+                "test_data_loaded": False,
+            },
+            sort_keys=True,
+        ),
+        encoding="utf-8",
+    )
+    artifact_sha = _hash(artifact_manifest)
+    config_sha = _hash(config_path)
+    bulk_sha = _hash(bulk_root / "run_manifest.json")
+    (output_root / "run_manifest.json").write_text(
+        json.dumps(
+            {
+                "protocol": PROTOCOL,
+                "status": "frozen_validation_candidate",
+                "release_digest": _candidate_release_digest(
+                    artifact_sha, config_sha, bulk_sha
+                ),
+                "config_path": str(config_path),
+                "config_sha256": config_sha,
+                "source_tree_sha256": source_tree_hash(),
+                "bulk_root": str(bulk_root),
+                "bulk_manifest_sha256": bulk_sha,
+                "artifact_manifest_sha256": artifact_sha,
+                "feature_names": list(FEATURE_NAMES),
+                "label_contract": dict(LABEL_CONTRACT),
+                "shared_semantic_success_due_to_terminal_fallback_invariance": True,
+                "test_data_loaded": False,
+                "formal_test_authorized_or_started": False,
+            },
+            sort_keys=True,
+        ),
+        encoding="utf-8",
+    )
+
+    _verify_existing_candidate(
+        output_root, config_path=config_path, bulk_root=bulk_root
+    )
+    config_path.write_text("protocol_version: 99\n", encoding="utf-8")
+    with pytest.raises(RuntimeError, match="different training config"):
+        _verify_existing_candidate(
+            output_root, config_path=config_path, bulk_root=bulk_root
+        )

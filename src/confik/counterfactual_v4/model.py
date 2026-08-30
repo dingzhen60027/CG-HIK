@@ -20,13 +20,28 @@ from .ood import EmbeddingMahalanobisOOD
 
 
 FEATURE_DIM = 9
+FEATURE_NAMES = (
+    "learned_seed_position_error",
+    "learned_seed_orientation_error",
+    "ensemble_uncertainty_mean",
+    "ensemble_uncertainty_max",
+    "learned_seed_min_singular_value",
+    "learned_seed_joint_limit_margin",
+    "learned_seed_joint_step_l2",
+    "current_pose_position_step",
+    "current_pose_orientation_step",
+)
 ACTION_NAMES = ("easy", "medium", "hard")
 CALIBRATION_HEAD_NAMES = (
-    "deadline_success_easy",
-    "deadline_success_medium",
-    "deadline_success_hard",
+    "verified_success_shared",
     "fail_all",
 )
+LABEL_CONTRACT = {
+    "action_success_target": "semantic_verified_success",
+    "shared_semantic_success_due_to_terminal_fallback_invariance": True,
+    "deadline_success_role": "diagnostic_only",
+    "latency_target": "raw_repeat_p50_p95_pinball",
+}
 
 
 @dataclass(frozen=True)
@@ -66,7 +81,7 @@ class CounterfactualMultiHeadMLP(nn.Module):
             layers.extend((nn.Linear(previous, width), nn.SiLU()))
             previous = width
         self.backbone = nn.Sequential(*layers)
-        self.deadline_success_head = nn.Linear(previous, len(ACTION_NAMES))
+        self.verified_success_head = nn.Linear(previous, 1)
         self.latency_head = nn.Linear(previous, 2 * len(ACTION_NAMES))
         self.fail_all_head = nn.Linear(previous, 1)
         self.min_latency_ms = float(config.min_latency_ms)
@@ -80,7 +95,12 @@ class CounterfactualMultiHeadMLP(nn.Module):
         if inputs.ndim != 2 or inputs.shape[1] != FEATURE_DIM:
             raise ValueError(f"inputs must have shape (N, {FEATURE_DIM})")
         embedding = self.backbone(inputs)
-        success_logits = self.deadline_success_head(embedding)
+        # All three entries terminate in the same robust fallback and the
+        # complete bulk audit found exact semantic-success invariance.  A
+        # single logit is therefore broadcast deliberately; independent heads
+        # would invent action-specific success differences unsupported by data.
+        shared_success_logit = self.verified_success_head(embedding)
+        success_logits = shared_success_logit.expand(-1, len(ACTION_NAMES))
         latency_raw = self.latency_head(embedding)
         p50_raw, gap_raw = latency_raw.chunk(2, dim=1)
         latency_p50 = F.softplus(p50_raw) + self.min_latency_ms
@@ -102,8 +122,8 @@ def pinball_loss(prediction: Tensor, target: Tensor, quantile: float) -> Tensor:
 
 @dataclass(frozen=True)
 class CounterfactualPrediction:
-    deadline_success_logits: np.ndarray
-    deadline_success_probability: np.ndarray
+    verified_success_logits: np.ndarray
+    verified_success_probability: np.ndarray
     latency_p50_ms: np.ndarray
     latency_p95_ms: np.ndarray
     fail_all_logit: np.ndarray
@@ -157,7 +177,7 @@ class CounterfactualV4Predictor:
     arrays.  No method discovers or reads a dataset path on its own.
     """
 
-    FORMAT_VERSION = 2
+    FORMAT_VERSION = 3
 
     def __init__(
         self,
@@ -191,7 +211,7 @@ class CounterfactualV4Predictor:
     def fit(
         self,
         features: np.ndarray,
-        deadline_success: np.ndarray,
+        verified_success: np.ndarray,
         latency_samples_ms: np.ndarray,
         fail_all: np.ndarray | None = None,
     ) -> "CounterfactualV4Predictor":
@@ -205,10 +225,11 @@ class CounterfactualV4Predictor:
 
         inputs, _ = _feature_matrix(features)
         count = inputs.shape[0]
-        success = _target_matrix(deadline_success, count, name="deadline_success")
+        success = _target_matrix(verified_success, count, name="verified_success")
+        self._require_shared_semantic_success(success)
         latency_samples = _latency_sample_tensor(latency_samples_ms, count)
         if np.any((success < 0.0) | (success > 1.0)):
-            raise ValueError("deadline_success targets must lie in [0, 1]")
+            raise ValueError("verified_success targets must lie in [0, 1]")
         fail_target = self._fail_all_target(success, fail_all)
         return self._fit_validated(
             inputs=inputs,
@@ -223,7 +244,7 @@ class CounterfactualV4Predictor:
     def fit_aggregated_for_testing(
         self,
         features: np.ndarray,
-        deadline_success: np.ndarray,
+        verified_success: np.ndarray,
         latency_p50_ms: np.ndarray,
         latency_p95_ms: np.ndarray,
         fail_all: np.ndarray | None = None,
@@ -237,11 +258,12 @@ class CounterfactualV4Predictor:
 
         inputs, _ = _feature_matrix(features)
         count = inputs.shape[0]
-        success = _target_matrix(deadline_success, count, name="deadline_success")
+        success = _target_matrix(verified_success, count, name="verified_success")
+        self._require_shared_semantic_success(success)
         p50 = _target_matrix(latency_p50_ms, count, name="latency_p50_ms")
         p95 = _target_matrix(latency_p95_ms, count, name="latency_p95_ms")
         if np.any((success < 0.0) | (success > 1.0)):
-            raise ValueError("deadline_success targets must lie in [0, 1]")
+            raise ValueError("verified_success targets must lie in [0, 1]")
         if np.any(p50 <= 0.0) or np.any(p95 < p50):
             raise ValueError("latency targets must be positive with P95 >= P50")
         fail_target = self._fail_all_target(success, fail_all)
@@ -254,6 +276,14 @@ class CounterfactualV4Predictor:
             aggregated_p95=p95,
             latency_training_source="aggregated_test_only",
         )
+
+    @staticmethod
+    def _require_shared_semantic_success(success: np.ndarray) -> None:
+        if not np.array_equal(success, np.repeat(success[:, :1], len(ACTION_NAMES), axis=1)):
+            raise ValueError(
+                "semantic verified-success labels must be identical across easy, "
+                "medium, and hard under terminal-fallback invariance"
+            )
 
     @staticmethod
     def _fail_all_target(
@@ -396,6 +426,9 @@ class CounterfactualV4Predictor:
         """Auditable declaration of the latency supervision used by ``fit``."""
 
         return {
+            "action_success_target": "semantic_verified_success",
+            "shared_semantic_success_due_to_terminal_fallback_invariance": True,
+            "deadline_success_role": "diagnostic_only",
             "latency_training_source": self.latency_training_source,
             "latency_repeat_count": self.latency_repeat_count,
             "raw_sample_pinball": self.latency_training_source == "raw_samples",
@@ -420,23 +453,24 @@ class CounterfactualV4Predictor:
     def calibrate(
         self,
         validation_features: np.ndarray,
-        validation_deadline_success: np.ndarray,
+        validation_verified_success: np.ndarray,
         validation_fail_all: np.ndarray,
         *,
         method: str = "platt",
     ) -> "CounterfactualV4Predictor":
         inputs, _ = _feature_matrix(validation_features)
         success = _target_matrix(
-            validation_deadline_success,
+            validation_verified_success,
             inputs.shape[0],
-            name="validation_deadline_success",
+            name="validation_verified_success",
         )
+        self._require_shared_semantic_success(success)
         fail = np.asarray(validation_fail_all, dtype=np.float64).reshape(-1)
         if fail.shape != (inputs.shape[0],):
             raise ValueError(f"validation_fail_all must have shape ({inputs.shape[0]},)")
         success_logits, _, _, fail_logit, _ = self._raw_numpy(inputs)
-        logits = np.column_stack([success_logits, fail_logit])
-        targets = np.column_stack([success, fail])
+        logits = np.column_stack([success_logits[:, 0], fail_logit])
+        targets = np.column_stack([success[:, 0], fail])
         self.calibrator = MultiOutputCalibrator(
             method, CALIBRATION_HEAD_NAMES  # type: ignore[arg-type]
         ).fit(logits, targets)
@@ -462,7 +496,7 @@ class CounterfactualV4Predictor:
     def predict(self, features: np.ndarray) -> CounterfactualPrediction:
         inputs, _ = _feature_matrix(features)
         success_logits, p50, p95, fail_logit, embedding = self._raw_numpy(inputs)
-        combined_logits = np.column_stack([success_logits, fail_logit])
+        combined_logits = np.column_stack([success_logits[:, 0], fail_logit])
         if self.calibrator is None:
             combined_probability = sigmoid(combined_logits)
         else:
@@ -478,8 +512,10 @@ class CounterfactualV4Predictor:
                 else self.ood_detector.predict_ood(embedding)
             )
         return CounterfactualPrediction(
-            deadline_success_logits=success_logits,
-            deadline_success_probability=combined_probability[:, : len(ACTION_NAMES)],
+            verified_success_logits=success_logits,
+            verified_success_probability=np.repeat(
+                combined_probability[:, :1], len(ACTION_NAMES), axis=1
+            ),
             latency_p50_ms=p50,
             latency_p95_ms=p95,
             fail_all_logit=fail_logit,
@@ -492,22 +528,25 @@ class CounterfactualV4Predictor:
     def calibration_metrics(
         self,
         features: np.ndarray,
-        deadline_success: np.ndarray,
+        verified_success: np.ndarray,
         fail_all: np.ndarray,
         *,
         bins: int = 15,
         confidence_threshold: float = 0.8,
     ) -> dict[str, dict[str, float]]:
         inputs, _ = _feature_matrix(features)
-        success = _target_matrix(deadline_success, inputs.shape[0], name="deadline_success")
+        success = _target_matrix(
+            verified_success, inputs.shape[0], name="verified_success"
+        )
+        self._require_shared_semantic_success(success)
         fail = np.asarray(fail_all, dtype=np.float64).reshape(-1)
         if fail.shape != (inputs.shape[0],):
             raise ValueError(f"fail_all must have shape ({inputs.shape[0]},)")
         prediction = self.predict(inputs)
         probabilities = np.column_stack(
-            [prediction.deadline_success_probability, prediction.fail_all_probability]
+            [prediction.verified_success_probability[:, 0], prediction.fail_all_probability]
         )
-        targets = np.column_stack([success, fail])
+        targets = np.column_stack([success[:, 0], fail])
         return {
             name: binary_calibration_metrics(
                 probabilities[:, index],
@@ -523,6 +562,8 @@ class CounterfactualV4Predictor:
             raise RuntimeError("cannot save an unfitted predictor")
         payload: dict[str, Any] = {
             "format_version": self.FORMAT_VERSION,
+            "feature_names": list(FEATURE_NAMES),
+            "label_contract": dict(LABEL_CONTRACT),
             "config": asdict(self.config),
             "state_dict": {
                 name: value.detach().cpu() for name, value in self.model.state_dict().items()
@@ -549,6 +590,10 @@ class CounterfactualV4Predictor:
         payload = torch.load(Path(path), map_location="cpu", weights_only=True)
         if not isinstance(payload, dict) or payload.get("format_version") != cls.FORMAT_VERSION:
             raise ValueError("unsupported counterfactual v4 model artifact")
+        if tuple(payload.get("feature_names", ())) != FEATURE_NAMES:
+            raise ValueError("counterfactual v4 model feature schema mismatch")
+        if payload.get("label_contract") != LABEL_CONTRACT:
+            raise ValueError("counterfactual v4 model label contract mismatch")
         config_state = dict(payload["config"])
         config_state["hidden_sizes"] = tuple(config_state["hidden_sizes"])
         instance = cls(CounterfactualTrainingConfig(**config_state), device=device)
@@ -559,6 +604,16 @@ class CounterfactualV4Predictor:
         instance.fitted = bool(payload["fitted"])
         instance.training_history = [dict(row) for row in payload["training_history"]]
         provenance = dict(payload["training_provenance"])
+        if provenance.get("action_success_target") != "semantic_verified_success":
+            raise ValueError("model was not trained on semantic verified-success labels")
+        if not bool(
+            provenance.get(
+                "shared_semantic_success_due_to_terminal_fallback_invariance", False
+            )
+        ):
+            raise ValueError("model does not enforce shared semantic-success outputs")
+        if provenance.get("deadline_success_role") != "diagnostic_only":
+            raise ValueError("model improperly used deadline-success as a learned target")
         instance.latency_training_source = str(provenance["latency_training_source"])
         repeat_count = provenance["latency_repeat_count"]
         instance.latency_repeat_count = None if repeat_count is None else int(repeat_count)
