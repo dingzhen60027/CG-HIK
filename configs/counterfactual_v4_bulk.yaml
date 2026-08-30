@@ -1,0 +1,46 @@
+protocol_version: 4
+experiment_name: counterfactual_v4_bulk_development_labels
+workspace: ..
+source_config: paper_v2.yaml
+release_root: ../outputs/release_v3_locked
+output_root: ../outputs/counterfactual_v4_bulk
+
+# Frozen after the validation-only cost and label-schema pilot.  One shared
+# training seed is used for method development; seeds are not pseudo-replicates.
+robots: [panda, ur5e]
+training_seeds: [17]
+
+data:
+  # These are the only source roles reachable from the bulk runner.  No test
+  # role or test_v3 path is accepted or discovered. Counts are per robot, so
+  # the two-robot aggregate is 30k train / 5k calibration / 5k policy validation.
+  role_counts:
+    risk_train_queries: 15000
+    calibration_queries: 2500
+    policy_validation_queries: 2500
+  dt: 0.02
+
+timing:
+  warmup_iterations: 200
+  repeats: 5
+  deadline_ms: 20.0
+
+bulk:
+  # Every chunk is atomically committed with hashes. Re-running the launcher
+  # resumes at the first missing verified chunk.
+  chunk_size: 250
+
+runtime:
+  device: cuda:0
+  intra_op_threads: 8
+  inter_op_threads: 1
+  max_unrelated_cpu_percent: 50.0
+  # Every query is checked before collection and immediately after all action
+  # repeats. A contaminated attempt is discarded and recollected after quiet.
+  environment_check_every_queries: 1
+  quiet_stable_checks: 2
+  quiet_poll_seconds: 1.0
+  max_quiet_wait_seconds: 600.0
+
+logging:
+  progress_every_chunks: 1
