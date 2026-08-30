@@ -246,6 +246,7 @@ class FormalHostGuard:
         previous_cpu = self._previous_cpu_snapshot
         self._previous_cpu_snapshot = current_cpu
         cpu: list[dict[str, Any]] = []
+        unknown_transitions: list[dict[str, Any]] = []
         external_aggregate_cpu_percent = 0.0
         host_total_cpu_percent = 0.0
         cpu_window_seconds: float | None = None
@@ -268,10 +269,17 @@ class FormalHostGuard:
             previous_processes = previous_cpu["processes"]
             for identity, item in current_cpu["processes"].items():
                 pid = int(item["pid"])
-                if pid in self.excluded_pids or identity not in previous_processes:
+                if pid in self.excluded_pids:
                     continue
-                tick_delta = int(item["process_ticks"]) - int(
-                    previous_processes[identity]["process_ticks"]
+                previous_item = previous_processes.get(identity)
+                # A process born after the previous snapshot has accumulated
+                # all of its lifetime ticks inside this monitor window.  It
+                # must not receive a one-window grace period.
+                tick_delta = (
+                    int(item["process_ticks"])
+                    if previous_item is None
+                    else int(item["process_ticks"])
+                    - int(previous_item["process_ticks"])
                 )
                 if tick_delta <= 0:
                     continue
@@ -284,8 +292,27 @@ class FormalHostGuard:
                             "cpu_percent_over_monitor_window": percent,
                             "stat": str(item["state"]),
                             "args": str(item["args"]),
+                            "process_started_inside_monitor_window": previous_item
+                            is None,
                         }
                     )
+            # A process that existed at the pre-window snapshot and exited
+            # before the post-window snapshot cannot be assigned an exact
+            # tick delta. Conservatively invalidate the covered query rather
+            # than silently accepting a potentially CPU-polluted interval.
+            for identity, item in previous_processes.items():
+                if int(item["pid"]) in self.excluded_pids or identity in current_cpu[
+                    "processes"
+                ]:
+                    continue
+                unknown_transitions.append(
+                    {
+                        "pid": int(item["pid"]),
+                        "start_ticks": int(identity[1]),
+                        "transition": "external_process_exited_inside_monitor_window",
+                        "args": str(item["args"]),
+                    }
+                )
         gpu: list[dict[str, Any]] = []
         if self.reject_other_gpu_processes:
             gpu_output, _ = self._run_command(
@@ -302,12 +329,17 @@ class FormalHostGuard:
             "host_total_cpu_percent": host_total_cpu_percent,
             "cpu_window_seconds": cpu_window_seconds,
             "cpu_window_available": cpu_window_available,
+            "unknown_external_process_transitions": unknown_transitions,
             "gpu_compute_processes": gpu,
         }
 
     def _freeze_and_classify(self, raw: Mapping[str, Any]) -> dict[str, Any]:
         cpu = [dict(item) for item in raw.get("busy_cpu_processes", ())]
         aggregate_cpu = float(raw.get("external_aggregate_cpu_percent", 0.0))
+        unknown_transitions = [
+            dict(item)
+            for item in raw.get("unknown_external_process_transitions", ())
+        ]
         gpu = [dict(item) for item in raw.get("gpu_compute_processes", ())]
         if self._frozen_allowed_gpu_identities is None:
             allowed = [
@@ -342,10 +374,14 @@ class FormalHostGuard:
             "host_total_cpu_percent": float(raw.get("host_total_cpu_percent", 0.0)),
             "cpu_window_seconds": raw.get("cpu_window_seconds"),
             "cpu_window_available": bool(raw.get("cpu_window_available", False)),
+            "unknown_external_process_transitions": unknown_transitions,
             "aggregate_external_cpu_busy": aggregate_cpu
             >= self.aggregate_cpu_threshold,
             "busy": bool(
-                cpu or foreign or aggregate_cpu >= self.aggregate_cpu_threshold
+                cpu
+                or foreign
+                or unknown_transitions
+                or aggregate_cpu >= self.aggregate_cpu_threshold
             ),
             "decision_source": "external_process_state_only",
         }

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import threading
 
+import confik.test_v4_locked.host_guard as host_guard_module
 from confik.test_v4_locked.host_guard import (
     FormalHostGuard,
     _parse_gpu_processes,
@@ -135,3 +136,44 @@ def test_unlisted_gpu_process_is_busy_at_initial_sample() -> None:
         assert sample["foreign_gpu_compute_processes"][0]["pid"] == 123
     finally:
         guard.close()
+
+
+def test_cpu_process_born_after_pre_sample_has_no_grace_window(monkeypatch) -> None:
+    snapshots = iter(
+        [
+            {
+                "captured_monotonic_ns": 1_000_000_000,
+                "total_ticks": 1_000,
+                "idle_ticks": 900,
+                "processes": {},
+            },
+            {
+                "captured_monotonic_ns": 1_250_000_000,
+                "total_ticks": 2_000,
+                "idle_ticks": 1_800,
+                "processes": {
+                    (4242, 123): {
+                        "pid": 4242,
+                        "process_ticks": 1_000,
+                        "state": "R",
+                        "args": "/opt/external/load",
+                    }
+                },
+            },
+        ]
+    )
+    monkeypatch.setattr(
+        host_guard_module, "_proc_cpu_snapshot", lambda: next(snapshots)
+    )
+    guard = object.__new__(FormalHostGuard)
+    guard._previous_cpu_snapshot = None
+    guard.excluded_pids = {9999}
+    guard.cpu_threshold = 50.0
+    guard.reject_other_gpu_processes = False
+    first = guard._sample_external_state()
+    assert not first["cpu_window_available"]
+    second = guard._sample_external_state()
+    assert second["busy_cpu_processes"][0]["pid"] == 4242
+    assert second["busy_cpu_processes"][0][
+        "process_started_inside_monitor_window"
+    ]
