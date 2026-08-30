@@ -3,7 +3,7 @@ experiment_name: counterfactual_v4_current_code_readiness_smoke
 workspace: ..
 source_config: paper_v2.yaml
 release_root: ../outputs/release_v3_locked
-output_root: ../outputs/counterfactual_v4_readiness_smoke
+output_root: ../outputs/counterfactual_v4_readiness_smoke_r2
 
 robots: [panda, ur5e]
 training_seeds: [17]
@@ -23,7 +23,10 @@ runtime:
   intra_op_threads: 8
   inter_op_threads: 1
   max_unrelated_cpu_percent: 50.0
-  environment_check_every_queries: 4
+  environment_check_every_queries: 1
+  quiet_stable_checks: 2
+  quiet_poll_seconds: 1.0
+  max_quiet_wait_seconds: 600.0
 
 logging:
   progress_every: 4

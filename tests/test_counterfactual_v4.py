@@ -13,6 +13,7 @@ from confik.counterfactual_v4.collector import (
     validate_source_role,
 )
 from confik.data.datasets import QueryDataset
+from confik.counterfactual_v4 import runner as v4_runner
 
 
 def _dataset(count: int = 20) -> QueryDataset:
@@ -83,3 +84,24 @@ def test_summary_selects_fastest_successful_p95_action() -> None:
 def test_fixed_robust_is_collected_but_not_a_decision_head() -> None:
     assert ACTIONS == ("easy", "medium", "hard")
     assert COLLECTED_ACTIONS == ("easy", "medium", "hard", "fixed_robust")
+
+
+def test_quiet_environment_fast_path_does_not_sleep(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(v4_runner, "_busy_unrelated_processes", lambda **_: [])
+    monkeypatch.setattr(
+        v4_runner.time,
+        "sleep",
+        lambda _: pytest.fail("quiet fast path unexpectedly slept"),
+    )
+    result = v4_runner._wait_for_quiet_environment(
+        {
+            "runtime": {
+                "max_unrelated_cpu_percent": 50.0,
+                "quiet_stable_checks": 2,
+                "quiet_poll_seconds": 1.0,
+                "max_quiet_wait_seconds": 10.0,
+            }
+        },
+        context="unit-test",
+    )
+    assert result["had_busy_process"] is False

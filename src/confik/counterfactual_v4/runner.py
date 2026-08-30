@@ -151,14 +151,60 @@ def _busy_unrelated_processes(
     return busy
 
 
-def _assert_quiet_environment(config: dict[str, Any]) -> None:
+def _wait_for_quiet_environment(
+    config: dict[str, Any], *, context: str
+) -> dict[str, Any]:
     threshold = float(config["runtime"]["max_unrelated_cpu_percent"])
-    busy = _busy_unrelated_processes(cpu_threshold_percent=threshold)
-    if busy:
-        raise RuntimeError(
-            "counterfactual latency collection requires a quiet host; "
-            f"unrelated processes above {threshold:g}% CPU: {busy}"
+    stable_required = int(config["runtime"].get("quiet_stable_checks", 2))
+    poll_seconds = float(config["runtime"].get("quiet_poll_seconds", 1.0))
+    max_wait_seconds = float(config["runtime"].get("max_quiet_wait_seconds", 600.0))
+    started = time.monotonic()
+    stable = 0
+    observed: list[dict[str, Any]] = []
+    announced = False
+    while stable < stable_required:
+        busy = _busy_unrelated_processes(cpu_threshold_percent=threshold)
+        if busy:
+            stable = 0
+            observed = busy
+            if not announced:
+                print(
+                    f"[counterfactual-v4] waiting for quiet host at {context}: {busy}",
+                    flush=True,
+                )
+                announced = True
+        else:
+            # The fast path must not add a one-second sleep to every query.
+            # Consecutive quiet samples are required only after actual
+            # interference has been observed.
+            if not announced:
+                return {
+                    "context": context,
+                    "wait_seconds": time.monotonic() - started,
+                    "had_busy_process": False,
+                    "last_busy_processes": [],
+                }
+            stable += 1
+        elapsed = time.monotonic() - started
+        if elapsed > max_wait_seconds:
+            raise RuntimeError(
+                "counterfactual latency collection did not regain a quiet host; "
+                f"context={context!r}, waited={elapsed:.1f}s, last_busy={observed}"
+            )
+        if stable < stable_required:
+            time.sleep(poll_seconds)
+    elapsed = time.monotonic() - started
+    if announced:
+        print(
+            f"[counterfactual-v4] quiet host restored at {context} after {elapsed:.1f}s",
+            flush=True,
         )
+    return {
+        "context": context,
+        "wait_seconds": elapsed,
+        "had_busy_process": announced,
+        "last_busy_processes": observed,
+    }
 
 
 def _build_runtimes(
@@ -342,24 +388,50 @@ def _run_combination(
 
     features: list[np.ndarray] = []
     records: list[dict[str, Any]] = []
+    environment_wait_events: list[dict[str, Any]] = []
+    contaminated_query_retries = 0
     started = time.perf_counter()
     for query_index, source_index_value in enumerate(selected):
         check_every = int(config["runtime"]["environment_check_every_queries"])
         if query_index % max(check_every, 1) == 0:
-            _assert_quiet_environment(config)
+            event = _wait_for_quiet_environment(
+                config, context=f"{robot}/seed{training_seed}/query{query_index}/before"
+            )
+            if event["had_busy_process"]:
+                environment_wait_events.append(event)
         source_index = int(source_index_value)
         query = query_from_dataset(dataset, source_index, dt=dt)
-        feature, rows = collect_query_actions(
-            query=query,
-            query_index=query_index,
-            source_index=source_index,
-            dataset=dataset,
-            runtimes=runtimes,
-            seed_engine=seed_engine,  # type: ignore[arg-type]
-            repeats=repeats,
-            deadline_ms=deadline_ms,
-            order_seed=selection_seed + query_index,
-        )
+        while True:
+            feature, rows = collect_query_actions(
+                query=query,
+                query_index=query_index,
+                source_index=source_index,
+                dataset=dataset,
+                runtimes=runtimes,
+                seed_engine=seed_engine,  # type: ignore[arg-type]
+                repeats=repeats,
+                deadline_ms=deadline_ms,
+                order_seed=selection_seed + query_index,
+            )
+            if query_index % max(check_every, 1) != 0:
+                break
+            busy_after = _busy_unrelated_processes(
+                cpu_threshold_percent=float(
+                    config["runtime"]["max_unrelated_cpu_percent"]
+                )
+            )
+            if not busy_after:
+                break
+            contaminated_query_retries += 1
+            print(
+                f"[counterfactual-v4] discarding and recollecting {robot}/seed{training_seed} "
+                f"query {query_index} after concurrent CPU activity: {busy_after}",
+                flush=True,
+            )
+            event = _wait_for_quiet_environment(
+                config, context=f"{robot}/seed{training_seed}/query{query_index}/retry"
+            )
+            environment_wait_events.append(event)
         query_hash = query_digest(query)
         for row in rows:
             row.update(
@@ -392,6 +464,12 @@ def _run_combination(
             "wall_time_seconds_excluding_warmup_and_writes": elapsed,
             "seconds_per_query_four_collected_actions": elapsed / len(selected),
             "projected_hours_for_120k_queries": elapsed / len(selected) * 120_000 / 3600,
+            "contaminated_query_retries": contaminated_query_retries,
+            "quiet_wait_event_count": len(environment_wait_events),
+            "quiet_wait_seconds": float(
+                sum(float(event["wait_seconds"]) for event in environment_wait_events)
+            ),
+            "quiet_wait_events": environment_wait_events,
             "pilot_only": True,
             "eligible_for_test_claims": False,
         }
@@ -468,7 +546,7 @@ def main() -> None:
     if release_manifest["release_status"] != "sealed" or not equivalence["all_six_pass"]:
         raise RuntimeError("v4 labels require the sealed, six-pass exact v3 release")
     validate_source_role(str(config["data"]["source_role"]))
-    _assert_quiet_environment(config)
+    preflight_environment = _wait_for_quiet_environment(config, context="run_preflight")
     torch.set_num_threads(int(config["runtime"]["intra_op_threads"]))
     torch.set_num_interop_threads(int(config["runtime"]["inter_op_threads"]))
 
@@ -548,6 +626,7 @@ def main() -> None:
                 "pilot_only": True,
                 "eligible_for_formal_claims": False,
                 "protected_outputs_unchanged": True,
+                "preflight_environment": preflight_environment,
                 "protected_before": protected_before,
                 "protected_after": protected_after,
                 "git_commit": subprocess.run(
