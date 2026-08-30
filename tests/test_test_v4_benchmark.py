@@ -68,6 +68,43 @@ class _Method:
         )
 
 
+class _ExternalStateGuard:
+    max_contaminated_attempts = 3
+
+    def __init__(self, busy_after: list[bool]) -> None:
+        self.busy_after = list(busy_after)
+        self.sample_index = 0
+        self.events: list[dict[str, object]] = []
+
+    def wait_until_quiet(self, *, context: str) -> dict[str, object]:
+        self.sample_index += 1
+        return {"context": context, "monitor_sample_index": self.sample_index}
+
+    def observe(self, *, context: str, since_sample_index: int) -> dict[str, object]:
+        assert since_sample_index == self.sample_index
+        return {
+            "context": context,
+            "busy": self.busy_after.pop(0) if self.busy_after else False,
+            "decision_source": "external_process_state_only",
+        }
+
+    def record_contamination(
+        self,
+        *,
+        context: str,
+        observation: dict[str, object],
+        attempt_index: int,
+        discarded_scope: str,
+    ) -> None:
+        self.events.append(
+            {
+                "context": context,
+                "attempt_index": attempt_index,
+                "discarded_scope": discarded_scope,
+            }
+        )
+
+
 def _dataset(*, trajectory: bool = False) -> QueryDataset:
     count = 2
     return QueryDataset(
@@ -158,3 +195,53 @@ def test_zero_budget_reject_has_no_solver_stage() -> None:
     assert all(row["function_evaluations"] == 0 for row in records)
     assert all(row["executed_stages"] == [] for row in records)
     assert all(row["command_q"] is None for row in records)
+
+
+def test_external_pollution_discards_complete_point_method_repeat_block() -> None:
+    method = _Method()
+    guard = _ExternalStateGuard([True, False, False])
+    records = benchmark_role(
+        robot="panda",
+        training_seed=17,
+        role="id_points",
+        methods={"fixed_robust_cascade": method},
+        dataset=_dataset(),
+        repeats_by_method={"fixed_robust_cascade": 2},
+        dt=0.02,
+        order_seed=13,
+        synchronize_cuda=False,
+        environment_guard=guard,
+    )
+    # First query: two discarded calls plus two recollected calls. Second
+    # query: two retained calls.
+    assert method.calls == 6
+    assert len(records) == 2
+    assert records[0]["environment_attempt_index"] == 1
+    assert guard.events[0]["discarded_scope"] == (
+        "complete_same_query_all_methods_all_repeats"
+    )
+
+
+def test_external_pollution_rolls_back_complete_trajectory_cluster() -> None:
+    method = _Method()
+    guard = _ExternalStateGuard([True, False, False])
+    records = benchmark_role(
+        robot="ur5e",
+        training_seed=29,
+        role="ood_trajectories",
+        methods={"fixed_robust_cascade": method},
+        dataset=_dataset(trajectory=True),
+        repeats_by_method={"fixed_robust_cascade": 1},
+        dt=0.02,
+        order_seed=14,
+        synchronize_cuda=False,
+        environment_guard=guard,
+    )
+    # First frame was discarded; the retry starts from the trajectory
+    # checkpoint and executes both frames again.
+    assert method.calls == 3
+    assert len(records) == 2
+    assert all(row["environment_attempt_index"] == 1 for row in records)
+    assert guard.events[0]["discarded_scope"] == (
+        "complete_trajectory_cluster_all_methods"
+    )

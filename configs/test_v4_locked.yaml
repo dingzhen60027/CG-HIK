@@ -8,12 +8,45 @@ primary_training_seed: 17
 sensitivity_training_seeds: [29, 43]
 backend: torchscript_exact_v4
 
+# Independent control-plane anchors. These values are outside the sealed
+# release and prevent a modified release manifest from selecting a new test
+# dataset seed while still appearing internally self-consistent.
+release_lock:
+  release_digest: 01bd104c96b6e33be1a5ac29dd2bbedad1369156a7e9beb86f551eabe9db541a
+  release_manifest_sha256: 816f6fa7fba2a015eb0f3dd146f76d469dd3ef13d8e7440b8381fcdcc0efee10
+  artifact_manifest_sha256: 411921ca349bfbcff5c7e7c8c372d750ca9df499677c0d15f84dc4a98155e288
+  upstream_v3_release_manifest_sha256: 9cd72b1fa1abfaa5e8e8e3f769987996dec0877b35be7fda58eddd813bbe05d6
+
 runtime:
   device: cuda:0
   cuda_visible_devices: "0"
+  required_environment_variables:
+    CUDA_VISIBLE_DEVICES: "0"
+    OMP_NUM_THREADS: "8"
+    MKL_NUM_THREADS: "8"
+    OPENBLAS_NUM_THREADS: "8"
   intra_op_threads: 8
   inter_op_threads: 1
   deadline_ms: 20.0
+  quiet_host:
+    max_unrelated_cpu_percent: 50.0
+    max_aggregate_external_cpu_percent: 400.0
+    reject_other_gpu_compute_pids: true
+    # Exact process path only. The PID/name tuple observed in the first
+    # background sample is frozen; a later process with the same path but a
+    # different PID is treated as foreign GPU compute.
+    allowed_persistent_gpu_compute_process_names:
+      - /usr/libexec/gnome-remote-desktop-daemon
+    monitor_sample_interval_seconds: 0.25
+    max_monitor_sample_age_seconds: 1.0
+    monitor_command_timeout_seconds: 5.0
+    quiet_stable_checks: 2
+    quiet_poll_seconds: 1.0
+    max_quiet_wait_seconds: 600.0
+    max_contaminated_attempts: 10
+    contamination_decision_source: external_process_state_only
+    point_discard_scope: complete_same_query_all_methods_all_repeats
+    trajectory_discard_scope: complete_trajectory_cluster_all_methods
   hysteresis:
     enabled: false
     method: disabled_by_preregistration
@@ -32,6 +65,7 @@ data:
       hard_screening_release_seed: 17
       hard_screening_easy_iterations: 1
       hard_screening_robust_iterations: 25
+      hard_screening_max_attempts_per_query: 120
       expected_queries: 12000
       expected_trajectories: 0
       expected_category_counts:
@@ -89,8 +123,18 @@ timing:
   disk_writes_inside_timed_interval: false
   latency_quantiles: [0.50, 0.95, 0.99]
 
+checkpointing:
+  point_query_chunk_size: 250
+  trajectory_checkpoint_unit: complete_trajectory_cluster
+  atomic_directory_rename: true
+  completed_checkpoint_recomputation_allowed: false
+  resume_requires_identical_preregistration_dataset_source_and_assets: true
+  resume_scope: technical_interruption_only
+  scientific_gate_failure_rerun_allowed: false
+
 statistics:
   confidence_level: 0.95
+  familywise_alpha: 0.05
   bootstrap_samples: 10000
   bootstrap_seed_role: bootstrap
   point_resampling_unit: query_sha256
@@ -108,8 +152,12 @@ claim_gate:
   feasible_p99_ratio_max: 1.05
   trajectory_completion_gap_min: -0.10
   trajectory_command_spike_increase_max: 0.0
-  ood_feasible_false_reject_improvement_vs_v3_min: 0.0
+  # A tiny positive lower bound implements a strict > 0 finite-sample
+  # improvement gate without changing the frozen reporting comparator.
+  ood_feasible_false_reject_improvement_vs_v3_min: 1.0e-12
+  defer_support_count_min: 10
   defer_fixed_semantic_match_rate_min: 1.0
+  reject_support_count_min: 30
   reject_function_evaluations_max: 0
   reject_executed_stage_count_max: 0
 
@@ -138,5 +186,10 @@ protected_outputs:
   - test_v3_aggregate
   - counterfactual_v4_pilot
   - counterfactual_v4_bulk
+  - counterfactual_v4_smoke*
+  - .counterfactual_v4_smoke*
+  - counterfactual_v4_readiness_smoke*
+  - .counterfactual_v4_readiness_smoke*
   - release_v4_candidate
   - release_v4_locked
+  - czy  # Explicitly resolved by the runner as workspace/czy, not outputs/czy.
