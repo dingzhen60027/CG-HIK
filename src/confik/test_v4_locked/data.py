@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import Counter
 from dataclasses import dataclass
 from hashlib import sha256
+import json
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
@@ -36,6 +37,29 @@ ROLE_DOMAIN = {
     "ood_trajectories": "ood",
 }
 IDENTITY_ARRAYS = ("previous_q", "target_position", "target_rotation")
+PAPER_V2_SEEDS = (17, 29, 43)
+PAPER_V2_QUERY_ROLES = (
+    "seed_train",
+    "seed_validation",
+    "risk_train_queries",
+    "risk_validation_queries",
+    "risk_test_queries",
+    "calibration_queries",
+    "policy_validation_queries",
+    "test_id",
+    "test_queries",
+)
+COUNTERFACTUAL_V4_QUERY_ROOTS = (
+    "counterfactual_v4_pilot",
+    "counterfactual_v4_smoke",
+    "counterfactual_v4_readiness_smoke",
+    "counterfactual_v4_readiness_smoke_r2",
+)
+BULK_QUERY_ROLES = (
+    "risk_train_queries",
+    "calibration_queries",
+    "policy_validation_queries",
+)
 
 
 @dataclass(frozen=True)
@@ -51,6 +75,11 @@ class ComparisonSource:
     name: str
     path: Path
     kind: str
+    group: str = "custom"
+    role: str = "unspecified"
+    source_indices: tuple[int, ...] = ()
+    trajectory_ids: tuple[int, ...] = ()
+    provenance_path: Path | None = None
 
 
 def derive_seed(release_v4_digest: str, robot: str, role: str) -> int:
@@ -333,8 +362,26 @@ def _sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def _identity_hashes_from_npz(path: Path, *, dt: float) -> set[str]:
-    """Read identity arrays only; extra arrays (including metrics) are ignored."""
+def _identity_hashes_from_npz(
+    path: Path,
+    *,
+    dt: float,
+    source_indices: Sequence[int] = (),
+    trajectory_ids: Sequence[int] = (),
+) -> tuple[list[str], dict[str, Any]]:
+    """Read identity arrays only; extra arrays (including metrics) are ignored.
+
+    Optional selectors reproduce the exact validation subset used by
+    ``latency_pilot_v3``.  They are mutually exclusive and validated rather
+    than clipped, deduplicated, or silently ignored.
+    """
+
+    source_index_values = tuple(int(value) for value in source_indices)
+    trajectory_id_values = tuple(int(value) for value in trajectory_ids)
+    if source_index_values and trajectory_id_values:
+        raise ValueError(
+            "identity source cannot use index and trajectory selectors together"
+        )
 
     with np.load(path, allow_pickle=False) as arrays:
         missing = set(IDENTITY_ARRAYS) - set(arrays.files)
@@ -343,76 +390,233 @@ def _identity_hashes_from_npz(path: Path, *, dt: float) -> set[str]:
         previous_q = np.asarray(arrays["previous_q"], dtype=np.float64)
         target_position = np.asarray(arrays["target_position"], dtype=np.float64)
         target_rotation = np.asarray(arrays["target_rotation"], dtype=np.float64)
+        trajectory_id = (
+            np.asarray(arrays["trajectory_id"], dtype=np.int64)
+            if trajectory_id_values
+            else None
+        )
     count = len(previous_q)
-    if target_position.shape != (count, 3) or target_rotation.shape != (count, 3, 3):
+    if (
+        previous_q.ndim != 2
+        or target_position.shape != (count, 3)
+        or target_rotation.shape != (count, 3, 3)
+        or not np.all(np.isfinite(previous_q))
+        or not np.all(np.isfinite(target_position))
+        or not np.all(np.isfinite(target_rotation))
+    ):
         raise ValueError(f"identity source {path} has incompatible query shapes")
-    return {
+    selected = np.arange(count, dtype=np.int64)
+    selector: dict[str, Any] = {"type": "all_rows", "selected_count": count}
+    if source_index_values:
+        selected = np.asarray(source_index_values, dtype=np.int64)
+        if (
+            selected.ndim != 1
+            or len(selected) != len(np.unique(selected))
+            or np.any(selected < 0)
+            or np.any(selected >= count)
+        ):
+            raise ValueError(f"identity source {path} has invalid source indices")
+        selector = {
+            "type": "source_indices",
+            "selected_count": len(selected),
+            "selector_sha256": sha256(
+                np.ascontiguousarray(selected, dtype=np.int64).tobytes()
+            ).hexdigest(),
+        }
+    elif trajectory_id_values:
+        if trajectory_id is None or trajectory_id.shape != (count,):
+            raise KeyError(f"trajectory identity source {path} lacks trajectory_id")
+        requested = np.asarray(trajectory_id_values, dtype=np.int64)
+        if requested.ndim != 1 or len(requested) != len(np.unique(requested)):
+            raise ValueError(f"identity source {path} has invalid trajectory ids")
+        missing_ids = sorted(set(requested.tolist()) - set(trajectory_id.tolist()))
+        if missing_ids:
+            raise ValueError(
+                f"identity source {path} lacks requested trajectory ids: {missing_ids}"
+            )
+        selected = np.flatnonzero(np.isin(trajectory_id, requested))
+        selector = {
+            "type": "trajectory_ids",
+            "trajectory_count": len(requested),
+            "selected_count": len(selected),
+            "selector_sha256": sha256(
+                np.ascontiguousarray(requested, dtype=np.int64).tobytes()
+            ).hexdigest(),
+        }
+    hashes = [
         query_sha256(
             previous_q[index], target_position[index], target_rotation[index], dt=dt
         )
-        for index in range(count)
-    }
+        for index in selected.tolist()
+    ]
+    return hashes, selector
 
 
-def _precomputed_hashes_from_npz(path: Path) -> set[str]:
+def _precomputed_hashes_from_npz(path: Path) -> list[str]:
     with np.load(path, allow_pickle=False) as arrays:
         if "query_sha256" not in arrays.files:
             raise KeyError(f"query-hash source {path} lacks query_sha256")
         values = np.asarray(arrays["query_sha256"]).astype(str).reshape(-1)
-    if any(len(value) != 64 for value in values):
+    if any(
+        len(value) != 64
+        or any(character not in "0123456789abcdef" for character in value)
+        for value in values
+    ):
         raise ValueError(f"query-hash source {path} contains a malformed digest")
-    return set(values.tolist())
+    return values.tolist()
+
+
+def _strict_json(path: Path) -> dict[str, Any]:
+    def reject(value: str) -> None:
+        raise ValueError(f"non-finite JSON constant {value!r} in {path}")
+
+    payload = json.loads(path.read_text(encoding="utf-8"), parse_constant=reject)
+    if not isinstance(payload, dict):
+        raise TypeError(f"JSON source is not a mapping: {path}")
+    return payload
 
 
 def default_comparison_sources(workspace: Path, robot: str) -> list[ComparisonSource]:
-    """List all training/validation pilots and the only allowed old-test source."""
+    """Return the exhaustive, fail-closed freshness comparison contract.
+
+    The list intentionally contains supersets as well as selected subsets.
+    Every paper-v2 query role for all three seeds is covered; the selected bulk
+    and pilot identities preserve direct provenance; and latency-pilot entries
+    reproduce its exact point/trajectory validation selections.  Constructing
+    this list requires the frozen latency manifest, so a missing expected input
+    fails before fresh test generation.
+    """
 
     root = workspace.resolve()
     bulk = root / "outputs" / "counterfactual_v4_bulk" / robot / "seed17"
-    old_v2 = root / "outputs" / "paper_v2_seed17" / robot / "datasets"
-    return [
-        *[
+    sources: list[ComparisonSource] = []
+    for seed in PAPER_V2_SEEDS:
+        datasets = root / "outputs" / f"paper_v2_seed{seed}" / robot / "datasets"
+        sources.extend(
             ComparisonSource(
-                f"bulk/{role}", bulk / role / "selection.npz", "query_hash_npz"
+                name=f"paper_v2/seed{seed}/{role}",
+                path=datasets / f"{role}.npz",
+                kind="identity_npz",
+                group="paper_v2",
+                role=role,
             )
-            for role in (
-                "risk_train_queries",
-                "calibration_queries",
-                "policy_validation_queries",
+            for role in PAPER_V2_QUERY_ROLES
+        )
+    sources.extend(
+        [
+            ComparisonSource(
+                name=f"bulk/{role}",
+                path=bulk / role / "selection.npz",
+                kind="query_hash_npz",
+                group="counterfactual_v4_bulk",
+                role=role,
             )
-        ],
+            for role in BULK_QUERY_ROLES
+        ]
+    )
+    sources.extend(
         ComparisonSource(
-            "counterfactual_v4_pilot",
-            root
-            / "outputs"
-            / "counterfactual_v4_pilot"
-            / robot
-            / "seed17"
-            / "counterfactual_labels.npz",
-            "query_hash_npz",
-        ),
-        # latency_pilot_v3 drew from these two complete validation sources.
+            name=f"{directory}/seed17",
+            path=(
+                root
+                / "outputs"
+                / directory
+                / robot
+                / "seed17"
+                / "counterfactual_labels.npz"
+            ),
+            kind="query_hash_npz",
+            group=directory,
+            role="selected_queries",
+        )
+        for directory in COUNTERFACTUAL_V4_QUERY_ROOTS
+    )
+
+    latency_manifest_path = root / "outputs/latency_pilot_v3/run_manifest.json"
+    if not latency_manifest_path.is_file() or latency_manifest_path.is_symlink():
+        raise FileNotFoundError(latency_manifest_path)
+    latency_manifest = _strict_json(latency_manifest_path)
+    if (
+        latency_manifest.get("protocol_version") != "latency_pilot_v3"
+        or latency_manifest.get("formal_test_v3_started") is not False
+    ):
+        raise RuntimeError("latency-pilot manifest is not validation-only v3 evidence")
+    try:
+        selection = latency_manifest["selection_inputs"][robot]
+    except KeyError as error:
+        raise KeyError(f"latency-pilot manifest lacks selection for {robot}") from error
+    if (
+        selection.get("test_queries_loaded") is not False
+        or selection.get("point_source_split") != "risk_validation_queries"
+        or selection.get("trajectory_source_split") != "seed_validation"
+    ):
+        raise RuntimeError(f"latency-pilot selection contract changed for {robot}")
+    point_indices = tuple(
+        int(value) for value in selection["point_selected_source_indices"]
+    )
+    selected_trajectories = tuple(
+        int(value) for value in selection["selected_trajectory_ids"]
+    )
+    if not point_indices or not selected_trajectories:
+        raise RuntimeError(f"latency-pilot selection is empty for {robot}")
+    old_v2 = root / "outputs/paper_v2_seed17" / robot / "datasets"
+    sources.extend(
+        [
+            ComparisonSource(
+                name="latency_pilot_v3/point_validation_selection",
+                path=old_v2 / "risk_validation_queries.npz",
+                kind="indexed_identity_npz",
+                group="latency_pilot_v3",
+                role="risk_validation_queries",
+                source_indices=point_indices,
+                provenance_path=latency_manifest_path,
+            ),
+            ComparisonSource(
+                name="latency_pilot_v3/trajectory_validation_selection",
+                path=old_v2 / "seed_validation.npz",
+                kind="trajectory_identity_npz",
+                group="latency_pilot_v3",
+                role="seed_validation",
+                trajectory_ids=selected_trajectories,
+                provenance_path=latency_manifest_path,
+            ),
+        ]
+    )
+    sources.append(
         ComparisonSource(
-            "latency_pilot_v3/risk_validation_source",
-            old_v2 / "risk_validation_queries.npz",
-            "identity_npz",
-        ),
-        ComparisonSource(
-            "latency_pilot_v3/trajectory_validation_source",
-            old_v2 / "seed_validation.npz",
-            "identity_npz",
-        ),
-        # Evidence boundary: only these identity arrays are read from old test.
-        ComparisonSource(
-            "old_formal_test_v3_identity",
-            root
-            / "outputs"
-            / "test_v3_aggregate"
-            / "datasets"
-            / f"{robot}_test_v3_queries.npz",
-            "identity_npz",
-        ),
+            name="old_formal_test_v3_identity",
+            path=(
+                root
+                / "outputs"
+                / "test_v3_aggregate"
+                / "datasets"
+                / f"{robot}_test_v3_queries.npz"
+            ),
+            kind="identity_npz",
+            group="old_formal_test_v3",
+            role="query_identity_only",
+        )
+    )
+    expected_count = (
+        len(PAPER_V2_SEEDS) * len(PAPER_V2_QUERY_ROLES)
+        + len(BULK_QUERY_ROLES)
+        + len(COUNTERFACTUAL_V4_QUERY_ROOTS)
+        + 2
+        + 1
+    )
+    names = [source.name for source in sources]
+    if len(sources) != expected_count or len(names) != len(set(names)):
+        raise RuntimeError("freshness comparison-source contract is incomplete or ambiguous")
+    missing = [
+        str(source.path.resolve())
+        for source in sources
+        if not source.path.is_file() or source.path.is_symlink()
     ]
+    if missing:
+        raise FileNotFoundError(
+            "required freshness sources are missing or symlinks:\n" + "\n".join(missing)
+        )
+    return sources
 
 
 def audit_freshness(
@@ -426,6 +630,11 @@ def audit_freshness(
 
     if set(datasets) != set(TEST_V4_ROLES):
         raise ValueError(f"datasets must contain exactly {TEST_V4_ROLES}")
+    if not comparison_sources:
+        raise ValueError("freshness comparison sources must not be empty")
+    source_names = [source.name for source in comparison_sources]
+    if len(source_names) != len(set(source_names)):
+        raise ValueError("freshness comparison-source names must be unique")
     role_hashes = {
         role: dataset_query_hashes(datasets[role], dt=dt).astype(str).tolist()
         for role in TEST_V4_ROLES
@@ -444,25 +653,59 @@ def audit_freshness(
     source_manifest: dict[str, Any] = {}
     for source in comparison_sources:
         path = source.path.resolve()
-        if not path.is_file():
+        if not path.is_file() or path.is_symlink():
             raise FileNotFoundError(path)
         if source.kind == "query_hash_npz":
-            prior = _precomputed_hashes_from_npz(path)
+            prior_values = _precomputed_hashes_from_npz(path)
             arrays_read = ["query_sha256"]
+            selector = {
+                "type": "all_precomputed_hashes",
+                "selected_count": len(prior_values),
+            }
         elif source.kind == "identity_npz":
-            prior = _identity_hashes_from_npz(path, dt=dt)
+            prior_values, selector = _identity_hashes_from_npz(path, dt=dt)
             arrays_read = list(IDENTITY_ARRAYS)
+        elif source.kind == "indexed_identity_npz":
+            prior_values, selector = _identity_hashes_from_npz(
+                path, dt=dt, source_indices=source.source_indices
+            )
+            arrays_read = list(IDENTITY_ARRAYS)
+        elif source.kind == "trajectory_identity_npz":
+            prior_values, selector = _identity_hashes_from_npz(
+                path, dt=dt, trajectory_ids=source.trajectory_ids
+            )
+            arrays_read = [*IDENTITY_ARRAYS, "trajectory_id"]
         else:
             raise ValueError(f"unsupported freshness-source kind: {source.kind}")
+        prior = set(prior_values)
         source_overlap[source.name] = len(fresh_hashes & prior)
+        provenance: dict[str, Any] | None = None
+        if source.provenance_path is not None:
+            provenance_path = source.provenance_path.resolve()
+            if not provenance_path.is_file() or provenance_path.is_symlink():
+                raise FileNotFoundError(provenance_path)
+            provenance = {
+                "path": str(provenance_path),
+                "sha256": _sha256_file(provenance_path),
+                "size": provenance_path.stat().st_size,
+            }
         source_manifest[source.name] = {
             "path": str(path),
             "kind": source.kind,
+            "group": source.group,
+            "role": source.role,
             "arrays_read": arrays_read,
             "performance_arrays_read": False,
-            "query_count": len(prior),
+            "query_count": len(prior_values),
+            "unique_query_sha256": len(prior),
+            "within_source_exact_duplicate_count": len(prior_values) - len(prior),
+            "query_sha256_set_digest": sha256(
+                "".join(sorted(prior)).encode("ascii")
+            ).hexdigest(),
+            "selector": selector,
             "sha256": _sha256_file(path),
             "size": path.stat().st_size,
+            "provenance": provenance,
         }
     passed = (
         all(value == 0 for value in duplicate_counts.values())
@@ -477,6 +720,19 @@ def audit_freshness(
         "cross_role_exact_overlap_counts": cross_role_overlap,
         "prior_source_exact_overlap_counts": source_overlap,
         "comparison_sources": source_manifest,
+        "comparison_source_count": len(comparison_sources),
+        "comparison_source_group_counts": dict(
+            sorted(Counter(source.group for source in comparison_sources).items())
+        ),
+        "comparison_source_contract": {
+            "paper_v2_seeds": list(PAPER_V2_SEEDS),
+            "paper_v2_query_roles": list(PAPER_V2_QUERY_ROLES),
+            "counterfactual_v4_query_roots": list(COUNTERFACTUAL_V4_QUERY_ROOTS),
+            "bulk_query_roles": list(BULK_QUERY_ROLES),
+            "latency_pilot_exact_validation_selections": True,
+            "old_formal_test_identity_only": True,
+            "missing_expected_source_policy": "fail_closed",
+        },
         "old_test_evidence_boundary": (
             "Only previous_q, target_position, and target_rotation are read from "
             "the old test dataset; no old-test performance result is inspected."
@@ -486,7 +742,11 @@ def audit_freshness(
 
 
 __all__ = [
+    "BULK_QUERY_ROLES",
+    "COUNTERFACTUAL_V4_QUERY_ROOTS",
     "IDENTITY_ARRAYS",
+    "PAPER_V2_QUERY_ROLES",
+    "PAPER_V2_SEEDS",
     "ROLE_DOMAIN",
     "TEST_V4_ROLES",
     "ComparisonSource",

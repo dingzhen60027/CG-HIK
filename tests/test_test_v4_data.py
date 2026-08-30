@@ -1,14 +1,20 @@
 from __future__ import annotations
 
 from hashlib import sha256
+import json
 from pathlib import Path
 
 import numpy as np
+import pytest
 import yaml
 
 from confik.data.datasets import QueryDataset
 from confik.test_v4_locked.data import (
+    BULK_QUERY_ROLES,
+    COUNTERFACTUAL_V4_QUERY_ROOTS,
     ComparisonSource,
+    PAPER_V2_QUERY_ROLES,
+    PAPER_V2_SEEDS,
     TEST_V4_ROLES,
     audit_freshness,
     dataset_contract,
@@ -44,6 +50,90 @@ def _roles() -> dict[str, QueryDataset]:
             3.0, category="ood_trajectory_high_frequency"
         ),
     }
+
+
+def _save_identity(
+    path: Path,
+    offsets: list[float],
+    *,
+    trajectory_ids: list[int] | None = None,
+) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    previous = np.asarray(
+        [[value, value + 0.1] for value in offsets], dtype=np.float64
+    )
+    position = np.asarray(
+        [[value + 0.2, 0.0, 0.0] for value in offsets], dtype=np.float64
+    )
+    np.savez_compressed(
+        path,
+        previous_q=previous,
+        target_position=position,
+        target_rotation=np.repeat(
+            np.eye(3, dtype=np.float64)[None, ...], len(offsets), axis=0
+        ),
+        trajectory_id=np.asarray(
+            trajectory_ids if trajectory_ids is not None else list(range(len(offsets))),
+            dtype=np.int64,
+        ),
+    )
+
+
+def _comparison_workspace(root: Path, robot: str) -> None:
+    for seed in PAPER_V2_SEEDS:
+        for role_index, role in enumerate(PAPER_V2_QUERY_ROLES):
+            _save_identity(
+                root
+                / "outputs"
+                / f"paper_v2_seed{seed}"
+                / robot
+                / "datasets"
+                / f"{role}.npz",
+                [
+                    float(seed * 100 + role_index),
+                    float(seed * 100 + role_index) + 0.5,
+                ],
+                trajectory_ids=[10, 11],
+            )
+    for role_index, role in enumerate(BULK_QUERY_ROLES):
+        path = (
+            root
+            / "outputs/counterfactual_v4_bulk"
+            / robot
+            / "seed17"
+            / role
+            / "selection.npz"
+        )
+        path.parent.mkdir(parents=True, exist_ok=True)
+        np.savez_compressed(path, query_sha256=np.asarray([f"{role_index + 1:064x}"]))
+    for root_index, directory in enumerate(COUNTERFACTUAL_V4_QUERY_ROOTS):
+        path = root / "outputs" / directory / robot / "seed17/counterfactual_labels.npz"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        np.savez_compressed(path, query_sha256=np.asarray([f"{root_index + 10:064x}"]))
+    _save_identity(
+        root / "outputs/test_v3_aggregate/datasets" / f"{robot}_test_v3_queries.npz",
+        [999.0],
+    )
+    latency = root / "outputs/latency_pilot_v3/run_manifest.json"
+    latency.parent.mkdir(parents=True, exist_ok=True)
+    latency.write_text(
+        json.dumps(
+            {
+                "protocol_version": "latency_pilot_v3",
+                "formal_test_v3_started": False,
+                "selection_inputs": {
+                    robot: {
+                        "test_queries_loaded": False,
+                        "point_source_split": "risk_validation_queries",
+                        "trajectory_source_split": "seed_validation",
+                        "point_selected_source_indices": [0],
+                        "selected_trajectory_ids": [10],
+                    }
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
 
 
 def test_seed_uses_exact_frozen_material() -> None:
@@ -117,6 +207,10 @@ def test_freshness_audit_reads_identity_not_old_performance(tmp_path: Path) -> N
     assert not audit["comparison_sources"]["old_test"][
         "performance_arrays_read"
     ]
+    assert audit["comparison_sources"]["old_test"]["role"] == "unspecified"
+    assert audit["comparison_sources"]["old_test"]["query_count"] == 1
+    assert audit["comparison_sources"]["old_test"]["unique_query_sha256"] == 1
+    assert len(audit["comparison_sources"]["old_test"]["sha256"]) == 64
 
 
 def test_freshness_audit_reports_prior_overlap(tmp_path: Path) -> None:
@@ -136,17 +230,120 @@ def test_freshness_audit_reports_prior_overlap(tmp_path: Path) -> None:
     assert audit["prior_source_exact_overlap_counts"] == {"bulk": 1}
 
 
-def test_default_sources_cover_bulk_both_pilots_and_old_test(tmp_path: Path) -> None:
-    names = {source.name for source in default_comparison_sources(tmp_path, "ur5e")}
-    assert {
-        "bulk/risk_train_queries",
-        "bulk/calibration_queries",
-        "bulk/policy_validation_queries",
-        "counterfactual_v4_pilot",
-        "latency_pilot_v3/risk_validation_source",
-        "latency_pilot_v3/trajectory_validation_source",
+def test_freshness_audit_rejects_empty_or_duplicate_source_contract(
+    tmp_path: Path,
+) -> None:
+    with pytest.raises(ValueError, match="must not be empty"):
+        audit_freshness(
+            _roles(), robot="panda", dt=0.02, comparison_sources=[]
+        )
+    source = tmp_path / "hashes.npz"
+    np.savez_compressed(source, query_sha256=np.asarray(["f" * 64]))
+    duplicate = ComparisonSource("duplicate", source, "query_hash_npz")
+    with pytest.raises(ValueError, match="names must be unique"):
+        audit_freshness(
+            _roles(),
+            robot="panda",
+            dt=0.02,
+            comparison_sources=[duplicate, duplicate],
+        )
+
+
+def test_default_sources_are_exhaustive_and_fail_closed(tmp_path: Path) -> None:
+    robot = "ur5e"
+    _comparison_workspace(tmp_path, robot)
+    sources = default_comparison_sources(tmp_path, robot)
+    names = {source.name for source in sources}
+    expected_paper = {
+        f"paper_v2/seed{seed}/{role}"
+        for seed in PAPER_V2_SEEDS
+        for role in PAPER_V2_QUERY_ROLES
+    }
+    assert len(sources) == 37
+    assert names == {
+        *expected_paper,
+        *(f"bulk/{role}" for role in BULK_QUERY_ROLES),
+        *(f"{directory}/seed17" for directory in COUNTERFACTUAL_V4_QUERY_ROOTS),
+        "latency_pilot_v3/point_validation_selection",
+        "latency_pilot_v3/trajectory_validation_selection",
         "old_formal_test_v3_identity",
-    } == names
+    }
+    assert {source.group for source in sources if source.name in expected_paper} == {
+        "paper_v2"
+    }
+    assert next(
+        source
+        for source in sources
+        if source.name == "latency_pilot_v3/point_validation_selection"
+    ).source_indices == (0,)
+    assert next(
+        source
+        for source in sources
+        if source.name == "latency_pilot_v3/trajectory_validation_selection"
+    ).trajectory_ids == (10,)
+
+    missing = (
+        tmp_path
+        / "outputs/paper_v2_seed43"
+        / robot
+        / "datasets/policy_validation_queries.npz"
+    )
+    missing.unlink()
+    with pytest.raises(FileNotFoundError, match="policy_validation_queries"):
+        default_comparison_sources(tmp_path, robot)
+
+
+def test_freshness_manifest_records_selected_role_count_and_hash(tmp_path: Path) -> None:
+    indexed = tmp_path / "risk_validation_queries.npz"
+    _save_identity(indexed, [10.0, 11.0, 12.0], trajectory_ids=[1, 1, 2])
+    trajectory = tmp_path / "seed_validation.npz"
+    _save_identity(trajectory, [20.0, 21.0, 22.0], trajectory_ids=[5, 6, 6])
+    provenance = tmp_path / "run_manifest.json"
+    provenance.write_text('{"validation_only": true}\n', encoding="utf-8")
+    audit = audit_freshness(
+        _roles(),
+        robot="panda",
+        dt=0.02,
+        comparison_sources=[
+            ComparisonSource(
+                "latency/point",
+                indexed,
+                "indexed_identity_npz",
+                group="latency_pilot_v3",
+                role="risk_validation_queries",
+                source_indices=(0, 2),
+                provenance_path=provenance,
+            ),
+            ComparisonSource(
+                "latency/trajectory",
+                trajectory,
+                "trajectory_identity_npz",
+                group="latency_pilot_v3",
+                role="seed_validation",
+                trajectory_ids=(6,),
+                provenance_path=provenance,
+            ),
+        ],
+    )
+    assert audit["passed"]
+    point = audit["comparison_sources"]["latency/point"]
+    assert point["group"] == "latency_pilot_v3"
+    assert point["role"] == "risk_validation_queries"
+    assert point["query_count"] == point["unique_query_sha256"] == 2
+    assert point["selector"]["type"] == "source_indices"
+    assert len(point["selector"]["selector_sha256"]) == 64
+    assert len(point["sha256"]) == 64
+    assert len(point["query_sha256_set_digest"]) == 64
+    assert point["provenance"]["path"] == str(provenance.resolve())
+    trajectory_row = audit["comparison_sources"]["latency/trajectory"]
+    assert trajectory_row["query_count"] == 2
+    assert trajectory_row["selector"] == {
+        "type": "trajectory_ids",
+        "trajectory_count": 1,
+        "selected_count": 2,
+        "selector_sha256": trajectory_row["selector"]["selector_sha256"],
+    }
+    assert audit["comparison_source_group_counts"] == {"latency_pilot_v3": 2}
 
 
 def test_preregistration_locks_data_statistics_and_claim_contract() -> None:
