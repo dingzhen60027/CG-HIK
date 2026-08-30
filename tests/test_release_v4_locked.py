@@ -24,6 +24,7 @@ from confik.release_v4_locked.artifacts import (
     load_policy_config,
 )
 from confik.release_v4_locked.runner import (
+    _formal_source_manifest,
     _module_batch,
     _numerical_equivalence,
     _runtime_equivalence,
@@ -262,3 +263,30 @@ def test_runtime_equivalence_checks_reject_and_defer_contracts() -> None:
     assert result["pass"] is True
     assert result["command_reject_zero_solver_rate"] == 1.0
     assert result["defer_enters_fixed_easy_stage_rate"] == 1.0
+
+
+def test_formal_source_manifest_allows_only_out_of_scope_user_changes(
+    tmp_path: Path,
+) -> None:
+    def fake_git(workspace: Path, *arguments: str) -> str:
+        assert workspace == tmp_path
+        if arguments == ("rev-parse", "--show-toplevel"):
+            return str(tmp_path)
+        if arguments == ("rev-parse", "HEAD"):
+            return "commit-sha"
+        if arguments == ("rev-parse", "HEAD^{tree}"):
+            return "tree-sha"
+        if arguments[:3] == (
+            "status",
+            "--porcelain=v1",
+            "--untracked-files=all",
+        ):
+            return "" if "--" in arguments else " M docs/HANDOVER.md"
+        raise AssertionError(arguments)
+
+    with patch("confik.release_v4_locked.runner._git", side_effect=fake_git):
+        manifest = _formal_source_manifest(tmp_path)
+    assert manifest["release_source_scope_clean"] is True
+    assert manifest["git_worktree_clean"] is False
+    assert manifest["out_of_scope_changes_present"] is True
+    assert manifest["out_of_scope_change_count"] == 1

@@ -1,10 +1,12 @@
 """Seal the exact validation-frozen CG-HIK v4 deployment package.
 
 This module never discovers or reads a test-named dataset.  ``--smoke`` uses a
-temporary directory and one robot/seed combination; the formal path requires a
-clean Git worktree, validates both frozen input releases, runs all six
-validation-only runtime equivalence checks, and atomically renames the staging
-directory only after every gate passes.
+temporary directory and one robot/seed combination; the formal path requires
+the release-relevant source/configuration scope to be clean, validates both
+frozen input releases, runs all six validation-only runtime equivalence
+checks, and atomically renames the staging directory only after every gate
+passes.  Unrelated user documents may remain dirty and are reported without
+being modified or treated as release code.
 """
 
 from __future__ import annotations
@@ -829,13 +831,38 @@ def _formal_source_manifest(workspace: Path) -> dict[str, Any]:
     top = Path(_git(workspace, "rev-parse", "--show-toplevel")).resolve()
     if top != workspace.resolve():
         raise RuntimeError(f"Git root differs from workspace: {top}")
-    status = _git(workspace, "status", "--porcelain=v1", "--untracked-files=all")
-    if status:
-        raise RuntimeError(f"formal v4 release requires a clean Git worktree:\n{status}")
+    scoped_paths = (
+        "src/confik",
+        "configs/paper_v2.yaml",
+        "configs/counterfactual_v4_train.yaml",
+        "configs/release_v4_locked.yaml",
+        "scripts/run_release_v4.sh",
+        "tests/test_release_v4_locked.py",
+    )
+    scoped_status = _git(
+        workspace,
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all",
+        "--",
+        *scoped_paths,
+    )
+    if scoped_status:
+        raise RuntimeError(
+            "formal v4 release requires a clean release-source scope:\n"
+            f"{scoped_status}"
+        )
+    full_status = _git(
+        workspace, "status", "--porcelain=v1", "--untracked-files=all"
+    )
     return {
         "git_commit": _git(workspace, "rev-parse", "HEAD"),
         "git_tree": _git(workspace, "rev-parse", "HEAD^{tree}"),
-        "git_worktree_clean": True,
+        "release_source_scope": list(scoped_paths),
+        "release_source_scope_clean": True,
+        "git_worktree_clean": not bool(full_status),
+        "out_of_scope_changes_present": bool(full_status),
+        "out_of_scope_change_count": len(full_status.splitlines()),
         "runner_sha256": _sha256_file(Path(__file__)),
         "artifacts_sha256": _sha256_file(Path(__file__).with_name("artifacts.py")),
     }
