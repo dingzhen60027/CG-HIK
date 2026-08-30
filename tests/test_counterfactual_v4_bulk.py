@@ -22,6 +22,16 @@ def _config() -> dict:
                 "calibration_queries": 2_500,
                 "policy_validation_queries": 2_500,
             },
+            "risk_train_category_counts": {
+                "id": 3_500,
+                "hard_valid": 2_500,
+                "near_singular": 2_500,
+                "near_limit": 2_500,
+                "workspace_boundary": 2_500,
+                "large_step": 750,
+                "unreachable": 750,
+            },
+            "minimum_contract_feasible_semantic_fail_all_for_broad_reject_claim": 30,
             "dt": 0.02,
         },
         "timing": {"repeats": 5, "deadline_ms": 20.0},
@@ -54,6 +64,38 @@ def test_per_query_environment_check_is_mandatory() -> None:
     config["runtime"]["environment_check_every_queries"] = 10
     with pytest.raises(ValueError, match="environment_check_every_queries"):
         bulk_runner._validate_config(config)
+
+
+def test_risk_train_selection_uses_exact_frozen_category_enrichment() -> None:
+    categories = np.asarray(
+        [category for category, count in bulk_runner.RISK_TRAIN_CATEGORY_COUNTS.items()
+         for _ in range(count + 3)],
+        dtype=np.str_,
+    )
+    count = sum(bulk_runner.RISK_TRAIN_CATEGORY_COUNTS.values())
+    dataset = QueryDataset(
+        previous_q=np.zeros((len(categories), 1)),
+        target_position=np.zeros((len(categories), 3)),
+        target_rotation=np.repeat(np.eye(3)[None], len(categories), axis=0),
+        reference_q=np.zeros((len(categories), 1)),
+        category=categories,
+        expected_reachable=np.ones(len(categories), dtype=bool),
+        continuity_feasible=np.ones(len(categories), dtype=bool),
+        trajectory_id=np.zeros(len(categories), dtype=np.int64),
+        time_index=np.zeros(len(categories), dtype=np.int64),
+    )
+    selected = bulk_runner._selected_indices(
+        dataset,
+        count=count,
+        seed=17,
+        category_counts=bulk_runner.RISK_TRAIN_CATEGORY_COUNTS,
+    )
+    assert len(selected) == len(np.unique(selected)) == count
+    observed = dataset.category[selected].astype(str)
+    assert {
+        category: int(np.sum(observed == category))
+        for category in bulk_runner.RISK_TRAIN_CATEGORY_COUNTS
+    } == bulk_runner.RISK_TRAIN_CATEGORY_COUNTS
 
 
 def test_fixed_robust_is_an_unexecuted_deep_alias() -> None:

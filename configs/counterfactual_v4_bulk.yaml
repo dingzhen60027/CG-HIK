@@ -18,6 +18,22 @@ data:
     risk_train_queries: 15000
     calibration_queries: 2500
     policy_validation_queries: 2500
+  # Frozen before collection.  The training role deliberately enriches
+  # contract-feasible boundary cases instead of spending most labels on easy
+  # ID or trivially invalid commands.  Calibration and policy validation keep
+  # their natural source distributions.
+  risk_train_category_counts:
+    id: 3500
+    hard_valid: 2500
+    near_singular: 2500
+    near_limit: 2500
+    workspace_boundary: 2500
+    large_step: 750
+    unreachable: 750
+  # This is a claim-support gate, not a data-selection target.  If a robot has
+  # fewer such samples after collection, the broad reject claim is disabled
+  # and reporting is limited to represented operational invalidity classes.
+  minimum_contract_feasible_semantic_fail_all_for_broad_reject_claim: 30
   dt: 0.02
 
 timing:

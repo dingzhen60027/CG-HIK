@@ -64,6 +64,15 @@ ROLE_ORDER = (
     "calibration_queries",
     "policy_validation_queries",
 )
+RISK_TRAIN_CATEGORY_COUNTS = {
+    "id": 3_500,
+    "hard_valid": 2_500,
+    "near_singular": 2_500,
+    "near_limit": 2_500,
+    "workspace_boundary": 2_500,
+    "large_step": 750,
+    "unreachable": 750,
+}
 FIXED_ALIAS_ACTION = "fixed_robust"
 FIXED_ALIAS_SOURCE = "easy"
 PROTECTED_OUTPUT_PATTERNS = (
@@ -209,6 +218,25 @@ def _validate_config(config: Mapping[str, Any]) -> None:
     }
     if {str(key): int(value) for key, value in counts.items()} != required:
         raise ValueError(f"role_counts must equal the frozen design {required}")
+    category_counts = {
+        str(key): int(value)
+        for key, value in config.get("data", {})
+        .get("risk_train_category_counts", {})
+        .items()
+    }
+    if category_counts != RISK_TRAIN_CATEGORY_COUNTS:
+        raise ValueError(
+            "risk_train_category_counts must equal the frozen enrichment design "
+            f"{RISK_TRAIN_CATEGORY_COUNTS}"
+        )
+    if sum(category_counts.values()) != required["risk_train_queries"]:
+        raise ValueError("risk_train_category_counts must sum to risk_train_queries")
+    if int(
+        config.get("data", {}).get(
+            "minimum_contract_feasible_semantic_fail_all_for_broad_reject_claim", -1
+        )
+    ) != 30:
+        raise ValueError("the broad-reject support gate must remain frozen at 30")
     for role in counts:
         validate_source_role(str(role))
         if "test" in str(role).lower():
@@ -319,10 +347,33 @@ def _selection_seed(
     return int.from_bytes(sha256(material).digest()[:8], "big", signed=False)
 
 
-def _selected_indices(dataset: QueryDataset, *, count: int, seed: int) -> np.ndarray:
+def _selected_indices(
+    dataset: QueryDataset,
+    *,
+    count: int,
+    seed: int,
+    category_counts: Mapping[str, int] | None = None,
+) -> np.ndarray:
     if count <= 0 or count > len(dataset):
         raise ValueError(f"selection count must be in [1, {len(dataset)}], got {count}")
-    selected = np.random.default_rng(seed).choice(len(dataset), size=count, replace=False)
+    generator = np.random.default_rng(seed)
+    if category_counts is None:
+        selected = generator.choice(len(dataset), size=count, replace=False)
+    else:
+        frozen = {str(key): int(value) for key, value in category_counts.items()}
+        if sum(frozen.values()) != count:
+            raise ValueError("category quotas must sum to the requested selection count")
+        observed = dataset.category.astype(str)
+        chunks: list[np.ndarray] = []
+        for category, quota in frozen.items():
+            available = np.flatnonzero(observed == category)
+            if quota <= 0 or quota > len(available):
+                raise ValueError(
+                    f"invalid quota for {category}: requested={quota}, available={len(available)}"
+                )
+            chunks.append(generator.choice(available, size=quota, replace=False))
+        selected = np.concatenate(chunks)
+        generator.shuffle(selected)
     return np.asarray(selected, dtype=np.int64)
 
 
@@ -492,7 +543,17 @@ def _initialize_output(
                     )
                     dataset = QueryDataset.load(path)
                     seed = _selection_seed(release_commit, str(robot), int(training_seed), role)
-                    selected = _selected_indices(dataset, count=counts[role], seed=seed)
+                    category_counts = (
+                        config["data"]["risk_train_category_counts"]
+                        if role == "risk_train_queries"
+                        else None
+                    )
+                    selected = _selected_indices(
+                        dataset,
+                        count=counts[role],
+                        seed=seed,
+                        category_counts=category_counts,
+                    )
                     hashes = _query_hashes(dataset, selected, dt=dt)
                     if len(np.unique(hashes)) != len(hashes):
                         raise RuntimeError(f"duplicate selected queries in {robot}/seed{training_seed}/{role}")
@@ -517,6 +578,19 @@ def _initialize_output(
                         "source_query_count": len(dataset),
                         "selected_query_count": len(selected),
                         "selection_seed": seed,
+                        "selection_scheme": (
+                            "frozen_category_enrichment"
+                            if role == "risk_train_queries"
+                            else "uniform_without_replacement"
+                        ),
+                        "requested_category_counts": (
+                            dict(category_counts) if category_counts is not None else None
+                        ),
+                        "broad_reject_claim_minimum_contract_feasible_semantic_fail_all": int(
+                            config["data"][
+                                "minimum_contract_feasible_semantic_fail_all_for_broad_reject_claim"
+                            ]
+                        ),
                         "selection_indices_sha256": sha256(
                             np.ascontiguousarray(selected).tobytes()
                         ).hexdigest(),
