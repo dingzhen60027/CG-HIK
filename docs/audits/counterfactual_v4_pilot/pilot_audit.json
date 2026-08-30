@@ -1,0 +1,835 @@
+{
+  "aggregate_summary_matches_combination_summaries": true,
+  "artifact_audit_pass": true,
+  "audit_scope": "validation-only label pilot; not formal test evidence",
+  "audit_version": 1,
+  "audited_output": "/home/eric/wjg/btry/outputs/counterfactual_v4_pilot",
+  "combinations": {
+    "panda/seed17": {
+      "classes_and_winner_stability": {
+        "action_deadline_label_disagreement_count": 1,
+        "action_deadline_label_disagreement_rate": 0.0005,
+        "action_semantic_success_disagreement_count": 0,
+        "action_semantic_success_disagreement_rate": 0.0,
+        "category_breakdown": {
+          "hard_valid": {
+            "contract_feasible_count": 313,
+            "count": 313,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "hard": 296,
+              "medium": 17
+            },
+            "semantic_fail_all_count": 0
+          },
+          "id": {
+            "contract_feasible_count": 749,
+            "count": 749,
+            "deadline_only_fail_all_count": 6,
+            "oracle_empirical_p95_winner_counts": {
+              "easy": 230,
+              "fail_all": 8,
+              "hard": 277,
+              "medium": 234
+            },
+            "semantic_fail_all_count": 2
+          },
+          "large_step": {
+            "contract_feasible_count": 0,
+            "count": 185,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "fail_all": 185
+            },
+            "semantic_fail_all_count": 185
+          },
+          "near_limit": {
+            "contract_feasible_count": 203,
+            "count": 203,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "easy": 69,
+              "hard": 75,
+              "medium": 59
+            },
+            "semantic_fail_all_count": 0
+          },
+          "near_singular": {
+            "contract_feasible_count": 190,
+            "count": 190,
+            "deadline_only_fail_all_count": 1,
+            "oracle_empirical_p95_winner_counts": {
+              "easy": 51,
+              "fail_all": 1,
+              "hard": 65,
+              "medium": 73
+            },
+            "semantic_fail_all_count": 0
+          },
+          "unreachable": {
+            "contract_feasible_count": 0,
+            "count": 190,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "fail_all": 190
+            },
+            "semantic_fail_all_count": 190
+          },
+          "workspace_boundary": {
+            "contract_feasible_count": 170,
+            "count": 170,
+            "deadline_only_fail_all_count": 1,
+            "oracle_empirical_p95_winner_counts": {
+              "easy": 61,
+              "fail_all": 1,
+              "hard": 55,
+              "medium": 53
+            },
+            "semantic_fail_all_count": 0
+          }
+        },
+        "fail_all": {
+          "contract_feasible_fail_all_count": 10,
+          "count": 385,
+          "deadline_only_fail_all_count": 8,
+          "large_step_plus_unreachable_fraction": 0.974025974025974,
+          "rate": 0.1925,
+          "semantic_solver_fail_all_count": 377
+        },
+        "oracle_empirical_p95_winner_counts": {
+          "easy": 411,
+          "fail_all": 385,
+          "hard": 768,
+          "medium": 436
+        },
+        "query_count": 2000,
+        "repeat_level_winner_counts_among_deadline_eligible_queries": {
+          "easy": 2065,
+          "hard": 3778,
+          "medium": 2232
+        },
+        "winner_stability": {
+          "all_five_repeat_winners_identical_fraction": 0.20371517027863778,
+          "deadline_eligible_query_count": 1615,
+          "full_winner_supported_by_at_least_four_of_five_leave_one_out_runs_fraction": 0.8687306501547988,
+          "mean_fraction_of_five_repeat_winners_equal_to_full_p95_winner": 0.5561609907120744,
+          "mean_leave_one_repeat_out_agreement_with_full_winner": 0.8662538699690403,
+          "p50_and_p95_winner_agreement_fraction": 0.5894736842105263,
+          "winner_margin_divided_by_within_query_repeat_noise": {
+            "count": 1614,
+            "max": 35.16049239481682,
+            "mean": 1.825363067013734,
+            "p50": 1.1209087945444345,
+            "p90": 4.255356908589479,
+            "p95": 6.342015711542198,
+            "p99": 12.88830613656699
+          },
+          "winner_margin_ms": {
+            "count": 1614,
+            "max": 1.9122021999999994,
+            "mean": 0.2673767757125155,
+            "p50": 0.179998,
+            "p90": 0.6680342999999999,
+            "p95": 0.8584938799999996,
+            "p99": 1.1427015199999988
+          }
+        }
+      },
+      "environment_resampling_and_cost": {
+        "action_order_balance": {
+          "counts_by_action_and_position": {
+            "easy": {
+              "0": 2466,
+              "1": 2495,
+              "2": 2527,
+              "3": 2512
+            },
+            "fixed_robust": {
+              "0": 2526,
+              "1": 2486,
+              "2": 2490,
+              "3": 2498
+            },
+            "hard": {
+              "0": 2492,
+              "1": 2504,
+              "2": 2502,
+              "3": 2502
+            },
+            "medium": {
+              "0": 2516,
+              "1": 2515,
+              "2": 2481,
+              "3": 2488
+            }
+          },
+          "fifth_repeat_reuses_the_base_order": true,
+          "first_four_repeats_exact_latin_balance_per_query": true,
+          "ideal_count_per_action_position": 2500.0,
+          "maximum_relative_deviation_from_ideal": 0.0136
+        },
+        "contaminated_query_retries": 5,
+        "quiet_wait_event_count": 5,
+        "quiet_wait_fraction_of_recorded_wall_time": 0.04528770151503644,
+        "quiet_wait_seconds": 86.12596937397029,
+        "repeatedly_contaminated_query_indices": {},
+        "retained_records_have_no_discarded_sample_audit_trail": true,
+        "retry_query_indices_from_event_context": [
+          72,
+          199,
+          501,
+          535,
+          630
+        ],
+        "seconds_per_query_four_actions_five_repeats": 0.9508759165595402,
+        "unique_retry_query_count": 5,
+        "wall_time_seconds_excluding_warmup_and_writes": 1901.7518331190804
+      },
+      "fixed_robust_vs_easy": {
+        "deadline_label_mismatch_count_due_only_to_timing": 0,
+        "fixed_minus_easy_p50_ms": {
+          "count": 2000,
+          "max": 33.662167,
+          "mean": -0.02160441,
+          "p50": -0.000951,
+          "p90": 0.19910960000000016,
+          "p95": 0.46237444999999994,
+          "p99": 1.2918057899999997
+        },
+        "fixed_minus_easy_p95_ms": {
+          "count": 2000,
+          "max": 216.6097572,
+          "mean": -0.14652781269999973,
+          "p50": -0.011017300000001444,
+          "p90": 0.502545819999981,
+          "p95": 0.80360638,
+          "p99": 2.647232267999999
+        },
+        "semantic_equivalence_pass": true,
+        "semantic_mismatch_counts": {}
+      },
+      "hash_and_provenance": {
+        "collector_recoverable_from_clean_collection_commit": true,
+        "collector_sha256_not_explicitly_recorded": true,
+        "config_sha256_matches_current_file": true,
+        "generated_artifact_mismatches": [],
+        "output_root_read_only_target": "/home/eric/wjg/btry/outputs/counterfactual_v4_pilot",
+        "release_artifact_mismatches": [],
+        "release_equivalence_sha256_matches": true,
+        "release_manifest_sha256_matches": true,
+        "runner_sha256_matches_current_file": true,
+        "source_sha256_matches": true
+      },
+      "integrity_pass": true,
+      "schema_and_uniqueness": {
+        "all_schema_and_uniqueness_checks_pass": true,
+        "duplicate_query_action_key_count": 0,
+        "metadata_mismatch_counts": {},
+        "query_action_set_mismatch_count": 0,
+        "query_count": 2000,
+        "query_indices_contiguous_from_zero": true,
+        "record_count": 8000,
+        "record_schema_mismatch_count": 0
+      },
+      "source_and_npz_consistency": {
+        "all_raw_npz_source_checks_pass": true,
+        "max_absolute_selected_vs_source_category_share_difference": 0.008466666666666664,
+        "mismatch_counts": {},
+        "query_hashes_unique": true,
+        "selected_category_counts": {
+          "hard_valid": 313,
+          "id": 749,
+          "large_step": 185,
+          "near_limit": 203,
+          "near_singular": 190,
+          "unreachable": 190,
+          "workspace_boundary": 170
+        },
+        "selected_source_indices_unique": true,
+        "source_category_counts": {
+          "hard_valid": 2250,
+          "id": 5740,
+          "large_step": 1402,
+          "near_limit": 1402,
+          "near_singular": 1402,
+          "unreachable": 1402,
+          "workspace_boundary": 1402
+        }
+      },
+      "summary_crosscheck": {
+        "mismatches": [],
+        "pilot_summary_reproduced": true
+      },
+      "timing_repeat_quality": {
+        "all_timing_checks_pass": true,
+        "deadline_noise": {
+          "easy": {
+            "all_five_repeat_miss": 386,
+            "any_repeat_miss": 386,
+            "empirical_p95_miss": 386,
+            "straddles_20ms": 0
+          },
+          "fixed_robust": {
+            "all_five_repeat_miss": 386,
+            "any_repeat_miss": 386,
+            "empirical_p95_miss": 386,
+            "straddles_20ms": 0
+          },
+          "hard": {
+            "all_five_repeat_miss": 385,
+            "any_repeat_miss": 385,
+            "empirical_p95_miss": 385,
+            "straddles_20ms": 0
+          },
+          "medium": {
+            "all_five_repeat_miss": 386,
+            "any_repeat_miss": 386,
+            "empirical_p95_miss": 386,
+            "straddles_20ms": 0
+          }
+        },
+        "empirical_p95_definition": "NumPy linear percentile over five samples; P95 is 0.8*maximum + 0.2*second-largest, not a well-resolved per-query tail estimate",
+        "per_query_repeat_cv": {
+          "easy": {
+            "count": 2000,
+            "max": 0.6532063047334129,
+            "mean": 0.07375557172722583,
+            "p50": 0.05830388617592038,
+            "p90": 0.15898619305245817,
+            "p95": 0.18262817251325014,
+            "p99": 0.27842923631131566
+          },
+          "fixed_robust": {
+            "count": 2000,
+            "max": 0.533477745741778,
+            "mean": 0.0745445761944959,
+            "p50": 0.05993256777852358,
+            "p90": 0.1590902932570093,
+            "p95": 0.18751395915117866,
+            "p99": 0.2901235729491457
+          },
+          "hard": {
+            "count": 2000,
+            "max": 0.6412870087212119,
+            "mean": 0.07747336454003072,
+            "p50": 0.06124704194912589,
+            "p90": 0.15989488325587556,
+            "p95": 0.1889939543333488,
+            "p99": 0.28539432359146744
+          },
+          "medium": {
+            "count": 2000,
+            "max": 0.6533608219211887,
+            "mean": 0.07730703888445038,
+            "p50": 0.061749489225628104,
+            "p90": 0.16009268998036366,
+            "p95": 0.19070535118334458,
+            "p99": 0.29542094529144564
+          }
+        },
+        "per_query_repeat_range_ms": {
+          "easy": {
+            "count": 2000,
+            "max": 454.60797,
+            "mean": 1.529253631,
+            "p50": 0.49345550000000005,
+            "p90": 2.5109404,
+            "p95": 4.24284665,
+            "p99": 9.22814073
+          },
+          "fixed_robust": {
+            "count": 2000,
+            "max": 346.460313,
+            "mean": 1.384736516,
+            "p50": 0.5082145,
+            "p90": 2.5597402000000007,
+            "p95": 4.007408299999998,
+            "p99": 7.672562989999998
+          },
+          "hard": {
+            "count": 2000,
+            "max": 272.617496,
+            "mean": 1.4166349845,
+            "p50": 0.47939350000000003,
+            "p90": 2.6188922000000003,
+            "p95": 4.150563399999999,
+            "p99": 10.57699397
+          },
+          "medium": {
+            "count": 2000,
+            "max": 345.793887,
+            "mean": 1.2558225185,
+            "p50": 0.494529,
+            "p90": 2.6821484000000004,
+            "p95": 3.973455699999999,
+            "p99": 7.146892639999995
+          }
+        },
+        "problem_counts": {},
+        "repeat_count": 5,
+        "total_measured_action_seconds": {
+          "easy": 438.5511930959996,
+          "fixed_robust": 437.92962565800013,
+          "hard": 433.4501562670001,
+          "medium": 435.2062976199999
+        }
+      }
+    },
+    "ur5e/seed17": {
+      "classes_and_winner_stability": {
+        "action_deadline_label_disagreement_count": 0,
+        "action_deadline_label_disagreement_rate": 0.0,
+        "action_semantic_success_disagreement_count": 0,
+        "action_semantic_success_disagreement_rate": 0.0,
+        "category_breakdown": {
+          "hard_valid": {
+            "contract_feasible_count": 310,
+            "count": 310,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "easy": 2,
+              "hard": 284,
+              "medium": 24
+            },
+            "semantic_fail_all_count": 0
+          },
+          "id": {
+            "contract_feasible_count": 761,
+            "count": 761,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "easy": 195,
+              "hard": 385,
+              "medium": 181
+            },
+            "semantic_fail_all_count": 0
+          },
+          "large_step": {
+            "contract_feasible_count": 0,
+            "count": 175,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "fail_all": 175
+            },
+            "semantic_fail_all_count": 175
+          },
+          "near_limit": {
+            "contract_feasible_count": 186,
+            "count": 186,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "easy": 60,
+              "hard": 69,
+              "medium": 57
+            },
+            "semantic_fail_all_count": 0
+          },
+          "near_singular": {
+            "contract_feasible_count": 187,
+            "count": 187,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "easy": 50,
+              "hard": 72,
+              "medium": 65
+            },
+            "semantic_fail_all_count": 0
+          },
+          "unreachable": {
+            "contract_feasible_count": 0,
+            "count": 182,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "fail_all": 182
+            },
+            "semantic_fail_all_count": 182
+          },
+          "workspace_boundary": {
+            "contract_feasible_count": 199,
+            "count": 199,
+            "deadline_only_fail_all_count": 0,
+            "oracle_empirical_p95_winner_counts": {
+              "easy": 57,
+              "hard": 90,
+              "medium": 52
+            },
+            "semantic_fail_all_count": 0
+          }
+        },
+        "fail_all": {
+          "contract_feasible_fail_all_count": 0,
+          "count": 357,
+          "deadline_only_fail_all_count": 0,
+          "large_step_plus_unreachable_fraction": 1.0,
+          "rate": 0.1785,
+          "semantic_solver_fail_all_count": 357
+        },
+        "oracle_empirical_p95_winner_counts": {
+          "easy": 364,
+          "fail_all": 357,
+          "hard": 900,
+          "medium": 379
+        },
+        "query_count": 2000,
+        "repeat_level_winner_counts_among_deadline_eligible_queries": {
+          "easy": 1909,
+          "hard": 4376,
+          "medium": 1930
+        },
+        "winner_stability": {
+          "all_five_repeat_winners_identical_fraction": 0.2738892270237371,
+          "deadline_eligible_query_count": 1643,
+          "full_winner_supported_by_at_least_four_of_five_leave_one_out_runs_fraction": 0.9129640900791236,
+          "mean_fraction_of_five_repeat_winners_equal_to_full_p95_winner": 0.6045039561777237,
+          "mean_leave_one_repeat_out_agreement_with_full_winner": 0.8922702373706635,
+          "p50_and_p95_winner_agreement_fraction": 0.6390748630553865,
+          "winner_margin_divided_by_within_query_repeat_noise": {
+            "count": 1643,
+            "max": 16.720919965582894,
+            "mean": 1.8834646785269618,
+            "p50": 1.303500293014247,
+            "p90": 4.282439483616031,
+            "p95": 5.964112659414259,
+            "p99": 10.20773810597646
+          },
+          "winner_margin_ms": {
+            "count": 1643,
+            "max": 2.8912659999999994,
+            "mean": 0.3213621037127206,
+            "p50": 0.23828580000000005,
+            "p90": 0.7715215200000003,
+            "p95": 0.9161709799999994,
+            "p99": 1.2153055679999993
+          }
+        }
+      },
+      "environment_resampling_and_cost": {
+        "action_order_balance": {
+          "counts_by_action_and_position": {
+            "easy": {
+              "0": 2515,
+              "1": 2511,
+              "2": 2480,
+              "3": 2494
+            },
+            "fixed_robust": {
+              "0": 2475,
+              "1": 2524,
+              "2": 2516,
+              "3": 2485
+            },
+            "hard": {
+              "0": 2485,
+              "1": 2500,
+              "2": 2511,
+              "3": 2504
+            },
+            "medium": {
+              "0": 2525,
+              "1": 2465,
+              "2": 2493,
+              "3": 2517
+            }
+          },
+          "fifth_repeat_reuses_the_base_order": true,
+          "first_four_repeats_exact_latin_balance_per_query": true,
+          "ideal_count_per_action_position": 2500.0,
+          "maximum_relative_deviation_from_ideal": 0.014
+        },
+        "contaminated_query_retries": 5,
+        "quiet_wait_event_count": 5,
+        "quiet_wait_fraction_of_recorded_wall_time": 0.13044226594023794,
+        "quiet_wait_seconds": 97.25245947798248,
+        "repeatedly_contaminated_query_indices": {
+          "1400": 2
+        },
+        "retained_records_have_no_discarded_sample_audit_trail": true,
+        "retry_query_indices_from_event_context": [
+          141,
+          1156,
+          1388,
+          1400,
+          1400
+        ],
+        "seconds_per_query_four_actions_five_repeats": 0.3727797074705013,
+        "unique_retry_query_count": 4,
+        "wall_time_seconds_excluding_warmup_and_writes": 745.5594149410026
+      },
+      "fixed_robust_vs_easy": {
+        "deadline_label_mismatch_count_due_only_to_timing": 1,
+        "fixed_minus_easy_p50_ms": {
+          "count": 2000,
+          "max": 1.038969,
+          "mean": -0.005790769999999998,
+          "p50": -0.000263,
+          "p90": 0.15837170000000003,
+          "p95": 0.2655079999999999,
+          "p99": 0.48106218
+        },
+        "fixed_minus_easy_p95_ms": {
+          "count": 2000,
+          "max": 45.97605279999999,
+          "mean": 0.024330514500000143,
+          "p50": -0.005105699999999837,
+          "p90": 0.48185234,
+          "p95": 0.64623535,
+          "p99": 2.2333261460000053
+        },
+        "semantic_equivalence_pass": true,
+        "semantic_mismatch_counts": {}
+      },
+      "hash_and_provenance": {
+        "collector_recoverable_from_clean_collection_commit": true,
+        "collector_sha256_not_explicitly_recorded": true,
+        "config_sha256_matches_current_file": true,
+        "generated_artifact_mismatches": [],
+        "output_root_read_only_target": "/home/eric/wjg/btry/outputs/counterfactual_v4_pilot",
+        "release_artifact_mismatches": [],
+        "release_equivalence_sha256_matches": true,
+        "release_manifest_sha256_matches": true,
+        "runner_sha256_matches_current_file": true,
+        "source_sha256_matches": true
+      },
+      "integrity_pass": true,
+      "schema_and_uniqueness": {
+        "all_schema_and_uniqueness_checks_pass": true,
+        "duplicate_query_action_key_count": 0,
+        "metadata_mismatch_counts": {},
+        "query_action_set_mismatch_count": 0,
+        "query_count": 2000,
+        "query_indices_contiguous_from_zero": true,
+        "record_count": 8000,
+        "record_schema_mismatch_count": 0
+      },
+      "source_and_npz_consistency": {
+        "all_raw_npz_source_checks_pass": true,
+        "max_absolute_selected_vs_source_category_share_difference": 0.006033333333333335,
+        "mismatch_counts": {},
+        "query_hashes_unique": true,
+        "selected_category_counts": {
+          "hard_valid": 310,
+          "id": 761,
+          "large_step": 175,
+          "near_limit": 186,
+          "near_singular": 187,
+          "unreachable": 182,
+          "workspace_boundary": 199
+        },
+        "selected_source_indices_unique": true,
+        "source_category_counts": {
+          "hard_valid": 2250,
+          "id": 5740,
+          "large_step": 1402,
+          "near_limit": 1402,
+          "near_singular": 1402,
+          "unreachable": 1402,
+          "workspace_boundary": 1402
+        }
+      },
+      "summary_crosscheck": {
+        "mismatches": [],
+        "pilot_summary_reproduced": true
+      },
+      "timing_repeat_quality": {
+        "all_timing_checks_pass": true,
+        "deadline_noise": {
+          "easy": {
+            "all_five_repeat_miss": 357,
+            "any_repeat_miss": 357,
+            "empirical_p95_miss": 357,
+            "straddles_20ms": 0
+          },
+          "fixed_robust": {
+            "all_five_repeat_miss": 357,
+            "any_repeat_miss": 358,
+            "empirical_p95_miss": 358,
+            "straddles_20ms": 1
+          },
+          "hard": {
+            "all_five_repeat_miss": 357,
+            "any_repeat_miss": 357,
+            "empirical_p95_miss": 357,
+            "straddles_20ms": 0
+          },
+          "medium": {
+            "all_five_repeat_miss": 357,
+            "any_repeat_miss": 357,
+            "empirical_p95_miss": 357,
+            "straddles_20ms": 0
+          }
+        },
+        "empirical_p95_definition": "NumPy linear percentile over five samples; P95 is 0.8*maximum + 0.2*second-largest, not a well-resolved per-query tail estimate",
+        "per_query_repeat_cv": {
+          "easy": {
+            "count": 2000,
+            "max": 0.672657614247494,
+            "mean": 0.0804162783177644,
+            "p50": 0.06377123546243069,
+            "p90": 0.1667046766914695,
+            "p95": 0.19936741645246872,
+            "p99": 0.2849749497826374
+          },
+          "fixed_robust": {
+            "count": 2000,
+            "max": 1.9283750951021812,
+            "mean": 0.08266627959639122,
+            "p50": 0.06525658070894899,
+            "p90": 0.1688248336786496,
+            "p95": 0.1994544026894109,
+            "p99": 0.3234858869824411
+          },
+          "hard": {
+            "count": 2000,
+            "max": 0.6421166128750547,
+            "mean": 0.08711434621894013,
+            "p50": 0.07014323971371889,
+            "p90": 0.16938746964951967,
+            "p95": 0.19897118898032853,
+            "p99": 0.2928844873980747
+          },
+          "medium": {
+            "count": 2000,
+            "max": 0.5825160145417706,
+            "mean": 0.08632937398946043,
+            "p50": 0.0704948258941408,
+            "p90": 0.17332247575908677,
+            "p95": 0.20737109500788026,
+            "p99": 0.3244648898528122
+          }
+        },
+        "per_query_repeat_range_ms": {
+          "easy": {
+            "count": 2000,
+            "max": 30.568198,
+            "mean": 0.644493057,
+            "p50": 0.5285245,
+            "p90": 1.118600400000001,
+            "p95": 1.7175604499999995,
+            "p99": 3.0903892699999997
+          },
+          "fixed_robust": {
+            "count": 2000,
+            "max": 57.524525,
+            "mean": 0.6698051075,
+            "p50": 0.5069805000000001,
+            "p90": 1.0783581,
+            "p95": 1.6568291999999996,
+            "p99": 3.779933189999998
+          },
+          "hard": {
+            "count": 2000,
+            "max": 24.250887,
+            "mean": 0.6241499064999999,
+            "p50": 0.4910595,
+            "p90": 1.0777751000000002,
+            "p95": 1.55693265,
+            "p99": 3.708040699999999
+          },
+          "medium": {
+            "count": 2000,
+            "max": 30.907461,
+            "mean": 0.6470341475,
+            "p50": 0.5112055,
+            "p90": 1.1297963,
+            "p95": 1.6832595,
+            "p99": 3.3007969999999998
+          }
+        },
+        "problem_counts": {},
+        "repeat_count": 5,
+        "total_measured_action_seconds": {
+          "easy": 148.98358412499985,
+          "fixed_robust": 149.0429621220002,
+          "hard": 143.91359637999994,
+          "medium": 146.4668005200001
+        }
+      }
+    }
+  },
+  "created_utc": "2026-08-30T06:31:09.979831+00:00",
+  "eligible_for_formal_claims": false,
+  "environment": {
+    "captured_utc": "2026-08-30T06:15:32.943478+00:00",
+    "cpu_count": 24,
+    "cuda_available": true,
+    "cuda_version": "12.8",
+    "cudnn_version": 91900,
+    "gpu": "Quadro RTX 8000",
+    "numpy": "2.4.4",
+    "pinocchio": "3.9.0",
+    "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+    "processor": "x86_64",
+    "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+    "python_executable": "/home/eric/anaconda3/envs/isaaclab_3/bin/python",
+    "scikit_learn": "1.9.0",
+    "scipy": "1.17.0",
+    "torch": "2.11.0+cu128",
+    "torch_num_interop_threads": 1,
+    "torch_num_threads": 8
+  },
+  "exit_decision": {
+    "artifact_integrity": "PASS",
+    "bulk_exit_status": "GO_WITH_CONDITIONS",
+    "conditions_before_or_during_bulk_collection": [
+      "Do not train an oracle-winner classifier from five-sample empirical P95 labels. Train P50/P95 heads with pinball loss on all five raw latency observations, grouped by query.",
+      "Treat the observed zero action-success disagreement as a structural null. Either use a shared feasibility/fail-all head, or revise and re-pilot the action contract before claiming action-specific success prediction.",
+      "Stratify or enrich contract-feasible fail-all / ambiguous-boundary queries. The random pilot fail-all class is overwhelmingly large-step or unreachable and is too easy for a strong command-reject claim.",
+      "Use independent Panda and UR5e models under the same frozen model and label contract, and report calibration separately for each robot. A robot indicator is unnecessary because weights are not pooled.",
+      "Keep validation roles disjoint, preserve five raw repeats and balanced action order, keep the fixed-robust audit arm, and continue discarding and recollecting host-contaminated queries.",
+      "Hash the collector and every transitive runtime/config dependency in the bulk manifest; record discarded-query indices and reasons."
+    ],
+    "interpretation": "The pilot is trustworthy enough to justify a reduced seed17 two-model training/calibration/validation collection with a shared contract. It is not sufficient to support formal v4 claims, action-specific success-head claims, or hard per-query P95-winner labels.",
+    "unconditional_go": false
+  },
+  "pilot_only": true,
+  "protected_outputs_unchanged": true,
+  "run_manifest_protocol": "counterfactual_v4_training_validation_pilot_v2",
+  "scale_projection": {
+    "alternative_if_30k_5k_5k_is_interpreted_per_robot": {
+      "four_executed_action_upper_bound_hours": 14.707284711444906,
+      "projected_planned_sequential_hours_including_observed_quiet_waits": 11.446325890444903,
+      "projected_raw_plus_npz_storage_mib": 112.34369277954102,
+      "total_queries": 80000
+    },
+    "fixed_robust_alias_query_action_records": 40000,
+    "fixed_robust_alias_repeat_samples": 200000,
+    "four_executed_action_pilot_scaling_upper_bound_hours": 7.353642355722453,
+    "model_scope": "one independent nine-feature model for Panda and one for UR5e; weights are not pooled, while architecture and label contract are shared",
+    "projected_planned_sequential_hours_including_observed_quiet_waits": 5.723162945222452,
+    "projected_raw_plus_npz_storage_mib": 56.17184638977051,
+    "recommended_per_robot_allocation": {
+      "panda": {
+        "calibration": 2500,
+        "policy_validation": 2500,
+        "train": 15000
+      },
+      "ur5e": {
+        "calibration": 2500,
+        "policy_validation": 2500,
+        "train": 15000
+      }
+    },
+    "recommended_seed17_two_model_scale_total_across_both_robots": {
+      "calibration": 5000,
+      "policy_validation": 5000,
+      "train": 30000
+    },
+    "scale_rationale": "A compact per-robot MLP does not justify the original 160k labels per robot. The balanced 40k aggregate design is a validation-stage evidence budget; it is not selected from test_v3 performance. Fixed robust is a semantic alias of easy and is not re-executed in bulk.",
+    "source_roles": {
+      "calibration": "calibration_queries",
+      "policy_validation": "policy_validation_queries",
+      "train": "risk_train_queries"
+    },
+    "timed_solver_executions_at_three_decision_actions_and_five_repeats": 600000,
+    "total_queries": 40000
+  },
+  "test_data_discipline": {
+    "all_selection_manifests_use_risk_validation_queries": true,
+    "note": "This is a provenance audit of the recorded inputs and code path, not a forensic proof about every operating-system read. No test_v3 metric is read or used by this audit or by the recorded selection manifests.",
+    "source_role": "risk_validation_queries",
+    "source_role_is_validation_only": true,
+    "test_data_loaded_manifest_flag": false,
+    "test_v3_used_for_parameter_selection_manifest_flag": false
+  },
+  "workspace": "/home/eric/wjg/btry"
+}
