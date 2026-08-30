@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from collections import Counter
+import csv
 from dataclasses import dataclass
+import gzip
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -466,6 +468,89 @@ def _precomputed_hashes_from_npz(path: Path) -> list[str]:
     return values.tolist()
 
 
+def _precomputed_hashes_from_jsonl_gz(path: Path) -> list[str]:
+    """Read only the query identity field from an incomplete pilot record."""
+
+    values: list[str] = []
+    with gzip.open(path, "rt", encoding="utf-8") as handle:
+        for line_number, line in enumerate(handle, start=1):
+            if not line.strip():
+                continue
+            payload = json.loads(line)
+            value = str(payload.get("source_query_sha256", payload.get("query_sha256", "")))
+            if (
+                len(value) != 64
+                or any(character not in "0123456789abcdef" for character in value)
+            ):
+                raise ValueError(
+                    f"query-hash source {path}:{line_number} contains a malformed digest"
+                )
+            values.append(value)
+    if not values:
+        raise ValueError(f"query-hash source {path} is empty")
+    return values
+
+
+def _czy_closed_loop_identity_hashes(path: Path, *, dt: float) -> list[str]:
+    """Hash only the IK identity columns from the prior Panda closed-loop CSV.
+
+    The CSV contains outcome and timing columns, but they are neither converted
+    nor inspected here.  The prior controller query is reconstructed from the
+    logged pre-command actual joint state and target end-effector pose.
+    """
+
+    required = (
+        "actual_joint_state",
+        "target_ee_position",
+        "target_ee_rotation",
+        "dt_s",
+    )
+    values: list[str] = []
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        reader = csv.reader(handle)
+        try:
+            header = next(reader)
+        except StopIteration as error:
+            raise ValueError(f"closed-loop identity source {path} is empty") from error
+        if len(header) != len(set(header)) or any(name not in header for name in required):
+            raise KeyError(f"closed-loop identity source {path} lacks identity columns")
+        indices = {name: header.index(name) for name in required}
+        for line_number, row in enumerate(reader, start=2):
+            if not row:
+                continue
+            observed_dt = float(row[indices["dt_s"]])
+            if not np.isclose(observed_dt, dt, rtol=0.0, atol=1.0e-15):
+                raise ValueError(
+                    f"closed-loop identity source {path}:{line_number} changed dt"
+                )
+            previous_q = np.asarray(
+                json.loads(row[indices["actual_joint_state"]]), dtype=np.float64
+            )
+            target_position = np.asarray(
+                json.loads(row[indices["target_ee_position"]]), dtype=np.float64
+            )
+            target_rotation = np.asarray(
+                json.loads(row[indices["target_ee_rotation"]]), dtype=np.float64
+            )
+            if (
+                previous_q.ndim != 1
+                or target_position.shape != (3,)
+                or target_rotation.shape != (3, 3)
+                or not np.all(np.isfinite(previous_q))
+                or not np.all(np.isfinite(target_position))
+                or not np.all(np.isfinite(target_rotation))
+            ):
+                raise ValueError(
+                    f"closed-loop identity source {path}:{line_number} has invalid shapes"
+                )
+            values.append(
+                query_sha256(previous_q, target_position, target_rotation, dt=dt)
+            )
+    if not values:
+        raise ValueError(f"closed-loop identity source {path} has no query rows")
+    return values
+
+
 def _strict_json(path: Path) -> dict[str, Any]:
     def reject(value: str) -> None:
         raise ValueError(f"non-finite JSON constant {value!r} in {path}")
@@ -597,6 +682,38 @@ def default_comparison_sources(workspace: Path, robot: str) -> list[ComparisonSo
             role="query_identity_only",
         )
     )
+    # A prior Panda closed-loop study and one interrupted readiness smoke were
+    # inspected during development.  They are therefore included whenever the
+    # corresponding identity evidence exists, even though neither is a model
+    # training source.  No performance field is consumed by the freshness test.
+    if robot == "panda":
+        czy_path = root / "czy" / "closed_loop_v3_raw_frame_records.csv"
+        if czy_path.is_file() and not czy_path.is_symlink():
+            sources.append(
+                ComparisonSource(
+                    name="czy/closed_loop_v3_query_identity",
+                    path=czy_path,
+                    kind="czy_identity_csv",
+                    group="prior_closed_loop_czy",
+                    role="query_identity_only",
+                )
+            )
+    incomplete_readiness = (
+        root
+        / "outputs/.counterfactual_v4_readiness_smoke.incomplete.1313949"
+        / robot
+        / "seed17/counterfactual_records.jsonl.gz"
+    )
+    if incomplete_readiness.is_file() and not incomplete_readiness.is_symlink():
+        sources.append(
+            ComparisonSource(
+                name="counterfactual_v4_readiness_smoke_incomplete/seed17",
+                path=incomplete_readiness,
+                kind="query_hash_jsonl_gz",
+                group="counterfactual_v4_readiness_smoke_incomplete",
+                role="selected_queries",
+            )
+        )
     expected_count = (
         len(PAPER_V2_SEEDS) * len(PAPER_V2_QUERY_ROLES)
         + len(BULK_QUERY_ROLES)
@@ -605,7 +722,7 @@ def default_comparison_sources(workspace: Path, robot: str) -> list[ComparisonSo
         + 1
     )
     names = [source.name for source in sources]
-    if len(sources) != expected_count or len(names) != len(set(names)):
+    if len(sources) < expected_count or len(names) != len(set(names)):
         raise RuntimeError("freshness comparison-source contract is incomplete or ambiguous")
     missing = [
         str(source.path.resolve())
@@ -660,6 +777,25 @@ def audit_freshness(
             arrays_read = ["query_sha256"]
             selector = {
                 "type": "all_precomputed_hashes",
+                "selected_count": len(prior_values),
+            }
+        elif source.kind == "query_hash_jsonl_gz":
+            prior_values = _precomputed_hashes_from_jsonl_gz(path)
+            arrays_read = ["source_query_sha256"]
+            selector = {
+                "type": "all_precomputed_hashes",
+                "selected_count": len(prior_values),
+            }
+        elif source.kind == "czy_identity_csv":
+            prior_values = _czy_closed_loop_identity_hashes(path, dt=dt)
+            arrays_read = [
+                "actual_joint_state",
+                "target_ee_position",
+                "target_ee_rotation",
+                "dt_s",
+            ]
+            selector = {
+                "type": "all_identity_rows",
                 "selected_count": len(prior_values),
             }
         elif source.kind == "identity_npz":

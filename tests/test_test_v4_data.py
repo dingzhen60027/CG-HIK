@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from hashlib import sha256
+import csv
+import gzip
 import json
 from pathlib import Path
 
@@ -144,6 +146,70 @@ def test_seed_uses_exact_frozen_material() -> None:
     assert derive_seed(digest, "panda", "ood_points") != derive_seed(
         digest, "panda", "id_points"
     )
+
+
+def test_optional_inspected_czy_and_incomplete_smoke_are_identity_sources(
+    tmp_path: Path,
+) -> None:
+    robot = "panda"
+    _comparison_workspace(tmp_path, robot)
+    czy = tmp_path / "czy/closed_loop_v3_raw_frame_records.csv"
+    czy.parent.mkdir(parents=True)
+    with czy.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(
+            [
+                "actual_joint_state",
+                "target_ee_position",
+                "target_ee_rotation",
+                "dt_s",
+                "latency_ms",
+            ]
+        )
+        writer.writerow(
+            [
+                json.dumps([40.0, 40.1]),
+                json.dumps([40.2, 0.0, 0.0]),
+                json.dumps(np.eye(3).tolist()),
+                "0.02",
+                "999.0",
+            ]
+        )
+    incomplete = (
+        tmp_path
+        / "outputs/.counterfactual_v4_readiness_smoke.incomplete.1313949"
+        / robot
+        / "seed17/counterfactual_records.jsonl.gz"
+    )
+    incomplete.parent.mkdir(parents=True)
+    with gzip.open(incomplete, "wt", encoding="utf-8") as handle:
+        handle.write(
+            json.dumps(
+                {
+                    "source_query_sha256": "e" * 64,
+                    "latency_samples_ns": [999999999],
+                }
+            )
+            + "\n"
+        )
+    sources = default_comparison_sources(tmp_path, robot)
+    by_name = {source.name: source for source in sources}
+    assert by_name["czy/closed_loop_v3_query_identity"].kind == "czy_identity_csv"
+    assert (
+        by_name["counterfactual_v4_readiness_smoke_incomplete/seed17"].kind
+        == "query_hash_jsonl_gz"
+    )
+    audit = audit_freshness(
+        _roles(), robot=robot, dt=0.02, comparison_sources=sources
+    )
+    czy_manifest = audit["comparison_sources"]["czy/closed_loop_v3_query_identity"]
+    assert czy_manifest["arrays_read"] == [
+        "actual_joint_state",
+        "target_ee_position",
+        "target_ee_rotation",
+        "dt_s",
+    ]
+    assert not czy_manifest["performance_arrays_read"]
 
 
 def test_query_key_is_explicit_and_hash_matches_established_contract() -> None:
