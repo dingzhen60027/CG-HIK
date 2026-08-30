@@ -1,0 +1,142 @@
+protocol_version: test_v4_locked
+source_config: paper_v2.yaml
+release_directory: ../outputs/release_v4_locked
+aggregate_directory: ../outputs/test_v4_aggregate
+
+robots: [panda, ur5e]
+primary_training_seed: 17
+sensitivity_training_seeds: [29, 43]
+backend: torchscript_exact_v4
+
+runtime:
+  device: cuda:0
+  cuda_visible_devices: "0"
+  intra_op_threads: 8
+  inter_op_threads: 1
+  deadline_ms: 20.0
+  hysteresis:
+    enabled: false
+    method: disabled_by_preregistration
+
+data:
+  dt: 0.02
+  seed_derivation: sha256("test_v4_locked|release_v4_digest|robot|role")_uint32
+  query_key_fields: [robot, domain, family, query_sha256]
+  expected_queries_per_robot: 25000
+  roles:
+    id_points:
+      domain: id
+      id_count: 5000
+      per_stress_category: 1000
+      hard_valid_count: 2000
+      hard_screening_release_seed: 17
+      hard_screening_easy_iterations: 1
+      hard_screening_robust_iterations: 25
+      expected_queries: 12000
+      expected_trajectories: 0
+      expected_category_counts:
+        id: 5000
+        near_singular: 1000
+        near_limit: 1000
+        workspace_boundary: 1000
+        large_step: 1000
+        unreachable: 1000
+        hard_valid: 2000
+    id_trajectories:
+      domain: id
+      paths_per_family: 10
+      steps: 150
+      expected_queries: 6000
+      expected_trajectories: 40
+      expected_category_counts:
+        trajectory_smooth: 1500
+        trajectory_orientation: 1500
+        trajectory_singular: 1500
+        trajectory_limit: 1500
+    ood_points:
+      domain: ood
+      per_family: 1000
+      expected_queries: 4000
+      expected_trajectories: 0
+      expected_category_counts:
+        ood_workspace_sector: 1000
+        ood_extreme_singular: 1000
+        ood_extreme_joint_limit: 1000
+        ood_fast_motion: 1000
+    ood_trajectories:
+      domain: ood
+      paths_per_family: 10
+      steps: 150
+      expected_queries: 3000
+      expected_trajectories: 20
+      expected_category_counts:
+        ood_trajectory_high_frequency: 1500
+        ood_trajectory_mixed_curvature: 1500
+  freshness:
+    require_internal_exact_hash_uniqueness: true
+    require_zero_overlap_with_bulk: true
+    require_zero_overlap_with_pilots: true
+    require_zero_overlap_with_old_test: true
+    old_test_allowed_arrays: [previous_q, target_position, target_rotation]
+    old_test_performance_results_allowed: false
+
+timing:
+  clock: perf_counter_ns
+  warmup_iterations: 200
+  primary_point_repeats: 3
+  comparator_point_repeats: 1
+  interleaved_same_query_methods: true
+  disk_writes_inside_timed_interval: false
+  latency_quantiles: [0.50, 0.95, 0.99]
+
+statistics:
+  confidence_level: 0.95
+  bootstrap_samples: 10000
+  bootstrap_seed_role: bootstrap
+  point_resampling_unit: query_sha256
+  trajectory_resampling_unit: trajectory_id
+  multiplicity_correction: holm
+  paired_comparisons: true
+
+# Frozen before any fresh test query is generated or benchmarked. A strict
+# inequality is represented explicitly instead of being relaxed to <= 1.0.
+claim_gate:
+  feasible_success_gap_ci_lower_min: -0.01
+  contract_violation_count_max: 0
+  id_feasible_false_reject_rate_max: 0.01
+  feasible_p95_ratio_strict_max: 1.0
+  feasible_p99_ratio_max: 1.05
+  trajectory_completion_gap_min: -0.10
+  trajectory_command_spike_increase_max: 0.0
+  ood_feasible_false_reject_improvement_vs_v3_min: 0.0
+  defer_fixed_semantic_match_rate_min: 1.0
+  reject_function_evaluations_max: 0
+  reject_executed_stage_count_max: 0
+
+methods:
+  primary:
+    - fixed_robust_cascade
+    - proposed_v2
+    - threshold_guard_cascade
+    - learned_1x25
+    - dls_previous_1x50
+    - trf_previous
+    - proposed_v4
+  sensitivity_only:
+    - fixed_robust_cascade
+    - proposed_v2
+    - proposed_v4
+  unavailable_baseline_label: trac_ik_unavailable
+  trf_is_not_trac_ik: true
+
+protected_outputs:
+  - paper_v2_*
+  - paper_v2_aggregate
+  - latency_pilot_v3
+  - release_v3_locked
+  - test_v3_*
+  - test_v3_aggregate
+  - counterfactual_v4_pilot
+  - counterfactual_v4_bulk
+  - release_v4_candidate
+  - release_v4_locked
