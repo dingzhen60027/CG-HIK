@@ -5,7 +5,12 @@ from confik.counterfactual_v4.policy import (
     V4PolicyConfig,
     V4Prediction,
 )
-from confik.counterfactual_v4.runtime_v4 import PolicyEntryGate, PolicyRiskEngine
+from confik.counterfactual_v4.runtime_v4 import (
+    PolicyEntryGate,
+    PolicyRiskEngine,
+    V4ProfiledRuntime,
+)
+from confik.latency_pilot_v3.benchmark import ProfiledOutcome
 from confik.runtime.cascade import EntryAction
 
 
@@ -56,3 +61,35 @@ def test_command_reject_maps_to_zero_solver_entry() -> None:
     assert risk_engine.last_decision is not None
     assert risk_engine.last_decision.action == "reject"
     assert PolicyEntryGate(risk_engine).choose(risk) == EntryAction.REJECT
+
+
+def test_failed_defer_preserves_the_complete_fixed_runtime_reason() -> None:
+    risk_engine = engine(score=10.0, fail=0.99, success=(0.1, 0.1, 0.1))
+    risk_engine.predict(np.zeros(9))
+
+    class FailedFixedRuntime:
+        kinematics = object()
+
+        def solve(self, query: object) -> ProfiledOutcome:
+            del query
+            return ProfiledOutcome(
+                q=None,
+                accepted=False,
+                entry_action="easy",
+                executed_stages=("easy", "medium", "hard", "restart", "trf"),
+                risk_probabilities=np.asarray([0.1, 0.2, 0.3, 0.4]),
+                risk_score=0.9,
+                function_evaluations=42,
+                iterations=37,
+                fallback_used=True,
+                verification_reasons=("position_error",),
+                reject_reason="all_cascade_stages_failed",
+                candidate_count=5,
+                timings_ns={},
+            )
+
+    result = V4ProfiledRuntime(FailedFixedRuntime(), risk_engine).solve(object())
+    assert result.entry_action == "defer"
+    assert result.reject_reason == "all_cascade_stages_failed"
+    assert result.function_evaluations == 42
+    assert result.executed_stages == ("easy", "medium", "hard", "restart", "trf")

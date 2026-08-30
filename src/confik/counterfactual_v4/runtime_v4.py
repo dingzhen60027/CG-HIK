@@ -69,8 +69,12 @@ class V4ProfiledRuntime:
         reject_reason = outcome.reject_reason
         if decision.action == "reject":
             reject_reason = "command_reject_high_confidence_fail_all"
-        elif decision.action == "defer" and not outcome.accepted:
-            reject_reason = "deferred_fixed_robust_failed"
+        # A defer is the complete fixed robust cascade, so its terminal
+        # metadata must remain exactly the fixed runtime's metadata even when
+        # every numerical stage fails.  The decision action already records
+        # that this path was entered through model abstention; rewriting the
+        # fixed failure reason would break the frozen defer-equivalence
+        # contract without changing any solver behavior.
         return replace(
             outcome,
             entry_action=decision.action,
