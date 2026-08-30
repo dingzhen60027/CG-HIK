@@ -1,0 +1,48 @@
+protocol_version: release_v4_locked
+backend: torchscript_exact_v4
+source_config: paper_v2.yaml
+candidate_directory: ../outputs/release_v4_candidate
+upstream_v3_directory: ../outputs/release_v3_locked
+output_directory: ../outputs/release_v4_locked
+
+robots: [panda, ur5e]
+upstream_training_seeds: [17, 29, 43]
+
+runtime:
+  seed_device: cuda:0
+  gate_device: cpu
+  expected_gpu_name: Quadro RTX 8000
+  cuda_visible_devices: "0"
+  intra_op_threads: 8
+  inter_op_threads: 1
+
+# Validation-only inputs. No path containing "test" is accepted by the runner.
+validation:
+  policy_feature_role: policy_validation_queries
+  point_split: risk_validation_queries
+  point_queries_per_category: 100
+  point_sampling_seed: 9417
+  trajectory_split: seed_validation
+  trajectory_count: 4
+  trajectory_sampling_seed: 9418
+  warmup_iterations: 25
+
+# Frozen before any fresh test_v4 dataset exists. Route, OOD, solver and
+# verifier semantics must agree exactly; only continuous tensor outputs use a
+# numerical tolerance.
+equivalence:
+  probability_max_abs: 0.000000000001
+  latency_max_abs_ms: 0.000001
+  embedding_max_abs: 0.000001
+  ood_score_max_abs: 0.00000001
+  accepted_command_max_abs_rad: 0.000001
+
+protected_outputs:
+  - paper_v2_*
+  - paper_v2_aggregate
+  - latency_pilot_v3
+  - release_v3_locked
+  - test_v3_*
+  - test_v3_aggregate
+  - counterfactual_v4_bulk
+  - release_v4_candidate
