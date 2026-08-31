@@ -1,0 +1,136 @@
+{
+  "protocol_version": "test_v4_aggregate_repair_v1_attestation_v1",
+  "execution_contract": {
+    "retrospective_attestation": true,
+    "modify_v1_allowed": false,
+    "modify_original_outputs_allowed": false,
+    "query_generation_count": 0,
+    "query_rerun_count": 0,
+    "solver_invocation_count": 0,
+    "model_inference_count": 0,
+    "bootstrap_resample_count": 0,
+    "scientific_gate_direction_is_acceptance_criterion": false,
+    "automatic_resume_allowed": false
+  },
+  "execution_disclosure": {
+    "attestation_timing": "retrospective",
+    "invocation_claim_source": "operator_and_tool_invocation_record",
+    "invocation_was_independently_traced": false,
+    "shadow_git_metadata_used": true,
+    "scope_clean_only": true,
+    "global_worktree_clean_claim": false,
+    "permanent_ref_import_timing": "retrospective_after_v1_execution",
+    "declared_original_invocation": {
+      "launcher": "/home/eric/wjg/btry/scripts/run_test_v4_aggregate_repair_v1.sh",
+      "git_dir": "/tmp/confik-v4-repair-lineage.ZJRjoy/.git",
+      "git_work_tree": "/home/eric/wjg/btry",
+      "source_commit": "63e2ed6cbd14bbce0db869a247a9fb84e1f6911f",
+      "statement": "The GIT_DIR and GIT_WORK_TREE declaration is retrospective operator/tool-invocation provenance, not an independently captured syscall trace."
+    }
+  },
+  "statistics": {
+    "familywise_alpha": 0.05,
+    "multiplicity_correction": "Holm",
+    "hypothesis_count": 8,
+    "confirmatory_metrics": [
+      "feasible_success_gap",
+      "feasible_p95_latency_ratio",
+      "feasible_p99_latency_ratio",
+      "trajectory_completion_gap"
+    ]
+  },
+  "source_commit": {
+    "main_repository": "/home/eric/wjg/btry",
+    "permanent_ref": "refs/heads/codex/v4-aggregation-repair-exec",
+    "commit": "63e2ed6cbd14bbce0db869a247a9fb84e1f6911f",
+    "parent": "e22fe9116ec40a15dc116dadc6d763e149fac72b",
+    "tree": "254024def41e34f9ac0d83aacd7feca4947c8a82"
+  },
+  "v1": {
+    "root": "../outputs/test_v4_aggregate_repair_v1",
+    "tree": {
+      "file_count": 7,
+      "total_bytes": 1443646,
+      "tree_digest": "096774949c51173c9be5f3a34706cc6aa8c0aa8ef9733779519d292b9d2e794a"
+    },
+    "final_manifest_sha256": "4f3b5024bdb6aa4ec283be4b4a0a8d3438e7a3ba03467154567a418817ba7ccc"
+  },
+  "inputs": {
+    "v1_root": "../outputs/test_v4_aggregate_repair_v1",
+    "formal_roots": {
+      "aggregate_failure": {
+        "path": "../outputs/.test_v4_aggregate.incomplete",
+        "file_count": 56,
+        "total_bytes": 26608726,
+        "tree_digest": "63caabe80956198bd2e36884b66993ca0828b83dbe212c5f8a056d022d1b572d"
+      },
+      "seed17": {
+        "path": "../outputs/.test_v4_seed17.incomplete",
+        "file_count": 512,
+        "total_bytes": 68703712,
+        "tree_digest": "c65be32047c88acf37fb27fdb0d4d0f47b8750c2c3139126a129a53db0723293"
+      },
+      "seed29": {
+        "path": "../outputs/.test_v4_seed29.incomplete",
+        "file_count": 506,
+        "total_bytes": 42796130,
+        "tree_digest": "33a2fc12cc201617cdb67be65e1e2bdb7e8fda1d35760b0b2d6ad23019872d5a"
+      },
+      "seed43": {
+        "path": "../outputs/.test_v4_seed43.incomplete",
+        "file_count": 506,
+        "total_bytes": 43125166,
+        "tree_digest": "4d02bdc7204200cd3faaddb496fed2076aab273a682351aa67d691c552182942"
+      }
+    },
+    "protected_patterns": [
+      "paper_v2_*",
+      "paper_v2_aggregate",
+      "latency_pilot_v3",
+      "release_v3_locked",
+      "test_v3_*",
+      "test_v3_aggregate",
+      "counterfactual_v4_pilot",
+      "counterfactual_v4_bulk",
+      "counterfactual_v4_smoke*",
+      ".counterfactual_v4_smoke*",
+      "counterfactual_v4_readiness_smoke*",
+      ".counterfactual_v4_readiness_smoke*",
+      "release_v4_candidate",
+      "release_v4_locked",
+      "czy"
+    ],
+    "protected_tree": {
+      "directories": [
+        "workspace/czy",
+        ".counterfactual_v4_readiness_smoke.incomplete.1313949",
+        ".counterfactual_v4_smoke.incomplete.258152",
+        "counterfactual_v4_bulk",
+        "counterfactual_v4_pilot",
+        "counterfactual_v4_readiness_smoke",
+        "counterfactual_v4_readiness_smoke_r2",
+        "counterfactual_v4_smoke",
+        "latency_pilot_v3",
+        "paper_v2_aggregate",
+        "paper_v2_seed17",
+        "paper_v2_seed29",
+        "paper_v2_seed43",
+        "release_v3_locked",
+        "release_v4_candidate",
+        "release_v4_locked",
+        "test_v3_aggregate",
+        "test_v3_seed17",
+        "test_v3_seed29",
+        "test_v3_seed43"
+      ],
+      "file_count": 897,
+      "total_bytes": 2272659613,
+      "tree_digest": "e859207753672aeace4e5115cd0ca65c6e07ab7ab00056538508a7b3e81367aa"
+    }
+  },
+  "output": {
+    "staging_directory": "../outputs/.test_v4_aggregate_repair_v1_attestation_v1.incomplete",
+    "final_directory": "../outputs/test_v4_aggregate_repair_v1_attestation_v1",
+    "lock_path": "../outputs/.test_v4_aggregate_repair_v1_attestation_v1.lock"
+  }
+}
