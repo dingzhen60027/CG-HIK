@@ -351,162 +351,621 @@ def test_failed_tree_is_pinned_and_tampering_is_detected(tmp_path: Path) -> None
         audit.audit_failed_tree(tmp_path, expectations)
 
 
-def _repair_tool(path: Path, *, forbidden: bool = False) -> str:
-    source = (
-        "import torch\nfrom pathlib import Path\nPath('a').rename('b')\n"
-        if forbidden
-        else "from pathlib import Path\ndef promote(a: Path, b: Path):\n    a.rename(b)\n"
-    )
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(source, encoding="utf-8")
-    return audit.sha256_file(path)
-
-
-def _repair_manifest(
-    workspace: Path,
-    repair: Path,
-    failed: Path,
-    expectations: audit.AuditExpectations,
-) -> dict[str, object]:
-    tool_path = workspace / "scripts" / "repair_fixture.py"
-    tool_hash = _repair_tool(tool_path)
+def _tree_payload(root: Path) -> dict[str, object]:
+    files = [
+        {"path": str(path.relative_to(root)), **_descriptor(path)}
+        for path in sorted(root.rglob("*"))
+        if path.is_file()
+    ]
     return {
-        "protocol": "test_v4_aggregation_only_repair_v1",
-        "status": "completed",
-        "repair_scope": "aggregation_only",
-        "scientific_activity": {
-            "query_generation_calls": 0,
-            "solver_calls": 0,
-            "model_inference_calls": 0,
-            "checkpoint_record_writes": 0,
-            "bootstrap_resamples": 0,
-            "threshold_changes": 0,
-            "gate_definition_changes": 0,
-        },
-        "input_evidence": {
-            "preregistration_sha256": expectations.preregistration_sha256,
-            "dataset_manifest_sha256": expectations.dataset_manifest_sha256,
-            "control_plane_seal_sha256": expectations.control_plane_seal_sha256,
-            "evidence_fingerprint_digest": expectations.evidence_fingerprint_digest,
-            "failed_tree_digest": expectations.failed_tree_digest,
-            "combination_completion_sha256": dict(expectations.completion_sha256),
-            "checkpoint_count": expectations.total_checkpoint_count,
-            "record_count": expectations.total_record_count,
-        },
-        "bug_classification": {
-            "class": "json_mapping_key_order_only",
-            "stored_metric_values_changed": False,
-            "stored_unadjusted_pvalues_reused": True,
-        },
-        "atomic_promotion": {
-            "atomic_directory_rename": True,
-            "same_filesystem": True,
-            "staging_path": "outputs/.test_v4_aggregate.repair.incomplete",
-            "final_path": str(repair.relative_to(workspace)),
-        },
-        "repair_tool": {
-            "path": str(tool_path.relative_to(workspace)),
-            "sha256": tool_hash,
-        },
+        "root": str(root.resolve()),
+        "files": files,
+        "file_count": len(files),
+        "total_bytes": sum(int(item["size"]) for item in files),
+        "tree_digest": audit.json_digest(files),
     }
 
 
-def test_repair_manifest_requires_zero_scientific_activity_and_atomic_promotion(
+def _repair_evidence_fixture(
     tmp_path: Path,
-) -> None:
+) -> tuple[Path, Path, audit.AuditExpectations]:
     failed = tmp_path / "outputs" / ".test_v4_aggregate.incomplete"
-    repair = tmp_path / "outputs" / "test_v4_aggregate"
-    failed.mkdir(parents=True)
+    seed_root = tmp_path / "outputs" / ".test_v4_seed17.incomplete"
+    repair = tmp_path / "outputs" / "test_v4_aggregate_repair_v1"
+    _write_json(failed / "failure.json", {"sealed": True})
+    _write_json(seed_root / "panda" / "combination_complete.json", {"sealed": True})
     repair.mkdir(parents=True)
-    manifest = _repair_manifest(tmp_path, repair, failed, audit.PRODUCTION)
-    _write_json(repair / "aggregation_repair_manifest.json", manifest)
 
-    result = audit.audit_repair_manifest(tmp_path, repair, failed, audit.PRODUCTION)
-    assert result["atomic_staging_absent"] is True
-    assert result["failed_tree_separate"] is True
-
-    manifest["scientific_activity"]["solver_calls"] = 1  # type: ignore[index]
-    _write_json(repair / "aggregation_repair_manifest.json", manifest)
-    with pytest.raises(audit.AuditError, match="forbidden scientific activity"):
-        audit.audit_repair_manifest(tmp_path, repair, failed, audit.PRODUCTION)
-
-
-def test_repair_tool_static_audit_rejects_scientific_runtime_import(
-    tmp_path: Path,
-) -> None:
-    tool = tmp_path / "repair.py"
-    digest = _repair_tool(tool, forbidden=True)
-    with pytest.raises(audit.AuditError, match="imports scientific runtime"):
-        audit.audit_repair_tool_source(tool, digest)
-
-
-def _sealed_fixture(
-    tmp_path: Path,
-) -> tuple[Path, dict[tuple[str, int], Path], audit.AuditExpectations]:
+    source_files = (
+        "configs/test_v4_aggregate_repair_v1.yaml",
+        "scripts/run_test_v4_aggregate_repair_v1.sh",
+        "src/confik/test_v4_locked/aggregate_repair.py",
+        "src/confik/test_v4_locked/reporting.py",
+        "tests/test_test_v4_aggregate_repair.py",
+        "tests/test_test_v4_reporting.py",
+    )
+    for relative in source_files:
+        path = tmp_path / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(f"fixture:{relative}\n", encoding="utf-8")
+    source: dict[str, object] = {
+        "files": {
+            relative: _descriptor(tmp_path / relative) for relative in source_files
+        },
+        "git_commit": "fixture-commit",
+        "git_tree": "fixture-tree",
+        "scope_clean": True,
+    }
+    source["digest"] = audit.json_digest(source)
+    roots = {
+        "aggregate_failure": _tree_payload(failed),
+        "seed17": _tree_payload(seed_root),
+    }
+    completion_hash = audit.sha256_file(
+        seed_root / "panda" / "combination_complete.json"
+    )
+    prereg = {
+        "protocol": "test_v4_aggregate_repair_v1",
+        "execution_contract": {
+            "aggregation_only": True,
+            "automatic_resume_allowed": False,
+            "original_outputs_mutation_allowed": False,
+            "query_rerun_count": 0,
+            "solver_invocation_count": 0,
+            "model_inference_count": 0,
+        },
+        "threshold_or_gate_changes": False,
+        "statistical_semantics_changed": False,
+        "old_test_performance_used_for_selection": False,
+        "original_failure_classification_changed": False,
+        "control_plane": {
+            "preregistration_sha256": audit.PRODUCTION.preregistration_sha256,
+            "dataset_manifest_sha256": audit.PRODUCTION.dataset_manifest_sha256,
+            "control_plane_seal_sha256": audit.PRODUCTION.control_plane_seal_sha256,
+            "original_evidence_fingerprint_digest": audit.PRODUCTION.evidence_fingerprint_digest,
+        },
+        "expected_failure": {
+            "exception_message": "panda confirmatory metrics changed",
+            "failure_classification": "non_resumable_integrity_or_scientific_failure",
+            "phase": {"phase": "aggregate_and_final_integrity"},
+        },
+        "repair_source_manifest": source,
+        "input_tree_digests": {
+            label: {
+                "file_count": payload["file_count"],
+                "total_bytes": payload["total_bytes"],
+                "tree_digest": payload["tree_digest"],
+            }
+            for label, payload in roots.items()
+        },
+        "combination_validations": [
+            {
+                "robot": "panda",
+                "training_seed": 17,
+                "completion_manifest_sha256": completion_hash,
+                "checkpoint_count": 1,
+                "all_artifact_hashes_verified": True,
+                "all_checkpoint_quiet_host_contracts_verified": True,
+            }
+        ],
+    }
+    prereg_path = repair / "aggregation_repair_preregistration.json"
+    _write_json(prereg_path, prereg)
+    input_manifest = {
+        "protocol": "test_v4_aggregate_repair_v1_input_manifest",
+        "repair_preregistration_sha256": audit.sha256_file(prereg_path),
+        "all_six_combinations_hash_validated": True,
+        "query_record_files_hash_validated_only": True,
+        "query_records_read_for_aggregation": False,
+        "roots": roots,
+        "combined_tree_digest": audit.json_digest(roots),
+    }
+    input_path = repair / "aggregation_repair_input_manifest.json"
+    _write_json(input_path, input_manifest)
+    integrity = {
+        "protocol": "test_v4_aggregate_repair_v1_integrity",
+        "input_trees_before": roots,
+        "input_trees_after": roots,
+        "input_trees_unchanged": True,
+        "protected_tree_before": {
+            "tree_digest": audit.PRODUCTION.protected_tree_digest
+        },
+        "protected_tree_after": {"tree_digest": audit.PRODUCTION.protected_tree_digest},
+        "protected_tree_unchanged": True,
+        "original_failure_evidence_preserved": True,
+        "original_failure_classification_changed": False,
+        "query_rerun_count": 0,
+        "solver_invocation_count": 0,
+        "model_inference_count": 0,
+        "all_six_combinations_hash_validated": True,
+        "final_input_recheck_digest": "fixture-recheck",
+    }
+    integrity_path = repair / "aggregation_repair_integrity.json"
+    _write_json(integrity_path, integrity)
     expectations = replace(
         audit.PRODUCTION,
         robots=("panda",),
         seeds=(17,),
-        completion_sha256={"panda/seed17": "pending"},
-        paper_gate_expectation=False,
-    )
-    root = tmp_path / "outputs" / "test_v4_seed17" / "panda"
-    _write_json(root / "combination_complete.json", {"fixture": True})
-    marker_hash = audit.sha256_file(root / "combination_complete.json")
-    expectations = replace(
-        expectations, completion_sha256={"panda/seed17": marker_hash}
-    )
-    aggregate = tmp_path / "outputs" / "test_v4_aggregate"
-    _write_json(aggregate / "aggregation_repair_manifest.json", {"fixture": True})
-    files: list[dict[str, object]] = []
-    for path in sorted(
-        list((tmp_path / "outputs" / "test_v4_seed17").rglob("*"))
-        + list(aggregate.rglob("*"))
-    ):
-        if path.is_file() and path.name != "test_v4_final_manifest.json":
-            descriptor = _descriptor(path)
-            files.append(
-                {
-                    "path": str(path.relative_to(tmp_path)),
-                    "sha256": descriptor["sha256"],
-                    "size": descriptor["size"],
-                }
-            )
-    final = {
-        "protocol": "test_v4 final immutable evidence manifest",
-        "formal_completion_marker": True,
-        "all_six_natural_exits": True,
-        "paper_gate_pass": False,
-        "test_set_retuning_performed": False,
-        "threshold_or_gate_changes_after_test": False,
-        "outliers_removed": False,
-        "winsorization_performed": False,
-        "preregistration_sha256": expectations.preregistration_sha256,
-        "dataset_manifest_sha256": expectations.dataset_manifest_sha256,
-        "control_plane_seal_sha256": expectations.control_plane_seal_sha256,
-        "protected_outputs": {
-            "unchanged": True,
-            "before": {"tree_digest": expectations.protected_tree_digest},
-            "after": {"tree_digest": expectations.protected_tree_digest},
+        completion_sha256={"panda/seed17": completion_hash},
+        checkpoint_count_per_combination=1,
+        repair_git_commit="fixture-commit",
+        repair_git_tree="fixture-tree",
+        repair_output_sha256={
+            prereg_path.name: audit.sha256_file(prereg_path),
+            input_path.name: audit.sha256_file(input_path),
+            integrity_path.name: audit.sha256_file(integrity_path),
         },
-        "files": files,
+    )
+    return repair, failed, expectations
+
+
+def test_repair_evidence_requires_zero_scientific_activity_and_unchanged_inputs(
+    tmp_path: Path,
+) -> None:
+    repair, failed, expectations = _repair_evidence_fixture(tmp_path)
+    result = audit.audit_repair_manifest(
+        tmp_path,
+        repair,
+        failed,
+        expectations,
+        verify_git_lineage=False,
+    )
+    assert result["all_input_trees_unchanged"] is True
+    assert result["solver_invocation_count"] == 0
+
+    integrity_path = repair / "aggregation_repair_integrity.json"
+    integrity = audit.load_json(integrity_path)
+    integrity["solver_invocation_count"] = 1
+    _write_json(integrity_path, integrity)
+    expectations = replace(
+        expectations,
+        repair_output_sha256={
+            **expectations.repair_output_sha256,
+            integrity_path.name: audit.sha256_file(integrity_path),
+        },
+    )
+    with pytest.raises(audit.AuditError, match="scientific execution"):
+        audit.audit_repair_manifest(
+            tmp_path,
+            repair,
+            failed,
+            expectations,
+            verify_git_lineage=False,
+        )
+
+
+def test_repair_evidence_detects_input_tree_tampering(tmp_path: Path) -> None:
+    repair, failed, expectations = _repair_evidence_fixture(tmp_path)
+    with (failed / "failure.json").open("a", encoding="utf-8") as handle:
+        handle.write(" ")
+    with pytest.raises(audit.AuditError, match="artifact hash/size changed"):
+        audit.audit_repair_manifest(
+            tmp_path,
+            repair,
+            failed,
+            expectations,
+            verify_git_lineage=False,
+        )
+
+
+def _sealed_fixture(
+    tmp_path: Path, *, paper_gate: bool
+) -> tuple[Path, audit.AuditExpectations]:
+    aggregate = tmp_path / "outputs" / "test_v4_aggregate_repair_v1"
+    names = (
+        "aggregate_summary_v4.json",
+        "aggregation_repair_input_manifest.json",
+        "aggregation_repair_integrity.json",
+        "aggregation_repair_preregistration.json",
+        "joint_holm_v4.json",
+        "paper_gate_v4.json",
+    )
+    for name in names:
+        _write_json(aggregate / name, {"fixture": name})
+    chain = {name: audit.sha256_file(aggregate / name) for name in names}
+    final = {
+        "protocol": "test_v4_aggregate_repair_v1_final_manifest",
+        "authoritative_output_namespace": "outputs/test_v4_aggregate_repair_v1",
+        "aggregation_only_repair": True,
+        "six_combination_natural_exits": True,
+        "original_formal_runner_natural_exit": False,
+        "original_incomplete_paths_promoted_or_renamed": False,
+        "original_failure_evidence_preserved": True,
+        "original_failure_classification_changed": False,
+        "threshold_or_statistical_semantics_changed": False,
+        "query_rerun_count": 0,
+        "solver_invocation_count": 0,
+        "model_inference_count": 0,
+        "paper_gate_pass": paper_gate,
+        "final_input_recheck_digest": "fixture-recheck",
+        "hash_chain": chain,
+        "hash_chain_digest": audit.json_digest(chain),
     }
-    _write_json(aggregate / "test_v4_final_manifest.json", final)
-    return aggregate, {("panda", 17): root}, expectations
+    final["manifest_payload_digest"] = audit.json_digest(final)
+    final_path = aggregate / "test_v4_repair_final_manifest.json"
+    _write_json(final_path, final)
+    expectations = replace(
+        audit.PRODUCTION,
+        repair_output_sha256={
+            **chain,
+            final_path.name: audit.sha256_file(final_path),
+        },
+    )
+    return aggregate, expectations
 
 
-def test_final_seal_requires_exact_artifact_set_and_hashes(tmp_path: Path) -> None:
-    aggregate, roots, expectations = _sealed_fixture(tmp_path)
-    result = audit.audit_final_seal(tmp_path, aggregate, roots, expectations)
+def test_final_seal_requires_exact_seven_file_hash_chain_without_result_direction(
+    tmp_path: Path,
+) -> None:
+    aggregate, expectations = _sealed_fixture(tmp_path, paper_gate=True)
+    result = audit.audit_final_seal(
+        tmp_path,
+        aggregate,
+        expectations,
+        expected_paper_gate=True,
+        expected_final_input_recheck_digest="fixture-recheck",
+    )
     assert result["artifact_set_exact"] is True
-    assert result["paper_gate_pass"] is False
+    assert result["paper_gate_pass"] is True
 
-    with (aggregate / "aggregation_repair_manifest.json").open(
+    with (aggregate / "aggregate_summary_v4.json").open(
         "a", encoding="utf-8"
     ) as handle:
         handle.write(" ")
-    with pytest.raises(audit.AuditError, match="artifact hash/size changed"):
-        audit.audit_final_seal(tmp_path, aggregate, roots, expectations)
+    with pytest.raises(audit.AuditError, match="sealed repair artifact bytes changed"):
+        audit.audit_final_seal(
+            tmp_path,
+            aggregate,
+            expectations,
+            expected_paper_gate=True,
+            expected_final_input_recheck_digest="fixture-recheck",
+        )
+
+
+def _attestation_fixture(
+    tmp_path: Path,
+) -> tuple[
+    Path,
+    Path,
+    audit.AuditExpectations,
+    dict[str, object],
+    dict[str, object],
+]:
+    repair, expectations = _sealed_fixture(tmp_path, paper_gate=True)
+    source_relatives = (
+        "configs/test_v4_aggregate_repair_v1.yaml",
+        "scripts/run_test_v4_aggregate_repair_v1.sh",
+        "src/confik/test_v4_locked/aggregate_repair.py",
+        "src/confik/test_v4_locked/reporting.py",
+        "tests/test_test_v4_aggregate_repair.py",
+        "tests/test_test_v4_reporting.py",
+    )
+    for relative in source_relatives:
+        path = tmp_path / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(f"source:{relative}\n", encoding="utf-8")
+    source_files = {
+        relative: _descriptor(tmp_path / relative) for relative in source_relatives
+    }
+    source_manifest: dict[str, object] = {
+        "files": source_files,
+        "git_commit": "repair-commit",
+        "git_tree": "repair-tree",
+        "scope_clean": True,
+    }
+    source_manifest["digest"] = audit.json_digest(source_manifest)
+    _write_json(
+        repair / "aggregation_repair_preregistration.json",
+        {"repair_source_manifest": source_manifest},
+    )
+    protected_tree = {
+        "directories": ["fixture"],
+        "file_count": 1,
+        "total_bytes": 1,
+        "tree_digest": audit.PRODUCTION.protected_tree_digest,
+    }
+    _write_json(
+        repair / "aggregation_repair_integrity.json",
+        {"protected_tree_after": protected_tree},
+    )
+    _write_json(
+        repair / "aggregate_summary_v4.json", {"primary": {}, "sensitivity": {}}
+    )
+    _write_json(
+        repair / "joint_holm_v4.json", {"all_confirmatory_nulls_rejected": True}
+    )
+    _write_json(
+        repair / "paper_gate_v4.json",
+        {"robot_gates": {"panda": True, "ur5e": True}, "both_robot_gates_pass": True},
+    )
+    repair_hashes = {
+        path.name: audit.sha256_file(path)
+        for path in repair.iterdir()
+        if path.is_file()
+    }
+
+    attestation = tmp_path / "outputs" / "test_v4_aggregate_repair_v1_attestation_v1"
+    generator_relative = "scripts/attestation_generator_fixture.py"
+    generator_path = tmp_path / generator_relative
+    generator_path.write_text("# generator fixture\n", encoding="utf-8")
+    generator_source: dict[str, object] = {
+        "git_commit": "generator-commit",
+        "git_tree": "generator-tree",
+        "git_top_level": str(tmp_path),
+        "git_dir": str(tmp_path / ".git"),
+        "scope_clean": True,
+        "global_cleanliness_asserted": False,
+        "files": {generator_relative: _descriptor(generator_path)},
+    }
+    generator_source["digest"] = audit.json_digest(generator_source)
+    execution = {
+        "protocol": "test_v4_aggregate_repair_v1_execution_attestation",
+        "attestation_timing": "retrospective",
+        "original_execution_invocation_source": "operator_and_tool_invocation_record",
+        "original_invocation_independently_traced": False,
+        "declared_original_invocation": {
+            "launcher": "./scripts/run_test_v4_aggregate_repair_v1.sh",
+            "git_dir": "/tmp/confik-v4-repair-lineage.ZJRjoy/.git",
+            "git_work_tree": str(tmp_path),
+            "source_commit": "repair-commit",
+            "statement": "Retrospective declaration, not an independent trace.",
+        },
+        "shadow_git_metadata_used": True,
+        "git_work_tree_was_main_workspace": True,
+        "scope_clean_interpretation": "Scoped repair lineage only, not global clean.",
+        "global_worktree_cleanliness_asserted": False,
+        "global_worktree_cleanliness_required_for_this_attestation": False,
+        "verifiable_consequences_not_invocation_claim_alone": [
+            "source bytes",
+            "input hashes",
+            "output hashes",
+        ],
+        "attestation_generator_source": generator_source,
+        "scientific_outcome_direction_used_for_acceptance": False,
+    }
+    _write_json(attestation / "execution_provenance_attestation.json", execution)
+
+    bundle_path = attestation / "repair_v1_source.bundle"
+    bundle_path.parent.mkdir(parents=True, exist_ok=True)
+    bundle_path.write_bytes(b"fixture bundle")
+    source_verification = {
+        "protocol": "test_v4_aggregate_repair_v1_source_verification",
+        "main_repository": str(tmp_path),
+        "permanent_ref": "refs/heads/fixture-repair",
+        "commit": "repair-commit",
+        "parent": "repair-parent",
+        "tree": "repair-tree",
+        "v1_scope_clean_interpretation": "Scoped repair lineage only.",
+        "global_worktree_cleanliness_asserted_for_v1": False,
+        "source_files": {
+            relative: {
+                "v1_manifest": descriptor,
+                "permanent_commit": descriptor,
+                "main_work_tree": descriptor,
+                "all_byte_identical": True,
+            }
+            for relative, descriptor in source_files.items()
+        },
+        "all_source_files_byte_identical": True,
+        "bundle": {
+            **_descriptor(bundle_path),
+            "path": "repair_v1_source.bundle",
+            "header": {
+                "signature": "# v2 git bundle",
+                "references": {"refs/heads/fixture-repair": "repair-commit"},
+                "prerequisites": [],
+                "self_contained": True,
+            },
+            "git_bundle_verify_succeeded": True,
+            "git_bundle_verify_output": "fixture verified",
+        },
+    }
+    _write_json(attestation / "source_commit_verification.json", source_verification)
+
+    repair_evidence: dict[str, object] = {
+        "all_input_trees_unchanged": True,
+        "input_trees": {
+            "aggregate_failure": {
+                "file_count": 1,
+                "total_bytes": 2,
+                "tree_digest": "input-tree-a",
+            },
+            "seed17": {
+                "file_count": 1,
+                "total_bytes": 3,
+                "tree_digest": "input-tree-b",
+            },
+        },
+    }
+    v1_files = [
+        {
+            "path": path.name,
+            "sha256": audit.sha256_file(path),
+            "size": path.stat().st_size,
+        }
+        for path in sorted(repair.iterdir())
+        if path.is_file()
+    ]
+    integrity = {
+        "protocol": "test_v4_aggregate_repair_v1_integrity_reattestation",
+        "v1_tree": {
+            "file_count": len(v1_files),
+            "total_bytes": sum(int(item["size"]) for item in v1_files),
+            "tree_digest": audit.json_digest(v1_files),
+        },
+        "v1_final_manifest": _descriptor(repair / "test_v4_repair_final_manifest.json"),
+        "v1_input_manifest": _descriptor(
+            repair / "aggregation_repair_input_manifest.json"
+        ),
+        "v1_integrity_artifact": _descriptor(
+            repair / "aggregation_repair_integrity.json"
+        ),
+        "formal_input_trees": repair_evidence["input_trees"],
+        "protected_tree": protected_tree,
+        "v1_hash_chain_valid": True,
+        "v1_manifest_payload_digest_valid": True,
+        "formal_input_trees_match_v1_before_and_after": True,
+        "protected_tree_matches_v1_before_and_after": True,
+        "query_generation_count": 0,
+        "query_rerun_count": 0,
+        "query_generation_or_rerun_count": 0,
+        "solver_invocation_count": 0,
+        "model_inference_count": 0,
+        "bootstrap_resamples_executed_by_attestation": 0,
+        "original_failure_evidence_preserved": True,
+        "original_failure_classification_changed": False,
+        "threshold_or_statistical_semantics_changed": False,
+        "v1_was_modified_by_attestation": False,
+    }
+    _write_json(attestation / "v1_integrity_reaudit.json", integrity)
+
+    statistics: dict[str, object] = {
+        "robot_gates": {"panda": True, "ur5e": True},
+        "all_joint_holm_claims_pass": True,
+        "paper_gate_pass": True,
+    }
+    observed_results = {
+        "robot_gates": statistics["robot_gates"],
+        "joint_holm_gate_pass": statistics["all_joint_holm_claims_pass"],
+        "paper_gate_pass": statistics["paper_gate_pass"],
+    }
+    semantic_names = (
+        "aggregate_summary_v4.json",
+        "joint_holm_v4.json",
+        "paper_gate_v4.json",
+    )
+    recomputation = {
+        "protocol": "test_v4_aggregate_repair_v1_independent_recomputation",
+        "implementation": "python_standard_library_only",
+        "bootstrap_resamples_executed": 0,
+        "query_records_read": False,
+        "stored_pvalues_reused": True,
+        "familywise_alpha": 0.05,
+        "confirmatory_members": list(audit.CONFIRMATORY_METRICS),
+        "semantic_matches": {name: True for name in semantic_names},
+        "all_semantic_matches": True,
+        "stored_artifacts": {
+            name: _descriptor(repair / name) for name in semantic_names
+        },
+        "recomputed_payload_digests": {
+            name: audit.json_digest(audit.load_json(repair / name))
+            for name in semantic_names
+        },
+        "observed_results_not_used_as_acceptance_criteria": observed_results,
+        "acceptance_rule": "Semantic equality independent of result direction.",
+        "outcome_direction_hardcoded": False,
+    }
+    _write_json(attestation / "independent_recomputation.json", recomputation)
+
+    chain_names = (
+        "execution_provenance_attestation.json",
+        "source_commit_verification.json",
+        "v1_integrity_reaudit.json",
+        "independent_recomputation.json",
+        "repair_v1_source.bundle",
+    )
+    chain = {name: audit.sha256_file(attestation / name) for name in chain_names}
+    final = {
+        "protocol": "test_v4_aggregate_repair_v1_attestation_final",
+        "retrospective_attestation": True,
+        "attestation_is_part_of_v1_tree": False,
+        "v1_tree_modified": False,
+        "original_outputs_modified": False,
+        "scope_clean_not_global_clean": True,
+        "shadow_git_invocation_disclosed": True,
+        "source_commit_permanently_recoverable_from_bundle": True,
+        "query_generation_count": 0,
+        "query_rerun_count": 0,
+        "solver_invocation_count": 0,
+        "model_inference_count": 0,
+        "bootstrap_resample_count": 0,
+        "scientific_gate_direction_used_for_acceptance": False,
+        "independent_recomputation_semantically_identical": True,
+        "composite_v1_plus_attestation_integrity_pass": True,
+        "hash_chain": chain,
+        "hash_chain_digest": audit.json_digest(chain),
+        "first_final_recheck_digest": "fixture-recheck",
+        "second_pre_promotion_recheck_required": True,
+        "automatic_rerun_allowed": False,
+    }
+    final["manifest_payload_digest"] = audit.json_digest(final)
+    final_path = attestation / "attestation_final_manifest.json"
+    _write_json(final_path, final)
+    expectations = replace(
+        expectations,
+        repair_output_sha256=repair_hashes,
+        repair_git_commit="repair-commit",
+        repair_git_tree="repair-tree",
+        repair_git_parent="repair-parent",
+        repair_git_ref="refs/heads/fixture-repair",
+        attestation_namespace="outputs/test_v4_aggregate_repair_v1_attestation_v1",
+        attestation_final_manifest_sha256=audit.sha256_file(final_path),
+    )
+    return attestation, repair, expectations, repair_evidence, statistics
+
+
+def test_external_attestation_discloses_shadow_git_and_seals_six_files(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    attestation, repair, expectations, repair_evidence, statistics = (
+        _attestation_fixture(tmp_path)
+    )
+
+    def fake_git(
+        workspace: Path, arguments: tuple[str, ...] | list[str], *, binary: bool = False
+    ) -> str | bytes:
+        del workspace, binary
+        if arguments[:2] == ["rev-parse", "generator-commit^{tree}"]:
+            return "generator-tree\n"
+        if arguments[:2] == ["bundle", "list-heads"]:
+            return "repair-commit refs/heads/fixture-repair\n"
+        if arguments[:2] == ["bundle", "verify"]:
+            return ""
+        raise AssertionError(arguments)
+
+    monkeypatch.setattr(audit, "_git", fake_git)
+    monkeypatch.setattr(
+        audit,
+        "git_file_descriptor",
+        lambda workspace, commit, relative: _descriptor(workspace / relative),
+    )
+
+    result = audit.audit_external_execution_attestation(
+        tmp_path,
+        repair,
+        attestation,
+        expectations,
+        repair_evidence=repair_evidence,
+        statistics=statistics,
+    )
+
+    assert result["verdict"] == "PASS"
+    assert result["sealed_file_count"] == 6
+    assert result["retrospective_limitations_disclosed"] is True
+
+
+def test_external_attestation_rejects_global_cleanliness_overclaim(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    attestation, _, expectations, _, _ = _attestation_fixture(tmp_path)
+    execution_path = attestation / "execution_provenance_attestation.json"
+    execution = audit.load_json(execution_path)
+    execution["global_worktree_cleanliness_asserted"] = True
+    _write_json(execution_path, execution)
+    monkeypatch.setattr(
+        audit,
+        "_git",
+        lambda workspace, arguments, binary=False: "generator-tree\n",
+    )
+    monkeypatch.setattr(
+        audit,
+        "git_file_descriptor",
+        lambda workspace, commit, relative: _descriptor(workspace / relative),
+    )
+    with pytest.raises(audit.AuditError, match="shadow/global-cleanliness"):
+        audit._audit_execution_provenance_attestation(
+            tmp_path, attestation, expectations
+        )
 
 
 def test_auditor_source_has_no_scientific_runtime_imports() -> None:

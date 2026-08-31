@@ -16,17 +16,21 @@ post-repair audit proves, independently of the repair implementation, that:
 * the original failed-aggregation history remains byte-identical;
 * the stored (not re-bootstrapped) eight p-values yield the reported joint
   Holm result regardless of JSON mapping key order;
-* Panda remains failed, UR5e remains passed, and the paper gate remains failed;
+* independently recomputed robot/Holm/paper decisions equal the repair output
+  without treating any particular pass/fail direction as an audit criterion;
 * the repair declares zero query generation, solver calls, model inference,
   checkpoint rewriting, and bootstrap resampling; and
-* the final manifest hashes the promoted output tree and records an atomic,
-  aggregation-only promotion.
+* the seven-file authoritative repair namespace is byte-identical to its
+  frozen hash chain and leaves all four original incomplete input trees in
+  place.
 
-The repair-side manifest schema expected by this auditor is deliberately
-small.  ``outputs/test_v4_aggregate/aggregation_repair_manifest.json`` must
-contain the fields checked by :func:`audit_repair_manifest`.  The manifest is
-evidence, not the sole basis of the audit: raw checkpoint cross-products,
-Holm, gates, and all file hashes are independently recomputed here.
+The actual v1 schema under ``outputs/test_v4_aggregate_repair_v1`` is audited:
+preregistration, input manifest, integrity record, aggregate summary, joint
+Holm, paper gate, and final hash-chain manifest.  These manifests are evidence,
+not the sole basis of the audit: raw checkpoint cross-products, Holm, gates,
+and all file hashes are independently recomputed here.  A separate execution
+attestation is audited by a later layer because the v1 files did not themselves
+record the shadow Git environment used for execution.
 """
 
 from __future__ import annotations
@@ -37,6 +41,7 @@ import gzip
 import hashlib
 import json
 import math
+import subprocess
 import sys
 from collections import Counter
 from dataclasses import dataclass
@@ -106,6 +111,14 @@ class AuditExpectations:
     resume_event_count: int
     robot_gate_expectation: Mapping[str, bool]
     paper_gate_expectation: bool
+    repair_namespace: str
+    repair_output_sha256: Mapping[str, str]
+    repair_git_commit: str
+    repair_git_tree: str
+    repair_git_parent: str
+    repair_git_ref: str
+    attestation_namespace: str
+    attestation_final_manifest_sha256: str
 
     def methods_for_seed(self, seed: int) -> tuple[str, ...]:
         return PRIMARY_METHODS if seed == self.primary_seed else SENSITIVITY_METHODS
@@ -153,6 +166,24 @@ PRODUCTION = AuditExpectations(
     resume_event_count=41,
     robot_gate_expectation={"panda": False, "ur5e": True},
     paper_gate_expectation=False,
+    repair_namespace="outputs/test_v4_aggregate_repair_v1",
+    repair_output_sha256={
+        "aggregate_summary_v4.json": "58b13579893c7ac2020a77357c954c521a6043c8b7864eac8ed0198ccec11851",
+        "aggregation_repair_input_manifest.json": "8f6179a3ec294b3cb8f53b96f364e04032ad20ed96e3dcc9efcea991539e8fa9",
+        "aggregation_repair_integrity.json": "cb91d8b324393e5626c54089002c852d2e8e7ac6f27ea0bc0393d667f256a997",
+        "aggregation_repair_preregistration.json": "2a57ac5d5a115ea49107d60e5fadfcddd3708a7286758ac6c177b5a90b997b0f",
+        "joint_holm_v4.json": "a6dc73452d57ca35b7bc7a2f83d4197efa32657dd8446dbd44c2e3a78955eef0",
+        "paper_gate_v4.json": "4f9d307d499076daa5242859c3bffdd08805b78e7ab27aa08bef013b90e6a6ab",
+        "test_v4_repair_final_manifest.json": "4f3b5024bdb6aa4ec283be4b4a0a8d3438e7a3ba03467154567a418817ba7ccc",
+    },
+    repair_git_commit="63e2ed6cbd14bbce0db869a247a9fb84e1f6911f",
+    repair_git_tree="254024def41e34f9ac0d83aacd7feca4947c8a82",
+    repair_git_parent="e22fe9116ec40a15dc116dadc6d763e149fac72b",
+    repair_git_ref="refs/heads/codex/v4-aggregation-repair-exec",
+    attestation_namespace="outputs/test_v4_aggregate_repair_v1_attestation_v1",
+    # Filled with the independently observed final-manifest hash immediately
+    # after the one-shot attestation namespace is atomically created.
+    attestation_final_manifest_sha256="",
 )
 
 
@@ -193,6 +224,39 @@ def load_json(path: Path) -> Any:
 def file_descriptor(path: Path) -> dict[str, Any]:
     _fail(path.is_file() and not path.is_symlink(), f"missing/non-regular file: {path}")
     return {"sha256": sha256_file(path), "size": path.stat().st_size}
+
+
+def _git(
+    workspace: Path, arguments: Sequence[str], *, binary: bool = False
+) -> str | bytes:
+    try:
+        result = subprocess.run(
+            ["git", *arguments],
+            cwd=workspace,
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=not binary,
+        )
+    except (OSError, subprocess.CalledProcessError) as error:
+        detail = ""
+        if isinstance(error, subprocess.CalledProcessError):
+            stderr = error.stderr
+            detail = (
+                stderr.decode("utf-8", errors="replace")
+                if isinstance(stderr, bytes)
+                else str(stderr)
+            )
+        raise AuditError(
+            f"git provenance check failed: {' '.join(arguments)}: {detail}"
+        ) from error
+    return result.stdout
+
+
+def git_file_descriptor(workspace: Path, commit: str, relative: str) -> dict[str, Any]:
+    payload = _git(workspace, ["show", f"{commit}:{relative}"], binary=True)
+    assert isinstance(payload, bytes)
+    return {"sha256": hashlib.sha256(payload).hexdigest(), "size": len(payload)}
 
 
 def snapshot(paths: Iterable[Path], root: Path) -> dict[str, dict[str, Any]]:
@@ -321,7 +385,21 @@ def audit_control_plane(
             path = Path(raw_path)
             if not path.is_absolute():
                 path = workspace / path
-            _assert_descriptor(path, descriptor, f"frozen-source/{raw_path}")
+            if path.is_file() and file_descriptor(path) == descriptor:
+                continue
+            # reporting.py is the sole preregistered, aggregation-only source
+            # change.  Its original formal bytes remain content-addressed by
+            # the e22 measurement commit even though the physical worktree now
+            # contains the repaired implementation.
+            _fail(
+                raw_path == "src/confik/test_v4_locked/reporting.py",
+                f"frozen source/asset changed outside repair scope: {raw_path}",
+            )
+            _fail(
+                git_file_descriptor(workspace, expectations.runner_git_commit, raw_path)
+                == descriptor,
+                "original reporting.py is not recoverable from measurement commit",
+            )
 
     return {
         "preregistration_sha256": expectations.preregistration_sha256,
@@ -765,29 +843,20 @@ def audit_recomputed_statistics_and_gates(
         gate = load_json(primary_roots[robot] / "claim_gate_v4.json")
         value = bool(gate.get("formal_gate_pass"))
         robot_gates[robot] = value
-        _fail(
-            value is expectations.robot_gate_expectation[robot],
-            f"robot gate changed: {robot}",
-        )
         failed_checks[robot] = sorted(
             name for name, passed in gate.get("checks", {}).items() if not bool(passed)
         )
-    _fail(
-        failed_checks["panda"] == ["ood_feasible_false_reject_improvement"],
-        "Panda failure reason changed",
-    )
-    _fail(not failed_checks["ur5e"], "UR5e acquired a failed gate")
 
     paper = load_json(repair_aggregate / "paper_gate_v4.json")
     expected_paper = all(robot_gates.values()) and bool(
         expected_holm["all_confirmatory_nulls_rejected"]
     )
-    _fail(
-        expected_paper is expectations.paper_gate_expectation,
-        "pinned paper result assumption changed",
-    )
     _fail(paper.get("robot_gates") == robot_gates, "reported robot gates changed")
-    _fail(paper.get("joint_holm_gate_pass") is True, "joint Holm gate did not pass")
+    _fail(
+        paper.get("joint_holm_gate_pass")
+        is bool(expected_holm["all_confirmatory_nulls_rejected"]),
+        "reported joint Holm gate changed",
+    )
     _fail(
         paper.get("both_robot_gates_pass") is expected_paper,
         "reported paper gate changed",
@@ -830,55 +899,116 @@ def audit_recomputed_statistics_and_gates(
     }
 
 
-def audit_repair_tool_source(path: Path, expected_sha256: str) -> dict[str, Any]:
-    _fail(path.is_file() and not path.is_symlink(), f"repair tool missing: {path}")
-    _fail(sha256_file(path) == expected_sha256, "repair tool source hash changed")
-    source = path.read_text(encoding="utf-8")
-    try:
-        tree = ast.parse(source)
-    except SyntaxError as error:
-        raise AuditError(f"repair tool is invalid Python: {error}") from error
-    imports: set[str] = set()
-    calls: set[str] = set()
-    for node in ast.walk(tree):
-        if isinstance(node, ast.Import):
-            imports.update(alias.name.split(".", 1)[0] for alias in node.names)
-        elif isinstance(node, ast.ImportFrom) and node.module:
-            imports.add(node.module.split(".", 1)[0])
-        elif isinstance(node, ast.Call):
-            target = node.func
-            if isinstance(target, ast.Name):
-                calls.add(target.id)
-            elif isinstance(target, ast.Attribute):
-                calls.add(target.attr)
-    forbidden_imports = imports & FORBIDDEN_RUNTIME_MODULES
+def _audit_input_tree(
+    payload: Mapping[str, Any], *, expected_root: Path, label: str
+) -> dict[str, Any]:
+    root = Path(str(payload.get("root", "")))
     _fail(
-        not forbidden_imports,
-        f"repair tool imports scientific runtime: {sorted(forbidden_imports)}",
+        root.resolve() == expected_root.resolve(), f"repair input root changed: {label}"
     )
-    forbidden_calls = calls & {
-        "_build_methods",
-        "_load_frozen_test_datasets",
-        "_run_combination",
-        "generate_locked_datasets",
-        "load_model",
-        "run_query",
-        "solve",
+    _fail(
+        root.is_dir() and not root.is_symlink(), f"repair input root missing: {label}"
+    )
+    items = payload.get("files", ())
+    declared: dict[str, dict[str, Any]] = {}
+    for item in items:
+        relative = str(item.get("path"))
+        _fail(
+            relative not in declared, f"duplicate repair input path: {label}/{relative}"
+        )
+        declared[relative] = {
+            "sha256": item.get("sha256"),
+            "size": item.get("size"),
+        }
+    actual = {
+        str(path.relative_to(root)): path for path in root.rglob("*") if path.is_file()
     }
+    _fail(set(declared) == set(actual), f"repair input artifact set changed: {label}")
+    for relative, path in actual.items():
+        _assert_descriptor(path, declared[relative], f"repair-input/{label}/{relative}")
     _fail(
-        not forbidden_calls,
-        f"repair tool contains forbidden scientific calls: {sorted(forbidden_calls)}",
+        int(payload.get("file_count", -1)) == len(declared),
+        f"repair input file count changed: {label}",
     )
     _fail(
-        "rename" in calls or "replace" in calls,
-        "repair tool has no atomic promotion call",
+        int(payload.get("total_bytes", -1))
+        == sum(int(item["size"]) for item in declared.values()),
+        f"repair input byte count changed: {label}",
+    )
+    _fail(
+        json_digest(items) == payload.get("tree_digest"),
+        f"repair input tree digest changed: {label}",
     )
     return {
-        "sha256": expected_sha256,
-        "imports": sorted(imports),
-        "forbidden_scientific_imports": [],
-        "forbidden_scientific_calls": [],
-        "atomic_promotion_call_present": True,
+        "root": str(root),
+        "file_count": len(declared),
+        "total_bytes": int(payload["total_bytes"]),
+        "tree_digest": payload["tree_digest"],
+    }
+
+
+def _audit_repair_source_lineage(
+    workspace: Path,
+    source: Mapping[str, Any],
+    expectations: AuditExpectations,
+    *,
+    verify_git_lineage: bool,
+) -> dict[str, Any]:
+    _fail(
+        source.get("git_commit") == expectations.repair_git_commit,
+        "repair commit changed",
+    )
+    _fail(
+        source.get("git_tree") == expectations.repair_git_tree,
+        "repair git tree changed",
+    )
+    _fail(source.get("scope_clean") is True, "repair source scope was not sealed clean")
+    without_digest = {key: value for key, value in source.items() if key != "digest"}
+    _fail(
+        json_digest(without_digest) == source.get("digest"),
+        "repair source manifest digest changed",
+    )
+    files = source.get("files", {})
+    expected_files = {
+        "configs/test_v4_aggregate_repair_v1.yaml",
+        "scripts/run_test_v4_aggregate_repair_v1.sh",
+        "src/confik/test_v4_locked/aggregate_repair.py",
+        "src/confik/test_v4_locked/reporting.py",
+        "tests/test_test_v4_aggregate_repair.py",
+        "tests/test_test_v4_reporting.py",
+    }
+    _fail(set(files) == expected_files, "repair source file scope changed")
+    for relative, descriptor in files.items():
+        _assert_descriptor(
+            workspace / relative, descriptor, f"repair-source/{relative}"
+        )
+    if verify_git_lineage:
+        resolved = str(
+            _git(workspace, ["rev-parse", expectations.repair_git_ref])
+        ).strip()
+        tree = str(
+            _git(workspace, ["rev-parse", f"{expectations.repair_git_commit}^{{tree}}"])
+        ).strip()
+        parent = str(
+            _git(workspace, ["rev-parse", f"{expectations.repair_git_commit}^"])
+        ).strip()
+        _fail(resolved == expectations.repair_git_commit, "permanent repair ref moved")
+        _fail(tree == expectations.repair_git_tree, "permanent repair tree changed")
+        _fail(parent == expectations.repair_git_parent, "repair commit parent changed")
+        for relative, descriptor in files.items():
+            _fail(
+                git_file_descriptor(workspace, expectations.repair_git_commit, relative)
+                == descriptor,
+                f"permanent repair commit bytes differ: {relative}",
+            )
+    return {
+        "git_commit": expectations.repair_git_commit,
+        "git_tree": expectations.repair_git_tree,
+        "git_parent": expectations.repair_git_parent,
+        "permanent_ref": expectations.repair_git_ref,
+        "source_file_count": len(files),
+        "disk_bytes_match_manifest": True,
+        "permanent_git_lineage_verified": bool(verify_git_lineage),
     }
 
 
@@ -887,228 +1017,874 @@ def audit_repair_manifest(
     repair_aggregate: Path,
     failed_aggregate: Path,
     expectations: AuditExpectations,
+    *,
+    verify_git_lineage: bool = True,
 ) -> dict[str, Any]:
-    manifest_path = repair_aggregate / "aggregation_repair_manifest.json"
-    manifest = load_json(manifest_path)
+    prereg_path = repair_aggregate / "aggregation_repair_preregistration.json"
+    input_path = repair_aggregate / "aggregation_repair_input_manifest.json"
+    integrity_path = repair_aggregate / "aggregation_repair_integrity.json"
+    prereg = load_json(prereg_path)
+    input_manifest = load_json(input_path)
+    integrity = load_json(integrity_path)
+    for evidence_path in (prereg_path, input_path, integrity_path):
+        _fail(
+            sha256_file(evidence_path)
+            == expectations.repair_output_sha256[evidence_path.name],
+            f"sealed repair evidence bytes changed: {evidence_path.name}",
+        )
     _fail(
-        manifest.get("protocol") == "test_v4_aggregation_only_repair_v1",
-        "wrong repair protocol",
+        prereg.get("protocol") == "test_v4_aggregate_repair_v1",
+        "wrong repair preregistration protocol",
     )
-    _fail(manifest.get("status") == "completed", "repair is not complete")
-    _fail(manifest.get("repair_scope") == "aggregation_only", "repair scope expanded")
-    activity = manifest.get("scientific_activity", {})
-    required_zero = (
-        "query_generation_calls",
-        "solver_calls",
-        "model_inference_calls",
-        "checkpoint_record_writes",
-        "bootstrap_resamples",
-        "threshold_changes",
-        "gate_definition_changes",
-    )
-    _fail(set(activity) >= set(required_zero), "repair activity ledger is incomplete")
+    contract = prereg.get("execution_contract", {})
+    _fail(contract.get("aggregation_only") is True, "repair scope expanded")
     _fail(
-        all(activity[name] == 0 for name in required_zero),
-        "repair performed forbidden scientific activity",
-    )
-
-    inputs = manifest.get("input_evidence", {})
-    _fail(
-        inputs.get("preregistration_sha256") == expectations.preregistration_sha256,
-        "repair input preregistration differs",
+        contract.get("automatic_resume_allowed") is False
+        and contract.get("original_outputs_mutation_allowed") is False,
+        "repair execution contract permits mutation/resume",
     )
     _fail(
-        inputs.get("dataset_manifest_sha256") == expectations.dataset_manifest_sha256,
-        "repair input dataset differs",
+        int(contract.get("query_rerun_count", -1)) == 0
+        and int(contract.get("solver_invocation_count", -1)) == 0
+        and int(contract.get("model_inference_count", -1)) == 0,
+        "repair preregistration reports scientific execution",
     )
     _fail(
-        inputs.get("control_plane_seal_sha256")
-        == expectations.control_plane_seal_sha256,
-        "repair input control seal differs",
+        prereg.get("threshold_or_gate_changes") is False
+        and prereg.get("statistical_semantics_changed") is False
+        and prereg.get("old_test_performance_used_for_selection") is False
+        and prereg.get("original_failure_classification_changed") is False,
+        "repair preregistration changes frozen semantics/evidence",
     )
+    control = prereg.get("control_plane", {})
     _fail(
-        inputs.get("evidence_fingerprint_digest")
+        control.get("preregistration_sha256") == expectations.preregistration_sha256
+        and control.get("dataset_manifest_sha256")
+        == expectations.dataset_manifest_sha256
+        and control.get("control_plane_seal_sha256")
+        == expectations.control_plane_seal_sha256
+        and control.get("original_evidence_fingerprint_digest")
         == expectations.evidence_fingerprint_digest,
-        "repair input source fingerprint differs",
+        "repair control-plane anchors changed",
     )
+    expected_failure = prereg.get("expected_failure", {})
     _fail(
-        inputs.get("failed_tree_digest") == expectations.failed_tree_digest,
-        "repair did not bind original failure tree",
+        expected_failure.get("exception_message")
+        == "panda confirmatory metrics changed"
+        and expected_failure.get("failure_classification")
+        == "non_resumable_integrity_or_scientific_failure"
+        and expected_failure.get("phase") == {"phase": "aggregate_and_final_integrity"},
+        "repair target failure changed",
     )
-    _fail(
-        inputs.get("combination_completion_sha256")
-        == dict(expectations.completion_sha256),
-        "repair did not bind six completion markers",
-    )
-    _fail(
-        int(inputs.get("checkpoint_count", -1)) == expectations.total_checkpoint_count,
-        "repair checkpoint count differs",
-    )
-    _fail(
-        int(inputs.get("record_count", -1)) == expectations.total_record_count,
-        "repair record count differs",
+    source_lineage = _audit_repair_source_lineage(
+        workspace,
+        prereg.get("repair_source_manifest", {}),
+        expectations,
+        verify_git_lineage=verify_git_lineage,
     )
 
-    bug = manifest.get("bug_classification", {})
     _fail(
-        bug.get("class") == "json_mapping_key_order_only",
-        "repair bug classification changed",
+        input_manifest.get("protocol") == "test_v4_aggregate_repair_v1_input_manifest",
+        "wrong repair input-manifest protocol",
     )
     _fail(
-        bug.get("stored_metric_values_changed") is False,
-        "repair reports changed stored metrics",
+        input_manifest.get("repair_preregistration_sha256") == sha256_file(prereg_path),
+        "repair input manifest lost preregistration binding",
     )
     _fail(
-        bug.get("stored_unadjusted_pvalues_reused") is True,
-        "repair did not reuse stored p-values",
+        input_manifest.get("all_six_combinations_hash_validated") is True
+        and input_manifest.get("query_record_files_hash_validated_only") is True
+        and input_manifest.get("query_records_read_for_aggregation") is False,
+        "repair input access exceeded aggregation contract",
+    )
+    root_payloads = input_manifest.get("roots", {})
+    expected_roots = {
+        "aggregate_failure": failed_aggregate,
+        **{
+            f"seed{seed}": workspace / "outputs" / f".test_v4_seed{seed}.incomplete"
+            for seed in expectations.seeds
+        },
+    }
+    _fail(set(root_payloads) == set(expected_roots), "repair input root set changed")
+    input_trees = {
+        label: _audit_input_tree(
+            root_payloads[label], expected_root=expected_roots[label], label=label
+        )
+        for label in expected_roots
+    }
+    _fail(
+        json_digest(root_payloads) == input_manifest.get("combined_tree_digest"),
+        "combined repair input digest changed",
+    )
+    _fail(
+        prereg.get("input_tree_digests")
+        == {
+            label: {
+                "file_count": payload["file_count"],
+                "total_bytes": payload["total_bytes"],
+                "tree_digest": payload["tree_digest"],
+            }
+            for label, payload in input_trees.items()
+        },
+        "repair preregistration input digests changed",
     )
 
-    promotion = manifest.get("atomic_promotion", {})
+    validations = prereg.get("combination_validations", ())
+    validation_map = {
+        _combination_key(str(item["robot"]), int(item["training_seed"])): item
+        for item in validations
+    }
     _fail(
-        promotion.get("atomic_directory_rename") is True,
-        "repair was not atomically promoted",
+        set(validation_map) == set(expectations.completion_sha256),
+        "repair combination validation set changed",
     )
-    _fail(
-        promotion.get("same_filesystem") is True,
-        "repair promotion filesystem is unproven",
-    )
-    staging_relative = promotion.get("staging_path")
-    final_relative = promotion.get("final_path")
-    _fail(
-        isinstance(staging_relative, str) and isinstance(final_relative, str),
-        "repair promotion paths missing",
-    )
-    staging = workspace / staging_relative
-    final = workspace / final_relative
-    _fail(final.resolve() == repair_aggregate.resolve(), "repair final path differs")
-    _fail(
-        staging.resolve() != failed_aggregate.resolve(),
-        "repair reused/destructively promoted failed tree",
-    )
-    _fail(
-        not staging.exists() and not staging.is_symlink(),
-        "repair staging remains after promotion",
-    )
-    _fail(
-        repair_aggregate.is_dir() and not repair_aggregate.is_symlink(),
-        "final aggregate is not a real directory",
-    )
+    for key, expected_hash in expectations.completion_sha256.items():
+        item = validation_map[key]
+        _fail(
+            item.get("completion_manifest_sha256") == expected_hash,
+            f"repair completion hash changed: {key}",
+        )
+        _fail(
+            int(item.get("checkpoint_count", -1))
+            == expectations.checkpoint_count_per_combination,
+            f"repair checkpoint count changed: {key}",
+        )
+        _fail(
+            item.get("all_artifact_hashes_verified") is True
+            and item.get("all_checkpoint_quiet_host_contracts_verified") is True,
+            f"repair combination was not fully verified: {key}",
+        )
 
-    tool = manifest.get("repair_tool", {})
-    tool_path = workspace / str(tool.get("path", ""))
-    source_audit = audit_repair_tool_source(tool_path, str(tool.get("sha256", "")))
+    _fail(
+        integrity.get("protocol") == "test_v4_aggregate_repair_v1_integrity",
+        "wrong repair integrity protocol",
+    )
+    _fail(
+        integrity.get("input_trees_before") == root_payloads
+        and integrity.get("input_trees_after") == root_payloads
+        and integrity.get("input_trees_unchanged") is True,
+        "repair input trees changed during aggregation",
+    )
+    _fail(
+        integrity.get("protected_tree_before") == integrity.get("protected_tree_after")
+        and integrity.get("protected_tree_unchanged") is True
+        and integrity.get("protected_tree_before", {}).get("tree_digest")
+        == expectations.protected_tree_digest,
+        "protected evidence changed during repair",
+    )
+    _fail(
+        integrity.get("original_failure_evidence_preserved") is True
+        and integrity.get("original_failure_classification_changed") is False,
+        "original failure evidence/classification changed",
+    )
+    _fail(
+        int(integrity.get("query_rerun_count", -1)) == 0
+        and int(integrity.get("solver_invocation_count", -1)) == 0
+        and int(integrity.get("model_inference_count", -1)) == 0,
+        "repair integrity reports scientific execution",
+    )
+    _fail(
+        integrity.get("all_six_combinations_hash_validated") is True,
+        "repair integrity did not validate all combinations",
+    )
+    _fail(
+        integrity.get("final_input_recheck_digest") is not None,
+        "repair final input recheck is absent",
+    )
     return {
-        "manifest_sha256": sha256_file(manifest_path),
-        "zero_activity_fields": list(required_zero),
-        "atomic_staging_absent": True,
-        "failed_tree_separate": True,
-        "repair_tool": source_audit,
+        "preregistration_sha256": sha256_file(prereg_path),
+        "input_manifest_sha256": sha256_file(input_path),
+        "integrity_sha256": sha256_file(integrity_path),
+        "input_trees": input_trees,
+        "all_input_trees_unchanged": True,
+        "query_rerun_count": 0,
+        "solver_invocation_count": 0,
+        "model_inference_count": 0,
+        "source_lineage": source_lineage,
+        "final_input_recheck_digest": integrity["final_input_recheck_digest"],
     }
 
 
 def audit_final_seal(
     workspace: Path,
     repair_aggregate: Path,
-    roots: Mapping[tuple[str, int], Path],
     expectations: AuditExpectations,
+    *,
+    expected_paper_gate: bool,
+    expected_final_input_recheck_digest: str,
 ) -> dict[str, Any]:
-    final_path = repair_aggregate / "test_v4_final_manifest.json"
+    final_path = repair_aggregate / "test_v4_repair_final_manifest.json"
     final = load_json(final_path)
     _fail(
-        final.get("protocol") == "test_v4 final immutable evidence manifest",
+        final.get("protocol") == "test_v4_aggregate_repair_v1_final_manifest",
         "wrong final protocol",
     )
     _fail(
-        final.get("formal_completion_marker") is True, "formal completion marker absent"
-    )
-    _fail(final.get("all_six_natural_exits") is True, "six natural exits not retained")
-    _fail(
-        final.get("paper_gate_pass") is expectations.paper_gate_expectation,
-        "final paper gate changed",
+        final.get("authoritative_output_namespace") == expectations.repair_namespace,
+        "repair namespace changed",
     )
     _fail(
-        final.get("test_set_retuning_performed") is False,
-        "final manifest reports retuning",
+        final.get("aggregation_only_repair") is True
+        and final.get("six_combination_natural_exits") is True,
+        "final manifest expanded beyond sealed aggregation",
     )
     _fail(
-        final.get("threshold_or_gate_changes_after_test") is False,
-        "final manifest reports gate changes",
+        final.get("original_formal_runner_natural_exit") is False
+        and final.get("original_incomplete_paths_promoted_or_renamed") is False,
+        "final manifest rewrites original formal-run status/paths",
     )
     _fail(
-        final.get("outliers_removed") is False
-        and final.get("winsorization_performed") is False,
-        "final manifest reports data editing",
+        final.get("original_failure_evidence_preserved") is True
+        and final.get("original_failure_classification_changed") is False,
+        "final manifest changes original failure evidence",
     )
     _fail(
-        final.get("preregistration_sha256") == expectations.preregistration_sha256,
-        "final preregistration anchor changed",
+        final.get("threshold_or_statistical_semantics_changed") is False,
+        "final manifest changes frozen semantics",
     )
     _fail(
-        final.get("dataset_manifest_sha256") == expectations.dataset_manifest_sha256,
-        "final dataset anchor changed",
+        int(final.get("query_rerun_count", -1)) == 0
+        and int(final.get("solver_invocation_count", -1)) == 0
+        and int(final.get("model_inference_count", -1)) == 0,
+        "final manifest reports scientific execution",
     )
     _fail(
-        final.get("control_plane_seal_sha256")
-        == expectations.control_plane_seal_sha256,
-        "final control seal changed",
-    )
-    protected = final.get("protected_outputs", {})
-    _fail(
-        protected.get("unchanged") is True
-        and protected.get("before") == protected.get("after"),
-        "protected evidence changed",
+        final.get("paper_gate_pass") is expected_paper_gate,
+        "final paper gate differs from independent recomputation",
     )
     _fail(
-        protected.get("before", {}).get("tree_digest")
-        == expectations.protected_tree_digest,
-        "protected evidence digest changed",
+        final.get("final_input_recheck_digest") == expected_final_input_recheck_digest,
+        "final input recheck lost integrity binding",
     )
 
-    declared_list = final.get("files", ())
-    declared: dict[str, dict[str, Any]] = {}
-    for item in declared_list:
-        path = str(item.get("path"))
-        _fail(path not in declared, f"duplicate final-manifest path: {path}")
-        declared[path] = {"sha256": item.get("sha256"), "size": item.get("size")}
-
-    actual_paths: dict[str, Path] = {}
-    for seed in expectations.seeds:
-        seed_root = workspace / "outputs" / f"test_v4_seed{seed}"
-        _fail(
-            seed_root.is_dir() and not seed_root.is_symlink(),
-            f"seed root not promoted: seed{seed}",
-        )
-        for path in seed_root.rglob("*"):
-            if path.is_file():
-                actual_paths[str(path.relative_to(workspace))] = path
-    for path in repair_aggregate.rglob("*"):
-        if path.is_file() and path != final_path:
-            actual_paths[str(path.relative_to(workspace))] = path
+    expected_files = set(expectations.repair_output_sha256)
+    actual_files = {path.name for path in repair_aggregate.iterdir() if path.is_file()}
     _fail(
-        set(declared) == set(actual_paths),
-        "final manifest artifact set differs from disk",
+        actual_files == expected_files,
+        "repair namespace does not contain exactly the seven sealed files",
     )
-    for relative, path in actual_paths.items():
-        _assert_descriptor(path, declared[relative], f"final-seal/{relative}")
+    for name, expected_hash in expectations.repair_output_sha256.items():
+        path = repair_aggregate / name
+        _fail(
+            path.is_file() and not path.is_symlink(),
+            f"sealed repair artifact missing/non-regular: {name}",
+        )
+        _fail(
+            sha256_file(path) == expected_hash,
+            f"sealed repair artifact bytes changed: {name}",
+        )
 
-    # The promoted combination markers must still be the pinned originals.
-    for (robot, seed), root in roots.items():
-        final_root = workspace / "outputs" / f"test_v4_seed{seed}" / robot
-        _fail(
-            final_root.is_dir(),
-            f"combination not present in final root: {robot}/seed{seed}",
-        )
-        _fail(
-            sha256_file(final_root / "combination_complete.json")
-            == expectations.completion_sha256[_combination_key(robot, seed)],
-            f"promoted completion marker changed: {robot}/seed{seed}",
-        )
+    expected_chain = {
+        name: digest
+        for name, digest in expectations.repair_output_sha256.items()
+        if name != final_path.name
+    }
+    _fail(final.get("hash_chain") == expected_chain, "repair final hash chain changed")
+    _fail(
+        final.get("hash_chain_digest") == json_digest(expected_chain),
+        "repair hash-chain digest changed",
+    )
+    payload = {
+        key: value for key, value in final.items() if key != "manifest_payload_digest"
+    }
+    _fail(
+        final.get("manifest_payload_digest") == json_digest(payload),
+        "repair final-manifest payload digest changed",
+    )
     return {
         "final_manifest_sha256": sha256_file(final_path),
-        "sealed_artifact_count": len(declared),
+        "sealed_artifact_count": len(actual_files),
         "artifact_set_exact": True,
         "all_hashes_valid": True,
         "paper_gate_pass": final["paper_gate_pass"],
+        "authoritative_output_namespace": final["authoritative_output_namespace"],
+    }
+
+
+def _descriptor_equal(left: Mapping[str, Any], right: Mapping[str, Any]) -> bool:
+    return (
+        set(left) == {"sha256", "size"}
+        and set(right) == {"sha256", "size"}
+        and str(left["sha256"]) == str(right["sha256"])
+        and int(left["size"]) == int(right["size"])
+    )
+
+
+def _audit_execution_provenance_attestation(
+    workspace: Path,
+    attestation_root: Path,
+    expectations: AuditExpectations,
+) -> dict[str, Any]:
+    path = attestation_root / "execution_provenance_attestation.json"
+    payload = load_json(path)
+    _fail(
+        str(payload.get("protocol", "")).startswith("test_v4_aggregate_repair_v1"),
+        "wrong execution-attestation protocol",
+    )
+    _fail(
+        payload.get("attestation_timing") == "retrospective",
+        "attestation timing disclosure changed",
+    )
+    _fail(
+        payload.get("original_execution_invocation_source")
+        == "operator_and_tool_invocation_record"
+        and payload.get("original_invocation_independently_traced") is False,
+        "attestation overstates independent tracing",
+    )
+    invocation = payload.get("declared_original_invocation", {})
+    _fail(
+        invocation.get("git_dir") == "/tmp/confik-v4-repair-lineage.ZJRjoy/.git"
+        and Path(str(invocation.get("git_work_tree", ""))).resolve()
+        == workspace.resolve()
+        and invocation.get("source_commit") == expectations.repair_git_commit,
+        "shadow Git execution disclosure changed",
+    )
+    _fail(
+        isinstance(invocation.get("launcher"), str)
+        and bool(invocation.get("launcher"))
+        and isinstance(invocation.get("statement"), str)
+        and bool(invocation.get("statement")),
+        "original invocation declaration is incomplete",
+    )
+    _fail(
+        payload.get("shadow_git_metadata_used") is True
+        and payload.get("git_work_tree_was_main_workspace") is True
+        and payload.get("global_worktree_cleanliness_asserted") is False
+        and payload.get("global_worktree_cleanliness_required_for_this_attestation")
+        is False,
+        "shadow/global-cleanliness limitation was not disclosed",
+    )
+    _fail(
+        isinstance(payload.get("scope_clean_interpretation"), str)
+        and bool(payload.get("scope_clean_interpretation")),
+        "scope-clean interpretation is absent",
+    )
+    consequences = payload.get("verifiable_consequences_not_invocation_claim_alone")
+    _fail(
+        isinstance(consequences, list)
+        and len(consequences) >= 3
+        and all(isinstance(item, str) and item for item in consequences),
+        "attestation lacks independently verifiable consequences",
+    )
+    _fail(
+        payload.get("scientific_outcome_direction_used_for_acceptance") is False,
+        "attestation used observed scientific direction for acceptance",
+    )
+
+    source = payload.get("attestation_generator_source", {})
+    _fail(source.get("scope_clean") is True, "attestation generator scope is not clean")
+    _fail(
+        source.get("global_cleanliness_asserted") is False,
+        "attestation generator overstates global cleanliness",
+    )
+    _fail(
+        Path(str(source.get("git_top_level", ""))).resolve() == workspace.resolve(),
+        "attestation generator top-level differs",
+    )
+    source_without_digest = {
+        key: value for key, value in source.items() if key != "digest"
+    }
+    _fail(
+        json_digest(source_without_digest) == source.get("digest"),
+        "attestation source digest changed",
+    )
+    commit = str(source.get("git_commit", ""))
+    tree = str(source.get("git_tree", ""))
+    _fail(
+        str(_git(workspace, ["rev-parse", f"{commit}^{{tree}}"])).strip() == tree,
+        "attestation generator Git tree changed",
+    )
+    files = source.get("files", {})
+    _fail(
+        isinstance(files, dict) and files, "attestation generator source files absent"
+    )
+    for relative, descriptor in files.items():
+        _assert_descriptor(
+            workspace / relative, descriptor, f"attestation-source/{relative}"
+        )
+        _fail(
+            git_file_descriptor(workspace, commit, relative) == descriptor,
+            f"attestation generator commit bytes differ: {relative}",
+        )
+    return {
+        "protocol": payload.get("protocol"),
+        "retrospective": True,
+        "independently_traced": False,
+        "shadow_git_disclosed": True,
+        "global_cleanliness_not_asserted": True,
+        "generator_commit": commit,
+        "generator_tree": tree,
+        "generator_source_file_count": len(files),
+        "sha256": sha256_file(path),
+    }
+
+
+def _audit_source_commit_verification(
+    workspace: Path,
+    attestation_root: Path,
+    v1_preregistration: Mapping[str, Any],
+    expectations: AuditExpectations,
+) -> dict[str, Any]:
+    path = attestation_root / "source_commit_verification.json"
+    payload = load_json(path)
+    _fail(
+        str(payload.get("protocol", "")).startswith("test_v4_aggregate_repair_v1"),
+        "wrong source-verification protocol",
+    )
+    repository = payload.get("main_repository")
+    repository_path = (
+        repository.get("path") if isinstance(repository, Mapping) else repository
+    )
+    _fail(
+        Path(str(repository_path)).resolve() == workspace.resolve(),
+        "attested main repository differs",
+    )
+    _fail(
+        payload.get("permanent_ref") == expectations.repair_git_ref,
+        "attested permanent ref changed",
+    )
+    _fail(
+        payload.get("commit") == expectations.repair_git_commit,
+        "attested repair commit changed",
+    )
+    _fail(
+        payload.get("parent") == expectations.repair_git_parent,
+        "attested repair parent changed",
+    )
+    _fail(
+        payload.get("tree") == expectations.repair_git_tree,
+        "attested repair tree changed",
+    )
+    _fail(
+        payload.get("global_worktree_cleanliness_asserted_for_v1") is False
+        and isinstance(payload.get("v1_scope_clean_interpretation"), str),
+        "source verification overstates v1 global cleanliness",
+    )
+
+    v1_files = v1_preregistration.get("repair_source_manifest", {}).get("files", {})
+    source_files = payload.get("source_files", {})
+    _fail(set(source_files) == set(v1_files), "attested repair source file set changed")
+    for relative, item in source_files.items():
+        _fail(
+            item.get("all_byte_identical") is True,
+            f"repair source mismatch reported: {relative}",
+        )
+        descriptors = (
+            item.get("v1_manifest", {}),
+            item.get("permanent_commit", {}),
+            item.get("main_work_tree", {}),
+        )
+        _fail(
+            all(
+                _descriptor_equal(descriptor, v1_files[relative])
+                for descriptor in descriptors
+            ),
+            f"repair source descriptor mismatch: {relative}",
+        )
+        _assert_descriptor(
+            workspace / relative, v1_files[relative], f"attested-source/{relative}"
+        )
+        _fail(
+            git_file_descriptor(workspace, expectations.repair_git_commit, relative)
+            == v1_files[relative],
+            f"permanent repair source bytes changed: {relative}",
+        )
+    _fail(
+        payload.get("all_source_files_byte_identical") is True,
+        "attested source equivalence failed",
+    )
+
+    bundle = payload.get("bundle", {})
+    _fail(bundle.get("path") == "repair_v1_source.bundle", "bundle path changed")
+    bundle_path = attestation_root / "repair_v1_source.bundle"
+    _assert_descriptor(
+        bundle_path,
+        {"sha256": bundle.get("sha256"), "size": bundle.get("size")},
+        "repair-source-bundle",
+    )
+    header = bundle.get("header", {})
+    _fail(
+        header.get("self_contained") is True and header.get("prerequisites") == [],
+        "repair bundle is not self-contained",
+    )
+    _fail(
+        isinstance(header.get("signature"), str) and bool(header.get("signature")),
+        "repair bundle signature header absent",
+    )
+    references = header.get("references", {})
+    _fail(
+        references.get(expectations.repair_git_ref) == expectations.repair_git_commit,
+        "repair bundle permanent ref changed",
+    )
+    _fail(
+        bundle.get("git_bundle_verify_succeeded") is True,
+        "recorded git bundle verification failed",
+    )
+    _git(workspace, ["bundle", "verify", str(bundle_path)])
+    heads = str(_git(workspace, ["bundle", "list-heads", str(bundle_path)]))
+    _fail(
+        f"{expectations.repair_git_commit} {expectations.repair_git_ref}"
+        in heads.splitlines(),
+        "repair bundle does not contain permanent ref",
+    )
+    return {
+        "protocol": payload.get("protocol"),
+        "permanent_ref": expectations.repair_git_ref,
+        "commit": expectations.repair_git_commit,
+        "tree": expectations.repair_git_tree,
+        "source_file_count": len(source_files),
+        "all_source_files_byte_identical": True,
+        "bundle_sha256": bundle["sha256"],
+        "bundle_self_contained": True,
+        "git_bundle_independently_verified": True,
+        "sha256": sha256_file(path),
+    }
+
+
+def _audit_v1_integrity_reattestation(
+    repair_aggregate: Path,
+    attestation_root: Path,
+    repair_evidence: Mapping[str, Any],
+    expectations: AuditExpectations,
+) -> dict[str, Any]:
+    path = attestation_root / "v1_integrity_reaudit.json"
+    payload = load_json(path)
+    _fail(
+        str(payload.get("protocol", "")).startswith("test_v4_aggregate_repair_v1"),
+        "wrong v1-integrity-reaudit protocol",
+    )
+    v1_files = [
+        {
+            "path": item.name,
+            "sha256": sha256_file(item),
+            "size": item.stat().st_size,
+        }
+        for item in sorted(repair_aggregate.iterdir())
+        if item.is_file()
+    ]
+    v1_tree = payload.get("v1_tree", {})
+    _fail(
+        int(v1_tree.get("file_count", -1)) == len(v1_files),
+        "attested v1 file count changed",
+    )
+    _fail(
+        int(v1_tree.get("total_bytes", -1))
+        == sum(int(item["size"]) for item in v1_files),
+        "attested v1 byte count changed",
+    )
+    _fail(
+        v1_tree.get("tree_digest") == json_digest(v1_files),
+        "attested v1 tree digest changed",
+    )
+    final_path = repair_aggregate / "test_v4_repair_final_manifest.json"
+    _fail(
+        _descriptor_equal(
+            payload.get("v1_final_manifest", {}), file_descriptor(final_path)
+        ),
+        "attested v1 final manifest changed",
+    )
+    _fail(
+        _descriptor_equal(
+            payload.get("v1_input_manifest", {}),
+            file_descriptor(
+                repair_aggregate / "aggregation_repair_input_manifest.json"
+            ),
+        ),
+        "attested v1 input manifest changed",
+    )
+    _fail(
+        _descriptor_equal(
+            payload.get("v1_integrity_artifact", {}),
+            file_descriptor(repair_aggregate / "aggregation_repair_integrity.json"),
+        ),
+        "attested v1 integrity artifact changed",
+    )
+    expected_formal_trees = {
+        label: {
+            "file_count": tree["file_count"],
+            "total_bytes": tree["total_bytes"],
+            "tree_digest": tree["tree_digest"],
+        }
+        for label, tree in repair_evidence.get("input_trees", {}).items()
+    }
+    _fail(
+        payload.get("formal_input_trees") == expected_formal_trees,
+        "attested formal input-tree digests changed",
+    )
+    v1_integrity = load_json(repair_aggregate / "aggregation_repair_integrity.json")
+    _fail(
+        payload.get("protected_tree") == v1_integrity.get("protected_tree_after")
+        and payload.get("protected_tree", {}).get("tree_digest")
+        == expectations.protected_tree_digest,
+        "attested protected-tree digest changed",
+    )
+    for field in (
+        "v1_hash_chain_valid",
+        "v1_manifest_payload_digest_valid",
+        "formal_input_trees_match_v1_before_and_after",
+        "protected_tree_matches_v1_before_and_after",
+        "original_failure_evidence_preserved",
+    ):
+        _fail(payload.get(field) is True, f"v1 integrity attestation failed: {field}")
+    _fail(
+        payload.get("original_failure_classification_changed") is False
+        and payload.get("threshold_or_statistical_semantics_changed") is False
+        and payload.get("v1_was_modified_by_attestation") is False,
+        "attestation changed v1 evidence/semantics",
+    )
+    zero_fields = (
+        "query_generation_count",
+        "query_rerun_count",
+        "query_generation_or_rerun_count",
+        "solver_invocation_count",
+        "model_inference_count",
+        "bootstrap_resamples_executed_by_attestation",
+    )
+    _fail(
+        all(int(payload.get(field, -1)) == 0 for field in zero_fields),
+        "attestation performed forbidden scientific work",
+    )
+    _fail(
+        repair_evidence.get("all_input_trees_unchanged") is True,
+        "independent v1 input-tree audit did not pass",
+    )
+    return {
+        "protocol": payload.get("protocol"),
+        "v1_tree_digest": v1_tree["tree_digest"],
+        "v1_file_count": len(v1_files),
+        "v1_final_manifest_sha256": expectations.repair_output_sha256[
+            "test_v4_repair_final_manifest.json"
+        ],
+        "zero_scientific_activity": True,
+        "v1_unmodified": True,
+        "sha256": sha256_file(path),
+    }
+
+
+def _audit_attestation_independent_recomputation(
+    repair_aggregate: Path,
+    attestation_root: Path,
+    statistics: Mapping[str, Any],
+) -> dict[str, Any]:
+    path = attestation_root / "independent_recomputation.json"
+    payload = load_json(path)
+    _fail(
+        str(payload.get("protocol", "")).startswith("test_v4_aggregate_repair_v1"),
+        "wrong attestation-recomputation protocol",
+    )
+    _fail(
+        payload.get("implementation") == "python_standard_library_only",
+        "attestation recomputation implementation changed",
+    )
+    _fail(
+        int(payload.get("bootstrap_resamples_executed", -1)) == 0
+        and payload.get("query_records_read") is False
+        and payload.get("stored_pvalues_reused") is True,
+        "attestation recomputation exceeded stored-aggregate scope",
+    )
+    _fail(
+        _float_equal(payload.get("familywise_alpha"), 0.05),
+        "attestation Holm alpha changed",
+    )
+    _fail(
+        tuple(payload.get("confirmatory_members", ())) == CONFIRMATORY_METRICS,
+        "attestation confirmatory family changed",
+    )
+    artifact_names = (
+        "aggregate_summary_v4.json",
+        "joint_holm_v4.json",
+        "paper_gate_v4.json",
+    )
+    semantic_matches = payload.get("semantic_matches", {})
+    _fail(
+        set(semantic_matches) == set(artifact_names) and all(semantic_matches.values()),
+        "attestation semantic recomputation mismatch",
+    )
+    _fail(
+        payload.get("all_semantic_matches") is True,
+        "attestation semantic equivalence failed",
+    )
+    stored = payload.get("stored_artifacts", {})
+    recomputed_digests = payload.get("recomputed_payload_digests", {})
+    _fail(
+        set(stored) == set(artifact_names)
+        and set(recomputed_digests) == set(artifact_names),
+        "attestation recomputation artifact set changed",
+    )
+    for name in artifact_names:
+        artifact_path = repair_aggregate / name
+        _assert_descriptor(artifact_path, stored[name], f"attestation-stored/{name}")
+        _fail(
+            recomputed_digests[name] == json_digest(load_json(artifact_path)),
+            f"attestation semantic payload digest changed: {name}",
+        )
+    observed = payload.get("observed_results_not_used_as_acceptance_criteria", {})
+    _fail(
+        observed.get("robot_gates") == statistics.get("robot_gates"),
+        "attestation observed robot gates changed",
+    )
+    _fail(
+        observed.get("joint_holm_gate_pass")
+        is bool(statistics.get("all_joint_holm_claims_pass")),
+        "attestation observed Holm result changed",
+    )
+    _fail(
+        observed.get("paper_gate_pass") is bool(statistics.get("paper_gate_pass")),
+        "attestation observed paper result changed",
+    )
+    _fail(
+        payload.get("outcome_direction_hardcoded") is False,
+        "attestation hardcoded scientific outcome direction",
+    )
+    _fail(
+        isinstance(payload.get("acceptance_rule"), str)
+        and payload.get("acceptance_rule"),
+        "attestation acceptance rule absent",
+    )
+    return {
+        "protocol": payload.get("protocol"),
+        "implementation": payload["implementation"],
+        "stored_pvalue_recomputation_only": True,
+        "semantic_matches": dict(semantic_matches),
+        "observed_results": observed,
+        "outcome_direction_hardcoded": False,
+        "sha256": sha256_file(path),
+    }
+
+
+def audit_external_execution_attestation(
+    workspace: Path,
+    repair_aggregate: Path,
+    attestation_root: Path,
+    expectations: AuditExpectations,
+    *,
+    repair_evidence: Mapping[str, Any],
+    statistics: Mapping[str, Any],
+) -> dict[str, Any]:
+    _fail(
+        attestation_root.resolve()
+        == (workspace / expectations.attestation_namespace).resolve(),
+        "attestation namespace changed",
+    )
+    _fail(
+        attestation_root.is_dir() and not attestation_root.is_symlink(),
+        "attestation namespace missing/non-regular",
+    )
+    v1_preregistration = load_json(
+        repair_aggregate / "aggregation_repair_preregistration.json"
+    )
+    execution = _audit_execution_provenance_attestation(
+        workspace, attestation_root, expectations
+    )
+    source = _audit_source_commit_verification(
+        workspace, attestation_root, v1_preregistration, expectations
+    )
+    integrity = _audit_v1_integrity_reattestation(
+        repair_aggregate,
+        attestation_root,
+        repair_evidence,
+        expectations,
+    )
+    recomputation = _audit_attestation_independent_recomputation(
+        repair_aggregate, attestation_root, statistics
+    )
+
+    final_path = attestation_root / "attestation_final_manifest.json"
+    final = load_json(final_path)
+    _fail(
+        str(final.get("protocol", "")).startswith("test_v4_aggregate_repair_v1"),
+        "wrong attestation-final protocol",
+    )
+    expected_names = {
+        "execution_provenance_attestation.json",
+        "source_commit_verification.json",
+        "v1_integrity_reaudit.json",
+        "independent_recomputation.json",
+        "repair_v1_source.bundle",
+        "attestation_final_manifest.json",
+    }
+    actual_names = {path.name for path in attestation_root.iterdir() if path.is_file()}
+    _fail(actual_names == expected_names, "attestation namespace file set changed")
+    expected_chain = {
+        name: sha256_file(attestation_root / name)
+        for name in sorted(expected_names - {final_path.name})
+    }
+    _fail(final.get("hash_chain") == expected_chain, "attestation hash chain changed")
+    _fail(
+        final.get("hash_chain_digest") == json_digest(expected_chain),
+        "attestation hash-chain digest changed",
+    )
+    final_without_digest = {
+        key: value for key, value in final.items() if key != "manifest_payload_digest"
+    }
+    _fail(
+        final.get("manifest_payload_digest") == json_digest(final_without_digest),
+        "attestation final payload digest changed",
+    )
+    _fail(
+        isinstance(final.get("first_final_recheck_digest"), str)
+        and bool(final.get("first_final_recheck_digest")),
+        "attestation first final recheck digest absent",
+    )
+    if expectations.attestation_final_manifest_sha256:
+        _fail(
+            sha256_file(final_path) == expectations.attestation_final_manifest_sha256,
+            "attestation final manifest differs from independent post-run pin",
+        )
+    else:
+        raise AuditError(
+            "attestation final manifest has not yet been independently pinned in the auditor"
+        )
+    required_true = (
+        "retrospective_attestation",
+        "scope_clean_not_global_clean",
+        "shadow_git_invocation_disclosed",
+        "source_commit_permanently_recoverable_from_bundle",
+        "independent_recomputation_semantically_identical",
+        "composite_v1_plus_attestation_integrity_pass",
+        "second_pre_promotion_recheck_required",
+    )
+    _fail(
+        all(final.get(field) is True for field in required_true),
+        "attestation final integrity flag failed",
+    )
+    _fail(
+        final.get("attestation_is_part_of_v1_tree") is False
+        and final.get("v1_tree_modified") is False
+        and final.get("original_outputs_modified") is False
+        and final.get("scientific_gate_direction_used_for_acceptance") is False
+        and final.get("automatic_rerun_allowed") is False,
+        "attestation final manifest changes/overstates v1",
+    )
+    zero_fields = (
+        "query_generation_count",
+        "query_rerun_count",
+        "solver_invocation_count",
+        "model_inference_count",
+        "bootstrap_resample_count",
+    )
+    _fail(
+        all(int(final.get(field, -1)) == 0 for field in zero_fields),
+        "attestation final manifest reports scientific execution",
+    )
+    staging = (
+        workspace / "outputs/.test_v4_aggregate_repair_v1_attestation_v1.incomplete"
+    )
+    _fail(
+        not staging.exists() and not staging.is_symlink(),
+        "attestation staging remains after promotion",
+    )
+    return {
+        "execution_provenance": execution,
+        "source_commit_verification": source,
+        "v1_integrity_reaudit": integrity,
+        "independent_recomputation": recomputation,
+        "final_manifest_sha256": sha256_file(final_path),
+        "sealed_file_count": len(actual_names),
+        "hash_chain_valid": True,
+        "manifest_payload_digest_valid": True,
+        "retrospective_limitations_disclosed": True,
+        "verdict": "PASS",
     }
 
 
@@ -1130,12 +1906,14 @@ def run_audit(
     *,
     failed_aggregate: Path,
     repair_aggregate: Path,
+    attestation_root: Path,
     expectations: AuditExpectations = PRODUCTION,
     verify_fingerprint_files: bool = True,
 ) -> dict[str, Any]:
     workspace = workspace.resolve()
     failed_aggregate = failed_aggregate.resolve()
     repair_aggregate = repair_aggregate.resolve()
+    attestation_root = attestation_root.resolve()
     audit_script_has_no_scientific_imports(Path(__file__).resolve())
     report: dict[str, Any] = {
         "protocol": "independent_test_v4_aggregation_repair_audit_v1",
@@ -1151,14 +1929,28 @@ def run_audit(
     report["original_failed_tree"] = audit_failed_tree(failed_aggregate, expectations)
     combinations, roots = audit_all_combinations(workspace, expectations)
     report["formal_measurements"] = combinations
-    report["repair_manifest"] = audit_repair_manifest(
+    report["repair_evidence"] = audit_repair_manifest(
         workspace, repair_aggregate, failed_aggregate, expectations
     )
     report["statistics_and_gates"] = audit_recomputed_statistics_and_gates(
         repair_aggregate, roots, expectations
     )
     report["final_seal"] = audit_final_seal(
-        workspace, repair_aggregate, roots, expectations
+        workspace,
+        repair_aggregate,
+        expectations,
+        expected_paper_gate=bool(report["statistics_and_gates"]["paper_gate_pass"]),
+        expected_final_input_recheck_digest=str(
+            report["repair_evidence"]["final_input_recheck_digest"]
+        ),
+    )
+    report["external_execution_attestation"] = audit_external_execution_attestation(
+        workspace,
+        repair_aggregate,
+        attestation_root,
+        expectations,
+        repair_evidence=report["repair_evidence"],
+        statistics=report["statistics_and_gates"],
     )
     report["verdict"] = "PASS"
     return report
@@ -1178,8 +1970,14 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--repair-aggregate",
         type=Path,
-        default=Path("outputs/test_v4_aggregate"),
-        help="atomically promoted aggregation-only repair",
+        default=Path("outputs/test_v4_aggregate_repair_v1"),
+        help="sealed, authoritative aggregation-only repair namespace",
+    )
+    parser.add_argument(
+        "--attestation-root",
+        type=Path,
+        default=Path("outputs/test_v4_aggregate_repair_v1_attestation_v1"),
+        help="independent, retrospective execution-attestation namespace",
     )
     parser.add_argument(
         "--skip-fingerprint-file-rehash",
@@ -1194,15 +1992,19 @@ def main(argv: Sequence[str] | None = None) -> int:
     workspace = arguments.workspace.resolve()
     failed = arguments.failed_aggregate
     repair = arguments.repair_aggregate
+    attestation = arguments.attestation_root
     if not failed.is_absolute():
         failed = workspace / failed
     if not repair.is_absolute():
         repair = workspace / repair
+    if not attestation.is_absolute():
+        attestation = workspace / attestation
     try:
         report = run_audit(
             workspace,
             failed_aggregate=failed,
             repair_aggregate=repair,
+            attestation_root=attestation,
             verify_fingerprint_files=not arguments.skip_fingerprint_file_rehash,
         )
     except AuditError as error:
