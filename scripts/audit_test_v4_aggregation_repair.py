@@ -183,7 +183,7 @@ PRODUCTION = AuditExpectations(
     attestation_namespace="outputs/test_v4_aggregate_repair_v1_attestation_v1",
     # Filled with the independently observed final-manifest hash immediately
     # after the one-shot attestation namespace is atomically created.
-    attestation_final_manifest_sha256="",
+    attestation_final_manifest_sha256="c1dddbdc2b2d1b89b9a735fe00bcb4804d6cd28bcc3c7925b36705389062034f",
 )
 
 
