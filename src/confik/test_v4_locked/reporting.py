@@ -695,7 +695,14 @@ def joint_holm_confirmatory(
         if tuple(family.get("members", ())) != CONFIRMATORY_INFERENCE_METRICS:
             raise RuntimeError(f"{robot} confirmatory inference family changed")
         metrics = payload.get("metrics", {})
-        if tuple(metrics) != CONFIRMATORY_INFERENCE_METRICS:
+        # JSON objects are unordered. The formal writer uses ``sort_keys=True``,
+        # so a round trip cannot preserve the construction-time insertion
+        # order even though the exact prespecified member set is unchanged.
+        if (
+            not isinstance(metrics, Mapping)
+            or len(metrics) != len(CONFIRMATORY_INFERENCE_METRICS)
+            or set(metrics) != set(CONFIRMATORY_INFERENCE_METRICS)
+        ):
             raise RuntimeError(f"{robot} confirmatory metrics changed")
         for name in CONFIRMATORY_INFERENCE_METRICS:
             value = float(metrics[name]["one_sided_unadjusted_p"])

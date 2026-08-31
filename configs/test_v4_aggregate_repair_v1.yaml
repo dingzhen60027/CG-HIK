@@ -1,0 +1,63 @@
+protocol_version: test_v4_aggregate_repair_v1
+
+inputs:
+  formal_config_path: test_v4_locked.yaml
+  formal_config_sha256: e6c3e4eaa8a85b54a997a9026b4e5e76f7fb83cadd60bb57e7e6f4c1e8fab136
+  aggregate_failure:
+    path: ../outputs/.test_v4_aggregate.incomplete
+    file_count: 56
+    tree_digest: 63caabe80956198bd2e36884b66993ca0828b83dbe212c5f8a056d022d1b572d
+  seed_roots:
+    17:
+      path: ../outputs/.test_v4_seed17.incomplete
+      file_count: 512
+      tree_digest: c65be32047c88acf37fb27fdb0d4d0f47b8750c2c3139126a129a53db0723293
+      combination_complete_sha256:
+        panda: 6657fce520ad49285bfe113892e78345abf684248ef313216ee76771bb3534be
+        ur5e: 88480f1e41bed6fec071ad04bae7dfdb19f3d16c39827bbc8d2a490cd768fba8
+    29:
+      path: ../outputs/.test_v4_seed29.incomplete
+      file_count: 506
+      tree_digest: 33a2fc12cc201617cdb67be65e1e2bdb7e8fda1d35760b0b2d6ad23019872d5a
+      combination_complete_sha256:
+        panda: fdffb3def50c29be3c8b04dc146704ab523846ea6c319928c5e745c98c90fcca
+        ur5e: d4f254efe473166886df86028fcbfb8840886289d17ff0815474dfd4c3392ef0
+    43:
+      path: ../outputs/.test_v4_seed43.incomplete
+      file_count: 506
+      tree_digest: 4d02bdc7204200cd3faaddb496fed2076aab273a682351aa67d691c552182942
+      combination_complete_sha256:
+        panda: e1a1a7339ee73cc62bd76d8481c25083c97e19d69e3b8200640367b293ec5860
+        ur5e: cc7d3cb8d5aff55beda0f148c9c39a782b77c90edd10f4f0d14489f998beec72
+  expected_checkpoint_count_per_combination: 124
+  control_plane:
+    preregistration_sha256: 7808206ac9b76684f724523123bc461b7eedca4f4b759462eb142100385ad56d
+    dataset_manifest_sha256: 77fa670e5de1bf40301f0bcd0292ebcc7860f412ac8bd946a485dc782458d51e
+    control_plane_seal_sha256: e97d13c190842451a20184a5279f3b0fceaadf1c501bcb2d5930817bd4d2b26a
+    latest_failure_manifest_sha256: e716bece6eff91c33dac5636f1792796ebbbeb6e0d4af51b548400957ee7ac3b
+    release_digest: 01bd104c96b6e33be1a5ac29dd2bbedad1369156a7e9beb86f551eabe9db541a
+    original_evidence_fingerprint_digest: e0dda714ff8d6cb28fcaf8c8c9bf1ed2db0fffa66b476b0d1785f3a30cbabc38
+  expected_failure:
+    failure_classification: non_resumable_integrity_or_scientific_failure
+    exception_type: RuntimeError
+    exception_message: panda confirmatory metrics changed
+    phase:
+      phase: aggregate_and_final_integrity
+
+statistics:
+  familywise_alpha: 0.05
+  multiplicity_correction: Holm
+  hypothesis_count: 8
+
+execution_contract:
+  aggregation_only: true
+  query_rerun_count: 0
+  solver_invocation_count: 0
+  model_inference_count: 0
+  original_outputs_mutation_allowed: false
+  automatic_resume_allowed: false
+
+output:
+  staging_directory: ../outputs/.test_v4_aggregate_repair_v1.incomplete
+  final_directory: ../outputs/test_v4_aggregate_repair_v1
+  lock_path: ../outputs/.test_v4_aggregate_repair_v1.lock
