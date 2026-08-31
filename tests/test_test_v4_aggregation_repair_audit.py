@@ -836,9 +836,10 @@ def _attestation_fixture(
     )
     recomputation = {
         "protocol": "test_v4_aggregate_repair_v1_independent_recomputation",
-        "implementation": "python_standard_library_only",
+        "implementation": "Python standard library only; no confik reporting import",
         "bootstrap_resamples_executed": 0,
-        "query_records_read": False,
+        "query_records_parsed_or_used_for_recomputation": False,
+        "query_record_files_hash_verified_only": True,
         "stored_pvalues_reused": True,
         "familywise_alpha": 0.05,
         "confirmatory_members": list(audit.CONFIRMATORY_METRICS),

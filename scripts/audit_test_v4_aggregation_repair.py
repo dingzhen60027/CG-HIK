@@ -1673,12 +1673,14 @@ def _audit_attestation_independent_recomputation(
         "wrong attestation-recomputation protocol",
     )
     _fail(
-        payload.get("implementation") == "python_standard_library_only",
+        payload.get("implementation")
+        == "Python standard library only; no confik reporting import",
         "attestation recomputation implementation changed",
     )
     _fail(
         int(payload.get("bootstrap_resamples_executed", -1)) == 0
-        and payload.get("query_records_read") is False
+        and payload.get("query_records_parsed_or_used_for_recomputation") is False
+        and payload.get("query_record_files_hash_verified_only") is True
         and payload.get("stored_pvalues_reused") is True,
         "attestation recomputation exceeded stored-aggregate scope",
     )
