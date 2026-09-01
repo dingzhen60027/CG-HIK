@@ -28,7 +28,7 @@ v2、v3 和 v4 的实验链已经完成。最终 `test_v4` 覆盖 Panda、UR5e �
 |---|---|
 | `src/confik/` | 数据、模型、solver、runtime 和版本化实验代码 |
 | `configs/`, `scripts/`, `tests/` | 配置、运行入口和测试 |
-| `outputs/` | v2–v4 冻结实验结果；保持原路径以维持 manifest 与哈希链 |
+| `outputs/` | v2 到 v4 的冻结实验结果；保持原路径以维持 manifest 与哈希链 |
 | `czy/` | Panda 闭环补充实验原始记录；路径参与 test_v4 身份审计 |
 | `paper/` | LaTeX、PDF、图、表和投稿材料 |
 
