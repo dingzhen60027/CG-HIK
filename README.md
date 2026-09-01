@@ -20,7 +20,7 @@ v2、v3 和 v4 的实验链已经完成。最终 `test_v4` 覆盖 Panda、UR5e �
 
 1. [研究主线与全部结果](docs/RESEARCH.md)：论文故事、方法演化、实验设计、正式结果和写作边界。
 2. [运行与复核手册](docs/RUNBOOK.md)：环境、只读复核命令、证据位置和后续工作规则。
-3. [论文包](paper_mdpi_machines_v3/README.md)：稿件状态、重写任务和构建方式。
+3. [论文包](paper/README.md)：稿件状态、重写任务和构建方式。
 
 ## 目录
 
@@ -30,7 +30,7 @@ v2、v3 和 v4 的实验链已经完成。最终 `test_v4` 覆盖 Panda、UR5e �
 | `configs/`, `scripts/`, `tests/` | 配置、运行入口和测试 |
 | `outputs/` | v2–v4 冻结实验结果；保持原路径以维持 manifest 与哈希链 |
 | `czy/` | Panda 闭环补充实验原始记录；路径参与 test_v4 身份审计 |
-| `paper_mdpi_machines_v3/` | LaTeX、PDF、图、表和投稿材料 |
+| `paper/` | LaTeX、PDF、图、表和投稿材料 |
 
 ## 当前工作
 

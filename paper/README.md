@@ -40,16 +40,14 @@
 | `generated/` | 自动生成的数字宏和 evidence snapshot |
 | `scripts/` | 证据提取与绘图 |
 
-目录名中的 `v3` 为历史名称，暂不移动，以免破坏脚本和记录中的路径。论文标题和正文不使用该版本号。
-
 ## 构建
 
 先更新正文和数字来源，再运行：
 
 ```bash
-/home/eric/anaconda3/envs/isaaclab_3/bin/python paper_mdpi_machines_v3/scripts/build_evidence.py
-/home/eric/anaconda3/envs/isaaclab_3/bin/python paper_mdpi_machines_v3/scripts/make_figures.py
-cd paper_mdpi_machines_v3
+/home/eric/anaconda3/envs/isaaclab_3/bin/python paper/scripts/build_evidence.py
+/home/eric/anaconda3/envs/isaaclab_3/bin/python paper/scripts/make_figures.py
+cd paper
 /home/eric/.local/bin/latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 

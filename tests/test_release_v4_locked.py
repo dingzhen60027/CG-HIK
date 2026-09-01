@@ -282,7 +282,7 @@ def test_formal_source_manifest_allows_only_out_of_scope_user_changes(
             "--porcelain=v1",
             "--untracked-files=all",
         ):
-            return "" if "--" in arguments else " M docs/HANDOVER.md"
+            return "" if "--" in arguments else " M docs/RESEARCH.md"
         raise AssertionError(arguments)
 
     with patch("confik.release_v4_locked.runner._git", side_effect=fake_git):

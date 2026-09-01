@@ -53,7 +53,7 @@ v4 审计应以退出码 0 和顶层 `verdict: PASS` 结束。该命令是只读
 | v4 正式汇总 | `outputs/test_v4_aggregate_repair_v1/aggregate_summary_v4.json` |
 | v4 正式 gate | `outputs/test_v4_aggregate_repair_v1/paper_gate_v4.json` |
 | v4 Holm 结果 | `outputs/test_v4_aggregate_repair_v1/joint_holm_v4.json` |
-| 论文源文件 | `paper_mdpi_machines_v3/` |
+| 论文源文件 | `paper/` |
 
 先看 `RESEARCH.md`。只有核对具体数字、split 或哈希时才进入 outputs 或运行对应审计脚本。
 
@@ -67,7 +67,7 @@ v4 审计应以退出码 0 和顶层 `verdict: PASS` 结束。该命令是只读
 6. 编译 PDF，逐页检查；
 7. 投稿前再核验 MDPI 模板、期刊分区、费用和政策。
 
-论文包的具体命令见 `paper_mdpi_machines_v3/README.md`。
+论文包的具体命令见 `paper/README.md`。
 
 ## 6. 后续研究规则
 

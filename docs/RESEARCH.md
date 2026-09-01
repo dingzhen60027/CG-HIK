@@ -185,7 +185,7 @@ Panda 唯一失败项是冻结的 `ood_feasible_false_reject_improvement`：v4 �
 
 实验阶段已经结束。接下来只有两项工作：
 
-1. 用冻结的 v3/v4 证据重写 `paper_mdpi_machines_v3/main.tex`；
+1. 用冻结的 v3/v4 证据重写 `paper/main.tex`；
 2. 补齐作者、单位、基金、代码/数据归档和投稿信息。
 
 如果未来继续研究 OOD、碰撞或物理闭环，应建立新的 v5 数据和预注册测试，不应回到 `test_v4` 调整当前方法。
