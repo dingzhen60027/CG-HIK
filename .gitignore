@@ -7,6 +7,7 @@ __pycache__/
 .ruff_cache/
 .venv/
 outputs/
+czy/
 tmp/
 paper_mdpi_machines_v3/tmp/
 paper_mdpi_machines_v3/figures/*.tiff

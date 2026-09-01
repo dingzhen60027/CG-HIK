@@ -1,31 +1,50 @@
-# Machines manuscript package
+# CG-HIK 论文包
 
-This directory contains the reproducible pre-submission manuscript for the
-confidence-gated hybrid inverse-kinematics study.
+本目录保存 CG-HIK 的 LaTeX 稿件、图表数据和构建脚本。`Machines` 是当前候选期刊，正式投稿前仍需重新核验最新分区、栏目、版面费和模板。
 
-## Status
+## 稿件状态
 
-- Target journal: **Machines** (MDPI), section *Robotics, Mechatronics and
-  Intelligent Machines*.
-- Scientific evidence: frozen `paper_v2` test outputs plus the strictly
-  validation-only `latency_pilot_v3` implementation study.
-- Submission blocker: an independent optimized `test_v3` has **not** been run.
-  The manuscript therefore labels optimized latency as validation evidence and
-  does not present it as an independent test result.
-- Release status: the first locked packaging attempt retained five passing
-  robot/seed combinations but stopped on the strict deployment-equivalence gate
-  for `ur5e/seed43`. A validation-only diagnostic reproduced maximum risk
-  probability and score differences of `1.259825577e-12` and
-  `1.144973005e-12`, slightly above the locked `1e-12` limits, while every
-  runtime action/outcome agreement remained exact. The incomplete package is
-  preserved outside this manuscript directory, and no `test_v3` process was
-  started.
-- Author names, affiliations, funding, repository DOI, and corresponding-author
-  details are explicit placeholders that must be supplied before submission.
+`main.tex` 和 `main.pdf` 是正式 test_v3/test_v4 之前形成的结构草稿，数值和结论已经过期，不能直接投稿。旧稿保留的价值是章节结构、方法描述和参考文献基础；当前事实以仓库的 [研究主线](../docs/RESEARCH.md) 为准。
 
-## Rebuild
+下一版必须写清楚：
 
-From the repository root:
+- v2 先减少 FEV，但 eager 推理开销使延迟门失败；
+- v3 通过 exact TorchScript 把实现问题与算法问题分开；
+- v4 使用反事实动作成本、command reject 和 OOD/uncertainty defer；
+- 两台机器人都改善 feasible P95，并保持相对 fixed 的成功率和轨迹完成率；
+- Panda OOD 改善门失败，point OOD AUROC 很弱，整体 paper gate 为 false。
+
+论文的中心句是：
+
+> Learning allocates IK computation; numerical geometry generates joint commands; a deterministic verifier retains acceptance authority.
+
+## 当前写作顺序
+
+1. 用冻结结果重写 Abstract 和 Introduction 的贡献表述；
+2. 将 v4 counterfactual router、shared semantic head、action latency heads 和 reject/defer 写入 Method；
+3. 重建 Experimental Design，明确数据角色、seed 解释、七个基线和预注册 gate；
+4. 用正式 v4 aggregate 重写 Results；
+5. 在 Discussion 中同时解释 P95/FEV 收益、P50/P99 权衡、弱 OOD 和 Panda gate 失败；
+6. 重新生成 source data、图和 PDF；
+7. 补齐作者、单位、基金、代码/数据 DOI 和利益冲突信息；
+8. 投稿前重新核验期刊分区、费用、政策和最新模板。
+
+## 目录
+
+| 路径 | 用途 |
+|---|---|
+| `main.tex`, `main.pdf` | 待重写的主稿和当前预览 |
+| `references.bib` | 参考文献数据库 |
+| `figures/` | 论文图件 |
+| `source_data/` | 图表源数据 |
+| `generated/` | 自动生成的数字宏和 evidence snapshot |
+| `scripts/` | 证据提取与绘图 |
+
+目录名中的 `v3` 为历史名称，暂不移动，以免破坏脚本和记录中的路径。论文标题和正文不使用该版本号。
+
+## 构建
+
+先更新正文和数字来源，再运行：
 
 ```bash
 /home/eric/anaconda3/envs/isaaclab_3/bin/python paper_mdpi_machines_v3/scripts/build_evidence.py
@@ -34,37 +53,4 @@ cd paper_mdpi_machines_v3
 /home/eric/.local/bin/latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The evidence script reads the frozen experiment outputs and writes only inside
-this manuscript directory. It records SHA-256 hashes for every JSON evidence
-source used by the paper.
-
-## Submission-template note
-
-`main.tex` is a self-contained, reliably compilable MDPI-structured review
-draft. Before uploading to the journal, copy the content into the latest
-official MDPI LaTeX template downloaded from the MDPI author portal. This avoids
-silently claiming that a locally cached class file is the current publisher
-version.
-
-## Package map
-
-- `main.tex` and `main.pdf`: complete English pre-submission manuscript and its
-  compiled PDF;
-- `references.bib`: verified bibliography used by the manuscript;
-- `figures/`: editable PDF/SVG figures plus PNG/TIFF review copies;
-- `source_data/`: figure- and table-level CSV evidence;
-- `source_data/formal_comparator_*.csv`: streamed same-protocol results for all
-  six declared formal comparators;
-- `scripts/`: read-only evidence extraction and deterministic figure generation;
-- `generated/evidence_snapshot.json`: source paths and SHA-256 hashes;
-- `claim_evidence_map.md`: boundary between formal-test, validation-only, and
-  pending claims;
-- `reviews/`: three isolated pre-submission reviewer reports, their post-review
-  synthesis, and an evidence-bounded revision response;
-- `future_v4/dual_abstention_research_plan.md`: prospective two-sided
-  abstention/OOD study; it is deliberately not represented as current evidence;
-- `terminology_ledger.md` and `revision_decision_log.md`: controlled terms and
-  the decision record for the evidence-bounded revision;
-- `qa_report.md` and `submission_checklist.md`: technical QA and remaining
-  author/release actions.
-- `release_v3_packaging_diagnostic.md`: exact reason Phase A stopped.
+正式投稿前应把修订后的正文迁移到当时从 MDPI author portal 下载的最新官方 LaTeX 模板，并逐页检查生成 PDF。

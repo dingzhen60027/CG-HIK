@@ -1,113 +1,37 @@
-# ConFIK
+# CG-HIK
 
-ConFIK is a reproducible implementation of confidence-gated, verified hybrid
-inverse kinematics. Learning predicts a cascade entry action and rejection risk;
-adaptive DLS/TRF generates or refines solutions; a shared verifier alone accepts
-commands.
+CG-HIK 研究连续机械臂控制中的混合逆运动学。它不让神经网络直接替代数值求解器，而是把在线 IK 看成一个资源分配问题：学习模型选择求解入口或拒绝动作，数值级联生成关节解，确定性验证器决定命令能否接受。
 
-## Current status
+## 项目结论
 
-The legacy v1 run is retained only as developmental evidence. The corrected v2
-protocol is frozen, and the independent UR5e pilot passed:
+v2、v3 和 v4 的实验链已经完成。最终 `test_v4` 覆盖 Panda、UR5e 和三个训练 seed，共 744 个 checkpoint、650,000 条 method-query records。正式结果表明：
 
-```text
-outputs/pilot_v2_4/ur5e/results/claim_gate_v2.json
-```
+- v4 在两台机器人上保持了与 fixed robust cascade 相同的可行查询成功表现和轨迹完成率；
+- feasible P95 latency 相对 fixed 降低约 24.6%（Panda）和 25.7%（UR5e）；
+- 对已知不可行查询，零求解拒绝避免了约 95.7% 和 93.9% 的 FEV；
+- OOD 点检测表现较弱，Panda 的冻结 OOD 改善门未通过；
+- 因此 joint Holm gate 通过、UR5e gate 通过，但 Panda gate 和整体 paper gate 未通过。
 
-The two-robot, three-seed paper experiment has **not** been started. Its launcher
-refuses to run if the pilot gate is absent or false.
+这不是“实验失败后无论文可写”。论文最有价值的结论是：学习模型适合做经过验证的 IK 资源分配，但当前 OOD 判别不足以支撑广泛的安全拒绝主张。
 
-## Run the protocol
+## 从这里开始
 
-Use the existing environment:
+项目只保留三个活动入口：
 
-```bash
-export CONFIK_PYTHON=/home/eric/anaconda3/envs/isaaclab_3/bin/python
-export PYTHONPATH="$PWD/src${PYTHONPATH:+:$PYTHONPATH}"
-```
+1. [研究主线与全部结果](docs/RESEARCH.md)：论文故事、方法演化、实验设计、正式结果和写作边界。
+2. [运行与复核手册](docs/RUNBOOK.md)：环境、只读复核命令、证据位置和后续工作规则。
+3. [论文包](paper_mdpi_machines_v3/README.md)：稿件状态、重写任务和构建方式。
 
-Run the bounded pilot:
+## 目录
 
-```bash
-./scripts/run_pilot_v2.sh
-```
+| 路径 | 内容 |
+|---|---|
+| `src/confik/` | 数据、模型、solver、runtime 和版本化实验代码 |
+| `configs/`, `scripts/`, `tests/` | 配置、运行入口和测试 |
+| `outputs/` | v2–v4 冻结实验结果；保持原路径以维持 manifest 与哈希链 |
+| `czy/` | Panda 闭环补充实验原始记录；路径参与 test_v4 身份审计 |
+| `paper_mdpi_machines_v3/` | LaTeX、PDF、图、表和投稿材料 |
 
-Run tests without loading unrelated ROS pytest plugins:
+## 当前工作
 
-```bash
-PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 "$CONFIK_PYTHON" -m pytest -q
-```
-
-Only after inspecting the pilot artifacts, run the complete experiment:
-
-```bash
-./scripts/run_paper_v2.sh
-```
-
-That script runs UR5e and Panda with seeds 17, 29, and 43, then creates the
-cross-run gate at:
-
-```text
-outputs/paper_v2_aggregate/paper_gate_v2.json
-```
-
-The design is specified in:
-
-- `docs/experimental_protocol_v2.md` — frozen estimands, splits, thresholds, and stop rules;
-- `docs/experiment_matrix_v2.md` — each paper claim mapped to a comparison and ablation;
-- `docs/isaaclab_external_validation.md` — optional post-gate controller-tracking protocol;
-- `docs/artifact_schema.md` — artifact and query-log semantics.
-
-## What one full run evaluates
-
-There are six primary methods:
-
-1. previous-state DLS;
-2. learned-seed DLS;
-3. fixed robust cascade;
-4. validation-constrained Cartesian threshold guard;
-5. previous-state TRF;
-6. proposed learned action gate.
-
-The other seven methods are diagnostic ablations: no history, single ensemble
-member, no uncertainty features, no calibration, no reject, no fallback, and
-fixed damping. Thus the full output contains 13 method names, but only six belong
-to the main comparison table.
-
-The runtime benchmark separates:
-
-- independently generated feasible point queries for budget routing;
-- unreachable/discontinuous points for rejection;
-- whole closed-loop paths for sequential completion.
-
-It does not pool post-failure path frames into point-query success. Point-query
-inference uses one unique generating unit per query; trajectories are analyzed as
-whole-path clusters.
-
-## Reproducibility safeguards
-
-- `risk_train`, model-validation, calibration, policy-validation, classifier-test,
-  and runtime-test data have disjoint roles.
-- The learned and threshold policies are tuned only on policy-validation under
-  the same false-reject and reject-recall constraints.
-- Every output directory stores hashes of its resolved config and `src/confik`
-  source tree. Changed code/config cannot reuse locked artifacts under the same
-  experiment name.
-- Method order is randomized per query; CUDA is synchronized; batch-one timing
-  records CPU/GPU/software provenance.
-- Query effects use paired cluster bootstrap intervals. Training seeds are
-  sensitivity replicates, not extra independent test datasets.
-- No solver result is accepted without pose, finite-value, joint-limit, and
-  per-frame velocity checks.
-
-## Scope
-
-The current paper pipeline uses exact URDF kinematics and local Isaac Sim robot
-descriptions. It runs inside an environment that also contains Isaac Lab, but it
-is **not an Isaac Lab physics experiment**. It does not establish collision
-safety, torque/dynamic feasibility, low-level controller tracking, or hardware
-real-time performance. Those require a separately reported Isaac Lab or physical
-robot validation layer.
-
-The old `configs/paper.yaml`, `scripts/run_paper.sh`, and unversioned result files
-belong to v1 and should not be used for the paper claim.
+正式实验已结束，目前没有训练或测试任务需要继续运行。下一步是依据冻结的 v3/v4 结果重写论文，而不是继续调参。现有 `main.tex` 和 `main.pdf` 仍是正式测试前的旧稿，不能直接投稿。
