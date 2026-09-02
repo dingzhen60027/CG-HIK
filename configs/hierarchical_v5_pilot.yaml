@@ -1,0 +1,96 @@
+protocol_version: hierarchical_v5_pilot_v1
+experiment_name: hierarchical_v5_policy_validation_pilot
+workspace: ..
+source_config: paper_v2.yaml
+bulk_root: ../outputs/counterfactual_v4_bulk
+release_v4_root: ../outputs/release_v4_locked
+output_root: ../outputs/hierarchical_v5_pilot
+
+# Development-only contract. The pilot must open only these exact roles from
+# counterfactual_v4_bulk; test-named roles, paths, and artifacts are forbidden.
+robots: [panda, ur5e]
+training_seed: 17
+roles:
+  train: risk_train_queries
+  calibration: calibration_queries
+  policy_validation: policy_validation_queries
+data_boundary:
+  allowed_roles: [risk_train_queries, calibration_queries, policy_validation_queries]
+  test_data_forbidden: true
+  reject_test_named_paths: true
+
+cheap_features:
+  dimension: 7
+  names:
+    - target_position_step
+    - target_orientation_step
+    - previous_joint_limit_margin_min
+    - previous_jacobian_sigma_min
+    - previous_jacobian_condition_number
+    - one_step_dls_max_joint_update
+    - estimated_velocity_limit_utilization_max
+  learned_seed_features_forbidden: true
+  learned_seed_ensemble_forbidden: true
+
+fast_path:
+  fast_iterations: 1
+  seed_source: previous_state
+  verifier: shared_deterministic_verifier
+  verifier_is_sole_acceptance_authority: true
+  failed_fast_path_action: enter_robust_path
+  slow_path_allowed_entries: [medium, hard]
+
+model:
+  hidden_sizes: [16, 16]
+  output_heads: [local_verified_success, latency_benefit]
+  epochs: 120
+  batch_size: 256
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  gradient_clip_norm: 5.0
+  seed: 1705
+  torchscript: true
+
+# Thresholds are selected once using calibration_queries only. The frozen
+# choice is evaluated on policy_validation_queries and is never retuned there.
+calibration:
+  fit_role: calibration_queries
+  threshold_selection_role: calibration_queries
+  local_success_probability_grid: [0.50, 0.60, 0.70, 0.80, 0.85, 0.90, 0.925, 0.95, 0.975, 0.99]
+  latency_benefit_probability_grid: [0.50, 0.60, 0.70, 0.80, 0.85, 0.90, 0.925, 0.95, 0.975, 0.99]
+  minimum_fast_path_precision: 0.99
+  selection_objective: maximize_fast_path_hit_rate
+
+strategies:
+  - always_local
+  - fixed_easy_cascade
+  - always_hard
+  - counterfactual_cghik_v4
+  - hierarchical_cghik_v5
+
+timing:
+  clock: perf_counter_ns
+  warmup_iterations: 200
+  repeats: 5
+  method_order: randomized_latin_rotation
+  primary_query_aggregation: median_across_repeats
+  disk_io_inside_timed_interval: false
+  logging_serialization_inside_timed_interval: false
+
+runtime:
+  device: cuda:0
+  intra_op_threads: 8
+  inter_op_threads: 1
+  deterministic_algorithms: true
+  max_unrelated_cpu_percent: 50.0
+  environment_check_every_queries: 100
+  quiet_stable_checks: 1
+  quiet_poll_seconds: 0.25
+  max_quiet_wait_seconds: 60.0
+
+reporting:
+  primary_subset: operational_feasible
+  latency_quantiles: [0.50, 0.95, 0.99]
+  paired_comparators: [always_hard, counterfactual_cghik_v4]
+  figure_formats: [png, pdf]
+  png_dpi: 220
