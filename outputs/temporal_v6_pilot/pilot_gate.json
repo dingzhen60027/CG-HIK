@@ -1,0 +1,8 @@
+{
+  "all_robots_pass": false,
+  "failed_robot": "ur5e",
+  "fresh_or_formal_evaluation_authorized": false,
+  "policy_validation_evaluated": false,
+  "reason": "no calibration candidate preserves the complete always-hard trajectory-completion vector; policy-validation remains unopened",
+  "status": "calibration_no_go"
+}

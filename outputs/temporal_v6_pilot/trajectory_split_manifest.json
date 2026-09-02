@@ -1,0 +1,824 @@
+{
+  "panda": {
+    "family_assignment": {
+      "trajectory_limit": {
+        "trajectory_calibration": [
+          {
+            "source_trajectory_id": 200000070,
+            "trajectory_uid": "7f0663c22f1b0be4284a87c9412834a0c3a34ffabd1463048d8508e0ae776487"
+          },
+          {
+            "source_trajectory_id": 200000076,
+            "trajectory_uid": "f05865a245ad2f65db49628cdcef709163f125a5a55e3b7033a8705a681c90af"
+          },
+          {
+            "source_trajectory_id": 200000065,
+            "trajectory_uid": "f51f19333428a67fdd8cb733742c78c31f0781c447d656fb53daf8089d834407"
+          },
+          {
+            "source_trajectory_id": 200000060,
+            "trajectory_uid": "c9a1ccb500a3e336fe5f33922533e2eb1879af82fe253bf999a31ac928fc99dd"
+          },
+          {
+            "source_trajectory_id": 200000072,
+            "trajectory_uid": "7fcde9dc9e59711b2fef7845ceace0d6014bbdb927d6c4026eec8ac4967f7fd0"
+          },
+          {
+            "source_trajectory_id": 200000066,
+            "trajectory_uid": "f5135d539b008a35f761c0b18a03f8ca955f733c5bc64b31b5fb05034817aa9f"
+          },
+          {
+            "source_trajectory_id": 200000071,
+            "trajectory_uid": "8d8351d7a8ae993f57587e885a5a1d33ceb387c5e178429b320b967bdb40db51"
+          },
+          {
+            "source_trajectory_id": 200000067,
+            "trajectory_uid": "ddb9c54a59f283047c41adcb354b7363102a03c92bafbb00a93dbc1f52542139"
+          },
+          {
+            "source_trajectory_id": 200000061,
+            "trajectory_uid": "5e30799488e7f59632452a7d46bc03b839b6d294dc92d831c0660e82c7a8d37c"
+          },
+          {
+            "source_trajectory_id": 200000074,
+            "trajectory_uid": "574a7781dee11f362ebc8c4ede2575d8ede4a43b77d84b52f5528df55ae52604"
+          }
+        ],
+        "trajectory_policy_validation": [
+          {
+            "source_trajectory_id": 200000063,
+            "trajectory_uid": "ef7cf5617d7ec604a56e75b4418fbdc42c41bbea73f2a37fcf364c3e1498381f"
+          },
+          {
+            "source_trajectory_id": 200000068,
+            "trajectory_uid": "604a54ff6691a1d10199aed58da0aea65beb9b7034f58de67aeb9e87fbcf3e0b"
+          },
+          {
+            "source_trajectory_id": 200000077,
+            "trajectory_uid": "51ee40c71dba30d65d51a43256fe45d8d327b56c0d260db0b0fb6ba0608e36f6"
+          },
+          {
+            "source_trajectory_id": 200000075,
+            "trajectory_uid": "50cce686145285d9b682f628ba377898be58f6d8daae13ccba439bee5d1dd431"
+          },
+          {
+            "source_trajectory_id": 200000079,
+            "trajectory_uid": "a82c505f03e1405256d0b46990f9c0e908ce45a93021f7959002e2591db5bad5"
+          },
+          {
+            "source_trajectory_id": 200000073,
+            "trajectory_uid": "38739341cb10ecee969b4fb4c835614794f86ce824b01ae819cb698562eaea95"
+          },
+          {
+            "source_trajectory_id": 200000062,
+            "trajectory_uid": "9ac1ab6351a13806eb161d63b19c92627041d05ea5b62fad5e0e300cec65d165"
+          },
+          {
+            "source_trajectory_id": 200000064,
+            "trajectory_uid": "cca290c37b949ea9d7442731d995571f2e6f56c3cfe09ca76380ddcde2d89010"
+          },
+          {
+            "source_trajectory_id": 200000069,
+            "trajectory_uid": "5e194e174d5fee013ec8ad0ef782087997faee1c7ea0a8255aec9034a038b349"
+          },
+          {
+            "source_trajectory_id": 200000078,
+            "trajectory_uid": "1e1f60bc8518a5ca37c9b2132fc8d5a17eea99857bedd02cb8636e0dc2547ab2"
+          }
+        ]
+      },
+      "trajectory_orientation": {
+        "trajectory_calibration": [
+          {
+            "source_trajectory_id": 200000029,
+            "trajectory_uid": "88348cba159caea97be1763415b9e4d9371244bd01aac4f4531a6056730c26bc"
+          },
+          {
+            "source_trajectory_id": 200000021,
+            "trajectory_uid": "b0bfcb8b1304eae7cc24a8e49bf75a92ac9b68a00a89f66b1e79ce09341592ca"
+          },
+          {
+            "source_trajectory_id": 200000038,
+            "trajectory_uid": "eb7aa9d48a218d408570c87cb0f666c69fff9300bb92698611b050ad0daa252a"
+          },
+          {
+            "source_trajectory_id": 200000022,
+            "trajectory_uid": "2a7e459b3890934153a36a028e864c028847de28128c432a6506a574ed76783f"
+          },
+          {
+            "source_trajectory_id": 200000028,
+            "trajectory_uid": "78cbcb95e959b5bd1193500445b86759af00c1964be94967f97f98761e266def"
+          },
+          {
+            "source_trajectory_id": 200000033,
+            "trajectory_uid": "f4ee81d6bee2a07f95a262a9866fd181b86f7007a1ca7a3b6952d82468c45b9e"
+          },
+          {
+            "source_trajectory_id": 200000032,
+            "trajectory_uid": "60ed5aec3fee4e25f037d4db220093218ca0881482464a3cda7527525a934cf3"
+          },
+          {
+            "source_trajectory_id": 200000027,
+            "trajectory_uid": "a3e90dfffb57663a011f71dd6ee2f303e7868d73d178693cc67373caf4552c7d"
+          },
+          {
+            "source_trajectory_id": 200000037,
+            "trajectory_uid": "887fa831473d22df4d5cacd80a6c12bc78365e2966cd33e9b7c862cf7b5f7af9"
+          },
+          {
+            "source_trajectory_id": 200000026,
+            "trajectory_uid": "ee4e34421f95002ef92fd2420ec0b397ef1f97a6f57ec5750911669a89afaa9f"
+          }
+        ],
+        "trajectory_policy_validation": [
+          {
+            "source_trajectory_id": 200000020,
+            "trajectory_uid": "b08f275adcdd317755e354603f54a42f5dfb4b190f40417b9347af09b5c8d223"
+          },
+          {
+            "source_trajectory_id": 200000036,
+            "trajectory_uid": "9491c57d7269a938f870dbad4a381018ca5e70344b31ace4b54948d5a4196f7c"
+          },
+          {
+            "source_trajectory_id": 200000035,
+            "trajectory_uid": "bfceef63b35c7b084acf762e89a7a76b08a01aed754e46cd14d6eb8a1cb1b2b1"
+          },
+          {
+            "source_trajectory_id": 200000023,
+            "trajectory_uid": "8c148e8f26c9d8a0600a4d04dc38978bdcb6a94e8d0b5d3a68dba81cb5d02a09"
+          },
+          {
+            "source_trajectory_id": 200000039,
+            "trajectory_uid": "79a6fd633396355a20fa69db64c28f35275a5c2a617fde48cd3741faf0f565be"
+          },
+          {
+            "source_trajectory_id": 200000024,
+            "trajectory_uid": "acb75a9269616e2e41859714851140c639231a78f27546561f18b7937ffc8d7d"
+          },
+          {
+            "source_trajectory_id": 200000030,
+            "trajectory_uid": "fdc2f6ea014bec57d17acc209475b9d5e659479030ece8ff13842d0290fed8b1"
+          },
+          {
+            "source_trajectory_id": 200000031,
+            "trajectory_uid": "05522c8ea914fb2f44762728d80926e795d59010c789620fffab2f9c506c9606"
+          },
+          {
+            "source_trajectory_id": 200000034,
+            "trajectory_uid": "61039cf021778584914ff8fd413dc9aac6c8a62fd4ff03d79c09d0c8ef25181b"
+          },
+          {
+            "source_trajectory_id": 200000025,
+            "trajectory_uid": "0fc3a13dbb88b31a6651cf04d9a65b1f8ec2dd6b17241c5a3581c38d2835b12b"
+          }
+        ]
+      },
+      "trajectory_singular": {
+        "trajectory_calibration": [
+          {
+            "source_trajectory_id": 200000047,
+            "trajectory_uid": "3b782bed7554bbeb3f81b8ece07fbee2ce14a2623dcab093784d31f8c8bb8f4a"
+          },
+          {
+            "source_trajectory_id": 200000044,
+            "trajectory_uid": "f07482b8dd18cf0f207bcfde4952ea3be3f24f32651db7c16df959e31c34ef14"
+          },
+          {
+            "source_trajectory_id": 200000041,
+            "trajectory_uid": "5028ebac7cbc795f4caa60a3223a3e518c5021d7f5652a03491f2870384c3346"
+          },
+          {
+            "source_trajectory_id": 200000058,
+            "trajectory_uid": "6a96747cbd7ba51190069241e4af9dc7cf44ead2c152fffac341052a391bb51f"
+          },
+          {
+            "source_trajectory_id": 200000049,
+            "trajectory_uid": "3ccaddb457d8c108038a11444d9305a8642d0071b9c9a62e97f9ec6ec823d1c7"
+          },
+          {
+            "source_trajectory_id": 200000043,
+            "trajectory_uid": "f74abcfb549ecbce3d466ccd5622fb8faf1667e1ff3a6168377650b0b404d699"
+          },
+          {
+            "source_trajectory_id": 200000059,
+            "trajectory_uid": "0ca3fd27e2696e236d055c72c4ea08145b578c15c307497fa5f956b14519226a"
+          },
+          {
+            "source_trajectory_id": 200000054,
+            "trajectory_uid": "77f5e98c5014832ffa54f83d29e146786e47921ef90a1fa7d7632a3dcc93ee6a"
+          },
+          {
+            "source_trajectory_id": 200000046,
+            "trajectory_uid": "7c9b38d2ad8f724f240b414ad77c2b44f47a2fb2da4f3c516578735dff63af3a"
+          },
+          {
+            "source_trajectory_id": 200000048,
+            "trajectory_uid": "317dc6110f629f9092df6c9da3d0fa890ebf5c40265872bc3d6c4f416566035c"
+          }
+        ],
+        "trajectory_policy_validation": [
+          {
+            "source_trajectory_id": 200000045,
+            "trajectory_uid": "b5b1c3b4fb2691f3d09f3b1a201fd07c577617190b3fcd4b3dc2d96cf628e8e4"
+          },
+          {
+            "source_trajectory_id": 200000050,
+            "trajectory_uid": "7c8ac1603180551ad8d4328215f6b0c945f018a071f73ab7ea6839a8af1a67d1"
+          },
+          {
+            "source_trajectory_id": 200000055,
+            "trajectory_uid": "7b1df6ec517aeac5a86cdaf9dc25609eecd26be213d72688d05e5937dca53d94"
+          },
+          {
+            "source_trajectory_id": 200000040,
+            "trajectory_uid": "ffddf4cbd7d3577236ff46ccde676590bae0513da041efec59be153e7a2b90c7"
+          },
+          {
+            "source_trajectory_id": 200000053,
+            "trajectory_uid": "9f0fa70901c26fa1854caad6718b805d90e99b6e39066eb7b7a11a40ccb9356e"
+          },
+          {
+            "source_trajectory_id": 200000051,
+            "trajectory_uid": "8e5df75676014aeaab3229857a05fb8704c84f9ea7551182ad7a30c43722edc4"
+          },
+          {
+            "source_trajectory_id": 200000056,
+            "trajectory_uid": "545ef00117e4089a0bc0fe21c286a38f305b9f49e43161badeac7ee2255f17ab"
+          },
+          {
+            "source_trajectory_id": 200000057,
+            "trajectory_uid": "528cfadf644ef39be9f33b9d091faa0fcc0c758deebfcc98fcae672c1fbea862"
+          },
+          {
+            "source_trajectory_id": 200000042,
+            "trajectory_uid": "c064fee3e7daaf2131e1830f09f338309fb15381df56da56751e7d5050362ea0"
+          },
+          {
+            "source_trajectory_id": 200000052,
+            "trajectory_uid": "3d6f806572e9b6dc84058e595f6b88da64d8a66e35bd725b13b5d4eeae1510c2"
+          }
+        ]
+      },
+      "trajectory_smooth": {
+        "trajectory_calibration": [
+          {
+            "source_trajectory_id": 200000011,
+            "trajectory_uid": "e8cb93d15dc9a6c8a7602f56c0faded0971dfe746cadefb00ca7e3c54677b37c"
+          },
+          {
+            "source_trajectory_id": 200000009,
+            "trajectory_uid": "4f460bbccb3135a138bb22c39f6ff4516ec908cf1a20d1ed3655770db1645d9b"
+          },
+          {
+            "source_trajectory_id": 200000018,
+            "trajectory_uid": "b2f401c7c279a1202b262ae15a53c21d477e19062d96feed61cc0621b635891c"
+          },
+          {
+            "source_trajectory_id": 200000004,
+            "trajectory_uid": "f5b48cd4b3855608900461ef18a8ee969d44613e2783877b1461f299b43c56da"
+          },
+          {
+            "source_trajectory_id": 200000006,
+            "trajectory_uid": "92c37e6c31a1298fae4ebc255d27bb9197b242f18b66ffbeebbef9addb4451c5"
+          },
+          {
+            "source_trajectory_id": 200000005,
+            "trajectory_uid": "ee28a7c1a6c217ff121134ff30c6beb0d97b91d57bf0e7a0539b332161b52492"
+          },
+          {
+            "source_trajectory_id": 200000019,
+            "trajectory_uid": "dbc7e9a059aa47f189b7c141f54c02909e7f0f02df65003d4326b453d37d5420"
+          },
+          {
+            "source_trajectory_id": 200000001,
+            "trajectory_uid": "2fa1acc4d69decb8b6e3a9d3ab3400e0af966020b530264bd99141d272a85ef1"
+          },
+          {
+            "source_trajectory_id": 200000007,
+            "trajectory_uid": "97dc74dfd921f8d2f1a9c3b0dea97c03345d86596cb3c702c60f5d836d0c696e"
+          },
+          {
+            "source_trajectory_id": 200000003,
+            "trajectory_uid": "38ec45d17f3017d7a894044deb574ad577a5a136dd88d1530b73d8e1af8f761c"
+          }
+        ],
+        "trajectory_policy_validation": [
+          {
+            "source_trajectory_id": 200000014,
+            "trajectory_uid": "dd6cbddbaca99f44ee3f25a9e2514b2d51a494bef5a1ad70bcdba8f4c5d9f267"
+          },
+          {
+            "source_trajectory_id": 200000000,
+            "trajectory_uid": "39e9e33151f4e670f6c1e0ff492c23fee1437c655443176d1cdc2385d091aa84"
+          },
+          {
+            "source_trajectory_id": 200000012,
+            "trajectory_uid": "574ac796b07c73a28354c9fb3da8640723e8eff720483cefbdc302b87cbd8cca"
+          },
+          {
+            "source_trajectory_id": 200000016,
+            "trajectory_uid": "0b3835b048132b18cbceb7aa17a456e339a13e2b9c6794d848bc7154921409df"
+          },
+          {
+            "source_trajectory_id": 200000002,
+            "trajectory_uid": "01166c5b299eb7ecde83269e863e2384d20d65c1287ef7396809376b7918f0e5"
+          },
+          {
+            "source_trajectory_id": 200000010,
+            "trajectory_uid": "77fd85fabf194e81d577c21ed1d5646153890e271cb2288c5fa6df666174237b"
+          },
+          {
+            "source_trajectory_id": 200000017,
+            "trajectory_uid": "628912da1b9ed9780f1147c052ab047cfba718366af60cc3d8d59c532d79f92f"
+          },
+          {
+            "source_trajectory_id": 200000008,
+            "trajectory_uid": "01c18b3ffe2bc683b4fc0fa80035cfbdae24b00839cba86663ded20b14d71217"
+          },
+          {
+            "source_trajectory_id": 200000013,
+            "trajectory_uid": "d4f7ab68981f480d0ab80ce21a99537bc46af44e9b86038aa0b6d8c894d3f917"
+          },
+          {
+            "source_trajectory_id": 200000015,
+            "trajectory_uid": "050ed43b771f139af3de1ec47657aed9d70a651e4f41917e07a7717acda2ade2"
+          }
+        ]
+      }
+    },
+    "generator": "generate_reference_trajectory_tests",
+    "paths_per_family_per_role": 10,
+    "paths_per_family_pool": 20,
+    "policy_validation_outcomes_computed_during_split": false,
+    "pool_frame_count": 12000,
+    "pool_seed": 860601,
+    "pool_trajectory_count": 80,
+    "robot": "panda",
+    "roles": {
+      "trajectory_calibration": {
+        "by_family": {
+          "trajectory_limit": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_orientation": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_singular": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_smooth": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          }
+        },
+        "frame_count": 6000,
+        "ordered_trajectory_digest": "d92276a259f6fc6a540fcd27822af07a1a2e9fe04cb9f8a738fc589b77eec0fc",
+        "trajectory_count": 40,
+        "trajectory_set_digest": "3a95ddd73deff0c914dcdf1a74685a567b753ac91ab85312940a81d28ff9f6fb",
+        "unique_trajectory_count": 40
+      },
+      "trajectory_policy_validation": {
+        "by_family": {
+          "trajectory_limit": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_orientation": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_singular": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_smooth": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          }
+        },
+        "frame_count": 6000,
+        "ordered_trajectory_digest": "94a7710f0ceccacb77b2c01638156ff7828f57ba85e935d67a9670840d2e7104",
+        "trajectory_count": 40,
+        "trajectory_set_digest": "fdea4e5db32bff25e8bc56584500f7d5703cd577c39e6fe3acb3966425b43cf8",
+        "unique_trajectory_count": 40
+      }
+    },
+    "split_seed": 860611,
+    "steps_per_trajectory": 150,
+    "trajectory_uid_overlap_count": 0
+  },
+  "ur5e": {
+    "family_assignment": {
+      "trajectory_limit": {
+        "trajectory_calibration": [
+          {
+            "source_trajectory_id": 200000079,
+            "trajectory_uid": "197236cebb624c90092d12874927cc461a9189cede6d5ab943490675e0e44995"
+          },
+          {
+            "source_trajectory_id": 200000076,
+            "trajectory_uid": "5668ca70a3ce73c990ec30eff9b11baa07dbf7783493be23ea3a2751a037ce2b"
+          },
+          {
+            "source_trajectory_id": 200000074,
+            "trajectory_uid": "1fd1d5c70d9a73b675f8f7c1af19ebe0ac470cda25c22c06d455aa9a770b7e2c"
+          },
+          {
+            "source_trajectory_id": 200000066,
+            "trajectory_uid": "74df81d61ccee3f845d2c57bad63ac00d2fed9139c41ce53be354934c8dfbb4a"
+          },
+          {
+            "source_trajectory_id": 200000072,
+            "trajectory_uid": "66c452e8cc020b14b77ae8eb68bed24ffd5e157b0922f9c9b77fd76fe12f2d9f"
+          },
+          {
+            "source_trajectory_id": 200000060,
+            "trajectory_uid": "0c0309c59e0c83ff1a40a21857039e1cc179498ca3a3019b149a7ed45c61641e"
+          },
+          {
+            "source_trajectory_id": 200000061,
+            "trajectory_uid": "ad18a524dbe0b822eec9be728290ce38fb23cd24ecf7050c8038537a04870a45"
+          },
+          {
+            "source_trajectory_id": 200000078,
+            "trajectory_uid": "81295de7d67b741a043885e123dbc17f380316629c510745b9e1f2d505e4ef87"
+          },
+          {
+            "source_trajectory_id": 200000077,
+            "trajectory_uid": "a2d8c6fff73aa2a87373a4c7f02d31601c96d8efc33c6ac5c0739f92bc3a58e0"
+          },
+          {
+            "source_trajectory_id": 200000073,
+            "trajectory_uid": "1086a9f111d821be1f1c8191c58a757106456c80db411de2de8177406684e1e2"
+          }
+        ],
+        "trajectory_policy_validation": [
+          {
+            "source_trajectory_id": 200000062,
+            "trajectory_uid": "17b7b6315e6bcbeb1686017006e095ca4a1b5a63077748146b1f98e18e8ae8a3"
+          },
+          {
+            "source_trajectory_id": 200000068,
+            "trajectory_uid": "d2b84b6527cba7d91275b01c0ac2d68fa5c10da65d8e2b56c8e0341de04f3e10"
+          },
+          {
+            "source_trajectory_id": 200000075,
+            "trajectory_uid": "46d21e29fb59727e68048aa4538b2f7c489af73c5fb2abc903e211b513a76d8f"
+          },
+          {
+            "source_trajectory_id": 200000065,
+            "trajectory_uid": "a1a3ae54e2a0f0345bd5c43feb5f66d4f344c315e86a55f2c9024333fd3303d3"
+          },
+          {
+            "source_trajectory_id": 200000064,
+            "trajectory_uid": "d8bea015a862c899375ab88cbf634865e9ec0e74db3a1883ee3bb60593201b02"
+          },
+          {
+            "source_trajectory_id": 200000071,
+            "trajectory_uid": "8bc1537f7d3fdba00d327ad155eaf326f5b15774ec26eaf3de86153c6c20a95b"
+          },
+          {
+            "source_trajectory_id": 200000070,
+            "trajectory_uid": "7d57149ec8578b52854012f46e23e2a9c87b53bd5731022fd6d69294bafa99ba"
+          },
+          {
+            "source_trajectory_id": 200000063,
+            "trajectory_uid": "fddfcf31fc39e044a7e5dcb53292c61719a0237e2c612da6afe0441c862e1461"
+          },
+          {
+            "source_trajectory_id": 200000067,
+            "trajectory_uid": "935b79dedd5fed46e1e65a8d7896044ef7ad732fcdf61d5c7f68005cac6f4663"
+          },
+          {
+            "source_trajectory_id": 200000069,
+            "trajectory_uid": "687ed9db0cdb642b2ad7f93c9e716fb2d21f09f779af0dc0f946c299b6f526f8"
+          }
+        ]
+      },
+      "trajectory_orientation": {
+        "trajectory_calibration": [
+          {
+            "source_trajectory_id": 200000020,
+            "trajectory_uid": "b40981b88039b3c17dcde7b1d576f48aa6594a02b3d82767c3a46cfb2a9ea92a"
+          },
+          {
+            "source_trajectory_id": 200000039,
+            "trajectory_uid": "0ddc0fbc0ddbaaaa9e2d7cf34cddcac1ced216f59b217322e4e8433ab6d6f879"
+          },
+          {
+            "source_trajectory_id": 200000035,
+            "trajectory_uid": "af1cfae6c3da319e0fcec0f3433e3945071725880443e9a24dfe5b5e36fcfa61"
+          },
+          {
+            "source_trajectory_id": 200000028,
+            "trajectory_uid": "1ff4ba8c218ea3f8b760443e8d00e60eaa0869189f549c3bb89dc5911a6cc583"
+          },
+          {
+            "source_trajectory_id": 200000023,
+            "trajectory_uid": "0cf72447a21ef298a16067f7853445f3ca22fcb68ef8683d79cbc32f7794c562"
+          },
+          {
+            "source_trajectory_id": 200000030,
+            "trajectory_uid": "deae6eacae75c9012b530bb44a77ad1f6e3c0093a589281f593b34d0625a6053"
+          },
+          {
+            "source_trajectory_id": 200000029,
+            "trajectory_uid": "6a7821ff4352638f3c400d388e6e0b8aac1e89ba40947ba7643b29929076b64d"
+          },
+          {
+            "source_trajectory_id": 200000027,
+            "trajectory_uid": "16abd8e4a83407ef4ecf3053f18276b23126cadbad8d8037e98d13657bfab60a"
+          },
+          {
+            "source_trajectory_id": 200000037,
+            "trajectory_uid": "c96e251f53822aa1eaaa082d2f3a121f5bf2160b5867e28941c0d5c073808368"
+          },
+          {
+            "source_trajectory_id": 200000026,
+            "trajectory_uid": "dccbac1a6d44e12ea17e8809c7ff8d4688f144100f92fd628fcde1d78022b975"
+          }
+        ],
+        "trajectory_policy_validation": [
+          {
+            "source_trajectory_id": 200000025,
+            "trajectory_uid": "5e863e1db70add26dc8939cb36b07507680ed12b3f5fb166a0a55ed8dabca815"
+          },
+          {
+            "source_trajectory_id": 200000034,
+            "trajectory_uid": "7ead0fc0db4e1868a151e6430e798a851a1f029d42b739665c41218a0136d65a"
+          },
+          {
+            "source_trajectory_id": 200000021,
+            "trajectory_uid": "e958e92c87e1e0801e8653f2ae18fe8ce8e3f17f2184916f1c4b21056d0e7d87"
+          },
+          {
+            "source_trajectory_id": 200000033,
+            "trajectory_uid": "36d2a47777012e51729cfccdc17693d8d844adcde73c3ec20da782e87db0cafd"
+          },
+          {
+            "source_trajectory_id": 200000024,
+            "trajectory_uid": "4bed5a86afdb145cd9903542ff4b08bf6896d063c3c265b22895c92d0a8836fe"
+          },
+          {
+            "source_trajectory_id": 200000038,
+            "trajectory_uid": "ba3bad85636b2cbb222733de73de7d5609e0ce1544a8d01ac21cada5b842082d"
+          },
+          {
+            "source_trajectory_id": 200000032,
+            "trajectory_uid": "d911ca5dfbc7265926c26bb90980cbb5510c8d51d1fb814703cac42dac76fe8c"
+          },
+          {
+            "source_trajectory_id": 200000036,
+            "trajectory_uid": "924aa1dea22d22c45cfb32ed7c3d71eb869d3e77c3816c30e24fc0d3c1050639"
+          },
+          {
+            "source_trajectory_id": 200000031,
+            "trajectory_uid": "2a63d7c7077944fc04ad12db5ef634cfb9160d0fa7ab3ff0db690110724c1cc6"
+          },
+          {
+            "source_trajectory_id": 200000022,
+            "trajectory_uid": "732f6a7b523a68a79512f1084006d34fd0ca831dc3961ee726d4fabb2f8010f7"
+          }
+        ]
+      },
+      "trajectory_singular": {
+        "trajectory_calibration": [
+          {
+            "source_trajectory_id": 200000058,
+            "trajectory_uid": "73c8a2249d6cd2951d10ed33aa64a9f3847aa980567f356640f559f1f0ace685"
+          },
+          {
+            "source_trajectory_id": 200000051,
+            "trajectory_uid": "bae8dab1631277268c573470cc2adbc6e901d239725d55ede11977c9a103c7d8"
+          },
+          {
+            "source_trajectory_id": 200000052,
+            "trajectory_uid": "0156fefaa8c06476d6df646f75b627d5152ae4f502ef18e1a8f9441c6442321d"
+          },
+          {
+            "source_trajectory_id": 200000046,
+            "trajectory_uid": "1c648c90956491161eded6001803d9b0e5354eb6afdc936ca13c506b9f5aa96b"
+          },
+          {
+            "source_trajectory_id": 200000043,
+            "trajectory_uid": "368778b09af0049ac354511eeb24fe815c2faefa1272642ce7d099bfb9fb7fc8"
+          },
+          {
+            "source_trajectory_id": 200000040,
+            "trajectory_uid": "9806bda1eb36572c2b1fc161c0b82332db79671d934b5acc2bba08cc6f3e4883"
+          },
+          {
+            "source_trajectory_id": 200000049,
+            "trajectory_uid": "7f521407f35e4b9539e08616a315aa8909556e1104028533cd75ed21accac0a8"
+          },
+          {
+            "source_trajectory_id": 200000053,
+            "trajectory_uid": "7deb09f178c2e0d5a9ad7fcbd6309d364df44bda1280aca73cbad866b55c5fd4"
+          },
+          {
+            "source_trajectory_id": 200000048,
+            "trajectory_uid": "72481af824f729e85b017a659ea567646eec61b098ea96d355cac4ea5326ad5b"
+          },
+          {
+            "source_trajectory_id": 200000041,
+            "trajectory_uid": "c27378878326bd3f4a31d8f23cc627f9b84753e11cf3746c0dbd112bae762e6d"
+          }
+        ],
+        "trajectory_policy_validation": [
+          {
+            "source_trajectory_id": 200000059,
+            "trajectory_uid": "e467ee44073a8cd17a85dfc4ea6295a4287ee299f81fcdb6371ac174a28eb814"
+          },
+          {
+            "source_trajectory_id": 200000042,
+            "trajectory_uid": "d8119d9ce57576761f48e2029881c7b10ee083c9fb7da2dcd0d54413e0e80309"
+          },
+          {
+            "source_trajectory_id": 200000054,
+            "trajectory_uid": "a91368b0d284c3950a676ab78add53a5bf4881f8363abe99c7c4008ebea9a3f1"
+          },
+          {
+            "source_trajectory_id": 200000047,
+            "trajectory_uid": "8205cf9a812268b9bde5fffb9615a4dfcf828f3fe1357cf7e95081c16423b227"
+          },
+          {
+            "source_trajectory_id": 200000056,
+            "trajectory_uid": "f10753adaf58aa5716358618edfe98f2a551d5e5cebf807548536f064e74cdc4"
+          },
+          {
+            "source_trajectory_id": 200000057,
+            "trajectory_uid": "07362d31ed79636d8898438e023fdb1af0969d67a39d752fd0317d9e336c5888"
+          },
+          {
+            "source_trajectory_id": 200000050,
+            "trajectory_uid": "ab10bd5db73e46e2ec671cd51bb393d581ac008a17d7dfcca1a9d85a7edb8350"
+          },
+          {
+            "source_trajectory_id": 200000044,
+            "trajectory_uid": "213cdc5453ba5a3f9231494ac52cb7b6b5d79f0b532d21eeb1096c39e0ead5e8"
+          },
+          {
+            "source_trajectory_id": 200000045,
+            "trajectory_uid": "403916d0315d0a07b53d4a94b2de5d936c8eff391f951878eea59a6c4a9d8a04"
+          },
+          {
+            "source_trajectory_id": 200000055,
+            "trajectory_uid": "087ae50324c335b2e94dfaa1b80b154a08ee5d7724b9e3b886518ab255e4752f"
+          }
+        ]
+      },
+      "trajectory_smooth": {
+        "trajectory_calibration": [
+          {
+            "source_trajectory_id": 200000014,
+            "trajectory_uid": "243b3014192f5bd74b317eed80e774c05ace252d043d4ff1d60893f61da66369"
+          },
+          {
+            "source_trajectory_id": 200000006,
+            "trajectory_uid": "9237229639daf1c35825db1691eed7bb57b7f8fa56abf6d9fef17ca3b12617ea"
+          },
+          {
+            "source_trajectory_id": 200000008,
+            "trajectory_uid": "fa8a2e943f92f03030c6614a3cfc493fcafc65b713dfb53ae59ae350190e4d0e"
+          },
+          {
+            "source_trajectory_id": 200000018,
+            "trajectory_uid": "512a48cc4fddf7ed63e39be7e564a8c0e3b607b8d8c0d8821464a6f526383c21"
+          },
+          {
+            "source_trajectory_id": 200000003,
+            "trajectory_uid": "b8e19905e00c91ef67e4cb90e3bc4831ad83fa4588a42ccb0b1290c60f79a97e"
+          },
+          {
+            "source_trajectory_id": 200000015,
+            "trajectory_uid": "3d4a678040d2ce10eb09e64bebcc30fcaac53659881c2525ab320cc3be819f3c"
+          },
+          {
+            "source_trajectory_id": 200000007,
+            "trajectory_uid": "ab74d8e412fb6e6ee82101f7afeb9b02a941d6af1b6362c2e920db4d48400f05"
+          },
+          {
+            "source_trajectory_id": 200000016,
+            "trajectory_uid": "c13e19f6b87f4f40946b472f38141e8bdbc231704fb4c066bee0dba6b779aa08"
+          },
+          {
+            "source_trajectory_id": 200000012,
+            "trajectory_uid": "97a738050769a355e9ba8a65b602c9ebd4052c4b05715f736be7df7a3212e58b"
+          },
+          {
+            "source_trajectory_id": 200000009,
+            "trajectory_uid": "414df5a9d03f3cba00badd48b96a6d42263758e5ab2c2b5844d7382510ee4eb0"
+          }
+        ],
+        "trajectory_policy_validation": [
+          {
+            "source_trajectory_id": 200000002,
+            "trajectory_uid": "af90271b435313895595a83ef08dac5f14fdb7b6d8676636211a962117f890f6"
+          },
+          {
+            "source_trajectory_id": 200000001,
+            "trajectory_uid": "a0383cde988826c7a637e1e691d0d95434f701928d43aca03764c59360c33acc"
+          },
+          {
+            "source_trajectory_id": 200000013,
+            "trajectory_uid": "09988d9f97f0eb2eebb276995c270573363b75915fd00ed3fb5ab0cfbdb72138"
+          },
+          {
+            "source_trajectory_id": 200000017,
+            "trajectory_uid": "cc3f41f9b668fa4a75fbc0ece2d801a7d26f82c269e645f43dd6ca815e169046"
+          },
+          {
+            "source_trajectory_id": 200000011,
+            "trajectory_uid": "79b99137c92b1d65fda9cf50b6c55cb28641a4ca1add956144330a482aa9378a"
+          },
+          {
+            "source_trajectory_id": 200000000,
+            "trajectory_uid": "a889db383cde54b279af020427f12de72d8662a0fbf7318e8d8f7588a6c61182"
+          },
+          {
+            "source_trajectory_id": 200000004,
+            "trajectory_uid": "0b38bf4114e9b5c14e06b8c69e12f600e1d4e80b7efc43abc652c1638f718599"
+          },
+          {
+            "source_trajectory_id": 200000005,
+            "trajectory_uid": "7930c376cf183a93dad039b9367869fda8b016d405c5e719b47ac07b5c250f11"
+          },
+          {
+            "source_trajectory_id": 200000019,
+            "trajectory_uid": "1f96265182ec2a780d940f109d1a4351f03e1658b49580cd42428e63258cc46f"
+          },
+          {
+            "source_trajectory_id": 200000010,
+            "trajectory_uid": "255113558babf788e124d1b0b1d63d44ce1b779624d4988fa0b99809b0663503"
+          }
+        ]
+      }
+    },
+    "generator": "generate_reference_trajectory_tests",
+    "paths_per_family_per_role": 10,
+    "paths_per_family_pool": 20,
+    "policy_validation_outcomes_computed_during_split": false,
+    "pool_frame_count": 12000,
+    "pool_seed": 860602,
+    "pool_trajectory_count": 80,
+    "robot": "ur5e",
+    "roles": {
+      "trajectory_calibration": {
+        "by_family": {
+          "trajectory_limit": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_orientation": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_singular": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_smooth": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          }
+        },
+        "frame_count": 6000,
+        "ordered_trajectory_digest": "33e8d48ad765d81c1fdf2620c5f8ac9d16d3a468b22335648adc7718b878541f",
+        "trajectory_count": 40,
+        "trajectory_set_digest": "a598aa77ef1fac646c239824c84ddcb3e283b8f6668693004a7d7b5e5f0aa34c",
+        "unique_trajectory_count": 40
+      },
+      "trajectory_policy_validation": {
+        "by_family": {
+          "trajectory_limit": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_orientation": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_singular": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          },
+          "trajectory_smooth": {
+            "frame_count": 1500,
+            "trajectory_count": 10
+          }
+        },
+        "frame_count": 6000,
+        "ordered_trajectory_digest": "0637eda5132e18125e377499a26fa2b0c37e20ad44bca0585536e3c1689df822",
+        "trajectory_count": 40,
+        "trajectory_set_digest": "49269ddf0a888fdfa09edc7129fc731701f6b70a862d2a472baa0f0c0ec34b5a",
+        "unique_trajectory_count": 40
+      }
+    },
+    "split_seed": 860612,
+    "steps_per_trajectory": 150,
+    "trajectory_uid_overlap_count": 0
+  }
+}

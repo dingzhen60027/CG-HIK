@@ -1,0 +1,23 @@
+{
+  "failure": {
+    "candidate_count": 144,
+    "eligible_candidate_count": 0,
+    "policy_validation_outcomes_computed": false,
+    "reason": "no calibration candidate preserves the complete always-hard trajectory-completion vector; policy-validation remains unopened",
+    "robot": "ur5e"
+  },
+  "policy_validation_outcomes_computed": false,
+  "policy_validation_used_for_selection": false,
+  "selected": {
+    "panda": {
+      "candidate_index": 94,
+      "consecutive_successes": 3,
+      "hold_frames": 20,
+      "probe_interval": 3,
+      "reentry_threshold": 0.95
+    },
+    "ur5e": null
+  },
+  "selection_role": "trajectory_calibration",
+  "status": "calibration_no_go"
+}

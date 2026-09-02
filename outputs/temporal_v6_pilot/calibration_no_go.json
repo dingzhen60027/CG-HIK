@@ -1,0 +1,7 @@
+{
+  "candidate_count": 144,
+  "eligible_candidate_count": 0,
+  "policy_validation_outcomes_computed": false,
+  "reason": "no calibration candidate preserves the complete always-hard trajectory-completion vector; policy-validation remains unopened",
+  "robot": "ur5e"
+}
