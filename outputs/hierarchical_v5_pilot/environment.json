@@ -1,0 +1,66 @@
+{
+  "captured_utc": "2026-09-02T09:30:47.564146+00:00",
+  "completed_utc": "2026-09-02T09:30:47.597847+00:00",
+  "cpu_count": 24,
+  "cuda_available": true,
+  "cuda_version": "12.8",
+  "cudnn_version": 91900,
+  "gpu": "Quadro RTX 8000",
+  "numpy": "2.4.4",
+  "pinocchio": "3.9.0",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+  "processor": "x86_64",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "quiet_events": {
+    "panda": {
+      "development_measurements": {
+        "calibration_queries": {
+          "context": "hierarchical-v5/panda/calibration_queries/labels",
+          "had_busy_process": false,
+          "last_busy_processes": [],
+          "wait_seconds": 0.011937267961911857
+        },
+        "policy_validation_queries": {
+          "context": "hierarchical-v5/panda/policy_validation_queries/labels",
+          "had_busy_process": false,
+          "last_busy_processes": [],
+          "wait_seconds": 0.010038721025921404
+        },
+        "risk_train_queries": {
+          "context": "hierarchical-v5/panda/risk_train_queries/labels",
+          "had_busy_process": false,
+          "last_busy_processes": [],
+          "wait_seconds": 0.010360897984355688
+        }
+      },
+      "policy_benchmark": []
+    },
+    "ur5e": {
+      "development_measurements": {
+        "calibration_queries": {
+          "context": "hierarchical-v5/ur5e/calibration_queries/labels",
+          "had_busy_process": false,
+          "last_busy_processes": [],
+          "wait_seconds": 0.009958675014786422
+        },
+        "policy_validation_queries": {
+          "context": "hierarchical-v5/ur5e/policy_validation_queries/labels",
+          "had_busy_process": false,
+          "last_busy_processes": [],
+          "wait_seconds": 0.010910212062299252
+        },
+        "risk_train_queries": {
+          "context": "hierarchical-v5/ur5e/risk_train_queries/labels",
+          "had_busy_process": false,
+          "last_busy_processes": [],
+          "wait_seconds": 0.01055962301325053
+        }
+      },
+      "policy_benchmark": []
+    }
+  },
+  "scikit_learn": "1.9.0",
+  "scipy": "1.17.0",
+  "started_utc": "2026-09-02T08:50:42.489242+00:00",
+  "torch": "2.11.0+cu128"
+}

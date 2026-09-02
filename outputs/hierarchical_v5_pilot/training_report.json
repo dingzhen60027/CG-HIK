@@ -1,0 +1,352 @@
+{
+  "panda": {
+    "architecture": [
+      7,
+      16,
+      16,
+      2
+    ],
+    "artifacts": {
+      "eager": {
+        "path": "panda_fast_gate_predictor.pt",
+        "sha256": "a2ab06e4e0abd22217072f5319bc4e693d96f85c8bfd399575c08b8a49e0c3a3",
+        "size": 13193
+      },
+      "policy": {
+        "path": "panda_fast_gate_policy.json",
+        "sha256": "d6c8c839b996cb17d9d88f6e19b9e2cbf3634153d4f926edc1fc6c289ca4e5d0",
+        "size": 1478
+      },
+      "preliminary_torchscript": {
+        "path": "panda_preliminary_fast_gate.ts",
+        "sha256": "a2684726da7e9dba3573c3f6d84d48836c473d125660c7def6e825c4ea75bbf9",
+        "size": 8119
+      },
+      "torchscript": {
+        "path": "panda_exact_fast_gate.ts",
+        "sha256": "c15b09079e66cf29f2a3f5884ba4966ba46cb66ad39c709fcef43b6d236e6add",
+        "size": 7953
+      }
+    },
+    "calibration_benefit_rate": 0.6256,
+    "calibration_local_success_rate": 0.6256,
+    "calibration_metrics": {
+      "fast_latency_benefit": {
+        "brier": 0.022536230757607377,
+        "coverage": 0.9404,
+        "ece": 0.009486913126075816,
+        "nll": 0.07891165207989964
+      },
+      "local_verified_success": {
+        "brier": 0.02255669698961419,
+        "coverage": 0.9412,
+        "ece": 0.009815683440839846,
+        "nll": 0.0789849955594353
+      }
+    },
+    "calibration_query_count": 2500,
+    "export": {
+      "architecture": [
+        7,
+        16,
+        16,
+        2
+      ],
+      "calibration_count": 2500,
+      "calibration_role": "calibration_queries",
+      "feature_names": [
+        "target_position_step",
+        "target_orientation_step",
+        "previous_joint_limit_margin_min",
+        "previous_jacobian_sigma_min",
+        "previous_jacobian_condition_number",
+        "one_step_dls_max_joint_update",
+        "estimated_velocity_limit_utilization_max"
+      ],
+      "fit_count": 15000,
+      "fit_role": "risk_train_queries",
+      "format_version": 1,
+      "head_names": [
+        "local_verified_success",
+        "fast_latency_benefit"
+      ],
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        7
+      ],
+      "label_contract": {
+        "command_acceptance": "deterministic_verifier_only",
+        "fast_latency_benefit": "measured local-fast-path total latency is lower than measured direct robust-path total latency for the same development query",
+        "learned_seed_features_forbidden": true,
+        "local_verified_success": "previous-state local DLS completes within the frozen fast budget and passes the deterministic verifier without escalation"
+      },
+      "output_dtype": "float64",
+      "torchscript_load_only": true,
+      "user": {
+        "artifact": {
+          "selection_role": "calibration_queries"
+        },
+        "calibration": {
+          "robot": "panda",
+          "test_data_loaded": false
+        },
+        "gate_overhead_ns_for_latency_benefit": 23671.449999999997,
+        "robot": "panda",
+        "test_data_loaded": false
+      }
+    },
+    "final_gate_overhead": {
+      "mean_ns": 23130.8056,
+      "p50_ns": 23024.5,
+      "p95_ns": 24035.199999999997,
+      "p99_ns": 25344.05,
+      "samples": 2500.0
+    },
+    "numerical_equivalence": {
+      "absolute_tolerance": 1e-09,
+      "max_absolute_logit_error": 0.0,
+      "max_absolute_probability_error": 1.1102230246251565e-16,
+      "passed": true,
+      "query_count": 1000,
+      "route_match_count": 1000,
+      "route_match_rate": 1.0
+    },
+    "preliminary_gate_overhead": {
+      "mean_ns": 22855.7916,
+      "p50_ns": 22762.0,
+      "p95_ns": 23671.449999999997,
+      "p99_ns": 24558.139999999996,
+      "samples": 2500.0
+    },
+    "robot": "panda",
+    "test_data_loaded": false,
+    "threshold_selection": {
+      "candidate_count": 100,
+      "constraints": {
+        "minimum_fast_count": 25,
+        "minimum_fast_precision": 0.99,
+        "minimum_positive_benefit_rate": 0.99
+      },
+      "eligible_candidate_count": 84,
+      "grid": {
+        "latency_benefit": [
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.85,
+          0.9,
+          0.925,
+          0.95,
+          0.975,
+          0.99
+        ],
+        "local_success": [
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.85,
+          0.9,
+          0.925,
+          0.95,
+          0.975,
+          0.99
+        ]
+      },
+      "objective": "maximum FAST coverage subject to two precision constraints",
+      "query_count": 2500,
+      "selected": {
+        "eligible": true,
+        "fast_count": 1474,
+        "fast_precision": 0.9918588873812755,
+        "fast_rate": 0.5896,
+        "joint_positive_rate": 0.9918588873812755,
+        "latency_benefit_threshold": 0.85,
+        "local_success_threshold": 0.85,
+        "positive_benefit_rate": 0.9918588873812755
+      },
+      "selection_data_usage": "threshold_selection_only",
+      "selection_role": "calibration_queries"
+    },
+    "training_benefit_rate": 0.7118666666666666,
+    "training_local_success_rate": 0.7118666666666666,
+    "training_query_count": 15000
+  },
+  "ur5e": {
+    "architecture": [
+      7,
+      16,
+      16,
+      2
+    ],
+    "artifacts": {
+      "eager": {
+        "path": "ur5e_fast_gate_predictor.pt",
+        "sha256": "fda8cec1a124e505202c536db0e6f70995853f405f240858b72339c6cd64db3c",
+        "size": 13179
+      },
+      "policy": {
+        "path": "ur5e_fast_gate_policy.json",
+        "sha256": "50fd6b3132de78abc6dd83413111ea940c1918b41860480606219c73aa88d3bc",
+        "size": 1478
+      },
+      "preliminary_torchscript": {
+        "path": "ur5e_preliminary_fast_gate.ts",
+        "sha256": "086d867b24893240e37c30e17ef46addadaa04eca95d43b852e6802c55dec115",
+        "size": 8104
+      },
+      "torchscript": {
+        "path": "ur5e_exact_fast_gate.ts",
+        "sha256": "b98f76d99b6640851a9c3ba356bc2c2d0d2154b94032da11f0d454c63b0f3411",
+        "size": 7938
+      }
+    },
+    "calibration_benefit_rate": 0.5388,
+    "calibration_local_success_rate": 0.5388,
+    "calibration_metrics": {
+      "fast_latency_benefit": {
+        "brier": 0.053697807480103874,
+        "coverage": 0.856,
+        "ece": 0.010606991965671513,
+        "nll": 0.17357774945672463
+      },
+      "local_verified_success": {
+        "brier": 0.053768231998908206,
+        "coverage": 0.852,
+        "ece": 0.011231419824794179,
+        "nll": 0.17360599575215152
+      }
+    },
+    "calibration_query_count": 2500,
+    "export": {
+      "architecture": [
+        7,
+        16,
+        16,
+        2
+      ],
+      "calibration_count": 2500,
+      "calibration_role": "calibration_queries",
+      "feature_names": [
+        "target_position_step",
+        "target_orientation_step",
+        "previous_joint_limit_margin_min",
+        "previous_jacobian_sigma_min",
+        "previous_jacobian_condition_number",
+        "one_step_dls_max_joint_update",
+        "estimated_velocity_limit_utilization_max"
+      ],
+      "fit_count": 15000,
+      "fit_role": "risk_train_queries",
+      "format_version": 1,
+      "head_names": [
+        "local_verified_success",
+        "fast_latency_benefit"
+      ],
+      "input_dtype": "float32",
+      "input_shape": [
+        1,
+        7
+      ],
+      "label_contract": {
+        "command_acceptance": "deterministic_verifier_only",
+        "fast_latency_benefit": "measured local-fast-path total latency is lower than measured direct robust-path total latency for the same development query",
+        "learned_seed_features_forbidden": true,
+        "local_verified_success": "previous-state local DLS completes within the frozen fast budget and passes the deterministic verifier without escalation"
+      },
+      "output_dtype": "float64",
+      "torchscript_load_only": true,
+      "user": {
+        "artifact": {
+          "selection_role": "calibration_queries"
+        },
+        "calibration": {
+          "robot": "ur5e",
+          "test_data_loaded": false
+        },
+        "gate_overhead_ns_for_latency_benefit": 23331.25,
+        "robot": "ur5e",
+        "test_data_loaded": false
+      }
+    },
+    "final_gate_overhead": {
+      "mean_ns": 22295.3556,
+      "p50_ns": 22211.0,
+      "p95_ns": 22824.1,
+      "p99_ns": 24110.079999999998,
+      "samples": 2500.0
+    },
+    "numerical_equivalence": {
+      "absolute_tolerance": 1e-09,
+      "max_absolute_logit_error": 0.0,
+      "max_absolute_probability_error": 1.1102230246251565e-16,
+      "passed": true,
+      "query_count": 1000,
+      "route_match_count": 1000,
+      "route_match_rate": 1.0
+    },
+    "preliminary_gate_overhead": {
+      "mean_ns": 22757.6744,
+      "p50_ns": 22651.0,
+      "p95_ns": 23331.25,
+      "p99_ns": 24890.229999999996,
+      "samples": 2500.0
+    },
+    "robot": "ur5e",
+    "test_data_loaded": false,
+    "threshold_selection": {
+      "candidate_count": 100,
+      "constraints": {
+        "minimum_fast_count": 25,
+        "minimum_fast_precision": 0.99,
+        "minimum_positive_benefit_rate": 0.99
+      },
+      "eligible_candidate_count": 44,
+      "grid": {
+        "latency_benefit": [
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.85,
+          0.9,
+          0.925,
+          0.95,
+          0.975,
+          0.99
+        ],
+        "local_success": [
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.85,
+          0.9,
+          0.925,
+          0.95,
+          0.975,
+          0.99
+        ]
+      },
+      "objective": "maximum FAST coverage subject to two precision constraints",
+      "query_count": 2500,
+      "selected": {
+        "eligible": true,
+        "fast_count": 867,
+        "fast_precision": 0.9907727797001153,
+        "fast_rate": 0.3468,
+        "joint_positive_rate": 0.9907727797001153,
+        "latency_benefit_threshold": 0.95,
+        "local_success_threshold": 0.925,
+        "positive_benefit_rate": 0.9907727797001153
+      },
+      "selection_data_usage": "threshold_selection_only",
+      "selection_role": "calibration_queries"
+    },
+    "training_benefit_rate": 0.6396666666666667,
+    "training_local_success_rate": 0.6396666666666667,
+    "training_query_count": 15000
+  }
+}

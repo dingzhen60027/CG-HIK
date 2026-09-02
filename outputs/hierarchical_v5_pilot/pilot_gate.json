@@ -1,0 +1,32 @@
+{
+  "all_robots_pass": false,
+  "development_only": true,
+  "fresh_evaluation_started": false,
+  "robots": {
+    "panda": {
+      "all_pass": false,
+      "checks": {
+        "p50_improves_current": true,
+        "p95_not_worse_current": false,
+        "slow_path_easy_stage_count_zero": true,
+        "verified_success_vs_always_hard": true,
+        "verified_success_vs_current": true
+      },
+      "policy_validation_used_for_retuning": false,
+      "selection_frozen_before_policy_validation": true
+    },
+    "ur5e": {
+      "all_pass": false,
+      "checks": {
+        "p50_improves_current": false,
+        "p95_not_worse_current": false,
+        "slow_path_easy_stage_count_zero": true,
+        "verified_success_vs_always_hard": true,
+        "verified_success_vs_current": true
+      },
+      "policy_validation_used_for_retuning": false,
+      "selection_frozen_before_policy_validation": true
+    }
+  },
+  "test_data_loaded": false
+}

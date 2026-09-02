@@ -1,0 +1,64 @@
+{
+  "format_version": 1,
+  "policy": {
+    "calibration_count": 2500,
+    "calibration_role": "calibration_queries",
+    "latency_benefit_threshold": 0.95,
+    "local_success_threshold": 0.925,
+    "minimum_fast_precision": 0.99,
+    "minimum_positive_benefit_rate": 0.99
+  },
+  "provenance": {
+    "robot": "ur5e",
+    "test_data_loaded": false
+  },
+  "selection_report": {
+    "candidate_count": 100,
+    "constraints": {
+      "minimum_fast_count": 25,
+      "minimum_fast_precision": 0.99,
+      "minimum_positive_benefit_rate": 0.99
+    },
+    "eligible_candidate_count": 44,
+    "grid": {
+      "latency_benefit": [
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.85,
+        0.9,
+        0.925,
+        0.95,
+        0.975,
+        0.99
+      ],
+      "local_success": [
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.85,
+        0.9,
+        0.925,
+        0.95,
+        0.975,
+        0.99
+      ]
+    },
+    "objective": "maximum FAST coverage subject to two precision constraints",
+    "query_count": 2500,
+    "selected": {
+      "eligible": true,
+      "fast_count": 867,
+      "fast_precision": 0.9907727797001153,
+      "fast_rate": 0.3468,
+      "joint_positive_rate": 0.9907727797001153,
+      "latency_benefit_threshold": 0.95,
+      "local_success_threshold": 0.925,
+      "positive_benefit_rate": 0.9907727797001153
+    },
+    "selection_data_usage": "threshold_selection_only",
+    "selection_role": "calibration_queries"
+  }
+}
