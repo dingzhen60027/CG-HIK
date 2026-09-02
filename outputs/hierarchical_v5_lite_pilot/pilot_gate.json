@@ -1,0 +1,35 @@
+{
+  "all_robots_pass": false,
+  "development_only": true,
+  "fresh_evaluation_started": false,
+  "policy_validation_used_for_retuning": false,
+  "robots": {
+    "panda": {
+      "aggregate_verified_success_always_hard": 0.9980343980343981,
+      "aggregate_verified_success_lite": 0.9980343980343981,
+      "all_pass": false,
+      "checks": {
+        "learned_seed_invocation_reduced": false,
+        "p50_below_current_v4": true,
+        "p95_not_above_always_hard": false,
+        "per_query_verified_success_equal_always_hard": true
+      },
+      "operational_feasible_query_count": 2035,
+      "success_mismatch_count_vs_always_hard": 0
+    },
+    "ur5e": {
+      "aggregate_verified_success_always_hard": 1.0,
+      "aggregate_verified_success_lite": 1.0,
+      "all_pass": false,
+      "checks": {
+        "learned_seed_invocation_reduced": true,
+        "p50_below_current_v4": true,
+        "p95_not_above_always_hard": false,
+        "per_query_verified_success_equal_always_hard": true
+      },
+      "operational_feasible_query_count": 2049,
+      "success_mismatch_count_vs_always_hard": 0
+    }
+  },
+  "test_data_loaded": false
+}

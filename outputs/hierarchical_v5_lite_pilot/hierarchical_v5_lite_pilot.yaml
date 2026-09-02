@@ -1,0 +1,148 @@
+protocol_version: hierarchical_v5_lite_pilot_v1
+experiment_name: hierarchical_v5_lite_policy_validation_pilot
+workspace: ..
+source_config: paper_v2.yaml
+bulk_root: ../outputs/counterfactual_v4_bulk
+release_v3_root: ../outputs/release_v3_locked
+release_v4_root: ../outputs/release_v4_locked
+frozen_v5_root: ../outputs/hierarchical_v5_pilot
+output_root: ../outputs/hierarchical_v5_lite_pilot
+robots:
+- panda
+- ur5e
+training_seed: 17
+roles:
+  train: risk_train_queries
+  calibration: calibration_queries
+  policy_validation: policy_validation_queries
+data_boundary:
+  allowed_roles:
+  - risk_train_queries
+  - calibration_queries
+  - policy_validation_queries
+  test_data_forbidden: true
+  reject_test_named_paths: true
+  load_policy_validation_only_after_policy_seal: true
+lite_features:
+  schema: normalized_previous_q_plus_pose_error_and_margin
+  scalar_tail_dimension: 9
+  dimension_by_robot:
+    panda: 16
+    ur5e: 15
+  allowed_operations:
+  - forward_kinematics
+  - vector_arithmetic
+  jacobian_forbidden: true
+  svd_forbidden: true
+  dls_preview_forbidden: true
+  linear_solve_forbidden: true
+  learned_seed_ensemble_forbidden: true
+fast_path:
+  fast_iterations: 1
+  seed_source: previous_state
+  verifier: shared_deterministic_verifier
+  verifier_is_sole_acceptance_authority: true
+  failed_fast_path_action: always_hard
+  direct_robust_action: always_hard
+model:
+  hidden_sizes:
+  - 16
+  - 16
+  output_heads:
+  - local_verified_success
+  epochs: 120
+  batch_size: 256
+  learning_rate: 0.001
+  weight_decay: 1.0e-05
+  gradient_clip_norm: 5.0
+  seed: 1715
+  torchscript: true
+calibration:
+  fit_role: calibration_queries
+  threshold_selection_role: calibration_queries
+  threshold_probability_grid:
+  - 0.0
+  - 0.05
+  - 0.1
+  - 0.15
+  - 0.2
+  - 0.25
+  - 0.3
+  - 0.35
+  - 0.4
+  - 0.45
+  - 0.5
+  - 0.55
+  - 0.6
+  - 0.65
+  - 0.7
+  - 0.75
+  - 0.8
+  - 0.85
+  - 0.9
+  - 0.925
+  - 0.95
+  - 0.975
+  - 0.99
+  - 0.995
+  - 1.0
+  include_always_robust_sentinel: true
+  selection_constraints:
+    per_query_verified_success_equal_always_hard: true
+  selection_objective_order:
+  - minimum_p95_end_to_end_latency
+  - minimum_p50_end_to_end_latency
+  - minimum_learned_seed_invocation_rate
+  - conservative_threshold_tiebreak
+  exact_arm_timing_repeats: 5
+  selected_policy_exact_runtime_check: true
+  retune_after_exact_runtime_check: false
+strategies:
+- always_local
+- always_hard
+- counterfactual_cghik_v4
+- hierarchical_cghik_v5
+- hierarchical_cghik_v5_lite
+timing:
+  clock: perf_counter_ns
+  warmup_iterations: 200
+  repeats: 5
+  method_order: randomized_latin_rotation
+  primary_query_aggregation: median_across_repeats
+  stage_names:
+  - feature
+  - gate
+  - local
+  - robust
+  - unattributed
+  disk_io_inside_timed_interval: false
+  logging_serialization_inside_timed_interval: false
+runtime:
+  device: cuda:0
+  intra_op_threads: 8
+  inter_op_threads: 1
+  deterministic_algorithms: true
+  max_unrelated_cpu_percent: 50.0
+  environment_check_every_queries: 100
+  quiet_stable_checks: 1
+  quiet_poll_seconds: 0.25
+  max_quiet_wait_seconds: 60.0
+reporting:
+  primary_subset: operational_feasible
+  latency_quantiles:
+  - 0.5
+  - 0.95
+  - 0.99
+  paired_comparators:
+  - always_hard
+  - counterfactual_cghik_v4
+  figure_formats:
+  - png
+  - pdf
+  png_dpi: 220
+pilot_goals:
+  per_query_verified_success_equal_always_hard: true
+  p95_ratio_vs_always_hard_max: 1.0
+  p50_ratio_vs_counterfactual_cghik_v4_max_exclusive: 1.0
+  learned_seed_ensemble_invocation_rate_max_exclusive: 0.99
+_config_path: /home/eric/wjg/btry/configs/hierarchical_v5_lite_pilot.yaml

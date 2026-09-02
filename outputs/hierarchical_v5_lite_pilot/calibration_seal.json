@@ -1,0 +1,97 @@
+{
+  "git_commit": "0f28e4dab3f7ee1eb2051a853b88a2c3fc254fe2",
+  "git_status_at_start": [],
+  "implementation_sources": {
+    "configs/hierarchical_v5_lite_pilot.yaml": {
+      "path": "configs/hierarchical_v5_lite_pilot.yaml",
+      "sha256": "d46f5b82b0a46844de67e357c41e8502dc3c6920cd4e1975337e7ae5fd72c635",
+      "size": 3504
+    },
+    "scripts/run_hierarchical_v5_lite_pilot.sh": {
+      "path": "scripts/run_hierarchical_v5_lite_pilot.sh",
+      "sha256": "38a784d3b517674813afc28b0e76bd2a15aa320e7dd2e05797bcc22f2d31d4e7",
+      "size": 548
+    },
+    "src/confik/hierarchical_v5_lite/__init__.py": {
+      "path": "src/confik/hierarchical_v5_lite/__init__.py",
+      "sha256": "f2aedd78e276c617f1807cf022811032d780d7009ade004b85fe602ae547b0bf",
+      "size": 1411
+    },
+    "src/confik/hierarchical_v5_lite/features.py": {
+      "path": "src/confik/hierarchical_v5_lite/features.py",
+      "sha256": "e43b0b6c9bc50d5484996a4af170fb96959c2b5a7b0a41a82aaa280f167a3b3b",
+      "size": 6709
+    },
+    "src/confik/hierarchical_v5_lite/model.py": {
+      "path": "src/confik/hierarchical_v5_lite/model.py",
+      "sha256": "01c7db824624e8f7a3223a137ef0a82e5988ec3dfa11d057a789bcf62aa98b94",
+      "size": 22334
+    },
+    "src/confik/hierarchical_v5_lite/pilot.py": {
+      "path": "src/confik/hierarchical_v5_lite/pilot.py",
+      "sha256": "dcaaa9dfbe939dcad6eea31fb211549823254e24a1f5895ae09fe3e3c1eb6b96",
+      "size": 73794
+    },
+    "src/confik/hierarchical_v5_lite/policy.py": {
+      "path": "src/confik/hierarchical_v5_lite/policy.py",
+      "sha256": "90ddcf8b06c74082ecc24be3ba478c1d1496d48593d168a8ae20b498a8ba464b",
+      "size": 18339
+    },
+    "src/confik/hierarchical_v5_lite/runtime.py": {
+      "path": "src/confik/hierarchical_v5_lite/runtime.py",
+      "sha256": "e7b7abe860560a820321951ffe735453d284d64b2300faed005581258f30291d",
+      "size": 12925
+    },
+    "tests/test_hierarchical_v5_lite.py": {
+      "path": "tests/test_hierarchical_v5_lite.py",
+      "sha256": "36c7d4787f9a61244f9776fc0e81b3863559675753b31bcb59f8b2a9ee600a3d",
+      "size": 18505
+    }
+  },
+  "pilot_config": {
+    "path": "configs/hierarchical_v5_lite_pilot.yaml",
+    "sha256": "d46f5b82b0a46844de67e357c41e8502dc3c6920cd4e1975337e7ae5fd72c635",
+    "size": 3504
+  },
+  "policy_validation_loaded_before_seal": false,
+  "protocol": "hierarchical_v5_lite_policy_validation_pilot_v1",
+  "robots": {
+    "panda": {
+      "model": {
+        "path": "panda_exact_lite_gate.ts",
+        "sha256": "733356230006133d504d97402b407d7e50b5a3ae5777b8e73ab029b13a6094b6",
+        "size": 8539
+      },
+      "policy": {
+        "path": "panda_lite_gate_policy.json",
+        "sha256": "b48a99f7d9ddaf4b4b2a1aa755c5b6e9514793a3b1bc32195661d97f7385a66e",
+        "size": 22140
+      },
+      "selected_threshold": 1.0
+    },
+    "ur5e": {
+      "model": {
+        "path": "ur5e_exact_lite_gate.ts",
+        "sha256": "c2eea430ef94215c770d281a358df933cbf1f1c588780421e285d13d3785ddc6",
+        "size": 8460
+      },
+      "policy": {
+        "path": "ur5e_lite_gate_policy.json",
+        "sha256": "7c947c348c06ea230d3fa561b8a1a29c973a8a3100e6a92634dda3a630fdaea1",
+        "size": 21430
+      },
+      "selected_threshold": 0.995
+    }
+  },
+  "roles_loaded_before_seal": [
+    "risk_train_queries",
+    "calibration_queries"
+  ],
+  "sealed_utc": "2026-09-02T11:48:09.854662+00:00",
+  "source_config": {
+    "path": "configs/paper_v2.yaml",
+    "sha256": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+    "size": 2982
+  },
+  "test_data_loaded": false
+}

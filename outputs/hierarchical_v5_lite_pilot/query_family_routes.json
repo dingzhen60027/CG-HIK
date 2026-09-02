@@ -1,0 +1,338 @@
+[
+  {
+    "count": 0,
+    "family_queries": 375,
+    "query_family": "hard_valid",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 375,
+    "query_family": "hard_valid",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 375,
+    "family_queries": 375,
+    "query_family": "hard_valid",
+    "rate": 1.0,
+    "robot": "panda",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 0,
+    "family_queries": 958,
+    "query_family": "id",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 958,
+    "query_family": "id",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 958,
+    "family_queries": 958,
+    "query_family": "id",
+    "rate": 1.0,
+    "robot": "panda",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 0,
+    "family_queries": 228,
+    "query_family": "large_step",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 228,
+    "query_family": "large_step",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 228,
+    "family_queries": 228,
+    "query_family": "large_step",
+    "rate": 1.0,
+    "robot": "panda",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 0,
+    "family_queries": 238,
+    "query_family": "near_limit",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 238,
+    "query_family": "near_limit",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 238,
+    "family_queries": 238,
+    "query_family": "near_limit",
+    "rate": 1.0,
+    "robot": "panda",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 0,
+    "family_queries": 223,
+    "query_family": "near_singular",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 223,
+    "query_family": "near_singular",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 223,
+    "family_queries": 223,
+    "query_family": "near_singular",
+    "rate": 1.0,
+    "robot": "panda",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 0,
+    "family_queries": 237,
+    "query_family": "unreachable",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 237,
+    "query_family": "unreachable",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 237,
+    "family_queries": 237,
+    "query_family": "unreachable",
+    "rate": 1.0,
+    "robot": "panda",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 0,
+    "family_queries": 241,
+    "query_family": "workspace_boundary",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 241,
+    "query_family": "workspace_boundary",
+    "rate": 0.0,
+    "robot": "panda",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 241,
+    "family_queries": 241,
+    "query_family": "workspace_boundary",
+    "rate": 1.0,
+    "robot": "panda",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 0,
+    "family_queries": 396,
+    "query_family": "hard_valid",
+    "rate": 0.0,
+    "robot": "ur5e",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 1,
+    "family_queries": 396,
+    "query_family": "hard_valid",
+    "rate": 0.0025252525252525255,
+    "robot": "ur5e",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 395,
+    "family_queries": 396,
+    "query_family": "hard_valid",
+    "rate": 0.9974747474747475,
+    "robot": "ur5e",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 51,
+    "family_queries": 961,
+    "query_family": "id",
+    "rate": 0.053069719042663895,
+    "robot": "ur5e",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 3,
+    "family_queries": 961,
+    "query_family": "id",
+    "rate": 0.003121748178980229,
+    "robot": "ur5e",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 907,
+    "family_queries": 961,
+    "query_family": "id",
+    "rate": 0.9438085327783559,
+    "robot": "ur5e",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 0,
+    "family_queries": 236,
+    "query_family": "large_step",
+    "rate": 0.0,
+    "robot": "ur5e",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 236,
+    "query_family": "large_step",
+    "rate": 0.0,
+    "robot": "ur5e",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 236,
+    "family_queries": 236,
+    "query_family": "large_step",
+    "rate": 1.0,
+    "robot": "ur5e",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 4,
+    "family_queries": 230,
+    "query_family": "near_limit",
+    "rate": 0.017391304347826087,
+    "robot": "ur5e",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 230,
+    "query_family": "near_limit",
+    "rate": 0.0,
+    "robot": "ur5e",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 226,
+    "family_queries": 230,
+    "query_family": "near_limit",
+    "rate": 0.9826086956521739,
+    "robot": "ur5e",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 12,
+    "family_queries": 237,
+    "query_family": "near_singular",
+    "rate": 0.05063291139240506,
+    "robot": "ur5e",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 1,
+    "family_queries": 237,
+    "query_family": "near_singular",
+    "rate": 0.004219409282700422,
+    "robot": "ur5e",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 224,
+    "family_queries": 237,
+    "query_family": "near_singular",
+    "rate": 0.9451476793248945,
+    "robot": "ur5e",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 0,
+    "family_queries": 215,
+    "query_family": "unreachable",
+    "rate": 0.0,
+    "robot": "ur5e",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 215,
+    "query_family": "unreachable",
+    "rate": 0.0,
+    "robot": "ur5e",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 215,
+    "family_queries": 215,
+    "query_family": "unreachable",
+    "rate": 1.0,
+    "robot": "ur5e",
+    "route_state": "direct_hard"
+  },
+  {
+    "count": 14,
+    "family_queries": 225,
+    "query_family": "workspace_boundary",
+    "rate": 0.06222222222222222,
+    "robot": "ur5e",
+    "route_state": "fast_verified"
+  },
+  {
+    "count": 0,
+    "family_queries": 225,
+    "query_family": "workspace_boundary",
+    "rate": 0.0,
+    "robot": "ur5e",
+    "route_state": "fast_failed_then_hard"
+  },
+  {
+    "count": 211,
+    "family_queries": 225,
+    "query_family": "workspace_boundary",
+    "rate": 0.9377777777777778,
+    "robot": "ur5e",
+    "route_state": "direct_hard"
+  }
+]

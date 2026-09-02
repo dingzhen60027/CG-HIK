@@ -1,0 +1,52 @@
+{
+  "captured_utc": "2026-09-02T12:16:42.201743+00:00",
+  "completed_utc": "2026-09-02T12:16:42.237626+00:00",
+  "cpu_count": 24,
+  "cuda_available": true,
+  "cuda_version": "12.8",
+  "cudnn_version": 91900,
+  "gpu": "Quadro RTX 8000",
+  "numpy": "2.4.4",
+  "pinocchio": "3.9.0",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+  "policy_sealed_utc": "2026-09-02T11:48:09.854662+00:00",
+  "policy_validation_opened_utc": "2026-09-02T11:48:09.855314+00:00",
+  "processor": "x86_64",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "quiet_events": {
+    "panda": {
+      "calibration_components": {
+        "context": "hierarchical-v5-lite/panda/calibration-components",
+        "had_busy_process": false,
+        "last_busy_processes": [],
+        "wait_seconds": 0.015976316994056106
+      },
+      "exact_calibration": {
+        "context": "hierarchical-v5-lite/panda/exact-calibration",
+        "had_busy_process": false,
+        "last_busy_processes": [],
+        "wait_seconds": 0.014609036035835743
+      },
+      "policy_validation": []
+    },
+    "ur5e": {
+      "calibration_components": {
+        "context": "hierarchical-v5-lite/ur5e/calibration-components",
+        "had_busy_process": false,
+        "last_busy_processes": [],
+        "wait_seconds": 0.010836178087629378
+      },
+      "exact_calibration": {
+        "context": "hierarchical-v5-lite/ur5e/exact-calibration",
+        "had_busy_process": false,
+        "last_busy_processes": [],
+        "wait_seconds": 0.010654021985828876
+      },
+      "policy_validation": []
+    }
+  },
+  "scikit_learn": "1.9.0",
+  "scipy": "1.17.0",
+  "started_utc": "2026-09-02T11:09:19.618617+00:00",
+  "torch": "2.11.0+cu128"
+}

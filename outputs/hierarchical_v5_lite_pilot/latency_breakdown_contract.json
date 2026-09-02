@@ -1,0 +1,25 @@
+{
+  "method_stage_contract": {
+    "always_hard": "the entire outer call is attributed to robust; feature/gate are zero by taxonomy, not absent internally",
+    "always_local": "the entire outer call is attributed to local",
+    "counterfactual_cghik_v4": "the entire outer call is attributed to robust; feature/gate are zero by taxonomy, not absent internally",
+    "hierarchical_cghik_v5": "the runtime's cheap-feature, gate, local, and slow timings are mapped to the common stages",
+    "hierarchical_cghik_v5_lite": "the runtime's Lite feature, gate, local, and fixed-HARD timings are mapped to the common stages"
+  },
+  "outer_timer": "perf_counter_ns from method solve entry through materialized verified outcome; I/O and serialization excluded",
+  "primary_aggregation": "median across five repeats per query, then cross-query quantile",
+  "stage_definitions": {
+    "feature": "first-level feature preparation attributed by hierarchical runtimes",
+    "gate": "first-level gate inference and threshold decision",
+    "local": "one-step previous-state local solver plus deterministic verification",
+    "robust": "complete invoked robust runtime, including its internal learned front end, solvers, and verification",
+    "unattributed": "outer API latency not included in the four explicitly attributed stages"
+  },
+  "stage_names": [
+    "feature",
+    "gate",
+    "local",
+    "robust",
+    "unattributed"
+  ]
+}

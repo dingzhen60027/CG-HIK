@@ -1,0 +1,64 @@
+{
+  "panda": {
+    "all_pairwise_disjoint": true,
+    "pairwise_overlap_counts": {
+      "calibration_queries__policy_validation_queries": 0,
+      "risk_train_queries__calibration_queries": 0,
+      "risk_train_queries__policy_validation_queries": 0
+    },
+    "roles": {
+      "calibration_queries": {
+        "duplicate_query_count": 0,
+        "ordered_query_digest": "c959ccd7b4f85868754d0215872cbcfd1d4f87667e55ad28e81dd21342581e9b",
+        "query_count": 2500,
+        "query_set_digest": "286220871d11af0aa7787bcefb5b2d5868520c50e780a2934b1d96bf75616885",
+        "unique_query_count": 2500
+      },
+      "policy_validation_queries": {
+        "duplicate_query_count": 0,
+        "ordered_query_digest": "dbba7eca7fd46e98258e39e4c5183a9a0c138ad3315c86e909eadc8b110a4718",
+        "query_count": 2500,
+        "query_set_digest": "e136f40bb8629d90470ba918c1065f265342a0d2c879e40ecab41397ffe27604",
+        "unique_query_count": 2500
+      },
+      "risk_train_queries": {
+        "duplicate_query_count": 0,
+        "ordered_query_digest": "3e539afed24f9ff2f0cf179dc629d0c75be1fc38d65b2d78cec33047cbbcdd39",
+        "query_count": 15000,
+        "query_set_digest": "ef56967e83a02b4365568959b3a7cf6736ce6b26c772aa21f23776dd1b27f14a",
+        "unique_query_count": 15000
+      }
+    }
+  },
+  "ur5e": {
+    "all_pairwise_disjoint": true,
+    "pairwise_overlap_counts": {
+      "calibration_queries__policy_validation_queries": 0,
+      "risk_train_queries__calibration_queries": 0,
+      "risk_train_queries__policy_validation_queries": 0
+    },
+    "roles": {
+      "calibration_queries": {
+        "duplicate_query_count": 0,
+        "ordered_query_digest": "1f3542bf359129a95ad923f13d3ee5462970607b72668817ebf3e3d429945d83",
+        "query_count": 2500,
+        "query_set_digest": "0b23f66e936372e95222f6fb3dc3dc21cd37226a4b89daa5af65f62c7bcac40f",
+        "unique_query_count": 2500
+      },
+      "policy_validation_queries": {
+        "duplicate_query_count": 0,
+        "ordered_query_digest": "078c7458333728bc890a347d7904aaedb7eb619dc1edd0acb63d2b469bb6d6b4",
+        "query_count": 2500,
+        "query_set_digest": "44a0ac67f732a1b4376686bf5a56bd27a613c07b1b8d82e7b8710a150f844603",
+        "unique_query_count": 2500
+      },
+      "risk_train_queries": {
+        "duplicate_query_count": 0,
+        "ordered_query_digest": "b14c7b29148f5ae6ae1e033485193676f2956aceae47a87d0b4ce24b3c612a46",
+        "query_count": 15000,
+        "query_set_digest": "eb318f307e6e45a886aab5cc804fce2cd9e17c97e036ee75f2350bb6a687603d",
+        "unique_query_count": 15000
+      }
+    }
+  }
+}

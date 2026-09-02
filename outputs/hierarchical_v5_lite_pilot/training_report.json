@@ -1,0 +1,60 @@
+{
+  "panda": {
+    "architecture": [
+      16,
+      16,
+      16,
+      1
+    ],
+    "calibration_count": 2500,
+    "calibration_local_success_rate": 0.6256,
+    "calibration_metrics": {
+      "brier": 0.0328310604288402,
+      "coverage": 0.9128,
+      "ece": 0.010966679926162324,
+      "nll": 0.12331086693230466
+    },
+    "input_dimension": 16,
+    "numerical_equivalence": {
+      "absolute_tolerance": 1e-10,
+      "max_absolute_logit_error": 0.0,
+      "max_absolute_probability_error": 1.1102230246251565e-16,
+      "passed": true,
+      "query_count": 1000,
+      "route_match_count": 1000,
+      "route_match_rate": 1.0
+    },
+    "test_data_loaded": false,
+    "train_count": 15000,
+    "train_local_success_rate": 0.7118666666666666
+  },
+  "ur5e": {
+    "architecture": [
+      15,
+      16,
+      16,
+      1
+    ],
+    "calibration_count": 2500,
+    "calibration_local_success_rate": 0.5388,
+    "calibration_metrics": {
+      "brier": 0.0756080440524995,
+      "coverage": 0.78,
+      "ece": 0.028270197935762104,
+      "nll": 0.25682891272820163
+    },
+    "input_dimension": 15,
+    "numerical_equivalence": {
+      "absolute_tolerance": 1e-10,
+      "max_absolute_logit_error": 0.0,
+      "max_absolute_probability_error": 1.1102230246251565e-16,
+      "passed": true,
+      "query_count": 1000,
+      "route_match_count": 1000,
+      "route_match_rate": 1.0
+    },
+    "test_data_loaded": false,
+    "train_count": 15000,
+    "train_local_success_rate": 0.6396666666666667
+  }
+}
