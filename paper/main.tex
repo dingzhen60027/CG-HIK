@@ -39,7 +39,7 @@
 \cfoot{\thepage}
 \setlength{\headheight}{14pt}
 
-\title{\textbf{Confidence-Gated Solver Budgeting for Kinematically Verified Hybrid Inverse Kinematics: A Two-Robot Evaluation with Three Training-Seed Sensitivity Runs}}
+\title{\textbf{Query-Adaptive Hybrid Inverse Kinematics through Counterfactual Tail-Latency Routing and Deterministic Verification}}
 \author{\authorinput{full author names and ORCID identifiers}\\
 \small \authorinput{affiliations and corresponding-author email}}
 \date{Pre-submission manuscript, 23 August 2026}
@@ -98,78 +98,161 @@ verification; failure rejection
 \section{Introduction}
 
 Robot task planners, teleoperation interfaces, imitation-learning policies, and
-vision--language--action systems commonly specify motion in Cartesian task space,
-whereas a manipulator is actuated in joint space. Inverse kinematics therefore remains
-the interface between a transferable end-effector command and a robot-specific joint
-command. This interface becomes consequential in closed-loop control: a single
-discontinuous branch switch can create a joint-velocity spike, a near-singular update
-can amplify numerical error, and a slow failure on an unreachable request can consume
-an entire control period.
-
-The forward map $x=f(q)$ is generally single-valued, but its inverse is better written
-as the set
+increasingly robot-agnostic action models often express motion as a desired
+end-effector pose, whereas a manipulator can execute only joint-space commands.
+Inverse kinematics (IK) is therefore not a peripheral geometric utility but the online
+interface between task-space intent and embodiment-specific motion. In continuous
+control, this interface must process a sequence of targets under a finite cycle budget
+while preserving branch continuity, joint limits, and bounded one-step motion. A useful
+abstraction is
 \begin{equation}
-  \mathcal{S}(x)=\{q\in\mathcal{Q}: f(q)=x\}.
+q_t=\Pi\!\left(x_t^d,q_{t-1},\mathcal{C}_t,B_t\right),
 \end{equation}
-For a six-degree-of-freedom (DOF) arm, $\mathcal{S}(x)$ may contain several discrete
-branches; for a redundant arm, it can contain a continuous self-motion manifold.
-During online execution, the problem is not to solve one isolated pose but to choose a
-sequence $q_{1:T}$ that is geometrically accurate, joint-limit admissible, and locally
-continuous. A useful abstraction is
-\begin{equation}
-q_{1:T}^{\star}=\arg\min_{q_{1:T}}\sum_{t=1}^{T}
-  \lambda_p\ell_{\mathrm{pose}}(q_t,x_t)
- +\lambda_s\ell_{\mathrm{step}}(q_t,q_{t-1})
- +\lambda_l\ell_{\mathrm{limit}}(q_t),
-\end{equation}
-subject to hard command-admissibility tests. Even when each target is reachable, the
-chosen numerical basin and the computation allocated to it determine whether the
-online sequence is executable.
+where $x_t^d$ is the target pose, $q_{t-1}$ is the previous state,
+$\mathcal{C}_t$ is the command-admissibility contract, and $B_t$ is the available
+computation. A configuration can match the pose yet require a discontinuous branch
+switch; conversely, a reachable target can miss its deadline because a local solver
+begins in an unfavorable basin. Path-level and history-conditioned IK have made this
+temporal character increasingly explicit
+\cite{rakita2018relaxedik,morgan2024cppflow,nguyen2026sequential,yang2026mimik}.
+The resulting question is broader than whether an IK solution exists: how can learned
+priors, numerical solvers, and deterministic verification be coordinated to enable
+query-adaptive computation for online IK under latency and command-admissibility
+constraints?
 
-Classical damped least-squares (DLS) methods stabilize Jacobian inversion near
-singularities \cite{wampler1986dls,nakamura1986singularity,chiaverini1994review}, but
-they remain local and initialization-sensitive. Portfolio solvers such as TRAC-IK
-combine numerical strategies to reduce false negatives \cite{beeson2015tracik};
-variable-step and restart strategies likewise show that fixed numerical policies are
-not optimal for every query \cite{colan2024variablestep}. At the same time, learned IK
-has progressed from single-output regression to generative solution-set modelling
-\cite{ames2022ikflow,limoyo2025ggik}, path-level generation
-\cite{morgan2024cppflow}, and history-conditioned joint-increment policies
-\cite{yang2026mimik}. The most defensible role for learning is consequently not to
-certify a configuration, but to predict a useful solution basin and how much numerical
-work a query is likely to require.
+The forward map $x=f(q)$ is usually single-valued, but the inverse is the set
+$\mathcal{S}(x)=\{q\in\mathcal{Q}:f(q)=x\}$, containing discrete branches for many
+six-degree-of-freedom arms and self-motion manifolds for redundant arms
+\cite{siciliano1990tutorial}. Analytical
+solvers exploit manipulator structure to enumerate branches rapidly, and recent
+geometric decomposition methods have expanded the range of chains that can be treated
+systematically \cite{elias2025ikgeo,ostermeier2025eaik,lopezcustodio2025geofik}.
+Generic numerical methods instead iterate from a seed. Damped least squares suppresses
+velocity amplification near rank loss
+\cite{wampler1986dls,nakamura1986singularity,chiaverini1994review}; portfolio,
+restart, variable-step, and batched initialization--polishing strategies improve
+robustness to poor initialization and local failure
+\cite{beeson2015tracik,colan2024variablestep,yasutake2026hjcdik}; and semidefinite or
+constrained formulations can encode limits and viability more directly
+\cite{wu2024ikspark,zhang2026viability}. Explicit singularity-transition analysis
+further shows that numerical conditioning and branch topology are distinct concerns
+\cite{boschi2026singularity}. These methods remain indispensable
+because they expose geometry and constraints. A fixed cascade can short-circuit after
+success, but always beginning from the same entry can still incur a predictably
+redundant prefix before reaching the pathway a particular query requires.
 
-Recent hybrid methods use learned approximations as warm starts followed by numerical
-refinement \cite{habekost2023cycleik,jayabalan2026hybrid,jlidi2026xgnn}. However, a
-typical pipeline still applies a fixed candidate count, iteration limit, and fallback
-policy to every query. This leaves three coupled questions unresolved: when is a
-learned seed trustworthy, how much solver budget should the query receive, and when
-should the system refuse rather than spend computation on a command that cannot pass
-the execution contract?
+Learning-based IK addresses a complementary limitation: data can reveal likely
+solution basins and motion preferences before numerical iteration begins. A direct
+pose-to-joint regressor, however, treats a set-valued inverse as if it were a function
+and can average incompatible branches. Generative and structured models therefore
+represent conditional solution distributions, kinematic graphs, or multiple unordered
+solutions \cite{ames2022ikflow,limoyo2025ggik,nguyen2026setik}. Other models
+incorporate a reference or previous state, or predict local joint increments, to favor
+configuration consistency \cite{demby2024learning,nguyen2026sequential,yang2026mimik},
+while diffusion and structure-aware networks broaden proposal diversity across
+kinematic structures \cite{zhang2025ikdiffuser,diprasetya2025kinenn,go2025emiknet}.
+Their strength is global proposal and amortized inference, not certification. A
+learned output may have low average forward-kinematics error yet violate a joint or
+one-frame velocity limit, lie on the wrong branch, or behave unpredictably outside its
+training support. Reporting mean pose error alone therefore obscures the command-level
+reliability required by an online controller.
 
-This paper studies those questions as runtime resource allocation. The contributions
-are:
-\begin{enumerate}
-  \item a portfolio-specific four-action label (easy, medium, hard, reject) defined by
-  the first solver stage that produces a kinematically verified command, rather than by arbitrary
-  iteration bins or reachability alone;
-  \item a controlled primary comparison in which the proposed and fixed methods share
-  the same seed ensemble, numerical stages, seed bank, fallback, and verifier, and
-  differ only in their calibrated entry action;
-  \item a frozen two-robot, three-training-seed evaluation that reports feasible
-  success, function evaluations (FEV), rejection, tail latency, trajectory completion,
-  verifier interceptions, null ablations, and the failed formal latency claim gate;
-  \item a validation-only implementation study that identifies fixed risk-inference
-  overhead, exports an exact TorchScript seed ensemble and vectorized frozen risk
-  model, and checks routing and numerical equivalence; this is remediation evidence,
-  not an independent optimized-latency result.
-\end{enumerate}
+This division of strengths has produced a hybrid learning--numerical paradigm.
+Learned models generate a seed or candidate set; classical solvers restore geometric
+precision; and a downstream check determines whether a result may be issued. IKFlow
+and CycleIK explicitly support numerical refinement of learned proposals
+\cite{ames2022ikflow,habekost2023cycleik}; CppFlow combines generative path proposals
+with optimization and validity checking \cite{morgan2024cppflow}; and recent
+execution-aware, graph, neuro-fuzzy, and diffusion-seeding methods likewise place a
+learned prior upstream of model-based refinement
+\cite{tang2025etaik,huang2025diffusionseeder,carvalho2025mpd,jayabalan2026hybrid,jlidi2026xgnn}.
+This emerging architecture can be summarized as proposal, selection, refinement, and
+verification. Yet hybridization alone does not make computation adaptive. Most
+evaluated pipelines prescribe a fixed number of proposals, a fixed refinement budget,
+or a fixed fallback sequence, so an easy local continuation and a near-singular or
+unreachable request begin from the same entry and retain the same escalation policy.
+Seed retrieval and
+retry methods such as IKSel improve the starting basin \cite{yuan2025iksel}, but do
+not by themselves decide how much of a shared solver portfolio each query should
+consume.
 
-The central claim is deliberately bounded: learned models allocate computation;
-classical geometry refines and verifies the command. The present benchmark establishes
-this claim under exact URDF kinematics. It does not establish collision safety,
-physics-based controller tracking, acceleration or torque compliance, or physical
-robot reliability.
+The unresolved issue is therefore resource allocation over a heterogeneous query
+stream. Algorithm-selection theory has long framed computation as choosing, for each
+instance, among procedures with different success and runtime profiles
+\cite{rice1976selection,bischl2016aslib}; online IK adds correlated targets, hard
+acceptance rules, noisy tail latency, and an asymmetric cost of false rejection. In
+the shared portfolio studied here, \emph{easy}, \emph{medium}, and \emph{hard} denote
+entry points into one nested robust cascade, not intrinsic difficulty classes: the
+entries begin respectively from the previous state, the strongest learned candidate,
+or a broader candidate-and-fallback set, and all may ultimately reach the same robust
+termination path. The relevant counterfactual is consequently not ``what class is this
+pose?'' but ``what verified outcome and latency would each available entry have
+produced for this same query?'' This motivates our central hypothesis: robust coverage
+does not require every query to pay the worst-case computational cost. It also defines
+\textbf{RQ1}: how much query-level heterogeneity and oracle opportunity exist across
+the shared entry actions, as measured by entry winners, oracle latency gaps, and
+avoidable function evaluations?
+
+We test that hypothesis with counterfactual pathway supervision and tail-latency-aware
+selection. During development only, every query is executed through every cascade
+entry; repeated raw timings, verifier outcome, function evaluations (FEV), fallback
+use, and failure reason are retained instead of being collapsed into a hand-assigned
+difficulty label. A compact history-conditioned model then predicts shared terminal
+verified success under the bounded cascade, action-specific latency quantiles, and the
+probability that all pathways fail. Because the three numerical entries share a terminal robust fallback and
+exhibited identical verified-success labels in development, the implementation uses
+one shared semantic-success head rather than claiming learnable action-specific
+terminal success differences. Its action-specific heads estimate P50 and P95 latency
+from the repeated observations. At runtime, entries satisfying a frozen success-risk
+condition and a 20-ms predicted-P95 condition are eligible; the policy selects the
+lowest predicted P95, with a small conservative tie margin. This construction targets
+deadline-relevant cost while leaving command generation to the numerical cascade. It
+defines \textbf{RQ2}: can the router predict useful action rankings and latency
+quantiles, assessed by oracle-entry agreement, routing regret, and quantile coverage
+on a development policy-selection split that is disjoint from model fitting and
+calibration but is not confirmatory test evidence?
+
+Adaptive entry selection is enclosed by a deterministic acceptance contract and two
+distinct abstention semantics. A candidate is issued only after numerical refinement
+and verification of finite values, forward-kinematics residual, URDF joint limits, and
+the frozen one-frame velocity inequality. The learned model never overrides this
+verifier. A \emph{reject} action is permitted only for a non-OOD query with no eligible
+numerical entry and high predicted probability that all pathways fail; it performs
+zero numerical solving and emits no command. A query flagged as OOD, or one for which
+the heads provide no confident action without high fail-all agreement, is instead
+\emph{deferred} to the complete fixed robust cascade. OOD is therefore not treated as
+evidence of infeasibility. This separation makes false rejection and defer recovery
+observable rather than hiding them inside aggregate failure rates, while retaining a
+known numerical path for uncertain inputs. It defines \textbf{RQ3}: relative to the
+identical fixed cascade and reproducible baselines, does query-adaptive allocation
+preserve verified success and trajectory completion while reducing FEV, P95/P99
+latency, deadline misses, and futile work on command-inadmissible requests?
+
+This paper makes three contributions. First, it formulates continuous online IK as
+verified resource allocation over a shared numerical portfolio and explicitly
+separates learned proposal and resource-allocation decisions from numerical command
+generation and deterministic acceptance. Second, it
+develops a counterfactual latency-aware policy whose compact predictor is supervised
+by all entry outcomes, selects the eligible entry with minimum predicted P95 latency,
+and distinguishes high-confidence command rejection from uncertainty/OOD defer without
+relaxing the common verifier. Third, it provides a frozen, one-shot evaluation on
+independent Panda and UR5e query sets, with three training seeds used as sensitivity
+runs rather than independent test replications, and reports both supportive and
+adverse evidence. In the prespecified primary analysis, relative to the fixed robust
+cascade, verified feasible success was unchanged; feasible P95 ratios were 0.754 and
+0.743, mean FEV fell by 16.14\% and
+36.27\%, known-infeasible reject recall reached 95.65\% and 93.95\%, and
+whole-trajectory completion remained 95.0\% and 78.33\%, respectively. The improvement
+was not uniform: feasible P50 increased by approximately 16.5\% on both robots, Panda
+P99 was essentially unchanged (ratio 0.993), point-OOD discrimination was weak (AUROC
+0.430/0.504; AUPRC 0.210/0.230), and no successful defer recovery was observed. The
+prespecified joint statistical gate passed and the UR5e robot gate passed, but the
+Panda robot gate---and therefore the overall paper-level claim gate---did not; the
+failed Panda condition required a strictly positive OOD-feasible false-reject
+improvement, whereas both compared methods produced zero false rejects. The evidence
+consequently supports query-adaptive numerical effort under an exact URDF/Pinocchio
+kinematic benchmark; it does not establish strong OOD detection, collision safety,
+dynamics, controller tracking, or physical-robot reliability.
 
 \section{Related Work}
 
