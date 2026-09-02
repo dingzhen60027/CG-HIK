@@ -90,6 +90,14 @@ MODE_CODE = {
 }
 
 
+class NoEligibleCalibrationPolicy(RuntimeError):
+    """Raised with the complete calibration report before PV is opened."""
+
+    def __init__(self, message: str, report: Mapping[str, Any]) -> None:
+        super().__init__(message)
+        self.report = dict(report)
+
+
 class DevelopmentTrajectoryGuard:
     """Lightweight, honestly scoped trajectory-start environment check.
 
@@ -1040,25 +1048,7 @@ def select_calibration_policy(
             }
         )
     eligible = [row for row in rows if row["eligible"]]
-    if not eligible:
-        raise RuntimeError(
-            "no calibration candidate preserves the complete always-hard "
-            "trajectory-completion vector; policy-validation remains unopened"
-        )
-    selected = min(
-        eligible,
-        key=lambda row: (
-            row["p95_ns"],
-            row["learned_seed_ensemble_invocation_rate"],
-            row["p50_ns"],
-            -row["reentry_threshold"],
-            -row["consecutive_successes"],
-            -row["hold_frames"],
-            -row["probe_interval"],
-        ),
-    )
-    selected_index = int(selected["candidate_index"])
-    report = {
+    report: dict[str, Any] = {
         "selection_role": role.role,
         "policy_validation_used_for_selection": False,
         "candidate_count": len(rows),
@@ -1075,9 +1065,29 @@ def select_calibration_policy(
             "higher hold frames",
             "higher probe interval",
         ],
-        "selected": dict(selected),
+        "selected": None,
         "candidates": rows,
     }
+    if not eligible:
+        raise NoEligibleCalibrationPolicy(
+            "no calibration candidate preserves the complete always-hard "
+            "trajectory-completion vector; policy-validation remains unopened",
+            report,
+        )
+    selected = min(
+        eligible,
+        key=lambda row: (
+            row["p95_ns"],
+            row["learned_seed_ensemble_invocation_rate"],
+            row["p50_ns"],
+            -row["reentry_threshold"],
+            -row["consecutive_successes"],
+            -row["hold_frames"],
+            -row["probe_interval"],
+        ),
+    )
+    selected_index = int(selected["candidate_index"])
+    report["selected"] = dict(selected)
     return selected_index, data.configs[selected_index], report
 
 
@@ -2019,6 +2029,7 @@ def run(config_path: str | Path, *, smoke: bool = False) -> dict[str, Any]:
     release_inputs: dict[str, Any] = {}
     frozen_lite_inputs: dict[str, Any] = {}
     quiet_events: dict[str, Any] = {}
+    calibration_no_go: dict[str, Any] | None = None
     host_guard = DevelopmentTrajectoryGuard(config)
     quiet_events["preflight"] = host_guard.wait_until_quiet(
         context="temporal-v6/preflight"
@@ -2102,11 +2113,23 @@ def run(config_path: str | Path, *, smoke: bool = False) -> dict[str, Any]:
             progress_every=int(config["runtime"]["progress_every_trajectories"]),
             environment_guard=host_guard,
         )
-        selected_index, selected_policy, report = select_calibration_policy(
-            calibration_data, calibration_role
-        )
         calibration_path = staging / f"{robot}_calibration_records.npz"
         _save_calibration(calibration_path, calibration_data, calibration_role)
+        try:
+            selected_index, selected_policy, report = select_calibration_policy(
+                calibration_data, calibration_role
+            )
+        except NoEligibleCalibrationPolicy as exc:
+            calibration_reports[robot] = exc.report
+            calibration_no_go = {
+                "robot": robot,
+                "reason": str(exc),
+                "eligible_candidate_count": 0,
+                "candidate_count": len(grid),
+                "policy_validation_outcomes_computed": False,
+            }
+            print(f"[temporal-v6] calibration NO-GO: {calibration_no_go}", flush=True)
+            break
         calibration_reports[robot] = report
         contexts[robot] = {
             "kinematics": kinematics,
@@ -2118,6 +2141,142 @@ def run(config_path: str | Path, *, smoke: bool = False) -> dict[str, Any]:
             f"[temporal-v6] {robot} selected {asdict(selected_policy)}",
             flush=True,
         )
+
+    if calibration_no_go is not None:
+        _write_json(staging / "trajectory_split_manifest.json", split_manifest)
+        _write_json(staging / "calibration_candidate_metrics.json", calibration_reports)
+        selected_payload = {
+            robot: (
+                {
+                    "candidate_index": int(contexts[robot]["selected_index"]),
+                    **asdict(contexts[robot]["selected_policy"]),
+                }
+                if robot in contexts
+                else None
+            )
+            for robot in ("panda", "ur5e")
+        }
+        _write_json(
+            staging / "calibration_selection.json",
+            {
+                "status": "calibration_no_go",
+                "selection_role": "trajectory_calibration",
+                "policy_validation_outcomes_computed": False,
+                "policy_validation_used_for_selection": False,
+                "selected": selected_payload,
+                "failure": calibration_no_go,
+            },
+        )
+        _write_json(staging / "calibration_no_go.json", calibration_no_go)
+        gate = {
+            "status": "calibration_no_go",
+            "all_robots_pass": False,
+            "policy_validation_evaluated": False,
+            "fresh_or_formal_evaluation_authorized": False,
+            "reason": calibration_no_go["reason"],
+            "failed_robot": calibration_no_go["robot"],
+        }
+        _write_json(staging / "pilot_gate.json", gate)
+        quiet_events["trajectory_start_preflight"] = host_guard.total_summary()
+        host_guard.close()
+        _write_json(
+            staging / "environment.json",
+            {
+                **environment_payload(),
+                "trajectory_environment_evidence": quiet_events,
+                "test_data_loaded": False,
+                "formal_test_started": False,
+            },
+        )
+        effective_config = {
+            key: value for key, value in config.items() if not str(key).startswith("_")
+        }
+        (staging / "temporal_v6_pilot.yaml").write_text(
+            yaml.safe_dump(effective_config, sort_keys=False), encoding="utf-8"
+        )
+        protected_after = {
+            name: _tree_snapshot(path) for name, path in protected_roots.items()
+        }
+        protected_after_digest = {
+            name: _snapshot_digest(snapshot)
+            for name, snapshot in protected_after.items()
+        }
+        if protected_before != protected_after:
+            raise RuntimeError("an existing V5 output tree changed during Temporal V6")
+        git_status_end = subprocess.run(
+            ["git", "status", "--short"], cwd=workspace, check=True,
+            capture_output=True, text=True,
+        ).stdout.splitlines()
+        if git_status_end != git_status_start:
+            raise RuntimeError("source worktree changed during Temporal V6")
+        git_commit_end = subprocess.run(
+            ["git", "rev-parse", "HEAD"], cwd=workspace, check=True,
+            capture_output=True, text=True,
+        ).stdout.strip()
+        if git_commit_end != git_commit:
+            raise RuntimeError("git HEAD changed during Temporal V6")
+        for relative, descriptor in implementation_sources.items():
+            if _artifact(workspace / relative, relative_to=workspace) != descriptor:
+                raise RuntimeError(
+                    f"implementation source changed during run: {relative}"
+                )
+        artifacts = {
+            path.name: _artifact(path, relative_to=staging)
+            for path in sorted(staging.iterdir())
+            if path.is_file() and path.name != "run_manifest.json"
+        }
+        manifest = {
+            "status": "calibration_no_go",
+            "protocol": PROTOCOL,
+            "started_at": started,
+            "completed_at": _utc(),
+            "git_commit": git_commit,
+            "git_commit_end": git_commit_end,
+            "git_status_start": git_status_start,
+            "git_status_end": git_status_end,
+            "source_state_unchanged_during_run": True,
+            "implementation_sources": implementation_sources,
+            "release_inputs": release_inputs,
+            "protocol_config": _artifact(
+                Path(config["_config_path"]), relative_to=workspace
+            ),
+            "source_config": _artifact(source_config_path, relative_to=workspace),
+            "effective_config": _artifact(
+                staging / "temporal_v6_pilot.yaml", relative_to=staging
+            ),
+            "frozen_v5_lite_root": str(frozen_lite_root),
+            "protected_output_trees": {
+                name: {
+                    "root": str(protected_roots[name]),
+                    "before_digest": protected_before_digest[name],
+                    "after_digest": protected_after_digest[name],
+                    "unchanged": True,
+                }
+                for name in protected_roots
+            },
+            "trajectory_roles": split_manifest,
+            "selected_policy": selected_payload,
+            "calibration_no_go": calibration_no_go,
+            "policy_frozen_before_policy_validation": False,
+            "policy_validation_outcomes_computed": False,
+            "policy_validation_retained_passes_per_robot": {
+                "panda": 0,
+                "ur5e": 0,
+            },
+            "trajectory_environment_evidence": quiet_events,
+            "test_data_loaded": False,
+            "formal_test_started": False,
+            "fresh_evaluation_started": False,
+            "pilot_gate": gate,
+            "artifacts": artifacts,
+        }
+        _write_json(staging / "run_manifest.json", manifest)
+        os.replace(staging, output_root)
+        print(
+            f"[temporal-v6] complete calibration NO-GO: output={output_root}",
+            flush=True,
+        )
+        return manifest
 
     _write_json(staging / "trajectory_split_manifest.json", split_manifest)
     _write_json(staging / "calibration_candidate_metrics.json", calibration_reports)

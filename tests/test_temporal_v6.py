@@ -16,6 +16,7 @@ from confik.temporal_v6.policy import TemporalPolicyConfig, TemporalPolicyContro
 from confik.temporal_v6.pilot import (
     CalibrationData,
     FAMILIES,
+    NoEligibleCalibrationPolicy,
     TrajectoryRole,
     _expected_grid,
     generate_development_roles,
@@ -546,5 +547,11 @@ def test_calibration_selection_uses_conservative_tie_break_and_fails_closed() ->
 
     failed = dict(common)
     failed["accepted"] = np.zeros((2, n), dtype=bool)
-    with pytest.raises(RuntimeError, match="policy-validation remains unopened"):
+    with pytest.raises(
+        NoEligibleCalibrationPolicy,
+        match="policy-validation remains unopened",
+    ) as caught:
         select_calibration_policy(CalibrationData(**failed), role)
+    assert caught.value.report["eligible_candidate_count"] == 0
+    assert caught.value.report["selected"] is None
+    assert len(caught.value.report["candidates"]) == 2
