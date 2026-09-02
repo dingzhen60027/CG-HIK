@@ -1,0 +1,111 @@
+protocol_version: temporal_v6_development_pilot_v1
+experiment_name: temporal_v6_trajectory_policy_validation_pilot
+workspace: ..
+source_config: paper_v2.yaml
+release_v3_root: ../outputs/release_v3_locked
+release_v4_root: ../outputs/release_v4_locked
+frozen_v5_lite_root: ../outputs/hierarchical_v5_lite_pilot
+output_root: ../outputs/temporal_v6_pilot
+
+# This is a development-only trajectory experiment.  It has no formal-test
+# loader and is allowed to generate only the two roles below.
+robots: [panda, ur5e]
+training_seed: 17
+roles:
+  calibration: trajectory_calibration
+  policy_validation: trajectory_policy_validation
+data_boundary:
+  allowed_roles: [trajectory_calibration, trajectory_policy_validation]
+  formal_test_data_forbidden: true
+  reject_test_named_paths: true
+  split_before_outcome_collection: true
+  compute_policy_validation_outcomes_only_after_calibration_seal: true
+
+trajectory_data:
+  generator: reference_trajectory_tests
+  families:
+    - trajectory_smooth
+    - trajectory_orientation
+    - trajectory_singular
+    - trajectory_limit
+  paths_per_family_pool: 20
+  paths_per_family_per_role: 10
+  steps_per_trajectory: 150
+  dt: 0.02
+  pool_seed:
+    panda: 860601
+    ur5e: 860602
+  split_seed:
+    panda: 860611
+    ur5e: 860612
+  split_unit: complete_trajectory
+  preserve_time_order: true
+
+temporal_grid:
+  hold_frames: [5, 10, 20, 30]
+  probe_interval: [1, 3, 5]
+  consecutive_successes: [1, 2, 3]
+  reentry_threshold: [0.80, 0.90, 0.95, 0.99]
+  expected_candidate_count: 144
+
+# Frozen before trajectory_policy_validation is opened.  The four primary
+# keys are the complete selection order.  The conservative tie-break is used
+# only when all four primary quantities are exactly equal.
+calibration_selection:
+  required_role: trajectory_calibration
+  eligibility: trajectory_completion_vector_exactly_equal_always_hard
+  objective_order:
+    - minimum_p95_end_to_end_latency
+    - minimum_learned_seed_ensemble_invocation_rate
+    - minimum_p50_end_to_end_latency
+  conservative_exact_tie_break:
+    - higher_reentry_threshold
+    - higher_consecutive_successes
+    - higher_hold_frames
+    - higher_probe_interval
+  policy_validation_used_for_selection: false
+  no_eligible_candidate_action: stop_before_policy_validation
+
+strategies:
+  - always_hard
+  - counterfactual_cghik_v4
+  - hierarchical_cghik_v5_lite
+  - temporal_cghik_v6
+
+timing:
+  clock: perf_counter_ns
+  warmup_frames: 200
+  trajectory_repeats: 1
+  method_order: seeded_four_by_four_latin_blocks
+  disk_io_inside_timed_interval: false
+  logging_serialization_inside_timed_interval: false
+  stage_names: [temporal, feature, gate, local, robust, unattributed]
+
+runtime:
+  device: cuda:0
+  intra_op_threads: 8
+  inter_op_threads: 1
+  deterministic_algorithms: true
+  progress_every_trajectories: 5
+  max_unrelated_cpu_percent: 50.0
+  quiet_stable_checks: 1
+  quiet_poll_seconds: 0.25
+  max_quiet_wait_seconds: 60.0
+  trajectory_environment_check: preflight_only
+
+reporting:
+  latency_quantiles: [0.50, 0.95, 0.99]
+  paired_comparators:
+    - always_hard
+    - counterfactual_cghik_v4
+    - hierarchical_cghik_v5_lite
+  bootstrap_unit: complete_trajectory
+  figure_formats: [png, pdf]
+  png_dpi: 220
+
+# Development go/no-go only.
+pilot_goals:
+  trajectory_completion_vector_equal_always_hard: true
+  p95_ratio_vs_always_hard_max: 1.0
+  p50_ratio_vs_counterfactual_cghik_v4_max_exclusive: 1.0
+  learned_seed_invocation_rate_max: 0.70
