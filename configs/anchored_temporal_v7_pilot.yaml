@@ -1,0 +1,102 @@
+protocol_version: anchored_temporal_v7_development_pilot_v1
+experiment_name: branch_anchored_temporal_cghik_development_pilot
+workspace: ..
+source_config: paper_v2.yaml
+release_v3_root: ../outputs/release_v3_locked
+release_v4_root: ../outputs/release_v4_locked
+temporal_v6_root: ../outputs/temporal_event_v6_pilot
+output_root: ../outputs/anchored_temporal_v7_pilot
+
+# Development-only roles. No formal-test dataset or result loader is available.
+robots: [panda, ur5e]
+release_seed: 17
+roles:
+  calibration: anchored_trajectory_calibration
+  policy_validation: anchored_trajectory_policy_validation
+data_boundary:
+  allowed_roles: [anchored_trajectory_calibration, anchored_trajectory_policy_validation]
+  formal_test_data_forbidden: true
+  reject_test_v3_v4_paths: true
+  split_before_outcome_collection: true
+  policy_validation_after_calibration_seal_only: true
+  policy_validation_run_count_per_robot: 1
+
+trajectory_data:
+  generator: fresh_transition_rich_anchored_trajectories
+  families:
+    - smooth_fast_orientation_smooth
+    - regular_near_singular_regular
+    - central_joint_limit_skim_return
+    - slow_high_curvature_high_speed_slow
+  paths_per_family_pool: 20
+  paths_per_family_per_role: 10
+  steps_per_trajectory: 150
+  dt: 0.02
+  pool_seed:
+    panda: 862701
+    ur5e: 862702
+  split_seed:
+    panda: 862711
+    ur5e: 862712
+  split_unit: complete_trajectory
+  preserve_time_order: true
+  require_seed_isolation: true
+  require_query_hash_isolation: true
+
+# H is inherited unchanged from the completed Temporal V6 calibration.
+frozen_temporal_v6_hold_frames:
+  panda: 5
+  ur5e: 10
+
+# R is the only newly selected policy parameter.
+anchor_policy:
+  local_commitment_horizon: [20, 25, 30, 40, 50]
+
+calibration_selection:
+  required_role: anchored_trajectory_calibration
+  eligibility: whole_trajectory_completion_vector_exactly_equal_always_hard
+  objective_order:
+    - minimum_p99_end_to_end_latency
+    - minimum_p95_end_to_end_latency
+    - minimum_learned_seed_invocation_rate
+    - minimum_p50_end_to_end_latency
+  exact_tie_break: lower_commitment_horizon
+  policy_validation_used_for_selection: false
+  no_eligible_candidate_action: stop_before_policy_validation
+
+strategies:
+  - always_hard
+  - counterfactual_cghik_v4
+  - temporal_event_cghik_v6
+  - anchored_temporal_cghik_v7
+
+timing:
+  clock: perf_counter_ns
+  warmup_frames: 200
+  trajectory_repeats: 1
+  method_order: seeded_four_by_four_latin_blocks
+  disk_io_inside_timed_interval: false
+  logging_serialization_inside_timed_interval: false
+
+runtime:
+  device: cuda:0
+  intra_op_threads: 8
+  inter_op_threads: 1
+  deterministic_algorithms: true
+  progress_every_trajectories: 5
+
+reporting:
+  latency_quantiles: [0.50, 0.95, 0.99]
+  run_length_quantiles: [0.25, 0.50, 0.75, 0.95]
+  representative_scope: per_robot
+  representative_selection: max_anchor_then_mode_switch_then_robust_occupancy_then_uid
+  figure_formats: [png, pdf]
+  png_dpi: 220
+
+# Development go/no-go. Every check must pass for both robots.
+pilot_goals:
+  whole_trajectory_completion_vector_equal_always_hard: true
+  p95_ratio_vs_always_hard_max: 1.0
+  p99_ratio_vs_always_hard_max: 1.0
+  mean_fev_ratio_vs_always_hard_max: 1.0
+  learned_seed_invocation_rate_max: 0.15
