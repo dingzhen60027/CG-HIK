@@ -1,0 +1,104 @@
+protocol_version: temporal_event_v6_development_pilot_v1
+experiment_name: temporal_event_triggered_cghik_development_pilot
+workspace: ..
+source_config: paper_v2.yaml
+release_v3_root: ../outputs/release_v3_locked
+release_v4_root: ../outputs/release_v4_locked
+output_root: ../outputs/temporal_event_v6_pilot
+robots:
+- panda
+- ur5e
+release_seed: 17
+roles:
+  calibration: trajectory_calibration
+  policy_validation: trajectory_policy_validation
+data_boundary:
+  allowed_roles:
+  - trajectory_calibration
+  - trajectory_policy_validation
+  formal_test_data_forbidden: true
+  reject_test_v3_v4_paths: true
+  split_before_outcome_collection: true
+  policy_validation_after_calibration_seal_only: true
+trajectory_data:
+  generator: fresh_temporal_event_trajectories
+  families:
+  - smooth_multi_joint
+  - wrist_orientation
+  - low_manipulability
+  - joint_limit_skimming
+  paths_per_family_pool: 20
+  paths_per_family_per_role: 10
+  steps_per_trajectory: 150
+  dt: 0.02
+  pool_seed:
+    panda: 861601
+    ur5e: 861602
+  split_seed:
+    panda: 861611
+    ur5e: 861612
+  split_unit: complete_trajectory
+  preserve_time_order: true
+  require_seed_isolation: true
+  require_query_hash_isolation: true
+temporal_policy:
+  hold_frames:
+  - 2
+  - 5
+  - 10
+  - 20
+  - 30
+calibration_selection:
+  required_role: trajectory_calibration
+  eligibility: whole_trajectory_completion_count_equal_always_hard
+  objective_order:
+  - minimum_p95_end_to_end_latency
+  - minimum_learned_seed_invocation_rate
+  - minimum_p50_end_to_end_latency
+  exact_tie_break: higher_hold_frames
+  policy_validation_used_for_selection: false
+  no_eligible_candidate_action: stop_before_policy_validation
+strategies:
+- always_hard
+- fixed_easy_cascade
+- counterfactual_cghik_v4
+- temporal_event_cghik
+timing:
+  clock: perf_counter_ns
+  warmup_frames: 200
+  trajectory_repeats: 1
+  method_order: seeded_four_by_four_latin_blocks
+  disk_io_inside_timed_interval: false
+  logging_serialization_inside_timed_interval: false
+runtime:
+  device: cuda:0
+  intra_op_threads: 8
+  inter_op_threads: 1
+  deterministic_algorithms: true
+  progress_every_trajectories: 5
+reporting:
+  latency_quantiles:
+  - 0.5
+  - 0.95
+  - 0.99
+  run_length_quantiles:
+  - 0.25
+  - 0.5
+  - 0.75
+  - 0.95
+  representative_scope: per_robot
+  representative_selection: max_mode_switch_then_robust_occupancy_then_uid
+  figure_formats:
+  - png
+  - pdf
+  png_dpi: 220
+pilot_goals:
+  whole_trajectory_completion_equal_always_hard: true
+  p95_ratio_vs_always_hard_max: 1.0
+  p50_ratio_vs_always_hard_max_exclusive: 1.0
+  learned_seed_invocation_rate_max: 0.6
+execution:
+  smoke: false
+  trajectories_per_family_per_role: 10
+  frames_per_trajectory: 150
+  warmup_frames: 200

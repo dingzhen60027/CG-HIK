@@ -1,0 +1,22 @@
+{
+  "panda": {
+    "always_hard_completion_count": 40,
+    "completion_vector_hamming_count": 0,
+    "gained_trajectory_uids": [],
+    "gate_uses_scalar_completion_count_only": true,
+    "lost_trajectory_uids": [],
+    "robot": "panda",
+    "temporal_completion_count": 40
+  },
+  "ur5e": {
+    "always_hard_completion_count": 38,
+    "completion_vector_hamming_count": 1,
+    "gained_trajectory_uids": [],
+    "gate_uses_scalar_completion_count_only": true,
+    "lost_trajectory_uids": [
+      "d01308c549e31272e005dbcd3d2f3b26191334cb31b28d28082de5b6c7948922"
+    ],
+    "robot": "ur5e",
+    "temporal_completion_count": 37
+  }
+}

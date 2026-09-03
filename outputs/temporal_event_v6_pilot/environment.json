@@ -1,0 +1,21 @@
+{
+  "captured_utc": "2026-09-03T14:35:40.575283+00:00",
+  "cpu_count": 24,
+  "cuda_available": true,
+  "cuda_version": "12.8",
+  "cudnn_version": 91900,
+  "development_only": true,
+  "formal_test_data_opened": false,
+  "gpu": "Quadro RTX 8000",
+  "method_interleaving": "seeded four-by-four Latin blocks",
+  "numpy": "2.4.4",
+  "pinocchio": "3.9.0",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+  "processor": "x86_64",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "scikit_learn": "1.9.0",
+  "scipy": "1.17.0",
+  "test_v3_test_v4_files_opened": 0,
+  "timing_clock": "perf_counter_ns",
+  "torch": "2.11.0+cu128"
+}

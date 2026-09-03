@@ -1,0 +1,105 @@
+{
+  "panda": {
+    "all_hard_invocation": {
+      "histogram": {
+        "1": 40
+      },
+      "max": 1,
+      "mean": 1.0,
+      "p25": 1.0,
+      "p50": 1.0,
+      "p75": 1.0,
+      "p95": 1.0,
+      "run_count": 40
+    },
+    "definition": {
+      "all_hard_invocation": "all consecutive fixed-HARD calls including mandatory bootstrap",
+      "local_success": "consecutive frames accepted by one-step LOCAL, including successful probes",
+      "robust_required": "consecutive non-bootstrap frames on which fixed HARD was actually invoked; mandatory first-frame branch establishment is excluded",
+      "trajectory_boundaries_crossed": false
+    },
+    "local_success": {
+      "histogram": {
+        "149": 40
+      },
+      "max": 149,
+      "mean": 149.0,
+      "p25": 149.0,
+      "p50": 149.0,
+      "p75": 149.0,
+      "p95": 149.0,
+      "run_count": 40
+    },
+    "robot": "panda",
+    "robust_required": {
+      "histogram": {},
+      "max": null,
+      "mean": null,
+      "p25": null,
+      "p50": null,
+      "p75": null,
+      "p95": null,
+      "run_count": 0
+    }
+  },
+  "ur5e": {
+    "all_hard_invocation": {
+      "histogram": {
+        "1": 40,
+        "10": 3,
+        "100": 1,
+        "83": 1,
+        "99": 1
+      },
+      "max": 100,
+      "mean": 7.6521739130434785,
+      "p25": 1.0,
+      "p50": 1.0,
+      "p75": 1.0,
+      "p95": 64.75,
+      "run_count": 46
+    },
+    "definition": {
+      "all_hard_invocation": "all consecutive fixed-HARD calls including mandatory bootstrap",
+      "local_success": "consecutive frames accepted by one-step LOCAL, including successful probes",
+      "robust_required": "consecutive non-bootstrap frames on which fixed HARD was actually invoked; mandatory first-frame branch establishment is excluded",
+      "trajectory_boundaries_crossed": false
+    },
+    "local_success": {
+      "histogram": {
+        "116": 1,
+        "149": 35,
+        "23": 1,
+        "30": 1,
+        "42": 1,
+        "49": 1,
+        "50": 1,
+        "57": 1,
+        "66": 1
+      },
+      "max": 149,
+      "mean": 131.34883720930233,
+      "p25": 149.0,
+      "p50": 149.0,
+      "p75": 149.0,
+      "p95": 149.0,
+      "run_count": 43
+    },
+    "robot": "ur5e",
+    "robust_required": {
+      "histogram": {
+        "10": 3,
+        "100": 1,
+        "83": 1,
+        "99": 1
+      },
+      "max": 100,
+      "mean": 52.0,
+      "p25": 10.0,
+      "p50": 46.5,
+      "p75": 95.0,
+      "p95": 99.75,
+      "run_count": 6
+    }
+  }
+}

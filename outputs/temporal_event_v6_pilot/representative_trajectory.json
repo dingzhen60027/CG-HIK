@@ -1,0 +1,18 @@
+{
+  "panda": {
+    "family": "wrist_orientation",
+    "mode_switch_count": 0,
+    "robot": "panda",
+    "robust_frame_count": 1,
+    "selection_rule": "maximum mode switches, then maximum ROBUST occupancy, then UID",
+    "trajectory_uid": "027634b33bd2278e83ce4fb9f79b76fc4da49c9053512d71f2d778aa16177246"
+  },
+  "ur5e": {
+    "family": "wrist_orientation",
+    "mode_switch_count": 4,
+    "robot": "ur5e",
+    "robust_frame_count": 21,
+    "selection_rule": "maximum mode switches, then maximum ROBUST occupancy, then UID",
+    "trajectory_uid": "cc09925dc656d1c764e266ea1643cb622a10cc346ae1e1374a6eba4c0a622966"
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "comparator": "always_hard",
+    "executed_full_query_hash_match_count": 80,
+    "executed_full_query_hash_match_rate": 0.013333333333333334,
+    "fraction_temporal_faster": 0.9958333333333333,
+    "mean_difference_ms": -1.2159994805,
+    "median_difference_ms": -1.1537515,
+    "method": "temporal_event_cghik",
+    "p05_difference_ms": -1.7085972999999999,
+    "p95_difference_ms": -0.77675315,
+    "paired_frame_count": 6000,
+    "pairing_unit": "same exogenous target and trajectory frame; previous_q is method-specific closed-loop state",
+    "robot": "panda"
+  },
+  {
+    "comparator": "counterfactual_cghik_v4",
+    "executed_full_query_hash_match_count": 40,
+    "executed_full_query_hash_match_rate": 0.006666666666666667,
+    "fraction_temporal_faster": 0.9991666666666666,
+    "mean_difference_ms": -1.4320046395000003,
+    "median_difference_ms": -1.3728690000000001,
+    "method": "temporal_event_cghik",
+    "p05_difference_ms": -1.8591315,
+    "p95_difference_ms": -1.27183435,
+    "paired_frame_count": 6000,
+    "pairing_unit": "same exogenous target and trajectory frame; previous_q is method-specific closed-loop state",
+    "robot": "panda"
+  },
+  {
+    "comparator": "always_hard",
+    "executed_full_query_hash_match_count": 80,
+    "executed_full_query_hash_match_rate": 0.013333333333333334,
+    "fraction_temporal_faster": 0.959,
+    "mean_difference_ms": -0.6413385715000001,
+    "median_difference_ms": -1.0963125,
+    "method": "temporal_event_cghik",
+    "p05_difference_ms": -1.5660466,
+    "p95_difference_ms": -0.19628094999999982,
+    "paired_frame_count": 6000,
+    "pairing_unit": "same exogenous target and trajectory frame; previous_q is method-specific closed-loop state",
+    "robot": "ur5e"
+  },
+  {
+    "comparator": "counterfactual_cghik_v4",
+    "executed_full_query_hash_match_count": 1520,
+    "executed_full_query_hash_match_rate": 0.25333333333333335,
+    "fraction_temporal_faster": 0.9668333333333333,
+    "mean_difference_ms": -0.35829140483333344,
+    "median_difference_ms": -1.313426,
+    "method": "temporal_event_cghik",
+    "p05_difference_ms": -1.7792929499999999,
+    "p95_difference_ms": -0.883910799999999,
+    "paired_frame_count": 6000,
+    "pairing_unit": "same exogenous target and trajectory frame; previous_q is method-specific closed-loop state",
+    "robot": "ur5e"
+  }
+]

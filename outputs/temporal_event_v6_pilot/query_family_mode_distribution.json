@@ -1,0 +1,90 @@
+[
+  {
+    "family": "smooth_multi_joint",
+    "frame_count": 1500,
+    "frame_verified_success": 1.0,
+    "learned_seed_invocation_rate": 0.006666666666666667,
+    "local_occupancy": 0.9933333333333333,
+    "local_probe_rate": 0.0,
+    "robot": "panda",
+    "robust_occupancy": 0.006666666666666667,
+    "transition_frame_rate": 0.0
+  },
+  {
+    "family": "wrist_orientation",
+    "frame_count": 1500,
+    "frame_verified_success": 1.0,
+    "learned_seed_invocation_rate": 0.006666666666666667,
+    "local_occupancy": 0.9933333333333333,
+    "local_probe_rate": 0.0,
+    "robot": "panda",
+    "robust_occupancy": 0.006666666666666667,
+    "transition_frame_rate": 0.0
+  },
+  {
+    "family": "low_manipulability",
+    "frame_count": 1500,
+    "frame_verified_success": 1.0,
+    "learned_seed_invocation_rate": 0.006666666666666667,
+    "local_occupancy": 0.9933333333333333,
+    "local_probe_rate": 0.0,
+    "robot": "panda",
+    "robust_occupancy": 0.006666666666666667,
+    "transition_frame_rate": 0.0
+  },
+  {
+    "family": "joint_limit_skimming",
+    "frame_count": 1500,
+    "frame_verified_success": 1.0,
+    "learned_seed_invocation_rate": 0.006666666666666667,
+    "local_occupancy": 0.9933333333333333,
+    "local_probe_rate": 0.0,
+    "robot": "panda",
+    "robust_occupancy": 0.006666666666666667,
+    "transition_frame_rate": 0.0
+  },
+  {
+    "family": "smooth_multi_joint",
+    "frame_count": 1500,
+    "frame_verified_success": 0.9446666666666667,
+    "learned_seed_invocation_rate": 0.062,
+    "local_occupancy": 0.9386666666666666,
+    "local_probe_rate": 0.005333333333333333,
+    "robot": "ur5e",
+    "robust_occupancy": 0.06133333333333333,
+    "transition_frame_rate": 0.0006666666666666666
+  },
+  {
+    "family": "wrist_orientation",
+    "frame_count": 1500,
+    "frame_verified_success": 0.868,
+    "learned_seed_invocation_rate": 0.15933333333333333,
+    "local_occupancy": 0.842,
+    "local_probe_rate": 0.014,
+    "robot": "ur5e",
+    "robust_occupancy": 0.158,
+    "transition_frame_rate": 0.005333333333333333
+  },
+  {
+    "family": "low_manipulability",
+    "frame_count": 1500,
+    "frame_verified_success": 1.0,
+    "learned_seed_invocation_rate": 0.006666666666666667,
+    "local_occupancy": 0.9933333333333333,
+    "local_probe_rate": 0.0,
+    "robot": "ur5e",
+    "robust_occupancy": 0.006666666666666667,
+    "transition_frame_rate": 0.0
+  },
+  {
+    "family": "joint_limit_skimming",
+    "frame_count": 1500,
+    "frame_verified_success": 1.0,
+    "learned_seed_invocation_rate": 0.006666666666666667,
+    "local_occupancy": 0.9933333333333333,
+    "local_probe_rate": 0.0,
+    "robot": "ur5e",
+    "robust_occupancy": 0.006666666666666667,
+    "transition_frame_rate": 0.0
+  }
+]

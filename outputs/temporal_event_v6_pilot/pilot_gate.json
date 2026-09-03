@@ -1,0 +1,30 @@
+{
+  "all_robots_pass": false,
+  "development_only": true,
+  "fresh_evaluation_authorized": false,
+  "robots": {
+    "panda": {
+      "checks": {
+        "completion_equal_always_hard": true,
+        "learned_seed_invocation_rate_at_most_0_60": true,
+        "p50_below_always_hard": true,
+        "p95_not_above_always_hard": true
+      },
+      "p50_ratio_vs_always_hard": 0.3305832873531083,
+      "p95_ratio_vs_always_hard": 0.2638469096340124,
+      "pass": true
+    },
+    "ur5e": {
+      "checks": {
+        "completion_equal_always_hard": false,
+        "learned_seed_invocation_rate_at_most_0_60": true,
+        "p50_below_always_hard": true,
+        "p95_not_above_always_hard": true
+      },
+      "p50_ratio_vs_always_hard": 0.3135452788201892,
+      "p95_ratio_vs_always_hard": 0.6706531959311053,
+      "pass": false
+    }
+  },
+  "status": "fail"
+}
