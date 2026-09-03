@@ -1,0 +1,10 @@
+{
+  "all_robots_pass": false,
+  "development_only": true,
+  "fresh_evaluation_authorized": false,
+  "reason": "no completion-vector-eligible R",
+  "robots_without_eligible_r": [
+    "panda"
+  ],
+  "status": "calibration_no_go"
+}

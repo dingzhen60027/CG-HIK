@@ -1,0 +1,574 @@
+{
+  "artifacts": {
+    "anchored_temporal_v7_pilot.yaml": {
+      "path": "anchored_temporal_v7_pilot.yaml",
+      "sha256": "71c8b9d948430a5c60035f11be1b20eb0ab7a5f10f20063f6fa011fe634abc65",
+      "size": 3078
+    },
+    "calibration_candidate_metrics.json": {
+      "path": "calibration_candidate_metrics.json",
+      "sha256": "ca845c44aafc51830e7b97d6a29d2d21f23d6f3bbf6b83816bd132cc0323861a",
+      "size": 24689
+    },
+    "calibration_selection.json": {
+      "path": "calibration_selection.json",
+      "sha256": "a8402aafc0f8b25ff891c2c732cb3aa650b3c3b657d26f8a3eb0307f559e826b",
+      "size": 27037
+    },
+    "environment.json": {
+      "path": "environment.json",
+      "sha256": "2cebf5ec543d93a3505fff3eb657d6d14609862d9f49754a2c5f0e7c9eb999a1",
+      "size": 697
+    },
+    "panda_calibration_records.npz": {
+      "path": "panda_calibration_records.npz",
+      "sha256": "a61c5c7b1b8ae289ce3c5a083c269e4d4313adbd5f686f564a9d43cabdb6a386",
+      "size": 3818025
+    },
+    "panda_trajectory_calibration.npz": {
+      "path": "panda_trajectory_calibration.npz",
+      "sha256": "ff5df544ca756f8a18410e125210e16d6eeb4a08b151956892b40a88f6ebc163",
+      "size": 1231873
+    },
+    "panda_trajectory_policy_validation.npz": {
+      "path": "panda_trajectory_policy_validation.npz",
+      "sha256": "e396b8aca7773f82e8b5ad70f050a01282068d45a9679ac470c4546219b3b624",
+      "size": 1231392
+    },
+    "pilot_gate.json": {
+      "path": "pilot_gate.json",
+      "sha256": "b9f4bdaac9d9158052b53b0d36954214780531da21106e931bb918d8ce65cce2",
+      "size": 229
+    },
+    "trajectory_split_manifest.json": {
+      "path": "trajectory_split_manifest.json",
+      "sha256": "f6368c351111580f4f31c9c04b0a45ec0bef4bf186a4f770afe1bf8412833f12",
+      "size": 336538
+    },
+    "ur5e_calibration_records.npz": {
+      "path": "ur5e_calibration_records.npz",
+      "sha256": "80ef6957c7c4c43922726ba3c4feff643680cfa4d6378c9cc2d2f35e143f5b89",
+      "size": 3697850
+    },
+    "ur5e_trajectory_calibration.npz": {
+      "path": "ur5e_trajectory_calibration.npz",
+      "sha256": "25b3e6a085acafc9b8ce1c0002bde6fa94c2425f15933d21e5316df883df0f65",
+      "size": 1168048
+    },
+    "ur5e_trajectory_policy_validation.npz": {
+      "path": "ur5e_trajectory_policy_validation.npz",
+      "sha256": "b6349f33f5813a026d975e2e5ccfe1b9c50e015ce8bd6f0481e190e54622f6b9",
+      "size": 1169974
+    }
+  },
+  "calibration_candidates": [
+    20,
+    25,
+    30,
+    40,
+    50
+  ],
+  "calibration_no_go": {
+    "reason": "exact completion-vector eligibility failed",
+    "robots_without_eligible_r": [
+      "panda"
+    ]
+  },
+  "calibration_role": "anchored_trajectory_calibration",
+  "finished_at": "2026-09-03T18:10:42.039448+00:00",
+  "formal_test_data_opened": false,
+  "formal_test_source_opened": false,
+  "frames_per_trajectory": 150,
+  "frozen_temporal_v6_hold_frames": {
+    "panda": 5,
+    "ur5e": 10
+  },
+  "git_commit_end": "1b3169324c5164980f243e15fd12563ec1383b03",
+  "git_commit_start": "1b3169324c5164980f243e15fd12563ec1383b03",
+  "git_status_end": [],
+  "git_status_start": [],
+  "implementation_sources": {
+    "configs/anchored_temporal_v7_pilot.yaml": {
+      "path": "configs/anchored_temporal_v7_pilot.yaml",
+      "sha256": "10a030ea85141797fe9940b58b0b77a2b8e77d1ee64e4df28b2e0a579b3b49d6",
+      "size": 3218
+    },
+    "configs/paper_v2.yaml": {
+      "path": "configs/paper_v2.yaml",
+      "sha256": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+      "size": 2982
+    },
+    "configs/temporal_v6_pilot.yaml": {
+      "path": "configs/temporal_v6_pilot.yaml",
+      "sha256": "7ef351922c724754e84dd7d86b0373cfda23c5ae43d65f7c3a84a60312a9c37b",
+      "size": 2715
+    },
+    "scripts/run_anchored_temporal_v7_pilot.sh": {
+      "path": "scripts/run_anchored_temporal_v7_pilot.sh",
+      "sha256": "fb532171231a712a17edf5b6552ac5a19c4608a0a58466ee76acb36e843f0f14",
+      "size": 548
+    },
+    "scripts/run_temporal_v6_pilot.sh": {
+      "path": "scripts/run_temporal_v6_pilot.sh",
+      "sha256": "baac3da77ded069e735b5e6a50d7d8a99b6bd87cf9394fce491d5dd2b51d5d99",
+      "size": 530
+    },
+    "src/confik/anchored_temporal_v7/__init__.py": {
+      "path": "src/confik/anchored_temporal_v7/__init__.py",
+      "sha256": "cf34dde1a1e07f676207029f0e06d674f80fd6c18e4e81c40fa388e7d78a7545",
+      "size": 954
+    },
+    "src/confik/anchored_temporal_v7/pilot.py": {
+      "path": "src/confik/anchored_temporal_v7/pilot.py",
+      "sha256": "d0ff99cd49d0cfd9e2d0158faa218674eb689b79e9cb4aa28969177dbf42ea66",
+      "size": 105604
+    },
+    "src/confik/anchored_temporal_v7/runtime.py": {
+      "path": "src/confik/anchored_temporal_v7/runtime.py",
+      "sha256": "f114e88f49956fa176865f9b747163d2d47ba9b48436f98474876d0fa69e6474",
+      "size": 15497
+    },
+    "src/confik/anchored_temporal_v7/state.py": {
+      "path": "src/confik/anchored_temporal_v7/state.py",
+      "sha256": "bb4975641242dd0903216b2b01689eb2e9222be00894954405da28de4d6b81ec",
+      "size": 13473
+    },
+    "src/confik/anchored_temporal_v7/trajectories.py": {
+      "path": "src/confik/anchored_temporal_v7/trajectories.py",
+      "sha256": "f998a8b765a56c9aa303531b1d29fe8d72ca6fb968c8ef9988b624ed49793f61",
+      "size": 58008
+    },
+    "src/confik/temporal_v6/__init__.py": {
+      "path": "src/confik/temporal_v6/__init__.py",
+      "sha256": "175b52fa0044bd1d4c59eaf643624089f3938a0d0306eefc7bed013ed17801f8",
+      "size": 601
+    },
+    "src/confik/temporal_v6/pilot.py": {
+      "path": "src/confik/temporal_v6/pilot.py",
+      "sha256": "f616b02d6b60f8be1594bdacd02eb84bac2a3362349d948eac5aab1b4d222597",
+      "size": 75634
+    },
+    "src/confik/temporal_v6/runtime.py": {
+      "path": "src/confik/temporal_v6/runtime.py",
+      "sha256": "6fbe82f5bc792d7782f545bcd7be082211fad4a4979f0f591c5f86a83fe18c72",
+      "size": 13850
+    },
+    "src/confik/temporal_v6/state.py": {
+      "path": "src/confik/temporal_v6/state.py",
+      "sha256": "53e8fdd05aeb6ed242b58e58689637d6fd2118e5f524ab27d816272dd5f29d17",
+      "size": 10493
+    },
+    "src/confik/temporal_v6/trajectories.py": {
+      "path": "src/confik/temporal_v6/trajectories.py",
+      "sha256": "359c69b897767e92d86057d7e4ed56398017cd352aea8e3a3be6651a4d8f9c71",
+      "size": 53029
+    },
+    "tests/test_anchored_temporal_v7.py": {
+      "path": "tests/test_anchored_temporal_v7.py",
+      "sha256": "93a37123e92a47d9b12a69789d0a1e3c49201b6b2108964b79862ac01a30f53a",
+      "size": 20088
+    },
+    "tests/test_temporal_v6.py": {
+      "path": "tests/test_temporal_v6.py",
+      "sha256": "5b77998830e0d09092679fbf6eb33576fc877aae0bcecf3cc01ec1c23c3c03c2",
+      "size": 14457
+    }
+  },
+  "methods": [
+    "always_hard",
+    "counterfactual_cghik_v4",
+    "temporal_event_cghik_v6",
+    "anchored_temporal_cghik_v7"
+  ],
+  "pilot_gate": {
+    "all_robots_pass": false,
+    "development_only": true,
+    "fresh_evaluation_authorized": false,
+    "reason": "no completion-vector-eligible R",
+    "robots_without_eligible_r": [
+      "panda"
+    ],
+    "status": "calibration_no_go"
+  },
+  "policy_frozen_before_policy_validation": false,
+  "policy_validation_outcomes_computed": false,
+  "policy_validation_role": "anchored_trajectory_policy_validation",
+  "policy_validation_run_count_per_robot": 0,
+  "policy_validation_used_for_selection": false,
+  "prior_registry_inputs": {
+    "panda": {
+      "formal_evaluation_query_hash_comparison": "not performed because the formal-data no-read boundary takes precedence; formal trajectory generator seeds are checked from locked release lineage",
+      "formal_evaluation_query_rows_opened": 0,
+      "input_files": {
+        "outputs/paper_v2_seed17/panda/datasets/calibration_queries.npz": {
+          "path": "outputs/paper_v2_seed17/panda/datasets/calibration_queries.npz",
+          "sha256": "c5c90ff28d57ec12614af9b3c9fdf9aac88d4b702f4dc961d7c516bbe9ad7932",
+          "size": 2939708
+        },
+        "outputs/paper_v2_seed17/panda/datasets/policy_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed17/panda/datasets/policy_validation_queries.npz",
+          "sha256": "1acdbe888ac9a7958e46adc76a1b576bebd4a052a242cd05a57a51d63e82fa0e",
+          "size": 2939457
+        },
+        "outputs/paper_v2_seed17/panda/datasets/risk_train_queries.npz": {
+          "path": "outputs/paper_v2_seed17/panda/datasets/risk_train_queries.npz",
+          "sha256": "e012b404c6972ccbc7c46e496ade00d8b05e5f970055a6def9fdd404976f8d81",
+          "size": 11749412
+        },
+        "outputs/paper_v2_seed17/panda/datasets/risk_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed17/panda/datasets/risk_validation_queries.npz",
+          "sha256": "fec4f553affada4257a2ecdd8ad591480ff7a23b1e43ac869105c4b0af50ad51",
+          "size": 2939534
+        },
+        "outputs/paper_v2_seed17/panda/datasets/seed_train.npz": {
+          "path": "outputs/paper_v2_seed17/panda/datasets/seed_train.npz",
+          "sha256": "4f6e28e7397eaf6fc3b5b1aa153473b4daf7b4ecd4fa037cef3a0fa58ff707ee",
+          "size": 39676013
+        },
+        "outputs/paper_v2_seed17/panda/datasets/seed_validation.npz": {
+          "path": "outputs/paper_v2_seed17/panda/datasets/seed_validation.npz",
+          "sha256": "36676200fed8d4abd1b9b0532a822fff1cb12f132bf77e9e8d644488ed9cf251",
+          "size": 3968120
+        },
+        "outputs/paper_v2_seed29/panda/datasets/calibration_queries.npz": {
+          "path": "outputs/paper_v2_seed29/panda/datasets/calibration_queries.npz",
+          "sha256": "3cdd2a15aad8760c826164f813c5e75c375c8bb7daf682077546dff30be6ffd4",
+          "size": 2939717
+        },
+        "outputs/paper_v2_seed29/panda/datasets/policy_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed29/panda/datasets/policy_validation_queries.npz",
+          "sha256": "495d5675a943bb0e936dccf6e0ff0f0b22c144070670fd3088ac360be4f5985e",
+          "size": 2939475
+        },
+        "outputs/paper_v2_seed29/panda/datasets/risk_train_queries.npz": {
+          "path": "outputs/paper_v2_seed29/panda/datasets/risk_train_queries.npz",
+          "sha256": "87436fc6c2d3b4d4c59283681aa6c8a8cf7d00719f0b44d4b72f0dae04e97958",
+          "size": 11749498
+        },
+        "outputs/paper_v2_seed29/panda/datasets/risk_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed29/panda/datasets/risk_validation_queries.npz",
+          "sha256": "f6dca555f7855bef18927da73f27bb71c3a31aa7bedc7465afefa7f55e191361",
+          "size": 2939569
+        },
+        "outputs/paper_v2_seed29/panda/datasets/seed_train.npz": {
+          "path": "outputs/paper_v2_seed29/panda/datasets/seed_train.npz",
+          "sha256": "4f6e28e7397eaf6fc3b5b1aa153473b4daf7b4ecd4fa037cef3a0fa58ff707ee",
+          "size": 39676013
+        },
+        "outputs/paper_v2_seed29/panda/datasets/seed_validation.npz": {
+          "path": "outputs/paper_v2_seed29/panda/datasets/seed_validation.npz",
+          "sha256": "36676200fed8d4abd1b9b0532a822fff1cb12f132bf77e9e8d644488ed9cf251",
+          "size": 3968120
+        },
+        "outputs/paper_v2_seed43/panda/datasets/calibration_queries.npz": {
+          "path": "outputs/paper_v2_seed43/panda/datasets/calibration_queries.npz",
+          "sha256": "70f0e22c3302edc96280225ef44a3366891bca8a4ece0eba3bc3b4ac011f0773",
+          "size": 2939605
+        },
+        "outputs/paper_v2_seed43/panda/datasets/policy_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed43/panda/datasets/policy_validation_queries.npz",
+          "sha256": "82e413bcb509587a7f9c93f373fa8ba93be5d6dfaead49e4a2a6aa1b84db04f9",
+          "size": 2939369
+        },
+        "outputs/paper_v2_seed43/panda/datasets/risk_train_queries.npz": {
+          "path": "outputs/paper_v2_seed43/panda/datasets/risk_train_queries.npz",
+          "sha256": "91ca1880b1b2afaa4ce02c6f26d54d6ebb57752f79344460df1a44a81205cd8b",
+          "size": 11749155
+        },
+        "outputs/paper_v2_seed43/panda/datasets/risk_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed43/panda/datasets/risk_validation_queries.npz",
+          "sha256": "88e22f4ac5e8b4300727a15c6a1fa2fd16e64544841a1dba699e63922f98faf7",
+          "size": 2939444
+        },
+        "outputs/paper_v2_seed43/panda/datasets/seed_train.npz": {
+          "path": "outputs/paper_v2_seed43/panda/datasets/seed_train.npz",
+          "sha256": "4f6e28e7397eaf6fc3b5b1aa153473b4daf7b4ecd4fa037cef3a0fa58ff707ee",
+          "size": 39676013
+        },
+        "outputs/paper_v2_seed43/panda/datasets/seed_validation.npz": {
+          "path": "outputs/paper_v2_seed43/panda/datasets/seed_validation.npz",
+          "sha256": "36676200fed8d4abd1b9b0532a822fff1cb12f132bf77e9e8d644488ed9cf251",
+          "size": 3968120
+        },
+        "outputs/release_v3_locked/release_manifest.json": {
+          "path": "outputs/release_v3_locked/release_manifest.json",
+          "sha256": "9cd72b1fa1abfaa5e8e8e3f769987996dec0877b35be7fda58eddd813bbe05d6",
+          "size": 54761
+        },
+        "outputs/release_v4_locked/release_manifest.json": {
+          "path": "outputs/release_v4_locked/release_manifest.json",
+          "sha256": "816f6fa7fba2a015eb0f3dd146f76d469dd3ef13d8e7440b8381fcdcc0efee10",
+          "size": 3572
+        },
+        "outputs/temporal_event_v6_pilot/panda_trajectory_calibration.npz": {
+          "path": "outputs/temporal_event_v6_pilot/panda_trajectory_calibration.npz",
+          "sha256": "53af8a370af8e1eefdba58dbbbc42b14b39452e0781f7edcadf7322affebd18e",
+          "size": 1473784
+        },
+        "outputs/temporal_event_v6_pilot/panda_trajectory_policy_validation.npz": {
+          "path": "outputs/temporal_event_v6_pilot/panda_trajectory_policy_validation.npz",
+          "sha256": "98be41fda0ace391da51326d6dcdb98eb793c0e65fcf005d3a3ad2afe81cae10",
+          "size": 1474564
+        },
+        "outputs/temporal_v6_pilot/panda_trajectory_calibration.npz": {
+          "path": "outputs/temporal_v6_pilot/panda_trajectory_calibration.npz",
+          "sha256": "9eaadcafe9ad1bc64109d130275fbf1480e28da6ec73ca666e1dcf7befcc89b0",
+          "size": 1187949
+        },
+        "outputs/temporal_v6_pilot/panda_trajectory_policy_validation.npz": {
+          "path": "outputs/temporal_v6_pilot/panda_trajectory_policy_validation.npz",
+          "sha256": "ffd0586dabadd30c2cac204c86c5ce63225618ccb6f450212f4fc223335aaff4",
+          "size": 1185901
+        }
+      },
+      "regenerated_reference": {
+        "generator": "generate_reference_trajectory_tests",
+        "paths_per_family": 10,
+        "query_hash_count": 6000,
+        "seed": 9020,
+        "steps": 150
+      },
+      "test_v3_test_v4_files_opened": 0,
+      "urdf": {
+        "path": "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/robots/panda_arm.urdf",
+        "sha256": "e1fb335ca060722abc830206e23af0ae8d7b32d135e52ee914132d9b19b3e29c",
+        "size": 7705
+      }
+    },
+    "ur5e": {
+      "formal_evaluation_query_hash_comparison": "not performed because the formal-data no-read boundary takes precedence; formal trajectory generator seeds are checked from locked release lineage",
+      "formal_evaluation_query_rows_opened": 0,
+      "input_files": {
+        "outputs/paper_v2_seed17/ur5e/datasets/calibration_queries.npz": {
+          "path": "outputs/paper_v2_seed17/ur5e/datasets/calibration_queries.npz",
+          "sha256": "0d0e656ba94b93c2fd7c2aa9170f4dde13a7edc845cd2d0c4003a498c681e4f0",
+          "size": 2719819
+        },
+        "outputs/paper_v2_seed17/ur5e/datasets/policy_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed17/ur5e/datasets/policy_validation_queries.npz",
+          "sha256": "e6b752acad63277d5c28d5fe49bea3951965b65b42773f3569b95a8e237a002a",
+          "size": 2719655
+        },
+        "outputs/paper_v2_seed17/ur5e/datasets/risk_train_queries.npz": {
+          "path": "outputs/paper_v2_seed17/ur5e/datasets/risk_train_queries.npz",
+          "sha256": "841f29f5407f05fd5cc076b0ddd5c7f924ad6010c1da76f893b870cb5a72a6e1",
+          "size": 10869559
+        },
+        "outputs/paper_v2_seed17/ur5e/datasets/risk_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed17/ur5e/datasets/risk_validation_queries.npz",
+          "sha256": "3a1cffcff036a16458cd76a19a18686ca0ee56c1c2550f6b81d41ba5fedfe22c",
+          "size": 2719876
+        },
+        "outputs/paper_v2_seed17/ur5e/datasets/seed_train.npz": {
+          "path": "outputs/paper_v2_seed17/ur5e/datasets/seed_train.npz",
+          "sha256": "6f805a77fc9ee08068045f6c6c8dc3e3ea173967ddccc729630cb7bd9587bb75",
+          "size": 36711682
+        },
+        "outputs/paper_v2_seed17/ur5e/datasets/seed_validation.npz": {
+          "path": "outputs/paper_v2_seed17/ur5e/datasets/seed_validation.npz",
+          "sha256": "6cf8fff478f5466d2b9d4747261191fd06c395652640787c3301d07a588e7043",
+          "size": 3672284
+        },
+        "outputs/paper_v2_seed29/ur5e/datasets/calibration_queries.npz": {
+          "path": "outputs/paper_v2_seed29/ur5e/datasets/calibration_queries.npz",
+          "sha256": "e4cc64592acc27c436410b16f2e624e3ec7942a5a3e2ed8a0eca875a1ac13c5f",
+          "size": 2719792
+        },
+        "outputs/paper_v2_seed29/ur5e/datasets/policy_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed29/ur5e/datasets/policy_validation_queries.npz",
+          "sha256": "30610481de8073faf0651daeeffd2233a86cf7392f5faeb9dc5560e6dfd0eb35",
+          "size": 2719646
+        },
+        "outputs/paper_v2_seed29/ur5e/datasets/risk_train_queries.npz": {
+          "path": "outputs/paper_v2_seed29/ur5e/datasets/risk_train_queries.npz",
+          "sha256": "e2077e7f96dccb567d1c164ca891773f8cf84da7f20828cde896e4bd142fe0ad",
+          "size": 10869481
+        },
+        "outputs/paper_v2_seed29/ur5e/datasets/risk_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed29/ur5e/datasets/risk_validation_queries.npz",
+          "sha256": "5be4f1413d38656d58ca3c9fcff7250b09dcdddeca2a21fa73ccf9926c6f718b",
+          "size": 2719858
+        },
+        "outputs/paper_v2_seed29/ur5e/datasets/seed_train.npz": {
+          "path": "outputs/paper_v2_seed29/ur5e/datasets/seed_train.npz",
+          "sha256": "6f805a77fc9ee08068045f6c6c8dc3e3ea173967ddccc729630cb7bd9587bb75",
+          "size": 36711682
+        },
+        "outputs/paper_v2_seed29/ur5e/datasets/seed_validation.npz": {
+          "path": "outputs/paper_v2_seed29/ur5e/datasets/seed_validation.npz",
+          "sha256": "6cf8fff478f5466d2b9d4747261191fd06c395652640787c3301d07a588e7043",
+          "size": 3672284
+        },
+        "outputs/paper_v2_seed43/ur5e/datasets/calibration_queries.npz": {
+          "path": "outputs/paper_v2_seed43/ur5e/datasets/calibration_queries.npz",
+          "sha256": "b00de992dd2e9b70aec1ea283914562c719d5513d4968c3bb479de7b622499f7",
+          "size": 2719815
+        },
+        "outputs/paper_v2_seed43/ur5e/datasets/policy_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed43/ur5e/datasets/policy_validation_queries.npz",
+          "sha256": "88f66abccc24380e3ae18fc7e01b46406c48a7e687b1158701cb08439918efb2",
+          "size": 2719643
+        },
+        "outputs/paper_v2_seed43/ur5e/datasets/risk_train_queries.npz": {
+          "path": "outputs/paper_v2_seed43/ur5e/datasets/risk_train_queries.npz",
+          "sha256": "cf3fe965e4f36048b58b6d6383c9c55d55cb49591131d4630b47f9cb4bcced3a",
+          "size": 10869566
+        },
+        "outputs/paper_v2_seed43/ur5e/datasets/risk_validation_queries.npz": {
+          "path": "outputs/paper_v2_seed43/ur5e/datasets/risk_validation_queries.npz",
+          "sha256": "747b5e5cf5d3f35d48c760bcb8563ec96345db6d0bffd96dea4a3f8509ecad15",
+          "size": 2719882
+        },
+        "outputs/paper_v2_seed43/ur5e/datasets/seed_train.npz": {
+          "path": "outputs/paper_v2_seed43/ur5e/datasets/seed_train.npz",
+          "sha256": "6f805a77fc9ee08068045f6c6c8dc3e3ea173967ddccc729630cb7bd9587bb75",
+          "size": 36711682
+        },
+        "outputs/paper_v2_seed43/ur5e/datasets/seed_validation.npz": {
+          "path": "outputs/paper_v2_seed43/ur5e/datasets/seed_validation.npz",
+          "sha256": "6cf8fff478f5466d2b9d4747261191fd06c395652640787c3301d07a588e7043",
+          "size": 3672284
+        },
+        "outputs/release_v3_locked/release_manifest.json": {
+          "path": "outputs/release_v3_locked/release_manifest.json",
+          "sha256": "9cd72b1fa1abfaa5e8e8e3f769987996dec0877b35be7fda58eddd813bbe05d6",
+          "size": 54761
+        },
+        "outputs/release_v4_locked/release_manifest.json": {
+          "path": "outputs/release_v4_locked/release_manifest.json",
+          "sha256": "816f6fa7fba2a015eb0f3dd146f76d469dd3ef13d8e7440b8381fcdcc0efee10",
+          "size": 3572
+        },
+        "outputs/temporal_event_v6_pilot/ur5e_trajectory_calibration.npz": {
+          "path": "outputs/temporal_event_v6_pilot/ur5e_trajectory_calibration.npz",
+          "sha256": "7a36c8bbdf24be5e4ce856506d9ca10019eafaf0d73eda6f01ffcf5bc3038a6b",
+          "size": 1388450
+        },
+        "outputs/temporal_event_v6_pilot/ur5e_trajectory_policy_validation.npz": {
+          "path": "outputs/temporal_event_v6_pilot/ur5e_trajectory_policy_validation.npz",
+          "sha256": "fc1aa4ed10653c856c17687213f2c8cfc7a5857da3c743355cb1f0545a1edb54",
+          "size": 1388865
+        },
+        "outputs/temporal_v6_pilot/ur5e_trajectory_calibration.npz": {
+          "path": "outputs/temporal_v6_pilot/ur5e_trajectory_calibration.npz",
+          "sha256": "03cfe42ed2f09b963fff6aa67fdb046a1041a81a6ffda1360660ec0c71950c31",
+          "size": 1098272
+        },
+        "outputs/temporal_v6_pilot/ur5e_trajectory_policy_validation.npz": {
+          "path": "outputs/temporal_v6_pilot/ur5e_trajectory_policy_validation.npz",
+          "sha256": "394fd5f3b546e0d7d47ddce2dc5def6e73836daed0db6b78efbf12358a96d522",
+          "size": 1100673
+        }
+      },
+      "regenerated_reference": {
+        "generator": "generate_reference_trajectory_tests",
+        "paths_per_family": 10,
+        "query_hash_count": 6000,
+        "seed": 9020,
+        "steps": 150
+      },
+      "test_v3_test_v4_files_opened": 0,
+      "urdf": {
+        "path": "/home/eric/isaacsim/extsDeprecated/isaacsim.robot_motion.motion_generation/motion_policy_configs/universal_robots/ur5e/ur5e.urdf",
+        "sha256": "e806cecaa2b9c56de58d74177ec6479351bc359f4ef779c7368e09a64116cb12",
+        "size": 23631
+      }
+    }
+  },
+  "protected_tree_digest_after": {
+    "hierarchical_v5_lite_pilot": "8af8641e87396bd8674fcb12a7a6443c5d5007de13ffcfcc3339a7fe62f6191c",
+    "hierarchical_v5_pilot": "5bd2d6ee3b01dc854f5807c7c617719ac1b3832fca1b75dad2877dab17a33146",
+    "legacy_temporal_v6_pilot": "fec58f1fa9454b523d8bc884249f0eec91b8a0b806128fc4b0d25050752969dc",
+    "release_v3_locked": "f5d20bbf70b872f6387765671a8b0f74e793cedbce496f067212b05b5ebe462d",
+    "release_v4_candidate": "4b62ccdfb1382f5cded38b40a2b98a9a8437e5fb97211646dd024243ccced818",
+    "release_v4_locked": "704aef8108553ff27aa13b0ac057132b1237ddc5ebd38bcb1c9d49af3588fabb",
+    "temporal_event_v6_pilot": "0d05bb3eb7cdddac8dbb5bcfef1efc7dec648077f7af353340264fdd622f22cc"
+  },
+  "protected_tree_digest_before": {
+    "hierarchical_v5_lite_pilot": "8af8641e87396bd8674fcb12a7a6443c5d5007de13ffcfcc3339a7fe62f6191c",
+    "hierarchical_v5_pilot": "5bd2d6ee3b01dc854f5807c7c617719ac1b3832fca1b75dad2877dab17a33146",
+    "legacy_temporal_v6_pilot": "fec58f1fa9454b523d8bc884249f0eec91b8a0b806128fc4b0d25050752969dc",
+    "release_v3_locked": "f5d20bbf70b872f6387765671a8b0f74e793cedbce496f067212b05b5ebe462d",
+    "release_v4_candidate": "4b62ccdfb1382f5cded38b40a2b98a9a8437e5fb97211646dd024243ccced818",
+    "release_v4_locked": "704aef8108553ff27aa13b0ac057132b1237ddc5ebd38bcb1c9d49af3588fabb",
+    "temporal_event_v6_pilot": "0d05bb3eb7cdddac8dbb5bcfef1efc7dec648077f7af353340264fdd622f22cc"
+  },
+  "protected_trees_unchanged": true,
+  "protocol": "anchored_temporal_v7_development_pilot_v1",
+  "selected_reanchor_interval": {
+    "panda": null,
+    "ur5e": 20
+  },
+  "started_at": "2026-09-03T17:23:28.716692+00:00",
+  "status": "calibration_no_go",
+  "test_v3_test_v4_files_opened": 0,
+  "trajectory_counts_per_robot": {
+    "calibration": 40,
+    "policy_validation_generated_but_not_evaluated": 40
+  },
+  "verified_temporal_v6_baseline": {
+    "calibration_seal_sha256": "8b372a1b2a0a436c5e5c5e159f9a24740a4574edbd6be1639d0793147cdc2681",
+    "formal_test_source_opened": false,
+    "implementation_sources_verified": {
+      "configs/paper_v2.yaml": {
+        "path": "configs/paper_v2.yaml",
+        "sha256": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+        "size": 2982
+      },
+      "configs/temporal_v6_pilot.yaml": {
+        "path": "configs/temporal_v6_pilot.yaml",
+        "sha256": "7ef351922c724754e84dd7d86b0373cfda23c5ae43d65f7c3a84a60312a9c37b",
+        "size": 2715
+      },
+      "scripts/run_temporal_v6_pilot.sh": {
+        "path": "scripts/run_temporal_v6_pilot.sh",
+        "sha256": "baac3da77ded069e735b5e6a50d7d8a99b6bd87cf9394fce491d5dd2b51d5d99",
+        "size": 530
+      },
+      "src/confik/temporal_v6/__init__.py": {
+        "path": "src/confik/temporal_v6/__init__.py",
+        "sha256": "175b52fa0044bd1d4c59eaf643624089f3938a0d0306eefc7bed013ed17801f8",
+        "size": 601
+      },
+      "src/confik/temporal_v6/pilot.py": {
+        "path": "src/confik/temporal_v6/pilot.py",
+        "sha256": "f616b02d6b60f8be1594bdacd02eb84bac2a3362349d948eac5aab1b4d222597",
+        "size": 75634
+      },
+      "src/confik/temporal_v6/runtime.py": {
+        "path": "src/confik/temporal_v6/runtime.py",
+        "sha256": "6fbe82f5bc792d7782f545bcd7be082211fad4a4979f0f591c5f86a83fe18c72",
+        "size": 13850
+      },
+      "src/confik/temporal_v6/state.py": {
+        "path": "src/confik/temporal_v6/state.py",
+        "sha256": "53e8fdd05aeb6ed242b58e58689637d6fd2118e5f524ab27d816272dd5f29d17",
+        "size": 10493
+      },
+      "src/confik/temporal_v6/trajectories.py": {
+        "path": "src/confik/temporal_v6/trajectories.py",
+        "sha256": "359c69b897767e92d86057d7e4ed56398017cd352aea8e3a3be6651a4d8f9c71",
+        "size": 53029
+      },
+      "tests/test_temporal_v6.py": {
+        "path": "tests/test_temporal_v6.py",
+        "sha256": "5b77998830e0d09092679fbf6eb33576fc877aae0bcecf3cc01ec1c23c3c03c2",
+        "size": 14457
+      }
+    },
+    "output_artifact_count": 28,
+    "output_artifacts_all_verified": true,
+    "protocol": "temporal_event_v6_development_pilot_v1",
+    "root": "outputs/temporal_event_v6_pilot",
+    "run_manifest": {
+      "path": "outputs/temporal_event_v6_pilot/run_manifest.json",
+      "sha256": "e5575683a5779623ae32e0389b4f9a75f15c047cb59971058abe20e06f7eaef1",
+      "size": 24576
+    },
+    "selected_hold_frames": {
+      "panda": 5,
+      "ur5e": 10
+    },
+    "status": "complete_policy_validation_pilot"
+  }
+}
