@@ -1,0 +1,134 @@
+protocol_version: fresh_transition_v4_final_evaluation_v1
+experiment_name: frozen_counterfactual_cghik_v4_fresh_transition_evaluation
+workspace: ..
+source_config: paper_v2.yaml
+release_v3_root: ../outputs/release_v3_locked
+release_v4_root: ../outputs/release_v4_locked
+output_root: ../outputs/fresh_transition_v4_test
+
+# This is the final method evaluation.  There is no smoke, calibration,
+# parameter selection, resume, or scientific rerun path in this protocol.
+evaluation_scope:
+  final_main_method: counterfactual_cghik_v4
+  development_only_routes_retired: [v5, v5_lite, temporal_v6, anchored_temporal_v7]
+  v8_v9_forbidden: true
+  fresh_results_used_for_tuning: false
+  exactly_one_retained_run_per_robot: true
+  resume_allowed: false
+  scientific_rerun_allowed: false
+
+robots: [panda, ur5e]
+release_seed: 17
+methods:
+  - fixed_robust_cascade
+  - always_hard
+  - counterfactual_cghik_v4
+
+sealed_release:
+  release_v3_manifest_sha256: 9cd72b1fa1abfaa5e8e8e3f769987996dec0877b35be7fda58eddd813bbe05d6
+  release_v4_digest: 01bd104c96b6e33be1a5ac29dd2bbedad1369156a7e9beb86f551eabe9db541a
+  release_v4_manifest_sha256: 816f6fa7fba2a015eb0f3dd146f76d469dd3ef13d8e7440b8381fcdcc0efee10
+  release_v4_artifact_manifest_sha256: 411921ca349bfbcff5c7e7c8c372d750ca9df499677c0d15f84dc4a98155e288
+  source_config_sha256: c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a
+  retraining_forbidden: true
+  policy_selection_forbidden: true
+  threshold_changes_forbidden: true
+  solver_budget_changes_forbidden: true
+  fallback_changes_forbidden: true
+  verifier_changes_forbidden: true
+
+fresh_data:
+  role: fresh_transition_evaluation
+  split_unit: complete_trajectory
+  trajectories_per_robot: 80
+  trajectories_per_family: 20
+  frames_per_trajectory: 150
+  dt: 0.02
+  families:
+    - smooth_fast_orientation_smooth
+    - regular_near_singular_regular
+    - central_joint_limit_skim_return
+    - slow_high_curvature_high_speed_slow
+  pool_seed:
+    panda: 864901
+    ur5e: 864902
+  identity_frozen_before_solver_calls: true
+  # Filled once by the outcome-blind generator, then committed before the
+  # one-shot run.  The runner rejects empty or mismatching anchors.
+  frozen_identity:
+    panda:
+      ordered_query_sha256_digest: b7f0ea93fb5d509048eb23e3c5357fdb42cbc680581f104fe0796c70c6673999
+      query_sha256_set_digest: 071ae7de20a3b3e03c2ff3b0e9ae8556ff466d305a6aaebfef2fddc644698f70
+      ordered_trajectory_uid_digest: 429075f830e243802fc59e15f7de05d1721ca2bebec5713cd5b2918286799cd5
+      trajectory_uid_set_digest: c6ff1cd941e12fd3fa5bfc70159dee02e09fb50461c91f526be936a065c36e2e
+    ur5e:
+      ordered_query_sha256_digest: cf51e0f5310ec3a319659eed320f73697f02384282ddd2807e0b582d04b3c5c1
+      query_sha256_set_digest: 3988829333230e95915812a88efac0a64ce01002d73bc61cc53dac939254ef19
+      ordered_trajectory_uid_digest: cbcf781cfca53139ef92157d4f6665eeca843c90cee4c4150bb80f433053ea22
+      trajectory_uid_set_digest: 6a3eaf6b93f6b60cf4bad9a59bb96ffe5b0ffc8d812f3a26e19847636adb2753
+
+freshness:
+  require_query_hash_isolation: true
+  require_trajectory_uid_isolation: true
+  require_seed_isolation: true
+  require_internal_unique_query_hashes: true
+  require_internal_unique_trajectory_uids: true
+  compare_all_v6_v7_calibration_and_policy_validation_roles: true
+  compare_old_formal_identity_arrays_only: true
+  formal_performance_results_read: false
+  old_test_v3_dataset_manifest_sha256: d16a21fed8c22fc34f548d3c4d403cbc8e5aa3671d0cb3a05cace1e2375be09b
+  old_test_v4_dataset_manifest_sha256: 77fa670e5de1bf40301f0bcd0292ebcc7860f412ac8bd946a485dc782458d51e
+
+timing:
+  clock: perf_counter_ns
+  warmup_frames: 200
+  trajectory_repeats: 1
+  method_order: seeded_three_by_three_latin_blocks
+  order_seed:
+    panda: 940901
+    ur5e: 940902
+  synchronize_cuda: true
+  disk_io_inside_timed_interval: false
+  logging_serialization_inside_timed_interval: false
+  quantiles: [0.50, 0.95, 0.99]
+
+runtime:
+  device: cuda:0
+  cuda_visible_devices: "0"
+  intra_op_threads: 8
+  inter_op_threads: 1
+  deterministic_algorithms: true
+  progress_every_trajectories: 5
+
+reporting:
+  completion_uid_sets: true
+  total_cumulative_latency_exact_integer_ns: true
+  cumulative_latency_per_trajectory: [mean, median, p95]
+  frame_latency_quantiles: [0.50, 0.95, 0.99]
+  mean_fev: true
+  fallback_rate: true
+  per_family_metrics: true
+  accepted_contract_violation_count: true
+  accepted_contract_violation_scope: all_three_methods
+  primary_comparison: counterfactual_cghik_v4_vs_always_hard
+  fixed_robust_is_context_only: true
+
+final_gate:
+  v4_completion_count_not_below_always_hard: true
+  aggregate_cumulative_latency_ratio_max: 0.85
+  mean_fev_ratio_max: 0.85
+  p95_latency_ratio_max: 1.0
+  p99_latency_ratio_max: 1.05
+  accepted_contract_violation_count_max: 0
+  accepted_contract_violation_scope: all_three_methods
+  p50_is_gate: false
+
+protected_outputs:
+  - ../outputs/anchored_temporal_v7_dominance_pilot
+  - ../outputs/temporal_event_v6_pilot
+  - ../outputs/anchored_temporal_v7_pilot
+  - ../outputs/temporal_v6_pilot
+  - ../outputs/hierarchical_v5_pilot
+  - ../outputs/hierarchical_v5_lite_pilot
+  - ../outputs/release_v3_locked
+  - ../outputs/release_v4_locked
