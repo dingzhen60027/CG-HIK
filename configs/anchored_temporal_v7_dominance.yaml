@@ -1,0 +1,154 @@
+protocol_version: anchored_temporal_v7_dominance_development_holdout_v1
+experiment_name: anchored_temporal_v7_dominance_holdout
+workspace: ..
+source_config: paper_v2.yaml
+release_v3_root: ../outputs/release_v3_locked
+release_v4_root: ../outputs/release_v4_locked
+temporal_v6_root: ../outputs/temporal_event_v6_pilot
+frozen_v7_root: ../outputs/anchored_temporal_v7_pilot
+output_root: ../outputs/anchored_temporal_v7_dominance_pilot
+
+# The exact-vector V7 calibration NO-GO remains immutable and valid under its
+# preregistered protocol. This holdout changes only the development selection
+# rule, before any policy-validation outcome is opened.
+protocol_amendment:
+  prior_protocol: anchored_temporal_v7_development_pilot_v1
+  prior_result_required_status: calibration_no_go
+  prior_result_read_only: true
+  prior_result_preserved_without_supersession: true
+  change_scope: calibration_selection_rule_only
+  change_recorded_before_policy_validation_outcomes_opened: true
+  development_holdout_only: true
+  formal_test: false
+
+# Only the sealed V7 calibration records are used for selection. In particular,
+# this phase makes no calibration solver calls and does not regenerate a split.
+frozen_inputs:
+  calibration_source: frozen_v7_calibration_records
+  calibration_solver_calls: 0
+  trajectory_generator_calls: 0
+  require_v7_manifest_policy_validation_outcomes_computed: false
+  require_v7_manifest_policy_validation_run_count_per_robot: 0
+  verify_manifest_artifact_hashes_before_read: true
+  required_sha256:
+    run_manifest.json: 3f7a5fa86e9024658e9df706ccaee9360f0c0c6d652d71a60082606d85badc68
+    trajectory_split_manifest.json: f6368c351111580f4f31c9c04b0a45ec0bef4bf186a4f770afe1bf8412833f12
+    panda_calibration_records.npz: a61c5c7b1b8ae289ce3c5a083c269e4d4313adbd5f686f564a9d43cabdb6a386
+    ur5e_calibration_records.npz: 80ef6957c7c4c43922726ba3c4feff643680cfa4d6378c9cc2d2f35e143f5b89
+    panda_trajectory_policy_validation.npz: e396b8aca7773f82e8b5ad70f050a01282068d45a9679ac470c4546219b3b624
+    ur5e_trajectory_policy_validation.npz: b6349f33f5813a026d975e2e5ccfe1b9c50e015ce8bd6f0481e190e54622f6b9
+
+robots: [panda, ur5e]
+roles:
+  calibration: anchored_trajectory_calibration
+  policy_validation: anchored_trajectory_policy_validation
+
+data_boundary:
+  allowed_roles: [anchored_trajectory_calibration, anchored_trajectory_policy_validation]
+  calibration_records_only_before_selection_seal: true
+  policy_validation_queries_open_after_selection_seal_only: true
+  policy_validation_outcomes_open_after_selection_seal_only: true
+  policy_validation_used_for_selection: false
+  policy_validation_run_count_per_robot: 1
+  split_unit: complete_trajectory
+  fixed_trajectories_per_robot: 40
+  fixed_frames_per_trajectory: 150
+  reuse_existing_fresh_v7_policy_validation_role: true
+  regenerate_trajectories: false
+  formal_test_data_forbidden: true
+  formal_test_source_forbidden: true
+  reject_test_v3_v4_paths: true
+
+# V7 runtime and V6 hold frames are reused unchanged. R is selected only from
+# the original, already-evaluated calibration grid; there are no new controls.
+frozen_temporal_v6_hold_frames:
+  panda: 5
+  ur5e: 10
+
+anchor_policy:
+  local_commitment_horizon: [20, 25, 30, 40, 50]
+  runtime_implementation: unchanged_anchored_temporal_v7
+  new_networks: false
+  new_temporal_parameters: false
+
+dominance_selection:
+  required_role: anchored_trajectory_calibration
+  select_separately_per_robot: true
+  eligibility: always_hard_completed_trajectory_uid_set_subset_of_anchor
+  eligibility_requirements:
+    lost_trajectory_uids_empty: true
+    gained_trajectory_uids_allowed: true
+    completion_count_not_below_always_hard: true
+  objective_order:
+    - maximum_whole_trajectory_completion_count
+    - minimum_total_latency_sum_over_all_fixed_150_frame_trajectories
+    - minimum_frame_level_p99_latency
+    - minimum_learned_seed_invocation_rate
+    - minimum_mean_fev
+    - minimum_local_commitment_horizon
+  cumulative_latency_definition: sum_total_latency_ns_per_trajectory_over_exactly_150_frames
+  cumulative_latency_aggregate: sum_over_all_40_fixed_trajectories
+  cumulative_latency_report_statistics: [mean, median, p95]
+  policy_validation_used_for_selection: false
+
+selection_seal:
+  write_before_policy_validation_open: true
+  immutable: true
+  include_selected_r_per_robot: true
+  include_selection_rule: true
+  include_selection_input_file_sha256: true
+  include_selection_output_file_sha256: true
+  verify_before_policy_validation_open: true
+
+strategies:
+  - always_hard
+  - counterfactual_cghik_v4
+  - temporal_event_cghik_v6
+  - anchored_temporal_cghik_v7
+
+timing:
+  clock: perf_counter_ns
+  warmup_frames: 200
+  trajectory_repeats: 1
+  method_order: seeded_four_by_four_latin_blocks
+  disk_io_inside_timed_interval: false
+  logging_serialization_inside_timed_interval: false
+
+runtime:
+  device: cuda:0
+  intra_op_threads: 8
+  inter_op_threads: 1
+  deterministic_algorithms: true
+  progress_every_trajectories: 5
+
+reporting:
+  completion_trajectory_uid_set: true
+  lost_and_gained_trajectory_uids: true
+  whole_trajectory_completion_count_and_rate: true
+  cumulative_solver_latency_per_trajectory: true
+  total_latency_over_all_fixed_length_frames: true
+  frame_latency_quantiles: [0.50, 0.95, 0.99]
+  mean_fev: true
+  learned_seed_invocation_rate: true
+  mode_occupancy: [LOCAL, ROBUST, ANCHOR]
+  reanchor_count_per_trajectory: true
+  longest_robust_run: true
+  per_family_completion_and_cumulative_latency: true
+
+# Development holdout go/no-go. Every condition must pass for both robots.
+policy_validation_gate:
+  always_hard_completed_trajectory_uid_set_subset_of_anchor: true
+  anchored_completion_count_not_below_always_hard: true
+  aggregate_cumulative_latency_ratio_vs_always_hard_max: 0.80
+  learned_seed_invocation_rate_max: 0.50
+  p99_ratio_vs_always_hard_max: 1.05
+  mean_fev_ratio_vs_always_hard_max: 1.05
+
+scope_exclusions:
+  ood: true
+  external_solver: true
+  collision: true
+  real_robot: true
+  new_network: true
+  new_temporal_parameter: true
+  formal_test: true
