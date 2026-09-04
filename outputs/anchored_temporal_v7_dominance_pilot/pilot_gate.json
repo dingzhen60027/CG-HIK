@@ -1,0 +1,53 @@
+{
+  "all_robots_pass": false,
+  "development_holdout_only": true,
+  "formal_test": false,
+  "fresh_trajectory_evaluation_authorized": false,
+  "robots": {
+    "panda": {
+      "aggregate_cumulative_latency_ratio_vs_always_hard": 0.8643635311474697,
+      "aggregate_cumulative_latency_reduction_fraction": 0.13563646885253033,
+      "checks": {
+        "aggregate_cumulative_latency_ratio_at_most_0_80": false,
+        "always_hard_completion_set_subset_of_anchor": true,
+        "anchored_completion_count_not_below_always_hard": true,
+        "learned_seed_invocation_rate_at_most_0_50": true,
+        "mean_fev_ratio_at_most_1_05": true,
+        "p99_ratio_at_most_1_05": true
+      },
+      "gained_trajectory_uids": [
+        "89660d7e6987a84d47ea747c85128cd7ae1ab44329bfed223f201f5c1cc00336",
+        "af0c253cf52e8fa97d8cae2ae462fce2e8b18b7b011ed353eed409309e920dad"
+      ],
+      "lost_trajectory_uids": [],
+      "mean_fev_ratio_vs_always_hard": 0.8874441012970969,
+      "p50_ratio_vs_always_hard": 0.31147056067589607,
+      "p95_ratio_vs_always_hard": 0.8590154768186031,
+      "p99_ratio_vs_always_hard": 0.9956962392171991,
+      "pass": false
+    },
+    "ur5e": {
+      "aggregate_cumulative_latency_ratio_vs_always_hard": 0.9994517984201836,
+      "aggregate_cumulative_latency_reduction_fraction": 0.0005482015798163875,
+      "checks": {
+        "aggregate_cumulative_latency_ratio_at_most_0_80": false,
+        "always_hard_completion_set_subset_of_anchor": false,
+        "anchored_completion_count_not_below_always_hard": false,
+        "learned_seed_invocation_rate_at_most_0_50": true,
+        "mean_fev_ratio_at_most_1_05": false,
+        "p99_ratio_at_most_1_05": true
+      },
+      "gained_trajectory_uids": [],
+      "lost_trajectory_uids": [
+        "3ae8784be0a2977f184ce96d99c8e907111608fc575cd4db7bc0c8f055d498cb",
+        "e525c82f11c6d65f108c204b3eb0377e6076ff738603cbdb3107936ad6da8386"
+      ],
+      "mean_fev_ratio_vs_always_hard": 1.0639851166917915,
+      "p50_ratio_vs_always_hard": 0.30227268012273445,
+      "p95_ratio_vs_always_hard": 0.9985226507161449,
+      "p99_ratio_vs_always_hard": 0.9944997120233141,
+      "pass": false
+    }
+  },
+  "status": "fail"
+}

@@ -1,0 +1,9 @@
+{
+  "attempt_started_at": "2026-09-04T06:11:15.328900+00:00",
+  "policy_validation_npz_semantically_opened_before_this_marker": false,
+  "policy_validation_outcomes_computed_before_this_marker": false,
+  "protocol": "anchored_temporal_v7_dominance_development_holdout_v1",
+  "retained_run_ordinal": 1,
+  "robot": "panda",
+  "selection_seal_sha256": "d1cdb696d877e92f17ebc4961b103f07c72eb0cf11d3a0dfcf48030dbd2b1052"
+}

@@ -1,0 +1,486 @@
+{
+  "artifacts": {
+    "anchored_temporal_v7_dominance.yaml": {
+      "path": "anchored_temporal_v7_dominance.yaml",
+      "sha256": "a8ac3187f42756f65f6c2832083db9091d05a0281a2654f140ae161921ade6a7",
+      "size": 5426
+    },
+    "completion_uid_sets.json": {
+      "path": "completion_uid_sets.json",
+      "sha256": "d91b1b314608f902a7f2844393be3338941d9ed37f48cef7d7fb1203c6ca078b",
+      "size": 7054
+    },
+    "dominance_candidate_metrics.json": {
+      "path": "dominance_candidate_metrics.json",
+      "sha256": "2c9903017ff5132743b9a7e2fa431ed9b5ef66ee8e7e711696864d24858de474",
+      "size": 110320
+    },
+    "dominance_selection.json": {
+      "path": "dominance_selection.json",
+      "sha256": "cba76c9a1b01113f14bfae72d194a993a69745ecb8dc8aaefd3db3187fb71ee9",
+      "size": 111137
+    },
+    "environment.json": {
+      "path": "environment.json",
+      "sha256": "1d0119906711de7d30c81b3b3f75fc14b3059f03edac166ccf4cde272a736af1",
+      "size": 804
+    },
+    "family_summary.csv": {
+      "path": "family_summary.csv",
+      "sha256": "56900b8c896b816deae6e45e03debf9849de49554304587086e9c718675d4c63",
+      "size": 17570
+    },
+    "family_summary.json": {
+      "path": "family_summary.json",
+      "sha256": "e5fa3389bcd8949a0fd3f41f8f6aa521b00f69685d4c36a222e3a8b7f4d907f1",
+      "size": 36790
+    },
+    "main_table.csv": {
+      "path": "main_table.csv",
+      "sha256": "953b6620ada4814cc1bb8b1983a4b7cea62bc930b438ab13dd8bce603002cab3",
+      "size": 13275
+    },
+    "main_table.json": {
+      "path": "main_table.json",
+      "sha256": "aaf64ced485f9761381045e0699aa6843178cbf7480c9222faf4fa45c4608e8b",
+      "size": 20953
+    },
+    "main_table.md": {
+      "path": "main_table.md",
+      "sha256": "804f44df84d449219e0fa1efff6d055a16ebfa8710f40f8cdc68ef84ec4e13e1",
+      "size": 927
+    },
+    "panda_policy_validation_attempt_completed.json": {
+      "path": "panda_policy_validation_attempt_completed.json",
+      "sha256": "95af7a0048b0c2d26460eef4f8eec6ee65411bee80b20a33bfd4a39b2d1c0e8f",
+      "size": 407
+    },
+    "panda_policy_validation_attempt_started.json": {
+      "path": "panda_policy_validation_attempt_started.json",
+      "sha256": "2882b96f31ce2d1d2b86323ddcabe866c5637fd9dca19d2ed642df2a290e855d",
+      "size": 418
+    },
+    "panda_policy_validation_records.npz": {
+      "path": "panda_policy_validation_records.npz",
+      "sha256": "17ffe62d4a435ee0223d46fa756b13d5b8261e4c7be3f2d59d2e6a9984a557bd",
+      "size": 2436072
+    },
+    "pilot_gate.json": {
+      "path": "pilot_gate.json",
+      "sha256": "1732ef8f6014e5ee9a6de07e5f3ca71180337d2544ad13581b331bc2a9f9bab5",
+      "size": 2206
+    },
+    "policy_validation_access_ledger.json": {
+      "path": "policy_validation_access_ledger.json",
+      "sha256": "81bbe6dda1d4a20f2b75a5ce3de74ed997a1dfe0d3d65c97244ceff54b7b516f",
+      "size": 1522
+    },
+    "selection_seal.json": {
+      "path": "selection_seal.json",
+      "sha256": "d1cdb696d877e92f17ebc4961b103f07c72eb0cf11d3a0dfcf48030dbd2b1052",
+      "size": 10795
+    },
+    "trajectory_metrics.csv": {
+      "path": "trajectory_metrics.csv",
+      "sha256": "f5915c85bb847e00b3dd712e7c4e1de2e5988a8eeabacf80a00b1e843c969655",
+      "size": 75329
+    },
+    "trajectory_metrics.json": {
+      "path": "trajectory_metrics.json",
+      "sha256": "1503760923f03d91d64dec03a32c709034886a4264174b1240f2a7860c62f2ab",
+      "size": 242983
+    },
+    "ur5e_policy_validation_attempt_completed.json": {
+      "path": "ur5e_policy_validation_attempt_completed.json",
+      "sha256": "160a52f807145e80eca19321c661614288d096aa3534c5bc711ebc0b1c9c5343",
+      "size": 406
+    },
+    "ur5e_policy_validation_attempt_started.json": {
+      "path": "ur5e_policy_validation_attempt_started.json",
+      "sha256": "561ddefb3b981f8dff942dcc076e310c32d925034b0d07d7baa691cafec3f50e",
+      "size": 417
+    },
+    "ur5e_policy_validation_records.npz": {
+      "path": "ur5e_policy_validation_records.npz",
+      "sha256": "02673b6d39d1fc29cbc66255182d833bc5f32592ed14a8f20b4f9605f6160867",
+      "size": 1857307
+    }
+  },
+  "calibration_outcome_collection_solver_call_count": 0,
+  "finished_at": "2026-09-04T06:31:27.671450+00:00",
+  "formal_test": false,
+  "formal_test_data_opened": false,
+  "formal_test_source_opened": false,
+  "frames_per_trajectory": 150,
+  "frozen_temporal_v6_hold_frames": {
+    "panda": 5,
+    "ur5e": 10
+  },
+  "git_commit_end": "0d89cd7f138c150447fed8baa66c38f8210aaead",
+  "git_commit_start": "0d89cd7f138c150447fed8baa66c38f8210aaead",
+  "git_status_end": [],
+  "git_status_start": [],
+  "implementation_sources": {
+    "configs/anchored_temporal_v7_dominance.yaml": {
+      "path": "configs/anchored_temporal_v7_dominance.yaml",
+      "sha256": "fbdbb45abd1feae03d5a7db7f68d3c9fc14c09e4fbd85090412df392cdce7fdb",
+      "size": 6023
+    },
+    "configs/paper_v2.yaml": {
+      "path": "configs/paper_v2.yaml",
+      "sha256": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+      "size": 2982
+    },
+    "scripts/run_anchored_temporal_v7_dominance.sh": {
+      "path": "scripts/run_anchored_temporal_v7_dominance.sh",
+      "sha256": "c6a46bf7ba419b784be80f60fcee167438baadda8b8db86e9712b2e9c8c95fbb",
+      "size": 700
+    },
+    "src/confik/anchored_temporal_v7/dominance_pilot.py": {
+      "path": "src/confik/anchored_temporal_v7/dominance_pilot.py",
+      "sha256": "245829f21a3c12620ac13d96824c1e5bb518a98cfb0c33a3c0af0f78f41ed0ed",
+      "size": 62722
+    },
+    "src/confik/anchored_temporal_v7/dominance_selection.py": {
+      "path": "src/confik/anchored_temporal_v7/dominance_selection.py",
+      "sha256": "c66e2b9c23b06113b45458bceb5950ab4999ac636023fd767f7c60b7891e60e9",
+      "size": 24051
+    },
+    "src/confik/anchored_temporal_v7/pilot.py": {
+      "path": "src/confik/anchored_temporal_v7/pilot.py",
+      "sha256": "d0ff99cd49d0cfd9e2d0158faa218674eb689b79e9cb4aa28969177dbf42ea66",
+      "size": 105604
+    },
+    "src/confik/anchored_temporal_v7/runtime.py": {
+      "path": "src/confik/anchored_temporal_v7/runtime.py",
+      "sha256": "f114e88f49956fa176865f9b747163d2d47ba9b48436f98474876d0fa69e6474",
+      "size": 15497
+    },
+    "src/confik/anchored_temporal_v7/state.py": {
+      "path": "src/confik/anchored_temporal_v7/state.py",
+      "sha256": "bb4975641242dd0903216b2b01689eb2e9222be00894954405da28de4d6b81ec",
+      "size": 13473
+    },
+    "src/confik/anchored_temporal_v7/trajectories.py": {
+      "path": "src/confik/anchored_temporal_v7/trajectories.py",
+      "sha256": "f998a8b765a56c9aa303531b1d29fe8d72ca6fb968c8ef9988b624ed49793f61",
+      "size": 58008
+    },
+    "tests/test_anchored_temporal_v7_dominance.py": {
+      "path": "tests/test_anchored_temporal_v7_dominance.py",
+      "sha256": "bf5d8485abb5075b37cfed264ef37ec1a55c6792454fe8a11cfb7e4a7448e8e8",
+      "size": 23306
+    }
+  },
+  "methods": [
+    "always_hard",
+    "counterfactual_cghik_v4",
+    "temporal_event_cghik_v6",
+    "anchored_temporal_cghik_v7"
+  ],
+  "old_exact_vector_no_go_preserved": true,
+  "old_exact_vector_no_go_superseded": false,
+  "pilot_gate": {
+    "all_robots_pass": false,
+    "development_holdout_only": true,
+    "formal_test": false,
+    "fresh_trajectory_evaluation_authorized": false,
+    "robots": {
+      "panda": {
+        "aggregate_cumulative_latency_ratio_vs_always_hard": 0.8643635311474697,
+        "aggregate_cumulative_latency_reduction_fraction": 0.13563646885253033,
+        "checks": {
+          "aggregate_cumulative_latency_ratio_at_most_0_80": false,
+          "always_hard_completion_set_subset_of_anchor": true,
+          "anchored_completion_count_not_below_always_hard": true,
+          "learned_seed_invocation_rate_at_most_0_50": true,
+          "mean_fev_ratio_at_most_1_05": true,
+          "p99_ratio_at_most_1_05": true
+        },
+        "gained_trajectory_uids": [
+          "89660d7e6987a84d47ea747c85128cd7ae1ab44329bfed223f201f5c1cc00336",
+          "af0c253cf52e8fa97d8cae2ae462fce2e8b18b7b011ed353eed409309e920dad"
+        ],
+        "lost_trajectory_uids": [],
+        "mean_fev_ratio_vs_always_hard": 0.8874441012970969,
+        "p50_ratio_vs_always_hard": 0.31147056067589607,
+        "p95_ratio_vs_always_hard": 0.8590154768186031,
+        "p99_ratio_vs_always_hard": 0.9956962392171991,
+        "pass": false
+      },
+      "ur5e": {
+        "aggregate_cumulative_latency_ratio_vs_always_hard": 0.9994517984201836,
+        "aggregate_cumulative_latency_reduction_fraction": 0.0005482015798163875,
+        "checks": {
+          "aggregate_cumulative_latency_ratio_at_most_0_80": false,
+          "always_hard_completion_set_subset_of_anchor": false,
+          "anchored_completion_count_not_below_always_hard": false,
+          "learned_seed_invocation_rate_at_most_0_50": true,
+          "mean_fev_ratio_at_most_1_05": false,
+          "p99_ratio_at_most_1_05": true
+        },
+        "gained_trajectory_uids": [],
+        "lost_trajectory_uids": [
+          "3ae8784be0a2977f184ce96d99c8e907111608fc575cd4db7bc0c8f055d498cb",
+          "e525c82f11c6d65f108c204b3eb0377e6076ff738603cbdb3107936ad6da8386"
+        ],
+        "mean_fev_ratio_vs_always_hard": 1.0639851166917915,
+        "p50_ratio_vs_always_hard": 0.30227268012273445,
+        "p95_ratio_vs_always_hard": 0.9985226507161449,
+        "p99_ratio_vs_always_hard": 0.9944997120233141,
+        "pass": false
+      }
+    },
+    "status": "fail"
+  },
+  "policy_validation_file_bytes_hashed_for_identity_before_seal": true,
+  "policy_validation_outcomes_computed_before_seal": false,
+  "policy_validation_run_count_per_robot": 1,
+  "policy_validation_trajectory_count_per_robot": 40,
+  "policy_validation_used_for_retuning": false,
+  "policy_validation_used_for_selection": false,
+  "protected_tree_digest_after": {
+    "anchored_temporal_v7_pilot": "274d2bb6533ab941465f421e3a216208caf5d77a1be3a49529a8b18418c92bb5",
+    "anchored_temporal_v7_smoke": "197a1a84c24a7c76480c19074ec7f6925d1f15ed92a2767aef23c56e15145781",
+    "hierarchical_v5_lite_pilot": "8af8641e87396bd8674fcb12a7a6443c5d5007de13ffcfcc3339a7fe62f6191c",
+    "hierarchical_v5_pilot": "5bd2d6ee3b01dc854f5807c7c617719ac1b3832fca1b75dad2877dab17a33146",
+    "legacy_temporal_v6_pilot": "fec58f1fa9454b523d8bc884249f0eec91b8a0b806128fc4b0d25050752969dc",
+    "release_v3_locked": "f5d20bbf70b872f6387765671a8b0f74e793cedbce496f067212b05b5ebe462d",
+    "release_v4_locked": "704aef8108553ff27aa13b0ac057132b1237ddc5ebd38bcb1c9d49af3588fabb",
+    "temporal_event_v6_pilot": "0d05bb3eb7cdddac8dbb5bcfef1efc7dec648077f7af353340264fdd622f22cc"
+  },
+  "protected_tree_digest_before": {
+    "anchored_temporal_v7_pilot": "274d2bb6533ab941465f421e3a216208caf5d77a1be3a49529a8b18418c92bb5",
+    "anchored_temporal_v7_smoke": "197a1a84c24a7c76480c19074ec7f6925d1f15ed92a2767aef23c56e15145781",
+    "hierarchical_v5_lite_pilot": "8af8641e87396bd8674fcb12a7a6443c5d5007de13ffcfcc3339a7fe62f6191c",
+    "hierarchical_v5_pilot": "5bd2d6ee3b01dc854f5807c7c617719ac1b3832fca1b75dad2877dab17a33146",
+    "legacy_temporal_v6_pilot": "fec58f1fa9454b523d8bc884249f0eec91b8a0b806128fc4b0d25050752969dc",
+    "release_v3_locked": "f5d20bbf70b872f6387765671a8b0f74e793cedbce496f067212b05b5ebe462d",
+    "release_v4_locked": "704aef8108553ff27aa13b0ac057132b1237ddc5ebd38bcb1c9d49af3588fabb",
+    "temporal_event_v6_pilot": "0d05bb3eb7cdddac8dbb5bcfef1efc7dec648077f7af353340264fdd622f22cc"
+  },
+  "protected_trees_unchanged": true,
+  "protocol": "anchored_temporal_v7_dominance_development_holdout_v1",
+  "protocol_amendment": {
+    "change_recorded_before_policy_validation_outcomes_opened": true,
+    "change_scope": "calibration_selection_rule_only",
+    "development_holdout_only": true,
+    "formal_test": false,
+    "prior_protocol": "anchored_temporal_v7_development_pilot_v1",
+    "prior_result_preserved_without_supersession": true,
+    "prior_result_read_only": true,
+    "prior_result_required_status": "calibration_no_go"
+  },
+  "selected_reanchor_interval": {
+    "panda": 50,
+    "ur5e": 50
+  },
+  "selection_seal_sha256": "d1cdb696d877e92f17ebc4961b103f07c72eb0cf11d3a0dfcf48030dbd2b1052",
+  "selection_sealed_before_policy_validation_semantic_open": true,
+  "selection_solver_call_count": 0,
+  "started_at": "2026-09-04T06:08:53.692548+00:00",
+  "status": "complete_policy_validation_holdout",
+  "test_v3_test_v4_files_opened": 0,
+  "trajectory_generator_call_count": 0,
+  "verified_frozen_v7": {
+    "all_implementation_sources_verified": true,
+    "all_output_artifacts_verified": true,
+    "old_exact_vector_no_go_preserved": true,
+    "old_policy_validation_outcomes_computed": false,
+    "old_policy_validation_run_count_per_robot": 0,
+    "output_artifact_count": 12,
+    "policy_validation_file_bytes_hashed_for_identity": true,
+    "policy_validation_npz_parsed_during_verification": false,
+    "protocol": "anchored_temporal_v7_development_pilot_v1",
+    "root": "outputs/anchored_temporal_v7_pilot",
+    "run_manifest": {
+      "path": "outputs/anchored_temporal_v7_pilot/run_manifest.json",
+      "sha256": "3f7a5fa86e9024658e9df706ccaee9360f0c0c6d652d71a60082606d85badc68",
+      "size": 26977
+    },
+    "status": "calibration_no_go"
+  },
+  "verified_release_inputs": {
+    "panda": {
+      "release_v3_loaded_artifacts": {
+        "normalization": {
+          "path": "/home/eric/wjg/btry/outputs/release_v3_locked/panda/seed17/normalization_parameters.npz",
+          "sha256": "ee69975a0064c88eba48146c6243f3fb6b1f547b4b7e6c432cf391e703d3b8f8",
+          "size": 2879
+        },
+        "runtime_spec": {
+          "path": "/home/eric/wjg/btry/outputs/release_v3_locked/panda/seed17/runtime_spec.json",
+          "sha256": "3175c56284da6b811b15d7fc73b9e542adc8e75ba3e44f4d651af6050fc25203",
+          "size": 3925
+        },
+        "seed_bank": {
+          "path": "/home/eric/wjg/btry/outputs/release_v3_locked/panda/seed17/seed_bank.npz",
+          "sha256": "6c31bf5a0c212e132c8ba6962741d33dc72b3c230b7bba33e5f137efac4d423f",
+          "size": 5391586
+        },
+        "solver_metadata": {
+          "path": "/home/eric/wjg/btry/outputs/release_v3_locked/panda/seed17/solver_metadata.json",
+          "sha256": "3f0f58fffefbf1986201841eca948fd4ab115a46af506cbb0a67729fc6518258",
+          "size": 283
+        },
+        "torchscript": {
+          "path": "/home/eric/wjg/btry/outputs/release_v3_locked/panda/seed17/exact_seed_ensemble.ts",
+          "sha256": "e2075d2c4048e0b521bd7954f2983fc26946ce82868289b1561636b8f741a062",
+          "size": 2833852
+        }
+      },
+      "release_v3_manifest": {
+        "path": "/home/eric/wjg/btry/outputs/release_v3_locked/release_manifest.json",
+        "sha256": "9cd72b1fa1abfaa5e8e8e3f769987996dec0877b35be7fda58eddd813bbe05d6",
+        "size": 54761
+      },
+      "release_v4_artifact_manifest": {
+        "path": "/home/eric/wjg/btry/outputs/release_v4_locked/artifact_manifest.json",
+        "sha256": "411921ca349bfbcff5c7e7c8c372d750ca9df499677c0d15f84dc4a98155e288",
+        "size": 1683
+      },
+      "release_v4_loaded_artifacts": {
+        "exact_predictor": {
+          "path": "/home/eric/wjg/btry/outputs/release_v4_locked/panda/exact_v4_predictor.ts",
+          "sha256": "5383c899d7b790601f28caf6907323ab7284f6802cb9b715a03137cdd9d99217",
+          "size": 24197
+        },
+        "policy": {
+          "path": "/home/eric/wjg/btry/outputs/release_v4_locked/panda/v4_policy.json",
+          "sha256": "09b51eacb19966588716c9a4c5503a91fd27f633ab56711934a860d91510a639",
+          "size": 3003
+        }
+      },
+      "release_v4_manifest": {
+        "path": "/home/eric/wjg/btry/outputs/release_v4_locked/release_manifest.json",
+        "sha256": "816f6fa7fba2a015eb0f3dd146f76d469dd3ef13d8e7440b8381fcdcc0efee10",
+        "size": 3572
+      }
+    },
+    "ur5e": {
+      "release_v3_loaded_artifacts": {
+        "normalization": {
+          "path": "/home/eric/wjg/btry/outputs/release_v3_locked/ur5e/seed17/normalization_parameters.npz",
+          "sha256": "6aadbef43e7a135cdcb99dbc2aae6f582b678b5165528dd1b6851c602cdca45a",
+          "size": 2967
+        },
+        "runtime_spec": {
+          "path": "/home/eric/wjg/btry/outputs/release_v3_locked/ur5e/seed17/runtime_spec.json",
+          "sha256": "764e859a10dee17f01fe255a8c60d09a8b34ce8ab0464072431bc00d98dd803d",
+          "size": 3927
+        },
+        "seed_bank": {
+          "path": "/home/eric/wjg/btry/outputs/release_v3_locked/ur5e/seed17/seed_bank.npz",
+          "sha256": "45f44f3cfe1922b875c3fbc30d52dd49188d0e331f20d5897386c790269c3ca6",
+          "size": 4642744
+        },
+        "solver_metadata": {
+          "path": "/home/eric/wjg/btry/outputs/release_v3_locked/ur5e/seed17/solver_metadata.json",
+          "sha256": "764519b20a4ce6757dba6d92dca4f0547bccac2924ec05c2152cce25e3451303",
+          "size": 277
+        },
+        "torchscript": {
+          "path": "/home/eric/wjg/btry/outputs/release_v3_locked/ur5e/seed17/exact_seed_ensemble.ts",
+          "sha256": "8eb0f12d8b8a4b95d83638bab885e1c2df41e03a682f6fb31636c691829a152a",
+          "size": 2825272
+        }
+      },
+      "release_v3_manifest": {
+        "path": "/home/eric/wjg/btry/outputs/release_v3_locked/release_manifest.json",
+        "sha256": "9cd72b1fa1abfaa5e8e8e3f769987996dec0877b35be7fda58eddd813bbe05d6",
+        "size": 54761
+      },
+      "release_v4_artifact_manifest": {
+        "path": "/home/eric/wjg/btry/outputs/release_v4_locked/artifact_manifest.json",
+        "sha256": "411921ca349bfbcff5c7e7c8c372d750ca9df499677c0d15f84dc4a98155e288",
+        "size": 1683
+      },
+      "release_v4_loaded_artifacts": {
+        "exact_predictor": {
+          "path": "/home/eric/wjg/btry/outputs/release_v4_locked/ur5e/exact_v4_predictor.ts",
+          "sha256": "6b1200959425e5cf311ae0b97b4fc99428da396b024efd22759b45745b036178",
+          "size": 24199
+        },
+        "policy": {
+          "path": "/home/eric/wjg/btry/outputs/release_v4_locked/ur5e/v4_policy.json",
+          "sha256": "d4b995bc7e0f84dbd42842a7c3d136976611fba1d69e86746811e0089a202e01",
+          "size": 3004
+        }
+      },
+      "release_v4_manifest": {
+        "path": "/home/eric/wjg/btry/outputs/release_v4_locked/release_manifest.json",
+        "sha256": "816f6fa7fba2a015eb0f3dd146f76d469dd3ef13d8e7440b8381fcdcc0efee10",
+        "size": 3572
+      }
+    }
+  },
+  "verified_temporal_v6_baseline": {
+    "calibration_seal_sha256": "8b372a1b2a0a436c5e5c5e159f9a24740a4574edbd6be1639d0793147cdc2681",
+    "formal_test_source_opened": false,
+    "implementation_sources_verified": {
+      "configs/paper_v2.yaml": {
+        "path": "configs/paper_v2.yaml",
+        "sha256": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+        "size": 2982
+      },
+      "configs/temporal_v6_pilot.yaml": {
+        "path": "configs/temporal_v6_pilot.yaml",
+        "sha256": "7ef351922c724754e84dd7d86b0373cfda23c5ae43d65f7c3a84a60312a9c37b",
+        "size": 2715
+      },
+      "scripts/run_temporal_v6_pilot.sh": {
+        "path": "scripts/run_temporal_v6_pilot.sh",
+        "sha256": "baac3da77ded069e735b5e6a50d7d8a99b6bd87cf9394fce491d5dd2b51d5d99",
+        "size": 530
+      },
+      "src/confik/temporal_v6/__init__.py": {
+        "path": "src/confik/temporal_v6/__init__.py",
+        "sha256": "175b52fa0044bd1d4c59eaf643624089f3938a0d0306eefc7bed013ed17801f8",
+        "size": 601
+      },
+      "src/confik/temporal_v6/pilot.py": {
+        "path": "src/confik/temporal_v6/pilot.py",
+        "sha256": "f616b02d6b60f8be1594bdacd02eb84bac2a3362349d948eac5aab1b4d222597",
+        "size": 75634
+      },
+      "src/confik/temporal_v6/runtime.py": {
+        "path": "src/confik/temporal_v6/runtime.py",
+        "sha256": "6fbe82f5bc792d7782f545bcd7be082211fad4a4979f0f591c5f86a83fe18c72",
+        "size": 13850
+      },
+      "src/confik/temporal_v6/state.py": {
+        "path": "src/confik/temporal_v6/state.py",
+        "sha256": "53e8fdd05aeb6ed242b58e58689637d6fd2118e5f524ab27d816272dd5f29d17",
+        "size": 10493
+      },
+      "src/confik/temporal_v6/trajectories.py": {
+        "path": "src/confik/temporal_v6/trajectories.py",
+        "sha256": "359c69b897767e92d86057d7e4ed56398017cd352aea8e3a3be6651a4d8f9c71",
+        "size": 53029
+      },
+      "tests/test_temporal_v6.py": {
+        "path": "tests/test_temporal_v6.py",
+        "sha256": "5b77998830e0d09092679fbf6eb33576fc877aae0bcecf3cc01ec1c23c3c03c2",
+        "size": 14457
+      }
+    },
+    "output_artifact_count": 28,
+    "output_artifacts_all_verified": true,
+    "protocol": "temporal_event_v6_development_pilot_v1",
+    "root": "outputs/temporal_event_v6_pilot",
+    "run_manifest": {
+      "path": "outputs/temporal_event_v6_pilot/run_manifest.json",
+      "sha256": "e5575683a5779623ae32e0389b4f9a75f15c047cb59971058abe20e06f7eaef1",
+      "size": 24576
+    },
+    "selected_hold_frames": {
+      "panda": 5,
+      "ur5e": 10
+    },
+    "status": "complete_policy_validation_pilot"
+  },
+  "warmup_frames_per_robot": 200,
+  "warmup_method_calls_per_robot": 800,
+  "warmup_outcomes_retained": false,
+  "warmup_role": "anchored_trajectory_calibration"
+}

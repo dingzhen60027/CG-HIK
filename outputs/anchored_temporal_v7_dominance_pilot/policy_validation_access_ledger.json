@@ -1,0 +1,35 @@
+{
+  "calibration_outcome_collection_solver_call_count": 0,
+  "policy_validation_npz_semantically_opened_before_seal": false,
+  "policy_validation_outcomes_computed_before_seal": false,
+  "robots": {
+    "panda": {
+      "benchmark_finished_at": "2026-09-04T06:26:50.229132+00:00",
+      "benchmark_started_at": "2026-09-04T06:11:16.547031+00:00",
+      "method_calls_per_frame": 1,
+      "method_order_seed": 1782711,
+      "policy_validation_frame_count": 6000,
+      "policy_validation_retained_run_count": 1,
+      "policy_validation_role_semantically_opened_at": "2026-09-04T06:11:15.335892+00:00",
+      "policy_validation_used_for_retuning": false
+    },
+    "ur5e": {
+      "benchmark_finished_at": "2026-09-04T06:31:27.203613+00:00",
+      "benchmark_started_at": "2026-09-04T06:27:27.686685+00:00",
+      "method_calls_per_frame": 1,
+      "method_order_seed": 1782712,
+      "policy_validation_frame_count": 6000,
+      "policy_validation_retained_run_count": 1,
+      "policy_validation_role_semantically_opened_at": "2026-09-04T06:27:26.598730+00:00",
+      "policy_validation_used_for_retuning": false
+    }
+  },
+  "selection_seal_sha256": "d1cdb696d877e92f17ebc4961b103f07c72eb0cf11d3a0dfcf48030dbd2b1052",
+  "selection_sealed_at": "2026-09-04T06:08:54.014382+00:00",
+  "selection_solver_call_count": 0,
+  "trajectory_generator_call_count": 0,
+  "warmup_frames_per_robot": 200,
+  "warmup_method_calls_per_robot": 800,
+  "warmup_outcomes_retained": false,
+  "warmup_role": "anchored_trajectory_calibration"
+}
