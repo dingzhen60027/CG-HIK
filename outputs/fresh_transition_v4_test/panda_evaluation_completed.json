@@ -1,0 +1,16 @@
+{
+  "completed_utc": "2026-09-04T08:04:57.291748+00:00",
+  "frame_count": 12000,
+  "method_count": 3,
+  "preregistration_seal_sha256": "8b2f32eeb2f37184aa650026ee22183ff9c6f6a1df224f13bcc392df73fe19a0",
+  "protocol": "fresh_transition_v4_final_evaluation_v1",
+  "raw_records": {
+    "path": "panda_raw_records.npz",
+    "sha256": "3fd342579af9c89f0d3e7e8a35553704b385f2635a3b2e46e18e28c7e5e50056",
+    "size": 5897746
+  },
+  "retained_run_count": 1,
+  "robot": "panda",
+  "solver_calls": 36000,
+  "trajectory_count": 80
+}

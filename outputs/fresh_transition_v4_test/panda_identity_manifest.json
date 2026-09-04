@@ -1,0 +1,1394 @@
+{
+  "dataset_artifact": {
+    "path": "panda_fresh_trajectories.npz",
+    "sha256": "709188c8a525e63a828ac56d7313150d73937aa6a0bd843e0f5f3bb44d854fd2",
+    "size": 3031341
+  },
+  "dt": 0.02,
+  "families": {
+    "central_joint_limit_skim_return": {
+      "frame_count": 3000,
+      "trajectory_count": 20,
+      "trajectory_uids": [
+        "11cc2a667cdf5df5ac95e93c0fe31cfa03b81a302183e7cd091eb3fafad6aa72",
+        "185c273b6eb235de506444e6caaf294ad01484cb00140e18b3f70e97c3edee4e",
+        "04e03e12cb6c469009b5aea509dc8ab47c36838eacf76f11d66a68a6d77a30ce",
+        "155c969355c5667e8c697bbe084d07575460245029c0ea9979bebc43411985e0",
+        "707a2f5143d42c2d3ce8840cd491699893617a5ec9ecb03e210180c291c3fedc",
+        "f3261225edd438042ad98031385ee52b1f37b2971cb320f04d782aa51863aae3",
+        "956f42c9db82ddc2f49190619eb1c2030d15abd7fb3bad6be0451300b21ce307",
+        "e5ec8911421d3d3586f8466390703678412a2bf374e630b8c37dac67558e8267",
+        "a4af1d5e086481cbee929c068e9208ffbfd2690500b80029f915db9c20cbc32b",
+        "37ea9fe855e644f134a85f5fdfa31edcbf3e3ebba583e0bf1635c675d8a407cd",
+        "3e9e9fb367d4ba0121b1e8899d81bd2a03c436df4b03e86a6b33c84f9045db3a",
+        "15d8eb82352187ea3059a0554b59f1246b93af732ba8163392597247499a4756",
+        "b28caf6d01afadb5212e6fd783ac3d62b338084019676ab393b16cabcf1dcf9d",
+        "306b35b314f474872fc5354b752db9b639af02cb0c74ed4e8d923873bd36265b",
+        "01de5a3a637f93affda2df17eae06b7304f373126b9cc83ba7eea594dd939a1f",
+        "efa2148ad77b54958c3ff88c795cd82b7a63de1fee35f4da832dd4d72a198acd",
+        "86f578cdf50bc675ad41e1791dca277b021bd75028b62da7acca1981b6ab04bf",
+        "168f3e36cbe3eb16db05576b82341f236436c323b8fa5c66f99066988ffbe546",
+        "0db07bd0eeb16db593f651e73ec52502e32e60c0c6d9a52c147dd3de78435c8a",
+        "ff6b4151799c021d3c2de8d725dc8a89b4f243e3c27c7b2bd28ec300454b3055"
+      ]
+    },
+    "regular_near_singular_regular": {
+      "frame_count": 3000,
+      "trajectory_count": 20,
+      "trajectory_uids": [
+        "5f676e5a1212cddec7e46b691e415aa07af6497378a6cee6e0f0ce78b8ca8254",
+        "c4ea6ac3a82f08525798197b66f829fabcf22836dd6929a48659f8797a361b02",
+        "f9f3de755890befbe5e716d8cd733299abc35befef0a0c1d7814ea83eba311f6",
+        "ec34dfebe109c1ab568245f30c6e87caa29be579b0ac63a709f7e539223ffd36",
+        "e58673e794ac13cba09102320e3bc0bf24e5117bc6e0fb7ed9e68e95bd81238c",
+        "1c8f84d59c3b8bd6a7a99b6ea6bde59a03bdc6a7f7ce0ad95a7a59d087274025",
+        "889cac02e7ff297013e792520ac1ee1e4e9d04190fe1610dc38fade57e955adb",
+        "544eeca8e038547972080dfdc537335e2c85994ae948b35a1c679f7b7979771b",
+        "366d7d596dd9a7a6f13bda46a3493637da6e7ff2e2d18cb5cc2213e7c7ae6c43",
+        "5d2e1c069f231273d706677a33932bd7d02cdfdde89ac2e584236b5e56d8aa1b",
+        "2dd05a450d9447c19712bc3e8a88fdb266a7c0dfd1f532100a67ca6da3441321",
+        "c109e3de90b2dca7b246bc744673aef829b0b9d1c52c4c37535bb397dd2c9ba3",
+        "895fd97fe7f9a46ed63c5c76290570ea253b1033192b4f593821711befb09626",
+        "f5d2196fad389445676c8c51ca821ad682fe4f42bdeb31b02ec535d3fa5b5b5f",
+        "24cea24a43dfe5843ebe872df1e2281f07c7d43476a151ccbb3e5f44ce27b9ba",
+        "7decddd54cd433a536a6cce2b1191d454f322d347c5c0c6d4b9036f2e26bd0b0",
+        "a475b5a44fc90ffa22142c98b799d655567f79f44c0899aa2bf8ac799d0df123",
+        "3d8ffe951796bf77b8c01261f8c3ac20c12884d33b237ac93e1566e2d39e4a12",
+        "8cfc1b0222a7918c80b9d845cd6eb2f0ca823895afe39ebd32595bdfdadb9f5f",
+        "89909d5fb6290b56dd48e29f31747018bf4a5b8b2f0398f4b928ee7392971907"
+      ]
+    },
+    "slow_high_curvature_high_speed_slow": {
+      "frame_count": 3000,
+      "trajectory_count": 20,
+      "trajectory_uids": [
+        "bffdc48c827d89c0d49c5b1e74abdaa79f39eee6d8150a880bac286e438b99d2",
+        "62844ad52dd2ae6eb836c551b50d5311368a3367b949508f15dbea513b6a545a",
+        "3601fc67cf5052038d3ed513fb3672d92b6f82160c55239d6e6f4ce6a27b6aea",
+        "b4ff62f03f10973002b2114d0becb2843957aedbcd7e5a2fb20d64ae97b23f3e",
+        "3515a29637261278b7c6437fb31e1cbd8e8b8dae3b56036cdbe932c493014c2d",
+        "7c1825b1ad4a6ba7327d1491ddef7a9ae1de0e2ec6f907f88580bfa1ac9598de",
+        "b6dd124d0fb6660d53608788a645bd8cb0375985197e52c442be862016e2a054",
+        "c63abbc5397728708d2c53779238ca0c61370ad9addc75521ab7301127678657",
+        "1b0cc1def9b4f78924975482a9a625824142716db7a4562015ed87d3cd63a929",
+        "f3a0610a0f19bbb7c151c1a21c732395a069200e1f92b09ef8f89bd4cd509c88",
+        "f9ca76230bd812cbad2116999593e07625e19893aa834cdb00c2a06f44ba0bcd",
+        "5dc527062f490951dde39d56bb3878c9af21b3b2e2eefc5f632360c89d2bffa0",
+        "b88bba659a1648a85ecd2633699f986a26963497abcd588999131f975065f753",
+        "69a0ac329e376c3524db7219af47a874be6ce628f9102ac8f96b9599aa93a721",
+        "5f59426d613436e198261b86fb69e94f7ab021e9f3339eb5c907391bd0d5875e",
+        "6b25e9d7c0f303cde20595717aaa5d4d903b582400b09c4aeaad2d56fe704d34",
+        "3e069a6601eab2f1c194e2ffe760cc5ff74fd6a85ef988c9c314a4d810c4863f",
+        "07a5fde347a8563910f3b1a7f90fd60fc36db3f530c239ba14b38c50dddec4c9",
+        "85fc21d2a9583bfad2c8b0915ed9e5b91acdcb123ce47d80f269b2979d2956f6",
+        "634f1eb6ecb451c69fb65c7755caf0a9e24435a53abb1adde5bd8b8b3b23b59d"
+      ]
+    },
+    "smooth_fast_orientation_smooth": {
+      "frame_count": 3000,
+      "trajectory_count": 20,
+      "trajectory_uids": [
+        "50d1b2a52de31b11125bb9c67eb112bf0d0206f1750173584eb05e4af69d3921",
+        "e51230bcfefd9502ebe0a25a195d154f211a3df8fe1fd28c71abf1dc9c2aac99",
+        "8c2ace93e4467d4c84bc6888b72d1fc39bc33511f01a9f435295c2bed80cf5c6",
+        "fa4e24af4e13aa3f515dd54f0e82976dae9e386e280cd945e5eeb2f670c06897",
+        "a5385987a10084550c7a1801b42d769f6f5e724cc859b8d63b12ee0319be919f",
+        "0f19ac2d639ddbf8b631bc1909c50bb79daa61d633dccbbfdb0c6bec46983647",
+        "c087ea21702168a411cd7333ccbecb2680e88f668e29a3bc0668f3f10d683c89",
+        "69a24bbf4d0e07f2687e8eac08e774a78e0553a93d56f523fa9c66b0e4eee108",
+        "f9b0c97d3e1f31da0d609e025c1f1b84c648232984526cb5226dfb594e072b1a",
+        "46011c8c30e03118735e459f39026eb835b473efb90f73175049a85eb08490a6",
+        "14c7429a9468c9ada6bdc80c80bb05c0951562748c54f97b935fcb794f7c840c",
+        "f781803026cf92a8bef844052fb7b50ddb5ea70614dc86b7027930078ba3b4e6",
+        "c44ae970113420e1fbd1b2ef578c1c57da643bc9b900f02f5f4541e18477af19",
+        "aa505275e5e9c9017a3ddde007bef4848e449fc3bd1d0ef5c5128226e76872ba",
+        "e741654c4c43c7e0fda85ab5747af88f3c70708e409c94c8d1fc6aff39fda2c6",
+        "a091b65783ee2cebf6a448786f9ce611db9140df6cc62066864f923a8e887d09",
+        "757ea66c5b723017e186e1f84e47a632c04669d669f6ce23eb803afbc88fea65",
+        "cbf77896f52e0da88033c843e9258d7848db3ac6de46d39fe77ef4bdb41cfebb",
+        "9660b4cff2e30153fec7134fb7d2109854999c0ba6be337c744972960711c9b5",
+        "a62ea32b8d7e9bc570b1992cce51d7bf1c4d2aa435513fecc09a997f8f05eedb"
+      ]
+    }
+  },
+  "formal_identity_files_opened": 5,
+  "frame_count": 12000,
+  "freshness": {
+    "access_ledger": {
+      "claim_boundary": "old formal access is limited to frozen dataset identity manifests and the previous_q/target pose/category/trajectory_id/time_index arrays; no success, latency, FEV, command, probability, or method output is read",
+      "development_identity_files_opened": 6,
+      "formal_allowed_arrays": [
+        "previous_q",
+        "target_position",
+        "target_rotation",
+        "category",
+        "trajectory_id",
+        "time_index"
+      ],
+      "formal_arrays_read_by_source": {
+        "test_v3/panda/all_queries_identity_only": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "test_v4/panda/id_points_identity_only": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "test_v4/panda/id_trajectories_identity_only": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "test_v4/panda/ood_points_identity_only": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "test_v4/panda/ood_trajectories_identity_only": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ]
+      },
+      "formal_checkpoint_files_opened": 0,
+      "formal_identity_files_opened": 5,
+      "formal_result_roots_opened": [],
+      "identity_only_access": true,
+      "performance_arrays_read": 0,
+      "performance_files_opened": 0,
+      "protocol": "fresh_transition_v4_final_evaluation_v1",
+      "robot": "panda",
+      "source_class_counts": {
+        "development": 6,
+        "formal_evaluation": 5
+      },
+      "source_count": 11,
+      "source_manifests": {
+        "outputs/.test_v4_aggregate.incomplete/test_v4_dataset_manifest.json": {
+          "path": "outputs/.test_v4_aggregate.incomplete/test_v4_dataset_manifest.json",
+          "sha256": "77fa670e5de1bf40301f0bcd0292ebcc7860f412ac8bd946a485dc782458d51e",
+          "size": 101334
+        },
+        "outputs/anchored_temporal_v7_pilot/run_manifest.json": {
+          "path": "outputs/anchored_temporal_v7_pilot/run_manifest.json",
+          "sha256": "3f7a5fa86e9024658e9df706ccaee9360f0c0c6d652d71a60082606d85badc68",
+          "size": 26977
+        },
+        "outputs/anchored_temporal_v7_pilot/trajectory_split_manifest.json": {
+          "path": "outputs/anchored_temporal_v7_pilot/trajectory_split_manifest.json",
+          "sha256": "f6368c351111580f4f31c9c04b0a45ec0bef4bf186a4f770afe1bf8412833f12",
+          "size": 336538
+        },
+        "outputs/temporal_event_v6_pilot/run_manifest.json": {
+          "path": "outputs/temporal_event_v6_pilot/run_manifest.json",
+          "sha256": "e5575683a5779623ae32e0389b4f9a75f15c047cb59971058abe20e06f7eaef1",
+          "size": 24576
+        },
+        "outputs/temporal_event_v6_pilot/trajectory_split_manifest.json": {
+          "path": "outputs/temporal_event_v6_pilot/trajectory_split_manifest.json",
+          "sha256": "5a285c9b0d387fd2c3eefc3e55111088e17344b27d120fb5b48fe14748aaa00b",
+          "size": 55938
+        },
+        "outputs/temporal_v6_pilot/run_manifest.json": {
+          "path": "outputs/temporal_v6_pilot/run_manifest.json",
+          "sha256": "991d95aeb7bff43e10d2999c0f8a9e6ba121816d51000a73525f91a2afb1ad2b",
+          "size": 76509
+        },
+        "outputs/temporal_v6_pilot/trajectory_split_manifest.json": {
+          "path": "outputs/temporal_v6_pilot/trajectory_split_manifest.json",
+          "sha256": "faa034061a645a99bf71e77b133380925ced5d738c92f50905eb5f423cbff0a9",
+          "size": 32455
+        },
+        "outputs/test_v3_aggregate/test_v3_dataset_manifest.json": {
+          "path": "outputs/test_v3_aggregate/test_v3_dataset_manifest.json",
+          "sha256": "d16a21fed8c22fc34f548d3c4d403cbc8e5aa3671d0cb3a05cace1e2375be09b",
+          "size": 23635
+        }
+      }
+    },
+    "all_isolation_checks_pass": true,
+    "development_identity_files_opened": 6,
+    "formal_identity_files_opened": 5,
+    "formal_performance_consumed": false,
+    "fresh_frame_count": 12000,
+    "fresh_pool_seed": 864901,
+    "fresh_trajectory_count": 80,
+    "fresh_trajectory_seed_count": 80,
+    "internal_query_duplicate_count": 0,
+    "internal_trajectory_id_duplicate_count": 0,
+    "internal_trajectory_seed_duplicate_count": 0,
+    "internal_trajectory_uid_duplicate_count": 0,
+    "method_outcomes_used_for_generation_or_identity": false,
+    "performance_arrays_read": 0,
+    "performance_files_opened": 0,
+    "prior_overlap_counts": {
+      "formal_query_hash": 0,
+      "runtime_query_hash": 0,
+      "seed": 0,
+      "trajectory_id": 0,
+      "trajectory_uid": 0
+    },
+    "protocol": "fresh_transition_v4_final_evaluation_v1",
+    "query_hash_contracts": [
+      "confik_source_query_runtime_inputs_v1",
+      "test_v3_v4_exact_query_bytes_v1"
+    ],
+    "robot": "panda",
+    "source_class_counts": {
+      "development": 6,
+      "formal_evaluation": 5
+    },
+    "source_count": 11,
+    "sources": [
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/temporal_v6_pilot/panda_trajectory_calibration.npz",
+          "sha256": "9eaadcafe9ad1bc64109d130275fbf1480e28da6ec73ca666e1dcf7befcc89b0",
+          "size": 1187949
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "bd96fb851c124a913c55d4ef7dca51959e0c44d13e1e5ece1ffc28f291a40ab4",
+        "formal_query_overlap_count": 0,
+        "name": "temporal_v6_pilot/panda/calibration",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "fa6590e401a6d83187a1ab93e480ef8ff635d24bf26899d43a05a90311b6bf63",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "a5dbc0860805b8386e34a295e10add0e03c24eb0de8c928553e35cb8f9c71fca",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/temporal_v6_pilot/panda_trajectory_policy_validation.npz",
+          "sha256": "ffd0586dabadd30c2cac204c86c5ce63225618ccb6f450212f4fc223335aaff4",
+          "size": 1185901
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "8515c8087c7676b789453e88a8d3cc6e86e7c2161e632bdacd88796642158acf",
+        "formal_query_overlap_count": 0,
+        "name": "temporal_v6_pilot/panda/policy_validation",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "3318ed4b20b1ada466eeee399acfaee3019435cad9f04ce6ce144c2f2e587b2f",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "1da3393f36ebf9b5d934c0f176307b4db829be19024aa6a74a1a4a041125cdcc",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "source_query_hash",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/temporal_event_v6_pilot/panda_trajectory_calibration.npz",
+          "sha256": "53af8a370af8e1eefdba58dbbbc42b14b39452e0781f7edcadf7322affebd18e",
+          "size": 1473784
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "c8808a7804e7f9a1f59709f9e52b09d219da4dba81c9ab0ceaf94e97eddc72fe",
+        "formal_query_overlap_count": 0,
+        "name": "temporal_event_v6_pilot/panda/calibration",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "2aa327f192e832f8492322761a80550b7e610c15e5a3163edb369ff378e6a880",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "2d8267bfd492c7dbf4b408b099f0553ca728d7487bf258c4c66446d167688c15",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "source_query_hash",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/temporal_event_v6_pilot/panda_trajectory_policy_validation.npz",
+          "sha256": "98be41fda0ace391da51326d6dcdb98eb793c0e65fcf005d3a3ad2afe81cae10",
+          "size": 1474564
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "7946eb3f7bd94637ec06413f7c50cc695413363cd52894d03d99736f2e13c677",
+        "formal_query_overlap_count": 0,
+        "name": "temporal_event_v6_pilot/panda/policy_validation",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "5e87e114f101136a6f4fe6e27176fecd27941ab23ed3d595f676b375da888aec",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "3595af7bb406475386b18964e92bf06c8479f22528bd0874edecf6874c339478",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "source_query_hash",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/anchored_temporal_v7_pilot/panda_trajectory_calibration.npz",
+          "sha256": "ff5df544ca756f8a18410e125210e16d6eeb4a08b151956892b40a88f6ebc163",
+          "size": 1231873
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "bdef7a7267294e88b3cc90559226525c9176e859afa074a94946e12a9e69fd0b",
+        "formal_query_overlap_count": 0,
+        "name": "anchored_temporal_v7_pilot/panda/calibration",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "e06e10b9e56f625f100c2a669d3702086876183d1ec0e8299da3a445eac945a7",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "cad31d487ddb26ac8f97d0d5c62ee0b08dcf694d19802a7fded6fdfc5e5f9744",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "source_query_hash",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/anchored_temporal_v7_pilot/panda_trajectory_policy_validation.npz",
+          "sha256": "e396b8aca7773f82e8b5ad70f050a01282068d45a9679ac470c4546219b3b624",
+          "size": 1231392
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "3035c888d08df0cddbae574a3be58c655ae9935fadb2c7ee07a9623c8edbef9b",
+        "formal_query_overlap_count": 0,
+        "name": "anchored_temporal_v7_pilot/panda/policy_validation",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "f2271b049810c3a1662d36f185b7a11d213537d0c78699b6ea20f9522481318d",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "5125d5d170c4397605059b3f6be2687cbe51ae299b01008162cbc021ffb08c33",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/test_v3_aggregate/datasets/panda_test_v3_queries.npz",
+          "sha256": "4bb961d2eb10a9e2b675ae1d4f7945d259b34149466a40d1d3079c57ea9457b3",
+          "size": 3528750
+        },
+        "declared_seed_count": 4,
+        "formal_query_hash_set_digest": "cfb9811d7f1f72fcaaaaa9d68f2a1dab635bf6758c7306e15cac5bbf147ebf54",
+        "formal_query_overlap_count": 0,
+        "name": "test_v3/panda/all_queries_identity_only",
+        "performance_arrays_read": false,
+        "query_count": 18000,
+        "runtime_query_hash_set_digest": "477b7bd09ac43722307737f775d5c12444cd555bacec682f4f48d6d333341fac",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "formal_evaluation",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "390a87ea278b398284c7d6078c2e2c9a8f23c6a233b355e8833300ae8084ac7c",
+        "unique_formal_query_hash_count": 18000,
+        "unique_runtime_query_hash_count": 18000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/.test_v4_aggregate.incomplete/datasets/panda_id_points.npz",
+          "sha256": "53c991ea1ce4bab0537bd8f7d954651c3c9d7fcaa8add5558e1df002583d57f2",
+          "size": 2360101
+        },
+        "declared_seed_count": 4,
+        "formal_query_hash_set_digest": "47b4cffce3179bcb7b69d34e48034739b9a2f94a7edeb424f908fb25c18800c4",
+        "formal_query_overlap_count": 0,
+        "name": "test_v4/panda/id_points_identity_only",
+        "performance_arrays_read": false,
+        "query_count": 12000,
+        "runtime_query_hash_set_digest": "7ec16c110828e6f08acf836311aa81fe716ac23c5c038b88cbaece03bec837a5",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "formal_evaluation",
+        "trajectory_id_count": 0,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 0,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "6971188c613b8843812be80cefbeaf14e77a3aa49e4cef262318e0fc0c4a0beb",
+        "unique_formal_query_hash_count": 12000,
+        "unique_runtime_query_hash_count": 12000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/.test_v4_aggregate.incomplete/datasets/panda_id_trajectories.npz",
+          "sha256": "07330519d1b1d12ef390ef129c9aa141a97e022de762fa911402279232f899ea",
+          "size": 1169525
+        },
+        "declared_seed_count": 1,
+        "formal_query_hash_set_digest": "6ccde58993b9d8c47a99dbb4012113ef3658885cb5ae4f7a2b8fc5f1e52a92d3",
+        "formal_query_overlap_count": 0,
+        "name": "test_v4/panda/id_trajectories_identity_only",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "9903f6084ec351ed8412ec80bf1dafa1c24a784548a186d0c03452352080c13a",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "formal_evaluation",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "08983c891f57673653c944b03369b68937e5cf7ceb55df64844f4eaa9d6e9b95",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/.test_v4_aggregate.incomplete/datasets/panda_ood_points.npz",
+          "sha256": "54c68d434431a686a9c479d843411e6d9e6a541d4991b3d0a6c35a2d25e1fea4",
+          "size": 807558
+        },
+        "declared_seed_count": 1,
+        "formal_query_hash_set_digest": "57c549c26cf67594cd47700985da4177809be05d2eba8d346a67e0cdd1d41838",
+        "formal_query_overlap_count": 0,
+        "name": "test_v4/panda/ood_points_identity_only",
+        "performance_arrays_read": false,
+        "query_count": 4000,
+        "runtime_query_hash_set_digest": "5e3b07711112c04b88e89634843ab47b5e4ffb9897553846856bc4941469f5c8",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "formal_evaluation",
+        "trajectory_id_count": 0,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 0,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "6971188c613b8843812be80cefbeaf14e77a3aa49e4cef262318e0fc0c4a0beb",
+        "unique_formal_query_hash_count": 4000,
+        "unique_runtime_query_hash_count": 4000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/.test_v4_aggregate.incomplete/datasets/panda_ood_trajectories.npz",
+          "sha256": "f65175c9a11fe58809c46fcb58a191fb9a9c81a68e2e4ef42dd618964b20aaf1",
+          "size": 597849
+        },
+        "declared_seed_count": 1,
+        "formal_query_hash_set_digest": "4a514c5fb71e8980d6921cc84c7e5ee93376513f13974c76beb3c1d133d5d6df",
+        "formal_query_overlap_count": 0,
+        "name": "test_v4/panda/ood_trajectories_identity_only",
+        "performance_arrays_read": false,
+        "query_count": 3000,
+        "runtime_query_hash_set_digest": "cb7c519c3d660ea0d8067b067eecf2357f6fda17efe23b2c018deba223238dd7",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "formal_evaluation",
+        "trajectory_id_count": 20,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 20,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "6960fb7348a8c59c51b99de1a4ed66d1384e9932cefb755742644e5c28c20810",
+        "unique_formal_query_hash_count": 3000,
+        "unique_runtime_query_hash_count": 3000
+      }
+    ],
+    "status": "pass",
+    "trajectory_uid_schema": "confik_ordered_runtime_trajectory_content_v1"
+  },
+  "generator_outcome_blind": true,
+  "identity_frozen_before_any_solver_call": true,
+  "identity_manifest_schema": "fresh_transition_v4_identity_manifest_v1",
+  "kinematics_identity": "e1fb335ca060722abc830206e23af0ae8d7b32d135e52ee914132d9b19b3e29c",
+  "learned_model_calls_before_identity_freeze": 0,
+  "manifest_sha256": "7c46bafefc19d57ccc4c52127b254b3b908cee7545061b297f509c6464e4a414",
+  "method_outcomes_used_for_identity": false,
+  "performance_files_opened": 0,
+  "pool_seed": 864901,
+  "protocol": "fresh_transition_v4_final_evaluation_v1",
+  "query_identity": {
+    "formal_query_set_digest": "071ae7de20a3b3e03c2ff3b0e9ae8556ff466d305a6aaebfef2fddc644698f70",
+    "formal_schema": "test_v3_v4_exact_query_bytes_v1",
+    "ordered_formal_query_digest": "b7f0ea93fb5d509048eb23e3c5357fdb42cbc680581f104fe0796c70c6673999",
+    "ordered_runtime_query_digest": "f1e2449b3861faa5bdb9ff0cc5426e4cbab0803a9c98b3be59b49cb94338dd11",
+    "runtime_query_set_digest": "93139dee8dedc5e2b114038c9ff6fc8bb9fd909418c8a7b268ec3743852304a1",
+    "runtime_schema": "confik_source_query_runtime_inputs_v1",
+    "unique_formal_query_count": 12000,
+    "unique_runtime_query_count": 12000
+  },
+  "robot": "panda",
+  "role": "fresh_transition_evaluation",
+  "seed_identity": {
+    "ordered_trajectory_seed_digest": "32102608866a246135fdbf6dae921278b1dd36b2dc2a82dc02d754c8038964bd",
+    "pool_seed": 864901,
+    "trajectory_seed_derivation": "numpy.SeedSequence([pool_seed,family_index,path_index])",
+    "unique_trajectory_seed_count": 80
+  },
+  "solver_calls_before_identity_freeze": 0,
+  "steps_per_trajectory": 150,
+  "trajectory_count": 80,
+  "trajectory_identity": {
+    "ordered_numeric_trajectory_id_digest": "9a10b24d78ee7c436057003d6643d1a03f69b59a2d5b5de9ba2f42e61aebd81d",
+    "ordered_trajectory_uid_digest": "429075f830e243802fc59e15f7de05d1721ca2bebec5713cd5b2918286799cd5",
+    "schema": "confik_ordered_runtime_trajectory_content_v1",
+    "trajectories": [
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 0,
+        "frame_count": 150,
+        "trajectory_id": 400003013,
+        "trajectory_seed": 2870537356,
+        "trajectory_uid": "bffdc48c827d89c0d49c5b1e74abdaa79f39eee6d8150a880bac286e438b99d2"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 150,
+        "frame_count": 150,
+        "trajectory_id": 400002010,
+        "trajectory_seed": 1718691581,
+        "trajectory_uid": "11cc2a667cdf5df5ac95e93c0fe31cfa03b81a302183e7cd091eb3fafad6aa72"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 300,
+        "frame_count": 150,
+        "trajectory_id": 400000001,
+        "trajectory_seed": 2205353730,
+        "trajectory_uid": "50d1b2a52de31b11125bb9c67eb112bf0d0206f1750173584eb05e4af69d3921"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 450,
+        "frame_count": 150,
+        "trajectory_id": 400001008,
+        "trajectory_seed": 4283591460,
+        "trajectory_uid": "5f676e5a1212cddec7e46b691e415aa07af6497378a6cee6e0f0ce78b8ca8254"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 600,
+        "frame_count": 150,
+        "trajectory_id": 400001009,
+        "trajectory_seed": 1178656402,
+        "trajectory_uid": "c4ea6ac3a82f08525798197b66f829fabcf22836dd6929a48659f8797a361b02"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 750,
+        "frame_count": 150,
+        "trajectory_id": 400000009,
+        "trajectory_seed": 3754309421,
+        "trajectory_uid": "e51230bcfefd9502ebe0a25a195d154f211a3df8fe1fd28c71abf1dc9c2aac99"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 900,
+        "frame_count": 150,
+        "trajectory_id": 400003000,
+        "trajectory_seed": 950501868,
+        "trajectory_uid": "62844ad52dd2ae6eb836c551b50d5311368a3367b949508f15dbea513b6a545a"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 1050,
+        "frame_count": 150,
+        "trajectory_id": 400002002,
+        "trajectory_seed": 4237879599,
+        "trajectory_uid": "185c273b6eb235de506444e6caaf294ad01484cb00140e18b3f70e97c3edee4e"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 1200,
+        "frame_count": 150,
+        "trajectory_id": 400002009,
+        "trajectory_seed": 2353554625,
+        "trajectory_uid": "04e03e12cb6c469009b5aea509dc8ab47c36838eacf76f11d66a68a6d77a30ce"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 1350,
+        "frame_count": 150,
+        "trajectory_id": 400003011,
+        "trajectory_seed": 2458648089,
+        "trajectory_uid": "3601fc67cf5052038d3ed513fb3672d92b6f82160c55239d6e6f4ce6a27b6aea"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 1500,
+        "frame_count": 150,
+        "trajectory_id": 400000003,
+        "trajectory_seed": 3775783073,
+        "trajectory_uid": "8c2ace93e4467d4c84bc6888b72d1fc39bc33511f01a9f435295c2bed80cf5c6"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 1650,
+        "frame_count": 150,
+        "trajectory_id": 400001005,
+        "trajectory_seed": 2895812346,
+        "trajectory_uid": "f9f3de755890befbe5e716d8cd733299abc35befef0a0c1d7814ea83eba311f6"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 1800,
+        "frame_count": 150,
+        "trajectory_id": 400002000,
+        "trajectory_seed": 2758602198,
+        "trajectory_uid": "155c969355c5667e8c697bbe084d07575460245029c0ea9979bebc43411985e0"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 1950,
+        "frame_count": 150,
+        "trajectory_id": 400001006,
+        "trajectory_seed": 1089782426,
+        "trajectory_uid": "ec34dfebe109c1ab568245f30c6e87caa29be579b0ac63a709f7e539223ffd36"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 2100,
+        "frame_count": 150,
+        "trajectory_id": 400000018,
+        "trajectory_seed": 1769855953,
+        "trajectory_uid": "fa4e24af4e13aa3f515dd54f0e82976dae9e386e280cd945e5eeb2f670c06897"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 2250,
+        "frame_count": 150,
+        "trajectory_id": 400003015,
+        "trajectory_seed": 58230044,
+        "trajectory_uid": "b4ff62f03f10973002b2114d0becb2843957aedbcd7e5a2fb20d64ae97b23f3e"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 2400,
+        "frame_count": 150,
+        "trajectory_id": 400001015,
+        "trajectory_seed": 132815361,
+        "trajectory_uid": "e58673e794ac13cba09102320e3bc0bf24e5117bc6e0fb7ed9e68e95bd81238c"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 2550,
+        "frame_count": 150,
+        "trajectory_id": 400000015,
+        "trajectory_seed": 3224338054,
+        "trajectory_uid": "a5385987a10084550c7a1801b42d769f6f5e724cc859b8d63b12ee0319be919f"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 2700,
+        "frame_count": 150,
+        "trajectory_id": 400003014,
+        "trajectory_seed": 1225548423,
+        "trajectory_uid": "3515a29637261278b7c6437fb31e1cbd8e8b8dae3b56036cdbe932c493014c2d"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 2850,
+        "frame_count": 150,
+        "trajectory_id": 400002004,
+        "trajectory_seed": 929505936,
+        "trajectory_uid": "707a2f5143d42c2d3ce8840cd491699893617a5ec9ecb03e210180c291c3fedc"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 3000,
+        "frame_count": 150,
+        "trajectory_id": 400000004,
+        "trajectory_seed": 4065176792,
+        "trajectory_uid": "0f19ac2d639ddbf8b631bc1909c50bb79daa61d633dccbbfdb0c6bec46983647"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 3150,
+        "frame_count": 150,
+        "trajectory_id": 400001003,
+        "trajectory_seed": 2076934112,
+        "trajectory_uid": "1c8f84d59c3b8bd6a7a99b6ea6bde59a03bdc6a7f7ce0ad95a7a59d087274025"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 3300,
+        "frame_count": 150,
+        "trajectory_id": 400003019,
+        "trajectory_seed": 2683938808,
+        "trajectory_uid": "7c1825b1ad4a6ba7327d1491ddef7a9ae1de0e2ec6f907f88580bfa1ac9598de"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 3450,
+        "frame_count": 150,
+        "trajectory_id": 400002008,
+        "trajectory_seed": 966593894,
+        "trajectory_uid": "f3261225edd438042ad98031385ee52b1f37b2971cb320f04d782aa51863aae3"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 3600,
+        "frame_count": 150,
+        "trajectory_id": 400002005,
+        "trajectory_seed": 4068915865,
+        "trajectory_uid": "956f42c9db82ddc2f49190619eb1c2030d15abd7fb3bad6be0451300b21ce307"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 3750,
+        "frame_count": 150,
+        "trajectory_id": 400003001,
+        "trajectory_seed": 3571509021,
+        "trajectory_uid": "b6dd124d0fb6660d53608788a645bd8cb0375985197e52c442be862016e2a054"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 3900,
+        "frame_count": 150,
+        "trajectory_id": 400001019,
+        "trajectory_seed": 2007652978,
+        "trajectory_uid": "889cac02e7ff297013e792520ac1ee1e4e9d04190fe1610dc38fade57e955adb"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 4050,
+        "frame_count": 150,
+        "trajectory_id": 400000013,
+        "trajectory_seed": 1300157058,
+        "trajectory_uid": "c087ea21702168a411cd7333ccbecb2680e88f668e29a3bc0668f3f10d683c89"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 4200,
+        "frame_count": 150,
+        "trajectory_id": 400000002,
+        "trajectory_seed": 455514054,
+        "trajectory_uid": "69a24bbf4d0e07f2687e8eac08e774a78e0553a93d56f523fa9c66b0e4eee108"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 4350,
+        "frame_count": 150,
+        "trajectory_id": 400001011,
+        "trajectory_seed": 1619631074,
+        "trajectory_uid": "544eeca8e038547972080dfdc537335e2c85994ae948b35a1c679f7b7979771b"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 4500,
+        "frame_count": 150,
+        "trajectory_id": 400002012,
+        "trajectory_seed": 233078810,
+        "trajectory_uid": "e5ec8911421d3d3586f8466390703678412a2bf374e630b8c37dac67558e8267"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 4650,
+        "frame_count": 150,
+        "trajectory_id": 400003003,
+        "trajectory_seed": 181242932,
+        "trajectory_uid": "c63abbc5397728708d2c53779238ca0c61370ad9addc75521ab7301127678657"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 4800,
+        "frame_count": 150,
+        "trajectory_id": 400002003,
+        "trajectory_seed": 1525745845,
+        "trajectory_uid": "a4af1d5e086481cbee929c068e9208ffbfd2690500b80029f915db9c20cbc32b"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 4950,
+        "frame_count": 150,
+        "trajectory_id": 400001012,
+        "trajectory_seed": 3390747197,
+        "trajectory_uid": "366d7d596dd9a7a6f13bda46a3493637da6e7ff2e2d18cb5cc2213e7c7ae6c43"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 5100,
+        "frame_count": 150,
+        "trajectory_id": 400003008,
+        "trajectory_seed": 3116328410,
+        "trajectory_uid": "1b0cc1def9b4f78924975482a9a625824142716db7a4562015ed87d3cd63a929"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 5250,
+        "frame_count": 150,
+        "trajectory_id": 400000014,
+        "trajectory_seed": 2967669385,
+        "trajectory_uid": "f9b0c97d3e1f31da0d609e025c1f1b84c648232984526cb5226dfb594e072b1a"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 5400,
+        "frame_count": 150,
+        "trajectory_id": 400001001,
+        "trajectory_seed": 1835313238,
+        "trajectory_uid": "5d2e1c069f231273d706677a33932bd7d02cdfdde89ac2e584236b5e56d8aa1b"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 5550,
+        "frame_count": 150,
+        "trajectory_id": 400002016,
+        "trajectory_seed": 1189739904,
+        "trajectory_uid": "37ea9fe855e644f134a85f5fdfa31edcbf3e3ebba583e0bf1635c675d8a407cd"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 5700,
+        "frame_count": 150,
+        "trajectory_id": 400000011,
+        "trajectory_seed": 906775487,
+        "trajectory_uid": "46011c8c30e03118735e459f39026eb835b473efb90f73175049a85eb08490a6"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 5850,
+        "frame_count": 150,
+        "trajectory_id": 400003018,
+        "trajectory_seed": 4247030522,
+        "trajectory_uid": "f3a0610a0f19bbb7c151c1a21c732395a069200e1f92b09ef8f89bd4cd509c88"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 6000,
+        "frame_count": 150,
+        "trajectory_id": 400001002,
+        "trajectory_seed": 2142343137,
+        "trajectory_uid": "2dd05a450d9447c19712bc3e8a88fdb266a7c0dfd1f532100a67ca6da3441321"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 6150,
+        "frame_count": 150,
+        "trajectory_id": 400002014,
+        "trajectory_seed": 984457042,
+        "trajectory_uid": "3e9e9fb367d4ba0121b1e8899d81bd2a03c436df4b03e86a6b33c84f9045db3a"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 6300,
+        "frame_count": 150,
+        "trajectory_id": 400000000,
+        "trajectory_seed": 3955293085,
+        "trajectory_uid": "14c7429a9468c9ada6bdc80c80bb05c0951562748c54f97b935fcb794f7c840c"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 6450,
+        "frame_count": 150,
+        "trajectory_id": 400003004,
+        "trajectory_seed": 1575360390,
+        "trajectory_uid": "f9ca76230bd812cbad2116999593e07625e19893aa834cdb00c2a06f44ba0bcd"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 6600,
+        "frame_count": 150,
+        "trajectory_id": 400003007,
+        "trajectory_seed": 3889233990,
+        "trajectory_uid": "5dc527062f490951dde39d56bb3878c9af21b3b2e2eefc5f632360c89d2bffa0"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 6750,
+        "frame_count": 150,
+        "trajectory_id": 400001007,
+        "trajectory_seed": 2347230190,
+        "trajectory_uid": "c109e3de90b2dca7b246bc744673aef829b0b9d1c52c4c37535bb397dd2c9ba3"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 6900,
+        "frame_count": 150,
+        "trajectory_id": 400002017,
+        "trajectory_seed": 2710984556,
+        "trajectory_uid": "15d8eb82352187ea3059a0554b59f1246b93af732ba8163392597247499a4756"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 7050,
+        "frame_count": 150,
+        "trajectory_id": 400000017,
+        "trajectory_seed": 1740311503,
+        "trajectory_uid": "f781803026cf92a8bef844052fb7b50ddb5ea70614dc86b7027930078ba3b4e6"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 7200,
+        "frame_count": 150,
+        "trajectory_id": 400002015,
+        "trajectory_seed": 4011819513,
+        "trajectory_uid": "b28caf6d01afadb5212e6fd783ac3d62b338084019676ab393b16cabcf1dcf9d"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 7350,
+        "frame_count": 150,
+        "trajectory_id": 400001013,
+        "trajectory_seed": 530932845,
+        "trajectory_uid": "895fd97fe7f9a46ed63c5c76290570ea253b1033192b4f593821711befb09626"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 7500,
+        "frame_count": 150,
+        "trajectory_id": 400000007,
+        "trajectory_seed": 2046769750,
+        "trajectory_uid": "c44ae970113420e1fbd1b2ef578c1c57da643bc9b900f02f5f4541e18477af19"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 7650,
+        "frame_count": 150,
+        "trajectory_id": 400003002,
+        "trajectory_seed": 465573617,
+        "trajectory_uid": "b88bba659a1648a85ecd2633699f986a26963497abcd588999131f975065f753"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 7800,
+        "frame_count": 150,
+        "trajectory_id": 400002001,
+        "trajectory_seed": 3850628782,
+        "trajectory_uid": "306b35b314f474872fc5354b752db9b639af02cb0c74ed4e8d923873bd36265b"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 7950,
+        "frame_count": 150,
+        "trajectory_id": 400001017,
+        "trajectory_seed": 4107962349,
+        "trajectory_uid": "f5d2196fad389445676c8c51ca821ad682fe4f42bdeb31b02ec535d3fa5b5b5f"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 8100,
+        "frame_count": 150,
+        "trajectory_id": 400000006,
+        "trajectory_seed": 1246419881,
+        "trajectory_uid": "aa505275e5e9c9017a3ddde007bef4848e449fc3bd1d0ef5c5128226e76872ba"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 8250,
+        "frame_count": 150,
+        "trajectory_id": 400003010,
+        "trajectory_seed": 2053408954,
+        "trajectory_uid": "69a0ac329e376c3524db7219af47a874be6ce628f9102ac8f96b9599aa93a721"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 8400,
+        "frame_count": 150,
+        "trajectory_id": 400001010,
+        "trajectory_seed": 4113803027,
+        "trajectory_uid": "24cea24a43dfe5843ebe872df1e2281f07c7d43476a151ccbb3e5f44ce27b9ba"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 8550,
+        "frame_count": 150,
+        "trajectory_id": 400003006,
+        "trajectory_seed": 3674536466,
+        "trajectory_uid": "5f59426d613436e198261b86fb69e94f7ab021e9f3339eb5c907391bd0d5875e"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 8700,
+        "frame_count": 150,
+        "trajectory_id": 400002007,
+        "trajectory_seed": 2955686969,
+        "trajectory_uid": "01de5a3a637f93affda2df17eae06b7304f373126b9cc83ba7eea594dd939a1f"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 8850,
+        "frame_count": 150,
+        "trajectory_id": 400000019,
+        "trajectory_seed": 2468635688,
+        "trajectory_uid": "e741654c4c43c7e0fda85ab5747af88f3c70708e409c94c8d1fc6aff39fda2c6"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 9000,
+        "frame_count": 150,
+        "trajectory_id": 400001014,
+        "trajectory_seed": 3878172680,
+        "trajectory_uid": "7decddd54cd433a536a6cce2b1191d454f322d347c5c0c6d4b9036f2e26bd0b0"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 9150,
+        "frame_count": 150,
+        "trajectory_id": 400002018,
+        "trajectory_seed": 4064920269,
+        "trajectory_uid": "efa2148ad77b54958c3ff88c795cd82b7a63de1fee35f4da832dd4d72a198acd"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 9300,
+        "frame_count": 150,
+        "trajectory_id": 400003009,
+        "trajectory_seed": 114157275,
+        "trajectory_uid": "6b25e9d7c0f303cde20595717aaa5d4d903b582400b09c4aeaad2d56fe704d34"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 9450,
+        "frame_count": 150,
+        "trajectory_id": 400000008,
+        "trajectory_seed": 1793835098,
+        "trajectory_uid": "a091b65783ee2cebf6a448786f9ce611db9140df6cc62066864f923a8e887d09"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 9600,
+        "frame_count": 150,
+        "trajectory_id": 400001004,
+        "trajectory_seed": 931524117,
+        "trajectory_uid": "a475b5a44fc90ffa22142c98b799d655567f79f44c0899aa2bf8ac799d0df123"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 9750,
+        "frame_count": 150,
+        "trajectory_id": 400003017,
+        "trajectory_seed": 3460086296,
+        "trajectory_uid": "3e069a6601eab2f1c194e2ffe760cc5ff74fd6a85ef988c9c314a4d810c4863f"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 9900,
+        "frame_count": 150,
+        "trajectory_id": 400002006,
+        "trajectory_seed": 1497641535,
+        "trajectory_uid": "86f578cdf50bc675ad41e1791dca277b021bd75028b62da7acca1981b6ab04bf"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 10050,
+        "frame_count": 150,
+        "trajectory_id": 400000010,
+        "trajectory_seed": 1193031495,
+        "trajectory_uid": "757ea66c5b723017e186e1f84e47a632c04669d669f6ce23eb803afbc88fea65"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 10200,
+        "frame_count": 150,
+        "trajectory_id": 400001016,
+        "trajectory_seed": 2271660889,
+        "trajectory_uid": "3d8ffe951796bf77b8c01261f8c3ac20c12884d33b237ac93e1566e2d39e4a12"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 10350,
+        "frame_count": 150,
+        "trajectory_id": 400000016,
+        "trajectory_seed": 1260676684,
+        "trajectory_uid": "cbf77896f52e0da88033c843e9258d7848db3ac6de46d39fe77ef4bdb41cfebb"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 10500,
+        "frame_count": 150,
+        "trajectory_id": 400003005,
+        "trajectory_seed": 1561492692,
+        "trajectory_uid": "07a5fde347a8563910f3b1a7f90fd60fc36db3f530c239ba14b38c50dddec4c9"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 10650,
+        "frame_count": 150,
+        "trajectory_id": 400002013,
+        "trajectory_seed": 1461222663,
+        "trajectory_uid": "168f3e36cbe3eb16db05576b82341f236436c323b8fa5c66f99066988ffbe546"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 10800,
+        "frame_count": 150,
+        "trajectory_id": 400002011,
+        "trajectory_seed": 1776734164,
+        "trajectory_uid": "0db07bd0eeb16db593f651e73ec52502e32e60c0c6d9a52c147dd3de78435c8a"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 10950,
+        "frame_count": 150,
+        "trajectory_id": 400001000,
+        "trajectory_seed": 1453563096,
+        "trajectory_uid": "8cfc1b0222a7918c80b9d845cd6eb2f0ca823895afe39ebd32595bdfdadb9f5f"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 11100,
+        "frame_count": 150,
+        "trajectory_id": 400003012,
+        "trajectory_seed": 537448853,
+        "trajectory_uid": "85fc21d2a9583bfad2c8b0915ed9e5b91acdcb123ce47d80f269b2979d2956f6"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 11250,
+        "frame_count": 150,
+        "trajectory_id": 400000012,
+        "trajectory_seed": 2029266279,
+        "trajectory_uid": "9660b4cff2e30153fec7134fb7d2109854999c0ba6be337c744972960711c9b5"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 11400,
+        "frame_count": 150,
+        "trajectory_id": 400003016,
+        "trajectory_seed": 3797959971,
+        "trajectory_uid": "634f1eb6ecb451c69fb65c7755caf0a9e24435a53abb1adde5bd8b8b3b23b59d"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 11550,
+        "frame_count": 150,
+        "trajectory_id": 400002019,
+        "trajectory_seed": 1775582031,
+        "trajectory_uid": "ff6b4151799c021d3c2de8d725dc8a89b4f243e3c27c7b2bd28ec300454b3055"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 11700,
+        "frame_count": 150,
+        "trajectory_id": 400000005,
+        "trajectory_seed": 3322761048,
+        "trajectory_uid": "a62ea32b8d7e9bc570b1992cce51d7bf1c4d2aa435513fecc09a997f8f05eedb"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 11850,
+        "frame_count": 150,
+        "trajectory_id": 400001018,
+        "trajectory_seed": 3221275025,
+        "trajectory_uid": "89909d5fb6290b56dd48e29f31747018bf4a5b8b2f0398f4b928ee7392971907"
+      }
+    ],
+    "trajectory_order": [
+      "bffdc48c827d89c0d49c5b1e74abdaa79f39eee6d8150a880bac286e438b99d2",
+      "11cc2a667cdf5df5ac95e93c0fe31cfa03b81a302183e7cd091eb3fafad6aa72",
+      "50d1b2a52de31b11125bb9c67eb112bf0d0206f1750173584eb05e4af69d3921",
+      "5f676e5a1212cddec7e46b691e415aa07af6497378a6cee6e0f0ce78b8ca8254",
+      "c4ea6ac3a82f08525798197b66f829fabcf22836dd6929a48659f8797a361b02",
+      "e51230bcfefd9502ebe0a25a195d154f211a3df8fe1fd28c71abf1dc9c2aac99",
+      "62844ad52dd2ae6eb836c551b50d5311368a3367b949508f15dbea513b6a545a",
+      "185c273b6eb235de506444e6caaf294ad01484cb00140e18b3f70e97c3edee4e",
+      "04e03e12cb6c469009b5aea509dc8ab47c36838eacf76f11d66a68a6d77a30ce",
+      "3601fc67cf5052038d3ed513fb3672d92b6f82160c55239d6e6f4ce6a27b6aea",
+      "8c2ace93e4467d4c84bc6888b72d1fc39bc33511f01a9f435295c2bed80cf5c6",
+      "f9f3de755890befbe5e716d8cd733299abc35befef0a0c1d7814ea83eba311f6",
+      "155c969355c5667e8c697bbe084d07575460245029c0ea9979bebc43411985e0",
+      "ec34dfebe109c1ab568245f30c6e87caa29be579b0ac63a709f7e539223ffd36",
+      "fa4e24af4e13aa3f515dd54f0e82976dae9e386e280cd945e5eeb2f670c06897",
+      "b4ff62f03f10973002b2114d0becb2843957aedbcd7e5a2fb20d64ae97b23f3e",
+      "e58673e794ac13cba09102320e3bc0bf24e5117bc6e0fb7ed9e68e95bd81238c",
+      "a5385987a10084550c7a1801b42d769f6f5e724cc859b8d63b12ee0319be919f",
+      "3515a29637261278b7c6437fb31e1cbd8e8b8dae3b56036cdbe932c493014c2d",
+      "707a2f5143d42c2d3ce8840cd491699893617a5ec9ecb03e210180c291c3fedc",
+      "0f19ac2d639ddbf8b631bc1909c50bb79daa61d633dccbbfdb0c6bec46983647",
+      "1c8f84d59c3b8bd6a7a99b6ea6bde59a03bdc6a7f7ce0ad95a7a59d087274025",
+      "7c1825b1ad4a6ba7327d1491ddef7a9ae1de0e2ec6f907f88580bfa1ac9598de",
+      "f3261225edd438042ad98031385ee52b1f37b2971cb320f04d782aa51863aae3",
+      "956f42c9db82ddc2f49190619eb1c2030d15abd7fb3bad6be0451300b21ce307",
+      "b6dd124d0fb6660d53608788a645bd8cb0375985197e52c442be862016e2a054",
+      "889cac02e7ff297013e792520ac1ee1e4e9d04190fe1610dc38fade57e955adb",
+      "c087ea21702168a411cd7333ccbecb2680e88f668e29a3bc0668f3f10d683c89",
+      "69a24bbf4d0e07f2687e8eac08e774a78e0553a93d56f523fa9c66b0e4eee108",
+      "544eeca8e038547972080dfdc537335e2c85994ae948b35a1c679f7b7979771b",
+      "e5ec8911421d3d3586f8466390703678412a2bf374e630b8c37dac67558e8267",
+      "c63abbc5397728708d2c53779238ca0c61370ad9addc75521ab7301127678657",
+      "a4af1d5e086481cbee929c068e9208ffbfd2690500b80029f915db9c20cbc32b",
+      "366d7d596dd9a7a6f13bda46a3493637da6e7ff2e2d18cb5cc2213e7c7ae6c43",
+      "1b0cc1def9b4f78924975482a9a625824142716db7a4562015ed87d3cd63a929",
+      "f9b0c97d3e1f31da0d609e025c1f1b84c648232984526cb5226dfb594e072b1a",
+      "5d2e1c069f231273d706677a33932bd7d02cdfdde89ac2e584236b5e56d8aa1b",
+      "37ea9fe855e644f134a85f5fdfa31edcbf3e3ebba583e0bf1635c675d8a407cd",
+      "46011c8c30e03118735e459f39026eb835b473efb90f73175049a85eb08490a6",
+      "f3a0610a0f19bbb7c151c1a21c732395a069200e1f92b09ef8f89bd4cd509c88",
+      "2dd05a450d9447c19712bc3e8a88fdb266a7c0dfd1f532100a67ca6da3441321",
+      "3e9e9fb367d4ba0121b1e8899d81bd2a03c436df4b03e86a6b33c84f9045db3a",
+      "14c7429a9468c9ada6bdc80c80bb05c0951562748c54f97b935fcb794f7c840c",
+      "f9ca76230bd812cbad2116999593e07625e19893aa834cdb00c2a06f44ba0bcd",
+      "5dc527062f490951dde39d56bb3878c9af21b3b2e2eefc5f632360c89d2bffa0",
+      "c109e3de90b2dca7b246bc744673aef829b0b9d1c52c4c37535bb397dd2c9ba3",
+      "15d8eb82352187ea3059a0554b59f1246b93af732ba8163392597247499a4756",
+      "f781803026cf92a8bef844052fb7b50ddb5ea70614dc86b7027930078ba3b4e6",
+      "b28caf6d01afadb5212e6fd783ac3d62b338084019676ab393b16cabcf1dcf9d",
+      "895fd97fe7f9a46ed63c5c76290570ea253b1033192b4f593821711befb09626",
+      "c44ae970113420e1fbd1b2ef578c1c57da643bc9b900f02f5f4541e18477af19",
+      "b88bba659a1648a85ecd2633699f986a26963497abcd588999131f975065f753",
+      "306b35b314f474872fc5354b752db9b639af02cb0c74ed4e8d923873bd36265b",
+      "f5d2196fad389445676c8c51ca821ad682fe4f42bdeb31b02ec535d3fa5b5b5f",
+      "aa505275e5e9c9017a3ddde007bef4848e449fc3bd1d0ef5c5128226e76872ba",
+      "69a0ac329e376c3524db7219af47a874be6ce628f9102ac8f96b9599aa93a721",
+      "24cea24a43dfe5843ebe872df1e2281f07c7d43476a151ccbb3e5f44ce27b9ba",
+      "5f59426d613436e198261b86fb69e94f7ab021e9f3339eb5c907391bd0d5875e",
+      "01de5a3a637f93affda2df17eae06b7304f373126b9cc83ba7eea594dd939a1f",
+      "e741654c4c43c7e0fda85ab5747af88f3c70708e409c94c8d1fc6aff39fda2c6",
+      "7decddd54cd433a536a6cce2b1191d454f322d347c5c0c6d4b9036f2e26bd0b0",
+      "efa2148ad77b54958c3ff88c795cd82b7a63de1fee35f4da832dd4d72a198acd",
+      "6b25e9d7c0f303cde20595717aaa5d4d903b582400b09c4aeaad2d56fe704d34",
+      "a091b65783ee2cebf6a448786f9ce611db9140df6cc62066864f923a8e887d09",
+      "a475b5a44fc90ffa22142c98b799d655567f79f44c0899aa2bf8ac799d0df123",
+      "3e069a6601eab2f1c194e2ffe760cc5ff74fd6a85ef988c9c314a4d810c4863f",
+      "86f578cdf50bc675ad41e1791dca277b021bd75028b62da7acca1981b6ab04bf",
+      "757ea66c5b723017e186e1f84e47a632c04669d669f6ce23eb803afbc88fea65",
+      "3d8ffe951796bf77b8c01261f8c3ac20c12884d33b237ac93e1566e2d39e4a12",
+      "cbf77896f52e0da88033c843e9258d7848db3ac6de46d39fe77ef4bdb41cfebb",
+      "07a5fde347a8563910f3b1a7f90fd60fc36db3f530c239ba14b38c50dddec4c9",
+      "168f3e36cbe3eb16db05576b82341f236436c323b8fa5c66f99066988ffbe546",
+      "0db07bd0eeb16db593f651e73ec52502e32e60c0c6d9a52c147dd3de78435c8a",
+      "8cfc1b0222a7918c80b9d845cd6eb2f0ca823895afe39ebd32595bdfdadb9f5f",
+      "85fc21d2a9583bfad2c8b0915ed9e5b91acdcb123ce47d80f269b2979d2956f6",
+      "9660b4cff2e30153fec7134fb7d2109854999c0ba6be337c744972960711c9b5",
+      "634f1eb6ecb451c69fb65c7755caf0a9e24435a53abb1adde5bd8b8b3b23b59d",
+      "ff6b4151799c021d3c2de8d725dc8a89b4f243e3c27c7b2bd28ec300454b3055",
+      "a62ea32b8d7e9bc570b1992cce51d7bf1c4d2aa435513fecc09a997f8f05eedb",
+      "89909d5fb6290b56dd48e29f31747018bf4a5b8b2f0398f4b928ee7392971907"
+    ],
+    "trajectory_uid_set_digest": "c6ff1cd941e12fd3fa5bfc70159dee02e09fb50461c91f526be936a065c36e2e"
+  },
+  "verifier_calls_before_identity_freeze": 0
+}

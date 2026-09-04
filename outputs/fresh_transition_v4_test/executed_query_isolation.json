@@ -1,0 +1,52 @@
+{
+  "all_zero_overlap": true,
+  "protocol": "fresh_transition_v4_final_evaluation_v1",
+  "robots": {
+    "panda": {
+      "all_zero_overlap": true,
+      "comparison_scope": "method-specific closed-loop executed query hashes",
+      "methods": {
+        "always_hard": {
+          "executed_query_count": 12000,
+          "prior_formal_query_hash_overlap_count": 0,
+          "unique_executed_query_count": 11878
+        },
+        "counterfactual_cghik_v4": {
+          "executed_query_count": 12000,
+          "prior_formal_query_hash_overlap_count": 0,
+          "unique_executed_query_count": 11763
+        },
+        "fixed_robust_cascade": {
+          "executed_query_count": 12000,
+          "prior_formal_query_hash_overlap_count": 0,
+          "unique_executed_query_count": 11770
+        }
+      },
+      "prior_identity_count": 158000,
+      "robot": "panda"
+    },
+    "ur5e": {
+      "all_zero_overlap": true,
+      "comparison_scope": "method-specific closed-loop executed query hashes",
+      "methods": {
+        "always_hard": {
+          "executed_query_count": 12000,
+          "prior_formal_query_hash_overlap_count": 0,
+          "unique_executed_query_count": 11361
+        },
+        "counterfactual_cghik_v4": {
+          "executed_query_count": 12000,
+          "prior_formal_query_hash_overlap_count": 0,
+          "unique_executed_query_count": 11335
+        },
+        "fixed_robust_cascade": {
+          "executed_query_count": 12000,
+          "prior_formal_query_hash_overlap_count": 0,
+          "unique_executed_query_count": 11265
+        }
+      },
+      "prior_identity_count": 158000,
+      "robot": "ur5e"
+    }
+  }
+}

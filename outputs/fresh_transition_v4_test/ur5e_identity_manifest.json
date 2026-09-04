@@ -1,0 +1,1394 @@
+{
+  "dataset_artifact": {
+    "path": "ur5e_fresh_trajectories.npz",
+    "sha256": "9a2f9bb1e7c63a0a715292c091c1be1af8bafb406c381102071bee18d3a70bb9",
+    "size": 2905077
+  },
+  "dt": 0.02,
+  "families": {
+    "central_joint_limit_skim_return": {
+      "frame_count": 3000,
+      "trajectory_count": 20,
+      "trajectory_uids": [
+        "4735b9e48578451118e02275966433fd4ed742a768f5b534f2553238e88c8304",
+        "202d27311ea262a96a99c19ad25fd961409afbcf37b95a4b2dbf4c950c827ec5",
+        "f98c87588825e841029c15d085ab324b8fbe94c2025fc80e0b1823bf6ab41ed5",
+        "6cce649b82c22b6d836d743e5467c14d687744667840d59a1713bc2934984a64",
+        "039d87a70b6dc881334f3fcd9dfb26af260934d83fc7cf7022503c04236c4db5",
+        "28d1afc1c13cc583e58f711c3719e48e374737124eca153693dd4286fef7573b",
+        "16c2a29e7d791412671e69732304b38a53c952d512f314ea4c93f293c8cf8e54",
+        "52de92845180bf114a0a0512172d590ac6c38cd894a6cf74cb01fad3237b03cd",
+        "f232721ba6a7e2e4c39b180e0484837e1c2e99c33fb35fe525551957b10f6d66",
+        "4f700550dd4403298934e9f6496ac055d84d85180feed094dc5248601a771bb3",
+        "8ffc12366aedaa342f4b11b08d7aa7ce5936f7be17a588fc2b07e8b6cd33ac3d",
+        "cee645a0a4a215584a59ee885d8873781997a38427e435b22eda58aec2bf25e9",
+        "0ca6e572665cb8593ea2170713e5ee983df5c1c5477f017f86624c68985a0d6c",
+        "caa64ed7fcf97cb1e55e5ecef1d59c66eb55f034e39114896ccba3e2ecf362b7",
+        "a8a64744824b494c97965e7b66e193e361831e8bef0daaa52d4644b1e57048df",
+        "e56a8ac9e866f9e375b5c4f6ecc3ef72218b0febfe1df0fa72171083f8229011",
+        "dc0c735bde5af1da732cb69f0e805c9fcb8a031050087280e2bc13c69171c6b4",
+        "77d2887129967833fd8046684496215fa05c0258021bf4129f0edd2418467d81",
+        "f6122466a05431d8d0dd5fb1ad6e9d398fa21c23f574058cf824be50b6203c4b",
+        "f00cb8c26e9b6f77e03ca905f571931397e0abc3fc70436e37428f903d50fe89"
+      ]
+    },
+    "regular_near_singular_regular": {
+      "frame_count": 3000,
+      "trajectory_count": 20,
+      "trajectory_uids": [
+        "1680c0912644e6983447d1e7c9329fa412b9d59015f8cb196292ff5de06250b1",
+        "9ee54ffd84d8a6d69b5b893a25efb1c19cfca328ee258c81cb2b0c94545a5477",
+        "c89e355ec024246504f3e9b58624d040e0201ded546efe58f55be14d242a4164",
+        "46c0f997f7d265b02b151f645b22b1d4bb9c90454e68e6b2226cf73c6846a3a4",
+        "9d225e763554cc32d32bbe0f458a673bbc4811d61f22a6322a90da90f6bfb567",
+        "6512ac6afa36689cb154146107fa944767d5e426b1429c805c8cf5daa953955c",
+        "a484bb870afc836dc1d10ccdb18a12b96944a63f165590234fe99ba027887e86",
+        "a352e00ecf1b844d28afa427101fed12a2a09cec7517cb5dc33b536112f39c6c",
+        "5dcba759c2a0263eeb3c32656e2bae5e5d3f2134a303d5bd22c640ff6fa8272d",
+        "6b866a5fc8f6efa16bdba45de13355947916fb83775904aee2ed6bf27e29fa43",
+        "35b6a97812699e0b4708daaf020375484ac96e499e840719ae20d8f0ca5e44f5",
+        "6a1a518b8c630eb7bd290efc9ba86fc089548eba706a4008e9b868271d7d6c39",
+        "d43e7b647f56e0278ce4aff3bf73c9668a7622a8bb0ee26178e10befa78eccc9",
+        "74788b52a44dca9b02cdf6aa87a1a9d3789e2de135f77c806188da51cda21697",
+        "6b22a02c58de73874deee88c6161e6866e1d47592d3379ab472125153c4f5bcb",
+        "272ff8ef3713d478a884f5e72d1b8aa39a4436ec8eba09cf7e827e8ebcb1e5b0",
+        "d5d33c7e3028c4f8f01a9f472ad1a2aab0d33af47cb1eddff00205c75485a964",
+        "8dc6b3ae30ad4a26990f3cd836b70947d179d010ca210f5a1223a28717c2cd92",
+        "483791bbbe7d9807310405bb731e8c301819ac633da1a3f5245ad46277dec817",
+        "d194587ba85126c652a5c24b1d41b5f25e00927c9bd9e8fdfb542e5e9cc97fa2"
+      ]
+    },
+    "slow_high_curvature_high_speed_slow": {
+      "frame_count": 3000,
+      "trajectory_count": 20,
+      "trajectory_uids": [
+        "80bd9376b8e890912400625da507acf137bcaed5cdc5d93464e7f1ba63f0f4a8",
+        "299b451413d8bf44542383d290fd22cc29ca92f3ff722c00d571cde43f16ff44",
+        "adabae5b3787848732f9108cb29888be418a39d3871262792aedd6e0f46defa4",
+        "e4f87d0794b9897d898e835427cd75e0c6f013639a8634b56596347ad5cd0323",
+        "cd6cb5473101ecbd93f3aea1ed475481b95ff5088e0acffa9786aa3aadcf29af",
+        "5ac583374c826fab4a66457b9da32e61f9fec487bd09d118e7eae987ddb0e574",
+        "879ba0b2277e2b970b802c78fcf48787f7c2f4250eb0f99945c7c27b69ea0839",
+        "9068e1b70752fbf5a8afda1f93fbb4b136ddf5c1257822f6c3c47327f5aa8f74",
+        "c96006cedeec918cca00adfe16bf671e5adc009a56b27b6292330dcd573b73c9",
+        "79b391153cc30af8f6e3e1455abbe1bf7880ed734a23a1b3f378b5160f27f24d",
+        "084d06a698822e01ba90f1e1e305f67b4bd08812f1d32e08d996f0f28397da90",
+        "4247584df6d0e0c996db60f92870e879732d4a11b13461e45220bb2e05dc8548",
+        "68ae06895fe52e90976197187fc2fd52da226617b98e079ad62f78cc1edc0202",
+        "afd88dfc0d57b0a2f765c513e2ca74fdc7bed59ba6fde385e9f2848038e4f27e",
+        "0c201c6db8c55a3ddd529fb0279c71144ffd2b77d19491c24f94e9331067d040",
+        "f37a2e26c2ac9409e01f5502b20d42d05763af5bc8dd44406bd3e9be8d6df7a6",
+        "6880b24cef3062086dcb83df8c25106787f483d19484563bc4be11ac7620d10e",
+        "0efa5a2d6bbe095fe14cb386c39efd3cd928b60a82c740e97dec53cdd7cee469",
+        "aba20e7f0bda848f8262fcd5b41898771bda36f85cf206e4cfe610b599ced2ba",
+        "e1dcd88e9fd0ea8be6e55a42edfb573868c288d608803ae44030ac1096119560"
+      ]
+    },
+    "smooth_fast_orientation_smooth": {
+      "frame_count": 3000,
+      "trajectory_count": 20,
+      "trajectory_uids": [
+        "59168e3022749dd200714da9ab2578665af973fb6b9ff931eba28f2c63ddcf3a",
+        "a8495fb5060487b33a9ebd5a0a5b585619f932c74bdcdb6b18c43d622b3aae3e",
+        "fe3884fb18f22f6d4d02c61e96563f21a9c2c310b63a07cb0b998befc2a511e9",
+        "3a0480f4ebc37fc123f33f81b2dcf2660486b594f32ebbd1a0d5c61c9e3d5e5d",
+        "f730ffb14aa2c732f2b6eacc021c692391a598567d331e305e59a605394ff610",
+        "046ef01cbbb0022a57af7137a085eefb092db04461f4f319effa7b41bc5ead72",
+        "5f85cfbabddfcb218d5c2bf7d00f1f9515a0c106cd10030488bdc66099835804",
+        "768bdd75688a70fd89a94003c2f51a5b3d4081840ce2130c47b56505d24415ec",
+        "c9dc77fd6f2bf582193ec1ecf753a6798db7cf3f8cef6c8689fa7a68baa6f1cb",
+        "0a9df274294828aa77848b30468e0a925bce1f598523691f8366c12acb5e003b",
+        "f00d200d7749fba6855c6a492cd837fa67e7537a426a71b260fa29e266d6b28b",
+        "c52f114d08467cce63f991eb7f8a2e3bc2c44d4e7b1e963a1d25a25b30fd78dc",
+        "d49450714afd6709adca43bb8ca365d4f12acd2ea8d97bf48df10117fc1006be",
+        "50fc1a368fab63a318400837a1b2dfcee22478e5a2a6600d80105f68c4c547e7",
+        "061041aa50bcf09cff5af066d3469fb319d51c5fb36c81e3788db9199ada9d8c",
+        "5eaf7a672088294f21a453e93a48060309ab2201594c6a0ed33d6e9be356ec03",
+        "638df0c1dbb016854097e9950e46226e2a924cb4175b93880861d706355996ba",
+        "f4ac7f948681efd3f6ad23df6a11dfae0fc63bba6936b7b846e9bea935aad56e",
+        "5fe99517e71abc3af2d61d53c59ab8bd777ec5c2f7ef1dc81b0f5cc715ec05c4",
+        "2f103e9e3bdd28f0ac9e41247ec05a0cc8b96404c386eafbcb5fdd1abc83f9d9"
+      ]
+    }
+  },
+  "formal_identity_files_opened": 5,
+  "frame_count": 12000,
+  "freshness": {
+    "access_ledger": {
+      "claim_boundary": "old formal access is limited to frozen dataset identity manifests and the previous_q/target pose/category/trajectory_id/time_index arrays; no success, latency, FEV, command, probability, or method output is read",
+      "development_identity_files_opened": 6,
+      "formal_allowed_arrays": [
+        "previous_q",
+        "target_position",
+        "target_rotation",
+        "category",
+        "trajectory_id",
+        "time_index"
+      ],
+      "formal_arrays_read_by_source": {
+        "test_v3/ur5e/all_queries_identity_only": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "test_v4/ur5e/id_points_identity_only": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "test_v4/ur5e/id_trajectories_identity_only": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "test_v4/ur5e/ood_points_identity_only": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "test_v4/ur5e/ood_trajectories_identity_only": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ]
+      },
+      "formal_checkpoint_files_opened": 0,
+      "formal_identity_files_opened": 5,
+      "formal_result_roots_opened": [],
+      "identity_only_access": true,
+      "performance_arrays_read": 0,
+      "performance_files_opened": 0,
+      "protocol": "fresh_transition_v4_final_evaluation_v1",
+      "robot": "ur5e",
+      "source_class_counts": {
+        "development": 6,
+        "formal_evaluation": 5
+      },
+      "source_count": 11,
+      "source_manifests": {
+        "outputs/.test_v4_aggregate.incomplete/test_v4_dataset_manifest.json": {
+          "path": "outputs/.test_v4_aggregate.incomplete/test_v4_dataset_manifest.json",
+          "sha256": "77fa670e5de1bf40301f0bcd0292ebcc7860f412ac8bd946a485dc782458d51e",
+          "size": 101334
+        },
+        "outputs/anchored_temporal_v7_pilot/run_manifest.json": {
+          "path": "outputs/anchored_temporal_v7_pilot/run_manifest.json",
+          "sha256": "3f7a5fa86e9024658e9df706ccaee9360f0c0c6d652d71a60082606d85badc68",
+          "size": 26977
+        },
+        "outputs/anchored_temporal_v7_pilot/trajectory_split_manifest.json": {
+          "path": "outputs/anchored_temporal_v7_pilot/trajectory_split_manifest.json",
+          "sha256": "f6368c351111580f4f31c9c04b0a45ec0bef4bf186a4f770afe1bf8412833f12",
+          "size": 336538
+        },
+        "outputs/temporal_event_v6_pilot/run_manifest.json": {
+          "path": "outputs/temporal_event_v6_pilot/run_manifest.json",
+          "sha256": "e5575683a5779623ae32e0389b4f9a75f15c047cb59971058abe20e06f7eaef1",
+          "size": 24576
+        },
+        "outputs/temporal_event_v6_pilot/trajectory_split_manifest.json": {
+          "path": "outputs/temporal_event_v6_pilot/trajectory_split_manifest.json",
+          "sha256": "5a285c9b0d387fd2c3eefc3e55111088e17344b27d120fb5b48fe14748aaa00b",
+          "size": 55938
+        },
+        "outputs/temporal_v6_pilot/run_manifest.json": {
+          "path": "outputs/temporal_v6_pilot/run_manifest.json",
+          "sha256": "991d95aeb7bff43e10d2999c0f8a9e6ba121816d51000a73525f91a2afb1ad2b",
+          "size": 76509
+        },
+        "outputs/temporal_v6_pilot/trajectory_split_manifest.json": {
+          "path": "outputs/temporal_v6_pilot/trajectory_split_manifest.json",
+          "sha256": "faa034061a645a99bf71e77b133380925ced5d738c92f50905eb5f423cbff0a9",
+          "size": 32455
+        },
+        "outputs/test_v3_aggregate/test_v3_dataset_manifest.json": {
+          "path": "outputs/test_v3_aggregate/test_v3_dataset_manifest.json",
+          "sha256": "d16a21fed8c22fc34f548d3c4d403cbc8e5aa3671d0cb3a05cace1e2375be09b",
+          "size": 23635
+        }
+      }
+    },
+    "all_isolation_checks_pass": true,
+    "development_identity_files_opened": 6,
+    "formal_identity_files_opened": 5,
+    "formal_performance_consumed": false,
+    "fresh_frame_count": 12000,
+    "fresh_pool_seed": 864902,
+    "fresh_trajectory_count": 80,
+    "fresh_trajectory_seed_count": 80,
+    "internal_query_duplicate_count": 0,
+    "internal_trajectory_id_duplicate_count": 0,
+    "internal_trajectory_seed_duplicate_count": 0,
+    "internal_trajectory_uid_duplicate_count": 0,
+    "method_outcomes_used_for_generation_or_identity": false,
+    "performance_arrays_read": 0,
+    "performance_files_opened": 0,
+    "prior_overlap_counts": {
+      "formal_query_hash": 0,
+      "runtime_query_hash": 0,
+      "seed": 0,
+      "trajectory_id": 0,
+      "trajectory_uid": 0
+    },
+    "protocol": "fresh_transition_v4_final_evaluation_v1",
+    "query_hash_contracts": [
+      "confik_source_query_runtime_inputs_v1",
+      "test_v3_v4_exact_query_bytes_v1"
+    ],
+    "robot": "ur5e",
+    "source_class_counts": {
+      "development": 6,
+      "formal_evaluation": 5
+    },
+    "source_count": 11,
+    "sources": [
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/temporal_v6_pilot/ur5e_trajectory_calibration.npz",
+          "sha256": "03cfe42ed2f09b963fff6aa67fdb046a1041a81a6ffda1360660ec0c71950c31",
+          "size": 1098272
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "88f4ec7842640f1f86aeed3cc4c9f5caf30a5044f2f0aad7025b4f855689a867",
+        "formal_query_overlap_count": 0,
+        "name": "temporal_v6_pilot/ur5e/calibration",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "40df1fe6accff0ec5904fd8238116ca06a932857a647c30d431fde3e467037cc",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "83b258a032cf66a57b614e0abdcf306fc327f1f44a547809c13995779fae998b",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/temporal_v6_pilot/ur5e_trajectory_policy_validation.npz",
+          "sha256": "394fd5f3b546e0d7d47ddce2dc5def6e73836daed0db6b78efbf12358a96d522",
+          "size": 1100673
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "f51a2826bd45f55aad4ca272ad8a1a536f2f56869888bfcbdfd2e61cb4065d2e",
+        "formal_query_overlap_count": 0,
+        "name": "temporal_v6_pilot/ur5e/policy_validation",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "0af09646d4da875c224ba34dcf0c942eb7a82c3537bbbafe2869018cd8e5922a",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "17fb7938c6e470f65a260b69100d064e6f5044e8405f9b8335ea7afc4897db28",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "source_query_hash",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/temporal_event_v6_pilot/ur5e_trajectory_calibration.npz",
+          "sha256": "7a36c8bbdf24be5e4ce856506d9ca10019eafaf0d73eda6f01ffcf5bc3038a6b",
+          "size": 1388450
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "51dee2847fc8cd5d21c7bdce196c8d24f09c9e491a5e14416df6937687a09c65",
+        "formal_query_overlap_count": 0,
+        "name": "temporal_event_v6_pilot/ur5e/calibration",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "71470dd30d505f30451190bfcddcc8ccf09dc0d166c635823fadcdd8a8af4345",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "c1f22fc495d8a1b17cfee0139315e4ddcab1f46ac4c0dbc89c85ae25ffee4c9a",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "source_query_hash",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/temporal_event_v6_pilot/ur5e_trajectory_policy_validation.npz",
+          "sha256": "fc1aa4ed10653c856c17687213f2c8cfc7a5857da3c743355cb1f0545a1edb54",
+          "size": 1388865
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "1c9be126ac63edb36491bb22cf2c988391455428b8e0ac93dc05ab83f758a5b8",
+        "formal_query_overlap_count": 0,
+        "name": "temporal_event_v6_pilot/ur5e/policy_validation",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "f52e991248da105481f998243b55d6844cf159f0c5745875a03e1805e7fcd756",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "5a741de47b9adae9a252f33aa827b3d2aab8adbd0c4a7debf5b1b19f088e79e4",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "source_query_hash",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/anchored_temporal_v7_pilot/ur5e_trajectory_calibration.npz",
+          "sha256": "25b3e6a085acafc9b8ce1c0002bde6fa94c2425f15933d21e5316df883df0f65",
+          "size": 1168048
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "d69475cc05a813c502d4179a8d26cf70cd0e0e05ab6fe88bc381623de76be2eb",
+        "formal_query_overlap_count": 0,
+        "name": "anchored_temporal_v7_pilot/ur5e/calibration",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "86695d2e358eb2381fa1c766c94a11b563fd19b01f6474287bd5aae6b11f51ec",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "5f192dca3c236ba7775621ac9a6efb5d007b4e9418e9cac9b15f608e55409c83",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index",
+          "source_query_hash",
+          "trajectory_uid",
+          "trajectory_order"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/anchored_temporal_v7_pilot/ur5e_trajectory_policy_validation.npz",
+          "sha256": "b6349f33f5813a026d975e2e5ccfe1b9c50e015ce8bd6f0481e190e54622f6b9",
+          "size": 1169974
+        },
+        "declared_seed_count": 2,
+        "formal_query_hash_set_digest": "dd2a565dbdbc573a9ae48fc87e85a05c116402f4abb7b4cc3bed9cac496c63da",
+        "formal_query_overlap_count": 0,
+        "name": "anchored_temporal_v7_pilot/ur5e/policy_validation",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "e97cca7c11eb45e3a13fdd0331ba3d075d17bf7e1865583cde6f2554216fdee0",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "development",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "6d5b3949e088a010db89a12ea03fec00d4aef43267d3870f0719f35dee958d5c",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/test_v3_aggregate/datasets/ur5e_test_v3_queries.npz",
+          "sha256": "2bff53886381f638136e1b3810776baf601a29aed03c8cdf399a4c527e33fbbd",
+          "size": 3266796
+        },
+        "declared_seed_count": 4,
+        "formal_query_hash_set_digest": "bdd5cdc9e57854104969e214e3a54c5b26e5f47cbda60598432fcab57f2ce402",
+        "formal_query_overlap_count": 0,
+        "name": "test_v3/ur5e/all_queries_identity_only",
+        "performance_arrays_read": false,
+        "query_count": 18000,
+        "runtime_query_hash_set_digest": "cf0818abd97ff7205fad5bac5a14451cf29271300cc0e9981f2afab8d8d8db38",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "formal_evaluation",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "9abf8844c4c5e72106a7207184ffdf9a1c6310b3f874d0da83bce5f542025ab4",
+        "unique_formal_query_hash_count": 18000,
+        "unique_runtime_query_hash_count": 18000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/.test_v4_aggregate.incomplete/datasets/ur5e_id_points.npz",
+          "sha256": "be5485801c2f02758edfdbf8341b2a40c70b9aa122ee4effbb36b11de9d6d08b",
+          "size": 2183591
+        },
+        "declared_seed_count": 4,
+        "formal_query_hash_set_digest": "27d9b871163c313cb8eae2b1637527fb42f8dda2171a06742d752d419be5056e",
+        "formal_query_overlap_count": 0,
+        "name": "test_v4/ur5e/id_points_identity_only",
+        "performance_arrays_read": false,
+        "query_count": 12000,
+        "runtime_query_hash_set_digest": "5ec541865fe81410b891560fd9f37c6a01e0ffacb78e605e7f50d81d745d8a20",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "formal_evaluation",
+        "trajectory_id_count": 0,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 0,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "6971188c613b8843812be80cefbeaf14e77a3aa49e4cef262318e0fc0c4a0beb",
+        "unique_formal_query_hash_count": 12000,
+        "unique_runtime_query_hash_count": 12000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/.test_v4_aggregate.incomplete/datasets/ur5e_id_trajectories.npz",
+          "sha256": "d116617b5a9a3f9e2d51af43c8a58b1c6479679566d7bd5ead2afb8041b3f5a1",
+          "size": 1085473
+        },
+        "declared_seed_count": 1,
+        "formal_query_hash_set_digest": "d71261c906fa15ae88745fdaa17376ceb2165f3ae2aa706c40a1c88d10b47052",
+        "formal_query_overlap_count": 0,
+        "name": "test_v4/ur5e/id_trajectories_identity_only",
+        "performance_arrays_read": false,
+        "query_count": 6000,
+        "runtime_query_hash_set_digest": "f34e3273ac05305f57df7db86ba441dd46796428d6b3f80bc8448ba58bc76ff0",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "formal_evaluation",
+        "trajectory_id_count": 40,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 40,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "210a691a06cbadd64d3f52388fc8be6e7f86b045b8e1dca099a730094bf23205",
+        "unique_formal_query_hash_count": 6000,
+        "unique_runtime_query_hash_count": 6000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/.test_v4_aggregate.incomplete/datasets/ur5e_ood_points.npz",
+          "sha256": "2f12a85d52b521992542f950676dad3dbd29f1934ae784f3843fa287200a2e58",
+          "size": 746083
+        },
+        "declared_seed_count": 1,
+        "formal_query_hash_set_digest": "b850d791545fa35adee87c7a58e55afa35c909b66dc1b3ca81649d83d88e283a",
+        "formal_query_overlap_count": 0,
+        "name": "test_v4/ur5e/ood_points_identity_only",
+        "performance_arrays_read": false,
+        "query_count": 4000,
+        "runtime_query_hash_set_digest": "9f3eaf320674c11c0472bf6f3b6cf172e0170c84d3df3c3fe7ed5af9f90c7611",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "formal_evaluation",
+        "trajectory_id_count": 0,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 0,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "6971188c613b8843812be80cefbeaf14e77a3aa49e4cef262318e0fc0c4a0beb",
+        "unique_formal_query_hash_count": 4000,
+        "unique_runtime_query_hash_count": 4000
+      },
+      {
+        "arrays_read": [
+          "previous_q",
+          "target_position",
+          "target_rotation",
+          "category",
+          "trajectory_id",
+          "time_index"
+        ],
+        "artifact": {
+          "path": "/home/eric/wjg/btry/outputs/.test_v4_aggregate.incomplete/datasets/ur5e_ood_trajectories.npz",
+          "sha256": "322d2a5316fccca7d0a518d49148ae826da7971b6f69d96d9870715ce6d524c5",
+          "size": 555262
+        },
+        "declared_seed_count": 1,
+        "formal_query_hash_set_digest": "fa4b41ddec2161ccec90b8b49ff75cb94072548137f1bba0ae3f3dc1e99ef892",
+        "formal_query_overlap_count": 0,
+        "name": "test_v4/ur5e/ood_trajectories_identity_only",
+        "performance_arrays_read": false,
+        "query_count": 3000,
+        "runtime_query_hash_set_digest": "303f18e7f77b0c8b1f18333d057ad0f2ccedc6457a7390b75197b7b384ffae76",
+        "runtime_query_overlap_count": 0,
+        "seed_overlap_count": 0,
+        "source_class": "formal_evaluation",
+        "trajectory_id_count": 20,
+        "trajectory_id_overlap_count": 0,
+        "trajectory_uid_count": 20,
+        "trajectory_uid_overlap_count": 0,
+        "trajectory_uid_set_digest": "c7d7e8c489851030eeafa864878e967b28b29be0c203c459da65a549aff9f54c",
+        "unique_formal_query_hash_count": 3000,
+        "unique_runtime_query_hash_count": 3000
+      }
+    ],
+    "status": "pass",
+    "trajectory_uid_schema": "confik_ordered_runtime_trajectory_content_v1"
+  },
+  "generator_outcome_blind": true,
+  "identity_frozen_before_any_solver_call": true,
+  "identity_manifest_schema": "fresh_transition_v4_identity_manifest_v1",
+  "kinematics_identity": "e806cecaa2b9c56de58d74177ec6479351bc359f4ef779c7368e09a64116cb12",
+  "learned_model_calls_before_identity_freeze": 0,
+  "manifest_sha256": "ac9b98e0093e9de8d301ffd2740e3da5988b82e93be6161763df13bde49bb8bb",
+  "method_outcomes_used_for_identity": false,
+  "performance_files_opened": 0,
+  "pool_seed": 864902,
+  "protocol": "fresh_transition_v4_final_evaluation_v1",
+  "query_identity": {
+    "formal_query_set_digest": "3988829333230e95915812a88efac0a64ce01002d73bc61cc53dac939254ef19",
+    "formal_schema": "test_v3_v4_exact_query_bytes_v1",
+    "ordered_formal_query_digest": "cf51e0f5310ec3a319659eed320f73697f02384282ddd2807e0b582d04b3c5c1",
+    "ordered_runtime_query_digest": "839f2e2d6138a97a26c9370a5efe1475ccfa7d883fbcad31f3e5515f307d6400",
+    "runtime_query_set_digest": "284b41e0174f1a9a361627d6f0cf480aedfaaa5581d002650d5baab55b7837d7",
+    "runtime_schema": "confik_source_query_runtime_inputs_v1",
+    "unique_formal_query_count": 12000,
+    "unique_runtime_query_count": 12000
+  },
+  "robot": "ur5e",
+  "role": "fresh_transition_evaluation",
+  "seed_identity": {
+    "ordered_trajectory_seed_digest": "bd023cce6886cbc29fcf5be12d5a0b28e5289979956973f556e9f8b89894f6cf",
+    "pool_seed": 864902,
+    "trajectory_seed_derivation": "numpy.SeedSequence([pool_seed,family_index,path_index])",
+    "unique_trajectory_seed_count": 80
+  },
+  "solver_calls_before_identity_freeze": 0,
+  "steps_per_trajectory": 150,
+  "trajectory_count": 80,
+  "trajectory_identity": {
+    "ordered_numeric_trajectory_id_digest": "128f0a026f731e7382538330fc8547b9c312dcc24493ac158cff4ca86bf9fb82",
+    "ordered_trajectory_uid_digest": "cbcf781cfca53139ef92157d4f6665eeca843c90cee4c4150bb80f433053ea22",
+    "schema": "confik_ordered_runtime_trajectory_content_v1",
+    "trajectories": [
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 0,
+        "frame_count": 150,
+        "trajectory_id": 400002000,
+        "trajectory_seed": 1466907511,
+        "trajectory_uid": "4735b9e48578451118e02275966433fd4ed742a768f5b534f2553238e88c8304"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 150,
+        "frame_count": 150,
+        "trajectory_id": 400001019,
+        "trajectory_seed": 77176380,
+        "trajectory_uid": "1680c0912644e6983447d1e7c9329fa412b9d59015f8cb196292ff5de06250b1"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 300,
+        "frame_count": 150,
+        "trajectory_id": 400003013,
+        "trajectory_seed": 770592136,
+        "trajectory_uid": "80bd9376b8e890912400625da507acf137bcaed5cdc5d93464e7f1ba63f0f4a8"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 450,
+        "frame_count": 150,
+        "trajectory_id": 400000004,
+        "trajectory_seed": 1356421988,
+        "trajectory_uid": "59168e3022749dd200714da9ab2578665af973fb6b9ff931eba28f2c63ddcf3a"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 600,
+        "frame_count": 150,
+        "trajectory_id": 400002001,
+        "trajectory_seed": 2880795648,
+        "trajectory_uid": "202d27311ea262a96a99c19ad25fd961409afbcf37b95a4b2dbf4c950c827ec5"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 750,
+        "frame_count": 150,
+        "trajectory_id": 400001010,
+        "trajectory_seed": 2227039680,
+        "trajectory_uid": "9ee54ffd84d8a6d69b5b893a25efb1c19cfca328ee258c81cb2b0c94545a5477"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 900,
+        "frame_count": 150,
+        "trajectory_id": 400003002,
+        "trajectory_seed": 1061433295,
+        "trajectory_uid": "299b451413d8bf44542383d290fd22cc29ca92f3ff722c00d571cde43f16ff44"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 1050,
+        "frame_count": 150,
+        "trajectory_id": 400000014,
+        "trajectory_seed": 2470336026,
+        "trajectory_uid": "a8495fb5060487b33a9ebd5a0a5b585619f932c74bdcdb6b18c43d622b3aae3e"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 1200,
+        "frame_count": 150,
+        "trajectory_id": 400003003,
+        "trajectory_seed": 1088007349,
+        "trajectory_uid": "adabae5b3787848732f9108cb29888be418a39d3871262792aedd6e0f46defa4"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 1350,
+        "frame_count": 150,
+        "trajectory_id": 400002005,
+        "trajectory_seed": 3962456827,
+        "trajectory_uid": "f98c87588825e841029c15d085ab324b8fbe94c2025fc80e0b1823bf6ab41ed5"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 1500,
+        "frame_count": 150,
+        "trajectory_id": 400001003,
+        "trajectory_seed": 1246014630,
+        "trajectory_uid": "c89e355ec024246504f3e9b58624d040e0201ded546efe58f55be14d242a4164"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 1650,
+        "frame_count": 150,
+        "trajectory_id": 400000015,
+        "trajectory_seed": 2800253207,
+        "trajectory_uid": "fe3884fb18f22f6d4d02c61e96563f21a9c2c310b63a07cb0b998befc2a511e9"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 1800,
+        "frame_count": 150,
+        "trajectory_id": 400000001,
+        "trajectory_seed": 4005951090,
+        "trajectory_uid": "3a0480f4ebc37fc123f33f81b2dcf2660486b594f32ebbd1a0d5c61c9e3d5e5d"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 1950,
+        "frame_count": 150,
+        "trajectory_id": 400001007,
+        "trajectory_seed": 619419575,
+        "trajectory_uid": "46c0f997f7d265b02b151f645b22b1d4bb9c90454e68e6b2226cf73c6846a3a4"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 2100,
+        "frame_count": 150,
+        "trajectory_id": 400002011,
+        "trajectory_seed": 4018254854,
+        "trajectory_uid": "6cce649b82c22b6d836d743e5467c14d687744667840d59a1713bc2934984a64"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 2250,
+        "frame_count": 150,
+        "trajectory_id": 400003017,
+        "trajectory_seed": 1695899343,
+        "trajectory_uid": "e4f87d0794b9897d898e835427cd75e0c6f013639a8634b56596347ad5cd0323"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 2400,
+        "frame_count": 150,
+        "trajectory_id": 400001011,
+        "trajectory_seed": 2741279706,
+        "trajectory_uid": "9d225e763554cc32d32bbe0f458a673bbc4811d61f22a6322a90da90f6bfb567"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 2550,
+        "frame_count": 150,
+        "trajectory_id": 400003000,
+        "trajectory_seed": 1203109703,
+        "trajectory_uid": "cd6cb5473101ecbd93f3aea1ed475481b95ff5088e0acffa9786aa3aadcf29af"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 2700,
+        "frame_count": 150,
+        "trajectory_id": 400002013,
+        "trajectory_seed": 2211314683,
+        "trajectory_uid": "039d87a70b6dc881334f3fcd9dfb26af260934d83fc7cf7022503c04236c4db5"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 2850,
+        "frame_count": 150,
+        "trajectory_id": 400000017,
+        "trajectory_seed": 3360800268,
+        "trajectory_uid": "f730ffb14aa2c732f2b6eacc021c692391a598567d331e305e59a605394ff610"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 3000,
+        "frame_count": 150,
+        "trajectory_id": 400002019,
+        "trajectory_seed": 1319873269,
+        "trajectory_uid": "28d1afc1c13cc583e58f711c3719e48e374737124eca153693dd4286fef7573b"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 3150,
+        "frame_count": 150,
+        "trajectory_id": 400003006,
+        "trajectory_seed": 4066314955,
+        "trajectory_uid": "5ac583374c826fab4a66457b9da32e61f9fec487bd09d118e7eae987ddb0e574"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 3300,
+        "frame_count": 150,
+        "trajectory_id": 400000000,
+        "trajectory_seed": 3833624166,
+        "trajectory_uid": "046ef01cbbb0022a57af7137a085eefb092db04461f4f319effa7b41bc5ead72"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 3450,
+        "frame_count": 150,
+        "trajectory_id": 400001016,
+        "trajectory_seed": 2597730247,
+        "trajectory_uid": "6512ac6afa36689cb154146107fa944767d5e426b1429c805c8cf5daa953955c"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 3600,
+        "frame_count": 150,
+        "trajectory_id": 400002008,
+        "trajectory_seed": 3595668669,
+        "trajectory_uid": "16c2a29e7d791412671e69732304b38a53c952d512f314ea4c93f293c8cf8e54"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 3750,
+        "frame_count": 150,
+        "trajectory_id": 400001001,
+        "trajectory_seed": 1594650399,
+        "trajectory_uid": "a484bb870afc836dc1d10ccdb18a12b96944a63f165590234fe99ba027887e86"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 3900,
+        "frame_count": 150,
+        "trajectory_id": 400000019,
+        "trajectory_seed": 1430747149,
+        "trajectory_uid": "5f85cfbabddfcb218d5c2bf7d00f1f9515a0c106cd10030488bdc66099835804"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 4050,
+        "frame_count": 150,
+        "trajectory_id": 400003005,
+        "trajectory_seed": 163666362,
+        "trajectory_uid": "879ba0b2277e2b970b802c78fcf48787f7c2f4250eb0f99945c7c27b69ea0839"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 4200,
+        "frame_count": 150,
+        "trajectory_id": 400003019,
+        "trajectory_seed": 1791188184,
+        "trajectory_uid": "9068e1b70752fbf5a8afda1f93fbb4b136ddf5c1257822f6c3c47327f5aa8f74"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 4350,
+        "frame_count": 150,
+        "trajectory_id": 400001015,
+        "trajectory_seed": 2817658262,
+        "trajectory_uid": "a352e00ecf1b844d28afa427101fed12a2a09cec7517cb5dc33b536112f39c6c"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 4500,
+        "frame_count": 150,
+        "trajectory_id": 400002012,
+        "trajectory_seed": 2912811952,
+        "trajectory_uid": "52de92845180bf114a0a0512172d590ac6c38cd894a6cf74cb01fad3237b03cd"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 4650,
+        "frame_count": 150,
+        "trajectory_id": 400000009,
+        "trajectory_seed": 2488370920,
+        "trajectory_uid": "768bdd75688a70fd89a94003c2f51a5b3d4081840ce2130c47b56505d24415ec"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 4800,
+        "frame_count": 150,
+        "trajectory_id": 400003001,
+        "trajectory_seed": 3078279827,
+        "trajectory_uid": "c96006cedeec918cca00adfe16bf671e5adc009a56b27b6292330dcd573b73c9"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 4950,
+        "frame_count": 150,
+        "trajectory_id": 400001002,
+        "trajectory_seed": 588205237,
+        "trajectory_uid": "5dcba759c2a0263eeb3c32656e2bae5e5d3f2134a303d5bd22c640ff6fa8272d"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 5100,
+        "frame_count": 150,
+        "trajectory_id": 400000007,
+        "trajectory_seed": 1921863697,
+        "trajectory_uid": "c9dc77fd6f2bf582193ec1ecf753a6798db7cf3f8cef6c8689fa7a68baa6f1cb"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 5250,
+        "frame_count": 150,
+        "trajectory_id": 400002002,
+        "trajectory_seed": 1935139697,
+        "trajectory_uid": "f232721ba6a7e2e4c39b180e0484837e1c2e99c33fb35fe525551957b10f6d66"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 5400,
+        "frame_count": 150,
+        "trajectory_id": 400000008,
+        "trajectory_seed": 1271146053,
+        "trajectory_uid": "0a9df274294828aa77848b30468e0a925bce1f598523691f8366c12acb5e003b"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 5550,
+        "frame_count": 150,
+        "trajectory_id": 400003015,
+        "trajectory_seed": 1834042382,
+        "trajectory_uid": "79b391153cc30af8f6e3e1455abbe1bf7880ed734a23a1b3f378b5160f27f24d"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 5700,
+        "frame_count": 150,
+        "trajectory_id": 400002003,
+        "trajectory_seed": 2593859154,
+        "trajectory_uid": "4f700550dd4403298934e9f6496ac055d84d85180feed094dc5248601a771bb3"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 5850,
+        "frame_count": 150,
+        "trajectory_id": 400001005,
+        "trajectory_seed": 1949857912,
+        "trajectory_uid": "6b866a5fc8f6efa16bdba45de13355947916fb83775904aee2ed6bf27e29fa43"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 6000,
+        "frame_count": 150,
+        "trajectory_id": 400002014,
+        "trajectory_seed": 1979860685,
+        "trajectory_uid": "8ffc12366aedaa342f4b11b08d7aa7ce5936f7be17a588fc2b07e8b6cd33ac3d"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 6150,
+        "frame_count": 150,
+        "trajectory_id": 400000002,
+        "trajectory_seed": 2538318822,
+        "trajectory_uid": "f00d200d7749fba6855c6a492cd837fa67e7537a426a71b260fa29e266d6b28b"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 6300,
+        "frame_count": 150,
+        "trajectory_id": 400001018,
+        "trajectory_seed": 3537047331,
+        "trajectory_uid": "35b6a97812699e0b4708daaf020375484ac96e499e840719ae20d8f0ca5e44f5"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 6450,
+        "frame_count": 150,
+        "trajectory_id": 400003009,
+        "trajectory_seed": 2465400135,
+        "trajectory_uid": "084d06a698822e01ba90f1e1e305f67b4bd08812f1d32e08d996f0f28397da90"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 6600,
+        "frame_count": 150,
+        "trajectory_id": 400002017,
+        "trajectory_seed": 1772323831,
+        "trajectory_uid": "cee645a0a4a215584a59ee885d8873781997a38427e435b22eda58aec2bf25e9"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 6750,
+        "frame_count": 150,
+        "trajectory_id": 400001006,
+        "trajectory_seed": 93455249,
+        "trajectory_uid": "6a1a518b8c630eb7bd290efc9ba86fc089548eba706a4008e9b868271d7d6c39"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 6900,
+        "frame_count": 150,
+        "trajectory_id": 400003016,
+        "trajectory_seed": 3827128903,
+        "trajectory_uid": "4247584df6d0e0c996db60f92870e879732d4a11b13461e45220bb2e05dc8548"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 7050,
+        "frame_count": 150,
+        "trajectory_id": 400000006,
+        "trajectory_seed": 1994329348,
+        "trajectory_uid": "c52f114d08467cce63f991eb7f8a2e3bc2c44d4e7b1e963a1d25a25b30fd78dc"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 7200,
+        "frame_count": 150,
+        "trajectory_id": 400000016,
+        "trajectory_seed": 880810741,
+        "trajectory_uid": "d49450714afd6709adca43bb8ca365d4f12acd2ea8d97bf48df10117fc1006be"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 7350,
+        "frame_count": 150,
+        "trajectory_id": 400003010,
+        "trajectory_seed": 1317919966,
+        "trajectory_uid": "68ae06895fe52e90976197187fc2fd52da226617b98e079ad62f78cc1edc0202"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 7500,
+        "frame_count": 150,
+        "trajectory_id": 400001017,
+        "trajectory_seed": 2906922767,
+        "trajectory_uid": "d43e7b647f56e0278ce4aff3bf73c9668a7622a8bb0ee26178e10befa78eccc9"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 7650,
+        "frame_count": 150,
+        "trajectory_id": 400002010,
+        "trajectory_seed": 2041636635,
+        "trajectory_uid": "0ca6e572665cb8593ea2170713e5ee983df5c1c5477f017f86624c68985a0d6c"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 7800,
+        "frame_count": 150,
+        "trajectory_id": 400002004,
+        "trajectory_seed": 3961047701,
+        "trajectory_uid": "caa64ed7fcf97cb1e55e5ecef1d59c66eb55f034e39114896ccba3e2ecf362b7"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 7950,
+        "frame_count": 150,
+        "trajectory_id": 400001009,
+        "trajectory_seed": 3197539717,
+        "trajectory_uid": "74788b52a44dca9b02cdf6aa87a1a9d3789e2de135f77c806188da51cda21697"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 8100,
+        "frame_count": 150,
+        "trajectory_id": 400000018,
+        "trajectory_seed": 4082378263,
+        "trajectory_uid": "50fc1a368fab63a318400837a1b2dfcee22478e5a2a6600d80105f68c4c547e7"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 8250,
+        "frame_count": 150,
+        "trajectory_id": 400003011,
+        "trajectory_seed": 2542445586,
+        "trajectory_uid": "afd88dfc0d57b0a2f765c513e2ca74fdc7bed59ba6fde385e9f2848038e4f27e"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 8400,
+        "frame_count": 150,
+        "trajectory_id": 400002016,
+        "trajectory_seed": 3227223010,
+        "trajectory_uid": "a8a64744824b494c97965e7b66e193e361831e8bef0daaa52d4644b1e57048df"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 8550,
+        "frame_count": 150,
+        "trajectory_id": 400001014,
+        "trajectory_seed": 3933125005,
+        "trajectory_uid": "6b22a02c58de73874deee88c6161e6866e1d47592d3379ab472125153c4f5bcb"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 8700,
+        "frame_count": 150,
+        "trajectory_id": 400000003,
+        "trajectory_seed": 392891960,
+        "trajectory_uid": "061041aa50bcf09cff5af066d3469fb319d51c5fb36c81e3788db9199ada9d8c"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 8850,
+        "frame_count": 150,
+        "trajectory_id": 400003014,
+        "trajectory_seed": 4038302951,
+        "trajectory_uid": "0c201c6db8c55a3ddd529fb0279c71144ffd2b77d19491c24f94e9331067d040"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 9000,
+        "frame_count": 150,
+        "trajectory_id": 400002009,
+        "trajectory_seed": 729401908,
+        "trajectory_uid": "e56a8ac9e866f9e375b5c4f6ecc3ef72218b0febfe1df0fa72171083f8229011"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 9150,
+        "frame_count": 150,
+        "trajectory_id": 400000012,
+        "trajectory_seed": 169868097,
+        "trajectory_uid": "5eaf7a672088294f21a453e93a48060309ab2201594c6a0ed33d6e9be356ec03"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 9300,
+        "frame_count": 150,
+        "trajectory_id": 400001012,
+        "trajectory_seed": 3447510474,
+        "trajectory_uid": "272ff8ef3713d478a884f5e72d1b8aa39a4436ec8eba09cf7e827e8ebcb1e5b0"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 9450,
+        "frame_count": 150,
+        "trajectory_id": 400003008,
+        "trajectory_seed": 1502039160,
+        "trajectory_uid": "f37a2e26c2ac9409e01f5502b20d42d05763af5bc8dd44406bd3e9be8d6df7a6"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 9600,
+        "frame_count": 150,
+        "trajectory_id": 400002006,
+        "trajectory_seed": 2012437051,
+        "trajectory_uid": "dc0c735bde5af1da732cb69f0e805c9fcb8a031050087280e2bc13c69171c6b4"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 9750,
+        "frame_count": 150,
+        "trajectory_id": 400003018,
+        "trajectory_seed": 368905312,
+        "trajectory_uid": "6880b24cef3062086dcb83df8c25106787f483d19484563bc4be11ac7620d10e"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 9900,
+        "frame_count": 150,
+        "trajectory_id": 400001004,
+        "trajectory_seed": 1517409004,
+        "trajectory_uid": "d5d33c7e3028c4f8f01a9f472ad1a2aab0d33af47cb1eddff00205c75485a964"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 10050,
+        "frame_count": 150,
+        "trajectory_id": 400000013,
+        "trajectory_seed": 4113085412,
+        "trajectory_uid": "638df0c1dbb016854097e9950e46226e2a924cb4175b93880861d706355996ba"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 10200,
+        "frame_count": 150,
+        "trajectory_id": 400003007,
+        "trajectory_seed": 2051357287,
+        "trajectory_uid": "0efa5a2d6bbe095fe14cb386c39efd3cd928b60a82c740e97dec53cdd7cee469"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 10350,
+        "frame_count": 150,
+        "trajectory_id": 400000005,
+        "trajectory_seed": 4098143128,
+        "trajectory_uid": "f4ac7f948681efd3f6ad23df6a11dfae0fc63bba6936b7b846e9bea935aad56e"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 10500,
+        "frame_count": 150,
+        "trajectory_id": 400002015,
+        "trajectory_seed": 2907395610,
+        "trajectory_uid": "77d2887129967833fd8046684496215fa05c0258021bf4129f0edd2418467d81"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 10650,
+        "frame_count": 150,
+        "trajectory_id": 400001013,
+        "trajectory_seed": 468034699,
+        "trajectory_uid": "8dc6b3ae30ad4a26990f3cd836b70947d179d010ca210f5a1223a28717c2cd92"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 10800,
+        "frame_count": 150,
+        "trajectory_id": 400002018,
+        "trajectory_seed": 2932513862,
+        "trajectory_uid": "f6122466a05431d8d0dd5fb1ad6e9d398fa21c23f574058cf824be50b6203c4b"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 10950,
+        "frame_count": 150,
+        "trajectory_id": 400001008,
+        "trajectory_seed": 803846632,
+        "trajectory_uid": "483791bbbe7d9807310405bb731e8c301819ac633da1a3f5245ad46277dec817"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 11100,
+        "frame_count": 150,
+        "trajectory_id": 400000011,
+        "trajectory_seed": 382569444,
+        "trajectory_uid": "5fe99517e71abc3af2d61d53c59ab8bd777ec5c2f7ef1dc81b0f5cc715ec05c4"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 11250,
+        "frame_count": 150,
+        "trajectory_id": 400003004,
+        "trajectory_seed": 3156846271,
+        "trajectory_uid": "aba20e7f0bda848f8262fcd5b41898771bda36f85cf206e4cfe610b599ced2ba"
+      },
+      {
+        "family": "central_joint_limit_skim_return",
+        "first_frame_index": 11400,
+        "frame_count": 150,
+        "trajectory_id": 400002007,
+        "trajectory_seed": 1780900469,
+        "trajectory_uid": "f00cb8c26e9b6f77e03ca905f571931397e0abc3fc70436e37428f903d50fe89"
+      },
+      {
+        "family": "regular_near_singular_regular",
+        "first_frame_index": 11550,
+        "frame_count": 150,
+        "trajectory_id": 400001000,
+        "trajectory_seed": 4076296430,
+        "trajectory_uid": "d194587ba85126c652a5c24b1d41b5f25e00927c9bd9e8fdfb542e5e9cc97fa2"
+      },
+      {
+        "family": "slow_high_curvature_high_speed_slow",
+        "first_frame_index": 11700,
+        "frame_count": 150,
+        "trajectory_id": 400003012,
+        "trajectory_seed": 938901150,
+        "trajectory_uid": "e1dcd88e9fd0ea8be6e55a42edfb573868c288d608803ae44030ac1096119560"
+      },
+      {
+        "family": "smooth_fast_orientation_smooth",
+        "first_frame_index": 11850,
+        "frame_count": 150,
+        "trajectory_id": 400000010,
+        "trajectory_seed": 2867965273,
+        "trajectory_uid": "2f103e9e3bdd28f0ac9e41247ec05a0cc8b96404c386eafbcb5fdd1abc83f9d9"
+      }
+    ],
+    "trajectory_order": [
+      "4735b9e48578451118e02275966433fd4ed742a768f5b534f2553238e88c8304",
+      "1680c0912644e6983447d1e7c9329fa412b9d59015f8cb196292ff5de06250b1",
+      "80bd9376b8e890912400625da507acf137bcaed5cdc5d93464e7f1ba63f0f4a8",
+      "59168e3022749dd200714da9ab2578665af973fb6b9ff931eba28f2c63ddcf3a",
+      "202d27311ea262a96a99c19ad25fd961409afbcf37b95a4b2dbf4c950c827ec5",
+      "9ee54ffd84d8a6d69b5b893a25efb1c19cfca328ee258c81cb2b0c94545a5477",
+      "299b451413d8bf44542383d290fd22cc29ca92f3ff722c00d571cde43f16ff44",
+      "a8495fb5060487b33a9ebd5a0a5b585619f932c74bdcdb6b18c43d622b3aae3e",
+      "adabae5b3787848732f9108cb29888be418a39d3871262792aedd6e0f46defa4",
+      "f98c87588825e841029c15d085ab324b8fbe94c2025fc80e0b1823bf6ab41ed5",
+      "c89e355ec024246504f3e9b58624d040e0201ded546efe58f55be14d242a4164",
+      "fe3884fb18f22f6d4d02c61e96563f21a9c2c310b63a07cb0b998befc2a511e9",
+      "3a0480f4ebc37fc123f33f81b2dcf2660486b594f32ebbd1a0d5c61c9e3d5e5d",
+      "46c0f997f7d265b02b151f645b22b1d4bb9c90454e68e6b2226cf73c6846a3a4",
+      "6cce649b82c22b6d836d743e5467c14d687744667840d59a1713bc2934984a64",
+      "e4f87d0794b9897d898e835427cd75e0c6f013639a8634b56596347ad5cd0323",
+      "9d225e763554cc32d32bbe0f458a673bbc4811d61f22a6322a90da90f6bfb567",
+      "cd6cb5473101ecbd93f3aea1ed475481b95ff5088e0acffa9786aa3aadcf29af",
+      "039d87a70b6dc881334f3fcd9dfb26af260934d83fc7cf7022503c04236c4db5",
+      "f730ffb14aa2c732f2b6eacc021c692391a598567d331e305e59a605394ff610",
+      "28d1afc1c13cc583e58f711c3719e48e374737124eca153693dd4286fef7573b",
+      "5ac583374c826fab4a66457b9da32e61f9fec487bd09d118e7eae987ddb0e574",
+      "046ef01cbbb0022a57af7137a085eefb092db04461f4f319effa7b41bc5ead72",
+      "6512ac6afa36689cb154146107fa944767d5e426b1429c805c8cf5daa953955c",
+      "16c2a29e7d791412671e69732304b38a53c952d512f314ea4c93f293c8cf8e54",
+      "a484bb870afc836dc1d10ccdb18a12b96944a63f165590234fe99ba027887e86",
+      "5f85cfbabddfcb218d5c2bf7d00f1f9515a0c106cd10030488bdc66099835804",
+      "879ba0b2277e2b970b802c78fcf48787f7c2f4250eb0f99945c7c27b69ea0839",
+      "9068e1b70752fbf5a8afda1f93fbb4b136ddf5c1257822f6c3c47327f5aa8f74",
+      "a352e00ecf1b844d28afa427101fed12a2a09cec7517cb5dc33b536112f39c6c",
+      "52de92845180bf114a0a0512172d590ac6c38cd894a6cf74cb01fad3237b03cd",
+      "768bdd75688a70fd89a94003c2f51a5b3d4081840ce2130c47b56505d24415ec",
+      "c96006cedeec918cca00adfe16bf671e5adc009a56b27b6292330dcd573b73c9",
+      "5dcba759c2a0263eeb3c32656e2bae5e5d3f2134a303d5bd22c640ff6fa8272d",
+      "c9dc77fd6f2bf582193ec1ecf753a6798db7cf3f8cef6c8689fa7a68baa6f1cb",
+      "f232721ba6a7e2e4c39b180e0484837e1c2e99c33fb35fe525551957b10f6d66",
+      "0a9df274294828aa77848b30468e0a925bce1f598523691f8366c12acb5e003b",
+      "79b391153cc30af8f6e3e1455abbe1bf7880ed734a23a1b3f378b5160f27f24d",
+      "4f700550dd4403298934e9f6496ac055d84d85180feed094dc5248601a771bb3",
+      "6b866a5fc8f6efa16bdba45de13355947916fb83775904aee2ed6bf27e29fa43",
+      "8ffc12366aedaa342f4b11b08d7aa7ce5936f7be17a588fc2b07e8b6cd33ac3d",
+      "f00d200d7749fba6855c6a492cd837fa67e7537a426a71b260fa29e266d6b28b",
+      "35b6a97812699e0b4708daaf020375484ac96e499e840719ae20d8f0ca5e44f5",
+      "084d06a698822e01ba90f1e1e305f67b4bd08812f1d32e08d996f0f28397da90",
+      "cee645a0a4a215584a59ee885d8873781997a38427e435b22eda58aec2bf25e9",
+      "6a1a518b8c630eb7bd290efc9ba86fc089548eba706a4008e9b868271d7d6c39",
+      "4247584df6d0e0c996db60f92870e879732d4a11b13461e45220bb2e05dc8548",
+      "c52f114d08467cce63f991eb7f8a2e3bc2c44d4e7b1e963a1d25a25b30fd78dc",
+      "d49450714afd6709adca43bb8ca365d4f12acd2ea8d97bf48df10117fc1006be",
+      "68ae06895fe52e90976197187fc2fd52da226617b98e079ad62f78cc1edc0202",
+      "d43e7b647f56e0278ce4aff3bf73c9668a7622a8bb0ee26178e10befa78eccc9",
+      "0ca6e572665cb8593ea2170713e5ee983df5c1c5477f017f86624c68985a0d6c",
+      "caa64ed7fcf97cb1e55e5ecef1d59c66eb55f034e39114896ccba3e2ecf362b7",
+      "74788b52a44dca9b02cdf6aa87a1a9d3789e2de135f77c806188da51cda21697",
+      "50fc1a368fab63a318400837a1b2dfcee22478e5a2a6600d80105f68c4c547e7",
+      "afd88dfc0d57b0a2f765c513e2ca74fdc7bed59ba6fde385e9f2848038e4f27e",
+      "a8a64744824b494c97965e7b66e193e361831e8bef0daaa52d4644b1e57048df",
+      "6b22a02c58de73874deee88c6161e6866e1d47592d3379ab472125153c4f5bcb",
+      "061041aa50bcf09cff5af066d3469fb319d51c5fb36c81e3788db9199ada9d8c",
+      "0c201c6db8c55a3ddd529fb0279c71144ffd2b77d19491c24f94e9331067d040",
+      "e56a8ac9e866f9e375b5c4f6ecc3ef72218b0febfe1df0fa72171083f8229011",
+      "5eaf7a672088294f21a453e93a48060309ab2201594c6a0ed33d6e9be356ec03",
+      "272ff8ef3713d478a884f5e72d1b8aa39a4436ec8eba09cf7e827e8ebcb1e5b0",
+      "f37a2e26c2ac9409e01f5502b20d42d05763af5bc8dd44406bd3e9be8d6df7a6",
+      "dc0c735bde5af1da732cb69f0e805c9fcb8a031050087280e2bc13c69171c6b4",
+      "6880b24cef3062086dcb83df8c25106787f483d19484563bc4be11ac7620d10e",
+      "d5d33c7e3028c4f8f01a9f472ad1a2aab0d33af47cb1eddff00205c75485a964",
+      "638df0c1dbb016854097e9950e46226e2a924cb4175b93880861d706355996ba",
+      "0efa5a2d6bbe095fe14cb386c39efd3cd928b60a82c740e97dec53cdd7cee469",
+      "f4ac7f948681efd3f6ad23df6a11dfae0fc63bba6936b7b846e9bea935aad56e",
+      "77d2887129967833fd8046684496215fa05c0258021bf4129f0edd2418467d81",
+      "8dc6b3ae30ad4a26990f3cd836b70947d179d010ca210f5a1223a28717c2cd92",
+      "f6122466a05431d8d0dd5fb1ad6e9d398fa21c23f574058cf824be50b6203c4b",
+      "483791bbbe7d9807310405bb731e8c301819ac633da1a3f5245ad46277dec817",
+      "5fe99517e71abc3af2d61d53c59ab8bd777ec5c2f7ef1dc81b0f5cc715ec05c4",
+      "aba20e7f0bda848f8262fcd5b41898771bda36f85cf206e4cfe610b599ced2ba",
+      "f00cb8c26e9b6f77e03ca905f571931397e0abc3fc70436e37428f903d50fe89",
+      "d194587ba85126c652a5c24b1d41b5f25e00927c9bd9e8fdfb542e5e9cc97fa2",
+      "e1dcd88e9fd0ea8be6e55a42edfb573868c288d608803ae44030ac1096119560",
+      "2f103e9e3bdd28f0ac9e41247ec05a0cc8b96404c386eafbcb5fdd1abc83f9d9"
+    ],
+    "trajectory_uid_set_digest": "6a3eaf6b93f6b60cf4bad9a59bb96ffe5b0ffc8d812f3a26e19847636adb2753"
+  },
+  "verifier_calls_before_identity_freeze": 0
+}

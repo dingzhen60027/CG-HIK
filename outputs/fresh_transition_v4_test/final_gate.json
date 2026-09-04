@@ -1,0 +1,60 @@
+{
+  "all_robots_pass": true,
+  "method_frozen_before_results": true,
+  "next_stage_is_paper_regardless_of_gate": true,
+  "protocol": "fresh_transition_v4_final_gate_v1",
+  "results_used_for_tuning": false,
+  "robots": {
+    "panda": {
+      "accepted_contract_violation_counts_by_method": {
+        "always_hard": 0,
+        "counterfactual_cghik_v4": 0,
+        "fixed_robust_cascade": 0
+      },
+      "accepted_contract_violation_gate_scope": "all_three_methods",
+      "checks": {
+        "accepted_contract_violation_count_zero": true,
+        "aggregate_cumulative_latency_ratio_at_most_0_85": true,
+        "mean_fev_ratio_at_most_0_85": true,
+        "p95_latency_ratio_at_most_1_0": true,
+        "p99_latency_ratio_at_most_1_05": true,
+        "v4_completion_count_not_below_always_hard": true
+      },
+      "p50_is_report_only": true,
+      "pass": true,
+      "ratios_vs_always_hard": {
+        "aggregate_cumulative_latency": 0.5662878386373225,
+        "mean_fev": 0.5483595321595784,
+        "p50_latency": 1.1166492404691115,
+        "p95_latency": 0.8796447538387808,
+        "p99_latency": 1.000288825684584
+      }
+    },
+    "ur5e": {
+      "accepted_contract_violation_counts_by_method": {
+        "always_hard": 0,
+        "counterfactual_cghik_v4": 0,
+        "fixed_robust_cascade": 0
+      },
+      "accepted_contract_violation_gate_scope": "all_three_methods",
+      "checks": {
+        "accepted_contract_violation_count_zero": true,
+        "aggregate_cumulative_latency_ratio_at_most_0_85": true,
+        "mean_fev_ratio_at_most_0_85": true,
+        "p95_latency_ratio_at_most_1_0": true,
+        "p99_latency_ratio_at_most_1_05": true,
+        "v4_completion_count_not_below_always_hard": true
+      },
+      "p50_is_report_only": true,
+      "pass": true,
+      "ratios_vs_always_hard": {
+        "aggregate_cumulative_latency": 0.45045688329357797,
+        "mean_fev": 0.34877696820590465,
+        "p50_latency": 1.1109014933341548,
+        "p95_latency": 0.7806164170484811,
+        "p99_latency": 0.7690813830457
+      }
+    }
+  },
+  "status": "pass"
+}
