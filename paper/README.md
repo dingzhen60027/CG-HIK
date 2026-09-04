@@ -1,54 +1,68 @@
-# CG-HIK 论文包
+# CG-HIK paper package
 
-本目录保存 CG-HIK 的 LaTeX 稿件、图表数据和构建脚本。`Machines` 是当前候选期刊，正式投稿前仍需重新核验最新分区、栏目、版面费和模板。
+This directory contains the final evidence-backed manuscript:
 
-## 稿件状态
+> **CG-HIK: Query-Adaptive Tail-Latency Routing for Kinematically Verified Online
+> Inverse Kinematics**
 
-`main.tex` 和 `main.pdf` 是正式 test_v3/test_v4 之前形成的结构草稿，数值和结论已经过期，不能直接投稿。旧稿保留的价值是章节结构、方法描述和参考文献基础；当前事实以仓库的 [研究主线](../docs/RESEARCH.md) 为准。
+The paper's organizing statement is:
 
-下一版必须写清楚：
+> Learning allocates solver effort per query; numerical geometry generates joint
+> commands; deterministic verification governs acceptance.
 
-- v2 先减少 FEV，但 eager 推理开销使延迟门失败；
-- v3 通过 exact TorchScript 把实现问题与算法问题分开；
-- v4 使用反事实动作成本、command reject 和 OOD/uncertainty defer；
-- 两台机器人都改善 feasible P95，并保持相对 fixed 的成功率和轨迹完成率；
-- Panda OOD 改善门失败，point OOD AUROC 很弱，整体 paper gate 为 false。
+## Build
 
-论文的中心句是：
+From the repository root:
 
-> Learning allocates IK computation; numerical geometry generates joint commands; a deterministic verifier retains acceptance authority.
+    conda activate isaaclab_3
+    PYTHONPATH=src python paper/scripts/build_evidence.py
+    python paper/scripts/make_figures.py
+    cd paper
+    latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 
-## 当前写作顺序
+The first two commands are read-only with respect to outputs/. They regenerate:
 
-1. 用冻结结果重写 Abstract 和 Introduction 的贡献表述；
-2. 将 v4 counterfactual router、shared semantic head、action latency heads 和 reject/defer 写入 Method；
-3. 重建 Experimental Design，明确数据角色、seed 解释、七个基线和预注册 gate；
-4. 用正式 v4 aggregate 重写 Results；
-5. 在 Discussion 中同时解释 P95/FEV 收益、P50/P99 权衡、弱 OOD 和 Panda gate 失败；
-6. 重新生成 source data、图和 PDF；
-7. 补齐作者、单位、基金、代码/数据 DOI 和利益冲突信息；
-8. 投稿前重新核验期刊分区、费用、政策和最新模板。
+- generated/evidence_snapshot.json
+- generated/paper_numbers.tex
+- generated table rows
+- source_data CSV files
+- five figures in SVG, PDF, and PNG
 
-## 目录
+The compiled manuscript is main.pdf.
 
-| 路径 | 用途 |
-|---|---|
-| `main.tex`, `main.pdf` | 待重写的主稿和当前预览 |
-| `references.bib` | 参考文献数据库 |
-| `figures/` | 论文图件 |
-| `source_data/` | 图表源数据 |
-| `generated/` | 自动生成的数字宏和 evidence snapshot |
-| `scripts/` | 证据提取与绘图 |
+## Evidence sources
 
-## 构建
+- Development heterogeneity and predictability:
+  ../outputs/counterfactual_v4_bulk/
+- Frozen exact predictor and policy:
+  ../outputs/release_v4_locked/
+- Fresh point-query results:
+  ../outputs/test_v4_aggregate_repair_v1/
+- Final fresh transition-rich trajectories:
+  ../outputs/fresh_transition_v4_test/
 
-先更新正文和数字来源，再运行：
+All reported numbers are regenerated from frozen JSON/NPZ artifacts. No manuscript
+build command trains a model, runs an IK solver, creates a test query, or modifies a
+frozen output.
 
-```bash
-/home/eric/anaconda3/envs/isaaclab_3/bin/python paper/scripts/build_evidence.py
-/home/eric/anaconda3/envs/isaaclab_3/bin/python paper/scripts/make_figures.py
-cd paper
-/home/eric/.local/bin/latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
-```
+## Package layout
 
-正式投稿前应把修订后的正文迁移到当时从 MDPI author portal 下载的最新官方 LaTeX 模板，并逐页检查生成 PDF。
+- main.tex / main.pdf — manuscript source and compiled paper
+- references.bib — 40 relevant references: 38 field-verified records and 2 records
+  with explicitly disclosed metadata checks
+- scripts/ — evidence and figure builders
+- generated/ — machine-generated snapshot, TeX macros, and table rows
+- source_data/ — active figure/table CSVs regenerated from frozen evidence
+- figures/ — five main figures in SVG/PDF/PNG
+- historical/figures/ — superseded manuscript figures, retained but not cited
+- historical/source_data/ — superseded manuscript-derived CSVs retained for traceability;
+  these are not inputs to the final paper
+
+Claim boundaries and provenance are summarized in:
+
+- ../docs/FINAL_PAPER_CLAIM_MAP.md
+- ../docs/FINAL_PAPER_CHANGELOG.md
+- ../docs/PAPER_STORYLINE.md
+
+The manuscript is a blinded generic-journal draft. Author names, affiliations,
+funding, and archival DOI remain the only submission-specific fields to supply.

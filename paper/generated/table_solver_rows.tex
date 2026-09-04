@@ -1,0 +1,7 @@
+% component & initialization & budget/rule
+Easy entry & Previous state & 1 DLS iteration \\
+Medium entry & Learned candidate & 1 DLS iteration \\
+Hard entry & 1 learned candidate + previous state & 25 DLS iterations per seed \\
+Robust fallback & Previous + learned + up to 2 retrieved & TRF, max 100 FEV per seed \\
+Verifier & Shared for every method & 0.001 m / 0.008727 rad \\
+Routing predictor & 9 features; 32x32 MLP & shared success + action-specific P50/P95 \\
