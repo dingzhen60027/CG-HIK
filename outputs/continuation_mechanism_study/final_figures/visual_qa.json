@@ -1,0 +1,14 @@
+{
+  "figure_count": 2,
+  "width_mm": 183,
+  "height_mm": 185,
+  "formats": ["pdf", "svg", "png"],
+  "png_dpi": 600,
+  "minimum_pdf_font_pt": 7,
+  "pdf_font_floor_pt": 5,
+  "pdf_font_floor_failures": 0,
+  "visual_review": "Shortened overlapping residual labels; no clipping or label collision in final previews. Five individual raw repetitions can overlap. Verified step margins have gaps on failures, not spurious held-state safety margins.",
+  "source_data": "Includes all plotted original states, reference states, initial candidates and five repeated suffix traces. Rejected-return margins retained separately, not plotted as verified margins.",
+  "initial_exports": "Preserved in figures/; final_figures/ supersedes presentation only.",
+  "measurement_reruns": 0
+}

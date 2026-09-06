@@ -1,0 +1,382 @@
+{
+  "selections": [
+    {
+      "figure": "cghik_continuation",
+      "site_id": "case_06_pre_failure",
+      "candidate_a": {
+        "candidate_id": "candidate_00",
+        "q": [
+          -1.8054307204487714,
+          -1.06946523235442,
+          -1.701845632538265,
+          -0.38784042510674116,
+          -0.22929581197300172,
+          2.956684536045871,
+          2.099999025902528
+        ],
+        "aliases": [
+          "original_focal",
+          "common_input_always_hard",
+          "common_input_full_cghik"
+        ],
+        "initial_metrics": {
+          "candidate_available": true,
+          "finite": true,
+          "verifier_accepted": true,
+          "verification_reasons": [],
+          "q": [
+            -1.8054307204487714,
+            -1.06946523235442,
+            -1.701845632538265,
+            -0.38784042510674116,
+            -0.22929581197300172,
+            2.956684536045871,
+            2.099999025902528
+          ],
+          "position_error": 0.0009829120866916383,
+          "orientation_error": 0.0003749662225927549,
+          "joint_limit_margin": 0.31804042510674113,
+          "max_velocity_utilization": 0.16004580136920227,
+          "velocity_margin_rad": 0.0366380076404397,
+          "contract_velocity_utilization": 0.15967872384312612,
+          "velocity_excess_rad": -0.0366380076404397,
+          "velocity_utilization_per_joint": [
+            0.010149046206739832,
+            0.15967872384312612,
+            0.0869527559193098,
+            0.03831190022235853,
+            0.0028467592545939175,
+            0.017469916355714526,
+            0.03548101807084029
+          ],
+          "sigma_min": 0.010540983166954815,
+          "site_id": "case_06_pre_failure",
+          "source": "original_focal",
+          "target_position": [
+            0.037456836333499326,
+            0.7486253017973067,
+            0.7335913706571948
+          ],
+          "target_rotation": [
+            [
+              -0.03182927382411093,
+              -0.9437600928611881,
+              -0.32909540326548353
+            ],
+            [
+              0.31406679591831316,
+              -0.32202839329760014,
+              0.8931179998252027
+            ],
+            [
+              -0.9488671904062415,
+              -0.07493064148135695,
+              0.3066536383898909
+            ]
+          ],
+          "previous_q": [
+            -1.8049882220341575,
+            -1.0625032399948597,
+            -1.698054492380183,
+            -0.389510823956436,
+            -0.22914692646398646,
+            2.9575982126712748,
+            2.101854683147633
+          ],
+          "query_hash": "8c58f3846e9880206392e7cd4cc87d5dbcbf11250b23c168fcca04dd391a15fd",
+          "dt": 0.02,
+          "previous_to_reference_max_rad": 0.5204041182830734,
+          "to_reference_max_rad": 0.5271019280760477,
+          "to_full_cghik_command_max_rad": 0.0,
+          "to_always_hard_command_max_rad": 0.07837944882604028,
+          "to_trac_ik_5ms_command_max_rad": 0.36819877614229846
+        },
+        "distance_to_previous": 0.008374279321751185
+      },
+      "candidate_b": {
+        "candidate_id": "candidate_02",
+        "q": [
+          -1.781193693522209,
+          -1.0818544150253666,
+          -1.6693150021229664,
+          -0.3459108239564363,
+          -0.28144692646398634,
+          2.9359673480338135,
+          2.107647791730531
+        ],
+        "aliases": [
+          "refined_focal"
+        ],
+        "initial_metrics": {
+          "candidate_available": true,
+          "finite": true,
+          "verifier_accepted": true,
+          "verification_reasons": [],
+          "q": [
+            -1.781193693522209,
+            -1.0818544150253666,
+            -1.6693150021229664,
+            -0.3459108239564363,
+            -0.28144692646398634,
+            2.9359673480338135,
+            2.107647791730531
+          ],
+          "position_error": 0.00022305981499567073,
+          "orientation_error": 1.0111146853612038e-05,
+          "joint_limit_margin": 0.27611082395643627,
+          "max_velocity_utilization": 1.0022988505747057,
+          "velocity_margin_rad": 1.249000902703301e-16,
+          "contract_velocity_utilization": 0.9999999999999976,
+          "velocity_excess_rad": -1.249000902703301e-16,
+          "velocity_utilization_per_joint": [
+            0.5457460667878101,
+            0.44383428969052463,
+            0.6591626205783641,
+            0.999999999999993,
+            0.9999999999999976,
+            0.4135920580776524,
+            0.11076689451047693
+          ],
+          "sigma_min": 0.016027385357749835,
+          "site_id": "case_06_pre_failure",
+          "source": "refined_focal",
+          "target_position": [
+            0.037456836333499326,
+            0.7486253017973067,
+            0.7335913706571948
+          ],
+          "target_rotation": [
+            [
+              -0.03182927382411093,
+              -0.9437600928611881,
+              -0.32909540326548353
+            ],
+            [
+              0.31406679591831316,
+              -0.32202839329760014,
+              0.8931179998252027
+            ],
+            [
+              -0.9488671904062415,
+              -0.07493064148135695,
+              0.3066536383898909
+            ]
+          ],
+          "previous_q": [
+            -1.8049882220341575,
+            -1.0625032399948597,
+            -1.698054492380183,
+            -0.389510823956436,
+            -0.22914692646398646,
+            2.9575982126712748,
+            2.101854683147633
+          ],
+          "query_hash": "8c58f3846e9880206392e7cd4cc87d5dbcbf11250b23c168fcca04dd391a15fd",
+          "dt": 0.02,
+          "previous_to_reference_max_rad": 0.5204041182830734,
+          "to_reference_max_rad": 0.5792530425670324,
+          "to_full_cghik_command_max_rad": 0.05215111449098461,
+          "to_always_hard_command_max_rad": 0.02622833433505567,
+          "to_trac_ik_5ms_command_max_rad": 0.31604766165131387
+        },
+        "distance_to_previous": 0.08309217938187247
+      },
+      "selected_joint": 5,
+      "selection": "largest observed completion then prefix contrast within focal class; all sites/pairs retained in tables",
+      "caption": "Left: original recorded accepted/held states; dotted lines mark each first failure and shading identifies the tested suffix. Right: two currently verified candidates from identical input, five raw 5 ms TRAC-IK suffixes each; crosses mark first failures. Position/orientation residuals use the accepted/held state, not a rejected numerical proposal. Step margin is shown only for verified commands, with gaps on failures; initial candidate margins have circular markers. Raw rejected-return diagnostics remain in the source tables. All five repetitions are drawn individually and can overlap. No smoothing, p-value, or independent-frame inference. These are suffix witnesses, not full original path completions."
+    },
+    {
+      "figure": "trac_ik_continuation",
+      "site_id": "case_03_pre_failure",
+      "candidate_a": {
+        "candidate_id": "candidate_00",
+        "q": [
+          -2.5349211704867685,
+          -0.0892611422010342,
+          -1.189669151620736,
+          -0.3673078744945731,
+          1.5725777802751864,
+          0.20570825140077728,
+          -0.658067130862223
+        ],
+        "aliases": [
+          "original_focal"
+        ],
+        "initial_metrics": {
+          "candidate_available": true,
+          "finite": true,
+          "verifier_accepted": true,
+          "verification_reasons": [],
+          "q": [
+            -2.5349211704867685,
+            -0.0892611422010342,
+            -1.189669151620736,
+            -0.3673078744945731,
+            1.5725777802751864,
+            0.20570825140077728,
+            -0.658067130862223
+          ],
+          "position_error": 7.696901722026089e-06,
+          "orientation_error": 8.760032423609952e-06,
+          "joint_limit_margin": 0.22320825140077727,
+          "max_velocity_utilization": 0.7101784890916408,
+          "velocity_margin_rad": 0.012707235724513627,
+          "contract_velocity_utilization": 0.7085496393460178,
+          "velocity_excess_rad": -0.012707235724513627,
+          "velocity_utilization_per_joint": [
+            0.1720685220230769,
+            0.07337976204501254,
+            0.7085496393460178,
+            0.03660898813414627,
+            0.651357557025528,
+            0.005310961988729837,
+            0.01158823638560837
+          ],
+          "sigma_min": 0.0002493249099799507,
+          "site_id": "case_03_pre_failure",
+          "source": "original_focal",
+          "target_position": [
+            -0.10691438786603868,
+            0.0035253030074027525,
+            0.9662662146923062
+          ],
+          "target_rotation": [
+            [
+              0.032240005424785764,
+              -0.9928900922476082,
+              0.11458554344569874
+            ],
+            [
+              -0.9085975842157636,
+              -0.0768812852915958,
+              -0.41053586679995496
+            ],
+            [
+              0.4164264785139004,
+              -0.09087646938811265,
+              -0.904616192262809
+            ]
+          ],
+          "previous_q": [
+            -2.5274189829265623,
+            -0.08606178457587166,
+            -1.2205619158962224,
+            -0.36890402637722186,
+            1.6066437805076215,
+            0.2054304880887667,
+            -0.6574610660992557
+          ],
+          "query_hash": "c65c8fabc9ce4b2502a3fd76b1bd4d142281197ba4734fed6019de61d6e9d137",
+          "dt": 0.02,
+          "previous_to_reference_max_rad": 0.21287900581221875,
+          "to_reference_max_rad": 0.22353421981299704,
+          "to_full_cghik_command_max_rad": 0.10136363708036744,
+          "to_always_hard_command_max_rad": 0.13090220575526668,
+          "to_trac_ik_5ms_command_max_rad": 0.0
+        },
+        "distance_to_previous": 0.046737202864593076
+      },
+      "candidate_b": {
+        "candidate_id": "candidate_09",
+        "q": [
+          -2.552623167477403,
+          -0.08880765663354132,
+          -1.177019656447354,
+          -0.3691154977395197,
+          1.5751000687517562,
+          0.20486835842983628,
+          -0.6606100115249115
+        ],
+        "aliases": [
+          "refined_focal"
+        ],
+        "initial_metrics": {
+          "candidate_available": true,
+          "finite": true,
+          "verifier_accepted": true,
+          "verification_reasons": [],
+          "q": [
+            -2.552623167477403,
+            -0.08880765663354132,
+            -1.177019656447354,
+            -0.3691154977395197,
+            1.5751000687517562,
+            0.20486835842983628,
+            -0.6606100115249115
+          ],
+          "position_error": 3.5247562401155557e-08,
+          "orientation_error": 1.7449655726685776e-09,
+          "joint_limit_margin": 0.22236835842983627,
+          "max_velocity_utilization": 1.0009714815831807,
+          "velocity_margin_rad": 5.7740551131640894e-05,
+          "contract_velocity_utilization": 0.9986756754327605,
+          "velocity_excess_rad": -5.7740551131640894e-05,
+          "velocity_utilization_per_joint": [
+            0.5780776273128632,
+            0.06297871691902883,
+            0.9986756754327605,
+            0.004850260603161043,
+            0.6031302438979969,
+            0.01074817703499871,
+            0.060209281561296416
+          ],
+          "sigma_min": 0.0003024363950231297,
+          "site_id": "case_03_pre_failure",
+          "source": "refined_focal",
+          "target_position": [
+            -0.10691438786603868,
+            0.0035253030074027525,
+            0.9662662146923062
+          ],
+          "target_rotation": [
+            [
+              0.032240005424785764,
+              -0.9928900922476082,
+              0.11458554344569874
+            ],
+            [
+              -0.9085975842157636,
+              -0.0768812852915958,
+              -0.41053586679995496
+            ],
+            [
+              0.4164264785139004,
+              -0.09087646938811265,
+              -0.904616192262809
+            ]
+          ],
+          "previous_q": [
+            -2.5274189829265623,
+            -0.08606178457587166,
+            -1.2205619158962224,
+            -0.36890402637722186,
+            1.6066437805076215,
+            0.2054304880887667,
+            -0.6574610660992557
+          ],
+          "query_hash": "c65c8fabc9ce4b2502a3fd76b1bd4d142281197ba4734fed6019de61d6e9d137",
+          "dt": 0.02,
+          "previous_to_reference_max_rad": 0.21287900581221875,
+          "to_reference_max_rad": 0.24123621680363172,
+          "to_full_cghik_command_max_rad": 0.09884134860379756,
+          "to_always_hard_command_max_rad": 0.1283799172786968,
+          "to_trac_ik_5ms_command_max_rad": 0.017701996990634683
+        },
+        "distance_to_previous": 0.059531516095794934
+      },
+      "selected_joint": 1,
+      "selection": "largest observed completion then prefix contrast within focal class; all sites/pairs retained in tables",
+      "caption": "Left: original recorded accepted/held states; dotted lines mark each first failure and shading identifies the tested suffix. Right: two currently verified candidates from identical input, five raw 5 ms TRAC-IK suffixes each; crosses mark first failures. Position/orientation residuals use the accepted/held state, not a rejected numerical proposal. Step margin is shown only for verified commands, with gaps on failures; initial candidate margins have circular markers. Raw rejected-return diagnostics remain in the source tables. All five repetitions are drawn individually and can overlap. No smoothing, p-value, or independent-frame inference. These are suffix witnesses, not full original path completions."
+    }
+  ],
+  "files": {
+    "final_figures/trac_ik_continuation.svg": "905a4ebe302a406f7d20f7f895bd39fa513cc3d07ba6a0b5c45f4145c5639b1f",
+    "final_figures/trac_ik_continuation.pdf": "20f63489b4928d7ed21594fc6a13d193b7a58ebffafee7b687086099c7b9d400",
+    "final_figures/cghik_continuation_source.csv": "353b0d956f023a04a95e1a9aba4cc89bb82c94219b2a6b7f62097225b8c9c203",
+    "final_figures/cghik_continuation.svg": "3c9a2dc96d914324ce22ddb71ceccd8d05eb3fa099a0f5ccf9afae88e4b63b7a",
+    "final_figures/trac_ik_continuation.png": "01fd82eb1819814e7ba433ecb0c8bec36f901d2e79f6367b35d6afb48f3feeab",
+    "final_figures/cghik_continuation.pdf": "ab7a1b21923db74b6bde901fee99965f48e630bb9e431f84ec1d8360963cf27d",
+    "final_figures/trac_ik_continuation_source.csv": "4e8343b0ac399245551f38f53a6ee8913b484eae33c3c6c61805ca03fa21287a",
+    "final_figures/cghik_continuation.png": "3c5b8ddb78cceb5fcdc2f8e801f40f59b13afaf1e96feba666da01bf518b8ccc"
+  }
+}

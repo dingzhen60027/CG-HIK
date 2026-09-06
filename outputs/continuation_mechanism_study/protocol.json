@@ -1,0 +1,945 @@
+{
+  "role": "small post-hoc mechanism study, not a formal test or new method",
+  "baseline": "bea96172a955f5140d796d3615349c77f9d28e51",
+  "robot": "panda",
+  "cases": [
+    {
+      "uid": "05fed739bf62f4fdcb2405ecaae33d1d21420a4ab0f81376b77841fb57661365",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 120,
+      "case_id": "case_00",
+      "family": "near_singular"
+    },
+    {
+      "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 34,
+      "case_id": "case_01",
+      "family": "smooth"
+    },
+    {
+      "uid": "a5b1761b74cefaee8b9e8d58bc938cbc4d6d190674ad988e14e10767e8f38c28",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 87,
+      "case_id": "case_02",
+      "family": "near_singular"
+    },
+    {
+      "uid": "b82acfb0f8aeca32d455788ace0eae3c1ac31cfac5269c5a38c8b080b1192218",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 87,
+      "case_id": "case_03",
+      "family": "near_singular"
+    },
+    {
+      "uid": "c27ce734147fac572ca1ddd088565aeb5f022220251ef6f10a5d3db6670559b0",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 125,
+      "case_id": "case_04",
+      "family": "near_singular"
+    },
+    {
+      "uid": "d13cc08f12e083b576378a71eba2a5f5856319a74339c4d99b24a4e6647cfc6e",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 72,
+      "case_id": "case_05",
+      "family": "near_singular"
+    },
+    {
+      "uid": "f69a8f1f6eef07cefc66000053424135c5ec7250cc78d7cb2319c6615f8a8060",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 96,
+      "case_id": "case_06",
+      "family": "near_singular"
+    },
+    {
+      "uid": "4cc5ef5c4c9aa6bf49a51ea1b0c183d22a3ad3076219f3fdaaa33a4c97b7085d",
+      "role": "successful_control",
+      "focal": "always_hard",
+      "first_failure": null,
+      "matched_frame": 90,
+      "case_id": "case_07",
+      "family": "near_singular"
+    },
+    {
+      "uid": "34d461249b6c84388a8a925d2ced5254dc7a9ea2526b13b9a7a34604308cc719",
+      "role": "successful_control",
+      "focal": "always_hard",
+      "first_failure": null,
+      "matched_frame": 33,
+      "case_id": "case_08",
+      "family": "smooth"
+    }
+  ],
+  "sites": [
+    {
+      "uid": "05fed739bf62f4fdcb2405ecaae33d1d21420a4ab0f81376b77841fb57661365",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 120,
+      "case_id": "case_00",
+      "family": "near_singular",
+      "site_id": "case_00_first_divergence",
+      "site_kind": "first_divergence",
+      "frame": 0,
+      "previous_q": [
+        -2.7691007452021363,
+        0.5098014821322331,
+        0.10439499060029356,
+        -0.2505595781332633,
+        -1.7511606198845608,
+        2.747537522868634,
+        -2.4941311133416035
+      ],
+      "target_position": [
+        -0.468054030064343,
+        -0.24049132657580713,
+        0.9971037378457066
+      ],
+      "target_rotation": [
+        [
+          -0.4709366288823269,
+          -0.5260746835753591,
+          -0.7081413127886518
+        ],
+        [
+          0.6636373485215648,
+          -0.7401428248119041,
+          0.10850837998386417
+        ],
+        [
+          -0.581209223278689,
+          -0.41884845252255715,
+          0.6976831749406333
+        ]
+      ],
+      "query_hash": "924c6eac2cbc15cc1de01b3d57f38f87b060c66e1406101e98eaedf1b6dfbca4",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "05fed739bf62f4fdcb2405ecaae33d1d21420a4ab0f81376b77841fb57661365",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 120,
+      "case_id": "case_00",
+      "family": "near_singular",
+      "site_id": "case_00_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 119,
+      "previous_q": [
+        -2.6092588692580327,
+        0.9131373586969197,
+        0.09361429331615885,
+        -0.44324036829254815,
+        -1.7216123752797612,
+        2.2066146256229366,
+        -2.2868614236437703
+      ],
+      "target_position": [
+        -0.6865255903589856,
+        -0.39043307292033536,
+        0.6519950830574126
+      ],
+      "target_rotation": [
+        [
+          0.06543625222261563,
+          -0.4068386194654286,
+          -0.9111533540554644
+        ],
+        [
+          0.5695110368970323,
+          -0.7345600106955145,
+          0.3688885597839451
+        ],
+        [
+          -0.819374929899326,
+          -0.5430505762803959,
+          0.1836322298889944
+        ]
+      ],
+      "query_hash": "8829e3f17af5b2a401d380d7639db5911ffa3875f5e5a89bef37f8562ae7a6c8",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 34,
+      "case_id": "case_01",
+      "family": "smooth",
+      "site_id": "case_01_first_divergence",
+      "site_kind": "first_divergence",
+      "frame": 0,
+      "previous_q": [
+        -1.2790767091646527,
+        -0.27033551196212335,
+        -1.1511121930022172,
+        -2.034502278875868,
+        -0.9566961777920289,
+        1.798955509874718,
+        -1.4190305684317575
+      ],
+      "target_position": [
+        -0.4687228859528076,
+        -0.25998178059501026,
+        0.49857027855755853
+      ],
+      "target_rotation": [
+        [
+          0.6120765380388422,
+          -0.6602384965749983,
+          -0.43525560217275955
+        ],
+        [
+          -0.48425897093820575,
+          -0.7480656417387982,
+          0.45375218425456637
+        ],
+        [
+          -0.625184421309629,
+          -0.06695463606282824,
+          -0.7775998431464854
+        ]
+      ],
+      "query_hash": "fd8c36aeb79bb60b545fa229f8a8c0d52f95ddd3aaa3fe83eb518302f85c0cc8",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 34,
+      "case_id": "case_01",
+      "family": "smooth",
+      "site_id": "case_01_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 33,
+      "previous_q": [
+        -1.3026244196296475,
+        -0.06139353061252327,
+        -1.5016879520870787,
+        -2.0119098983122785,
+        -1.0891157886297238,
+        1.8610300754585416,
+        -1.8261782860829705
+      ],
+      "target_position": [
+        -0.5474174506505737,
+        -0.10431323826476994,
+        0.4722473312394441
+      ],
+      "target_rotation": [
+        [
+          0.7105269751387547,
+          -0.6249225302146515,
+          -0.32345517282969716
+        ],
+        [
+          -0.20078427539081087,
+          -0.6206111293630774,
+          0.7579759236720336
+        ],
+        [
+          -0.6744161121710824,
+          -0.47361762777667354,
+          -0.5664355658883348
+        ]
+      ],
+      "query_hash": "77e6efdcd131605c671a134db0400b65f98b404df00debb376a60a91276c8bf1",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "a5b1761b74cefaee8b9e8d58bc938cbc4d6d190674ad988e14e10767e8f38c28",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 87,
+      "case_id": "case_02",
+      "family": "near_singular",
+      "site_id": "case_02_first_divergence",
+      "site_kind": "first_divergence",
+      "frame": 0,
+      "previous_q": [
+        0.20438705422153192,
+        -1.2634217628804079,
+        -2.4148442456937835,
+        -1.1973461073739575,
+        1.4908980671019785,
+        3.2034616258880892,
+        1.3297385540261388
+      ],
+      "target_position": [
+        -0.614670110152981,
+        -0.3958352634142281,
+        0.09063910371538647
+      ],
+      "target_rotation": [
+        [
+          0.6911330082491021,
+          0.5687291227546314,
+          -0.4459622740090176
+        ],
+        [
+          0.15799097115152952,
+          -0.7210215003378307,
+          -0.674660543595948
+        ],
+        [
+          -0.7052474870165388,
+          0.3958221582748126,
+          -0.5881758249669276
+        ]
+      ],
+      "query_hash": "a673acf4bb866bfae6359f79b8e28107fff7a753ba67d29ca112a5b02c504c8e",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "a5b1761b74cefaee8b9e8d58bc938cbc4d6d190674ad988e14e10767e8f38c28",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 87,
+      "case_id": "case_02",
+      "family": "near_singular",
+      "site_id": "case_02_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 86,
+      "previous_q": [
+        0.12651649731694878,
+        -1.4379019442387895,
+        -2.871803362304541,
+        -1.0208540867071714,
+        1.510200750484142,
+        3.3944723873519362,
+        1.977997957040434
+      ],
+      "target_position": [
+        -0.6821605980990008,
+        -0.08960004009889774,
+        -0.02738141598480834
+      ],
+      "target_rotation": [
+        [
+          0.730964843608165,
+          -0.27674414391622665,
+          -0.6237812727366585
+        ],
+        [
+          -0.38761012883058915,
+          -0.9206877025664334,
+          -0.045744315175511086
+        ],
+        [
+          -0.5616482755575994,
+          0.2752214256757952,
+          -0.7802591757949137
+        ]
+      ],
+      "query_hash": "4b867099b853a697c8cfbedddf723fae985c90e1b4ab11e164d0e46edb92af02",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "b82acfb0f8aeca32d455788ace0eae3c1ac31cfac5269c5a38c8b080b1192218",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 87,
+      "case_id": "case_03",
+      "family": "near_singular",
+      "site_id": "case_03_first_divergence",
+      "site_kind": "first_divergence",
+      "frame": 0,
+      "previous_q": [
+        -2.5049632783701505,
+        -0.241956484604905,
+        -1.1367095106305023,
+        -0.6405260838098745,
+        1.8483792282351552,
+        0.45845798166166185,
+        -0.9129513575139697
+      ],
+      "target_position": [
+        -0.09045338894940529,
+        0.07723717508036916,
+        1.007215910055736
+      ],
+      "target_rotation": [
+        [
+          0.4980529118780521,
+          -0.8361581985267619,
+          0.2297449977829189
+        ],
+        [
+          -0.4361294606863573,
+          -0.4705381479083392,
+          -0.7670625430070337
+        ],
+        [
+          0.7494894198660982,
+          0.28183917115878393,
+          -0.5990261188874064
+        ]
+      ],
+      "query_hash": "fb87d31cb6bf5fb8f7ff0dad1d373f19d33a57ce0a66e717bee8e949106be457",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "b82acfb0f8aeca32d455788ace0eae3c1ac31cfac5269c5a38c8b080b1192218",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 87,
+      "case_id": "case_03",
+      "family": "near_singular",
+      "site_id": "case_03_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 86,
+      "previous_q": [
+        -2.5274189829265623,
+        -0.08606178457587166,
+        -1.2205619158962224,
+        -0.36890402637722186,
+        1.6066437805076215,
+        0.2054304880887667,
+        -0.6574610660992557
+      ],
+      "target_position": [
+        -0.10691438786603868,
+        0.0035253030074027525,
+        0.9662662146923062
+      ],
+      "target_rotation": [
+        [
+          0.032240005424785764,
+          -0.9928900922476082,
+          0.11458554344569874
+        ],
+        [
+          -0.9085975842157636,
+          -0.0768812852915958,
+          -0.41053586679995496
+        ],
+        [
+          0.4164264785139004,
+          -0.09087646938811265,
+          -0.904616192262809
+        ]
+      ],
+      "query_hash": "c65c8fabc9ce4b2502a3fd76b1bd4d142281197ba4734fed6019de61d6e9d137",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "c27ce734147fac572ca1ddd088565aeb5f022220251ef6f10a5d3db6670559b0",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 125,
+      "case_id": "case_04",
+      "family": "near_singular",
+      "site_id": "case_04_first_divergence",
+      "site_kind": "first_divergence",
+      "frame": 0,
+      "previous_q": [
+        -2.152995687987356,
+        0.014755304669894664,
+        -1.9239560078813482,
+        -0.6338345672497372,
+        -0.8235175465456726,
+        2.6820017398225584,
+        0.904646526131038
+      ],
+      "target_position": [
+        -0.20668575842693143,
+        0.22293077337132855,
+        1.1297980446809972
+      ],
+      "target_rotation": [
+        [
+          0.45627299230630386,
+          0.866664864461366,
+          -0.2017596817999413
+        ],
+        [
+          -0.42101449379985006,
+          0.4100094993705204,
+          0.8090976495061589
+        ],
+        [
+          0.7839398908732147,
+          -0.2842256553059511,
+          0.5519547303571147
+        ]
+      ],
+      "query_hash": "e9a8a66b66f3cf9f4b559642af7d7a6e4236d472817666322f4ac770b8f6ecdc",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "c27ce734147fac572ca1ddd088565aeb5f022220251ef6f10a5d3db6670559b0",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 125,
+      "case_id": "case_04",
+      "family": "near_singular",
+      "site_id": "case_04_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 124,
+      "previous_q": [
+        -2.1531924668293216,
+        -0.26488343794075053,
+        -1.8643775271068719,
+        -0.46659161580148867,
+        -0.5178393568181611,
+        2.230693714146764,
+        1.236995760995582
+      ],
+      "target_position": [
+        -0.04413659548247585,
+        0.3878853520095883,
+        1.084301046650573
+      ],
+      "target_rotation": [
+        [
+          0.9118624056746626,
+          0.3271345457275951,
+          -0.24797165585771483
+        ],
+        [
+          0.21117782783166494,
+          0.14417055997658756,
+          0.9667568332669476
+        ],
+        [
+          0.35200976996315964,
+          -0.9339153273330709,
+          0.062380150872262334
+        ]
+      ],
+      "query_hash": "df6731b5c9cba3dfd36c632947b7b76985627b231c74a150e8927870e3026c0c",
+      "continuation_frames": 25
+    },
+    {
+      "uid": "d13cc08f12e083b576378a71eba2a5f5856319a74339c4d99b24a4e6647cfc6e",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 72,
+      "case_id": "case_05",
+      "family": "near_singular",
+      "site_id": "case_05_first_divergence",
+      "site_kind": "first_divergence",
+      "frame": 0,
+      "previous_q": [
+        -2.1963748716455553,
+        -0.06432807252360587,
+        1.6974588680353437,
+        -0.5398572886368689,
+        0.3082865927183878,
+        2.333081146357113,
+        -1.6259284626693025
+      ],
+      "target_position": [
+        0.2899863558905141,
+        -0.09447499913509681,
+        1.126287187463568
+      ],
+      "target_rotation": [
+        [
+          0.24461026000602168,
+          -0.21994804946123395,
+          0.9443456338851708
+        ],
+        [
+          0.9686504796507862,
+          0.011855909855193447,
+          -0.2481444854793416
+        ],
+        [
+          0.04338281885825463,
+          0.9754395383311587,
+          0.21595286080116577
+        ]
+      ],
+      "query_hash": "845488e2e8baefef3f9d6f13095e98c2d0d37f78405f692571c68467a13d2bec",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "d13cc08f12e083b576378a71eba2a5f5856319a74339c4d99b24a4e6647cfc6e",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 72,
+      "case_id": "case_05",
+      "family": "near_singular",
+      "site_id": "case_05_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 71,
+      "previous_q": [
+        -2.2912352938183607,
+        -0.0071484094871457375,
+        1.4004778744023123,
+        -0.39688639107794865,
+        0.7352529321687105,
+        2.071000825131856,
+        -1.4863916102164116
+      ],
+      "target_position": [
+        0.1795418306250744,
+        -0.16186449707647255,
+        1.1386618447913097
+      ],
+      "target_rotation": [
+        [
+          0.16633749974206202,
+          -0.2536360325508194,
+          0.9528906543625237
+        ],
+        [
+          0.9261737714129477,
+          -0.2914756202661809,
+          -0.23925740936732157
+        ],
+        [
+          0.33842869459647845,
+          0.9223398103640136,
+          0.18642771492296634
+        ]
+      ],
+      "query_hash": "e1aa83e9279582566d0458f4e96b9a4de7462faf5e2b299d280486d88258aeea",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "f69a8f1f6eef07cefc66000053424135c5ec7250cc78d7cb2319c6615f8a8060",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 96,
+      "case_id": "case_06",
+      "family": "near_singular",
+      "site_id": "case_06_first_divergence",
+      "site_kind": "first_divergence",
+      "frame": 0,
+      "previous_q": [
+        -1.5868546577525084,
+        -0.6290177913810366,
+        -1.6157562011453994,
+        -0.10907552781285151,
+        -0.1925311723973696,
+        2.859027136905126,
+        2.3329625607949014
+      ],
+      "target_position": [
+        0.004514146970739791,
+        0.48535289133764575,
+        1.0175351363050174
+      ],
+      "target_rotation": [
+        [
+          -0.44140360516859034,
+          -0.8201081353744779,
+          -0.36412292380014855
+        ],
+        [
+          0.5555011543245956,
+          -0.5684349995224535,
+          0.6068773507570947
+        ],
+        [
+          -0.7046852665468557,
+          0.06560714603231539,
+          0.7064802739647309
+        ]
+      ],
+      "query_hash": "4d45caacfd8704fbcf39b672dd9f45e0412329efb170302bd84f4771b96d655b",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "f69a8f1f6eef07cefc66000053424135c5ec7250cc78d7cb2319c6615f8a8060",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 96,
+      "case_id": "case_06",
+      "family": "near_singular",
+      "site_id": "case_06_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 95,
+      "previous_q": [
+        -1.8049882220341575,
+        -1.0625032399948597,
+        -1.698054492380183,
+        -0.389510823956436,
+        -0.22914692646398646,
+        2.9575982126712748,
+        2.101854683147633
+      ],
+      "target_position": [
+        0.037456836333499326,
+        0.7486253017973067,
+        0.7335913706571948
+      ],
+      "target_rotation": [
+        [
+          -0.03182927382411093,
+          -0.9437600928611881,
+          -0.32909540326548353
+        ],
+        [
+          0.31406679591831316,
+          -0.32202839329760014,
+          0.8931179998252027
+        ],
+        [
+          -0.9488671904062415,
+          -0.07493064148135695,
+          0.3066536383898909
+        ]
+      ],
+      "query_hash": "8c58f3846e9880206392e7cd4cc87d5dbcbf11250b23c168fcca04dd391a15fd",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "4cc5ef5c4c9aa6bf49a51ea1b0c183d22a3ad3076219f3fdaaa33a4c97b7085d",
+      "role": "successful_control",
+      "focal": "always_hard",
+      "first_failure": null,
+      "matched_frame": 90,
+      "case_id": "case_07",
+      "family": "near_singular",
+      "site_id": "case_07_first_divergence",
+      "site_kind": "initial_control",
+      "frame": 0,
+      "previous_q": [
+        -2.356967948563495,
+        0.3167720138651601,
+        -0.0501694749934517,
+        -0.15049976584342756,
+        0.6623630878099427,
+        0.8033772805581576,
+        1.9186072990177847
+      ],
+      "target_position": [
+        -0.20938452557108456,
+        -0.3172886748054518,
+        0.9274497598197041
+      ],
+      "target_rotation": [
+        [
+          -0.7772287934754873,
+          0.612411833204854,
+          0.1444546612031217
+        ],
+        [
+          0.5004149353658777,
+          0.740792263726365,
+          -0.44812020091258187
+        ],
+        [
+          -0.3814450092154873,
+          -0.27600465313801903,
+          -0.8822251052825231
+        ]
+      ],
+      "query_hash": "b9f51b699b06669d7de234ea2f2851a2f068d23f2de6a41fad549476b678f27b",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "4cc5ef5c4c9aa6bf49a51ea1b0c183d22a3ad3076219f3fdaaa33a4c97b7085d",
+      "role": "successful_control",
+      "focal": "always_hard",
+      "first_failure": null,
+      "matched_frame": 90,
+      "case_id": "case_07",
+      "family": "near_singular",
+      "site_id": "case_07_pre_failure",
+      "site_kind": "matched_control",
+      "frame": 90,
+      "previous_q": [
+        -2.2498947356331542,
+        0.8653923667675446,
+        0.05552070161774559,
+        -0.29320777095088824,
+        0.7483188746161211,
+        1.1906586852236325,
+        1.8251727361789964
+      ],
+      "target_position": [
+        -0.35323650365922654,
+        -0.6012766156702685,
+        0.6310829422587725
+      ],
+      "target_rotation": [
+        [
+          -0.605960718164762,
+          0.5500478128193653,
+          0.5746816611428264
+        ],
+        [
+          0.43042601222176735,
+          0.8342440903329881,
+          -0.3446305931680357
+        ],
+        [
+          -0.6689880836338661,
+          0.038525333965036886,
+          -0.7422740347060307
+        ]
+      ],
+      "query_hash": "37058a9de4cb3305c690cd5fb995d00ca37d045f906ee32f2dc85aba3ba67599",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "34d461249b6c84388a8a925d2ced5254dc7a9ea2526b13b9a7a34604308cc719",
+      "role": "successful_control",
+      "focal": "always_hard",
+      "first_failure": null,
+      "matched_frame": 33,
+      "case_id": "case_08",
+      "family": "smooth",
+      "site_id": "case_08_first_divergence",
+      "site_kind": "initial_control",
+      "frame": 0,
+      "previous_q": [
+        -1.5118404135391583,
+        -0.21036276332591103,
+        -1.086430308958273,
+        -0.8876088593411078,
+        -1.6675955174697599,
+        2.200355761753023,
+        -1.0644175937148956
+      ],
+      "target_position": [
+        -0.39264379580920483,
+        -0.038586063085879925,
+        1.0642117469732693
+      ],
+      "target_rotation": [
+        [
+          -0.6332073517788341,
+          0.05080643454476015,
+          -0.7723128613859055
+        ],
+        [
+          -0.7127018056346278,
+          -0.4274106173316262,
+          0.55621605553718
+        ],
+        [
+          -0.30183536223971025,
+          0.9026288663681475,
+          0.3068493827606238
+        ]
+      ],
+      "query_hash": "82c4a9f0c4567b97b1a1bd7450b6fc224b98e6bdcecf27292aba451b65b75388",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "34d461249b6c84388a8a925d2ced5254dc7a9ea2526b13b9a7a34604308cc719",
+      "role": "successful_control",
+      "focal": "always_hard",
+      "first_failure": null,
+      "matched_frame": 33,
+      "case_id": "case_08",
+      "family": "smooth",
+      "site_id": "case_08_pre_failure",
+      "site_kind": "matched_control",
+      "frame": 33,
+      "previous_q": [
+        -1.4800882527101291,
+        -0.5260587222606703,
+        -0.8619386773020501,
+        -0.919502508528777,
+        -1.4652638565652714,
+        2.1174262508781245,
+        -1.107984464810476
+      ],
+      "target_position": [
+        -0.37835214415857327,
+        0.0959546405532368,
+        1.0556614499458348
+      ],
+      "target_rotation": [
+        [
+          -0.3222198682143899,
+          0.031877345319088694,
+          -0.946127999471165
+        ],
+        [
+          -0.9466648563863465,
+          -0.010767009227941405,
+          0.3220399372675749
+        ],
+        [
+          7.880938569611522e-05,
+          0.9994337928885999,
+          0.03364650682296337
+        ]
+      ],
+      "query_hash": "bab4bba317138f18612fc5baf35ce1108c89dbf75450e91c98e84f1e6530324d",
+      "continuation_frames": 30
+    }
+  ],
+  "repeats": 5,
+  "horizon": 30,
+  "dt": 0.02,
+  "selection": "all three CG-HIK lost and all four TRAC-IK failed paths; smallest-UID jointly successful path per represented family",
+  "first_divergence": "frame 0; current input identical across original methods; short-window scope only",
+  "failure_window": "focal first failure +/- 5 frames retained from old logs; fresh solver replay at +/- 2 frames",
+  "candidate_sources": [
+    "existing focal/other-method command",
+    "offline q_ref if currently reachable",
+    "frozen hard and CG-HIK on common input",
+    "five TRAC-IK calls on common input",
+    "previous-state DLS with 25 iterations",
+    "tight bounded residual refinement of focal candidate"
+  ],
+  "candidate_filter": "unchanged public verifier; deduplicate max joint difference <= 1e-10, retain aliases and every attempt",
+  "closest_rule": "minimum Euclidean distance to common previous_q among current legal pool, no future outcomes",
+  "primary_continuation": "5 ms official TRAC-IK Speed, previous_q seed, all unique legal candidates, five repeats",
+  "numerical_controls": "pre-failure/control sites: original-focal, nearest, refined-focal candidates; 100 ms and one-ULP interior bounds each five repeats",
+  "strict_refinement": "scipy least_squares trf; common one-step bounds; max_nfev=200; ftol=xtol=gtol=1e-12; report residual <=1e-7 m/rad",
+  "boundary_control": "implementation diagnostic only; nextafter bounds inward, never relax verifier or repair old records",
+  "feedback": "accept updates previous_q; fail holds it; targets advance through every fixed window frame",
+  "randomness": "no TRAC-IK random seed control asserted; official concurrent workers, repeated interleaved trials; local schedule seed 960701 controls order only",
+  "statistical_unit": "selected site nested within nine trajectories; five numerical repetitions are not five independent trajectories; descriptive counts, no population p-values",
+  "figures": "two quantitative trajectory grids; raw state/residual/velocity-margin traces, all five suffix repeats; first-failure markers; SVG/PDF and PNG previews",
+  "frozen_inputs": {
+    "outputs/release_v4_locked/release_environment.json": "1462bd2ad312f20455297207447a29e818be6b925ed75ffc5c8f3274a3eacabc",
+    "outputs/release_v4_locked/release_manifest.json": "816f6fa7fba2a015eb0f3dd146f76d469dd3ef13d8e7440b8381fcdcc0efee10",
+    "outputs/release_v4_locked/release_equivalence.json": "1c44eec90745aa3db74ee64b4fe486b20790820bbaa5215b0d3bb57f05e86881",
+    "outputs/release_v4_locked/upstream_dependencies.json": "b9a361a0d9853d21d1211ccc6fcf71abecc420f06ffb6bab27b3970ee45494cc",
+    "outputs/release_v4_locked/artifact_manifest.json": "411921ca349bfbcff5c7e7c8c372d750ca9df499677c0d15f84dc4a98155e288",
+    "outputs/release_v4_locked/release_config.yaml": "ddbb48f1d1595d9fae6abb932acc68b6b5914457287e561709fd0e1bbd1b82c0",
+    "outputs/release_v4_locked/ur5e/v4_policy.json": "d4b995bc7e0f84dbd42842a7c3d136976611fba1d69e86746811e0089a202e01",
+    "outputs/release_v4_locked/ur5e/v4_runtime_spec.json": "1182c46580bc47c104bd19e8bef403195dabdf611d3cf685e6199a92c070662a",
+    "outputs/release_v4_locked/ur5e/exact_v4_predictor.ts": "6b1200959425e5cf311ae0b97b4fc99428da396b024efd22759b45745b036178",
+    "outputs/release_v4_locked/panda/v4_policy.json": "09b51eacb19966588716c9a4c5503a91fd27f633ab56711934a860d91510a639",
+    "outputs/release_v4_locked/panda/v4_runtime_spec.json": "45c75cd74a1cce77d4fa7b7078a09a991ff098f90c3abce3a9ed6c2f07c731d9",
+    "outputs/release_v4_locked/panda/exact_v4_predictor.ts": "5383c899d7b790601f28caf6907323ab7284f6802cb9b715a03137cdd9d99217",
+    "outputs/release_v3_locked/panda/seed17/hgb_vectorized_parameters.npz": "b908e309abdeb9d82c85607c9a53666566828851489bc315aced2d949f538156",
+    "outputs/release_v3_locked/panda/seed17/runtime_spec.json": "3175c56284da6b811b15d7fc73b9e542adc8e75ba3e44f4d651af6050fc25203",
+    "outputs/release_v3_locked/panda/seed17/solver_metadata.json": "3f0f58fffefbf1986201841eca948fd4ab115a46af506cbb0a67729fc6518258",
+    "outputs/release_v3_locked/panda/seed17/route_thresholds.json": "d8ef2da2030c09b34e3ea683bf02182560941cbb011544957a7cd4feed164a53",
+    "outputs/release_v3_locked/panda/seed17/seed_bank.npz": "6c31bf5a0c212e132c8ba6962741d33dc72b3c230b7bba33e5f137efac4d423f",
+    "outputs/release_v3_locked/panda/seed17/exact_seed_ensemble.ts": "e2075d2c4048e0b521bd7954f2983fc26946ce82868289b1561636b8f741a062",
+    "outputs/release_v3_locked/panda/seed17/isotonic_calibration_parameters.npz": "6249f14b7ce66c9658c24bf6aacf6d3bb734be9abad0144505030de788c6fa92",
+    "outputs/release_v3_locked/panda/seed17/normalization_parameters.npz": "ee69975a0064c88eba48146c6243f3fb6b1f547b4b7e6c432cf391e703d3b8f8",
+    "outputs/release_v3_locked/ur5e/seed17/hgb_vectorized_parameters.npz": "dfcc052a88c4bf0bb857bedcf43dbd8f580c42eeab7b3f5b36bfd8cedfbf28a0",
+    "outputs/release_v3_locked/ur5e/seed17/runtime_spec.json": "764e859a10dee17f01fe255a8c60d09a8b34ce8ab0464072431bc00d98dd803d",
+    "outputs/release_v3_locked/ur5e/seed17/solver_metadata.json": "764519b20a4ce6757dba6d92dca4f0547bccac2924ec05c2152cce25e3451303",
+    "outputs/release_v3_locked/ur5e/seed17/route_thresholds.json": "bce2606f04aba3b5ec211f78201877ee15c98edd391735cfd3275d99bee7f3cd",
+    "outputs/release_v3_locked/ur5e/seed17/seed_bank.npz": "45f44f3cfe1922b875c3fbc30d52dd49188d0e331f20d5897386c790269c3ca6",
+    "outputs/release_v3_locked/ur5e/seed17/exact_seed_ensemble.ts": "8eb0f12d8b8a4b95d83638bab885e1c2df41e03a682f6fb31636c691829a152a",
+    "outputs/release_v3_locked/ur5e/seed17/isotonic_calibration_parameters.npz": "5a16f9728a7694a6905cadf657e55d6f7863ecfd05d5db4b790b2649c6ff136e",
+    "outputs/release_v3_locked/ur5e/seed17/normalization_parameters.npz": "6aadbef43e7a135cdcb99dbc2aae6f582b678b5165528dd1b6851c602cdca45a",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/panda_trajectories.npz": "9894971942d583e4c6a5296356dbdee2567f0318c34e6838a1827fb1a14f27a8",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/panda_identities.json": "a12e6a9c6d78d2ae5133462501fdf4c84cd3ce52af84aeffb421d5e230ef51bb",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/panda_raw_records.jsonl.gz": "d1af1bacb1e2fe50bc6e009bc13305da4b57d742aaac85d9f0196a245f11c2e5",
+    "paper/main.tex": "57ca001ef6702e69e2ba5288a014f3734b70a1be4e70a7e892b291ba59411d5f",
+    "paper/main.pdf": "b6ca1407aac104d53c9a5c22728e5934cb97529bda7ee721de02b4bfa0541cb0",
+    "paper/references.bib": "0ee5ae33c7ce1caf8df420f5b64f09bac237d5fc7a83f61001e6aa099304a561"
+  },
+  "measurement_sources": {
+    "src/confik/continuation_mechanism/observation.py": "5c31972d1f3041379b5ab769a54e41cf19ce1b3c398a4dc6b5a320e3e63ef6c1",
+    "src/confik/continuation_mechanism/__init__.py": "795d678b85da17ff4b05750504d62cb58e977a53197616f58c0f7a9b8989abb0",
+    "src/confik/continuation_mechanism/study.py": "3fac1970fae4e8f0b4364fecd860a6f216fe36e1e21ad457ceccf63b64b30794"
+  },
+  "backend": "repository URDFKinematics FK/geometric Jacobian; independent KDL FK in official TRAC-IK"
+}
