@@ -1,0 +1,64 @@
+{
+  "role": "supplementary evaluation; no additional solver calls",
+  "checks": {
+    "panda": {
+      "trajectory_calls_per_method": {
+        "trac_ik_5ms": 6000,
+        "always_hard": 6000,
+        "full_cghik": 6000,
+        "routing_only": 6000
+      },
+      "point_calls_per_method": {
+        "p50_selection": 9000,
+        "trac_ik_100ms": 9000,
+        "trac_ik_400ms": 9000,
+        "trac_ik_5ms": 9000,
+        "geometry_threshold": 9000,
+        "routing_only": 9000,
+        "full_cghik": 9000,
+        "reject_only_hard": 9000,
+        "trac_ik_20ms": 9000,
+        "always_hard": 9000
+      },
+      "trajectory_decomposition_additive": true
+    },
+    "ur5e": {
+      "trajectory_calls_per_method": {
+        "trac_ik_5ms": 6000,
+        "always_hard": 6000,
+        "full_cghik": 6000,
+        "routing_only": 6000
+      },
+      "point_calls_per_method": {
+        "p50_selection": 9000,
+        "trac_ik_100ms": 9000,
+        "trac_ik_400ms": 9000,
+        "trac_ik_5ms": 9000,
+        "geometry_threshold": 9000,
+        "routing_only": 9000,
+        "full_cghik": 9000,
+        "reject_only_hard": 9000,
+        "trac_ik_20ms": 9000,
+        "always_hard": 9000
+      },
+      "trajectory_decomposition_additive": true
+    }
+  },
+  "source_tables_sha256": "244b514937055047faf72b3890837106f091b0cbf4a1e5cb1e5ef2aaed0c87c2",
+  "figures": {
+    "cost_sources_decomposition.svg": "5faed4e57e2c3e5cb9dc461239c42248d2ce41a58651666093cf13caa85d694f",
+    "internal_strategy_mechanisms.pdf": "f11fc2f18203ba00bbf59db8cce6aee14537bd8c00ff947f9279310e73fd4fe4",
+    "trac_ik_success_time.svg": "d8bbf8fc25d5cbcf30fb7d699a325074a79073ca64519da8412c0d60355b0ec3",
+    "feasible_reference_trajectories.pdf": "a137010ce44d307bf7faf41cc1e1aafeff41804914bb84ed2997f4357af03022",
+    "feasible_reference_trajectories.png": "7bf10b30d5bb3eef252c31013d6e9b731225c986299b9878a575439e079e10c4",
+    "cost_sources_decomposition.pdf": "f57fc8621e151363ad846bcacd03cd2af205de0dccbf4595d0af4f9c8eb2d48f",
+    "internal_strategy_mechanisms.png": "5aff0df0fd4567c4ee62e2e1b4188d6b1fe0926e3f3ac842d8f29a16b95b08cf",
+    "feasible_reference_trajectories.svg": "48cdbeda42cf57ffb0e7631641eb0ab2fd6ba94d30f0c1cadb6b2dc202ce3ec7",
+    "internal_strategy_mechanisms.svg": "e46c133518420aaff6d98e5815b28174be29434597b166a325653c78ebabdf6b",
+    "cost_sources_decomposition.png": "18df3ba71fd02c91c748c13f68fcf2ca97d4e27e2828e2048f8168fe5a811b9b",
+    "trac_ik_success_time.pdf": "0da952150dfe807df48be255684deb62770a1a6880ae863bb8cd971ceaf9d21a",
+    "trac_ik_success_time.png": "99eeac5cf4bcc9e47e1e5171b890d1f4a465045e0063a64bc39c4281f2b8b03c"
+  },
+  "interpretation_unit": "query or trajectory, never independent repeats/frames",
+  "initial_render_preserved": "Initial report_manifest and render outputs are unchanged; publication figures use ordinary numeric log tick labels to keep every glyph above 5 pt"
+}

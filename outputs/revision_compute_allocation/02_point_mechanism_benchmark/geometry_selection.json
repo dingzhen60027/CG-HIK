@@ -1,0 +1,14 @@
+{
+  "selected": {
+    "panda": [
+      0.02,
+      0.01
+    ],
+    "ur5e": [
+      0.005,
+      0.025
+    ]
+  },
+  "role": "calibration_queries",
+  "timing_scope": "existing pathway labels only; shared gate/reject overhead unmeasured and not imputed for reporting"
+}

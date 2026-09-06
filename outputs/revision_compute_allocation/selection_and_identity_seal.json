@@ -1,0 +1,192 @@
+{
+  "protocol": "revision_compute_allocation_supplementary_v1",
+  "geometry": {
+    "panda": [
+      0.02,
+      0.01
+    ],
+    "ur5e": [
+      0.005,
+      0.025
+    ]
+  },
+  "trac_trajectory_budget_ms": {
+    "panda": 5,
+    "ur5e": 5
+  },
+  "new_test_outcomes_opened": false,
+  "datasets": {
+    "outputs/revision_compute_allocation/02_point_mechanism_benchmark/panda_queries.npz": "8dc18cc4f399854ca3c3ceea7232e9876efdf41af1099faa167f80b9646cd033",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/panda_trajectories.npz": "9894971942d583e4c6a5296356dbdee2567f0318c34e6838a1827fb1a14f27a8",
+    "outputs/revision_compute_allocation/02_point_mechanism_benchmark/panda_identities.json": "9e0af5df1292d7f9f8f40f531fa70eb616c2bc6818b097caa9d422814d6389ae",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/panda_identities.json": "a12e6a9c6d78d2ae5133462501fdf4c84cd3ce52af84aeffb421d5e230ef51bb",
+    "outputs/revision_compute_allocation/02_point_mechanism_benchmark/ur5e_queries.npz": "f1ae1e3edc714917e3f5dca3cb27fcd77f8a218cecbd06bedb86624486074f94",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/ur5e_trajectories.npz": "5821641aa97a917549a1b8168ca3850b7397cdfe86d48f65be96948b1e4db73a",
+    "outputs/revision_compute_allocation/02_point_mechanism_benchmark/ur5e_identities.json": "712e56f4ddbdff998b1325a9ee40e0fd012a65f245f70a9f2247ca63123f8e66",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/ur5e_identities.json": "1dcadcf575eff60232ead330f1fd89ee51f208abea1b1c950829365c2775868f"
+  },
+  "implementation": {
+    "src/confik/revision_compute_allocation/common.py": "984e6d80a5f9a53998af5400d64e06c23df0a694802f57128fe1a9f1339c7ab9",
+    "src/confik/revision_compute_allocation/data.py": "c27b9e377de1f03472fd9f06dccc64af1988035a64ce877a2a45c5a784e60d7c",
+    "src/confik/revision_compute_allocation/figures.py": "d95dc8bd4015b2fd97caa540a3a2bd807c4e35a0b75809a245c50f3432e4f9b8",
+    "src/confik/revision_compute_allocation/decomposition.py": "7e0689dd91378f691468ca808bcbc6e9f09db664a2e28277a5de1a701727db55",
+    "src/confik/revision_compute_allocation/benchmark.py": "eea8a2444dbacf232973309a201e7d0ee11235b849dc413cfa99a798ea88b47e",
+    "src/confik/revision_compute_allocation/reporting.py": "e340f40a43927f6c6776fca5370ea4e18abc5a12d848f1e8845ac5f99018d069",
+    "src/confik/revision_compute_allocation/policies.py": "4545a966a7c7cf64be66e1023ea70f044eec1e09ec2e7d99277df0e32f7239fc",
+    "src/confik/revision_compute_allocation/trac_ik.py": "44f6e756dcd1e3248337c1577c6d2ac60a345d929b442807cf96fdb6636adeaf",
+    "src/confik/revision_compute_allocation/__init__.py": "a15dfea160ca78f5281aa31c8413473edcb6a3e61fb2c6c70a9b56a9286448b8",
+    "src/confik/revision_compute_allocation/record_adapter_correction.py": "32828e1b2c0fbb9aa75fcdc13e1881eb19de35eb303d4a29e967bc847e5803bc",
+    "src/confik/revision_compute_allocation/runner.py": "f23d1c404d20b73831eb5a2f6fba84fa0e418c62280246c07623fa6d93dfc841",
+    "src/confik/revision_compute_allocation/native/trac_adapter.cpp": "be0870c42c720de4c3ebcf099e6a678ea88039ef0bd79b389486844c414e3f18",
+    "src/confik/revision_compute_allocation/native/CMakeLists.txt": "07b1473c094aeda6f3342eca8000e1266c900c236db3b7b82f947aced2a0150e",
+    "src/confik/revision_compute_allocation/native/compat/urdf/model.hpp": "40d62d4723919ddc701c245de0ce08f09b242072c7f0856c1286eab409b20d23"
+  },
+  "frozen_release": {
+    "outputs/release_v4_locked/release_environment.json": "1462bd2ad312f20455297207447a29e818be6b925ed75ffc5c8f3274a3eacabc",
+    "outputs/release_v4_locked/release_manifest.json": "816f6fa7fba2a015eb0f3dd146f76d469dd3ef13d8e7440b8381fcdcc0efee10",
+    "outputs/release_v4_locked/release_equivalence.json": "1c44eec90745aa3db74ee64b4fe486b20790820bbaa5215b0d3bb57f05e86881",
+    "outputs/release_v4_locked/upstream_dependencies.json": "b9a361a0d9853d21d1211ccc6fcf71abecc420f06ffb6bab27b3970ee45494cc",
+    "outputs/release_v4_locked/artifact_manifest.json": "411921ca349bfbcff5c7e7c8c372d750ca9df499677c0d15f84dc4a98155e288",
+    "outputs/release_v4_locked/release_config.yaml": "ddbb48f1d1595d9fae6abb932acc68b6b5914457287e561709fd0e1bbd1b82c0",
+    "outputs/release_v4_locked/ur5e/v4_policy.json": "d4b995bc7e0f84dbd42842a7c3d136976611fba1d69e86746811e0089a202e01",
+    "outputs/release_v4_locked/ur5e/v4_runtime_spec.json": "1182c46580bc47c104bd19e8bef403195dabdf611d3cf685e6199a92c070662a",
+    "outputs/release_v4_locked/ur5e/exact_v4_predictor.ts": "6b1200959425e5cf311ae0b97b4fc99428da396b024efd22759b45745b036178",
+    "outputs/release_v4_locked/panda/v4_policy.json": "09b51eacb19966588716c9a4c5503a91fd27f633ab56711934a860d91510a639",
+    "outputs/release_v4_locked/panda/v4_runtime_spec.json": "45c75cd74a1cce77d4fa7b7078a09a991ff098f90c3abce3a9ed6c2f07c731d9",
+    "outputs/release_v4_locked/panda/exact_v4_predictor.ts": "5383c899d7b790601f28caf6907323ab7284f6802cb9b715a03137cdd9d99217",
+    "outputs/release_v3_locked/panda/seed17/hgb_vectorized_parameters.npz": "b908e309abdeb9d82c85607c9a53666566828851489bc315aced2d949f538156",
+    "outputs/release_v3_locked/panda/seed17/runtime_spec.json": "3175c56284da6b811b15d7fc73b9e542adc8e75ba3e44f4d651af6050fc25203",
+    "outputs/release_v3_locked/panda/seed17/solver_metadata.json": "3f0f58fffefbf1986201841eca948fd4ab115a46af506cbb0a67729fc6518258",
+    "outputs/release_v3_locked/panda/seed17/route_thresholds.json": "d8ef2da2030c09b34e3ea683bf02182560941cbb011544957a7cd4feed164a53",
+    "outputs/release_v3_locked/panda/seed17/seed_bank.npz": "6c31bf5a0c212e132c8ba6962741d33dc72b3c230b7bba33e5f137efac4d423f",
+    "outputs/release_v3_locked/panda/seed17/exact_seed_ensemble.ts": "e2075d2c4048e0b521bd7954f2983fc26946ce82868289b1561636b8f741a062",
+    "outputs/release_v3_locked/panda/seed17/isotonic_calibration_parameters.npz": "6249f14b7ce66c9658c24bf6aacf6d3bb734be9abad0144505030de788c6fa92",
+    "outputs/release_v3_locked/panda/seed17/normalization_parameters.npz": "ee69975a0064c88eba48146c6243f3fb6b1f547b4b7e6c432cf391e703d3b8f8",
+    "outputs/release_v3_locked/ur5e/seed17/hgb_vectorized_parameters.npz": "dfcc052a88c4bf0bb857bedcf43dbd8f580c42eeab7b3f5b36bfd8cedfbf28a0",
+    "outputs/release_v3_locked/ur5e/seed17/runtime_spec.json": "764e859a10dee17f01fe255a8c60d09a8b34ce8ab0464072431bc00d98dd803d",
+    "outputs/release_v3_locked/ur5e/seed17/solver_metadata.json": "764519b20a4ce6757dba6d92dca4f0547bccac2924ec05c2152cce25e3451303",
+    "outputs/release_v3_locked/ur5e/seed17/route_thresholds.json": "bce2606f04aba3b5ec211f78201877ee15c98edd391735cfd3275d99bee7f3cd",
+    "outputs/release_v3_locked/ur5e/seed17/seed_bank.npz": "45f44f3cfe1922b875c3fbc30d52dd49188d0e331f20d5897386c790269c3ca6",
+    "outputs/release_v3_locked/ur5e/seed17/exact_seed_ensemble.ts": "8eb0f12d8b8a4b95d83638bab885e1c2df41e03a682f6fb31636c691829a152a",
+    "outputs/release_v3_locked/ur5e/seed17/isotonic_calibration_parameters.npz": "5a16f9728a7694a6905cadf657e55d6f7863ecfd05d5db4b790b2649c6ff136e",
+    "outputs/release_v3_locked/ur5e/seed17/normalization_parameters.npz": "6aadbef43e7a135cdcb99dbc2aae6f582b678b5165528dd1b6851c602cdca45a"
+  },
+  "config_sha256": "905fa875ed85a3637db4e020eb4fe70a4a46abdca87296bf0314e86604c43f8c",
+  "native_checks": {
+    "panda": {
+      "fk_samples": 100,
+      "max_abs_fk_difference": 5.551115123125783e-16,
+      "joint_names": [
+        "panda_joint1",
+        "panda_joint2",
+        "panda_joint3",
+        "panda_joint4",
+        "panda_joint5",
+        "panda_joint6",
+        "panda_joint7"
+      ],
+      "continuous_mask": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "new_point_queries": 3000,
+      "new_trajectory_frames": 6000,
+      "point_witness_count": 2500,
+      "trajectory_witness_count": 6000,
+      "prior_query_hashes_checked": 63043,
+      "overlap": 0
+    },
+    "ur5e": {
+      "fk_samples": 100,
+      "max_abs_fk_difference": 6.661338147750939e-16,
+      "joint_names": [
+        "shoulder_pan_joint",
+        "shoulder_lift_joint",
+        "elbow_joint",
+        "wrist_1_joint",
+        "wrist_2_joint",
+        "wrist_3_joint"
+      ],
+      "continuous_mask": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "new_point_queries": 3000,
+      "new_trajectory_frames": 6000,
+      "point_witness_count": 2500,
+      "trajectory_witness_count": 6000,
+      "prior_query_hashes_checked": 57688,
+      "overlap": 0
+    }
+  },
+  "trac_ik": {
+    "version": "2.2.0",
+    "commit": "90162ac2ecc6ea8f88c6e99df6ee01efd217a3fb",
+    "mode": "Speed",
+    "parallel_workers": 2,
+    "source_unmodified": true,
+    "compatibility": "header spelling urdf/model.hpp -> Humble urdf/model.h",
+    "tolerance": "epsilon=1e-5 for each Cartesian component; stricter than 1mm Euclidean and 0.00872664626rad norm public bounds; zero extra Twist bounds",
+    "runtime_library_sha256": "689ccb100338a8a50abef94d6e1cc21e7e9975ba3e312c9415a89cdc9ade1e17"
+  },
+  "environment": {
+    "cpu": "x86_64",
+    "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+    "torch": "2.11.0+cu128",
+    "gpu": "Quadro RTX 8000",
+    "torch_intra_threads": 8,
+    "torch_inter_threads": 1,
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "blas_threads": {
+      "OMP_NUM_THREADS": "8",
+      "MKL_NUM_THREADS": "8",
+      "OPENBLAS_NUM_THREADS": "8"
+    }
+  },
+  "adapter_correction": {
+    "reason": "Remove unused original P95 ranking from geometry, reject-only and P50 controls; full CG-HIK untouched",
+    "prior_attempt": "interrupted before completion; all its measurements excluded wholesale, no outcomes inspected for decisions",
+    "preserved_raw_sha256": "50b9c14465c4ed9d3eeb0f367a88318c2088669c54067dd1f23feb27d6034ef8",
+    "prior_seal_sha256": "01c7a3b29cb71c966c4a3a31b9dc3725a08231666a9eaf81da5995081102183a",
+    "models_changed": false,
+    "solver_changed": false,
+    "verifier_changed": false,
+    "parameters_changed": false,
+    "dataset_identities_changed": false,
+    "calibration_repeated": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "analysis": "post-hoc descriptive analysis",
+  "solver_calls": 0,
+  "sources": {
+    "outputs/fresh_transition_v4_test/panda_raw_records.npz": "3fd342579af9c89f0d3e7e8a35553704b385f2635a3b2e46e18e28c7e5e50056",
+    "outputs/fresh_transition_v4_test/ur5e_raw_records.npz": "9ccef959ba19f684791f329dec615569e098954c51161b62afc338d9750b6c8b"
+  },
+  "exact_cost_reconstruction": true,
+  "deployment_e2e_missing": "not imputed"
+}

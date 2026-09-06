@@ -1,0 +1,15 @@
+{
+  "selection_seal_sha256": "38c22554adbcd1185174d4a53578f2a739a7c324392ce96ca45723b31807cd02",
+  "measurement_sources": {
+    "src/confik/revision_compute_allocation/policies.py": "51febb4582f1cff789a6df81d9e22652aa13cb3717cdb06f625f59b2cbe7e587",
+    "src/confik/revision_compute_allocation/benchmark.py": "eea8a2444dbacf232973309a201e7d0ee11235b849dc413cfa99a798ea88b47e",
+    "src/confik/revision_compute_allocation/data.py": "c27b9e377de1f03472fd9f06dccc64af1988035a64ce877a2a45c5a784e60d7c",
+    "src/confik/revision_compute_allocation/runner.py": "3f47a5abc2a15335a0ff69e54d7e081ecb838df71b77d3a10d15860a1aa7a720",
+    "src/confik/revision_compute_allocation/trac_ik.py": "44f6e756dcd1e3248337c1577c6d2ac60a345d929b442807cf96fdb6636adeaf",
+    "src/confik/revision_compute_allocation/native/trac_adapter.cpp": "be0870c42c720de4c3ebcf099e6a678ea88039ef0bd79b389486844c414e3f18"
+  },
+  "corrected_control": "one frozen inference and only the required ranking; no discarded P95 decision",
+  "point_or_trajectory_parameters_changed": false,
+  "calibration_repeated": false,
+  "main_method_unchanged": true
+}

@@ -1,0 +1,16 @@
+{
+  "status": "incomplete_implementation_attempt_not_an_evaluation_result",
+  "reason": {
+    "reason": "Remove unused original P95 ranking from geometry, reject-only and P50 controls; full CG-HIK untouched",
+    "prior_attempt": "interrupted before completion; all its measurements excluded wholesale, no outcomes inspected for decisions",
+    "preserved_raw_sha256": "50b9c14465c4ed9d3eeb0f367a88318c2088669c54067dd1f23feb27d6034ef8",
+    "prior_seal_sha256": "01c7a3b29cb71c966c4a3a31b9dc3725a08231666a9eaf81da5995081102183a",
+    "models_changed": false,
+    "solver_changed": false,
+    "verifier_changed": false,
+    "parameters_changed": false,
+    "dataset_identities_changed": false,
+    "calibration_repeated": false
+  },
+  "progress_at_interruption": "Panda progress last reported 1425/3000; UR5e and trajectories had not started"
+}

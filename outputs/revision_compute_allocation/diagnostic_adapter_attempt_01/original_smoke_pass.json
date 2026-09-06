@@ -1,0 +1,32 @@
+{
+  "panda": {
+    "point_count": 20,
+    "witnesses": 16,
+    "trajectory_frames": 32,
+    "successes": {
+      "always_hard": 15,
+      "geometry_threshold": 15,
+      "reject_only_hard": 15,
+      "routing_only": 15,
+      "p50_selection": 15,
+      "full_cghik": 15,
+      "trac_ik_5ms": 16
+    },
+    "fixed_hard_semantic_equivalence": true
+  },
+  "ur5e": {
+    "point_count": 20,
+    "witnesses": 16,
+    "trajectory_frames": 32,
+    "successes": {
+      "always_hard": 16,
+      "geometry_threshold": 16,
+      "reject_only_hard": 16,
+      "routing_only": 16,
+      "p50_selection": 16,
+      "full_cghik": 16,
+      "trac_ik_5ms": 16
+    },
+    "fixed_hard_semantic_equivalence": true
+  }
+}

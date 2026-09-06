@@ -1,0 +1,33 @@
+{
+  "protocol": "revision_compute_allocation_supplementary_v1",
+  "role": "supplementary evaluation",
+  "old_decomposition": "post-hoc descriptive analysis",
+  "independent_units": "point queries (3 technical repeats) and complete trajectories (150 dependent frames)",
+  "confidence_intervals": "paired family-stratified percentile bootstrap 95%; descriptive, not multiplicity-adjusted",
+  "files": {
+    "reports/cost_sources_decomposition.svg": "89e0be9ee7a6fb329bc97c94077c9e3cddf405175bbfe90f1901b87e7db95866",
+    "reports/trajectory_main_table.csv": "96c4d8972ca4e69f48ba264171d392f740457c0606e0dce528594eb3974748bd",
+    "reports/internal_strategy_mechanisms.pdf": "76132d0cbc2845d9b03e506a837a5160d3029e9f18654ff8c8e205e7a9b1c742",
+    "reports/trac_ik_success_time.svg": "185a37b53a9396705d6593e8b8450f0fe89a32aff9bed217dba485fdeba088b2",
+    "reports/feasible_reference_trajectories.pdf": "971a795f0a2029daaba34d1598fbf5b230ea51282f23540cee00ecfaef5b1d53",
+    "reports/point_query_units.csv": "f896ad39cf36893cf8e3b096363942d03092e2c586ee0883e226381bea157126",
+    "reports/trajectory_units.csv": "a16d34040de479d3e0b7f5a104e7f33672e5d82eb69ec75e9413f093d07777f7",
+    "reports/external_success_time_curve.csv": "5b46afaea52bb5373541e08fb8ca7671e8e5c24239e0418ce44644968be42c7a",
+    "reports/feasible_reference_trajectories.png": "7bf10b30d5bb3eef252c31013d6e9b731225c986299b9878a575439e079e10c4",
+    "reports/cost_sources_decomposition.pdf": "02a21210cd601420a5c14b388a05505b126ffb94c9d1ba467572cc4cdbdb57a9",
+    "reports/feasible_trajectory_savings_decomposition.csv": "486a5bee67dcb706b15a3f3aecdf8ad8629033a539651e8cd7a73c6aec503b6c",
+    "reports/internal_strategy_mechanisms.png": "5aff0df0fd4567c4ee62e2e1b4188d6b1fe0926e3f3ac842d8f29a16b95b08cf",
+    "reports/feasible_reference_trajectories.svg": "2e2254e5192c56a78d1e80ee2187383479768939ba596c3d80603359d492babf",
+    "reports/point_paired_comparisons.csv": "ad60f0136d684f1e4e6f2ad64f496c5bb349a3d53f87a2372230868b9e1ed5ee",
+    "reports/point_main_table.csv": "f939950c960dc3185e4af58fec399ba673884d4e9bf0d4bafa480b76567d8606",
+    "reports/internal_strategy_mechanisms.svg": "9fa519e2a5cfce1dc610e1dcef1897032d44d755076a46cefbe2b85ffadd351a",
+    "reports/oracle_crossfit_summary.csv": "8c8cbd81f264a4264ab97635813bb348a63c0adb256a561cac2f207c5d51f3ae",
+    "reports/supplementary_tables.json": "244b514937055047faf72b3890837106f091b0cbf4a1e5cb1e5ef2aaed0c87c2",
+    "reports/oracle_crossfit_query_details.csv": "f4a60e93366aa3a17af2ff0c30dd174d12601a4b1dcec5c76f8f62494e90035b",
+    "reports/early_rejection_events.csv": "ce5711f9d8438d8f36fb34da85bb51b29de24114da746568ede8889579da3879",
+    "reports/trajectory_paired_comparisons.csv": "8e41b2e050480b7aef5726404859e152880c4f838d871984e93a68958382c68a",
+    "reports/cost_sources_decomposition.png": "18df3ba71fd02c91c748c13f68fcf2ca97d4e27e2828e2048f8168fe5a811b9b",
+    "reports/trac_ik_success_time.pdf": "4717710976c96a02ea5834c981ff5ce7c26fe80470008ede756d896ceb38f277",
+    "reports/trac_ik_success_time.png": "9279384e61d5f5943af12daff599d81dccbcbc25d13d8597cc92e345c8bdc2d1"
+  }
+}

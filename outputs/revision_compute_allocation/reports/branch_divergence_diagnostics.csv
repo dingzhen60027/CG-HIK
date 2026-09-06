@@ -1,0 +1,4 @@
+robot,uid,family,first_command_divergence_frame,divergence_same_input,first_command_difference_max_rad,first_failure_frame,first_failure_route,first_failure_reason,first_failure_stages,hard_accepted_same_frame,previous_state_difference_at_failure_max_rad
+panda,c27ce734147fac572ca1ddd088565aeb5f022220251ef6f10a5d3db6670559b0,near_singular,0,True,0.001645859214477241,125,easy,all_cascade_stages_failed,"[""easy"", ""medium"", ""hard""]",True,0.0795990577053135
+panda,f69a8f1f6eef07cefc66000053424135c5ec7250cc78d7cb2319c6615f8a8060,near_singular,0,True,0.001727622700855136,96,easy,all_cascade_stages_failed,"[""easy"", ""medium"", ""hard""]",True,0.07837944882604028
+panda,05fed739bf62f4fdcb2405ecaae33d1d21420a4ab0f81376b77841fb57661365,near_singular,0,True,0.001869270927272737,120,easy,all_cascade_stages_failed,"[""easy"", ""medium"", ""hard""]",True,0.08663470236863624

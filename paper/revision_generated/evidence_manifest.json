@@ -1,0 +1,36 @@
+{
+  "role": "supplementary evaluation, exported after findings report and before manuscript rewrite",
+  "findings_sha256": "7c56df4e591166ffa1dfd6c4a78736fdbf3f0ffac5db84547ec012b21c0d7c3e",
+  "inputs": {
+    "reports/point_main_table.csv": "f939950c960dc3185e4af58fec399ba673884d4e9bf0d4bafa480b76567d8606",
+    "reports/point_paired_comparisons.csv": "ad60f0136d684f1e4e6f2ad64f496c5bb349a3d53f87a2372230868b9e1ed5ee",
+    "reports/oracle_crossfit_summary.csv": "8c8cbd81f264a4264ab97635813bb348a63c0adb256a561cac2f207c5d51f3ae",
+    "reports/trajectory_main_table.csv": "96c4d8972ca4e69f48ba264171d392f740457c0606e0dce528594eb3974748bd",
+    "reports/trajectory_paired_comparisons.csv": "8e41b2e050480b7aef5726404859e152880c4f838d871984e93a68958382c68a",
+    "reports/feasible_trajectory_savings_decomposition.csv": "486a5bee67dcb706b15a3f3aecdf8ad8629033a539651e8cd7a73c6aec503b6c",
+    "reports/branch_divergence_diagnostics.csv": "a5264683fda32167e6aabaf5bf980a600cb110224680cc847861082cd1e74ec9",
+    "reports/external_verifier_rejections.csv": "296acf0e53d233add993d5554efb23a28f57e17f8a650de4a3411680b0fd7c44",
+    "01_existing_result_decomposition/trajectory_savings_decomposition.csv": "08bfa07287cdb402da6154c87e60b13838ef1b8be4758e14a8d40e8193356a71",
+    "01_existing_result_decomposition/same_population_routing_comparison.csv": "14d8bca356ad7ff2c2100b38195a44fb234099ee4e1b4ad386551112e901a810"
+  },
+  "figures": {
+    "internal_strategy_mechanisms.pdf": "f11fc2f18203ba00bbf59db8cce6aee14537bd8c00ff947f9279310e73fd4fe4",
+    "feasible_reference_trajectories.pdf": "a137010ce44d307bf7faf41cc1e1aafeff41804914bb84ed2997f4357af03022",
+    "cost_sources_decomposition.pdf": "f57fc8621e151363ad846bcacd03cd2af205de0dccbf4595d0af4f9c8eb2d48f",
+    "trac_ik_success_time.pdf": "0da952150dfe807df48be255684deb62770a1a6880ae863bb8cd971ceaf9d21a"
+  },
+  "tables": {
+    "family_rows.tex": "1129766e07ac08496199f6386645b1e729dbc22e149e0463083404cf296ddd2b",
+    "point_internal_rows.tex": "00ff86d0dceb5223d0c7ccc268e2e114f7105f4dc737efbf8707b7ce31b8e00a",
+    "p95_ablation_rows.tex": "31ad810d6f0d4fab7455215e56d6c6b4a5d59f04a118b91dd4c26cf6ec3b3764",
+    "oracle_rows.tex": "3acee04acd1e0bbb470cd5d313fedbd73448dcd9c5172a7adcd1d76cb529bade",
+    "trajectory_rows.tex": "1c07e26fb9c527eb3e7956b049938b986d57c68ee33d49f306bca3745024d1f6",
+    "point_external_rows.tex": "ec838045b14b53e59ff7176e3a1b9add482c1734fd5be5f7edba440fbfc3d811",
+    "old_decomposition_rows.tex": "0ccf68d25717e005dd65feb3c923b4c8e3554c20cfd563fe58c648b588fa2061",
+    "point_paired_rows.tex": "67dde79f5df3ef48a2928e788c9a8ac8a90b71f60e034e0ef4401d308a1a3337",
+    "trajectory_paired_rows.tex": "68877369c5c4bb51fee51f6d4ee65f7d7a94d48da144ddde521f940145fdd88d",
+    "same_population_rows.tex": "7c4deee5ca4bd7671b45c7d79981dbf6dd19b958551caa7ec139147d761a4f88"
+  },
+  "old_source_data_unchanged": true,
+  "no_solver_calls": true
+}
