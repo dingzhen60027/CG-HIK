@@ -1,0 +1,1342 @@
+{
+  "state": {
+    "site_id": "state_14",
+    "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+    "family": "near_singular",
+    "seed": 970907014,
+    "status": "available",
+    "candidate_count": 6,
+    "first_history_or_center_failure": null,
+    "first_history_or_center_failure_kind": null,
+    "history_latency_ns": 43435851,
+    "center_latency_ns": 474574,
+    "selected": {
+      "original": "candidate_00",
+      "nearest": "candidate_00",
+      "max_scaled_sigma_min": "candidate_04",
+      "max_scaled_manipulability": "candidate_04",
+      "hindsight": "candidate_01"
+    },
+    "outcomes": {
+      "original": {
+        "site_id": "state_14",
+        "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+        "family": "near_singular",
+        "candidate_id": "candidate_00",
+        "source": "original_trac",
+        "q": [
+          2.4668384905780694,
+          0.22850866254833804,
+          -1.819687172539125,
+          -0.33521522849501284,
+          -1.2982903121457678,
+          0.2189558108222837,
+          0.4377617990495719
+        ],
+        "completed_repeats": 4,
+        "window_completion_rate": 0.8,
+        "mean_prefix": 29.4,
+        "median_prefix": 30.0,
+        "prefixes": [
+          30,
+          27,
+          30,
+          30,
+          30
+        ],
+        "first_failure_frames": [
+          null,
+          102,
+          null,
+          null,
+          null
+        ],
+        "first_failure_kinds": {
+          "solver_failure": 1
+        },
+        "cumulative_latency_ms": {
+          "n": 5,
+          "mean": 23.2640092,
+          "median": 22.78305,
+          "p95": 30.142312399999998,
+          "minimum": 17.906883,
+          "maximum": 31.688975
+        },
+        "run_ids": [
+          "state_14_candidate_00_r0",
+          "state_14_candidate_00_r1",
+          "state_14_candidate_00_r2",
+          "state_14_candidate_00_r3",
+          "state_14_candidate_00_r4"
+        ],
+        "features": {
+          "candidate_id": "candidate_00",
+          "distance_to_previous": 0.011471931287366033,
+          "scaled_singular_values": [
+            29.011163974363168,
+            16.41223979461279,
+            9.817600508347018,
+            9.00547274853654,
+            2.514429426317693,
+            0.05303418999766949
+          ],
+          "scaled_sigma_min": 0.05303418999766949,
+          "scaled_log_manipulability": 8.632944757165566,
+          "unscaled_singular_values": [
+            1.974338396846831,
+            1.5463257075123666,
+            1.0048999800108844,
+            0.49096506979333665,
+            0.13516743473869888,
+            0.0016374547007618817
+          ],
+          "unscaled_sigma_min": 0.0016374547007618817,
+          "unscaled_log_manipulability": -8.006232587853466,
+          "position_residual_vector": [
+            5.545720051930436e-08,
+            1.3741884442586283e-06,
+            2.1341645006778265e-08
+          ],
+          "orientation_residual_vector": [
+            -3.734814997141722e-06,
+            -2.7135436019184344e-08,
+            -2.18552241985623e-07
+          ],
+          "normalized_residual_norm": 0.0014407383983799853,
+          "current": {
+            "candidate_available": true,
+            "finite": true,
+            "verifier_accepted": true,
+            "verification_reasons": [],
+            "q": [
+              2.4668384905780694,
+              0.22850866254833804,
+              -1.819687172539125,
+              -0.33521522849501284,
+              -1.2982903121457678,
+              0.2189558108222837,
+              0.4377617990495719
+            ],
+            "position_error": 1.3754725905066166e-06,
+            "orientation_error": 3.741302510789473e-06,
+            "joint_limit_margin": 0.23645581082228367,
+            "max_velocity_utilization": 0.14112567950722246,
+            "velocity_margin_rad": 0.0387604191124776,
+            "contract_velocity_utilization": 0.14085584073187404,
+            "velocity_excess_rad": -0.0387604191124776,
+            "velocity_utilization_per_joint": [
+              0.005204409644202085,
+              0.11099956164042199,
+              0.04148305573951408,
+              0.04085984600886044,
+              0.08449759045974285,
+              0.10097433632617778,
+              0.14085584073187404
+            ],
+            "sigma_min": 0.0016374547007618817
+          }
+        }
+      },
+      "nearest": {
+        "site_id": "state_14",
+        "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+        "family": "near_singular",
+        "candidate_id": "candidate_00",
+        "source": "original_trac",
+        "q": [
+          2.4668384905780694,
+          0.22850866254833804,
+          -1.819687172539125,
+          -0.33521522849501284,
+          -1.2982903121457678,
+          0.2189558108222837,
+          0.4377617990495719
+        ],
+        "completed_repeats": 4,
+        "window_completion_rate": 0.8,
+        "mean_prefix": 29.4,
+        "median_prefix": 30.0,
+        "prefixes": [
+          30,
+          27,
+          30,
+          30,
+          30
+        ],
+        "first_failure_frames": [
+          null,
+          102,
+          null,
+          null,
+          null
+        ],
+        "first_failure_kinds": {
+          "solver_failure": 1
+        },
+        "cumulative_latency_ms": {
+          "n": 5,
+          "mean": 23.2640092,
+          "median": 22.78305,
+          "p95": 30.142312399999998,
+          "minimum": 17.906883,
+          "maximum": 31.688975
+        },
+        "run_ids": [
+          "state_14_candidate_00_r0",
+          "state_14_candidate_00_r1",
+          "state_14_candidate_00_r2",
+          "state_14_candidate_00_r3",
+          "state_14_candidate_00_r4"
+        ],
+        "features": {
+          "candidate_id": "candidate_00",
+          "distance_to_previous": 0.011471931287366033,
+          "scaled_singular_values": [
+            29.011163974363168,
+            16.41223979461279,
+            9.817600508347018,
+            9.00547274853654,
+            2.514429426317693,
+            0.05303418999766949
+          ],
+          "scaled_sigma_min": 0.05303418999766949,
+          "scaled_log_manipulability": 8.632944757165566,
+          "unscaled_singular_values": [
+            1.974338396846831,
+            1.5463257075123666,
+            1.0048999800108844,
+            0.49096506979333665,
+            0.13516743473869888,
+            0.0016374547007618817
+          ],
+          "unscaled_sigma_min": 0.0016374547007618817,
+          "unscaled_log_manipulability": -8.006232587853466,
+          "position_residual_vector": [
+            5.545720051930436e-08,
+            1.3741884442586283e-06,
+            2.1341645006778265e-08
+          ],
+          "orientation_residual_vector": [
+            -3.734814997141722e-06,
+            -2.7135436019184344e-08,
+            -2.18552241985623e-07
+          ],
+          "normalized_residual_norm": 0.0014407383983799853,
+          "current": {
+            "candidate_available": true,
+            "finite": true,
+            "verifier_accepted": true,
+            "verification_reasons": [],
+            "q": [
+              2.4668384905780694,
+              0.22850866254833804,
+              -1.819687172539125,
+              -0.33521522849501284,
+              -1.2982903121457678,
+              0.2189558108222837,
+              0.4377617990495719
+            ],
+            "position_error": 1.3754725905066166e-06,
+            "orientation_error": 3.741302510789473e-06,
+            "joint_limit_margin": 0.23645581082228367,
+            "max_velocity_utilization": 0.14112567950722246,
+            "velocity_margin_rad": 0.0387604191124776,
+            "contract_velocity_utilization": 0.14085584073187404,
+            "velocity_excess_rad": -0.0387604191124776,
+            "velocity_utilization_per_joint": [
+              0.005204409644202085,
+              0.11099956164042199,
+              0.04148305573951408,
+              0.04085984600886044,
+              0.08449759045974285,
+              0.10097433632617778,
+              0.14085584073187404
+            ],
+            "sigma_min": 0.0016374547007618817
+          }
+        }
+      },
+      "max_scaled_sigma_min": {
+        "site_id": "state_14",
+        "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+        "family": "near_singular",
+        "candidate_id": "candidate_04",
+        "source": "pose_matched",
+        "q": [
+          2.4450384905780695,
+          0.23225408576523932,
+          -1.8230860813872125,
+          -0.33013095961439803,
+          -1.2827854941103642,
+          0.22193713498400727,
+          0.4281736170012961
+        ],
+        "completed_repeats": 0,
+        "window_completion_rate": 0.0,
+        "mean_prefix": 27.0,
+        "median_prefix": 27.0,
+        "prefixes": [
+          27,
+          27,
+          27,
+          27,
+          27
+        ],
+        "first_failure_frames": [
+          102,
+          102,
+          102,
+          102,
+          102
+        ],
+        "first_failure_kinds": {
+          "solver_failure": 5
+        },
+        "cumulative_latency_ms": {
+          "n": 5,
+          "mean": 32.5925952,
+          "median": 31.974042,
+          "p95": 34.807357,
+          "minimum": 31.255161,
+          "maximum": 35.19288
+        },
+        "run_ids": [
+          "state_14_candidate_04_r0",
+          "state_14_candidate_04_r1",
+          "state_14_candidate_04_r2",
+          "state_14_candidate_04_r3",
+          "state_14_candidate_04_r4"
+        ],
+        "features": {
+          "candidate_id": "candidate_04",
+          "distance_to_previous": 0.03135678888517165,
+          "scaled_singular_values": [
+            29.0142248015717,
+            16.408276180470015,
+            9.822632765893301,
+            9.010025435170046,
+            2.522830357013437,
+            0.06063268811555822
+          ],
+          "scaled_sigma_min": 0.06063268811555822,
+          "scaled_log_manipulability": 8.771059461602196,
+          "unscaled_singular_values": [
+            1.9742899418318927,
+            1.5481908131702584,
+            1.0022334553874173,
+            0.4906169078604272,
+            0.13601977385489308,
+            0.001893375799782531
+          ],
+          "unscaled_sigma_min": 0.001893375799782531,
+          "unscaled_log_manipulability": -7.856913790231185,
+          "position_residual_vector": [
+            5.545720053318215e-08,
+            1.3741884442863839e-06,
+            2.1341645006778265e-08
+          ],
+          "orientation_residual_vector": [
+            -3.7348149970370563e-06,
+            -2.7135435936131e-08,
+            -2.185522420064552e-07
+          ],
+          "normalized_residual_norm": 0.001440738398403451,
+          "current": {
+            "candidate_available": true,
+            "finite": true,
+            "verifier_accepted": true,
+            "verification_reasons": [],
+            "q": [
+              2.4450384905780695,
+              0.23225408576523932,
+              -1.8230860813872125,
+              -0.33013095961439803,
+              -1.2827854941103642,
+              0.22193713498400727,
+              0.4281736170012961
+            ],
+            "position_error": 1.3754725905349059e-06,
+            "orientation_error": 3.7413025106856034e-06,
+            "joint_limit_margin": 0.23943713498400726,
+            "max_velocity_utilization": 0.4959330514830485,
+            "velocity_margin_rad": 0.02202691226048739,
+            "contract_velocity_utilization": 0.4947955903557938,
+            "velocity_excess_rad": -0.02202691226048739,
+            "velocity_utilization_per_joint": [
+              0.4947955903557938,
+              0.025095359417915745,
+              0.11943968069564866,
+              0.07575182556487364,
+              0.2119616453988346,
+              0.15797862240119856,
+              0.3241862814254845
+            ],
+            "sigma_min": 0.001893375799782531
+          }
+        }
+      },
+      "max_scaled_manipulability": {
+        "site_id": "state_14",
+        "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+        "family": "near_singular",
+        "candidate_id": "candidate_04",
+        "source": "pose_matched",
+        "q": [
+          2.4450384905780695,
+          0.23225408576523932,
+          -1.8230860813872125,
+          -0.33013095961439803,
+          -1.2827854941103642,
+          0.22193713498400727,
+          0.4281736170012961
+        ],
+        "completed_repeats": 0,
+        "window_completion_rate": 0.0,
+        "mean_prefix": 27.0,
+        "median_prefix": 27.0,
+        "prefixes": [
+          27,
+          27,
+          27,
+          27,
+          27
+        ],
+        "first_failure_frames": [
+          102,
+          102,
+          102,
+          102,
+          102
+        ],
+        "first_failure_kinds": {
+          "solver_failure": 5
+        },
+        "cumulative_latency_ms": {
+          "n": 5,
+          "mean": 32.5925952,
+          "median": 31.974042,
+          "p95": 34.807357,
+          "minimum": 31.255161,
+          "maximum": 35.19288
+        },
+        "run_ids": [
+          "state_14_candidate_04_r0",
+          "state_14_candidate_04_r1",
+          "state_14_candidate_04_r2",
+          "state_14_candidate_04_r3",
+          "state_14_candidate_04_r4"
+        ],
+        "features": {
+          "candidate_id": "candidate_04",
+          "distance_to_previous": 0.03135678888517165,
+          "scaled_singular_values": [
+            29.0142248015717,
+            16.408276180470015,
+            9.822632765893301,
+            9.010025435170046,
+            2.522830357013437,
+            0.06063268811555822
+          ],
+          "scaled_sigma_min": 0.06063268811555822,
+          "scaled_log_manipulability": 8.771059461602196,
+          "unscaled_singular_values": [
+            1.9742899418318927,
+            1.5481908131702584,
+            1.0022334553874173,
+            0.4906169078604272,
+            0.13601977385489308,
+            0.001893375799782531
+          ],
+          "unscaled_sigma_min": 0.001893375799782531,
+          "unscaled_log_manipulability": -7.856913790231185,
+          "position_residual_vector": [
+            5.545720053318215e-08,
+            1.3741884442863839e-06,
+            2.1341645006778265e-08
+          ],
+          "orientation_residual_vector": [
+            -3.7348149970370563e-06,
+            -2.7135435936131e-08,
+            -2.185522420064552e-07
+          ],
+          "normalized_residual_norm": 0.001440738398403451,
+          "current": {
+            "candidate_available": true,
+            "finite": true,
+            "verifier_accepted": true,
+            "verification_reasons": [],
+            "q": [
+              2.4450384905780695,
+              0.23225408576523932,
+              -1.8230860813872125,
+              -0.33013095961439803,
+              -1.2827854941103642,
+              0.22193713498400727,
+              0.4281736170012961
+            ],
+            "position_error": 1.3754725905349059e-06,
+            "orientation_error": 3.7413025106856034e-06,
+            "joint_limit_margin": 0.23943713498400726,
+            "max_velocity_utilization": 0.4959330514830485,
+            "velocity_margin_rad": 0.02202691226048739,
+            "contract_velocity_utilization": 0.4947955903557938,
+            "velocity_excess_rad": -0.02202691226048739,
+            "velocity_utilization_per_joint": [
+              0.4947955903557938,
+              0.025095359417915745,
+              0.11943968069564866,
+              0.07575182556487364,
+              0.2119616453988346,
+              0.15797862240119856,
+              0.3241862814254845
+            ],
+            "sigma_min": 0.001893375799782531
+          }
+        }
+      },
+      "hindsight": {
+        "site_id": "state_14",
+        "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+        "family": "near_singular",
+        "candidate_id": "candidate_01",
+        "source": "pose_matched",
+        "q": [
+          2.4777384905780693,
+          0.22686845611727163,
+          -1.8193591165981005,
+          -0.3378318384543588,
+          -1.3047359762498305,
+          0.2176380671477474,
+          0.4424859007705034
+        ],
+        "completed_repeats": 5,
+        "window_completion_rate": 1.0,
+        "mean_prefix": 30.0,
+        "median_prefix": 30.0,
+        "prefixes": [
+          30,
+          30,
+          30,
+          30,
+          30
+        ],
+        "first_failure_frames": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "first_failure_kinds": {},
+        "cumulative_latency_ms": {
+          "n": 5,
+          "mean": 16.3982606,
+          "median": 16.139108,
+          "p95": 17.3840316,
+          "minimum": 15.835829,
+          "maximum": 17.635713
+        },
+        "run_ids": [
+          "state_14_candidate_01_r0",
+          "state_14_candidate_01_r1",
+          "state_14_candidate_01_r2",
+          "state_14_candidate_01_r3",
+          "state_14_candidate_01_r4"
+        ],
+        "features": {
+          "candidate_id": "candidate_01",
+          "distance_to_previous": 0.018112641818140925,
+          "scaled_singular_values": [
+            29.012476799060774,
+            16.412649219948143,
+            9.812916461821978,
+            9.003522481958047,
+            2.5108198083004165,
+            0.04999393918371431
+          ],
+          "scaled_sigma_min": 0.04999393918371431,
+          "scaled_log_manipulability": 8.571849534615056,
+          "unscaled_singular_values": [
+            1.9743582952844245,
+            1.5457818357688435,
+            1.0056619142444276,
+            0.4911181978914138,
+            0.13480641130511686,
+            0.001532591168979765
+          ],
+          "unscaled_sigma_min": 0.001532591168979765,
+          "unscaled_log_manipulability": -8.0743621702874,
+          "position_residual_vector": [
+            5.545720051236547e-08,
+            1.3741884442586283e-06,
+            2.134164522882287e-08
+          ],
+          "orientation_residual_vector": [
+            -3.734814997138543e-06,
+            -2.713543602019243e-08,
+            -2.1855224214100006e-07
+          ],
+          "normalized_residual_norm": 0.0014407383983832088,
+          "current": {
+            "candidate_available": true,
+            "finite": true,
+            "verifier_accepted": true,
+            "verification_reasons": [],
+            "q": [
+              2.4777384905780693,
+              0.22686845611727163,
+              -1.8193591165981005,
+              -0.3378318384543588,
+              -1.3047359762498305,
+              0.2176380671477474,
+              0.4424859007705034
+            ],
+            "position_error": 1.375472590509782e-06,
+            "orientation_error": 3.7413025107953835e-06,
+            "joint_limit_margin": 0.23513806714774738,
+            "max_velocity_utilization": 0.2557910864479798,
+            "velocity_margin_rad": 0.03247308773951288,
+            "contract_velocity_utilization": 0.2552044096442,
+            "velocity_excess_rad": -0.03247308773951288,
+            "velocity_utilization_per_joint": [
+              0.2552044096442,
+              0.14861897519699102,
+              0.03395883690867497,
+              0.10087383590211695,
+              0.20774164598675365,
+              0.07577847256831356,
+              0.05052884797983737
+            ],
+            "sigma_min": 0.001532591168979765
+          }
+        }
+      }
+    },
+    "group": "mixed",
+    "pool_any_success": true,
+    "pool_stable_success": true,
+    "stable_classical_miss": true,
+    "stable_configuration_contrast": true,
+    "generation_latency_ns": 43647336,
+    "projection_latency_ns": 43424209,
+    "projection_residual_calls": 238,
+    "scoring_latency_ns": {
+      "original": 246,
+      "nearest": 14761,
+      "max_scaled_sigma_min": 1193528,
+      "max_scaled_manipulability": 1035937
+    },
+    "auxiliary_latency_ns": 3225413
+  },
+  "candidates": [
+    {
+      "site_id": "state_14",
+      "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+      "family": "near_singular",
+      "candidate_id": "candidate_00",
+      "source": "original_trac",
+      "q": [
+        2.4668384905780694,
+        0.22850866254833804,
+        -1.819687172539125,
+        -0.33521522849501284,
+        -1.2982903121457678,
+        0.2189558108222837,
+        0.4377617990495719
+      ],
+      "completed_repeats": 4,
+      "window_completion_rate": 0.8,
+      "mean_prefix": 29.4,
+      "median_prefix": 30.0,
+      "prefixes": [
+        30,
+        27,
+        30,
+        30,
+        30
+      ],
+      "first_failure_frames": [
+        null,
+        102,
+        null,
+        null,
+        null
+      ],
+      "first_failure_kinds": {
+        "solver_failure": 1
+      },
+      "cumulative_latency_ms": {
+        "n": 5,
+        "mean": 23.2640092,
+        "median": 22.78305,
+        "p95": 30.142312399999998,
+        "minimum": 17.906883,
+        "maximum": 31.688975
+      },
+      "run_ids": [
+        "state_14_candidate_00_r0",
+        "state_14_candidate_00_r1",
+        "state_14_candidate_00_r2",
+        "state_14_candidate_00_r3",
+        "state_14_candidate_00_r4"
+      ],
+      "features": {
+        "candidate_id": "candidate_00",
+        "distance_to_previous": 0.011471931287366033,
+        "scaled_singular_values": [
+          29.011163974363168,
+          16.41223979461279,
+          9.817600508347018,
+          9.00547274853654,
+          2.514429426317693,
+          0.05303418999766949
+        ],
+        "scaled_sigma_min": 0.05303418999766949,
+        "scaled_log_manipulability": 8.632944757165566,
+        "unscaled_singular_values": [
+          1.974338396846831,
+          1.5463257075123666,
+          1.0048999800108844,
+          0.49096506979333665,
+          0.13516743473869888,
+          0.0016374547007618817
+        ],
+        "unscaled_sigma_min": 0.0016374547007618817,
+        "unscaled_log_manipulability": -8.006232587853466,
+        "position_residual_vector": [
+          5.545720051930436e-08,
+          1.3741884442586283e-06,
+          2.1341645006778265e-08
+        ],
+        "orientation_residual_vector": [
+          -3.734814997141722e-06,
+          -2.7135436019184344e-08,
+          -2.18552241985623e-07
+        ],
+        "normalized_residual_norm": 0.0014407383983799853,
+        "current": {
+          "candidate_available": true,
+          "finite": true,
+          "verifier_accepted": true,
+          "verification_reasons": [],
+          "q": [
+            2.4668384905780694,
+            0.22850866254833804,
+            -1.819687172539125,
+            -0.33521522849501284,
+            -1.2982903121457678,
+            0.2189558108222837,
+            0.4377617990495719
+          ],
+          "position_error": 1.3754725905066166e-06,
+          "orientation_error": 3.741302510789473e-06,
+          "joint_limit_margin": 0.23645581082228367,
+          "max_velocity_utilization": 0.14112567950722246,
+          "velocity_margin_rad": 0.0387604191124776,
+          "contract_velocity_utilization": 0.14085584073187404,
+          "velocity_excess_rad": -0.0387604191124776,
+          "velocity_utilization_per_joint": [
+            0.005204409644202085,
+            0.11099956164042199,
+            0.04148305573951408,
+            0.04085984600886044,
+            0.08449759045974285,
+            0.10097433632617778,
+            0.14085584073187404
+          ],
+          "sigma_min": 0.0016374547007618817
+        }
+      }
+    },
+    {
+      "site_id": "state_14",
+      "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+      "family": "near_singular",
+      "candidate_id": "candidate_01",
+      "source": "pose_matched",
+      "q": [
+        2.4777384905780693,
+        0.22686845611727163,
+        -1.8193591165981005,
+        -0.3378318384543588,
+        -1.3047359762498305,
+        0.2176380671477474,
+        0.4424859007705034
+      ],
+      "completed_repeats": 5,
+      "window_completion_rate": 1.0,
+      "mean_prefix": 30.0,
+      "median_prefix": 30.0,
+      "prefixes": [
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "first_failure_frames": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "first_failure_kinds": {},
+      "cumulative_latency_ms": {
+        "n": 5,
+        "mean": 16.3982606,
+        "median": 16.139108,
+        "p95": 17.3840316,
+        "minimum": 15.835829,
+        "maximum": 17.635713
+      },
+      "run_ids": [
+        "state_14_candidate_01_r0",
+        "state_14_candidate_01_r1",
+        "state_14_candidate_01_r2",
+        "state_14_candidate_01_r3",
+        "state_14_candidate_01_r4"
+      ],
+      "features": {
+        "candidate_id": "candidate_01",
+        "distance_to_previous": 0.018112641818140925,
+        "scaled_singular_values": [
+          29.012476799060774,
+          16.412649219948143,
+          9.812916461821978,
+          9.003522481958047,
+          2.5108198083004165,
+          0.04999393918371431
+        ],
+        "scaled_sigma_min": 0.04999393918371431,
+        "scaled_log_manipulability": 8.571849534615056,
+        "unscaled_singular_values": [
+          1.9743582952844245,
+          1.5457818357688435,
+          1.0056619142444276,
+          0.4911181978914138,
+          0.13480641130511686,
+          0.001532591168979765
+        ],
+        "unscaled_sigma_min": 0.001532591168979765,
+        "unscaled_log_manipulability": -8.0743621702874,
+        "position_residual_vector": [
+          5.545720051236547e-08,
+          1.3741884442586283e-06,
+          2.134164522882287e-08
+        ],
+        "orientation_residual_vector": [
+          -3.734814997138543e-06,
+          -2.713543602019243e-08,
+          -2.1855224214100006e-07
+        ],
+        "normalized_residual_norm": 0.0014407383983832088,
+        "current": {
+          "candidate_available": true,
+          "finite": true,
+          "verifier_accepted": true,
+          "verification_reasons": [],
+          "q": [
+            2.4777384905780693,
+            0.22686845611727163,
+            -1.8193591165981005,
+            -0.3378318384543588,
+            -1.3047359762498305,
+            0.2176380671477474,
+            0.4424859007705034
+          ],
+          "position_error": 1.375472590509782e-06,
+          "orientation_error": 3.7413025107953835e-06,
+          "joint_limit_margin": 0.23513806714774738,
+          "max_velocity_utilization": 0.2557910864479798,
+          "velocity_margin_rad": 0.03247308773951288,
+          "contract_velocity_utilization": 0.2552044096442,
+          "velocity_excess_rad": -0.03247308773951288,
+          "velocity_utilization_per_joint": [
+            0.2552044096442,
+            0.14861897519699102,
+            0.03395883690867497,
+            0.10087383590211695,
+            0.20774164598675365,
+            0.07577847256831356,
+            0.05052884797983737
+          ],
+          "sigma_min": 0.001532591168979765
+        }
+      }
+    },
+    {
+      "site_id": "state_14",
+      "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+      "family": "near_singular",
+      "candidate_id": "candidate_02",
+      "source": "pose_matched",
+      "q": [
+        2.4559384905780695,
+        0.23030860544410925,
+        -1.8209475150994716,
+        -0.33264966097147186,
+        -1.2909540106747157,
+        0.22039283642896695,
+        0.4329923703735962
+      ],
+      "completed_repeats": 1,
+      "window_completion_rate": 0.2,
+      "mean_prefix": 27.6,
+      "median_prefix": 27.0,
+      "prefixes": [
+        27,
+        27,
+        27,
+        30,
+        27
+      ],
+      "first_failure_frames": [
+        102,
+        102,
+        102,
+        null,
+        102
+      ],
+      "first_failure_kinds": {
+        "solver_failure": 4
+      },
+      "cumulative_latency_ms": {
+        "n": 5,
+        "mean": 31.465960799999998,
+        "median": 33.182737,
+        "p95": 33.898557,
+        "minimum": 24.597653,
+        "maximum": 33.95482
+      },
+      "run_ids": [
+        "state_14_candidate_02_r0",
+        "state_14_candidate_02_r1",
+        "state_14_candidate_02_r2",
+        "state_14_candidate_02_r3",
+        "state_14_candidate_02_r4"
+      ],
+      "features": {
+        "candidate_id": "candidate_02",
+        "distance_to_previous": 0.018278826356143384,
+        "scaled_singular_values": [
+          29.011776029273943,
+          16.41078798114088,
+          9.820801777274562,
+          9.007648593574531,
+          2.5184530461901877,
+          0.05660152469411754
+        ],
+        "scaled_sigma_min": 0.05660152469411754,
+        "scaled_log_manipulability": 8.700143052796262,
+        "unscaled_singular_values": [
+          1.974315577550115,
+          1.5471323121352274,
+          1.003752548646021,
+          0.49079790041346943,
+          0.13557308976421395,
+          0.001758413187217711
+        ],
+        "unscaled_sigma_min": 0.001758413187217711,
+        "unscaled_log_manipulability": -7.9329402782447005,
+        "position_residual_vector": [
+          5.545720054012104e-08,
+          1.3741884442863839e-06,
+          2.1341645006778265e-08
+        ],
+        "orientation_residual_vector": [
+          -3.734814997141722e-06,
+          -2.7135435952974198e-08,
+          -2.1855224176588654e-07
+        ],
+        "normalized_residual_norm": 0.0014407383984068058,
+        "current": {
+          "candidate_available": true,
+          "finite": true,
+          "verifier_accepted": true,
+          "verification_reasons": [],
+          "q": [
+            2.4559384905780695,
+            0.23030860544410925,
+            -1.8209475150994716,
+            -0.33264966097147186,
+            -1.2909540106747157,
+            0.22039283642896695,
+            0.4329923703735962
+          ],
+          "position_error": 1.3754725905351856e-06,
+          "orientation_error": 3.7413025107761567e-06,
+          "joint_limit_margin": 0.23789283642896697,
+          "max_velocity_utilization": 0.24535833883937241,
+          "velocity_margin_rad": 0.0329269122604873,
+          "contract_velocity_utilization": 0.24479559035579584,
+          "velocity_excess_rad": -0.0329269122604873,
+          "velocity_utilization_per_joint": [
+            0.24479559035579584,
+            0.06971646770071543,
+            0.07038999519700427,
+            0.017983445815473946,
+            0.05577586022959045,
+            0.12845092536409877,
+            0.2320495056644875
+          ],
+          "sigma_min": 0.001758413187217711
+        }
+      }
+    },
+    {
+      "site_id": "state_14",
+      "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+      "family": "near_singular",
+      "candidate_id": "candidate_03",
+      "source": "pose_matched",
+      "q": [
+        2.488638490578069,
+        0.225402876930815,
+        -1.820018536452199,
+        -0.34050461633706564,
+        -1.3102306695743284,
+        0.2164521716881956,
+        0.44716944569855566
+      ],
+      "completed_repeats": 5,
+      "window_completion_rate": 1.0,
+      "mean_prefix": 30.0,
+      "median_prefix": 30.0,
+      "prefixes": [
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "first_failure_frames": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "first_failure_kinds": {},
+      "cumulative_latency_ms": {
+        "n": 5,
+        "mean": 17.030311,
+        "median": 16.927575,
+        "p95": 18.162906,
+        "minimum": 16.392084,
+        "maximum": 18.470075
+      },
+      "run_ids": [
+        "state_14_candidate_03_r0",
+        "state_14_candidate_03_r1",
+        "state_14_candidate_03_r2",
+        "state_14_candidate_03_r3",
+        "state_14_candidate_03_r4"
+      ],
+      "features": {
+        "candidate_id": "candidate_03",
+        "distance_to_previous": 0.029705308327168972,
+        "scaled_singular_values": [
+          29.015821911856676,
+          16.41201865760202,
+          9.806627436408313,
+          9.001819069876879,
+          2.507685745728423,
+          0.04755075028709091
+        ],
+        "scaled_sigma_min": 0.04755075028709091,
+        "scaled_log_manipulability": 8.519742880669519,
+        "unscaled_singular_values": [
+          1.9743751148532072,
+          1.5455125962908218,
+          1.0060225080283614,
+          0.4912570710672906,
+          0.13449374703407496,
+          0.0014462386756454678
+        ],
+        "unscaled_sigma_min": 0.0014462386756454678,
+        "unscaled_log_manipulability": -8.134202374165918,
+        "position_residual_vector": [
+          5.545720048460989e-08,
+          1.3741884442863839e-06,
+          2.1341645006778265e-08
+        ],
+        "orientation_residual_vector": [
+          -3.7348149971686213e-06,
+          -2.713543599405726e-08,
+          -2.185522419114504e-07
+        ],
+        "normalized_residual_norm": 0.0014407383984058849,
+        "current": {
+          "candidate_available": true,
+          "finite": true,
+          "verifier_accepted": true,
+          "verification_reasons": [],
+          "q": [
+            2.488638490578069,
+            0.225402876930815,
+            -1.820018536452199,
+            -0.34050461633706564,
+            -1.3102306695743284,
+            0.2164521716881956,
+            0.44716944569855566
+          ],
+          "position_error": 1.3754725905329475e-06,
+          "orientation_error": 3.7413025108118104e-06,
+          "joint_limit_margin": 0.2339521716881956,
+          "max_velocity_utilization": 0.5063657990916559,
+          "velocity_margin_rad": 0.02157308773951297,
+          "contract_velocity_utilization": 0.505204409644198,
+          "velocity_excess_rad": -0.02157308773951297,
+          "velocity_utilization_per_joint": [
+            0.505204409644198,
+            0.1822331767212255,
+            0.04908314548891726,
+            0.16217608091832822,
+            0.31280270381654185,
+            0.05310360718491437,
+            0.03902268028119953
+          ],
+          "sigma_min": 0.0014462386756454678
+        }
+      }
+    },
+    {
+      "site_id": "state_14",
+      "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+      "family": "near_singular",
+      "candidate_id": "candidate_04",
+      "source": "pose_matched",
+      "q": [
+        2.4450384905780695,
+        0.23225408576523932,
+        -1.8230860813872125,
+        -0.33013095961439803,
+        -1.2827854941103642,
+        0.22193713498400727,
+        0.4281736170012961
+      ],
+      "completed_repeats": 0,
+      "window_completion_rate": 0.0,
+      "mean_prefix": 27.0,
+      "median_prefix": 27.0,
+      "prefixes": [
+        27,
+        27,
+        27,
+        27,
+        27
+      ],
+      "first_failure_frames": [
+        102,
+        102,
+        102,
+        102,
+        102
+      ],
+      "first_failure_kinds": {
+        "solver_failure": 5
+      },
+      "cumulative_latency_ms": {
+        "n": 5,
+        "mean": 32.5925952,
+        "median": 31.974042,
+        "p95": 34.807357,
+        "minimum": 31.255161,
+        "maximum": 35.19288
+      },
+      "run_ids": [
+        "state_14_candidate_04_r0",
+        "state_14_candidate_04_r1",
+        "state_14_candidate_04_r2",
+        "state_14_candidate_04_r3",
+        "state_14_candidate_04_r4"
+      ],
+      "features": {
+        "candidate_id": "candidate_04",
+        "distance_to_previous": 0.03135678888517165,
+        "scaled_singular_values": [
+          29.0142248015717,
+          16.408276180470015,
+          9.822632765893301,
+          9.010025435170046,
+          2.522830357013437,
+          0.06063268811555822
+        ],
+        "scaled_sigma_min": 0.06063268811555822,
+        "scaled_log_manipulability": 8.771059461602196,
+        "unscaled_singular_values": [
+          1.9742899418318927,
+          1.5481908131702584,
+          1.0022334553874173,
+          0.4906169078604272,
+          0.13601977385489308,
+          0.001893375799782531
+        ],
+        "unscaled_sigma_min": 0.001893375799782531,
+        "unscaled_log_manipulability": -7.856913790231185,
+        "position_residual_vector": [
+          5.545720053318215e-08,
+          1.3741884442863839e-06,
+          2.1341645006778265e-08
+        ],
+        "orientation_residual_vector": [
+          -3.7348149970370563e-06,
+          -2.7135435936131e-08,
+          -2.185522420064552e-07
+        ],
+        "normalized_residual_norm": 0.001440738398403451,
+        "current": {
+          "candidate_available": true,
+          "finite": true,
+          "verifier_accepted": true,
+          "verification_reasons": [],
+          "q": [
+            2.4450384905780695,
+            0.23225408576523932,
+            -1.8230860813872125,
+            -0.33013095961439803,
+            -1.2827854941103642,
+            0.22193713498400727,
+            0.4281736170012961
+          ],
+          "position_error": 1.3754725905349059e-06,
+          "orientation_error": 3.7413025106856034e-06,
+          "joint_limit_margin": 0.23943713498400726,
+          "max_velocity_utilization": 0.4959330514830485,
+          "velocity_margin_rad": 0.02202691226048739,
+          "contract_velocity_utilization": 0.4947955903557938,
+          "velocity_excess_rad": -0.02202691226048739,
+          "velocity_utilization_per_joint": [
+            0.4947955903557938,
+            0.025095359417915745,
+            0.11943968069564866,
+            0.07575182556487364,
+            0.2119616453988346,
+            0.15797862240119856,
+            0.3241862814254845
+          ],
+          "sigma_min": 0.001893375799782531
+        }
+      }
+    },
+    {
+      "site_id": "state_14",
+      "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+      "family": "near_singular",
+      "candidate_id": "candidate_05",
+      "source": "pose_matched",
+      "q": [
+        2.4711984905780695,
+        0.22783259245050325,
+        -1.819441003564407,
+        -0.33625548334629807,
+        -1.3009787964156971,
+        0.21841370761066536,
+        0.43965662973252967
+      ],
+      "completed_repeats": 5,
+      "window_completion_rate": 1.0,
+      "mean_prefix": 30.0,
+      "median_prefix": 30.0,
+      "prefixes": [
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "first_failure_frames": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "first_failure_kinds": {},
+      "cumulative_latency_ms": {
+        "n": 5,
+        "mean": 16.8398662,
+        "median": 16.833883,
+        "p95": 17.6008462,
+        "minimum": 15.904109,
+        "maximum": 17.782307
+      },
+      "run_ids": [
+        "state_14_candidate_05_r0",
+        "state_14_candidate_05_r1",
+        "state_14_candidate_05_r2",
+        "state_14_candidate_05_r3",
+        "state_14_candidate_05_r4"
+      ],
+      "features": {
+        "candidate_id": "candidate_05",
+        "distance_to_previous": 0.012836824638301691,
+        "scaled_singular_values": [
+          29.011452560486394,
+          16.412528148718714,
+          9.815911445973775,
+          9.004664295866029,
+          2.5129324732779916,
+          0.05175102737089637
+        ],
+        "scaled_sigma_min": 0.05175102737089637,
+        "scaled_log_manipulability": 8.607622399552927,
+        "unscaled_singular_values": [
+          1.9743467141966644,
+          1.5460759904608112,
+          1.0052518519134506,
+          0.49102801814336966,
+          0.1350174633997961,
+          0.0015934488359477129
+        ],
+        "unscaled_sigma_min": 0.0015934488359477129,
+        "unscaled_log_manipulability": -8.034263995418954,
+        "position_residual_vector": [
+          5.545720054012104e-08,
+          1.374188444341895e-06,
+          2.1341645006778265e-08
+        ],
+        "orientation_residual_vector": [
+          -3.7348149971662987e-06,
+          -2.713543592145852e-08,
+          -2.1855224170789986e-07
+        ],
+        "normalized_residual_norm": 0.001440738398460466,
+        "current": {
+          "candidate_available": true,
+          "finite": true,
+          "verifier_accepted": true,
+          "verification_reasons": [],
+          "q": [
+            2.4711984905780695,
+            0.22783259245050325,
+            -1.819441003564407,
+            -0.33625548334629807,
+            -1.3009787964156971,
+            0.21841370761066536,
+            0.43965662973252967
+          ],
+          "position_error": 1.375472590590645e-06,
+          "orientation_error": 3.7413025107970746e-06,
+          "joint_limit_margin": 0.23591370761066538,
+          "max_velocity_utilization": 0.13616299331367518,
+          "velocity_margin_rad": 0.038084349014642804,
+          "contract_velocity_utilization": 0.135902643422062,
+          "velocity_excess_rad": -0.038084349014642804,
+          "velocity_utilization_per_joint": [
+            0.10520440964420533,
+            0.1265057565448898,
+            0.035836978337725915,
+            0.06471890223099867,
+            0.135902643422062,
+            0.09060907415374332,
+            0.10462580855294937
+          ],
+          "sigma_min": 0.0015934488359477129
+        }
+      }
+    }
+  ],
+  "interpretation": "post-hoc identification of a prespecified independent state; no new candidates, repeats, score or threshold"
+}

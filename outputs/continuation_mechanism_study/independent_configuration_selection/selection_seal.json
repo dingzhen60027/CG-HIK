@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-09-07T08:00:13.329410+00:00",
+  "files": {
+    "protocol.json": "4413e9873017c215a4ac45bb4c3963adeb671d65d41636dedb77d592fc2db67d",
+    "identity_seal.json": "f2eb20b0d026075053910b8ab859765080e31e4f98a1ff8566c7e91d2956c196",
+    "candidate_pools.json": "53ce4ab17eb9fa76c05f50d2dc45c71b39d6c41ec3dd388da13db0a7f8d8849c",
+    "availability.csv": "9e4f1f57568a1e4749ca40ae055a021857b6a05dd18cbb60c2ae63b6d7f51960",
+    "history_raw.jsonl.gz": "e4f3362c27c73dffb370c2bffa1ce6d2fe53cde9921287de00ee8e4490cf85f9"
+  },
+  "selectors_frozen_before_suffix_calls": true,
+  "suffix_solver_calls": 0
+}

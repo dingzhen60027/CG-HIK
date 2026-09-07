@@ -1,0 +1,23 @@
+{
+  "successful_witness_initial_connections_checked": 1085,
+  "main_tables_reconciled_to_candidate_runs": true,
+  "report_local_links_checked": 12,
+  "independent_unit": "40 scheduled trajectories/states, not 200 independent replicates",
+  "protected_file_hashes_checked": 606,
+  "measurement_source_hashes_checked": 13,
+  "report_audience": "technical",
+  "delivery_surface": "user-specified Markdown, no additional report app",
+  "report_structure": [
+    "one-page conclusion",
+    "full cohort and definitions",
+    "rules and family evidence",
+    "stable counterexample",
+    "actual costs",
+    "validation and limits"
+  ],
+  "table_contract": "exact multi-metric and candidate-ID lookup; Markdown tables, neutral text, no color-only encoding",
+  "omitted_chart_reason": "requested exact rule/candidate comparisons use multiple metrics and failure identities; no trend/visual inference needed",
+  "formal_test": false,
+  "old_paper_and_evidence_unchanged": true,
+  "solver_calls": 0
+}

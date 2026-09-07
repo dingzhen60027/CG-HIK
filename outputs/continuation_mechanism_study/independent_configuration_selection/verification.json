@@ -1,0 +1,16 @@
+{
+  "reference_commands_reverified": 6000,
+  "histories": 40,
+  "history_and_center_accepted_reverified": 2934,
+  "current_candidates_reverified": 225,
+  "matched_alternatives_reverified": 187,
+  "maximum_actual_pose_match_position_m": 4.552252871008668e-16,
+  "maximum_actual_pose_match_orientation_rad": 7.222406127189167e-16,
+  "selections_recomputed": true,
+  "suffix_windows_reverified": 1125,
+  "accepted_suffix_commands_reverified": 33300,
+  "successful_witnesses": 1085,
+  "original_contract_violations": 0,
+  "old_artifacts_unchanged": true,
+  "verification_solver_calls": 0
+}
