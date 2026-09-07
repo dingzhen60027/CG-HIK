@@ -1,0 +1,500 @@
+{
+  "baseline": "e192176f3182f86a4356a3d0003957ce170a736f",
+  "created_utc": "2026-09-07T07:04:27.715337+00:00",
+  "scope": "Selected Panda mechanism states; no population rate, no total gate, no new algorithm",
+  "reused_sites": 18,
+  "reused_candidates": 95,
+  "intervention_sites": [
+    {
+      "uid": "05fed739bf62f4fdcb2405ecaae33d1d21420a4ab0f81376b77841fb57661365",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 120,
+      "case_id": "case_00",
+      "family": "near_singular",
+      "site_id": "case_00_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 119,
+      "previous_q": [
+        -2.6092588692580327,
+        0.9131373586969197,
+        0.09361429331615885,
+        -0.44324036829254815,
+        -1.7216123752797612,
+        2.2066146256229366,
+        -2.2868614236437703
+      ],
+      "target_position": [
+        -0.6865255903589856,
+        -0.39043307292033536,
+        0.6519950830574126
+      ],
+      "target_rotation": [
+        [
+          0.06543625222261563,
+          -0.4068386194654286,
+          -0.9111533540554644
+        ],
+        [
+          0.5695110368970323,
+          -0.7345600106955145,
+          0.3688885597839451
+        ],
+        [
+          -0.819374929899326,
+          -0.5430505762803959,
+          0.1836322298889944
+        ]
+      ],
+      "query_hash": "8829e3f17af5b2a401d380d7639db5911ffa3875f5e5a89bef37f8562ae7a6c8",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 34,
+      "case_id": "case_01",
+      "family": "smooth",
+      "site_id": "case_01_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 33,
+      "previous_q": [
+        -1.3026244196296475,
+        -0.06139353061252327,
+        -1.5016879520870787,
+        -2.0119098983122785,
+        -1.0891157886297238,
+        1.8610300754585416,
+        -1.8261782860829705
+      ],
+      "target_position": [
+        -0.5474174506505737,
+        -0.10431323826476994,
+        0.4722473312394441
+      ],
+      "target_rotation": [
+        [
+          0.7105269751387547,
+          -0.6249225302146515,
+          -0.32345517282969716
+        ],
+        [
+          -0.20078427539081087,
+          -0.6206111293630774,
+          0.7579759236720336
+        ],
+        [
+          -0.6744161121710824,
+          -0.47361762777667354,
+          -0.5664355658883348
+        ]
+      ],
+      "query_hash": "77e6efdcd131605c671a134db0400b65f98b404df00debb376a60a91276c8bf1",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "a5b1761b74cefaee8b9e8d58bc938cbc4d6d190674ad988e14e10767e8f38c28",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 87,
+      "case_id": "case_02",
+      "family": "near_singular",
+      "site_id": "case_02_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 86,
+      "previous_q": [
+        0.12651649731694878,
+        -1.4379019442387895,
+        -2.871803362304541,
+        -1.0208540867071714,
+        1.510200750484142,
+        3.3944723873519362,
+        1.977997957040434
+      ],
+      "target_position": [
+        -0.6821605980990008,
+        -0.08960004009889774,
+        -0.02738141598480834
+      ],
+      "target_rotation": [
+        [
+          0.730964843608165,
+          -0.27674414391622665,
+          -0.6237812727366585
+        ],
+        [
+          -0.38761012883058915,
+          -0.9206877025664334,
+          -0.045744315175511086
+        ],
+        [
+          -0.5616482755575994,
+          0.2752214256757952,
+          -0.7802591757949137
+        ]
+      ],
+      "query_hash": "4b867099b853a697c8cfbedddf723fae985c90e1b4ab11e164d0e46edb92af02",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "b82acfb0f8aeca32d455788ace0eae3c1ac31cfac5269c5a38c8b080b1192218",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 87,
+      "case_id": "case_03",
+      "family": "near_singular",
+      "site_id": "case_03_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 86,
+      "previous_q": [
+        -2.5274189829265623,
+        -0.08606178457587166,
+        -1.2205619158962224,
+        -0.36890402637722186,
+        1.6066437805076215,
+        0.2054304880887667,
+        -0.6574610660992557
+      ],
+      "target_position": [
+        -0.10691438786603868,
+        0.0035253030074027525,
+        0.9662662146923062
+      ],
+      "target_rotation": [
+        [
+          0.032240005424785764,
+          -0.9928900922476082,
+          0.11458554344569874
+        ],
+        [
+          -0.9085975842157636,
+          -0.0768812852915958,
+          -0.41053586679995496
+        ],
+        [
+          0.4164264785139004,
+          -0.09087646938811265,
+          -0.904616192262809
+        ]
+      ],
+      "query_hash": "c65c8fabc9ce4b2502a3fd76b1bd4d142281197ba4734fed6019de61d6e9d137",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "c27ce734147fac572ca1ddd088565aeb5f022220251ef6f10a5d3db6670559b0",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 125,
+      "case_id": "case_04",
+      "family": "near_singular",
+      "site_id": "case_04_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 124,
+      "previous_q": [
+        -2.1531924668293216,
+        -0.26488343794075053,
+        -1.8643775271068719,
+        -0.46659161580148867,
+        -0.5178393568181611,
+        2.230693714146764,
+        1.236995760995582
+      ],
+      "target_position": [
+        -0.04413659548247585,
+        0.3878853520095883,
+        1.084301046650573
+      ],
+      "target_rotation": [
+        [
+          0.9118624056746626,
+          0.3271345457275951,
+          -0.24797165585771483
+        ],
+        [
+          0.21117782783166494,
+          0.14417055997658756,
+          0.9667568332669476
+        ],
+        [
+          0.35200976996315964,
+          -0.9339153273330709,
+          0.062380150872262334
+        ]
+      ],
+      "query_hash": "df6731b5c9cba3dfd36c632947b7b76985627b231c74a150e8927870e3026c0c",
+      "continuation_frames": 25
+    },
+    {
+      "uid": "d13cc08f12e083b576378a71eba2a5f5856319a74339c4d99b24a4e6647cfc6e",
+      "role": "trac_failed",
+      "focal": "trac_ik_5ms",
+      "first_failure": 72,
+      "case_id": "case_05",
+      "family": "near_singular",
+      "site_id": "case_05_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 71,
+      "previous_q": [
+        -2.2912352938183607,
+        -0.0071484094871457375,
+        1.4004778744023123,
+        -0.39688639107794865,
+        0.7352529321687105,
+        2.071000825131856,
+        -1.4863916102164116
+      ],
+      "target_position": [
+        0.1795418306250744,
+        -0.16186449707647255,
+        1.1386618447913097
+      ],
+      "target_rotation": [
+        [
+          0.16633749974206202,
+          -0.2536360325508194,
+          0.9528906543625237
+        ],
+        [
+          0.9261737714129477,
+          -0.2914756202661809,
+          -0.23925740936732157
+        ],
+        [
+          0.33842869459647845,
+          0.9223398103640136,
+          0.18642771492296634
+        ]
+      ],
+      "query_hash": "e1aa83e9279582566d0458f4e96b9a4de7462faf5e2b299d280486d88258aeea",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "f69a8f1f6eef07cefc66000053424135c5ec7250cc78d7cb2319c6615f8a8060",
+      "role": "cghik_lost",
+      "focal": "full_cghik",
+      "first_failure": 96,
+      "case_id": "case_06",
+      "family": "near_singular",
+      "site_id": "case_06_pre_failure",
+      "site_kind": "pre_failure",
+      "frame": 95,
+      "previous_q": [
+        -1.8049882220341575,
+        -1.0625032399948597,
+        -1.698054492380183,
+        -0.389510823956436,
+        -0.22914692646398646,
+        2.9575982126712748,
+        2.101854683147633
+      ],
+      "target_position": [
+        0.037456836333499326,
+        0.7486253017973067,
+        0.7335913706571948
+      ],
+      "target_rotation": [
+        [
+          -0.03182927382411093,
+          -0.9437600928611881,
+          -0.32909540326548353
+        ],
+        [
+          0.31406679591831316,
+          -0.32202839329760014,
+          0.8931179998252027
+        ],
+        [
+          -0.9488671904062415,
+          -0.07493064148135695,
+          0.3066536383898909
+        ]
+      ],
+      "query_hash": "8c58f3846e9880206392e7cd4cc87d5dbcbf11250b23c168fcca04dd391a15fd",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "4cc5ef5c4c9aa6bf49a51ea1b0c183d22a3ad3076219f3fdaaa33a4c97b7085d",
+      "role": "successful_control",
+      "focal": "always_hard",
+      "first_failure": null,
+      "matched_frame": 90,
+      "case_id": "case_07",
+      "family": "near_singular",
+      "site_id": "case_07_pre_failure",
+      "site_kind": "matched_control",
+      "frame": 90,
+      "previous_q": [
+        -2.2498947356331542,
+        0.8653923667675446,
+        0.05552070161774559,
+        -0.29320777095088824,
+        0.7483188746161211,
+        1.1906586852236325,
+        1.8251727361789964
+      ],
+      "target_position": [
+        -0.35323650365922654,
+        -0.6012766156702685,
+        0.6310829422587725
+      ],
+      "target_rotation": [
+        [
+          -0.605960718164762,
+          0.5500478128193653,
+          0.5746816611428264
+        ],
+        [
+          0.43042601222176735,
+          0.8342440903329881,
+          -0.3446305931680357
+        ],
+        [
+          -0.6689880836338661,
+          0.038525333965036886,
+          -0.7422740347060307
+        ]
+      ],
+      "query_hash": "37058a9de4cb3305c690cd5fb995d00ca37d045f906ee32f2dc85aba3ba67599",
+      "continuation_frames": 30
+    },
+    {
+      "uid": "34d461249b6c84388a8a925d2ced5254dc7a9ea2526b13b9a7a34604308cc719",
+      "role": "successful_control",
+      "focal": "always_hard",
+      "first_failure": null,
+      "matched_frame": 33,
+      "case_id": "case_08",
+      "family": "smooth",
+      "site_id": "case_08_pre_failure",
+      "site_kind": "matched_control",
+      "frame": 33,
+      "previous_q": [
+        -1.4800882527101291,
+        -0.5260587222606703,
+        -0.8619386773020501,
+        -0.919502508528777,
+        -1.4652638565652714,
+        2.1174262508781245,
+        -1.107984464810476
+      ],
+      "target_position": [
+        -0.37835214415857327,
+        0.0959546405532368,
+        1.0556614499458348
+      ],
+      "target_rotation": [
+        [
+          -0.3222198682143899,
+          0.031877345319088694,
+          -0.946127999471165
+        ],
+        [
+          -0.9466648563863465,
+          -0.010767009227941405,
+          0.3220399372675749
+        ],
+        [
+          7.880938569611522e-05,
+          0.9994337928885999,
+          0.03364650682296337
+        ]
+      ],
+      "query_hash": "bab4bba317138f18612fc5baf35ce1108c89dbf75450e91c98e84f1e6530324d",
+      "continuation_frames": 30
+    }
+  ],
+  "robot": "panda",
+  "repeats": 5,
+  "dt": 0.02,
+  "trac_budget_ms": 5,
+  "matching_precision": {
+    "position_m": 1e-08,
+    "orientation_rad": 1e-08
+  },
+  "minimum_configuration_difference_rad": 1e-05,
+  "projection": {
+    "centers": [
+      "original_focal",
+      "refined_focal"
+    ],
+    "max_new_candidates_per_site": 6,
+    "max_per_center": 3,
+    "perturbations": [
+      0.25,
+      -0.25,
+      0.5,
+      -0.5,
+      0.1,
+      -0.1
+    ],
+    "nullspace": "SVD of task-tolerance and joint-speed scaled Jacobian",
+    "projection": "fix largest null coordinate; nonlinear least-squares of full achieved center pose in remaining six coordinates",
+    "max_nfev": 200,
+    "ftol": 1e-12,
+    "xtol": 1e-12,
+    "gtol": 1e-12,
+    "retention": "current verifier AND actual full-pose matching AND distinct; never continuation outcomes"
+  },
+  "refinement": {
+    "objective": "sum of squared current translation(m) and rotation-vector(rad) residuals, identical to old study",
+    "max_nfev": 200,
+    "ftol": 1e-12,
+    "xtol": 1e-12,
+    "gtol": 1e-12,
+    "selection": "use refined result only if current verifier accepts and same objective strictly decreases; otherwise retain original legal candidate",
+    "initial": "old original/refined configurations reused; initial B refinement is timed as treatment costing and must reproduce an existing stored configuration",
+    "future": "refine every TRAC-IK accepted candidate using actual previous_q; do not refine failed solver returns"
+  },
+  "boundary": "all new native calls/projections/refinements use unchanged representable_interior; original verifier unchanged",
+  "ordinary_A": "reuse existing 5 ms interior-bound focal records; no rerun",
+  "current_only": "reuse existing 5 ms interior-bound refined-center records",
+  "B": "initial prescribed original candidate is refined, then accepted ordinary TRAC-IK candidates are refined every suffix frame",
+  "new_candidates": "all new matched candidates receive ordinary 5 ms interior-bound TRAC-IK suffixes, five repeats",
+  "randomness": "no TRAC-IK seed pairing/control claim; scheduling seed 960907 controls interleaving only",
+  "next_demand": {
+    "scaling": "row scaling by separate public pose tolerances; columns by per-joint velocity*dt+tolerance",
+    "objective": "minimize max absolute normalized joint increment over all seven variables",
+    "constraints": "joint range; separate position and orientation L2 tolerance balls in linearized task space",
+    "solve": "bounded linear least-squares start then SLSQP, ftol=1e-10, maxiter=300; report nonconvergence as unknown",
+    "validation": "nonlinear FK and unchanged verifier on returned joint configuration, without clipping an over-speed demand",
+    "scope": "offline reads next target; local-linear optimizer is not an infeasibility certificate or a deployed no-preview criterion"
+  },
+  "timing": "suffix outer call includes native solve and original diagnostics, refinement if applicable, final verification; candidate feature/next-target diagnostics and serialization excluded; initial prescribed-candidate refinement timed separately",
+  "evaluation_counts": "actual refinement residual callbacks including finite differences, scipy.nfev and verifier calls reported separately; native TRAC-IK FEV and hence total FEV unavailable, never zero",
+  "historical_timing": "A and current-only are reused historical measurements, not new contemporaneous speed trials",
+  "analysis": "within-site candidate comparisons with unequal completion or median prefix; descriptive ranking concordance, ties half; unknown demands separately counted; no fitting, p-values or independent-repeat inference",
+  "figure": {
+    "archetype": "quantitative grid",
+    "question": "Does uniform refinement suffice, or do pose-matched configurations retain different continuation?",
+    "panels": [
+      "uniform vs current-only vs ordinary completion",
+      "full-pose matched configuration contrasts",
+      "within-site explanatory concordance",
+      "observed cost of uniform refinement"
+    ],
+    "backend": "python",
+    "width_mm": 183,
+    "height_mm": 170,
+    "min_font_pt": 5,
+    "formats": [
+      "pdf",
+      "svg",
+      "png"
+    ],
+    "integrity": "all selected sites; no outcome-based candidate exclusion; source data and numerical repeats retained"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "scipy": "1.17.0",
+    "numpy": "2.4.4",
+    "backend": "URDFKinematics plus official TRAC-IK KDL"
+  },
+  "parent_manifest_sha256": "c2bd3bb150bbd9af618b5b9f9bdf1f5cdb4b8e96e6d5fa5a4964381f2e68e8c4",
+  "measurement_sources": {
+    "src/confik/continuation_mechanism/disentangle.py": "c2097fba8864b6512b288784ebc402a92279950dbef7a31b89ef9f86c2dc5a31",
+    "src/confik/continuation_mechanism/disentangle_math.py": "ea423133ef81e0bd8d025b5589aa00ccb8a1b90caf33aa8b1a0a82fcffee2fcd",
+    "tests/test_residual_configuration.py": "ce92c13a768bb0ccb7e1df593727dc610043ce06cb40eaf210e7e4134b5aacd8",
+    "tmp/revision_dependencies/build/librevision_trac.so": "689ccb100338a8a50abef94d6e1cc21e7e9975ba3e312c9415a89cdc9ade1e17"
+  }
+}

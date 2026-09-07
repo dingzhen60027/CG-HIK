@@ -1,0 +1,11 @@
+{
+  "width_mm": 183,
+  "height_mm": 170,
+  "caption": "a: completion counts, five numerical searches per selected state. b: each point is one currently legal candidate; O/R denote original/refined centers, not robot branches; all 43 new configurations shown, unavailable centers explicit. c: dependent informative within-state pair ordering, not independent-sample predictive accuracy; residual ties respect matching precision. d: medians and full min-max ranges over five searches; *historical reused measurements, not contemporaneous timing trials. No p-values, no population claims, no native TRAC-IK FEV imputation.",
+  "files": {
+    "source_data.csv": "92fb4306746924d80170610c547d331b5ab89f75eac9e07808a37c97d448dfcc",
+    "residual_configuration_mechanism.pdf": "52f39b66e7cd4cee806373e3e9604a0a6be2b92f2349bf6bb5f660b39c5374c4",
+    "residual_configuration_mechanism.png": "f0bea64d1a84ca9ce8cbd58246b63b5230ec70e6d40147c1e220848a8b37254f",
+    "residual_configuration_mechanism.svg": "7670629d269c87e5d5063d5173e8ad363cac5b1ce9a8e10ec45157b692d8e548"
+  }
+}

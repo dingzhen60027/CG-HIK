@@ -1,0 +1,222 @@
+[
+  {
+    "scope": "all_informative",
+    "predictor": "residual",
+    "informative_pairs": 82,
+    "comparable_pairs": 82,
+    "unknown_pairs": 0,
+    "concordant": 49,
+    "discordant": 8,
+    "ties": 25,
+    "score": 0.75,
+    "contributing_sites": [
+      "case_00_pre_failure",
+      "case_01_pre_failure",
+      "case_02_pre_failure",
+      "case_03_pre_failure",
+      "case_05_pre_failure",
+      "case_06_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "all_informative",
+    "predictor": "nearest",
+    "informative_pairs": 82,
+    "comparable_pairs": 82,
+    "unknown_pairs": 0,
+    "concordant": 14,
+    "discordant": 68,
+    "ties": 0,
+    "score": 0.17073170731707318,
+    "contributing_sites": [
+      "case_00_pre_failure",
+      "case_01_pre_failure",
+      "case_02_pre_failure",
+      "case_03_pre_failure",
+      "case_05_pre_failure",
+      "case_06_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "all_informative",
+    "predictor": "sigma_min",
+    "informative_pairs": 82,
+    "comparable_pairs": 82,
+    "unknown_pairs": 0,
+    "concordant": 75,
+    "discordant": 7,
+    "ties": 0,
+    "score": 0.9146341463414634,
+    "contributing_sites": [
+      "case_00_pre_failure",
+      "case_01_pre_failure",
+      "case_02_pre_failure",
+      "case_03_pre_failure",
+      "case_05_pre_failure",
+      "case_06_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "all_informative",
+    "predictor": "next_demand",
+    "informative_pairs": 82,
+    "comparable_pairs": 82,
+    "unknown_pairs": 0,
+    "concordant": 61,
+    "discordant": 21,
+    "ties": 0,
+    "score": 0.7439024390243902,
+    "contributing_sites": [
+      "case_00_pre_failure",
+      "case_01_pre_failure",
+      "case_02_pre_failure",
+      "case_03_pre_failure",
+      "case_05_pre_failure",
+      "case_06_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "completion_only",
+    "predictor": "residual",
+    "informative_pairs": 29,
+    "comparable_pairs": 29,
+    "unknown_pairs": 0,
+    "concordant": 17,
+    "discordant": 4,
+    "ties": 8,
+    "score": 0.7241379310344828,
+    "contributing_sites": [
+      "case_00_pre_failure",
+      "case_01_pre_failure",
+      "case_06_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "completion_only",
+    "predictor": "nearest",
+    "informative_pairs": 29,
+    "comparable_pairs": 29,
+    "unknown_pairs": 0,
+    "concordant": 4,
+    "discordant": 25,
+    "ties": 0,
+    "score": 0.13793103448275862,
+    "contributing_sites": [
+      "case_00_pre_failure",
+      "case_01_pre_failure",
+      "case_06_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "completion_only",
+    "predictor": "sigma_min",
+    "informative_pairs": 29,
+    "comparable_pairs": 29,
+    "unknown_pairs": 0,
+    "concordant": 25,
+    "discordant": 4,
+    "ties": 0,
+    "score": 0.8620689655172413,
+    "contributing_sites": [
+      "case_00_pre_failure",
+      "case_01_pre_failure",
+      "case_06_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "completion_only",
+    "predictor": "next_demand",
+    "informative_pairs": 29,
+    "comparable_pairs": 29,
+    "unknown_pairs": 0,
+    "concordant": 21,
+    "discordant": 8,
+    "ties": 0,
+    "score": 0.7241379310344828,
+    "contributing_sites": [
+      "case_00_pre_failure",
+      "case_01_pre_failure",
+      "case_06_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "pose_matched_informative",
+    "predictor": "residual",
+    "informative_pairs": 25,
+    "comparable_pairs": 25,
+    "unknown_pairs": 0,
+    "concordant": 0,
+    "discordant": 0,
+    "ties": 25,
+    "score": 0.5,
+    "contributing_sites": [
+      "case_01_pre_failure",
+      "case_02_pre_failure",
+      "case_03_pre_failure",
+      "case_05_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "pose_matched_informative",
+    "predictor": "nearest",
+    "informative_pairs": 25,
+    "comparable_pairs": 25,
+    "unknown_pairs": 0,
+    "concordant": 6,
+    "discordant": 19,
+    "ties": 0,
+    "score": 0.24,
+    "contributing_sites": [
+      "case_01_pre_failure",
+      "case_02_pre_failure",
+      "case_03_pre_failure",
+      "case_05_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "pose_matched_informative",
+    "predictor": "sigma_min",
+    "informative_pairs": 25,
+    "comparable_pairs": 25,
+    "unknown_pairs": 0,
+    "concordant": 24,
+    "discordant": 1,
+    "ties": 0,
+    "score": 0.96,
+    "contributing_sites": [
+      "case_01_pre_failure",
+      "case_02_pre_failure",
+      "case_03_pre_failure",
+      "case_05_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  },
+  {
+    "scope": "pose_matched_informative",
+    "predictor": "next_demand",
+    "informative_pairs": 25,
+    "comparable_pairs": 25,
+    "unknown_pairs": 0,
+    "concordant": 17,
+    "discordant": 8,
+    "ties": 0,
+    "score": 0.68,
+    "contributing_sites": [
+      "case_01_pre_failure",
+      "case_02_pre_failure",
+      "case_03_pre_failure",
+      "case_05_pre_failure"
+    ],
+    "note": "descriptive dependent within-site pairs, not accuracy on independent held-out observations"
+  }
+]

@@ -1,0 +1,174 @@
+{
+  "reused_sites": 18,
+  "reused_candidates": 95,
+  "new_candidates": 43,
+  "new_windows": 260,
+  "new_continuation_calls": 7700,
+  "new_successful_witnesses": 100,
+  "uniform_A_complete_windows": 10,
+  "uniform_B_complete_windows": 20,
+  "current_only_complete_windows": 20,
+  "sites_with_uniform_gain": [
+    "case_00_pre_failure",
+    "case_06_pre_failure"
+  ],
+  "sites_with_uniform_gain_over_current_only": [],
+  "matched_completion_differences": [
+    {
+      "site_id": "case_01_pre_failure",
+      "candidate_id": "matched_01",
+      "center_id": "candidate_00",
+      "center_completed": 0,
+      "candidate_completed": 5
+    },
+    {
+      "site_id": "case_01_pre_failure",
+      "candidate_id": "matched_02",
+      "center_id": "candidate_00",
+      "center_completed": 0,
+      "candidate_completed": 5
+    },
+    {
+      "site_id": "case_01_pre_failure",
+      "candidate_id": "matched_04",
+      "center_id": "candidate_05",
+      "center_completed": 0,
+      "candidate_completed": 5
+    },
+    {
+      "site_id": "case_01_pre_failure",
+      "candidate_id": "matched_05",
+      "center_id": "candidate_05",
+      "center_completed": 0,
+      "candidate_completed": 5
+    }
+  ],
+  "matched_prefix_differences": [
+    {
+      "site_id": "case_01_pre_failure",
+      "candidate_id": "matched_01",
+      "center_id": "candidate_00",
+      "center_prefix": 0.0,
+      "candidate_prefix": 30.0
+    },
+    {
+      "site_id": "case_01_pre_failure",
+      "candidate_id": "matched_02",
+      "center_id": "candidate_00",
+      "center_prefix": 0.0,
+      "candidate_prefix": 30.0
+    },
+    {
+      "site_id": "case_01_pre_failure",
+      "candidate_id": "matched_04",
+      "center_id": "candidate_05",
+      "center_prefix": 0.0,
+      "candidate_prefix": 30.0
+    },
+    {
+      "site_id": "case_01_pre_failure",
+      "candidate_id": "matched_05",
+      "center_id": "candidate_05",
+      "center_prefix": 0.0,
+      "candidate_prefix": 30.0
+    },
+    {
+      "site_id": "case_02_pre_failure",
+      "candidate_id": "matched_00",
+      "center_id": "candidate_00",
+      "center_prefix": 0.0,
+      "candidate_prefix": 1.0
+    },
+    {
+      "site_id": "case_02_pre_failure",
+      "candidate_id": "matched_01",
+      "center_id": "candidate_00",
+      "center_prefix": 0.0,
+      "candidate_prefix": 1.0
+    },
+    {
+      "site_id": "case_02_pre_failure",
+      "candidate_id": "matched_03",
+      "center_id": "candidate_04",
+      "center_prefix": 0.0,
+      "candidate_prefix": 1.0
+    },
+    {
+      "site_id": "case_02_pre_failure",
+      "candidate_id": "matched_04",
+      "center_id": "candidate_04",
+      "center_prefix": 0.0,
+      "candidate_prefix": 1.0
+    },
+    {
+      "site_id": "case_03_pre_failure",
+      "candidate_id": "matched_02",
+      "center_id": "candidate_00",
+      "center_prefix": 0.0,
+      "candidate_prefix": 1.0
+    },
+    {
+      "site_id": "case_05_pre_failure",
+      "candidate_id": "matched_00",
+      "center_id": "candidate_00",
+      "center_prefix": 1.0,
+      "candidate_prefix": 2.0
+    },
+    {
+      "site_id": "case_05_pre_failure",
+      "candidate_id": "matched_01",
+      "center_id": "candidate_00",
+      "center_prefix": 1.0,
+      "candidate_prefix": 2.0
+    },
+    {
+      "site_id": "case_05_pre_failure",
+      "candidate_id": "matched_02",
+      "center_id": "candidate_00",
+      "center_prefix": 1.0,
+      "candidate_prefix": 2.0
+    },
+    {
+      "site_id": "case_05_pre_failure",
+      "candidate_id": "matched_03",
+      "center_id": "candidate_04",
+      "center_prefix": 2.0,
+      "candidate_prefix": 3.0
+    }
+  ],
+  "unavailable_centers": [
+    {
+      "site_id": "case_00_pre_failure",
+      "role": "cghik_lost",
+      "center_source": "refined_focal",
+      "center_id": "candidate_01",
+      "matched_count": 0,
+      "available": false
+    },
+    {
+      "site_id": "case_04_pre_failure",
+      "role": "cghik_lost",
+      "center_source": "refined_focal",
+      "center_id": "candidate_03",
+      "matched_count": 0,
+      "available": false
+    },
+    {
+      "site_id": "case_06_pre_failure",
+      "role": "cghik_lost",
+      "center_source": "refined_focal",
+      "center_id": "candidate_02",
+      "matched_count": 0,
+      "available": false
+    }
+  ],
+  "demand_optimization_statuses": {
+    "0": 138
+  },
+  "demand_nonlinear_verified": 78,
+  "diagnostic_candidates": 138,
+  "new_failure_counts": {
+    "solver_failure": 4588
+  },
+  "statistics": "Selected sites; no population rates, no independent-repeat inference, no total pass/fail gate"
+}

@@ -1,0 +1,21 @@
+{
+  "width_mm": 183,
+  "height_mm": 170,
+  "pdf_minimum_font_pt": 7,
+  "pdf_font_floor_pt": 5,
+  "pdf_font_failures": 0,
+  "pdf_render_inspected": true,
+  "source_preflight": {"pass": 18, "warn": 2, "fail": 0},
+  "warnings_resolved": [
+    "PNG is a 600 dpi preview; editable PDF/SVG are primary. No TIFF submission requested.",
+    "All cumulative times are asserted positive before the logarithmic axis; static heuristic does not detect this assertion. Plain-number log ticks avoid sub-5-pt superscripts."
+  ],
+  "panels": [
+    {"panel":"a","claim":"Uniform B does not add completion over current-only refinement in these states","data":"all 9 states, five numerical searches each","summary":"completion counts, no interval inference","labels_and_clearance":"pass"},
+    {"panel":"b","claim":"Same achieved pose can have different continuation under TRAC-IK","data":"all 43 new matched configurations and their 18 centers; unavailable centers explicit","summary":"candidate completion counts, positional offsets only separate overlapping markers","labels_and_clearance":"pass"},
+    {"panel":"c","claim":"Next-demand ranking is not superior to scaled sigma_min in this selected evidence","data":"82 dependent informative pairs and 25 matched informative pairs","summary":"descriptive ordering concordance; not independent predictive accuracy","labels_and_clearance":"pass"},
+    {"panel":"d","claim":"Uniform refinement entails substantial observed computation","data":"five window times per condition and state; historical A/current-only marked","summary":"median and full min-max; no timing significance claim","labels_and_clearance":"pass"}
+  ],
+  "old_artifacts_edited": false,
+  "solver_reruns_for_visualization": 0
+}

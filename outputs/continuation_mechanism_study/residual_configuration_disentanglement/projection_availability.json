@@ -1,0 +1,146 @@
+[
+  {
+    "site_id": "case_00_pre_failure",
+    "role": "cghik_lost",
+    "center_source": "original_focal",
+    "center_id": "candidate_00",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_00_pre_failure",
+    "role": "cghik_lost",
+    "center_source": "refined_focal",
+    "center_id": "candidate_01",
+    "matched_count": 0,
+    "available": false
+  },
+  {
+    "site_id": "case_01_pre_failure",
+    "role": "trac_failed",
+    "center_source": "original_focal",
+    "center_id": "candidate_00",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_01_pre_failure",
+    "role": "trac_failed",
+    "center_source": "refined_focal",
+    "center_id": "candidate_05",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_02_pre_failure",
+    "role": "trac_failed",
+    "center_source": "original_focal",
+    "center_id": "candidate_00",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_02_pre_failure",
+    "role": "trac_failed",
+    "center_source": "refined_focal",
+    "center_id": "candidate_04",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_03_pre_failure",
+    "role": "trac_failed",
+    "center_source": "original_focal",
+    "center_id": "candidate_00",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_03_pre_failure",
+    "role": "trac_failed",
+    "center_source": "refined_focal",
+    "center_id": "candidate_09",
+    "matched_count": 1,
+    "available": true
+  },
+  {
+    "site_id": "case_04_pre_failure",
+    "role": "cghik_lost",
+    "center_source": "original_focal",
+    "center_id": "candidate_00",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_04_pre_failure",
+    "role": "cghik_lost",
+    "center_source": "refined_focal",
+    "center_id": "candidate_03",
+    "matched_count": 0,
+    "available": false
+  },
+  {
+    "site_id": "case_05_pre_failure",
+    "role": "trac_failed",
+    "center_source": "original_focal",
+    "center_id": "candidate_00",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_05_pre_failure",
+    "role": "trac_failed",
+    "center_source": "refined_focal",
+    "center_id": "candidate_04",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_06_pre_failure",
+    "role": "cghik_lost",
+    "center_source": "original_focal",
+    "center_id": "candidate_00",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_06_pre_failure",
+    "role": "cghik_lost",
+    "center_source": "refined_focal",
+    "center_id": "candidate_02",
+    "matched_count": 0,
+    "available": false
+  },
+  {
+    "site_id": "case_07_pre_failure",
+    "role": "successful_control",
+    "center_source": "original_focal",
+    "center_id": "candidate_00",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_07_pre_failure",
+    "role": "successful_control",
+    "center_source": "refined_focal",
+    "center_id": "candidate_06",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_08_pre_failure",
+    "role": "successful_control",
+    "center_source": "original_focal",
+    "center_id": "candidate_00",
+    "matched_count": 3,
+    "available": true
+  },
+  {
+    "site_id": "case_08_pre_failure",
+    "role": "successful_control",
+    "center_source": "refined_focal",
+    "center_id": "candidate_04",
+    "matched_count": 3,
+    "available": true
+  }
+]
