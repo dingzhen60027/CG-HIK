@@ -1,0 +1,97 @@
+{
+  "created_utc": "2026-09-07T16:54:44.760099+00:00",
+  "config": {
+    "baseline": "02aa287b65d4f1b7bb5317d8e83fcf972559103f",
+    "source_config": "configs/paper_v2.yaml",
+    "output": "outputs/task_contract_alignment",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "point_source": "outputs/revision_compute_allocation/02_point_mechanism_benchmark",
+    "panda_authority": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison",
+    "native_library": "tmp/task_contract_build/libcontract_trac.so",
+    "upstream": "tmp/revision_dependencies/trac_ik",
+    "upstream_sha": "90162ac2ecc6ea8f88c6e99df6ee01efd217a3fb",
+    "dt": 0.02,
+    "deadline_ns": 20000000,
+    "strict_epsilon": 1e-05,
+    "dls_iterations": 25,
+    "trac_repeats": 3,
+    "sensitivity_scales": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "sensitivity_counts": {
+      "local": 200,
+      "near_singular": 100,
+      "near_limit": 100,
+      "hard_feasible": 100
+    },
+    "trajectory_families": [
+      "smooth",
+      "near_singular",
+      "joint_limit_return",
+      "high_curvature"
+    ],
+    "trajectory_seed_base": 971008000,
+    "trajectories_per_family": 10,
+    "frames": 150,
+    "order_seed": 971008901,
+    "bootstrap_seed": 971008902,
+    "bootstrap_resamples": 4000,
+    "threads": 1,
+    "_config_path": "/home/eric/wjg/btry/configs/task_contract_alignment.yaml"
+  },
+  "witness_validation": {
+    "panda": {
+      "nominal": 2500,
+      "tight_eligible": 2500,
+      "sensitivity": 500
+    },
+    "ur5e": {
+      "nominal": 2500,
+      "tight_eligible": 2500,
+      "sensitivity": 500
+    }
+  },
+  "public_contract": {
+    "position_tolerance": 0.001,
+    "orientation_tolerance": 0.00872664626,
+    "joint_limit_tolerance": 1e-09,
+    "velocity_tolerance": 0.0001,
+    "enforce_velocity": true
+  },
+  "backend": "URDFKinematics; native TRAC-IK uses identical KDL chain",
+  "point_calls": 120000,
+  "sensitivity_calls": 21000,
+  "new_trajectory_calls": 84000,
+  "historical_panda_calls": 84000,
+  "scope": "planned supplementary evaluation; points previously observed; no tuning or global gate",
+  "identity_scan": {
+    "outputs/anchored_temporal_v7_smoke/completion_identity_diagnostics.json": "01aacda3b8b08bbfeaeebdeb948a3e71506afde9625961c69372a0144c88afa6",
+    "outputs/archive/anchored_temporal_v7_smoke_pre_recovery_metric_fix_20260904/completion_identity_diagnostics.json": "01aacda3b8b08bbfeaeebdeb948a3e71506afde9625961c69372a0144c88afa6",
+    "outputs/archive/temporal_event_v6_smoke_pre_metric_fix_20260903/completion_identity_diagnostics.json": "94ce8354c78eceb623062dae90b0206a126789314ee5dbcd8e1a7557420b59e0",
+    "outputs/continuation_mechanism_study/independent_configuration_selection/identity_seal.json": "f2eb20b0d026075053910b8ab859765080e31e4f98a1ff8566c7e91d2956c196",
+    "outputs/continuation_mechanism_study/independent_configuration_selection/trajectory_identities.json": "0434a8c10f71327b8cdc9aa6ea0e454f67216e9b7efd1413038fd909f5784ba2",
+    "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/trajectory_identities.json": "942638718af89b8e0affde9a3f7420ab56461da77d70953ee1f8c2045148db51",
+    "outputs/fresh_transition_v4_test/panda_identity_manifest.json": "17d9c05ca9c6ce063aea1a34ffdc9048a5fd61c05a61071ad8425c2cd00eefb5",
+    "outputs/fresh_transition_v4_test/ur5e_identity_manifest.json": "04afda4123395503ddff56b4db52bc5a57414ad24aa02845956ded33d6f26116",
+    "outputs/revision_compute_allocation/02_point_mechanism_benchmark/panda_identities.json": "9e0af5df1292d7f9f8f40f531fa70eb616c2bc6818b097caa9d422814d6389ae",
+    "outputs/revision_compute_allocation/02_point_mechanism_benchmark/ur5e_identities.json": "712e56f4ddbdff998b1325a9ee40e0fd012a65f245f70a9f2247ca63123f8e66",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/panda_identities.json": "a12e6a9c6d78d2ae5133462501fdf4c84cd3ce52af84aeffb421d5e230ef51bb",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/ur5e_identities.json": "1dcadcf575eff60232ead330f1fd89ee51f208abea1b1c950829365c2775868f",
+    "outputs/revision_compute_allocation/diagnostic_adapter_attempt_01/original_selection_and_identity_seal.json": "01c7a3b29cb71c966c4a3a31b9dc3725a08231666a9eaf81da5995081102183a",
+    "outputs/revision_compute_allocation/selection_and_identity_seal.json": "38c22554adbcd1185174d4a53578f2a739a7c324392ce96ca45723b31807cd02",
+    "outputs/temporal_event_v6_pilot/completion_identity_diagnostics.json": "30c679cc2c467ad51d8cfc3bc0e47a38f62081932a27a880a0c7cb7c58171b89",
+    "outputs/temporal_event_v6_smoke/completion_identity_diagnostics.json": "94ce8354c78eceb623062dae90b0206a126789314ee5dbcd8e1a7557420b59e0"
+  },
+  "old_identity_counts": {
+    "uids": 6320,
+    "seeds": 85,
+    "hashes": 30000
+  },
+  "ur5e_reference_verified_frames": 6000,
+  "all_fixed_frames_retained": true
+}

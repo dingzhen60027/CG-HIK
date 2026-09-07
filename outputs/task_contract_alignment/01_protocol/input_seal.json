@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-09-07T16:54:44.763800+00:00",
+  "files": {
+    "outputs/task_contract_alignment/01_protocol/point_identities.json": "687e4c9bd34805d4f7db0205df204e1d9baef488bdd7a7d4d066ff7d05d026d1",
+    "outputs/task_contract_alignment/01_protocol/protected_files.json": "39ab2a924ee1045b4882125c8230794e0427ecb4cbb8303ede444c1d9a1b2580",
+    "outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json": "841aa865cc4de24162955e63d767861dc60e8a8bc4c1c7134f7ad289fcef4f99",
+    "outputs/task_contract_alignment/01_protocol/ur5e_reference_trajectories.npz": "bdd14310e80ee787d764810d1d850eb2e3032acce1c4ef6aa969292c8c4a72e6",
+    "outputs/task_contract_alignment/01_protocol/protocol.json": "fd25987802164d86cf6da4b6c2b34b8ae628617faf103e4b2de3316e643cd644",
+    "outputs/task_contract_alignment/01_protocol/ur5e_trajectory_identities.json": "79052123d1912668d6c9fb33834c87fdf8b5be248aaa0c62b146cfb012d1e838",
+    "outputs/task_contract_alignment/01_protocol/native_mappings.json": "0a7a6629e9e2821bb2a0587eb691e14b74cb30a748bd606689f8cbf6f7404738",
+    "configs/task_contract_alignment.yaml": "687187dc10a24da673fe742ce1624b16709eae0b43f6ba7b9a0175ab3a72da08",
+    "docs/TASK_CONTRACT_ALIGNMENT_PROTOCOL.md": "03cdbf48c690e47fdbe35842d770630798fcc0de27f1be2ee5c8619f4661d357"
+  }
+}
