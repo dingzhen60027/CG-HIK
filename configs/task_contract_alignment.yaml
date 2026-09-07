@@ -1,0 +1,24 @@
+baseline: 02aa287b65d4f1b7bb5317d8e83fcf972559103f
+source_config: configs/paper_v2.yaml
+output: outputs/task_contract_alignment
+robots: [panda, ur5e]
+point_source: outputs/revision_compute_allocation/02_point_mechanism_benchmark
+panda_authority: outputs/continuation_mechanism_study/tolerance_matched_solver_comparison
+native_library: tmp/task_contract_build/libcontract_trac.so
+upstream: tmp/revision_dependencies/trac_ik
+upstream_sha: 90162ac2ecc6ea8f88c6e99df6ee01efd217a3fb
+dt: 0.02
+deadline_ns: 20000000
+strict_epsilon: 0.00001
+dls_iterations: 25
+trac_repeats: 3
+sensitivity_scales: [0.5, 1.0, 2.0]
+sensitivity_counts: {local: 200, near_singular: 100, near_limit: 100, hard_feasible: 100}
+trajectory_families: [smooth, near_singular, joint_limit_return, high_curvature]
+trajectory_seed_base: 971008000
+trajectories_per_family: 10
+frames: 150
+order_seed: 971008901
+bootstrap_seed: 971008902
+bootstrap_resamples: 4000
+threads: 1
