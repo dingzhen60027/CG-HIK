@@ -69,21 +69,23 @@ def figures(s,folder):
             axes[i,j].set_title(robot.upper());axes[i,j].set_ylabel(['Missed calls (%)','P95 latency (ms)','P95 position / tolerance'][j])
         axes[i,0].legend(fontsize=7)
     save(fig,folder,'figure3_contract_sensitivity')
-    fig,axes=plt.subplots(2,3,figsize=(7.2,5.2))
+    fig,axes=plt.subplots(4,2,figsize=(7.2,7.6))
     for i,robot in enumerate(['panda','ur5e']):
         rs=sorted([r for r in traj if r['robot']==robot],key=lambda r:list(LABELS).index(r['method']))
-        for j in range(3):
-            ax=axes[i,j]
+        for j in range(4):
+            ax=axes[j,i]
             for x,r in enumerate(rs):
-                vals=r['completion_counts'] if j==0 else [r['cumulative_latency_ns_per_sweep']/1e9] if j==1 else [r['latency_p50_ms'],r['latency_p95_ms'],r['latency_p99_ms']]
-                if j<2:
+                vals=r['completion_counts'] if j==0 else [r['cumulative_latency_ns_per_sweep']/1e9] if j==1 else [r['verified_success']*100] if j==2 else [r['latency_p50_ms'],r['latency_p95_ms'],r['latency_p99_ms']]
+                if j<3:
                     ax.bar(x,np.mean(vals),color=COLORS[r['method']])
                     if j==0:ax.plot([x]*len(vals),vals,'k.',markersize=3)
                 else:
                     ax.plot([x]*3,vals,'-',color=COLORS[r['method']]);ax.scatter([x]*3,vals,color=COLORS[r['method']],s=[8,16,30])
-            ax.set_xticks(range(len(rs)),[LABELS[r['method']] for r in rs],rotation=55,ha='right',rotation_mode='anchor')
-            ax.set_title(robot.upper());ax.set_ylabel(['Completed / 40','Cumulative time (s)','P50 / P95 / P99 (ms)'][j])
+            ax.set_xticks(range(len(rs)),[LABELS[r['method']] for r in rs] if j==3 else ['']*len(rs),rotation=45,ha='right',rotation_mode='anchor')
+            if j==0:ax.set_title(robot.upper())
+            ax.set_ylabel(['Completed / 40','Cumulative time (s)','Frame verified (%)','P50 / P95 / P99 (ms)'][j])
             if j==0:ax.set_ylim(0,42)
+            if j==2:ax.set_ylim(0,105)
     save(fig,folder,'figure4_trajectories')
     paired=read(s,'trajectory_paired')
     fig,axes=plt.subplots(1,2,figsize=(7.2,3.4))
