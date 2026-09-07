@@ -1,0 +1,1396 @@
+[
+  {
+    "input_id": "state_14_candidate_00",
+    "site_id": "state_14",
+    "role": "focal",
+    "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+    "frame": 75,
+    "previous_q": [
+      2.4668384905780694,
+      0.22850866254833804,
+      -1.819687172539125,
+      -0.33521522849501284,
+      -1.2982903121457678,
+      0.2189558108222837,
+      0.4377617990495719
+    ],
+    "target_position": [
+      0.05886604939105978,
+      0.08186151759839032,
+      0.9636592689428848
+    ],
+    "target_rotation": [
+      [
+        0.44718195319734083,
+        -0.8912148858095574,
+        0.07592317199688599
+      ],
+      [
+        -0.7774093388478982,
+        -0.4292457032780964,
+        -0.45976390255147925
+      ],
+      [
+        0.44233812927068034,
+        0.146574737007268,
+        -0.8847897071420785
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "26382ac06d938939a11e05fb4d68434685e9dd0c0c490809889522859b99699d",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_14_candidate_00_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_14_candidate_01",
+    "site_id": "state_14",
+    "role": "focal",
+    "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+    "frame": 75,
+    "previous_q": [
+      2.4777384905780693,
+      0.22686845611727163,
+      -1.8193591165981005,
+      -0.3378318384543588,
+      -1.3047359762498305,
+      0.2176380671477474,
+      0.4424859007705034
+    ],
+    "target_position": [
+      0.05886604939105978,
+      0.08186151759839032,
+      0.9636592689428848
+    ],
+    "target_rotation": [
+      [
+        0.44718195319734083,
+        -0.8912148858095574,
+        0.07592317199688599
+      ],
+      [
+        -0.7774093388478982,
+        -0.4292457032780964,
+        -0.45976390255147925
+      ],
+      [
+        0.44233812927068034,
+        0.146574737007268,
+        -0.8847897071420785
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "824af6140920eb72510705d7933c3bcccc9520fe31abeea4ec6aef81b37bd37d",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_14_candidate_01_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_14_candidate_02",
+    "site_id": "state_14",
+    "role": "focal",
+    "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+    "frame": 75,
+    "previous_q": [
+      2.4559384905780695,
+      0.23030860544410925,
+      -1.8209475150994716,
+      -0.33264966097147186,
+      -1.2909540106747157,
+      0.22039283642896695,
+      0.4329923703735962
+    ],
+    "target_position": [
+      0.05886604939105978,
+      0.08186151759839032,
+      0.9636592689428848
+    ],
+    "target_rotation": [
+      [
+        0.44718195319734083,
+        -0.8912148858095574,
+        0.07592317199688599
+      ],
+      [
+        -0.7774093388478982,
+        -0.4292457032780964,
+        -0.45976390255147925
+      ],
+      [
+        0.44233812927068034,
+        0.146574737007268,
+        -0.8847897071420785
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "a9e85765b2a0c1f352611c29f3e6e61636da7ca53d26266ea4c177df9715c525",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_14_candidate_02_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_14_candidate_03",
+    "site_id": "state_14",
+    "role": "focal",
+    "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+    "frame": 75,
+    "previous_q": [
+      2.488638490578069,
+      0.225402876930815,
+      -1.820018536452199,
+      -0.34050461633706564,
+      -1.3102306695743284,
+      0.2164521716881956,
+      0.44716944569855566
+    ],
+    "target_position": [
+      0.05886604939105978,
+      0.08186151759839032,
+      0.9636592689428848
+    ],
+    "target_rotation": [
+      [
+        0.44718195319734083,
+        -0.8912148858095574,
+        0.07592317199688599
+      ],
+      [
+        -0.7774093388478982,
+        -0.4292457032780964,
+        -0.45976390255147925
+      ],
+      [
+        0.44233812927068034,
+        0.146574737007268,
+        -0.8847897071420785
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "d0aaf8bf82e7f5ed819d3781dcb85d9b613bdc1a2006cc87613df199ac737250",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_14_candidate_03_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_14_candidate_04",
+    "site_id": "state_14",
+    "role": "focal",
+    "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+    "frame": 75,
+    "previous_q": [
+      2.4450384905780695,
+      0.23225408576523932,
+      -1.8230860813872125,
+      -0.33013095961439803,
+      -1.2827854941103642,
+      0.22193713498400727,
+      0.4281736170012961
+    ],
+    "target_position": [
+      0.05886604939105978,
+      0.08186151759839032,
+      0.9636592689428848
+    ],
+    "target_rotation": [
+      [
+        0.44718195319734083,
+        -0.8912148858095574,
+        0.07592317199688599
+      ],
+      [
+        -0.7774093388478982,
+        -0.4292457032780964,
+        -0.45976390255147925
+      ],
+      [
+        0.44233812927068034,
+        0.146574737007268,
+        -0.8847897071420785
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "d83a8cb7a1ce1994d01cfa89ca258fe62f7533f576b3f462636d015b8a710d28",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_14_candidate_04_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_14_candidate_05",
+    "site_id": "state_14",
+    "role": "focal",
+    "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+    "frame": 75,
+    "previous_q": [
+      2.4711984905780695,
+      0.22783259245050325,
+      -1.819441003564407,
+      -0.33625548334629807,
+      -1.3009787964156971,
+      0.21841370761066536,
+      0.43965662973252967
+    ],
+    "target_position": [
+      0.05886604939105978,
+      0.08186151759839032,
+      0.9636592689428848
+    ],
+    "target_rotation": [
+      [
+        0.44718195319734083,
+        -0.8912148858095574,
+        0.07592317199688599
+      ],
+      [
+        -0.7774093388478982,
+        -0.4292457032780964,
+        -0.45976390255147925
+      ],
+      [
+        0.44233812927068034,
+        0.146574737007268,
+        -0.8847897071420785
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "a6a36a3fa7a997af39b13edf8a9fc93f52b279603ba2a2a327d3451236acc7e6",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_14_candidate_05_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_18_candidate_00",
+    "site_id": "state_18",
+    "role": "focal",
+    "uid": "3bfeb80ec3cbe3ef7693197d0bbe1ddb98d7af3fd734dc69e928826901fdb975",
+    "frame": 75,
+    "previous_q": [
+      -2.426801562809565,
+      -0.3444276289503755,
+      1.2898073028288033,
+      -0.41686920772147834,
+      0.038900677797882546,
+      1.960272364227653,
+      1.480932000557626
+    ],
+    "target_position": [
+      0.3175181389147155,
+      -0.07648929601709437,
+      1.096889822235397
+    ],
+    "target_rotation": [
+      [
+        -0.8331180598515749,
+        -0.3302600090843912,
+        0.4436694994573389
+      ],
+      [
+        -0.3921156303851851,
+        -0.21305358540011773,
+        -0.8949041860198127
+      ],
+      [
+        0.3900764421966247,
+        -0.9195305846722732,
+        0.04799867805982491
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "7fe4af04f1cd5df95f02f8a91097814f7163f2b0bf57bd83c3a725442b42baa0",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_18_candidate_00_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_18_candidate_01",
+    "site_id": "state_18",
+    "role": "focal",
+    "uid": "3bfeb80ec3cbe3ef7693197d0bbe1ddb98d7af3fd734dc69e928826901fdb975",
+    "frame": 75,
+    "previous_q": [
+      -2.4290300693853575,
+      -0.34740372961583726,
+      1.2798882272625018,
+      -0.41705671514370457,
+      0.05197567779788255,
+      1.960251645973528,
+      1.4787033009960158
+    ],
+    "target_position": [
+      0.3175181389147155,
+      -0.07648929601709437,
+      1.096889822235397
+    ],
+    "target_rotation": [
+      [
+        -0.8331180598515749,
+        -0.3302600090843912,
+        0.4436694994573389
+      ],
+      [
+        -0.3921156303851851,
+        -0.21305358540011773,
+        -0.8949041860198127
+      ],
+      [
+        0.3900764421966247,
+        -0.9195305846722732,
+        0.04799867805982491
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "6007de5a82dd36fb22186e91c5917ea5115a948ad99ae56d794c4b0abf4353d8",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_18_candidate_01_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_18_candidate_02",
+    "site_id": "state_18",
+    "role": "focal",
+    "uid": "3bfeb80ec3cbe3ef7693197d0bbe1ddb98d7af3fd734dc69e928826901fdb975",
+    "frame": 75,
+    "previous_q": [
+      -2.4245479275783324,
+      -0.3414542202098927,
+      1.2997011260345739,
+      -0.41673619809869816,
+      0.025825677797882546,
+      1.9602873222212116,
+      1.4831592350676754
+    ],
+    "target_position": [
+      0.3175181389147155,
+      -0.07648929601709437,
+      1.096889822235397
+    ],
+    "target_rotation": [
+      [
+        -0.8331180598515749,
+        -0.3302600090843912,
+        0.4436694994573389
+      ],
+      [
+        -0.3921156303851851,
+        -0.21305358540011773,
+        -0.8949041860198127
+      ],
+      [
+        0.3900764421966247,
+        -0.9195305846722732,
+        0.04799867805982491
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "7a3c79b084f568e28475926aa657872e88d4d471ef927c099ac00a6b7e5f086a",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_18_candidate_02_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_18_candidate_03",
+    "site_id": "state_18",
+    "role": "focal",
+    "uid": "3bfeb80ec3cbe3ef7693197d0bbe1ddb98d7af3fd734dc69e928826901fdb975",
+    "frame": 75,
+    "previous_q": [
+      -2.4312335381212065,
+      -0.3503832940899299,
+      1.269944245773473,
+      -0.4172995057408279,
+      0.06505067779788254,
+      1.9602254601034064,
+      1.4764726185001207
+    ],
+    "target_position": [
+      0.3175181389147155,
+      -0.07648929601709437,
+      1.096889822235397
+    ],
+    "target_rotation": [
+      [
+        -0.8331180598515749,
+        -0.3302600090843912,
+        0.4436694994573389
+      ],
+      [
+        -0.3921156303851851,
+        -0.21305358540011773,
+        -0.8949041860198127
+      ],
+      [
+        0.3900764421966247,
+        -0.9195305846722732,
+        0.04799867805982491
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "bcd5c6f1a6ed9a16305883e3d5332353ec70e4bba50ab424e65afb9367fc29a7",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_18_candidate_03_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_18_candidate_04",
+    "site_id": "state_18",
+    "role": "focal",
+    "uid": "3bfeb80ec3cbe3ef7693197d0bbe1ddb98d7af3fd734dc69e928826901fdb975",
+    "frame": 75,
+    "previous_q": [
+      -2.422268745837378,
+      -0.3384827783172014,
+      1.3095690499627337,
+      -0.4166571378082285,
+      0.012750677797882547,
+      1.9602963159371098,
+      1.485385505805939
+    ],
+    "target_position": [
+      0.3175181389147155,
+      -0.07648929601709437,
+      1.096889822235397
+    ],
+    "target_rotation": [
+      [
+        -0.8331180598515749,
+        -0.3302600090843912,
+        0.4436694994573389
+      ],
+      [
+        -0.3921156303851851,
+        -0.21305358540011773,
+        -0.8949041860198127
+      ],
+      [
+        0.3900764421966247,
+        -0.9195305846722732,
+        0.04799867805982491
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "e3b75fc5403ffef332ad4ea5c515c560bc11af70f406b1ed15780230b47fb6a1",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_18_candidate_04_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_18_candidate_05",
+    "site_id": "state_18",
+    "role": "focal",
+    "uid": "3bfeb80ec3cbe3ef7693197d0bbe1ddb98d7af3fd734dc69e928826901fdb975",
+    "frame": 75,
+    "previous_q": [
+      -2.427695968449287,
+      -0.34561770409586445,
+      1.2858426767826279,
+      -0.4169376324296805,
+      0.044130677797882545,
+      1.9602647538149933,
+      1.4800407251033505
+    ],
+    "target_position": [
+      0.3175181389147155,
+      -0.07648929601709437,
+      1.096889822235397
+    ],
+    "target_rotation": [
+      [
+        -0.8331180598515749,
+        -0.3302600090843912,
+        0.4436694994573389
+      ],
+      [
+        -0.3921156303851851,
+        -0.21305358540011773,
+        -0.8949041860198127
+      ],
+      [
+        0.3900764421966247,
+        -0.9195305846722732,
+        0.04799867805982491
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "90a224aeb56fddba719b210e2c98cea40c75b93491ff26863e00336e6f28c621",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_18_candidate_05_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_13_candidate_00",
+    "site_id": "state_13",
+    "role": "control",
+    "uid": "0041eb55dd40437ac17fe39ad8e73df25d7db92ccc7ab532775994d081047948",
+    "frame": 75,
+    "previous_q": [
+      1.0804185175237409,
+      0.03215105398526326,
+      -2.1653111228548694,
+      -0.45859723946961956,
+      0.225351357375744,
+      0.7111866918972807,
+      -1.0740740281858983
+    ],
+    "target_position": [
+      0.17408042245814132,
+      -0.2155450374352675,
+      0.9559770094503807
+    ],
+    "target_rotation": [
+      [
+        0.9602254138123807,
+        0.16371790185083468,
+        0.2261937295382049
+      ],
+      [
+        0.20603814204950008,
+        -0.9621728707437359,
+        -0.1782460401398821
+      ],
+      [
+        0.18845540238908562,
+        0.21776091343103546,
+        -0.9576349752865384
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "200aedbcef2204a629dc352baf602d0eb837b3e87027e6a7383ad47ccc60b390",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_13_candidate_00_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_13_candidate_01",
+    "site_id": "state_13",
+    "role": "control",
+    "uid": "0041eb55dd40437ac17fe39ad8e73df25d7db92ccc7ab532775994d081047948",
+    "frame": 75,
+    "previous_q": [
+      1.07053294387858,
+      0.03156542270504312,
+      -2.1544111228548695,
+      -0.45754213200338534,
+      0.22461380695204125,
+      0.710768700775103,
+      -1.0736586288917909
+    ],
+    "target_position": [
+      0.17408042245814132,
+      -0.2155450374352675,
+      0.9559770094503807
+    ],
+    "target_rotation": [
+      [
+        0.9602254138123807,
+        0.16371790185083468,
+        0.2261937295382049
+      ],
+      [
+        0.20603814204950008,
+        -0.9621728707437359,
+        -0.1782460401398821
+      ],
+      [
+        0.18845540238908562,
+        0.21776091343103546,
+        -0.9576349752865384
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "034deea7a2d8bfa0e5a36ba93554a32ec578f9e65c0560445e7a8ebaaddec6c9",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_13_candidate_01_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_13_candidate_02",
+    "site_id": "state_13",
+    "role": "control",
+    "uid": "0041eb55dd40437ac17fe39ad8e73df25d7db92ccc7ab532775994d081047948",
+    "frame": 75,
+    "previous_q": [
+      1.0905183163145657,
+      0.03267806844637964,
+      -2.1762111228548693,
+      -0.45961965985765746,
+      0.22591623169322947,
+      0.711600184605738,
+      -1.0744279479910657
+    ],
+    "target_position": [
+      0.17408042245814132,
+      -0.2155450374352675,
+      0.9559770094503807
+    ],
+    "target_rotation": [
+      [
+        0.9602254138123807,
+        0.16371790185083468,
+        0.2261937295382049
+      ],
+      [
+        0.20603814204950008,
+        -0.9621728707437359,
+        -0.1782460401398821
+      ],
+      [
+        0.18845540238908562,
+        0.21776091343103546,
+        -0.9576349752865384
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "e3dae1ed1c1db2d1a759cee9b9ac434bf4995f755426c82b0ec7d794160b5647",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_13_candidate_02_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_13_candidate_03",
+    "site_id": "state_13",
+    "role": "control",
+    "uid": "0041eb55dd40437ac17fe39ad8e73df25d7db92ccc7ab532775994d081047948",
+    "frame": 75,
+    "previous_q": [
+      1.0608872508589524,
+      0.030913972786317197,
+      -2.1435111228548696,
+      -0.45645156753417276,
+      0.22368263314440737,
+      0.7103460210518396,
+      -1.0731748251598965
+    ],
+    "target_position": [
+      0.17408042245814132,
+      -0.2155450374352675,
+      0.9559770094503807
+    ],
+    "target_rotation": [
+      [
+        0.9602254138123807,
+        0.16371790185083468,
+        0.2261937295382049
+      ],
+      [
+        0.20603814204950008,
+        -0.9621728707437359,
+        -0.1782460401398821
+      ],
+      [
+        0.18845540238908562,
+        0.21776091343103546,
+        -0.9576349752865384
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "34883eeb40d37367180c949c45930b620f51e3970d9572a18c66cc51a5073651",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_13_candidate_03_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_13_candidate_04",
+    "site_id": "state_13",
+    "role": "control",
+    "uid": "0041eb55dd40437ac17fe39ad8e73df25d7db92ccc7ab532775994d081047948",
+    "frame": 75,
+    "previous_q": [
+      1.100810687017498,
+      0.03315249873860455,
+      -2.187111122854869,
+      -0.4606115635084846,
+      0.22632611933642174,
+      0.7120092446393098,
+      -1.0747262162740345
+    ],
+    "target_position": [
+      0.17408042245814132,
+      -0.2155450374352675,
+      0.9559770094503807
+    ],
+    "target_rotation": [
+      [
+        0.9602254138123807,
+        0.16371790185083468,
+        0.2261937295382049
+      ],
+      [
+        0.20603814204950008,
+        -0.9621728707437359,
+        -0.1782460401398821
+      ],
+      [
+        0.18845540238908562,
+        0.21776091343103546,
+        -0.9576349752865384
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "0eac26c4468301b533d6e22b6ac1acc609a955f42e9b06b3a0e1a241390590ae",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_13_candidate_04_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_13_candidate_05",
+    "site_id": "state_13",
+    "role": "control",
+    "uid": "0041eb55dd40437ac17fe39ad8e73df25d7db92ccc7ab532775994d081047948",
+    "frame": 75,
+    "previous_q": [
+      1.076437247162428,
+      0.031924208625433055,
+      -2.1609511228548692,
+      -0.4581792580806854,
+      0.2250781477642947,
+      0.7110200424690613,
+      -1.0739156055017467
+    ],
+    "target_position": [
+      0.17408042245814132,
+      -0.2155450374352675,
+      0.9559770094503807
+    ],
+    "target_rotation": [
+      [
+        0.9602254138123807,
+        0.16371790185083468,
+        0.2261937295382049
+      ],
+      [
+        0.20603814204950008,
+        -0.9621728707437359,
+        -0.1782460401398821
+      ],
+      [
+        0.18845540238908562,
+        0.21776091343103546,
+        -0.9576349752865384
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "31e3aa77351237ae68bb87a0cfb4f197b2b4a9291c8130968e128c3150231fac",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_13_candidate_05_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_08_candidate_00",
+    "site_id": "state_08",
+    "role": "control",
+    "uid": "06ca0c5d8d0cb31f50338aee261f6c596974205eb08300b4526361bb949a0c56",
+    "frame": 75,
+    "previous_q": [
+      -1.425286180067754,
+      0.39303002035763585,
+      -0.2617401363953118,
+      -1.6040816691381363,
+      0.11302911886768265,
+      1.4122442018381558,
+      0.10947919609457729
+    ],
+    "target_position": [
+      -0.032854940350743364,
+      -0.5915895744097782,
+      0.3696374711299105
+    ],
+    "target_rotation": [
+      [
+        -0.2217013665765356,
+        -0.9712300788740037,
+        0.08695192895211226
+      ],
+      [
+        -0.7985509172962597,
+        0.2320093041369958,
+        0.555417064267177
+      ],
+      [
+        -0.5596114156657268,
+        0.05370117954257223,
+        -0.8270134501761973
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "3a942c03f7f1445285e1fe0af1e3f87504f5ae42c98817edc0de1ee2296d4df4",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_08_candidate_00_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_08_candidate_01",
+    "site_id": "state_08",
+    "role": "control",
+    "uid": "06ca0c5d8d0cb31f50338aee261f6c596974205eb08300b4526361bb949a0c56",
+    "frame": 75,
+    "previous_q": [
+      -1.4343986401937074,
+      0.3920977757114521,
+      -0.2508401363953118,
+      -1.604169649602191,
+      0.10991665385474111,
+      1.412602833006032,
+      0.11208749825170947
+    ],
+    "target_position": [
+      -0.032854940350743364,
+      -0.5915895744097782,
+      0.3696374711299105
+    ],
+    "target_rotation": [
+      [
+        -0.2217013665765356,
+        -0.9712300788740037,
+        0.08695192895211226
+      ],
+      [
+        -0.7985509172962597,
+        0.2320093041369958,
+        0.555417064267177
+      ],
+      [
+        -0.5596114156657268,
+        0.05370117954257223,
+        -0.8270134501761973
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "3f5c1142affb4fdc030a08171b15db0753ee01153135c9bd718fddf146c00cc3",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_08_candidate_01_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_08_candidate_02",
+    "site_id": "state_08",
+    "role": "control",
+    "uid": "06ca0c5d8d0cb31f50338aee261f6c596974205eb08300b4526361bb949a0c56",
+    "frame": 75,
+    "previous_q": [
+      -1.4161825199264853,
+      0.39400491979583874,
+      -0.2726401363953118,
+      -1.6039908721760658,
+      0.1161545645332573,
+      1.4118739840228902,
+      0.10686041870027631
+    ],
+    "target_position": [
+      -0.032854940350743364,
+      -0.5915895744097782,
+      0.3696374711299105
+    ],
+    "target_rotation": [
+      [
+        -0.2217013665765356,
+        -0.9712300788740037,
+        0.08695192895211226
+      ],
+      [
+        -0.7985509172962597,
+        0.2320093041369958,
+        0.555417064267177
+      ],
+      [
+        -0.5596114156657268,
+        0.05370117954257223,
+        -0.8270134501761973
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "3390632f9e458a8bfdff3a01b0d62d6d445e195f8dce2ad2a14c28d45a54ffe2",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_08_candidate_02_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_08_candidate_03",
+    "site_id": "state_08",
+    "role": "control",
+    "uid": "06ca0c5d8d0cb31f50338aee261f6c596974205eb08300b4526361bb949a0c56",
+    "frame": 75,
+    "previous_q": [
+      -1.443519496940288,
+      0.39120778355188895,
+      -0.2399401363953118,
+      -1.6042548585149246,
+      0.10681656909796983,
+      1.4129500704046223,
+      0.11468581221946804
+    ],
+    "target_position": [
+      -0.032854940350743364,
+      -0.5915895744097782,
+      0.3696374711299105
+    ],
+    "target_rotation": [
+      [
+        -0.2217013665765356,
+        -0.9712300788740037,
+        0.08695192895211226
+      ],
+      [
+        -0.7985509172962597,
+        0.2320093041369958,
+        0.555417064267177
+      ],
+      [
+        -0.5596114156657268,
+        0.05370117954257223,
+        -0.8270134501761973
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "d976374984bdc57d915eb34fc10152b1d46fad02435b30d5ad887603ff9f03a4",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_08_candidate_03_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_08_candidate_04",
+    "site_id": "state_08",
+    "role": "control",
+    "uid": "06ca0c5d8d0cb31f50338aee261f6c596974205eb08300b4526361bb949a0c56",
+    "frame": 75,
+    "previous_q": [
+      -1.407088069551682,
+      0.39502289593364026,
+      -0.2835401363953118,
+      -1.6038972116350256,
+      0.11929359858623821,
+      1.4114919774470012,
+      0.10423067350920383
+    ],
+    "target_position": [
+      -0.032854940350743364,
+      -0.5915895744097782,
+      0.3696374711299105
+    ],
+    "target_rotation": [
+      [
+        -0.2217013665765356,
+        -0.9712300788740037,
+        0.08695192895211226
+      ],
+      [
+        -0.7985509172962597,
+        0.2320093041369958,
+        0.555417064267177
+      ],
+      [
+        -0.5596114156657268,
+        0.05370117954257223,
+        -0.8270134501761973
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "bb325686a3649c5632dac6f3d814c9b454496c7212b77dadb26010242d1da9fb",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_08_candidate_04_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "state_08_candidate_05",
+    "site_id": "state_08",
+    "role": "control",
+    "uid": "06ca0c5d8d0cb31f50338aee261f6c596974205eb08300b4526361bb949a0c56",
+    "frame": 75,
+    "previous_q": [
+      -1.4289301308486542,
+      0.3926520268889059,
+      -0.2573801363953118,
+      -1.6041171967392573,
+      0.1117826089670271,
+      1.4123890336975582,
+      0.11052374659051721
+    ],
+    "target_position": [
+      -0.032854940350743364,
+      -0.5915895744097782,
+      0.3696374711299105
+    ],
+    "target_rotation": [
+      [
+        -0.2217013665765356,
+        -0.9712300788740037,
+        0.08695192895211226
+      ],
+      [
+        -0.7985509172962597,
+        0.2320093041369958,
+        0.555417064267177
+      ],
+      [
+        -0.5596114156657268,
+        0.05370117954257223,
+        -0.8270134501761973
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "73cd76af092a1958b28f3a5c7a4922763172d1cce4a9011b4f36634714efd6e8",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/state_08_candidate_05_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "case_01_candidate_00",
+    "site_id": "case_01_pre_failure",
+    "role": "prior_pose_matched_reversal",
+    "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+    "frame": 34,
+    "previous_q": [
+      -1.2914180546906595,
+      -0.037589982794440834,
+      -1.5313244762610967,
+      -2.019454763082975,
+      -1.0775894169894442,
+      1.86932830876188,
+      -1.8392081849571111
+    ],
+    "target_position": [
+      -0.5471975663261858,
+      -0.09866402058391988,
+      0.4683117341253371
+    ],
+    "target_rotation": [
+      [
+        0.7172088051968888,
+        -0.6246338896145834,
+        -0.3089401781785716
+      ],
+      [
+        -0.1971336117523349,
+        -0.6070862241544716,
+        0.7697952036479224
+      ],
+      [
+        -0.6683934985212907,
+        -0.4912014051148704,
+        -0.5585439201599511
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "22b29caa2844cd232783422afff8d1a01075348d4438f8d349f424dd8c17b57d",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/case_01_candidate_00_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "case_01_candidate_05",
+    "site_id": "case_01_pre_failure",
+    "role": "prior_pose_matched_reversal",
+    "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+    "frame": 34,
+    "previous_q": [
+      -1.2914180068763617,
+      -0.037589883577423426,
+      -1.5313245601712437,
+      -2.019454846184302,
+      -1.0775893164925046,
+      1.869328375377989,
+      -1.8392082479830762
+    ],
+    "target_position": [
+      -0.5471975663261858,
+      -0.09866402058391988,
+      0.4683117341253371
+    ],
+    "target_rotation": [
+      [
+        0.7172088051968888,
+        -0.6246338896145834,
+        -0.3089401781785716
+      ],
+      [
+        -0.1971336117523349,
+        -0.6070862241544716,
+        0.7697952036479224
+      ],
+      [
+        -0.6683934985212907,
+        -0.4912014051148704,
+        -0.5585439201599511
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "033f3b5a57b8a7b819dc9b94101bf36a45753d1b402eebe0e865c02ba9182d09",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/case_01_candidate_05_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "case_01_matched_00",
+    "site_id": "case_01_pre_failure",
+    "role": "prior_pose_matched_reversal",
+    "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+    "frame": 34,
+    "previous_q": [
+      -1.2805180546906596,
+      -0.046115208821704945,
+      -1.5383651558476965,
+      -2.018725155764846,
+      -1.084483256141565,
+      1.8627289380559986,
+      -1.8362184064794362
+    ],
+    "target_position": [
+      -0.5471975663261858,
+      -0.09866402058391988,
+      0.4683117341253371
+    ],
+    "target_rotation": [
+      [
+        0.7172088051968888,
+        -0.6246338896145834,
+        -0.3089401781785716
+      ],
+      [
+        -0.1971336117523349,
+        -0.6070862241544716,
+        0.7697952036479224
+      ],
+      [
+        -0.6683934985212907,
+        -0.4912014051148704,
+        -0.5585439201599511
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "5b7444ca14819f27d61144739d0b20dc90a95690a3bad7be6e5c123d51258cf5",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/case_01_matched_00_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "case_01_matched_01",
+    "site_id": "case_01_pre_failure",
+    "role": "prior_pose_matched_reversal",
+    "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+    "frame": 34,
+    "previous_q": [
+      -1.3023180546906594,
+      -0.031450361115783476,
+      -1.5231972333681623,
+      -2.0199854338138548,
+      -1.0726026327177973,
+      1.8740691290770901,
+      -1.8413899433061192
+    ],
+    "target_position": [
+      -0.5471975663261858,
+      -0.09866402058391988,
+      0.4683117341253371
+    ],
+    "target_rotation": [
+      [
+        0.7172088051968888,
+        -0.6246338896145834,
+        -0.3089401781785716
+      ],
+      [
+        -0.1971336117523349,
+        -0.6070862241544716,
+        0.7697952036479224
+      ],
+      [
+        -0.6683934985212907,
+        -0.4912014051148704,
+        -0.5585439201599511
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "cd4c3600a992c5481b0bc2b12bdb0915239ed11343ba2cd4bfc89ae03e0b4ca1",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/case_01_matched_01_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "case_01_matched_02",
+    "site_id": "case_01_pre_failure",
+    "role": "prior_pose_matched_reversal",
+    "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+    "frame": 34,
+    "previous_q": [
+      -1.2696180546906595,
+      -0.058202009989788285,
+      -1.543773696544194,
+      -2.017704977637241,
+      -1.0942001921997166,
+      1.853337704591326,
+      -1.8320568264644346
+    ],
+    "target_position": [
+      -0.5471975663261858,
+      -0.09866402058391988,
+      0.4683117341253371
+    ],
+    "target_rotation": [
+      [
+        0.7172088051968888,
+        -0.6246338896145834,
+        -0.3089401781785716
+      ],
+      [
+        -0.1971336117523349,
+        -0.6070862241544716,
+        0.7697952036479224
+      ],
+      [
+        -0.6683934985212907,
+        -0.4912014051148704,
+        -0.5585439201599511
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "fedee555fa5b7fd3cc1f22870f86b854846a58da93be50fe993766e0699224e4",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/case_01_matched_02_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "case_01_matched_03",
+    "site_id": "case_01_pre_failure",
+    "role": "prior_pose_matched_reversal",
+    "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+    "frame": 34,
+    "previous_q": [
+      -1.2805180068763617,
+      -0.04611510190320378,
+      -1.5383652439325644,
+      -2.018725239417216,
+      -1.0844831494552858,
+      1.8627290109789638,
+      -1.8362184715549996
+    ],
+    "target_position": [
+      -0.5471975663261858,
+      -0.09866402058391988,
+      0.4683117341253371
+    ],
+    "target_rotation": [
+      [
+        0.7172088051968888,
+        -0.6246338896145834,
+        -0.3089401781785716
+      ],
+      [
+        -0.1971336117523349,
+        -0.6070862241544716,
+        0.7697952036479224
+      ],
+      [
+        -0.6683934985212907,
+        -0.4912014051148704,
+        -0.5585439201599511
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "f076c1a4e9082e6e3a7610892c7f786a20ab8cb608282d51ef8a6fa13fa72e35",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/case_01_matched_03_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "case_01_matched_04",
+    "site_id": "case_01_pre_failure",
+    "role": "prior_pose_matched_reversal",
+    "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+    "frame": 34,
+    "previous_q": [
+      -1.3023180068763616,
+      -0.031450270803624863,
+      -1.5231973127683704,
+      -2.0199855162165674,
+      -1.072602539446119,
+      1.8740691885796819,
+      -1.8413900036055475
+    ],
+    "target_position": [
+      -0.5471975663261858,
+      -0.09866402058391988,
+      0.4683117341253371
+    ],
+    "target_rotation": [
+      [
+        0.7172088051968888,
+        -0.6246338896145834,
+        -0.3089401781785716
+      ],
+      [
+        -0.1971336117523349,
+        -0.6070862241544716,
+        0.7697952036479224
+      ],
+      [
+        -0.6683934985212907,
+        -0.4912014051148704,
+        -0.5585439201599511
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "1f2d881e9064126b9acb7688fb3914be94a5644a8f52ce039552a6bfeee8f132",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/case_01_matched_04_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "case_01_matched_05",
+    "site_id": "case_01_pre_failure",
+    "role": "prior_pose_matched_reversal",
+    "uid": "8007124479c3c7bc724a1818507bb840030dd31b60be2b3793048463dfa14ffc",
+    "frame": 34,
+    "previous_q": [
+      -1.2696180068763616,
+      -0.0582019001859668,
+      -1.543773786923768,
+      -2.0177050613698544,
+      -1.09420008326705,
+      1.8533377802529911,
+      -1.8320568915722613
+    ],
+    "target_position": [
+      -0.5471975663261858,
+      -0.09866402058391988,
+      0.4683117341253371
+    ],
+    "target_rotation": [
+      [
+        0.7172088051968888,
+        -0.6246338896145834,
+        -0.3089401781785716
+      ],
+      [
+        -0.1971336117523349,
+        -0.6070862241544716,
+        0.7697952036479224
+      ],
+      [
+        -0.6683934985212907,
+        -0.4912014051148704,
+        -0.5585439201599511
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "394cbeca25ee5e9557d94467298b714c555558f02870842d20de896bc5e47cb6",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/case_01_matched_05_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "failure_input_candidate_04",
+    "site_id": "state_14_frame_102",
+    "role": "first_failure_input",
+    "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+    "frame": 102,
+    "previous_q": [
+      2.3971239410544025,
+      0.07041267205320365,
+      -1.616130595673609,
+      -0.3758544732182841,
+      -1.573361785194308,
+      0.32722790204966923,
+      0.2610436886855599
+    ],
+    "target_position": [
+      0.13744098569017726,
+      0.029594308991476144,
+      0.9758989695284097
+    ],
+    "target_rotation": [
+      [
+        0.5341320980132692,
+        -0.845119211517556,
+        0.021827051928465513
+      ],
+      [
+        -0.7172987827735959,
+        -0.4667090986538268,
+        -0.5173635795697742
+      ],
+      [
+        0.4474207841657123,
+        0.26068397641143404,
+        -0.8554872917459744
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "f0620e872d650523803dee51d089779070adac108c0bd176629c2dcadd0b3fee",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/failure_input_candidate_04_L1_dls_prediction.json"
+  },
+  {
+    "input_id": "failure_input_candidate_01",
+    "site_id": "state_14_frame_102",
+    "role": "first_failure_input",
+    "uid": "652db5eb389e7355156299a8e5d39fecb8bc55621d923f9a05f415fc9d4a9f4d",
+    "frame": 102,
+    "previous_q": [
+      2.533788118695976,
+      0.0706116591173852,
+      -1.7483807706805574,
+      -0.39016115901167253,
+      -1.5635420628481231,
+      0.32652567612210776,
+      0.27574745330979844
+    ],
+    "target_position": [
+      0.13744098569017726,
+      0.029594308991476144,
+      0.9758989695284097
+    ],
+    "target_rotation": [
+      [
+        0.5341320980132692,
+        -0.845119211517556,
+        0.021827051928465513
+      ],
+      [
+        -0.7172987827735959,
+        -0.4667090986538268,
+        -0.5173635795697742
+      ],
+      [
+        0.4474207841657123,
+        0.26068397641143404,
+        -0.8554872917459744
+      ]
+    ],
+    "dt": 0.02,
+    "query_hash": "518016465fd41d4767a62cd5fc5e7ff772ad0dc2c28c3a2bdaae6aedc755ef6e",
+    "known_legal_command_witness": "outputs/continuation_mechanism_study/nonlinear_continuation_reference/successful_witnesses/failure_input_candidate_01_L1_dls_prediction.json"
+  }
+]

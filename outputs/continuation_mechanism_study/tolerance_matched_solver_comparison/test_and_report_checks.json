@@ -1,0 +1,44 @@
+{
+  "unit_and_regression_tests": {
+    "command": "PYTHONPATH=src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /home/eric/anaconda3/envs/isaaclab_3/bin/python -m pytest -o addopts='' -q tests/test_tolerance_solver_comparison.py tests/test_tolerance_reporting.py tests/test_nonlinear_continuation_reference.py tests/test_nonlinear_reference_reporting.py tests/test_continuation_mechanism.py tests/test_residual_configuration.py tests/test_independent_configuration_selection.py tests/test_independent_selection_reporting.py",
+    "exit_code": 0,
+    "observed_summary": "29 passed in 2.05s",
+    "native_adapter_tests_skipped": false,
+    "timing_relation": "post-experiment tests, not concurrent with measured solver runs"
+  },
+  "premeasurement_tests": {
+    "file": "tests/test_tolerance_solver_comparison.py",
+    "observed_summary": "6 passed in 1.39s",
+    "native_residual_cases": 100,
+    "native_public_kinematics_configurations": 20,
+    "tests_verify": [
+      "official diffRelative target-frame translation and rotation-vector convention",
+      "inscribed Cartesian component box within public norm bounds",
+      "outside-box errors are not treated as bounds-plus-epsilon",
+      "native/public FK and joint ordering",
+      "DLS variants differ only in stopping precision and share the same interval adapter",
+      "rejected returned configurations are not fed forward",
+      "geometric and deadline completion are distinct endpoints"
+    ]
+  },
+  "report_checks": {
+    "main_table_rows_matched_to_full_precision_records": 6,
+    "precision_distribution_rows_matched_to_full_precision_records": 6,
+    "relative_evidence_links_resolve": true,
+    "protected_old_files_unchanged": 1404,
+    "execution_and_measurement_seals_match": true
+  },
+  "official_source_scope": {
+    "upstream_commit": "90162ac2ecc6ea8f88c6e99df6ee01efd217a3fb",
+    "local_upstream_worktree_clean_before_measurement": true,
+    "source_files": [
+      "trac_ik_lib/include/trac_ik/kdl_tl.hpp",
+      "trac_ik_lib/include/trac_ik/trac_ik.hpp",
+      "trac_ik_lib/src/kdl_tl.cpp",
+      "trac_ik_lib/src/nlopt_ik.cpp",
+      "trac_ik_lib/src/trac_ik.cpp"
+    ],
+    "primary_url": "https://github.com/traclabs/trac_ik/tree/90162ac2ecc6ea8f88c6e99df6ee01efd217a3fb",
+    "documentation_fallback_note": "ROS documentation access was blocked; actual pinned official source and native residual tests used instead"
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "comparison": "trac_task_5ms_vs_trac_strict_5ms",
+    "base": "trac_strict_5ms",
+    "task": "trac_task_5ms",
+    "recovered_uids": [
+      "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+      "9a94337fb5b3319c8ba9dcce20e827630b16d9a348f1f3aa8709c5d0df3406af",
+      "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370"
+    ],
+    "lost_uids": [],
+    "stable_recovered_uids": [
+      "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+      "9a94337fb5b3319c8ba9dcce20e827630b16d9a348f1f3aa8709c5d0df3406af"
+    ],
+    "stable_lost_uids": [],
+    "mean_completion_count_difference": 2.6666666666666643,
+    "cumulative_latency_ratio": 0.6746551609270938,
+    "definition": "compare per-trajectory completion fractions, not paired stochastic seeds; stable means all planned repeats, not probability-one guarantee"
+  },
+  {
+    "comparison": "trac_task_20ms_vs_trac_strict_20ms",
+    "base": "trac_strict_20ms",
+    "task": "trac_task_20ms",
+    "recovered_uids": [
+      "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+      "9a94337fb5b3319c8ba9dcce20e827630b16d9a348f1f3aa8709c5d0df3406af",
+      "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+      "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370"
+    ],
+    "lost_uids": [],
+    "stable_recovered_uids": [
+      "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+      "9a94337fb5b3319c8ba9dcce20e827630b16d9a348f1f3aa8709c5d0df3406af"
+    ],
+    "stable_lost_uids": [],
+    "mean_completion_count_difference": 3.3333333333333357,
+    "cumulative_latency_ratio": 0.41601771766488166,
+    "definition": "compare per-trajectory completion fractions, not paired stochastic seeds; stable means all planned repeats, not probability-one guarantee"
+  },
+  {
+    "comparison": "dls_task_vs_dls_strict",
+    "base": "dls_strict",
+    "task": "dls_task",
+    "recovered_uids": [],
+    "lost_uids": [],
+    "stable_recovered_uids": [],
+    "stable_lost_uids": [],
+    "mean_completion_count_difference": 0.0,
+    "cumulative_latency_ratio": 0.33771109875469957,
+    "definition": "compare per-trajectory completion fractions, not paired stochastic seeds; stable means all planned repeats, not probability-one guarantee"
+  },
+  {
+    "comparison": "dls_task_vs_trac_task_5ms",
+    "base": "trac_task_5ms",
+    "task": "dls_task",
+    "recovered_uids": [
+      "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab"
+    ],
+    "lost_uids": [
+      "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370"
+    ],
+    "stable_recovered_uids": [
+      "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab"
+    ],
+    "stable_lost_uids": [],
+    "mean_completion_count_difference": 0.3333333333333357,
+    "cumulative_latency_ratio": 2.2387824112551535,
+    "definition": "compare per-trajectory completion fractions, not paired stochastic seeds; stable means all planned repeats, not probability-one guarantee"
+  },
+  {
+    "comparison": "dls_task_vs_trac_task_20ms",
+    "base": "trac_task_20ms",
+    "task": "dls_task",
+    "recovered_uids": [
+      "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab"
+    ],
+    "lost_uids": [
+      "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+      "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370"
+    ],
+    "stable_recovered_uids": [
+      "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab"
+    ],
+    "stable_lost_uids": [],
+    "mean_completion_count_difference": -0.3333333333333357,
+    "cumulative_latency_ratio": 1.3371781904545983,
+    "definition": "compare per-trajectory completion fractions, not paired stochastic seeds; stable means all planned repeats, not probability-one guarantee"
+  }
+]

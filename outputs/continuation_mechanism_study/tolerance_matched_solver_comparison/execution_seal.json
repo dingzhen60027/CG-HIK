@@ -1,0 +1,35 @@
+{
+  "utc": "2026-09-07T10:12:47.328249+00:00",
+  "solver_calls": 0,
+  "files": {
+    "protocol.json": "9df6dfc7323d2bdffba6796a52ccdd718bccc9163ea1cb670fbfe75a27361779",
+    "fixed_inputs.json": "5ac2c1a2b4529782516784eae58f0055dce8c846170c01dfe1065e8929f55e7f",
+    "reference_trajectories.npz": "e0016c28344d5dbfe3483b1a8514d097d7696924cb977422493c333a80128ff8",
+    "trajectory_identities.json": "942638718af89b8e0affde9a3f7420ab56461da77d70953ee1f8c2045148db51",
+    "online_targets.json": "c92f978503b36756baef19b2529ab1efa789d099f16c1f8a035443b780eea2ce"
+  },
+  "old_identity_metadata": {
+    "outputs/anchored_temporal_v7_smoke/completion_identity_diagnostics.json": "01aacda3b8b08bbfeaeebdeb948a3e71506afde9625961c69372a0144c88afa6",
+    "outputs/archive/anchored_temporal_v7_smoke_pre_recovery_metric_fix_20260904/completion_identity_diagnostics.json": "01aacda3b8b08bbfeaeebdeb948a3e71506afde9625961c69372a0144c88afa6",
+    "outputs/archive/temporal_event_v6_smoke_pre_metric_fix_20260903/completion_identity_diagnostics.json": "94ce8354c78eceb623062dae90b0206a126789314ee5dbcd8e1a7557420b59e0",
+    "outputs/continuation_mechanism_study/independent_configuration_selection/identity_seal.json": "f2eb20b0d026075053910b8ab859765080e31e4f98a1ff8566c7e91d2956c196",
+    "outputs/continuation_mechanism_study/independent_configuration_selection/trajectory_identities.json": "0434a8c10f71327b8cdc9aa6ea0e454f67216e9b7efd1413038fd909f5784ba2",
+    "outputs/fresh_transition_v4_test/panda_identity_manifest.json": "17d9c05ca9c6ce063aea1a34ffdc9048a5fd61c05a61071ad8425c2cd00eefb5",
+    "outputs/fresh_transition_v4_test/ur5e_identity_manifest.json": "04afda4123395503ddff56b4db52bc5a57414ad24aa02845956ded33d6f26116",
+    "outputs/revision_compute_allocation/02_point_mechanism_benchmark/panda_identities.json": "9e0af5df1292d7f9f8f40f531fa70eb616c2bc6818b097caa9d422814d6389ae",
+    "outputs/revision_compute_allocation/02_point_mechanism_benchmark/ur5e_identities.json": "712e56f4ddbdff998b1325a9ee40e0fd012a65f245f70a9f2247ca63123f8e66",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/panda_identities.json": "a12e6a9c6d78d2ae5133462501fdf4c84cd3ce52af84aeffb421d5e230ef51bb",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/ur5e_identities.json": "1dcadcf575eff60232ead330f1fd89ee51f208abea1b1c950829365c2775868f",
+    "outputs/revision_compute_allocation/diagnostic_adapter_attempt_01/original_selection_and_identity_seal.json": "01c7a3b29cb71c966c4a3a31b9dc3725a08231666a9eaf81da5995081102183a",
+    "outputs/revision_compute_allocation/selection_and_identity_seal.json": "38c22554adbcd1185174d4a53578f2a739a7c324392ce96ca45723b31807cd02",
+    "outputs/temporal_event_v6_pilot/completion_identity_diagnostics.json": "30c679cc2c467ad51d8cfc3bc0e47a38f62081932a27a880a0c7cb7c58171b89",
+    "outputs/temporal_event_v6_smoke/completion_identity_diagnostics.json": "94ce8354c78eceb623062dae90b0206a126789314ee5dbcd8e1a7557420b59e0"
+  },
+  "prior_counts": {
+    "uids": 6280,
+    "seeds": 45,
+    "hashes": 24000
+  },
+  "distinct_new_queries": 6000,
+  "all_reference_frames_verified": 6000
+}

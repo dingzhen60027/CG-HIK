@@ -1,0 +1,7 @@
+method,inputs,all_repeat_passed,all_repeat_failed,mixed,accepted_calls,calls
+trac_strict_5ms,34,29,5,0,145,170
+trac_task_5ms,34,34,0,0,170,170
+trac_strict_20ms,34,29,5,0,145,170
+trac_task_20ms,34,34,0,0,170,170
+dls_strict,34,34,0,0,34,34
+dls_task,34,34,0,0,34,34

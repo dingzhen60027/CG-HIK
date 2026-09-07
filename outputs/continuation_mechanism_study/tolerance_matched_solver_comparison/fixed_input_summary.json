@@ -1,0 +1,56 @@
+[
+  {
+    "method": "trac_strict_5ms",
+    "inputs": 34,
+    "all_repeat_passed": 29,
+    "all_repeat_failed": 5,
+    "mixed": 0,
+    "accepted_calls": 145,
+    "calls": 170
+  },
+  {
+    "method": "trac_task_5ms",
+    "inputs": 34,
+    "all_repeat_passed": 34,
+    "all_repeat_failed": 0,
+    "mixed": 0,
+    "accepted_calls": 170,
+    "calls": 170
+  },
+  {
+    "method": "trac_strict_20ms",
+    "inputs": 34,
+    "all_repeat_passed": 29,
+    "all_repeat_failed": 5,
+    "mixed": 0,
+    "accepted_calls": 145,
+    "calls": 170
+  },
+  {
+    "method": "trac_task_20ms",
+    "inputs": 34,
+    "all_repeat_passed": 34,
+    "all_repeat_failed": 0,
+    "mixed": 0,
+    "accepted_calls": 170,
+    "calls": 170
+  },
+  {
+    "method": "dls_strict",
+    "inputs": 34,
+    "all_repeat_passed": 34,
+    "all_repeat_failed": 0,
+    "mixed": 0,
+    "accepted_calls": 34,
+    "calls": 34
+  },
+  {
+    "method": "dls_task",
+    "inputs": 34,
+    "all_repeat_passed": 34,
+    "all_repeat_failed": 0,
+    "mixed": 0,
+    "accepted_calls": 34,
+    "calls": 34
+  }
+]
