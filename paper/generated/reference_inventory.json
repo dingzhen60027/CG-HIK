@@ -1,0 +1,400 @@
+{
+  "bibliography_sha256": "c6a399e1930b7963417150b3ee17b80577079d8869656d5317564abf6d2613b7",
+  "audit": "docs/REFERENCE_VERIFICATION_TASK_CONTRACT.md",
+  "entries": {
+    "wampler1986dls": {
+      "type": "article",
+      "author": "Wampler, II, Charles W.",
+      "title": "Manipulator Inverse Kinematic Solutions Based on Vector Formulations and Damped Least-Squares Methods",
+      "journal": "IEEE Transactions on Systems, Man, and Cybernetics",
+      "year": "1986",
+      "volume": "16",
+      "number": "1",
+      "pages": "93--101",
+      "doi": "10.1109/TSMC.1986.289285"
+    },
+    "nakamura1986singularity": {
+      "type": "article",
+      "author": "Nakamura, Yoshihiko and Hanafusa, Hideo",
+      "title": "Inverse Kinematic Solutions With Singularity Robustness for Robot Manipulator Control",
+      "journal": "Journal of Dynamic Systems, Measurement, and Control",
+      "year": "1986",
+      "volume": "108",
+      "number": "3",
+      "pages": "163--171",
+      "doi": "10.1115/1.3143764"
+    },
+    "chiaverini1994review": {
+      "type": "article",
+      "author": "Chiaverini, Stefano and Siciliano, Bruno and Egeland, Olav",
+      "title": "Review of the Damped Least-Squares Inverse Kinematics with Experiments on an Industrial Robot Manipulator",
+      "journal": "IEEE Transactions on Control Systems Technology",
+      "year": "1994",
+      "volume": "2",
+      "number": "2",
+      "pages": "123--134",
+      "doi": "10.1109/87.294335"
+    },
+    "beeson2015tracik": {
+      "type": "inproceedings",
+      "author": "Beeson, Patrick and Ames, Barrett",
+      "title": "{TRAC-IK}: An Open-Source Library for Improved Solving of Generic Inverse Kinematics",
+      "booktitle": "2015 IEEE-RAS 15th International Conference on Humanoid Robots",
+      "year": "2015",
+      "pages": "928--935",
+      "doi": "10.1109/HUMANOIDS.2015.7363472"
+    },
+    "rakita2018relaxedik": {
+      "type": "inproceedings",
+      "author": "Rakita, Daniel and Mutlu, Bilge and Gleicher, Michael",
+      "title": "{RelaxedIK}: Real-Time Synthesis of Accurate and Feasible Robot Arm Motion",
+      "booktitle": "Robotics: Science and Systems XIV",
+      "year": "2018",
+      "doi": "10.15607/RSS.2018.XIV.043"
+    },
+    "ames2022ikflow": {
+      "type": "article",
+      "author": "Ames, Barrett and Morgan, Jeremy and Konidaris, George",
+      "title": "{IKFlow}: Generating Diverse Inverse Kinematics Solutions",
+      "journal": "IEEE Robotics and Automation Letters",
+      "year": "2022",
+      "volume": "7",
+      "number": "3",
+      "pages": "7177--7184",
+      "doi": "10.1109/LRA.2022.3181374"
+    },
+    "habekost2023cycleik": {
+      "type": "incollection",
+      "author": "Habekost, Jan-Gerrit and Strahl, Erik and Allgeuer, Philipp and Kerzel, Matthias and Wermter, Stefan",
+      "title": "{CycleIK}: Neuro-Inspired Inverse Kinematics",
+      "booktitle": "Artificial Neural Networks and Machine Learning -- ICANN 2023",
+      "series": "Lecture Notes in Computer Science",
+      "year": "2023",
+      "volume": "14254",
+      "pages": "457--470",
+      "publisher": "Springer",
+      "doi": "10.1007/978-3-031-44207-0_38"
+    },
+    "morgan2024cppflow": {
+      "type": "inproceedings",
+      "author": "Morgan, Jeremy and Millard, David and Sukhatme, Gaurav S.",
+      "title": "{CppFlow}: Generative Inverse Kinematics for Efficient and Robust Cartesian Path Planning",
+      "booktitle": "2024 IEEE International Conference on Robotics and Automation",
+      "year": "2024",
+      "doi": "10.1109/ICRA57147.2024.10611724"
+    },
+    "limoyo2025ggik": {
+      "type": "article",
+      "author": "Limoyo, Oliver and Mari{\\'c}, Filip and Giamou, Matthew and Alexson, Petra and Petrovi{\\'c}, Ivan and Kelly, Jonathan",
+      "title": "Generative Graphical Inverse Kinematics",
+      "journal": "IEEE Transactions on Robotics",
+      "year": "2025",
+      "volume": "41",
+      "pages": "1002--1018",
+      "doi": "10.1109/TRO.2024.3521862"
+    },
+    "colan2024variablestep": {
+      "type": "article",
+      "author": "Colan, Jacinto and Davila, Ana and Hasegawa, Yasuhisa",
+      "title": "Variable Step Sizes for Iterative Jacobian-Based Inverse Kinematics of Robotic Manipulators",
+      "journal": "IEEE Access",
+      "year": "2024",
+      "volume": "12",
+      "pages": "87909--87922",
+      "doi": "10.1109/ACCESS.2024.3418206"
+    },
+    "elias2025ikgeo": {
+      "type": "article",
+      "author": "Elias, Alexander J. and Wen, John T.",
+      "title": "{IK-Geo}: Unified Robot Inverse Kinematics Using Subproblem Decomposition",
+      "journal": "Mechanism and Machine Theory",
+      "year": "2025",
+      "volume": "209",
+      "pages": "105971",
+      "doi": "10.1016/j.mechmachtheory.2025.105971"
+    },
+    "zhang2026viability": {
+      "type": "article",
+      "author": "Zhang, Yachen and Kikuuwe, Ryo",
+      "title": "Ensuring Viability: A {QP}-Based Inverse Kinematics for Handling Joint Range, Velocity and Acceleration Limits, as Well as Whole-Body Collision Avoidance",
+      "journal": "Journal of Intelligent \\& Robotic Systems",
+      "year": "2026",
+      "volume": "112",
+      "number": "1",
+      "pages": "16",
+      "doi": "10.1007/s10846-025-02335-z"
+    },
+    "yuan2025iksel": {
+      "type": "article",
+      "author": "Yuan, Xinyi and Wan, Weiwei and Harada, Kensuke",
+      "title": "{IKSel}: Selecting Good Seed Joint Values for Fast Numerical Inverse Kinematics Iterations",
+      "journal": "IEEE Transactions on Automation Science and Engineering",
+      "year": "2026",
+      "volume": "23",
+      "pages": "4410--4427",
+      "doi": "10.1109/TASE.2026.3659225"
+    },
+    "yang2026mimik": {
+      "type": "misc",
+      "author": "Yang, Jiahao and Yan, Shenhao and Feng, Fan and Yao, Chengsi and Wang, Ge and Mai, Zhixin and Zhao, Yiming and Han, Yatong",
+      "title": "{MimicIK}: Real-Time Generative Inverse Kinematics from Teleoperation with FK Consistency",
+      "year": "2026",
+      "eprint": "2606.15148",
+      "archiveprefix": "arXiv",
+      "primaryclass": "cs.RO",
+      "doi": "10.48550/arXiv.2606.15148",
+      "url": "https://arxiv.org/abs/2606.15148",
+      "note": "Preprint"
+    },
+    "jayabalan2026hybrid": {
+      "type": "article",
+      "author": "Jayabalan, Meenalochani and Loganathan, Karunamoorthy and Kayaroganam, Palanikumar",
+      "title": "A Novel Hybrid IK Architecture for Robotic Arms: Iterative Refinement of Soft-Computing Approximations with Validation on ABB IRB-1200 Robotic Arm",
+      "journal": "Machines",
+      "year": "2026",
+      "volume": "14",
+      "number": "3",
+      "pages": "292",
+      "doi": "10.3390/machines14030292"
+    },
+    "pedregosa2011sklearn": {
+      "type": "article",
+      "author": "Pedregosa, Fabian and Varoquaux, Ga{\\\"e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and Vanderplas, Jake and Passos, Alexandre and Cournapeau, David and Brucher, Matthieu and Perrot, Matthieu and Duchesnay, {\\'E}douard",
+      "title": "Scikit-learn: Machine Learning in Python",
+      "journal": "Journal of Machine Learning Research",
+      "year": "2011",
+      "volume": "12",
+      "number": "85",
+      "pages": "2825--2830",
+      "url": "https://www.jmlr.org/papers/v12/pedregosa11a.html"
+    },
+    "paszke2019pytorch": {
+      "type": "inproceedings",
+      "author": "Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith",
+      "title": "{PyTorch}: An Imperative Style, High-Performance Deep Learning Library",
+      "booktitle": "Advances in Neural Information Processing Systems",
+      "year": "2019",
+      "volume": "32",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html"
+    },
+    "virtanen2020scipy": {
+      "type": "article",
+      "author": "Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and Haberland, Matt and Reddy, Tyler and Cournapeau, David and Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and Bright, Jonathan and {van der Walt}, St{\\'e}fan J. and Brett, Matthew and Wilson, Joshua and Millman, K. Jarrod and Mayorov, Nikolay and Nelson, Andrew R. J. and Jones, Eric and Kern, Robert and Larson, Eric and Carey, C J and Polat, {\\.I}lhan and Feng, Yu and Moore, Eric W. and {VanderPlas}, Jake and Laxalde, Denis and Perktold, Josef and Cimrman, Robert and Henriksen, Ian and Quintero, E. A. and Harris, Charles R. and Archibald, Anne M. and Ribeiro, Ant{\\^o}nio H. and Pedregosa, Fabian and {van Mulbregt}, Paul and {SciPy 1.0 Contributors}",
+      "title": "{SciPy} 1.0: Fundamental Algorithms for Scientific Computing in Python",
+      "journal": "Nature Methods",
+      "year": "2020",
+      "volume": "17",
+      "number": "3",
+      "pages": "261--272",
+      "doi": "10.1038/s41592-019-0686-2"
+    },
+    "rice1976selection": {
+      "type": "incollection",
+      "author": "Rice, John R.",
+      "title": "The Algorithm Selection Problem",
+      "booktitle": "Advances in Computers",
+      "editor": "Rubinoff, Morris and Yovits, Marshall C.",
+      "publisher": "Academic Press",
+      "year": "1976",
+      "volume": "15",
+      "pages": "65--118",
+      "doi": "10.1016/S0065-2458(08)60520-3"
+    },
+    "siciliano1990tutorial": {
+      "type": "article",
+      "author": "Siciliano, Bruno",
+      "title": "Kinematic Control of Redundant Robot Manipulators: A Tutorial",
+      "journal": "Journal of Intelligent and Robotic Systems",
+      "year": "1990",
+      "volume": "3",
+      "number": "3",
+      "pages": "201--212",
+      "doi": "10.1007/BF00126069"
+    },
+    "bischl2016aslib": {
+      "type": "article",
+      "author": "Bischl, Bernd and Kerschke, Pascal and Kotthoff, Lars and Lindauer, Marius and Malitsky, Yuri and Fr{\\'e}chette, Alexandre and Hoos, Holger and Hutter, Frank and Leyton-Brown, Kevin and Tierney, Kevin and Vanschoren, Joaquin",
+      "title": "{ASlib}: A Benchmark Library for Algorithm Selection",
+      "journal": "Artificial Intelligence",
+      "year": "2016",
+      "volume": "237",
+      "pages": "41--58",
+      "doi": "10.1016/j.artint.2016.04.003"
+    },
+    "wu2024ikspark": {
+      "type": "misc",
+      "author": "Wu, Liangting and Tron, Roberto",
+      "title": "{IKSPARK}: Obstacle-Aware Inverse Kinematics via Convex Optimization",
+      "year": "2024",
+      "eprint": "2403.12235",
+      "archiveprefix": "arXiv",
+      "primaryclass": "cs.RO",
+      "doi": "10.48550/arXiv.2403.12235",
+      "url": "https://arxiv.org/abs/2403.12235",
+      "note": "Preprint; first posted in 2024, latest revision in 2026"
+    },
+    "demby2024learning": {
+      "type": "inproceedings",
+      "author": "{Demby's}, Jacket and Farag, Ramy and DeSouza, Guilherme N.",
+      "title": "Inverse Kinematics of Robotic Manipulators Using a New Learning-by-Example Method",
+      "booktitle": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "year": "2024",
+      "pages": "9534--9541",
+      "doi": "10.1109/IROS58592.2024.10802048"
+    },
+    "tang2025etaik": {
+      "type": "inproceedings",
+      "author": "Tang, Yucheng and Huang, Xi and Zhang, Yongzhou and Chen, Tao and Mamaev, Ilshat and Hein, Bj{\\\"o}rn",
+      "title": "{ETA-IK}: Execution-Time-Aware Inverse Kinematics for Dual-Arm Systems",
+      "booktitle": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "year": "2025",
+      "pages": "7504--7511",
+      "doi": "10.1109/IROS60139.2025.11247583"
+    },
+    "ostermeier2025eaik": {
+      "type": "article",
+      "author": "Ostermeier, Daniel and K{\\\"u}lz, Jonathan and Althoff, Matthias",
+      "title": "Automatic Geometric Decomposition for Analytical Inverse Kinematics",
+      "journal": "IEEE Robotics and Automation Letters",
+      "year": "2025",
+      "volume": "10",
+      "number": "10",
+      "pages": "9964--9971",
+      "doi": "10.1109/LRA.2025.3597897"
+    },
+    "lopezcustodio2025geofik": {
+      "type": "misc",
+      "author": "Lopez-Custodio, Pablo C. and Gong, Yuhe and Figueredo, Luis F. C.",
+      "title": "{GeoFIK}: A Fast and Reliable Geometric Solver for the {IK} of the {Franka} Arm Based on Screw Theory Enabling Multiple Redundancy Parameters",
+      "year": "2025",
+      "eprint": "2503.03992",
+      "archiveprefix": "arXiv",
+      "primaryclass": "cs.RO",
+      "doi": "10.48550/arXiv.2503.03992",
+      "url": "https://arxiv.org/abs/2503.03992",
+      "note": "Preprint; revised in 2026; ICRA 2026 acceptance reported by the authors; final proceedings metadata unverified"
+    },
+    "nguyen2026setik": {
+      "type": "article",
+      "author": "Nguyen, Duc Tien and Nguyen, Van Thanh Tri and Do, Truong and Nguyen, Vu Linh",
+      "title": "Multi-Solution Inverse Kinematics for Robotic Manipulators via Permutation-Invariant Set Prediction",
+      "journal": "IEEE Robotics and Automation Letters",
+      "year": "2026",
+      "volume": "11",
+      "number": "8",
+      "pages": "9803--9810",
+      "doi": "10.1109/LRA.2026.3703280"
+    },
+    "boschi2026singularity": {
+      "type": "article",
+      "author": "Boschi, Ivan and De Toni, Alessandro and Di Leva, Roberto and Id{\\`a}, Edoardo and Carricato, Marco",
+      "title": "Handling Transitions Across Singularities for {UR}-Like Serial Robots",
+      "journal": "IEEE Robotics and Automation Letters",
+      "year": "2026",
+      "volume": "11",
+      "number": "3",
+      "pages": "2714--2721",
+      "doi": "10.1109/LRA.2026.3653295"
+    },
+    "yasutake2026hjcdik": {
+      "type": "misc",
+      "author": "Yasutake, Cael and Liu, Andrew H. and Kingston, Zachary and Plancher, Brian",
+      "title": "{HJCD-IK}: GPU-Accelerated Inverse Kinematics through Batched Hybrid Jacobian Coordinate Descent",
+      "year": "2025",
+      "eprint": "2510.07514",
+      "archiveprefix": "arXiv",
+      "primaryclass": "cs.RO",
+      "doi": "10.48550/arXiv.2510.07514",
+      "url": "https://arxiv.org/abs/2510.07514",
+      "note": "Preprint; first posted in 2025, revised in 2026; accepted to the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems"
+    },
+    "moe2016setbased": {
+      "type": "article",
+      "author": "Moe, Signe and Antonelli, Gianluca and Teel, Andrew R. and Pettersen, Kristin Y. and Schrimpf, Johannes",
+      "title": "Set-Based Tasks within the Singularity-Robust Multiple Task-Priority Inverse Kinematics Framework: General Formulation, Stability Analysis, and Experimental Results",
+      "journal": "Frontiers in Robotics and AI",
+      "year": "2016",
+      "volume": "3",
+      "pages": "16",
+      "doi": "10.3389/frobt.2016.00016"
+    },
+    "berenson2011tsr": {
+      "type": "article",
+      "author": "Berenson, Dmitry and Srinivasa, Siddhartha and Kuffner, James",
+      "title": "Task Space Regions: A Framework for Pose-Constrained Manipulation Planning",
+      "journal": "The International Journal of Robotics Research",
+      "year": "2011",
+      "volume": "30",
+      "number": "12",
+      "pages": "1435--1460",
+      "doi": "10.1177/0278364910396389"
+    },
+    "schuetz2014predictive": {
+      "type": "inproceedings",
+      "author": "Schuetz, Christoph and Buschmann, Thomas and Baur, Joerg and Pfaff, Julian and Ulbrich, Heinz",
+      "title": "Predictive Online Inverse Kinematics for Redundant Manipulators",
+      "booktitle": "2014 IEEE International Conference on Robotics and Automation",
+      "year": "2014",
+      "pages": "5056--5061",
+      "doi": "10.1109/ICRA.2014.6907600"
+    },
+    "gamper2024switching": {
+      "type": "article",
+      "author": "Gamper, Hannes and {Rodrigo P{\\'e}rez}, Laura and Mueller, Andreas and {D{\\'i}az Rosales}, Alejandro and {Di Castro}, Mario",
+      "title": "An Inverse Kinematics Algorithm With Smooth Task Switching for Redundant Robots",
+      "journal": "IEEE Robotics and Automation Letters",
+      "year": "2024",
+      "volume": "9",
+      "number": "5",
+      "pages": "4527--4534",
+      "doi": "10.1109/LRA.2024.3379860"
+    },
+    "wolinski2025predictive": {
+      "type": "article",
+      "author": "Woli{\\'n}ski, {\\L}ukasz and Wojtyra, Marek",
+      "title": "Predictive Inverse Kinematics with Trajectory Scaling for Redundant Manipulators Based on Quadratic Optimization",
+      "journal": "Mechanism and Machine Theory",
+      "year": "2025",
+      "volume": "209",
+      "pages": "105988",
+      "doi": "10.1016/j.mechmachtheory.2025.105988"
+    },
+    "origanti2025lookahead": {
+      "type": "inproceedings",
+      "author": "Origanti, Vamsi Krishna and Danzglock, Adrian and Kirchner, Frank",
+      "title": "Look Ahead Optimization for Managing Nullspace in Cartesian Impedance Control of Dual-Arm Robots",
+      "booktitle": "2025 IEEE/SICE International Symposium on System Integration",
+      "year": "2025",
+      "pages": "990--997",
+      "doi": "10.1109/SII59315.2025.10871056"
+    },
+    "wingo2024linear": {
+      "type": "inproceedings",
+      "author": "Wingo, Bruce and Sathya, Ajay Suresha and Caron, St{\\'e}phane and Hutchinson, Seth and Carpentier, Justin",
+      "title": "Linear-Time Differential Inverse Kinematics: An Augmented Lagrangian Perspective",
+      "booktitle": "Robotics: Science and Systems XX",
+      "year": "2024",
+      "doi": "10.15607/RSS.2024.XX.110"
+    },
+    "wolinski2024scaling": {
+      "type": "article",
+      "author": "Woli{\\'n}ski, {\\L}ukasz and Wojtyra, Marek",
+      "title": "An Inverse Kinematics Solution with Trajectory Scaling for Redundant Manipulators",
+      "journal": "Mechanism and Machine Theory",
+      "year": "2024",
+      "volume": "191",
+      "pages": "105493",
+      "doi": "10.1016/j.mechmachtheory.2023.105493"
+    },
+    "kim2025pyroki": {
+      "type": "inproceedings",
+      "author": "Kim, Chung Min and Yi, Brent and Choi, Hongsuk and Ma, Yi and Goldberg, Ken and Kanazawa, Angjoo",
+      "title": "{PyRoki}: A Modular Toolkit for Robot Kinematic Optimization",
+      "booktitle": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "year": "2025",
+      "pages": "1312--1319",
+      "doi": "10.1109/IROS60139.2025.11246651"
+    }
+  },
+  "note": "Index of checked source BibTeX, not independent metadata verification."
+}

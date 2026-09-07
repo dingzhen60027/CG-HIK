@@ -1,0 +1,9 @@
+{
+  "scope": "Read-only post-measurement aggregate checks; no solver or model execution",
+  "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 /home/eric/anaconda3/envs/isaaclab_3/bin/python -m pytest -q tests/test_task_contract_analysis.py",
+  "test_file": "tests/test_task_contract_analysis.py",
+  "test_file_sha256": "e03f11f9a9d946abc1d05b4bd09a3179dd4dab05a2f59f21f3004583b860d1f6",
+  "passed": 5,
+  "failed": 0,
+  "environment_note": "An initial command without plugin isolation stopped during unrelated ROS launch_testing auto-discovery because lark was absent. No tests or IK calls ran in that collection attempt. Disabling third-party pytest plugin autoload allowed these five read-only checks to pass; no package or environment installation changed."
+}

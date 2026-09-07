@@ -1,0 +1,51 @@
+{
+  "pdf_sha256": "8a56d0c1ed53d57ba20507849708789c059814e6cc3714482809ced24e7d14fa",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "blocking_layout_issues": [],
+  "render_command": "pdftoppm -r 95 -png paper/main.pdf tmp/pdfs/task_contract_final/page",
+  "review": "All pages visually inspected for text, equations, figures, tables, citations and clipping. After the final rebuild, changed pages 1, 8, 9, 10, 18 were re-inspected; the other rendered page hashes were unchanged.",
+  "rendered_page_sha256": {
+    "page-01.png": "67ca91bcc0ed0815f915e1e185958a06d0035bf725db55f4cdba18dbc90308bb",
+    "page-02.png": "711f102b1a1dab21c356c0f7e20014144611b2dcc9a018dd9cd8f49bbc45eb33",
+    "page-03.png": "30fee4f5ec0f02a1d795c0f90cdd776851d7b6bb2bef64c904f87308da21008c",
+    "page-04.png": "554fe0c8197498a51b57e5da501a69e4d37e3d0294589de3198d88280f308072",
+    "page-05.png": "9033046741efbebff2c329d27977f527d87c6af8bd02930f3a066a18d1bee4a4",
+    "page-06.png": "40ceab540bb7337434c12767fad3aa8c1d64ab8cd02a4e80c89c33b57da91b7c",
+    "page-07.png": "780c32dacd7845261d07eb37b53f6ee91a69a684548ffc712ae29dca66758e21",
+    "page-08.png": "5b4380e40c90dad98e70fed0d7f8b045795c4bb75c7bc633bf998277d15750cd",
+    "page-09.png": "f2c17c98a701d0bb978f2ead93f5bd6bafa15deab659d876749e9471ec5d969c",
+    "page-10.png": "855d0b444f9c14da0e286cc73266825619a7a9b61b095c8e3e9323cd827c3b15",
+    "page-11.png": "f1bf5151795745d46394db044604ba24c172a59550076750d749befb39dfc7a8",
+    "page-12.png": "db3103c74b8fa10dda484a6fec7e9757bf07d18a10d4c7ccc8fbc32e3929aa4f",
+    "page-13.png": "2b1c2a8df8ba8d76bbd42bba723c5c41c87d7fb2b177bc9f9e17bb7da0bb5b47",
+    "page-14.png": "70a5c661aa9166f4b631247f4300246e0c96a27fff39498513f76846c45760d3",
+    "page-15.png": "6eb106e6b69a4fffadb2ee81682cc32ec65baefefbdc4c8381c9680979853f06",
+    "page-16.png": "7313bb8c13d8d76a72362a3016348269b0df8ebcbd4b878e220f7624dd93af49",
+    "page-17.png": "fc8d2c1e8a024fca0ba0d462a7705415400a8bd4b74d4efeb2448ea950b5a88e",
+    "page-18.png": "f53ba42b8242ee1d1f73e3e4b27860cb2f8030a3566f92bcb33a42a04af56791"
+  },
+  "notes": [
+    "Six included plots remain exact frozen vector exports.",
+    "Small zero-rate auto-axis excursion in Figure 3 reflects all-zero data, not negative observed rates.",
+    "Author and affiliation metadata intentionally not fabricated."
+  ]
+}

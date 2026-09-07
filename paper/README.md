@@ -1,68 +1,75 @@
-# CG-HIK paper package
+# Task-contract-aware online IK manuscript
 
-This directory contains the final evidence-backed manuscript:
+**Task-Contract-Aware Online Inverse Kinematics: Aligning Solver Convergence with
+Command Admissibility**
 
-> **CG-HIK: Query-Adaptive Tail-Latency Routing for Kinematically Verified Online
-> Inverse Kinematics**
+Main source: `main.tex`. Compiled manuscript: `main.pdf`.
+The paper distinguishes native convergence, public command admissibility and
+deadline-qualified admissibility. CG-HIK is a secondary historical allocation case
+study, not the principal algorithm.
 
-The paper's organizing statement is:
+## Build without running experiments
 
-> Learning allocates solver effort per query; numerical geometry generates joint
-> commands; deterministic verification governs acceptance.
+From the repository root, with Python and LaTeX available:
 
-## Build
+```sh
+python paper/scripts/build_evidence.py
+python paper/scripts/make_figures.py
+latexmk -cd -pdf -interaction=nonstopmode -halt-on-error paper/main.tex
+python paper/scripts/check_paper.py
+```
 
-From the repository root:
+The first script uses only the Python standard library and validates the frozen
+stage-one delivery before generating numbers, tables and source-data CSVs.
+The second materializes the exact reviewed frozen PDF/SVG/PNG figures; the editable
+rendering source is `src/confik/task_contract_alignment/reporting.py`.
+The final check uses standard-library checks plus Poppler's `pdfinfo`.
 
-    conda activate isaaclab_3
-    PYTHONPATH=src python paper/scripts/build_evidence.py
-    python paper/scripts/make_figures.py
-    cd paper
-    latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+These commands do not import IK solvers, train models, construct new inputs,
+resample experimental statistics or write to `outputs/`.
+Do not rerun the experiment launcher to build the paper.
 
-The first two commands are read-only with respect to outputs/. They regenerate:
+## Authoritative evidence
 
-- generated/evidence_snapshot.json
-- generated/paper_numbers.tex
-- generated table rows
-- source_data CSV files
-- five figures in SVG, PDF, and PNG
+Measurement commit: `089a3fe7ec0456002aa0f3b9661119b99072fad7`.
 
-The compiled manuscript is main.pdf.
+- `outputs/task_contract_alignment/`: protocol, raw new point/sensitivity/UR5e
+  records, aggregate reports, witnesses, vector figures and delivery hashes.
+- `outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/`:
+  historical authoritative Panda trajectories, included by read-only aggregation.
+- `outputs/revision_compute_allocation/`: historical allocation boundary analysis.
+- `docs/TASK_CONTRACT_ALIGNMENT_FINDINGS.md`: the five prespecified answers.
 
-## Evidence sources
+The source manifest and figure manifest identify every active evidence artifact.
+No previously frozen result, query identity, solver, verifier or model was changed.
 
-- Development heterogeneity and predictability:
-  ../outputs/counterfactual_v4_bulk/
-- Frozen exact predictor and policy:
-  ../outputs/release_v4_locked/
-- Fresh point-query results:
-  ../outputs/test_v4_aggregate_repair_v1/
-- Final fresh transition-rich trajectories:
-  ../outputs/fresh_transition_v4_test/
+## Active package
 
-All reported numbers are regenerated from frozen JSON/NPZ artifacts. No manuscript
-build command trains a model, runs an IK solver, creates a test query, or modifies a
-frozen output.
+- `generated/evidence_snapshot.json`: sources, hashes, tables and formatted values.
+- `generated/paper_numbers.tex`: empirical-number macros used by the manuscript.
+- `generated/task_*_rows.tex`: six tables (three main, allocation, status, family).
+- `source_data/task_*.csv`: active source-data tables and complete supplementary
+  families, intervals, errors, first failures and completion UID sets.
+- `figures/figure1_taxonomy.*` through `figure5_family_effects.*`: five main
+  figures in PDF, SVG and PNG.
+- `figures/supplement_dls_excess_iterations.*`: direct DLS trace figure.
+- `references.bib`: 38 references, 22 dated 2024–2026; verified identities and
+  explicit publication-status/optional-metadata qualifications.
+- `generated/final_qa.json`: source, preservation, citation and compilation checks.
 
-## Package layout
+Older non-`task_` CSVs, older figure names and old generated fragments are retained
+but unused by the current paper. The complete previous manuscript is also preserved
+in `history/cghik_paper_02aa287.tar.gz` from the incoming baseline. Existing
+`historical/` contents are historical as well.
 
-- main.tex / main.pdf — manuscript source and compiled paper
-- references.bib — 40 relevant references: 38 field-verified records and 2 records
-  with explicitly disclosed metadata checks
-- scripts/ — evidence and figure builders
-- generated/ — machine-generated snapshot, TeX macros, and table rows
-- source_data/ — active figure/table CSVs regenerated from frozen evidence
-- figures/ — five main figures in SVG/PDF/PNG
-- historical/figures/ — superseded manuscript figures, retained but not cited
-- historical/source_data/ — superseded manuscript-derived CSVs retained for traceability;
-  these are not inputs to the final paper
+## Interpretation and submission status
 
-Claim boundaries and provenance are summarized in:
+Read `docs/FINAL_PAPER_CLAIM_MAP.md`, `docs/FINAL_PAPER_CHANGELOG.md`,
+`docs/TASK_CONTRACT_PAPER_GUIDE.md` and
+`docs/REFERENCE_VERIFICATION_TASK_CONTRACT.md`.
 
-- ../docs/FINAL_PAPER_CLAIM_MAP.md
-- ../docs/FINAL_PAPER_CHANGELOG.md
-- ../docs/PAPER_STORYLINE.md
-
-The manuscript is a blinded generic-journal draft. Author names, affiliations,
-funding, and archival DOI remain the only submission-specific fields to supply.
+This is a complete generic engineering-journal research manuscript, not an actual
+journal submission or a hard-real-time/hardware demonstration. Author identities,
+affiliations, CRediT, funding/conflict declarations and the chosen journal's final
+formatting require author input. No archival DOI is invented; the public repository
+and frozen commit provide the present reproducibility reference.

@@ -1,0 +1,4179 @@
+{
+  "moe2016setbased": {
+    "doi": "10.3389/frobt.2016.00016",
+    "status": 200,
+    "source": "https://api.crossref.org/works/10.3389/frobt.2016.00016",
+    "data": {
+      "status": "ok",
+      "message-type": "work",
+      "message-version": "1.0.0",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              18
+            ]
+          ],
+          "date-time": "2026-05-18T13:59:27Z",
+          "timestamp": 1779112767802,
+          "version": "3.51.4"
+        },
+        "reference-count": 32,
+        "publisher": "Frontiers Media SA",
+        "funder": [
+          {
+            "DOI": "10.13039/501100005416",
+            "name": "Norges Forskningsr\u00e5d",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "223254"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "223254"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100005416",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100003407",
+            "name": "Ministero dell\u2019Istruzione, dell\u2019Universit\u00e0 e della Ricerca",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "MARIS (protocol 2010FBLHRJ)"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "MARIS (protocol 2010FBLHRJ)"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100003407",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100000780",
+            "name": "European Commission",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "ARCAS (FP7-287617), EuRoC (FP7-608849), DexROV (H2020-635491), and AEROARMS (H2020-644271)"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "ARCAS (FP7-287617), EuRoC (FP7-608849), DexROV (H2020-635491), and AEROARMS (H2020-644271)"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100000780",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "frontiersin.org"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Front. Robot. AI"
+        ],
+        "DOI": "10.3389/frobt.2016.00016",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2016,
+              4,
+              18
+            ]
+          ],
+          "date-time": "2016-04-18T10:04:21Z",
+          "timestamp": 1460973861000
+        },
+        "update-policy": "https://doi.org/10.3389/crossmark-policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 89,
+        "title": [
+          "Set-Based Tasks within the Singularity-Robust Multiple Task-Priority Inverse Kinematics Framework: General Formulation, Stability Analysis, and Experimental Results"
+        ],
+        "prefix": "10.3389",
+        "volume": "3",
+        "author": [
+          {
+            "given": "Signe",
+            "family": "Moe",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Gianluca",
+            "family": "Antonelli",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Andrew R.",
+            "family": "Teel",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Kristin Y.",
+            "family": "Pettersen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Johannes",
+            "family": "Schrimpf",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "1965",
+        "published-online": {
+          "date-parts": [
+            [
+              2016,
+              4,
+              18
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "B1",
+            "first-page": "1993",
+            "article-title": "Stability analysis for prioritized closed-loop inverse kinematic algorithms for redundant robotic systems",
+            "author": "Antonelli",
+            "year": "2008"
+          },
+          {
+            "key": "B2",
+            "doi-asserted-by": "publisher",
+            "first-page": "985",
+            "DOI": "10.1109/TRO.2009.2017135",
+            "article-title": "Stability analysis for prioritized closed-loop inverse kinematic algorithms for redundant robotic systems",
+            "volume": "25",
+            "author": "Antonelli",
+            "year": "2009",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "key": "B3",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1007/978-3-319-02877-4",
+            "volume-title": "Underwater Robots",
+            "author": "Antonelli",
+            "year": "2014",
+            "edition": "3rd Edn"
+          },
+          {
+            "key": "B4",
+            "doi-asserted-by": "publisher",
+            "first-page": "27",
+            "DOI": "10.1007/s11370-007-0002-3",
+            "article-title": "The null-space-based behavioral control for autonomous robotic systems",
+            "volume": "1",
+            "author": "Antonelli",
+            "year": "2008",
+            "journal-title": "J. Intell. Serv. Robot."
+          },
+          {
+            "key": "B5",
+            "first-page": "1132",
+            "article-title": "Incorporating set-based control within the singularity-robust multiple task-priority inverse kinematics",
+            "author": "Antonelli",
+            "year": "2015"
+          },
+          {
+            "key": "B6",
+            "first-page": "498",
+            "article-title": "Closed-loop inverse kinematics under inequality constraints: application to concentric-tube manipulators",
+            "author": "Azimian",
+            "year": "2014"
+          },
+          {
+            "key": "B7",
+            "first-page": "4680",
+            "article-title": "Experiments on behavioral coordinated control of an unmanned aerial vehicle manipulator system",
+            "author": "Baizid",
+            "year": "2015"
+          },
+          {
+            "key": "B8",
+            "volume-title": "Introduction to Inverse Kinematics with Jacobian Transpose, Pseudoinverse and Damped Least Squares Methods",
+            "author": "Buss",
+            "year": "2009"
+          },
+          {
+            "key": "B9",
+            "doi-asserted-by": "publisher",
+            "first-page": "398",
+            "DOI": "10.1109/70.585902",
+            "article-title": "Singularity-robust task-priority redundancy resolution for real-time kinematic control of robot manipulators",
+            "volume": "13",
+            "author": "Chiaverini",
+            "year": "1997",
+            "journal-title": "IEEE Trans. Robot. Autom."
+          },
+          {
+            "key": "B10",
+            "doi-asserted-by": "crossref",
+            "first-page": "245",
+            "DOI": "10.1007/978-3-540-30301-5_12",
+            "article-title": "Kinematically redundant manipulators",
+            "volume-title": "Springer Handbook of Robotics",
+            "author": "Chiaverini",
+            "year": "2008"
+          },
+          {
+            "key": "B11",
+            "doi-asserted-by": "publisher",
+            "first-page": "131:1",
+            "DOI": "10.1145/1778765.1781157",
+            "article-title": "Feature-based locomotion controllers",
+            "volume": "29",
+            "author": "de Lasa",
+            "year": "2010",
+            "journal-title": "ACM Trans. Graph."
+          },
+          {
+            "key": "B12",
+            "doi-asserted-by": "publisher",
+            "first-page": "1006",
+            "DOI": "10.1177/0278364914521306",
+            "article-title": "Hierarchical quadratic programming: fast online humanoid-robot motion generation",
+            "volume": "33",
+            "author": "Escande",
+            "year": "2014",
+            "journal-title": "Int. J. Robot. Res."
+          },
+          {
+            "key": "B13",
+            "first-page": "1152",
+            "article-title": "A local based approach for path planning of manipulators with a high number of degrees of freedom",
+            "author": "Faverjon",
+            "year": "1987"
+          },
+          {
+            "key": "B14",
+            "volume-title": "Hybrid Dynamical Systems: Modeling, Stability, and Robustness",
+            "author": "Goebel",
+            "year": "2012"
+          },
+          {
+            "key": "B15",
+            "volume-title": "Matrix Computations",
+            "author": "Golub",
+            "year": "1996",
+            "edition": "3rd Edn"
+          },
+          {
+            "key": "B16",
+            "volume-title": "Robust Adaptive Control",
+            "author": "Ioannou",
+            "year": "1996"
+          },
+          {
+            "key": "B17",
+            "doi-asserted-by": "publisher",
+            "first-page": "785",
+            "DOI": "10.1109/TRO.2011.2142450",
+            "article-title": "Kinematic control of redundant manipulators: generalizing the task-priority framework to inequality task",
+            "volume": "27",
+            "author": "Kanoun",
+            "year": "2011",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "key": "B18",
+            "doi-asserted-by": "publisher",
+            "first-page": "90",
+            "DOI": "10.1177/027836498600500106",
+            "article-title": "Real-time obstacle avoidance for manipulators and mobile robots",
+            "volume": "5",
+            "author": "Khatib",
+            "year": "1986",
+            "journal-title": "Int. J. Robot. Res."
+          },
+          {
+            "key": "B19",
+            "doi-asserted-by": "publisher",
+            "first-page": "868",
+            "DOI": "10.1109/TSMC.1977.4309644",
+            "article-title": "Automatic supervisory control of the configuration and behavior of multibody mechanisms",
+            "volume": "7",
+            "author": "Li\u00e9geois",
+            "year": "1977",
+            "journal-title": "IEEE Trans. Syst. Man Cybern."
+          },
+          {
+            "key": "B20",
+            "doi-asserted-by": "publisher",
+            "first-page": "109",
+            "DOI": "10.1177/027836498500400308",
+            "article-title": "Obstacle avoidance for kinematically redundant manipulators in dynamically varying environments",
+            "volume": "4",
+            "author": "Maciejewski",
+            "year": "1985",
+            "journal-title": "Int. J. Robot. Res."
+          },
+          {
+            "key": "B21",
+            "doi-asserted-by": "publisher",
+            "first-page": "60",
+            "DOI": "10.1109/TRO.2006.889487",
+            "article-title": "Task sequencing for high-level sensor- based control",
+            "volume": "23",
+            "author": "Mansard",
+            "year": "2007",
+            "journal-title": "IEEE Trans. Robot. Autom."
+          },
+          {
+            "key": "B22",
+            "doi-asserted-by": "publisher",
+            "first-page": "670",
+            "DOI": "10.1109/TRO.2009.2020345",
+            "article-title": "A unified approach to integrate unilateral constraints in the stack of tasks",
+            "volume": "25",
+            "author": "Mansard",
+            "year": "2009",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "key": "B23",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1109/ROBIO.2015.7418940",
+            "article-title": "Experimental results for set-based control within the singularity-robust multiple task-priority inverse kinematics framework",
+            "author": "Moe",
+            "year": "2015a"
+          },
+          {
+            "key": "B24",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1109/CDC.2015.7402104",
+            "article-title": "Stability analysis for set-based control within the singularity-robust multiple task-priority inverse kinematics framework",
+            "author": "Moe",
+            "year": "2015b"
+          },
+          {
+            "key": "B25",
+            "doi-asserted-by": "publisher",
+            "first-page": "3",
+            "DOI": "10.1177/027836498700600103",
+            "article-title": "Task-priority based redundancy control of robot manipulators",
+            "volume": "6",
+            "author": "Nakamura",
+            "year": "1987",
+            "journal-title": "Int. J. Robot. Res."
+          },
+          {
+            "key": "B26",
+            "doi-asserted-by": "publisher",
+            "first-page": "201",
+            "DOI": "10.1007/BF00126069",
+            "article-title": "Kinematic control of redundant robot manipulators: a tutorial",
+            "volume": "3",
+            "author": "Siciliano",
+            "year": "1990",
+            "journal-title": "J. Intell. Robot. Syst."
+          },
+          {
+            "key": "B27",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1007/978-1-84628-642-1",
+            "volume-title": "Robotics: Modelling, Planning and Control",
+            "author": "Siciliano",
+            "year": "2009"
+          },
+          {
+            "key": "B28",
+            "first-page": "1211",
+            "article-title": "A general framework for managing multiple tasks in highly redundant robotic systems",
+            "author": "Siciliano",
+            "year": "1991"
+          },
+          {
+            "key": "B29",
+            "doi-asserted-by": "publisher",
+            "first-page": "364",
+            "DOI": "10.1002/rob.21497",
+            "article-title": "Floating underwater manipulation: developed control methodology and experimental validation within the TRIDENT project",
+            "volume": "31",
+            "author": "Simetti",
+            "year": "2013",
+            "journal-title": "J. Field Robot."
+          },
+          {
+            "key": "B30",
+            "volume-title": "Robot Modeling and Control",
+            "author": "Spong",
+            "year": "2005"
+          },
+          {
+            "key": "B31",
+            "doi-asserted-by": "publisher",
+            "first-page": "47",
+            "DOI": "10.1109/TMMS.1969.299896",
+            "article-title": "Resolved motion rate control of manipulators and human prostheses",
+            "volume": "10",
+            "author": "Whitney",
+            "year": "1969",
+            "journal-title": "IEEE Trans. Man Mach. Syst."
+          },
+          {
+            "key": "B32",
+            "doi-asserted-by": "publisher",
+            "first-page": "581",
+            "DOI": "10.1007/978-3-319-05582-4_50",
+            "article-title": "Hand-eye calibration and inverse kinematics of robot arm using neural network",
+            "volume": "274",
+            "author": "Wu",
+            "year": "2014",
+            "journal-title": "Adv. Intell. Syst. Comput."
+          }
+        ],
+        "container-title": [
+          "Frontiers in Robotics and AI"
+        ],
+        "original-title": [],
+        "deposited": {
+          "date-parts": [
+            [
+              2017,
+              6,
+              24
+            ]
+          ],
+          "date-time": "2017-06-24T07:12:09Z",
+          "timestamp": 1498288329000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "http://journal.frontiersin.org/Article/10.3389/frobt.2016.00016/abstract"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              4,
+              18
+            ]
+          ]
+        },
+        "references-count": 32,
+        "URL": "https://doi.org/10.3389/frobt.2016.00016",
+        "relation": {},
+        "ISSN": [
+          "2296-9144"
+        ],
+        "issn-type": [
+          {
+            "value": "2296-9144",
+            "type": "electronic"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              4,
+              18
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "berenson2011tsr": {
+    "doi": "10.1177/0278364910396389",
+    "status": 200,
+    "source": "https://api.crossref.org/works/10.1177/0278364910396389",
+    "data": {
+      "status": "ok",
+      "message-type": "work",
+      "message-version": "1.0.0",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2026-09-01T15:50:33Z",
+          "timestamp": 1788277833092,
+          "version": "build-2803163510"
+        },
+        "reference-count": 38,
+        "publisher": "SAGE Publications",
+        "issue": "12",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2011,
+                  3,
+                  15
+                ]
+              ],
+              "date-time": "2011-03-15T00:00:00Z",
+              "timestamp": 1300147200000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "journals.sagepub.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "The International Journal of Robotics Research"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2011,
+              10
+            ]
+          ]
+        },
+        "abstract": "<jats:p>We present a manipulation planning framework that allows robots to plan in the presence of constraints on end-effector pose, as well as other common constraints. The framework has three main components: constraint representation, constraint-satisfaction strategies, and a general planning algorithm. These components come together to create an efficient and probabilistically complete manipulation planning algorithm called the Constrained BiDirectional Rapidly-exploring Random Tree (RRT) \u2013 CBiRRT2. The underpinning of our framework for pose constraints is our Task Space Regions (TSRs) representation. TSRs are intuitive to specify, can be efficiently sampled, and the distance to a TSR can be evaluated very quickly, making them ideal for sampling-based planning. Most importantly, TSRs are a general representation of pose constraints that can fully describe many practical tasks. For more complex tasks, such as manipulating articulated objects, TSRs can be chained together to create more complex end-effector pose constraints. TSRs can also be intersected, a property that we use to plan with pose uncertainty. We provide a detailed description of our framework, prove probabilistic completeness for our planning approach, and describe several real-world example problems that illustrate the efficiency and versatility of the TSR framework.</jats:p>",
+        "DOI": "10.1177/0278364910396389",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2011,
+              3,
+              15
+            ]
+          ],
+          "date-time": "2011-03-15T22:35:26Z",
+          "timestamp": 1300228526000
+        },
+        "page": "1435-1460",
+        "update-policy": "https://doi.org/10.1177/sage-journals-update-policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 315,
+        "title": [
+          "Task Space Regions"
+        ],
+        "prefix": "10.1177",
+        "volume": "30",
+        "author": [
+          {
+            "given": "Dmitry",
+            "family": "Berenson",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "The Robotics Institute, Carnegie Mellon University, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Siddhartha",
+            "family": "Srinivasa",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Intel Labs, Pittsburgh, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "James",
+            "family": "Kuffner",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "The Robotics Institute, Carnegie Mellon University, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "179",
+        "published-online": {
+          "date-parts": [
+            [
+              2011,
+              3,
+              15
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "bibr1-0278364910396389",
+            "first-page": "1706",
+            "volume-title": "Proc. IEEE International Conference on Robotics and Automation (ICRA)",
+            "author": "Atkeson CG"
+          },
+          {
+            "key": "bibr2-0278364910396389",
+            "volume-title": "Dynamic Programming",
+            "author": "Bellman R",
+            "year": "1957"
+          },
+          {
+            "key": "bibr3-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.robot.2004.03.010"
+          },
+          {
+            "key": "bibr4-0278364910396389",
+            "volume-title": "Proc. IEEE-RAS International Conference on Humanoid Robots (Humanoids 09)",
+            "author": "Berenson D"
+          },
+          {
+            "key": "bibr5-0278364910396389",
+            "volume-title": "IEEE International Conference on Robotics and Automation (ICRA)",
+            "author": "Berenson D"
+          },
+          {
+            "key": "bibr6-0278364910396389",
+            "volume-title": "Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+            "author": "Berenson D"
+          },
+          {
+            "key": "bibr7-0278364910396389",
+            "volume-title": "Proc. IEEE International Conference on Robotics and Automation (ICRA)",
+            "author": "Berenson D"
+          },
+          {
+            "key": "bibr8-0278364910396389",
+            "volume-title": "Proc. IEEE International Conference on Robotics and Automation (ICRA)",
+            "author": "Berenson D"
+          },
+          {
+            "key": "bibr9-0278364910396389",
+            "first-page": "1874",
+            "volume-title": "Proc. IEEE International Conference on Robotics and Automation (ICRA)",
+            "author": "Bertram D"
+          },
+          {
+            "key": "bibr10-0278364910396389",
+            "first-page": "264",
+            "volume-title": "Proc. IEEE International Conference on Robotics and Automation (ICRA)",
+            "author": "Burdick J"
+          },
+          {
+            "key": "bibr11-0278364910396389",
+            "volume-title": "Proc. IEEE International Conference on Robotics and Automation (ICRA)",
+            "author": "Collet A"
+          },
+          {
+            "key": "bibr12-0278364910396389",
+            "author": "Cortes J",
+            "year": "2004",
+            "journal-title": "Workshop on the Algorithmic Foundations of Robotics (WAFR)"
+          },
+          {
+            "key": "bibr13-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-1-4613-8643-8"
+          },
+          {
+            "key": "bibr14-0278364910396389",
+            "volume-title": "Proc. IEEE-RAS International Conference on Humanoid Robots (Humanoids 08)",
+            "author": "Diankov R"
+          },
+          {
+            "key": "bibr15-0278364910396389",
+            "volume-title": "Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+            "author": "Drumwright E"
+          },
+          {
+            "key": "bibr16-0278364910396389",
+            "volume-title": "Workshop on the Algorithmic Foundations of Robotics (WAFR)",
+            "author": "Hauser K"
+          },
+          {
+            "key": "bibr17-0278364910396389",
+            "volume-title": "Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+            "author": "Hirano Y"
+          },
+          {
+            "key": "bibr18-0278364910396389",
+            "volume-title": "Proc. 8th IEEE-RAS International Conference on Humanoid Robots (Humanoids 08)",
+            "author": "Howard M"
+          },
+          {
+            "key": "bibr19-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/70.508439"
+          },
+          {
+            "key": "bibr20-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/JRA.1987.1087068"
+          },
+          {
+            "key": "bibr21-0278364910396389",
+            "author": "Koga Y",
+            "year": "1994",
+            "journal-title": "SIGGRAPH"
+          },
+          {
+            "key": "bibr22-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ROBOT.2000.844730"
+          },
+          {
+            "key": "bibr23-0278364910396389",
+            "volume-title": "Workshop on the Algorithmic Foundations of Robotics (WAFR)",
+            "author": "LaValle S"
+          },
+          {
+            "key": "bibr24-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1017/CBO9780511546877"
+          },
+          {
+            "key": "bibr25-0278364910396389",
+            "volume-title": "Proc. IEEE International Conference on Robotics and Automation (ICRA)",
+            "author": "Oriolo G"
+          },
+          {
+            "key": "bibr26-0278364910396389",
+            "volume-title": "Proc. IEEE/RSJ International Conference on Intelligent Robots and System (IROS)",
+            "author": "Oriolo G"
+          },
+          {
+            "key": "bibr27-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-1-4471-0449-0"
+          },
+          {
+            "key": "bibr28-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/70.345948"
+          },
+          {
+            "key": "bibr29-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1142/S0219843605000594"
+          },
+          {
+            "key": "bibr30-0278364910396389",
+            "volume-title": "Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+            "author": "Stilman M"
+          },
+          {
+            "key": "bibr31-0278364910396389",
+            "volume-title": "Proc. IEEE International Conference on Robotics and Automation (ICRA)",
+            "author": "Stilman M"
+          },
+          {
+            "key": "bibr32-0278364910396389",
+            "volume-title": "Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+            "author": "Sugihara T"
+          },
+          {
+            "key": "bibr33-0278364910396389",
+            "unstructured": "Svestka P (1996) On probabilistic completeness and expected complexity of probabilistic path planning. Technical report, UU-CS-96-20. Department of Computer Science, Utrecht University, Utrecht, Netherlands."
+          },
+          {
+            "key": "bibr34-0278364910396389",
+            "volume-title": "Proc. IEEE-RAS International Conference on Humanoid Robots (Humanoids 07)",
+            "author": "Vande Weghe M"
+          },
+          {
+            "key": "bibr35-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1115/1.3139699"
+          },
+          {
+            "key": "bibr36-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/70.976030"
+          },
+          {
+            "key": "bibr37-0278364910396389",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/1015706.1015756"
+          },
+          {
+            "key": "bibr38-0278364910396389",
+            "volume-title": "Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+            "author": "Yao Z"
+          }
+        ],
+        "container-title": [
+          "The International Journal of Robotics Research"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://journals.sagepub.com/doi/pdf/10.1177/0278364910396389",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://journals.sagepub.com/doi/pdf/10.1177/0278364910396389",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              29
+            ]
+          ],
+          "date-time": "2026-04-29T10:17:12Z",
+          "timestamp": 1777457832000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://journals.sagepub.com/doi/10.1177/0278364910396389"
+          }
+        },
+        "subtitle": [
+          "A framework for pose-constrained manipulation planning"
+        ],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2011,
+              3,
+              15
+            ]
+          ]
+        },
+        "references-count": 38,
+        "journal-issue": {
+          "issue": "12",
+          "published-print": {
+            "date-parts": [
+              [
+                2011,
+                10
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1177/0278364910396389"
+        ],
+        "URL": "https://doi.org/10.1177/0278364910396389",
+        "relation": {},
+        "ISSN": [
+          "0278-3649",
+          "1741-3176"
+        ],
+        "issn-type": [
+          {
+            "value": "0278-3649",
+            "type": "print"
+          },
+          {
+            "value": "1741-3176",
+            "type": "electronic"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2011,
+              3,
+              15
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "schuetz2014predictive": {
+    "doi": "10.1109/ICRA.2014.6907600",
+    "status": 200,
+    "source": "https://api.crossref.org/works/10.1109/ICRA.2014.6907600",
+    "data": {
+      "status": "ok",
+      "message-type": "work",
+      "message-version": "1.0.0",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T07:56:52Z",
+          "timestamp": 1761983812019,
+          "version": "build-2065373602"
+        },
+        "reference-count": 25,
+        "publisher": "IEEE",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [],
+        "published-print": {
+          "date-parts": [
+            [
+              2014,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1109/icra.2014.6907600",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2014,
+              9,
+              30
+            ]
+          ],
+          "date-time": "2014-09-30T16:32:36Z",
+          "timestamp": 1412094756000
+        },
+        "page": "5056-5061",
+        "source": "Crossref",
+        "is-referenced-by-count": 14,
+        "title": [
+          "Predictive online inverse kinematics for redundant manipulators"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Christoph",
+            "family": "Schuetz",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Thomas",
+            "family": "Buschmann",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Joerg",
+            "family": "Baur",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Julian",
+            "family": "Pfaff",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Heinz",
+            "family": "Ulbrich",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ROBOT.2009.5152817"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1177/0278364913488805"
+          },
+          {
+            "key": "ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.15607/RSS.2013.IX.031"
+          },
+          {
+            "key": "ref13",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA.2013.6631013"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1017/CBO9780511546877"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICHR.2007.4813913"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CDC.1996.574536"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/70.345948"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/IROS.2012.6386025"
+          },
+          {
+            "key": "ref19",
+            "article-title": "Dynamic modeling and realization of an agricultural manipulator",
+            "author": "baur",
+            "year": "0",
+            "journal-title": "Proceedings of XV International Symposium on Dynamic Problems of Mechanics DINAME 2013"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/AIM.2012.6265928"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/BF00126069"
+          },
+          {
+            "key": "ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/IEMBS.2003.1279748"
+          },
+          {
+            "journal-title": "The Mathematical Theory of Optimal Processes",
+            "year": "1962",
+            "author": "pontryagin",
+            "key": "ref5"
+          },
+          {
+            "journal-title": "Differential Dynamic Programming",
+            "year": "1970",
+            "author": "jacobson",
+            "key": "ref8"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1177/027836498700600103"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "crossref",
+            "first-page": "868",
+            "DOI": "10.1109/TSMC.1977.4309644",
+            "article-title": "Automatic supervisory control of the configuration and behavior of multibody mechanisms",
+            "volume": "7",
+            "author": "li\u00e9geois",
+            "year": "1977",
+            "journal-title": "IEEE Transactions on Systems Man and Cybernetics"
+          },
+          {
+            "key": "ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TAC.1967.1098538"
+          },
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TMMS.1969.299896"
+          },
+          {
+            "key": "ref20",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/1015071"
+          },
+          {
+            "journal-title": "Numerical Optimization",
+            "year": "2006",
+            "author": "nocedal",
+            "key": "ref22"
+          },
+          {
+            "key": "ref21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ROBOT.2006.1642105"
+          },
+          {
+            "key": "ref24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/70.964671"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "crossref",
+            "first-page": "391",
+            "DOI": "10.1007/978-3-642-01094-1_32",
+            "article-title": "Efficient Numerical Methods for Nonlinear MPC and Moving Horizon Estimation",
+            "volume": "384",
+            "author": "diehl",
+            "year": "2009",
+            "journal-title": "Nonlinear Model Predictive Control SE ?32"
+          },
+          {
+            "key": "ref25",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA.2011.5980350"
+          }
+        ],
+        "event": {
+          "name": "2014 IEEE International Conference on Robotics and Automation (ICRA)",
+          "start": {
+            "date-parts": [
+              [
+                2014,
+                5,
+                31
+              ]
+            ]
+          },
+          "location": "Hong Kong, China",
+          "end": {
+            "date-parts": [
+              [
+                2014,
+                6,
+                7
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2014 IEEE International Conference on Robotics and Automation (ICRA)"
+        ],
+        "original-title": [],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/6895053/6906581/06907600.pdf?arnumber=6907600",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2017,
+              6,
+              22
+            ]
+          ],
+          "date-time": "2017-06-22T17:32:10Z",
+          "timestamp": 1498152730000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "http://ieeexplore.ieee.org/document/6907600/"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2014,
+              5
+            ]
+          ]
+        },
+        "references-count": 25,
+        "URL": "https://doi.org/10.1109/icra.2014.6907600",
+        "relation": {},
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2014,
+              5
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "gamper2024switching": {
+    "doi": "10.1109/LRA.2024.3379860",
+    "status": 200,
+    "source": "https://api.crossref.org/works/10.1109/LRA.2024.3379860",
+    "data": {
+      "status": "ok",
+      "message-type": "work",
+      "message-version": "1.0.0",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              20
+            ]
+          ],
+          "date-time": "2026-08-20T15:32:56Z",
+          "timestamp": 1787239976212,
+          "version": "build-2736575974"
+        },
+        "reference-count": 17,
+        "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+        "issue": "5",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  5,
+                  1
+                ]
+              ],
+              "date-time": "2024-05-01T00:00:00Z",
+              "timestamp": 1714521600000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  5,
+                  1
+                ]
+              ],
+              "date-time": "2024-05-01T00:00:00Z",
+              "timestamp": 1714521600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  5,
+                  1
+                ]
+              ],
+              "date-time": "2024-05-01T00:00:00Z",
+              "timestamp": 1714521600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "IEEE Robot. Autom. Lett."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1109/lra.2024.3379860",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              21
+            ]
+          ],
+          "date-time": "2024-03-21T18:48:24Z",
+          "timestamp": 1711046904000
+        },
+        "page": "4527-4534",
+        "source": "Crossref",
+        "is-referenced-by-count": 11,
+        "title": [
+          "An Inverse Kinematics Algorithm With Smooth Task Switching for Redundant Robots"
+        ],
+        "prefix": "10.1109",
+        "volume": "9",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-5522-734X",
+            "authenticated-orcid": false,
+            "given": "Hannes",
+            "family": "Gamper",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "European Organization for Nuclear Research (CERN), Meyrin, Switzerland"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0002-6278-2530",
+            "authenticated-orcid": false,
+            "given": "Laura",
+            "family": "Rodrigo P\u00e9rez",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "European Organization for Nuclear Research (CERN), Meyrin, Switzerland"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5033-340X",
+            "authenticated-orcid": false,
+            "given": "Andreas",
+            "family": "Mueller",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute of Robotics, Johannes Kepler University Linz, Linz, Austria"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1025-9668",
+            "authenticated-orcid": false,
+            "given": "Alejandro",
+            "family": "D\u00edaz Rosales",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "European Organization for Nuclear Research (CERN), Meyrin, Switzerland"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2513-967X",
+            "authenticated-orcid": false,
+            "given": "Mario",
+            "family": "Di Castro",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "European Organization for Nuclear Research (CERN), Meyrin, Switzerland"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref1",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1007/978-3-540-30301-5",
+            "volume-title": "Handbook of\n      Robotics",
+            "author": "Siciliano",
+            "year": "2008"
+          },
+          {
+            "key": "ref2",
+            "volume-title": "Robotics: Modelling,\n      Planning and Control",
+            "author": "Sciavicco",
+            "year": "2008"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/icar.1991.240390"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TMECH.2014.2326304"
+          },
+          {
+            "key": "ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1111/cgf.13310"
+          },
+          {
+            "key": "ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-981-33-4018-3_39"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA.2015.7140076"
+          },
+          {
+            "key": "ref8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TRO.2009.2017135"
+          },
+          {
+            "key": "ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.3389/frobt.2016.00016"
+          },
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.ifacol.2018.11.528"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TRO.2011.2135210"
+          },
+          {
+            "key": "ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/access.2018.2849572"
+          },
+          {
+            "key": "ref13",
+            "article-title": "Eigen v3",
+            "author": "Guennebaud",
+            "year": "2010"
+          },
+          {
+            "key": "ref15",
+            "article-title": "URDF Parser urdfdom"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ssrr.2018.8468661"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-031-25555-7_20"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.imavis.2018.05.004"
+          }
+        ],
+        "container-title": [
+          "IEEE Robotics and Automation Letters"
+        ],
+        "original-title": [],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/7083369/10474437/10476677.pdf?arnumber=10476677",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              12,
+              23
+            ]
+          ],
+          "date-time": "2024-12-23T19:28:55Z",
+          "timestamp": 1734982135000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/10476677/"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              5
+            ]
+          ]
+        },
+        "references-count": 17,
+        "journal-issue": {
+          "issue": "5"
+        },
+        "URL": "https://doi.org/10.1109/lra.2024.3379860",
+        "relation": {},
+        "ISSN": [
+          "2377-3766",
+          "2377-3774"
+        ],
+        "issn-type": [
+          {
+            "value": "2377-3766",
+            "type": "electronic"
+          },
+          {
+            "value": "2377-3774",
+            "type": "electronic"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              5
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "wolinski2025predictive": {
+    "doi": "10.1016/j.mechmachtheory.2025.105988",
+    "status": 200,
+    "source": "https://api.crossref.org/works/10.1016/j.mechmachtheory.2025.105988",
+    "data": {
+      "status": "ok",
+      "message-type": "work",
+      "message-version": "1.0.0",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              20
+            ]
+          ],
+          "date-time": "2026-08-20T14:43:37Z",
+          "timestamp": 1787237017150,
+          "version": "build-2736575974"
+        },
+        "reference-count": 85,
+        "publisher": "Elsevier BV",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2025-07-01T00:00:00Z",
+              "timestamp": 1751328000000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2025-07-01T00:00:00Z",
+              "timestamp": 1751328000000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/legal/tdmrep-license"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2025-07-01T00:00:00Z",
+              "timestamp": 1751328000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-017"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2025-07-01T00:00:00Z",
+              "timestamp": 1751328000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2025-07-01T00:00:00Z",
+              "timestamp": 1751328000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-012"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2025-07-01T00:00:00Z",
+              "timestamp": 1751328000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2025-07-01T00:00:00Z",
+              "timestamp": 1751328000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-004"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/501100004281",
+            "name": "National Science Centre Poland",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "2022/45/B/ST8/00661"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "2022/45/B/ST8/00661"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100004281",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "elsevier.com",
+            "sciencedirect.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Mechanism and Machine Theory"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              7
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.mechmachtheory.2025.105988",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              19
+            ]
+          ],
+          "date-time": "2025-03-19T04:42:21Z",
+          "timestamp": 1742359341000
+        },
+        "page": "105988",
+        "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 3,
+        "special_numbering": "C",
+        "title": [
+          "Predictive inverse kinematics with trajectory scaling for redundant manipulators based on quadratic optimization"
+        ],
+        "prefix": "10.1016",
+        "volume": "209",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-9617-4117",
+            "authenticated-orcid": false,
+            "given": "\u0141ukasz",
+            "family": "Woli\u0144ski",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7225-7647",
+            "authenticated-orcid": false,
+            "given": "Marek",
+            "family": "Wojtyra",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b1",
+            "doi-asserted-by": "crossref",
+            "first-page": "377",
+            "DOI": "10.1109/70.954751",
+            "article-title": "Cobot architecture",
+            "volume": "17",
+            "author": "Peshkin",
+            "year": "2001",
+            "journal-title": "IEEE Trans. Robot. Autom."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b2",
+            "series-title": "2013 IEEE/RSJ International Conference on Intelligent Robots and Systems",
+            "article-title": "Safe physical human-robot collaboration",
+            "author": "Flacco",
+            "year": "2013"
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b3",
+            "doi-asserted-by": "crossref",
+            "first-page": "817",
+            "DOI": "10.1109/TRO.2019.2911800",
+            "article-title": "Adaptive motion planning for a collaborative robot based on prediction uncertainty to enhance human safety and work efficiency",
+            "volume": "35",
+            "author": "Kanazawa",
+            "year": "2019",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b4",
+            "doi-asserted-by": "crossref",
+            "unstructured": "P. Besset, R. Bear\u00e9e, O. Gibaru, FIR filter-based online jerk-controlled trajectory generation, in: 2016 IEEE International Conference on Industrial Technology, ICIT, 2016, pp. 84\u201389.",
+            "DOI": "10.1109/ICIT.2016.7474730"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b5",
+            "doi-asserted-by": "crossref",
+            "unstructured": "J. Rehbein, T. Wr\u00fctz, D. Hotze, R. Biesenbach, Collaborative control with industrial robots, in: 2017 International Conference on Research and Education in Mechatronics, REM, 2017, pp. 1\u20134.",
+            "DOI": "10.1109/REM.2017.8075244"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b6",
+            "doi-asserted-by": "crossref",
+            "unstructured": "V. Chawda, G. Niemeyer, Toward torque control of a KUKA LBR IIWA for physical human-robot interaction, in: 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems, IROS, 2017, pp. 6387\u20136392.",
+            "DOI": "10.1109/IROS.2017.8206543"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b7",
+            "doi-asserted-by": "crossref",
+            "unstructured": "J. M. Salt Ducaju, B. Olofsson, A. Robertsson, R. Johansson, Joint Stiction Avoidance with Null-Space Motion in Real-Time Model Predictive Control for Redundant Collaborative Robots, in: 2021 30th IEEE International Conference on Robot & Human Interactive Communication, RO-MAN, 2021, pp. 307\u2013314.",
+            "DOI": "10.1109/RO-MAN50785.2021.9515514"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b8",
+            "doi-asserted-by": "crossref",
+            "unstructured": "T. Winiarski, J. Sikora, D. Seredy\u0144ski, W. Dudek, DAIMM Simulation Platform for Dual-Arm Impedance Controlled Mobile Manipulation, in: 2021 7th International Conference on Automation, Robotics and Applications, ICARA, 2021, pp. 180\u2013184.",
+            "DOI": "10.1109/ICARA51699.2021.9376462"
+          },
+          {
+            "issue": "20",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b9",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.3390/en14206693",
+            "article-title": "Grasped object weight compensation in reference to impedance controlled robots",
+            "volume": "14",
+            "author": "Winiarski",
+            "year": "2021",
+            "journal-title": "Energies"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b10",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.rcim.2022.102446",
+            "article-title": "Kinematic calibration for collaborative robots on a mobile platform using motion capture system",
+            "volume": "79",
+            "author": "\u017dlajpah",
+            "year": "2023",
+            "journal-title": "Robot. Comput.-Integr. Manuf."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b11",
+            "doi-asserted-by": "crossref",
+            "unstructured": "R. Beira, M. Lopes, M. Praca, J. Santos-Victor, A. Bernardino, G. Metta, F. Becchi, R. Saltaren, Design of the robot-cub (iCub) head, in: Proceedings 2006 IEEE International Conference on Robotics and Automation, 2006. ICRA 2006, 2006, pp. 94\u2013100.",
+            "DOI": "10.1109/ROBOT.2006.1641167"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b12",
+            "doi-asserted-by": "crossref",
+            "unstructured": "R. F. Reinhart, J. J. Steil, Reaching movement generation with a recurrent neural network based on learning inverse kinematics for the humanoid robot iCub, in: 2009 9th IEEE-RAS International Conference on Humanoid Robots, 2009, pp. 323\u2013330.",
+            "DOI": "10.1109/ICHR.2009.5379558"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b13",
+            "doi-asserted-by": "crossref",
+            "unstructured": "A. Parmiggiani, M. Randazzo, L. Natale, G. Metta, G. Sandini, Joint torque sensing for the upper-body of the iCub humanoid robot, in: 2009 9th IEEE-RAS International Conference on Humanoid Robots, 2009, pp. 15\u201320.",
+            "DOI": "10.1109/ICHR.2009.5379525"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b14",
+            "doi-asserted-by": "crossref",
+            "unstructured": "M.A. Diftler, J.S. Mehling, M.E. Abdallah, N.A. Radford, L.B. Bridgwater, A.M. Sanders, R.S. Askew, D.M. Linn, J.D. Yamokoski, F.A. Permenter, B.K. Hargrave, R. Platt, R.T. Savely, R.O. Ambrose, Robonaut 2 - The first humanoid robot in space, in: 2011 IEEE International Conference on Robotics and Automation, 2011, pp. 2178\u20132183.",
+            "DOI": "10.1109/ICRA.2011.5979830"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b15",
+            "doi-asserted-by": "crossref",
+            "unstructured": "M. A. Diftler, T. D. Ahlstrom, R. O. Ambrose, N. A. Radford, C. A. Joyce, N. De La Pena, A. H. Parsons, A. L. Noblitt, Robonaut 2 \u2013 Initial activities on-board the ISS, in: 2012 IEEE Aerospace Conference, 2012, pp. 1\u201312.",
+            "DOI": "10.1109/AERO.2012.6187268"
+          },
+          {
+            "issue": "No 3",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b16",
+            "doi-asserted-by": "crossref",
+            "first-page": "393",
+            "DOI": "10.24425/ame.2022.140423",
+            "article-title": "Inverse kinematics solution for humanoid robot minimizing gravity-related joint torques",
+            "volume": "vol. 69",
+            "author": "Miko\u0142ajczyk",
+            "year": "2022",
+            "journal-title": "Arch. Mech. Eng."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b17",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2020.104006",
+            "article-title": "Analytical inverse kinematic computation for 7-DOF redundant sliding manipulators",
+            "volume": "155",
+            "author": "Tong",
+            "year": "2021",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b18",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2022.104967",
+            "article-title": "A geometric approach to inverse kinematics of hyper-redundant manipulators for tokamaks maintenance",
+            "volume": "176",
+            "author": "Lauretti",
+            "year": "2022",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b19",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2022.105121",
+            "article-title": "A novel method for computing self-motion manifolds",
+            "volume": "179",
+            "author": "Wu",
+            "year": "2023",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b20",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2023.105374",
+            "article-title": "Task priority based design optimization of a kinematic redundant robot",
+            "volume": "187",
+            "author": "Ginnante",
+            "year": "2023",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b21",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2023.105549",
+            "article-title": "Design and implementation of a 7-DOF cable-driven serial spray-painting robot with motion-decoupling mechanisms",
+            "volume": "192",
+            "author": "Xu",
+            "year": "2024",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b22",
+            "series-title": "Springer Handbook of Robotics",
+            "doi-asserted-by": "crossref",
+            "first-page": "221",
+            "DOI": "10.1007/978-3-319-32552-1_10",
+            "article-title": "Redundant robots",
+            "author": "Chiaverini",
+            "year": "2016"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b23",
+            "series-title": "Robotics: Modelling, Planning and Control",
+            "first-page": "105",
+            "article-title": "Differential kinematics and statics",
+            "author": "Siciliano",
+            "year": "2009"
+          },
+          {
+            "issue": "12",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b24",
+            "doi-asserted-by": "crossref",
+            "first-page": "868",
+            "DOI": "10.1109/TSMC.1977.4309644",
+            "article-title": "Automatic supervisory control of the configuration and behavior of multibody mechanisms",
+            "volume": "7",
+            "author": "Li\u00e9geois",
+            "year": "1977",
+            "journal-title": "IEEE Trans. Syst. Man Cybern."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b25",
+            "doi-asserted-by": "crossref",
+            "first-page": "122",
+            "DOI": "10.1016/j.robot.2016.01.006",
+            "article-title": "Kinematic control of redundant robots with guaranteed joint limit avoidance",
+            "volume": "79",
+            "author": "Atawnih",
+            "year": "2016",
+            "journal-title": "Robot. Auton. Syst."
+          },
+          {
+            "issue": "2",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b26",
+            "doi-asserted-by": "crossref",
+            "first-page": "944",
+            "DOI": "10.1109/TMECH.2014.2326304",
+            "article-title": "Closed-loop inverse kinematics for redundant robots: Comparative assessment and two enhancements",
+            "volume": "20",
+            "author": "Colom\u00e9",
+            "year": "2015",
+            "journal-title": "IEEE/ASME Trans. Mechatronics"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b27",
+            "first-page": "6869",
+            "article-title": "A comparison of damped least squares algorithms for inverse kinematics of robot manipulators",
+            "volume": "50",
+            "author": "Di Vito",
+            "year": "2017",
+            "journal-title": "IFAC- Pap."
+          },
+          {
+            "issue": "2",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b28",
+            "doi-asserted-by": "crossref",
+            "first-page": "1603",
+            "DOI": "10.1016/S1474-6670(17)61205-9",
+            "article-title": "A multiple shooting algorithm for direct solution of optimal control problems",
+            "volume": "17",
+            "author": "Bock",
+            "year": "1984",
+            "journal-title": "IFAC Proc. Vol."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b29",
+            "doi-asserted-by": "crossref",
+            "unstructured": "A. Reiter, A. M\u00fcller, H. Gattringer, Inverse kinematics in minimum-time trajectory planning for kinematically redundant manipulators, in: IECON 2016 - 42nd Annual Conference of the IEEE Industrial Electronics Society, 2016, pp. 6873\u20136878.",
+            "DOI": "10.1109/IECON.2016.7793436"
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b30",
+            "doi-asserted-by": "crossref",
+            "first-page": "1681",
+            "DOI": "10.1109/TII.2018.2792002",
+            "article-title": "On Higher Order Inverse Kinematics Methods in Time-Optimal Trajectory Planning for Kinematically Redundant Manipulators",
+            "volume": "14",
+            "author": "Reiter",
+            "year": "2018",
+            "journal-title": "IEEE Trans. Ind. Inform."
+          },
+          {
+            "issue": "6",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b31",
+            "doi-asserted-by": "crossref",
+            "first-page": "1533",
+            "DOI": "10.1109/TRO.2014.2351113",
+            "article-title": "A general, fast, and robust implementation of the time-optimal path parameterization algorithm",
+            "volume": "30",
+            "author": "Pham",
+            "year": "2014",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b32",
+            "doi-asserted-by": "crossref",
+            "first-page": "3553",
+            "DOI": "10.1109/LRA.2018.2853806",
+            "article-title": "Faster motion on cartesian paths exploiting robot redundancy at the acceleration level",
+            "volume": "3",
+            "author": "Al Khudir",
+            "year": "2018",
+            "journal-title": "IEEE Robot. Autom. Lett."
+          },
+          {
+            "issue": "2",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b33",
+            "doi-asserted-by": "crossref",
+            "first-page": "589",
+            "DOI": "10.1016/j.asoc.2011.11.006",
+            "article-title": "A multi-objective approach for the motion planning of redundant manipulators",
+            "volume": "12",
+            "author": "Marcos",
+            "year": "2012",
+            "journal-title": "Appl. Softw. Comput."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b34",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.rineng.2022.100597",
+            "article-title": "A comparative analysis of metaheuristic algorithms for solving the inverse kinematics of robot manipulators",
+            "volume": "16",
+            "author": "Abdor-Sierra",
+            "year": "2022",
+            "journal-title": "Results Eng."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b35",
+            "unstructured": "F.-T. Cheng, T.-H. Chen, Y.-Y. Sun, Efficient algorithm for resolving manipulator redundancy-the compact QP method, in: Proceedings 1992 IEEE International Conference on Robotics and Automation, vol. 1, 1992, pp. 508\u2013513."
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b36",
+            "doi-asserted-by": "crossref",
+            "first-page": "785",
+            "DOI": "10.1109/TRO.2011.2142450",
+            "article-title": "Kinematic control of redundant manipulators: Generalizing the task-priority framework to inequality task",
+            "volume": "27",
+            "author": "Kanoun",
+            "year": "2011",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b37",
+            "doi-asserted-by": "crossref",
+            "first-page": "976",
+            "DOI": "10.2514/1.45874",
+            "article-title": "Least-squares-based reaction control of space manipulators",
+            "volume": "35",
+            "author": "Cocuzza",
+            "year": "2012",
+            "journal-title": "J. Guid. Control Dyn."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b38",
+            "doi-asserted-by": "crossref",
+            "unstructured": "F. Flacco, A. De Luca, O. Khatib, Motion control of redundant robots under joint constraints: Saturation in the Null Space, in: 2012 IEEE International Conference on Robotics and Automation, 2012, pp. 285\u2013292.",
+            "DOI": "10.1109/ICRA.2012.6225376"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b39",
+            "doi-asserted-by": "crossref",
+            "unstructured": "F. Flacco, A. De Luca, Optimal redundancy resolution with task scaling under hard bounds in the robot joint space, in: 2013 IEEE International Conference on Robotics and Automation, 2013, pp. 3969\u20133975.",
+            "DOI": "10.1109/ICRA.2013.6631136"
+          },
+          {
+            "issue": "2",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b40",
+            "doi-asserted-by": "crossref",
+            "first-page": "674",
+            "DOI": "10.1109/TMECH.2011.2181977",
+            "article-title": "Variable joint-velocity limits of redundant robot manipulators handled by quadratic programming",
+            "volume": "18",
+            "author": "Zhang",
+            "year": "2013",
+            "journal-title": "IEEE/ASME Trans. Mechatronics"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b41",
+            "doi-asserted-by": "crossref",
+            "first-page": "637",
+            "DOI": "10.1109/TRO.2015.2418582",
+            "article-title": "Control of redundant robots under hard joint constraints: Saturation in the null space",
+            "volume": "31",
+            "author": "Flacco",
+            "year": "2015",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b42",
+            "doi-asserted-by": "crossref",
+            "unstructured": "D. Khudher, R. Powell, Quadratic programming for inverse kinematics control of a hexapod robot with inequality constraints, in: 2016 International Conference on Robotics: Current Trends and Future Challenges, RCTFC, 2016, pp. 1\u20135.",
+            "DOI": "10.1109/RCTFC.2016.7893402"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b43",
+            "doi-asserted-by": "crossref",
+            "first-page": "41023",
+            "DOI": "10.1109/ACCESS.2022.3167403",
+            "article-title": "A novel QP-based kinematic redundancy resolution method with joint constraints satisfaction",
+            "volume": "10",
+            "author": "Woli\u0144ski",
+            "year": "2022",
+            "journal-title": "IEEE Access"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b44",
+            "series-title": "Trajectory Planning for Automatic Machines and Robots",
+            "first-page": "223",
+            "article-title": "Operations on trajectories",
+            "author": "Biagiotti",
+            "year": "2008"
+          },
+          {
+            "issue": "10",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b45",
+            "doi-asserted-by": "crossref",
+            "first-page": "3921",
+            "DOI": "10.1109/TIE.2009.2018431",
+            "article-title": "Nonlinear variable structure filter for the online trajectory scaling",
+            "volume": "56",
+            "author": "Gerelli",
+            "year": "2009",
+            "journal-title": "IEEE Trans. Ind. Electron."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b46",
+            "doi-asserted-by": "crossref",
+            "unstructured": "C. Guarino Lo Bianco, F.M. Wahl, A novel second order filter for the real-time trajectory scaling, in: 2011 IEEE International Conference on Robotics and Automation, 2011, pp. 5813\u20135818.",
+            "DOI": "10.1109/ICRA.2011.5979764"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b47",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2023.105493",
+            "article-title": "An inverse kinematics solution with trajectory scaling for redundant manipulators",
+            "volume": "191",
+            "author": "Woli\u0144ski",
+            "year": "2024",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b48",
+            "doi-asserted-by": "crossref",
+            "unstructured": "F. Lange, M. Suppa, Predictive path-accurate scaling of a sensor-based defined trajectory, in: 2014 IEEE International Conference on Robotics and Automation, ICRA, 2014, pp. 754\u2013759.",
+            "DOI": "10.1109/ICRA.2014.6906939"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b49",
+            "doi-asserted-by": "crossref",
+            "first-page": "82",
+            "DOI": "10.1109/LRA.2015.2506899",
+            "article-title": "Path-accurate online trajectory generation for jerk-limited industrial robots",
+            "volume": "1",
+            "author": "Lange",
+            "year": "2016",
+            "journal-title": "IEEE Robot. Autom. Lett."
+          },
+          {
+            "issue": "21",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b50",
+            "doi-asserted-by": "crossref",
+            "first-page": "1380",
+            "DOI": "10.1080/01691864.2016.1222307",
+            "article-title": "Iterative path-accurate trajectory generation for fast sensor-based motion of robot arms",
+            "volume": "30",
+            "author": "Lange",
+            "year": "2016",
+            "journal-title": "Adv. Robot."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b51",
+            "series-title": "ROMANSY 23 - Robot Design, Dynamics and Control",
+            "first-page": "423",
+            "article-title": "Proposition of on-line velocity scaling algorithm for task space trajectories",
+            "author": "Wojtyra",
+            "year": "2021"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b52",
+            "series-title": "ROMANSY 24 - Robot Design, Dynamics and Control",
+            "first-page": "171",
+            "article-title": "On-line velocity scaling algorithm for task space trajectories",
+            "author": "Wojtyra",
+            "year": "2022"
+          },
+          {
+            "issue": "6",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b53",
+            "doi-asserted-by": "crossref",
+            "first-page": "769",
+            "DOI": "10.1002/rob.4620060607",
+            "article-title": "Redundancy resolution through local optimization: A review",
+            "volume": "6",
+            "author": "Nenchev",
+            "year": "1989",
+            "journal-title": "J. Robot. Syst."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b54",
+            "doi-asserted-by": "crossref",
+            "unstructured": "H. Zghal, R.V. Dubey, J.A. Euler, Efficient gradient projection optimization for manipulators with multiple degrees of redundancy, in: Proceedings., IEEE International Conference on Robotics and Automation, 1990, pp. 1006\u20131011 vol.2.",
+            "DOI": "10.1109/ROBOT.1990.126123"
+          },
+          {
+            "issue": "2",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b55",
+            "doi-asserted-by": "crossref",
+            "first-page": "123",
+            "DOI": "10.1109/87.294335",
+            "article-title": "Review of the damped least-squares inverse kinematics with experiments on an industrial robot manipulator",
+            "volume": "2",
+            "author": "Chiaverini",
+            "year": "1994",
+            "journal-title": "IEEE Trans. Control Syst. Technol."
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b56",
+            "doi-asserted-by": "crossref",
+            "first-page": "37",
+            "DOI": "10.1080/2151237X.2005.10129202",
+            "article-title": "Selectively damped least squares for inverse kinematics",
+            "volume": "10",
+            "author": "Buss",
+            "year": "2005",
+            "journal-title": "J. Graph. Tools"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b57",
+            "doi-asserted-by": "crossref",
+            "unstructured": "A. Colom\u00e9, C. Torras, Redundant inverse kinematics: Experimental comparative review and two enhancements, in: 2012 IEEE/RSJ International Conference on Intelligent Robots and Systems, 2012, pp. 5333\u20135340.",
+            "DOI": "10.1109/IROS.2012.6385672"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b58",
+            "series-title": "Motion and Operation Planning of Robotic Systems: Background and Practical Approaches",
+            "first-page": "113",
+            "article-title": "Obstacle avoidance with industrial robots",
+            "author": "Petri\u010d",
+            "year": "2015"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b59",
+            "doi-asserted-by": "crossref",
+            "unstructured": "B. Siciliano, J.J.E. Slotine, A general framework for managing multiple tasks in highly redundant robotic systems, in: Advanced Robotics, 1991. \u2019Robots in Unstructured Environments\u2019, 91 ICAR., Fifth International Conference on, vol. 2, 1991, pp. 1211\u20131216.",
+            "DOI": "10.1109/ICAR.1991.240390"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b60",
+            "doi-asserted-by": "crossref",
+            "unstructured": "F. Flacco, A. De Luca, A reverse priority approach to multi-task control of redundant robots, in: 2014 IEEE/RSJ International Conference on Intelligent Robots and Systems, 2014, pp. 2421\u20132427.",
+            "DOI": "10.1109/IROS.2014.6942891"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b61",
+            "doi-asserted-by": "crossref",
+            "first-page": "109",
+            "DOI": "10.1177/027836498500400308",
+            "article-title": "Obstacle avoidance for kinematically redundant manipulators in dynamically varying environments",
+            "volume": "4",
+            "author": "Maciejewski",
+            "year": "1985",
+            "journal-title": "Int. J. Robot. Res."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b62",
+            "doi-asserted-by": "crossref",
+            "unstructured": "A. Casalino, A.M. Zanchettin, P. Rocco, Online planning of optimal trajectories on assigned paths with dynamic constraints for robot manipulators, in: 2016 IEEE/RSJ International Conference on Intelligent Robots and Systems, IROS, 2016, pp. 979\u2013985.",
+            "DOI": "10.1109/IROS.2016.7759168"
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b63",
+            "doi-asserted-by": "crossref",
+            "first-page": "925",
+            "DOI": "10.1021/i200031a006",
+            "article-title": "Use of quadratic programming for constrained internal model control",
+            "volume": "24",
+            "author": "Ricker",
+            "year": "1985",
+            "journal-title": "Ind. Eng. Chem. Process. Des. Dev."
+          },
+          {
+            "issue": "7",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b64",
+            "doi-asserted-by": "crossref",
+            "first-page": "733",
+            "DOI": "10.1016/S0967-0661(02)00186-7",
+            "article-title": "A survey of industrial model predictive control technology",
+            "volume": "11",
+            "author": "Qin",
+            "year": "2003",
+            "journal-title": "Control Eng. Pract."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b65",
+            "doi-asserted-by": "crossref",
+            "unstructured": "T. Schwickart, H. Voos, M. Darouach, S. Bezzaoucha, A flexible move blocking strategy to speed up model-predictive control while retaining a high tracking performance, in: 2016 European Control Conference, ECC, 2016, pp. 764\u2013769.",
+            "DOI": "10.1109/ECC.2016.7810381"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b66",
+            "doi-asserted-by": "crossref",
+            "first-page": "278",
+            "DOI": "10.1109/TRO.2018.2871439",
+            "article-title": "Predictive inverse kinematics for redundant manipulators with task scaling and kinematic constraints",
+            "volume": "35",
+            "author": "Faroni",
+            "year": "2019",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b67",
+            "article-title": "Predictive joint trajectory scaling for manipulators with kinodynamic constraints",
+            "volume": "95",
+            "author": "Faroni",
+            "year": "2020",
+            "journal-title": "Control. Eng. Pr."
+          },
+          {
+            "issue": "8",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b68",
+            "doi-asserted-by": "crossref",
+            "first-page": "816",
+            "DOI": "10.1002/rnc.1251",
+            "article-title": "An online active set strategy to overcome the limitations of explicit MPC",
+            "volume": "18",
+            "author": "Ferreau",
+            "year": "2008",
+            "journal-title": "Internat. J. Robust Nonlinear Control"
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b69",
+            "doi-asserted-by": "crossref",
+            "first-page": "327",
+            "DOI": "10.1007/s12532-014-0071-1",
+            "article-title": "qpOASES: A parametric active-set algorithm for quadratic programming",
+            "volume": "6",
+            "author": "Ferreau",
+            "year": "2014",
+            "journal-title": "Math. Program. Comput."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b70",
+            "unstructured": "R. Bischoff, J. Kurth, G. Schreiber, R. Koeppe, A. Albu-Schaeffer, A. Beyer, O. Eiberger, S. Haddadin, A. Stemmer, G. Grunwald, G. Hirzinger, The KUKA-DLR Lightweight Robot arm \u2013 a new reference platform for robotics research and manufacturing, in: ISR 2010 (41st International Symposium on Robotics) and ROBOTIK 2010 (6th German Conference on Robotics), 2010, pp. 1\u20138."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b71",
+            "series-title": "Lightweight robot 4+ specification, version: Spez LBR 4+ V2en",
+            "author": "KUKA",
+            "year": "2010"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b72",
+            "series-title": "Lightweight robot 4+ operating instructions, version: BA LBR 4+ V2 en",
+            "author": "KUKA",
+            "year": "2010"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b73",
+            "doi-asserted-by": "crossref",
+            "unstructured": "T. Winiarski, K. Banachowicz, Opening a door with a redundant impedance controlled robot, in: 9th International Workshop on Robot Motion and Control, RoMoCo 2013 - Workshop Proceedings, 2013, pp. 221\u2013226.",
+            "DOI": "10.1109/RoMoCo.2013.6614612"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b74",
+            "doi-asserted-by": "crossref",
+            "unstructured": "E. Magrini, F. Flacco, A. De Luca, Estimation of contact forces using a virtual force sensor, in: 2014 IEEE/RSJ International Conference on Intelligent Robots and Systems, 2014, pp. 2126\u20132133.",
+            "DOI": "10.1109/IROS.2014.6942848"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b75",
+            "first-page": "319",
+            "article-title": "Two mode impedance control of Velma service robot redundant arm",
+            "volume": "351",
+            "author": "Winiarski",
+            "year": "2015",
+            "journal-title": "Adv. Intell. Syst. Comput."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b76",
+            "first-page": "57",
+            "article-title": "Multi-sensory feedback control in door approaching and opening",
+            "volume": "323",
+            "author": "Winiarski",
+            "year": "2015",
+            "journal-title": "Adv. Intell. Syst. Comput."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b77",
+            "doi-asserted-by": "crossref",
+            "unstructured": "A. De Luca, F. Flacco, Integrated control for pHRI: Collision avoidance, detection, reaction and collaboration, in: 2012 4th IEEE RAS EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob), 2012, pp. 288\u2013295.",
+            "DOI": "10.1109/BioRob.2012.6290917"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b78",
+            "doi-asserted-by": "crossref",
+            "first-page": "367",
+            "DOI": "10.1109/TOH.2013.54",
+            "article-title": "Learning compliant manipulation through kinesthetic and tactile human-robot interaction",
+            "volume": "7",
+            "author": "Kronander",
+            "year": "2014",
+            "journal-title": "IEEE Trans. Haptics"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b79",
+            "doi-asserted-by": "crossref",
+            "unstructured": "D. \u0106ehaji\u0107, P.B.g. Dohmann, S. Hirche, Estimating unknown object dynamics in human-robot manipulation tasks, in: 2017 IEEE International Conference on Robotics and Automation, ICRA, 2017, pp. 1730\u20131737.",
+            "DOI": "10.1109/ICRA.2017.7989204"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b80",
+            "series-title": "KUKA Light-weight Robot. Robot documentation package",
+            "author": "KUKA Roboter GmBH",
+            "year": "2008"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b81",
+            "series-title": "Springer Handbook of Robotics",
+            "doi-asserted-by": "crossref",
+            "first-page": "11",
+            "DOI": "10.1007/978-3-319-32552-1_2",
+            "article-title": "Kinematics",
+            "author": "Waldron",
+            "year": "2016"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b82",
+            "unstructured": "G. Schreiber, A. Stemmer, R. Bischoff, The Fast Research Interface for the KUKA Lightweight Robot, in: Proceedings of the IEEE ICRA 2010 Workshop on ICRA 2010 Workshop on Innovative Robot Control Architectures for Demanding (Research) Applications \u2013 How To Modify and Enhance Commercial Controllers, 2010, pp. 15\u201321."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b83",
+            "series-title": "KUKA.FastResearchInterface 1.0, version: KUKA.FRI 1.0 V1 en",
+            "author": "KUKA",
+            "year": "2011"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2025.105988_b84",
+            "series-title": "Trajectory Planning for Automatic Machines and Robots",
+            "first-page": "79",
+            "article-title": "Trajectory with double S velocity profile",
+            "author": "Biagiotti",
+            "year": "2008"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.mechmachtheory.2025.105988_b85",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.3390/robotics7030041",
+            "article-title": "Viability and feasibility of constrained kinematic control of manipulators",
+            "volume": "7",
+            "author": "Faroni",
+            "year": "2018",
+            "journal-title": "Robotics"
+          }
+        ],
+        "container-title": [
+          "Mechanism and Machine Theory"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0094114X25000771?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0094114X25000771?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              4
+            ]
+          ],
+          "date-time": "2025-11-04T05:01:55Z",
+          "timestamp": 1762232515000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0094114X25000771"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7
+            ]
+          ]
+        },
+        "references-count": 85,
+        "alternative-id": [
+          "S0094114X25000771"
+        ],
+        "URL": "https://doi.org/10.1016/j.mechmachtheory.2025.105988",
+        "relation": {},
+        "ISSN": [
+          "0094-114X"
+        ],
+        "issn-type": [
+          {
+            "value": "0094-114X",
+            "type": "print"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "Elsevier",
+            "name": "publisher",
+            "label": "This article is maintained by"
+          },
+          {
+            "value": "Predictive inverse kinematics with trajectory scaling for redundant manipulators based on quadratic optimization",
+            "name": "articletitle",
+            "label": "Article Title"
+          },
+          {
+            "value": "Mechanism and Machine Theory",
+            "name": "journaltitle",
+            "label": "Journal Title"
+          },
+          {
+            "value": "https://doi.org/10.1016/j.mechmachtheory.2025.105988",
+            "name": "articlelink",
+            "label": "CrossRef DOI link to publisher maintained version"
+          },
+          {
+            "value": "article",
+            "name": "content_type",
+            "label": "Content Type"
+          },
+          {
+            "value": "\u00a9 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+            "name": "copyright",
+            "label": "Copyright"
+          }
+        ],
+        "article-number": "105988"
+      }
+    }
+  },
+  "origanti2025lookahead": {
+    "doi": "10.1109/SII59315.2025.10871056",
+    "status": 200,
+    "source": "https://api.crossref.org/works/10.1109/SII59315.2025.10871056",
+    "data": {
+      "status": "ok",
+      "message-type": "work",
+      "message-version": "1.0.0",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              7
+            ]
+          ],
+          "date-time": "2026-07-07T07:44:16Z",
+          "timestamp": 1783410256858,
+          "version": "3.54.6"
+        },
+        "reference-count": 26,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  1,
+                  21
+                ]
+              ],
+              "date-time": "2025-01-21T00:00:00Z",
+              "timestamp": 1737417600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  1,
+                  21
+                ]
+              ],
+              "date-time": "2025-01-21T00:00:00Z",
+              "timestamp": 1737417600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/100018693",
+            "name": "Horizon Europe",
+            "doi-asserted-by": "publisher",
+            "id": [
+              {
+                "id": "10.13039/100018693",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [],
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              21
+            ]
+          ]
+        },
+        "DOI": "10.1109/sii59315.2025.10871056",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              12
+            ]
+          ],
+          "date-time": "2025-02-12T18:17:07Z",
+          "timestamp": 1739384227000
+        },
+        "page": "990-997",
+        "source": "Crossref",
+        "is-referenced-by-count": 3,
+        "title": [
+          "Look Ahead Optimization for Managing Nullspace in Cartesian Impedance Control of Dual-Arm Robots"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Vamsi Krishna",
+            "family": "Origanti",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "German Research Center for Artificial Intelligence (DFKI GmbH),Robotics Innovation Center,Bremen,Germany,28359"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Adrian",
+            "family": "Danzglock",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "German Research Center for Artificial Intelligence (DFKI GmbH),Robotics Innovation Center,Bremen,Germany,28359"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Frank",
+            "family": "Kirchner",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "German Research Center for Artificial Intelligence (DFKI GmbH),Robotics Innovation Center,Bremen,Germany,28359"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.23919/ACC.1984.4788393"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/JRA.1987.1087068"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/bf00126069"
+          },
+          {
+            "key": "ref4",
+            "article-title": "Automatic Parameterization of Motion and Force Controlled Robot Skills. Robot Intelligence Technology and Applications 6. RiTA 2021",
+            "volume-title": "Lecture Notes in Networks and Systems",
+            "volume": "429",
+            "author": "Origanti",
+            "year": "2022"
+          },
+          {
+            "key": "ref5",
+            "article-title": "Quadratic Programming-based Control of Redundant Robots",
+            "volume-title": "Proceedings of the International Conference on Robotics and Automation",
+            "author": "Buschman"
+          },
+          {
+            "issue": "2",
+            "key": "ref6",
+            "first-page": "305",
+            "article-title": "An optimization-based approach to whole-body control of humanoid robots",
+            "volume": "32",
+            "author": "Kuindersma",
+            "year": "2016",
+            "journal-title": "Journal of Field Robotics"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TRO.2011.2142450"
+          },
+          {
+            "key": "ref8",
+            "article-title": "Multi-objective optimization in robotic manipulators",
+            "author": "Zhou",
+            "year": "2020",
+            "journal-title": "Robotics and Autonomous Systems"
+          },
+          {
+            "key": "ref9",
+            "article-title": "Reinforcement learning for impedance control in unstructured environments",
+            "author": "Wu",
+            "year": "2019",
+            "journal-title": "International Journal of Robotics Research"
+          },
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.3390/app10175893"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/icra.2018.8462877"
+          },
+          {
+            "key": "ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/icra.2019.8794225"
+          },
+          {
+            "key": "ref13",
+            "volume-title": "Cartesian Impedance Control of Redundant and Flexible-Joint Robots",
+            "volume": "2008",
+            "author": "Ott",
+            "year": "2008"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1177/027836498500400201"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1115/1.3258708"
+          },
+          {
+            "key": "ref16",
+            "first-page": "414",
+            "article-title": "Determination of Manipulator Attributes using a Weighted Jacobian",
+            "volume-title": "Proceedings Of IEEE International Conference On Robotics And Automation",
+            "author": "Ang"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/IROS.2012.6385619"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/MCG.2008.37"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/s10851-009-0161-2"
+          },
+          {
+            "key": "ref20",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/icra.2012.6225337"
+          },
+          {
+            "key": "ref21",
+            "volume-title": "trimesh",
+            "author": "Dawson-Haggerty",
+            "year": "2019"
+          },
+          {
+            "key": "ref22",
+            "article-title": "A C++ Implementation of a Cartesian Impedance Controller for Robotic Manipulators",
+            "author": "Mayr",
+            "year": "2022"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41592-019-0686-2"
+          },
+          {
+            "key": "ref24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1126/scirobotics.abm6074"
+          },
+          {
+            "key": "ref25",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.23919/ecc64448.2024.10591005"
+          },
+          {
+            "key": "ref26",
+            "article-title": "Deep Model Predictive Variable Impedance Control",
+            "author": "Anand",
+            "year": "2022"
+          }
+        ],
+        "event": {
+          "name": "2025 IEEE/SICE International Symposium on System Integration (SII)",
+          "location": "Munich, Germany",
+          "start": {
+            "date-parts": [
+              [
+                2025,
+                1,
+                21
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2025,
+                1,
+                24
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2025 IEEE/SICE International Symposium on System Integration (SII)"
+        ],
+        "original-title": [],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/10870372/10870581/10871056.pdf?arnumber=10871056",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              20
+            ]
+          ],
+          "date-time": "2025-02-20T19:49:39Z",
+          "timestamp": 1740080979000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/10871056/"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              21
+            ]
+          ]
+        },
+        "references-count": 26,
+        "URL": "https://doi.org/10.1109/sii59315.2025.10871056",
+        "relation": {},
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              21
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "wingo2024linear": {
+    "doi": "10.15607/RSS.2024.XX.110",
+    "status": 200,
+    "source": "https://api.crossref.org/works/10.15607/RSS.2024.XX.110",
+    "data": {
+      "status": "ok",
+      "message-type": "work",
+      "message-version": "1.0.0",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              27
+            ]
+          ],
+          "date-time": "2025-11-27T06:46:50Z",
+          "timestamp": 1764226010684
+        },
+        "reference-count": 0,
+        "publisher": "Robotics: Science and Systems Foundation",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [],
+        "DOI": "10.15607/rss.2024.xx.110",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              9
+            ]
+          ],
+          "date-time": "2024-09-09T17:25:40Z",
+          "timestamp": 1725902740000
+        },
+        "source": "Crossref",
+        "is-referenced-by-count": 1,
+        "title": [
+          "Linear-time Differential Inverse Kinematics: an Augmented Lagrangian Perspective"
+        ],
+        "prefix": "10.15607",
+        "author": [
+          {
+            "given": "Bruce",
+            "family": "Wingo",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Ajay",
+            "family": "Sathya",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "St\u00e9phane",
+            "family": "Caron",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Seth",
+            "family": "Hutchinson",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Justin",
+            "family": "Carpentier",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "6920",
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              15
+            ]
+          ]
+        },
+        "event": {
+          "name": "Robotics: Science and Systems 2024",
+          "acronym": "RSS2024"
+        },
+        "container-title": [
+          "Robotics: Science and Systems XX"
+        ],
+        "original-title": [],
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              9
+            ]
+          ],
+          "date-time": "2024-09-09T17:26:34Z",
+          "timestamp": 1725902794000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "http://www.roboticsproceedings.org/rss20/p110.pdf"
+          }
+        },
+        "subtitle": [],
+        "proceedings-subject": "Robotics",
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              15
+            ]
+          ]
+        },
+        "references-count": 0,
+        "URL": "https://doi.org/10.15607/rss.2024.xx.110",
+        "relation": {},
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              15
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "wolinski2024scaling": {
+    "doi": "10.1016/j.mechmachtheory.2023.105493",
+    "status": 200,
+    "source": "https://api.crossref.org/works/10.1016/j.mechmachtheory.2023.105493",
+    "data": {
+      "status": "ok",
+      "message-type": "work",
+      "message-version": "1.0.0",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              20
+            ]
+          ],
+          "date-time": "2026-08-20T16:45:32Z",
+          "timestamp": 1787244332586,
+          "version": "build-2736575974"
+        },
+        "reference-count": 62,
+        "publisher": "Elsevier BV",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  1,
+                  1
+                ]
+              ],
+              "date-time": "2024-01-01T00:00:00Z",
+              "timestamp": 1704067200000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  1,
+                  1
+                ]
+              ],
+              "date-time": "2024-01-01T00:00:00Z",
+              "timestamp": 1704067200000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/legal/tdmrep-license"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2023,
+                  9,
+                  19
+                ]
+              ],
+              "date-time": "2023-09-19T00:00:00Z",
+              "timestamp": 1695081600000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "http://creativecommons.org/licenses/by/4.0/"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/501100004421",
+            "name": "Politechnika Warszawska",
+            "doi-asserted-by": "publisher",
+            "id": [
+              {
+                "id": "10.13039/501100004421",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100004442",
+            "name": "Narodowym Centrum Nauki",
+            "doi-asserted-by": "publisher",
+            "id": [
+              {
+                "id": "10.13039/501100004442",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100004281",
+            "name": "Narodowe Centrum Nauki",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "2022/45/B/ST8/00661"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "2022/45/B/ST8/00661"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100004281",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "elsevier.com",
+            "sciencedirect.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Mechanism and Machine Theory"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.mechmachtheory.2023.105493",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              3
+            ]
+          ],
+          "date-time": "2023-10-03T12:28:56Z",
+          "timestamp": 1696336136000
+        },
+        "page": "105493",
+        "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 18,
+        "special_numbering": "C",
+        "title": [
+          "An inverse kinematics solution with trajectory scaling for redundant manipulators"
+        ],
+        "prefix": "10.1016",
+        "volume": "191",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-9617-4117",
+            "authenticated-orcid": false,
+            "given": "\u0141ukasz",
+            "family": "Woli\u0144ski",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7225-7647",
+            "authenticated-orcid": false,
+            "given": "Marek",
+            "family": "Wojtyra",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b1",
+            "doi-asserted-by": "crossref",
+            "unstructured": "J.M. Salt Ducaju, B. Olofsson, A. Robertsson, R. Johansson, Joint Stiction Avoidance with Null-Space Motion in Real-Time Model Predictive Control for Redundant Collaborative Robots, in: 2021 30th IEEE International Conference on Robot & Human Interactive Communication, RO-MAN, 2021, pp. 307\u2013314.",
+            "DOI": "10.1109/RO-MAN50785.2021.9515514"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b2",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.rcim.2022.102446",
+            "article-title": "Kinematic calibration for collaborative robots on a mobile platform using motion capture system",
+            "volume": "79",
+            "author": "\u017dlajpah",
+            "year": "2023",
+            "journal-title": "Robot. Comput.-Integr. Manuf."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b3",
+            "doi-asserted-by": "crossref",
+            "unstructured": "P. Besset, R. Bear\u00e9e, O. Gibaru, FIR filter-based online jerk-controlled trajectory generation, in: 2016 IEEE International Conference on Industrial Technology, ICIT, 2016, pp. 84\u201389.",
+            "DOI": "10.1109/ICIT.2016.7474730"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b4",
+            "doi-asserted-by": "crossref",
+            "unstructured": "J. Rehbein, T. Wr\u00fctz, D. Hotze, R. Biesenbach, Collaborative control with industrial robots, in: 2017 International Conference on Research and Education in Mechatronics, REM, 2017, pp. 1\u20134.",
+            "DOI": "10.1109/REM.2017.8075244"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b5",
+            "doi-asserted-by": "crossref",
+            "unstructured": "V. Chawda, G. Niemeyer, Toward torque control of a KUKA LBR IIWA for physical human-robot interaction, in: 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems, IROS, 2017, pp. 6387\u20136392.",
+            "DOI": "10.1109/IROS.2017.8206543"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b6",
+            "doi-asserted-by": "crossref",
+            "unstructured": "T. Winiarski, J. Sikora, D. Seredy\u0144ski, W. Dudek, DAIMM Simulation Platform for Dual-Arm Impedance Controlled Mobile Manipulation, in: 2021 7th International Conference on Automation, Robotics and Applications, ICARA, 2021, pp. 180\u2013184.",
+            "DOI": "10.1109/ICARA51699.2021.9376462"
+          },
+          {
+            "issue": "20",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b7",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.3390/en14206693",
+            "article-title": "Grasped object weight compensation in reference to impedance controlled robots",
+            "volume": "14",
+            "author": "Winiarski",
+            "year": "2021",
+            "journal-title": "Energies"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b8",
+            "doi-asserted-by": "crossref",
+            "unstructured": "M. Diftler, J. Mehling, M. Abdallah, N. Radford, L. Bridgwater, A. Sanders, R. Askew, D. Linn, J. Yamokoski, F. Permenter, B. Hargrave, R. Platt, R. Savely, R. Ambrose, Robonaut 2 - The first humanoid robot in space, in: 2011 IEEE International Conference on Robotics and Automation, 2011, pp. 2178\u20132183.",
+            "DOI": "10.1109/ICRA.2011.5979830"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b9",
+            "doi-asserted-by": "crossref",
+            "unstructured": "M.A. Diftler, T.D. Ahlstrom, R.O. Ambrose, N.A. Radford, C.A. Joyce, N. De La Pena, A.H. Parsons, A.L. Noblitt, Robonaut 2 \u2013 Initial activities on-board the ISS, in: 2012 IEEE Aerospace Conference, 2012, pp. 1\u201312.",
+            "DOI": "10.1109/AERO.2012.6187268"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b10",
+            "doi-asserted-by": "crossref",
+            "unstructured": "R. Beira, M. Lopes, M. Praca, J. Santos-Victor, A. Bernardino, G. Metta, F. Becchi, R. Saltaren, Design of the robot-cub (iCub) head, in: Proceedings 2006 IEEE International Conference on Robotics and Automation, 2006, ICRA 2006, 2006, pp. 94\u2013100.",
+            "DOI": "10.1109/ROBOT.2006.1641167"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b11",
+            "doi-asserted-by": "crossref",
+            "unstructured": "R.F. Reinhart, J.J. Steil, Reaching movement generation with a recurrent neural network based on learning inverse kinematics for the humanoid robot iCub, in: 2009 9th IEEE-RAS International Conference on Humanoid Robots, 2009, pp. 323\u2013330.",
+            "DOI": "10.1109/ICHR.2009.5379558"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b12",
+            "doi-asserted-by": "crossref",
+            "unstructured": "A. Parmiggiani, M. Randazzo, L. Natale, G. Metta, G. Sandini, Joint torque sensing for the upper-body of the iCub humanoid robot, in: 2009 9th IEEE-RAS International Conference on Humanoid Robots, 2009, pp. 15\u201320.",
+            "DOI": "10.1109/ICHR.2009.5379525"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b13",
+            "doi-asserted-by": "crossref",
+            "first-page": "393",
+            "DOI": "10.24425/ame.2022.140423",
+            "article-title": "Inverse kinematics solution for humanoid robot minimizing gravity-related joint torques",
+            "volume": "69",
+            "author": "Miko\u0142ajczyk",
+            "year": "2022",
+            "journal-title": "Arch. Mech. Eng."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b14",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2020.104006",
+            "article-title": "Analytical inverse kinematic computation for 7-DOF redundant sliding manipulators",
+            "volume": "155",
+            "author": "Tong",
+            "year": "2021",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b15",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2022.104967",
+            "article-title": "A geometric approach to inverse kinematics of hyper-redundant manipulators for tokamaks maintenance",
+            "volume": "176",
+            "author": "Lauretti",
+            "year": "2022",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b16",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2022.105121",
+            "article-title": "A novel method for computing self-motion manifolds",
+            "volume": "179",
+            "author": "Wu",
+            "year": "2023",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b17",
+            "doi-asserted-by": "crossref",
+            "unstructured": "A. Reiter, A. M\u00fcller, H. Gattringer, Inverse kinematics in minimum-time trajectory planning for kinematically redundant manipulators, in: IECON 2016 - 42nd Annual Conference of the IEEE Industrial Electronics Society, 2016, pp. 6873\u20136878.",
+            "DOI": "10.1109/IECON.2016.7793436"
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b18",
+            "doi-asserted-by": "crossref",
+            "first-page": "1681",
+            "DOI": "10.1109/TII.2018.2792002",
+            "article-title": "On higher order inverse kinematics methods in time-optimal trajectory planning for kinematically redundant manipulators",
+            "volume": "14",
+            "author": "Reiter",
+            "year": "2018",
+            "journal-title": "IEEE Trans. Ind. Inform."
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b19",
+            "doi-asserted-by": "crossref",
+            "first-page": "3553",
+            "DOI": "10.1109/LRA.2018.2853806",
+            "article-title": "Faster motion on cartesian paths exploiting robot redundancy at the acceleration level",
+            "volume": "3",
+            "author": "Al Khudir",
+            "year": "2018",
+            "journal-title": "IEEE Robot. Autom. Lett."
+          },
+          {
+            "issue": "6",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b20",
+            "doi-asserted-by": "crossref",
+            "first-page": "1533",
+            "DOI": "10.1109/TRO.2014.2351113",
+            "article-title": "A general, fast, and robust implementation of the time-optimal path parameterization algorithm",
+            "volume": "30",
+            "author": "Pham",
+            "year": "2014",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "issue": "2",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b21",
+            "doi-asserted-by": "crossref",
+            "first-page": "589",
+            "DOI": "10.1016/j.asoc.2011.11.006",
+            "article-title": "A multi-objective approach for the motion planning of redundant manipulators",
+            "volume": "12",
+            "author": "Marcos",
+            "year": "2012",
+            "journal-title": "Appl. Soft Comput."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b22",
+            "article-title": "A comparative analysis of metaheuristic algorithms for solving the inverse kinematics of robot manipulators",
+            "volume": "16",
+            "author": "Abdor-Sierra",
+            "year": "2022",
+            "journal-title": "Res. Eng."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b23",
+            "unstructured": "F.-T. Cheng, T.-H. Chen, Y.-Y. Sun, Efficient algorithm for resolving manipulator redundancy-the compact QP method, in: Proceedings 1992 IEEE International Conference on Robotics and Automation, Vol. 1, 1992, pp. 508\u2013513."
+          },
+          {
+            "issue": "2",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b24",
+            "doi-asserted-by": "crossref",
+            "first-page": "674",
+            "DOI": "10.1109/TMECH.2011.2181977",
+            "article-title": "Variable joint-velocity limits of redundant robot manipulators handled by quadratic programming",
+            "volume": "18",
+            "author": "Zhang",
+            "year": "2013",
+            "journal-title": "IEEE/ASME Trans. Mechatronics"
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b25",
+            "doi-asserted-by": "crossref",
+            "first-page": "785",
+            "DOI": "10.1109/TRO.2011.2142450",
+            "article-title": "Kinematic control of redundant manipulators: Generalizing the task-priority framework to inequality task",
+            "volume": "27",
+            "author": "Kanoun",
+            "year": "2011",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b26",
+            "doi-asserted-by": "crossref",
+            "unstructured": "D. Khudher, R. Powell, Quadratic programming for inverse kinematics control of a hexapod robot with inequality constraints, in: 2016 International Conference on Robotics: Current Trends and Future Challenges, RCTFC, 2016, pp. 1\u20135.",
+            "DOI": "10.1109/RCTFC.2016.7893402"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b27",
+            "doi-asserted-by": "crossref",
+            "first-page": "976",
+            "DOI": "10.2514/1.45874",
+            "article-title": "Least-squares-based reaction control of space manipulators",
+            "volume": "35",
+            "author": "Cocuzza",
+            "year": "2012",
+            "journal-title": "J. Guid. Control Dyn."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b28",
+            "doi-asserted-by": "crossref",
+            "first-page": "41023",
+            "DOI": "10.1109/ACCESS.2022.3167403",
+            "article-title": "A novel QP-based kinematic redundancy resolution method with joint constraints satisfaction",
+            "volume": "10",
+            "author": "Woli\u0144ski",
+            "year": "2022",
+            "journal-title": "IEEE Access"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b29",
+            "series-title": "Trajectory Planning for Automatic Machines and Robots",
+            "first-page": "223",
+            "article-title": "Operations on trajectories",
+            "author": "Biagiotti",
+            "year": "2008"
+          },
+          {
+            "issue": "10",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b30",
+            "doi-asserted-by": "crossref",
+            "first-page": "3921",
+            "DOI": "10.1109/TIE.2009.2018431",
+            "article-title": "Nonlinear variable structure filter for the online trajectory scaling",
+            "volume": "56",
+            "author": "Gerelli",
+            "year": "2009",
+            "journal-title": "IEEE Trans. Ind. Electron."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b31",
+            "doi-asserted-by": "crossref",
+            "unstructured": "C. Guarino Lo Bianco, F.M. Wahl, A novel second order filter for the real-time trajectory scaling, in: 2011 IEEE International Conference on Robotics and Automation, (ISSN: 1050-4729) 2011, pp. 5813\u20135818.",
+            "DOI": "10.1109/ICRA.2011.5979764"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b32",
+            "series-title": "Springer Handbook of Robotics",
+            "doi-asserted-by": "crossref",
+            "first-page": "221",
+            "DOI": "10.1007/978-3-319-32552-1_10",
+            "article-title": "Redundant robots",
+            "author": "Chiaverini",
+            "year": "2016"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b33",
+            "series-title": "Robotics: Modelling, Planning and Control",
+            "first-page": "105",
+            "article-title": "Differential kinematics and statics",
+            "author": "Siciliano",
+            "year": "2009"
+          },
+          {
+            "issue": "12",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b34",
+            "doi-asserted-by": "crossref",
+            "first-page": "868",
+            "DOI": "10.1109/TSMC.1977.4309644",
+            "article-title": "Automatic supervisory control of the configuration and behavior of multibody mechanisms",
+            "volume": "7",
+            "author": "Li\u00e9geois",
+            "year": "1977",
+            "journal-title": "IEEE Trans. Syst. Man Cybern."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b35",
+            "doi-asserted-by": "crossref",
+            "unstructured": "H. Zghal, R.V. Dubey, J.A. Euler, Efficient gradient projection optimization for manipulators with multiple degrees of redundancy, in: Proceedings., IEEE International Conference on Robotics and Automation, Vol. 2, 1990, pp. 1006\u20131011.",
+            "DOI": "10.1109/ROBOT.1990.126123"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b36",
+            "doi-asserted-by": "crossref",
+            "unstructured": "J.M. Hollerbach, Dynamic Scaling of Manipulator Trajectories, in: 1983 American Control Conference, 1983, pp. 752\u2013756.",
+            "DOI": "10.23919/ACC.1983.4788214"
+          },
+          {
+            "issue": "5",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b37",
+            "doi-asserted-by": "crossref",
+            "first-page": "2459",
+            "DOI": "10.1109/TMECH.2018.2862144",
+            "article-title": "An improved online trajectory planner with stability-guaranteed critical test curve algorithm for generalized parametric constraints",
+            "volume": "23",
+            "author": "Yuan",
+            "year": "2018",
+            "journal-title": "IEEE/ASME Trans. Mechatronics"
+          },
+          {
+            "issue": "5",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b38",
+            "doi-asserted-by": "crossref",
+            "first-page": "2753",
+            "DOI": "10.1109/TII.2018.2869823",
+            "article-title": "A general online trajectory planning framework in the case of desired function unknown in advance",
+            "volume": "15",
+            "author": "Yuan",
+            "year": "2019",
+            "journal-title": "IEEE Trans. Ind. Inform."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b39",
+            "doi-asserted-by": "crossref",
+            "unstructured": "C. Guarino Lo Bianco, F. Ghilardelli, Techniques to preserve the stability of a trajectory scaling algorithm, in: 2013 IEEE International Conference on Robotics and Automation, (ISSN: 1050-4729) 2013, pp. 870\u2013876.",
+            "DOI": "10.1109/ICRA.2013.6630675"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b40",
+            "doi-asserted-by": "crossref",
+            "first-page": "162",
+            "DOI": "10.1109/TRA.2002.807543",
+            "article-title": "A new on-line algorithm for inverse kinematics of robot manipulators ensuring path tracking capability under joint limits",
+            "volume": "19",
+            "author": "Antonelli",
+            "year": "2003",
+            "journal-title": "IEEE Trans. Robot. Autom."
+          },
+          {
+            "issue": "27",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b41",
+            "doi-asserted-by": "crossref",
+            "first-page": "183",
+            "DOI": "10.1016/S1474-6670(17)37926-0",
+            "article-title": "Kinematic control of redundant manipulators with on-line end-effector path tracking capability under velocity and acceleration constraints",
+            "volume": "33",
+            "author": "Antonelli",
+            "year": "2000",
+            "journal-title": "IFAC Proc. Vol."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b42",
+            "doi-asserted-by": "crossref",
+            "unstructured": "F. Flacco, A. De Luca, Optimal redundancy resolution with task scaling under hard bounds in the robot joint space, in: 2013 IEEE International Conference on Robotics and Automation, (ISSN: 1050-4729) 2013, pp. 3969\u20133975.",
+            "DOI": "10.1109/ICRA.2013.6631136"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b43",
+            "doi-asserted-by": "crossref",
+            "first-page": "637",
+            "DOI": "10.1109/TRO.2015.2418582",
+            "article-title": "Control of redundant robots under hard joint constraints: Saturation in the null space",
+            "volume": "31",
+            "author": "Flacco",
+            "year": "2015",
+            "journal-title": "IEEE Trans. Robot."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b44",
+            "series-title": "Multiobjective Optimization",
+            "author": "Branke",
+            "year": "2008"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b45",
+            "doi-asserted-by": "crossref",
+            "first-page": "281",
+            "DOI": "10.1109/LRA.2017.2738321",
+            "article-title": "Joint position and velocity bounds in discrete-time acceleration/torque control of robot manipulators",
+            "volume": "3",
+            "author": "Prete",
+            "year": "2018",
+            "journal-title": "IEEE Robot. Autom. Lett."
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b46",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.3390/robotics7030041",
+            "article-title": "Viability and feasibility of constrained kinematic control of manipulators",
+            "volume": "7",
+            "author": "Faroni",
+            "year": "2018",
+            "journal-title": "Robotics"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b47",
+            "unstructured": "R. Bischoff, J. Kurth, G. Schreiber, R. Koeppe, A. Albu-Schaeffer, A. Beyer, O. Eiberger, S. Haddadin, A. Stemmer, G. Grunwald, G. Hirzinger, The KUKA-DLR Lightweight Robot arm \u2013 a new reference platform for robotics research and manufacturing, in: ISR 2010 (41st International Symposium on Robotics) and ROBOTIK 2010 (6th German Conference on Robotics), 2010, pp. 1\u20138."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b48",
+            "series-title": "Lightweight robot 4+ specification, version: Spez LBR 4+ V2en",
+            "author": "KUKA",
+            "year": "2010"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b49",
+            "doi-asserted-by": "crossref",
+            "unstructured": "\u0141. Woli\u0144ski, M. Wojtyra, Comparison of Dynamic Properties of Two LWR 4+ Robots, in: ROMANSY 21 - Robot Design, Dynamics and Control. Proceedings of the 21st CISM-IFToMM Symposium, Vol. 569, 2016, pp. 413\u2013420.",
+            "DOI": "10.1007/978-3-319-33714-2_46"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b50",
+            "series-title": "KUKA light-weight robot. Robot documentation package",
+            "author": "KUKA Roboter GmBH",
+            "year": "2008"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b51",
+            "series-title": "Lightweight robot 4+ operating instructions, version: BA LBR 4+ V2 en",
+            "author": "KUKA",
+            "year": "2010"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b52",
+            "series-title": "Springer Handbook of Robotics",
+            "doi-asserted-by": "crossref",
+            "first-page": "11",
+            "DOI": "10.1007/978-3-319-32552-1_2",
+            "article-title": "Kinematics",
+            "author": "Waldron",
+            "year": "2016"
+          },
+          {
+            "issue": "8",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b53",
+            "doi-asserted-by": "crossref",
+            "first-page": "816",
+            "DOI": "10.1002/rnc.1251",
+            "article-title": "An online active set strategy to overcome the limitations of explicit MPC",
+            "volume": "18",
+            "author": "Ferreau",
+            "year": "2008",
+            "journal-title": "Internat. J. Robust Nonlinear Control"
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b54",
+            "doi-asserted-by": "crossref",
+            "first-page": "327",
+            "DOI": "10.1007/s12532-014-0071-1",
+            "article-title": "qpOASES: a parametric active-set algorithm for quadratic programming",
+            "volume": "6",
+            "author": "Ferreau",
+            "year": "2014",
+            "journal-title": "Math. Program. Comput."
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b55",
+            "series-title": "ROMANSY 23 - Robot Design, Dynamics and Control",
+            "first-page": "423",
+            "article-title": "Proposition of on-line velocity scaling algorithm for task space trajectories",
+            "author": "Wojtyra",
+            "year": "2021"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b56",
+            "series-title": "ROMANSY 24 - Robot Design, Dynamics and Control",
+            "first-page": "171",
+            "article-title": "On-line velocity scaling algorithm for task space trajectories",
+            "author": "Wojtyra",
+            "year": "2022"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b57",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2020.104152",
+            "article-title": "A real-time trajectory planning method for enhanced path-tracking performance of serial manipulators",
+            "volume": "156",
+            "author": "Faroni",
+            "year": "2021",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "issue": "6",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b58",
+            "doi-asserted-by": "crossref",
+            "first-page": "599",
+            "DOI": "10.1017/S0263574700018683",
+            "article-title": "On avoiding singularities in redundant robot kinematics",
+            "volume": "13",
+            "author": "Tcho\u0144",
+            "year": "1995",
+            "journal-title": "Robotica"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b59",
+            "doi-asserted-by": "crossref",
+            "unstructured": "I. Dul\u0119ba, J.Z. S\u0105siadek, Redundant manipulators motion through singularities based on modified Jacobian method, in: Proceedings of the Third International Workshop on Robot Motion and Control, 2002. RoMoCo \u201902., 2002, pp. 331\u2013336.",
+            "DOI": "10.1109/ROMOCO.2002.1177128"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.mechmachtheory.2023.105493_b60",
+            "doi-asserted-by": "crossref",
+            "first-page": "6869",
+            "DOI": "10.1016/j.ifacol.2017.08.1209",
+            "article-title": "A comparison of damped least squares algorithms for inverse kinematics of robot manipulators",
+            "volume": "50",
+            "author": "Di Vito",
+            "year": "2017",
+            "journal-title": "IFAC-PapersOnLine"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b61",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.mechmachtheory.2022.105224",
+            "article-title": "Encountering singularities of a serial robot along continuous paths at high precision",
+            "volume": "181",
+            "author": "Milenkovic",
+            "year": "2023",
+            "journal-title": "Mech. Mach. Theory"
+          },
+          {
+            "key": "10.1016/j.mechmachtheory.2023.105493_b62",
+            "series-title": "Trajectory Planning for Automatic Machines and Robots",
+            "first-page": "79",
+            "article-title": "Trajectory with double s velocity profile",
+            "author": "Biagiotti",
+            "year": "2008"
+          }
+        ],
+        "container-title": [
+          "Mechanism and Machine Theory"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0094114X23002641?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0094114X23002641?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              25
+            ]
+          ],
+          "date-time": "2025-09-25T14:17:31Z",
+          "timestamp": 1758809851000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0094114X23002641"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              1
+            ]
+          ]
+        },
+        "references-count": 62,
+        "alternative-id": [
+          "S0094114X23002641"
+        ],
+        "URL": "https://doi.org/10.1016/j.mechmachtheory.2023.105493",
+        "relation": {},
+        "ISSN": [
+          "0094-114X"
+        ],
+        "issn-type": [
+          {
+            "value": "0094-114X",
+            "type": "print"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              1
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "Elsevier",
+            "name": "publisher",
+            "label": "This article is maintained by"
+          },
+          {
+            "value": "An inverse kinematics solution with trajectory scaling for redundant manipulators",
+            "name": "articletitle",
+            "label": "Article Title"
+          },
+          {
+            "value": "Mechanism and Machine Theory",
+            "name": "journaltitle",
+            "label": "Journal Title"
+          },
+          {
+            "value": "https://doi.org/10.1016/j.mechmachtheory.2023.105493",
+            "name": "articlelink",
+            "label": "CrossRef DOI link to publisher maintained version"
+          },
+          {
+            "value": "article",
+            "name": "content_type",
+            "label": "Content Type"
+          },
+          {
+            "value": "\u00a9 2023 The Author(s). Published by Elsevier Ltd.",
+            "name": "copyright",
+            "label": "Copyright"
+          }
+        ],
+        "article-number": "105493"
+      }
+    }
+  }
+}

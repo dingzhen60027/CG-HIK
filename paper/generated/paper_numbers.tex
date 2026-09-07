@@ -1,217 +1,1135 @@
-% Generated from frozen evidence; do not edit by hand.
-\newcommand{\DevelopmentQueryCount}{40000}
-\newcommand{\DevelopmentQueriesPerRobot}{20000}
-\newcommand{\DevelopmentTimingRepeats}{5}
-\newcommand{\PointFeasibleQueriesPerRobot}{14000}
-\newcommand{\PointIDFeasibleQueriesPerRobot}{10000}
-\newcommand{\PointOODFeasibleQueriesPerRobot}{4000}
-\newcommand{\PointInfeasibleQueriesPerRobot}{2000}
-\newcommand{\PointTimingRepeats}{3}
-\newcommand{\FreshTrajectoriesPerRobot}{80}
-\newcommand{\FreshTrajectoriesPerFamily}{20}
-\newcommand{\FreshTrajectoryFrames}{150}
-\newcommand{\ControlIntervalMilliseconds}{20}
-\newcommand{\SeedEnsembleMembers}{5}
-\newcommand{\SeedModelHiddenLayers}{3}
-\newcommand{\SeedModelHiddenWidth}{256}
-\newcommand{\EasyIterations}{1}
-\newcommand{\MediumIterations}{1}
-\newcommand{\HardIterations}{25}
-\newcommand{\HardLearnedCandidates}{1}
-\newcommand{\FallbackSeeds}{2}
-\newcommand{\FallbackMaximumFEV}{100}
-\newcommand{\PositionTolerance}{0.001}
-\newcommand{\OrientationTolerance}{0.0087}
-\newcommand{\JointLimitTolerance}{0.000000001}
-\newcommand{\VelocityTolerance}{0.0001}
-\newcommand{\RoutingFeatureCount}{9}
-\newcommand{\RoutingHiddenLayers}{2}
-\newcommand{\RoutingHiddenWidth}{32}
-\newcommand{\RoutingHiddenSizes}{32x32}
-\newcommand{\RoutingEpochs}{120}
-\newcommand{\RoutingDeadlineMilliseconds}{20}
-\newcommand{\RoutingSuccessThreshold}{0.95}
-\newcommand{\RoutingRejectThreshold}{0.70}
-\newcommand{\RoutingTieMarginMilliseconds}{0.15}
-\newcommand{\PointPrimaryTrainingSeed}{17}
-\newcommand{\PointSensitivityTrainingSeeds}{29 and 43}
-\newcommand{\TrajectoryCumulativeGateMaximum}{0.85}
-\newcommand{\TrajectoryFEVGateMaximum}{0.85}
-\newcommand{\TrajectoryPNinetyFiveGateMaximum}{1.00}
-\newcommand{\TrajectoryPNinetyNineGateMaximum}{1.05}
-\newcommand{\PandaDevVerifiedQueries}{17507}
-\newcommand{\PandaDevOracleEasy}{26.69\%}
-\newcommand{\PandaDevOracleMedium}{27.77\%}
-\newcommand{\PandaDevOracleHard}{45.54\%}
-\newcommand{\PandaDevEasyOracleGap}{0.391}
-\newcommand{\PandaDevEasyOracleGapMean}{0.391}
-\newcommand{\PandaDevBestFixedOracleGap}{0.137}
-\newcommand{\PandaDevHardOracleGapMean}{0.137}
-\newcommand{\PandaDevOracleAgreement}{47.42\%}
-\newcommand{\PandaDevRoutingRegretMean}{0.135}
-\newcommand{\PandaDevRoutingRegretMedian}{0.016}
-\newcommand{\PandaDevRoutingRegretPNinetyFive}{0.467}
-\newcommand{\PandaPointFixedSuccess}{99.03\%}
-\newcommand{\PandaPointFixedFEV}{8.43}
-\newcommand{\PandaPointFixedMedian}{1.675}
-\newcommand{\PandaPointFixedPNinetyFive}{3.436}
-\newcommand{\PandaPointFixedPNinetyNine}{98.447}
-\newcommand{\PandaPointFixedFallback}{1.91\%}
-\newcommand{\PandaPointCGSuccess}{99.03\%}
-\newcommand{\PandaPointCGFEV}{7.07}
-\newcommand{\PandaPointCGMedian}{1.950}
-\newcommand{\PandaPointCGPNinetyFive}{2.590}
-\newcommand{\PandaPointCGPNinetyNine}{97.768}
-\newcommand{\PandaPointCGFallback}{1.91\%}
-\newcommand{\PandaPointFEVReduction}{16.14\%}
-\newcommand{\PandaPointMedianChange}{16.47\%}
-\newcommand{\PandaPointPNinetyFiveReduction}{24.62\%}
-\newcommand{\PandaPointPNinetyNineReduction}{0.69\%}
-\newcommand{\PandaPointPNinetyFiveRatio}{0.7538}
-\newcommand{\PandaPointPNinetyNineRatio}{0.9931}
-\newcommand{\PandaRejectRecall}{95.65\%}
-\newcommand{\PandaRejectFEVAvoided}{95.69\%}
-\newcommand{\PandaOODAUROC}{0.430}
-\newcommand{\PandaOODAUPRC}{0.210}
-\newcommand{\PandaDeferRecovery}{0.00\%}
-\newcommand{\PandaTrajectoryHardCompletionCount}{40}
-\newcommand{\PandaTrajectoryHardCompletionRate}{50.00\%}
-\newcommand{\PandaTrajectoryHardCumulativeLatency}{472.04}
-\newcommand{\PandaTrajectoryHardCumLatency}{472.04}
-\newcommand{\PandaTrajectoryHardFEV}{60.85}
-\newcommand{\PandaTrajectoryHardMedian}{1.651}
-\newcommand{\PandaTrajectoryHardPNinetyFive}{229.142}
-\newcommand{\PandaTrajectoryHardPNinetyNine}{353.570}
-\newcommand{\PandaTrajectoryCGCompletionCount}{41}
-\newcommand{\PandaTrajectoryCGCompletionRate}{51.25\%}
-\newcommand{\PandaTrajectoryCGCumulativeLatency}{267.31}
-\newcommand{\PandaTrajectoryCGCumLatency}{267.31}
-\newcommand{\PandaTrajectoryCGFEV}{33.37}
-\newcommand{\PandaTrajectoryCGMedian}{1.844}
-\newcommand{\PandaTrajectoryCGPNinetyFive}{201.564}
-\newcommand{\PandaTrajectoryCGPNinetyNine}{353.672}
-\newcommand{\PandaTrajectoryCumulativeRatio}{0.566}
-\newcommand{\PandaTrajectoryCumulativeReduction}{43.37\%}
-\newcommand{\PandaTrajectoryCumReduction}{43.37\%}
-\newcommand{\PandaTrajectoryFEVRatio}{0.548}
-\newcommand{\PandaTrajectoryFEVReduction}{45.16\%}
-\newcommand{\PandaTrajectoryMedianRatio}{1.117}
-\newcommand{\PandaTrajectoryMedianIncrease}{11.66\%}
-\newcommand{\PandaTrajectoryMedianChange}{11.66\%}
-\newcommand{\PandaTrajectoryPNinetyFiveRatio}{0.880}
-\newcommand{\PandaTrajectoryPNinetyNineRatio}{1.000}
-\newcommand{\PandaTrajectoryPNinetyFiveReduction}{12.04\%}
-\newcommand{\PandaTrajectoryPNinetyNineReduction}{-0.03\%}
-\newcommand{\PandaTrajectoryContractViolations}{0}
-\newcommand{\PandaSmoothHardCompletion}{16}
-\newcommand{\PandaSmoothCGCompletion}{16}
-\newcommand{\PandaSmoothCumulativeChange}{-29.62\%}
-\newcommand{\PandaSmoothFEVChange}{-35.54\%}
-\newcommand{\PandaSmoothCumReduction}{29.62\%}
-\newcommand{\PandaSmoothFEVReduction}{35.54\%}
-\newcommand{\PandaNearSingularHardCompletion}{11}
-\newcommand{\PandaNearSingularCGCompletion}{12}
-\newcommand{\PandaNearSingularCumulativeChange}{-59.26\%}
-\newcommand{\PandaNearSingularFEVChange}{-65.52\%}
-\newcommand{\PandaNearSingularCumReduction}{59.26\%}
-\newcommand{\PandaNearSingularFEVReduction}{65.52\%}
-\newcommand{\PandaJointLimitHardCompletion}{12}
-\newcommand{\PandaJointLimitCGCompletion}{12}
-\newcommand{\PandaJointLimitCumulativeChange}{0.68\%}
-\newcommand{\PandaJointLimitFEVChange}{0.58\%}
-\newcommand{\PandaJointLimitCumReduction}{-0.68\%}
-\newcommand{\PandaJointLimitFEVReduction}{-0.58\%}
-\newcommand{\PandaHighCurvatureHardCompletion}{1}
-\newcommand{\PandaHighCurvatureCGCompletion}{1}
-\newcommand{\PandaHighCurvatureCumulativeChange}{-44.09\%}
-\newcommand{\PandaHighCurvatureFEVChange}{-45.41\%}
-\newcommand{\PandaHighCurvatureCumReduction}{44.09\%}
-\newcommand{\PandaHighCurvatureFEVReduction}{45.41\%}
-\newcommand{\URDevVerifiedQueries}{17584}
-\newcommand{\URDevOracleEasy}{23.41\%}
-\newcommand{\URDevOracleMedium}{25.36\%}
-\newcommand{\URDevOracleHard}{51.22\%}
-\newcommand{\URDevEasyOracleGap}{0.478}
-\newcommand{\URDevEasyOracleGapMean}{0.478}
-\newcommand{\URDevBestFixedOracleGap}{0.154}
-\newcommand{\URDevHardOracleGapMean}{0.154}
-\newcommand{\URDevOracleAgreement}{53.88\%}
-\newcommand{\URDevRoutingRegretMean}{0.133}
-\newcommand{\URDevRoutingRegretMedian}{0.000}
-\newcommand{\URDevRoutingRegretPNinetyFive}{0.605}
-\newcommand{\URPointFixedSuccess}{100.00\%}
-\newcommand{\URPointFixedFEV}{5.67}
-\newcommand{\URPointFixedMedian}{1.544}
-\newcommand{\URPointFixedPNinetyFive}{3.158}
-\newcommand{\URPointFixedPNinetyNine}{5.982}
-\newcommand{\URPointFixedFallback}{1.14\%}
-\newcommand{\URPointCGSuccess}{100.00\%}
-\newcommand{\URPointCGFEV}{3.61}
-\newcommand{\URPointCGMedian}{1.799}
-\newcommand{\URPointCGPNinetyFive}{2.346}
-\newcommand{\URPointCGPNinetyNine}{5.269}
-\newcommand{\URPointCGFallback}{1.14\%}
-\newcommand{\URPointFEVReduction}{36.27\%}
-\newcommand{\URPointMedianChange}{16.45\%}
-\newcommand{\URPointPNinetyFiveReduction}{25.73\%}
-\newcommand{\URPointPNinetyNineReduction}{11.92\%}
-\newcommand{\URPointPNinetyFiveRatio}{0.7427}
-\newcommand{\URPointPNinetyNineRatio}{0.8808}
-\newcommand{\URRejectRecall}{93.95\%}
-\newcommand{\URRejectFEVAvoided}{93.92\%}
-\newcommand{\UROODAUROC}{0.504}
-\newcommand{\UROODAUPRC}{0.230}
-\newcommand{\URDeferRecovery}{0.00\%}
-\newcommand{\URTrajectoryHardCompletionCount}{34}
-\newcommand{\URTrajectoryHardCompletionRate}{42.50\%}
-\newcommand{\URTrajectoryHardCumulativeLatency}{138.23}
-\newcommand{\URTrajectoryHardCumLatency}{138.23}
-\newcommand{\URTrajectoryHardFEV}{35.23}
-\newcommand{\URTrajectoryHardMedian}{1.558}
-\newcommand{\URTrajectoryHardPNinetyFive}{38.104}
-\newcommand{\URTrajectoryHardPNinetyNine}{50.821}
-\newcommand{\URTrajectoryCGCompletionCount}{34}
-\newcommand{\URTrajectoryCGCompletionRate}{42.50\%}
-\newcommand{\URTrajectoryCGCumulativeLatency}{62.27}
-\newcommand{\URTrajectoryCGCumLatency}{62.27}
-\newcommand{\URTrajectoryCGFEV}{12.29}
-\newcommand{\URTrajectoryCGMedian}{1.731}
-\newcommand{\URTrajectoryCGPNinetyFive}{29.745}
-\newcommand{\URTrajectoryCGPNinetyNine}{39.085}
-\newcommand{\URTrajectoryCumulativeRatio}{0.450}
-\newcommand{\URTrajectoryCumulativeReduction}{54.95\%}
-\newcommand{\URTrajectoryCumReduction}{54.95\%}
-\newcommand{\URTrajectoryFEVRatio}{0.349}
-\newcommand{\URTrajectoryFEVReduction}{65.12\%}
-\newcommand{\URTrajectoryMedianRatio}{1.111}
-\newcommand{\URTrajectoryMedianIncrease}{11.09\%}
-\newcommand{\URTrajectoryMedianChange}{11.09\%}
-\newcommand{\URTrajectoryPNinetyFiveRatio}{0.781}
-\newcommand{\URTrajectoryPNinetyNineRatio}{0.769}
-\newcommand{\URTrajectoryPNinetyFiveReduction}{21.94\%}
-\newcommand{\URTrajectoryPNinetyNineReduction}{23.09\%}
-\newcommand{\URTrajectoryContractViolations}{0}
-\newcommand{\URSmoothHardCompletion}{16}
-\newcommand{\URSmoothCGCompletion}{16}
-\newcommand{\URSmoothCumulativeChange}{-9.44\%}
-\newcommand{\URSmoothFEVChange}{-12.18\%}
-\newcommand{\URSmoothCumReduction}{9.44\%}
-\newcommand{\URSmoothFEVReduction}{12.18\%}
-\newcommand{\URNearSingularHardCompletion}{11}
-\newcommand{\URNearSingularCGCompletion}{11}
-\newcommand{\URNearSingularCumulativeChange}{-59.60\%}
-\newcommand{\URNearSingularFEVChange}{-73.27\%}
-\newcommand{\URNearSingularCumReduction}{59.60\%}
-\newcommand{\URNearSingularFEVReduction}{73.27\%}
-\newcommand{\URJointLimitHardCompletion}{0}
-\newcommand{\URJointLimitCGCompletion}{0}
-\newcommand{\URJointLimitCumulativeChange}{-79.26\%}
-\newcommand{\URJointLimitFEVChange}{-83.18\%}
-\newcommand{\URJointLimitCumReduction}{79.26\%}
-\newcommand{\URJointLimitFEVReduction}{83.18\%}
-\newcommand{\URHighCurvatureHardCompletion}{7}
-\newcommand{\URHighCurvatureCGCompletion}{7}
-\newcommand{\URHighCurvatureCumulativeChange}{-20.47\%}
-\newcommand{\URHighCurvatureFEVChange}{-22.00\%}
-\newcommand{\URHighCurvatureCumReduction}{20.47\%}
-\newcommand{\URHighCurvatureFEVReduction}{22.00\%}
+% Generated from frozen evidence; do not edit.
+\expandafter\def\csname ev@allocation.panda.full_geometry.fev_ratio\endcsname{1.001 [1.000, 1.001]}
+\expandafter\def\csname ev@allocation.panda.full_geometry.fev_reduction_pct\endcsname{-0.05}
+\expandafter\def\csname ev@allocation.panda.full_geometry.latency_ratio\endcsname{1.001 [1.000, 1.002]}
+\expandafter\def\csname ev@allocation.panda.full_geometry.p95_ratio\endcsname{1.002 [0.992, 1.039]}
+\expandafter\def\csname ev@allocation.panda.full_geometry.p99_ratio\endcsname{1.000 [0.999, 1.002]}
+\expandafter\def\csname ev@allocation.panda.full_geometry.time_increase_pct\endcsname{0.09}
+\expandafter\def\csname ev@allocation.panda.full_hard.fev_ratio\endcsname{1.001 [1.001, 1.002]}
+\expandafter\def\csname ev@allocation.panda.full_hard.fev_reduction_pct\endcsname{-0.12}
+\expandafter\def\csname ev@allocation.panda.full_hard.latency_ratio\endcsname{1.033 [1.029, 1.038]}
+\expandafter\def\csname ev@allocation.panda.full_hard.p95_ratio\endcsname{1.007 [1.002, 1.061]}
+\expandafter\def\csname ev@allocation.panda.full_hard.p99_ratio\endcsname{1.001 [1.000, 1.004]}
+\expandafter\def\csname ev@allocation.panda.full_hard.time_increase_pct\endcsname{3.33}
+\expandafter\def\csname ev@allocation.panda.joint_failure_share\endcsname{99.07}
+\expandafter\def\csname ev@allocation.panda.p95_p50.fev_ratio\endcsname{0.994 [0.992, 0.996]}
+\expandafter\def\csname ev@allocation.panda.p95_p50.fev_reduction_pct\endcsname{0.58}
+\expandafter\def\csname ev@allocation.panda.p95_p50.latency_ratio\endcsname{0.998 [0.997, 1.000]}
+\expandafter\def\csname ev@allocation.panda.p95_p50.p95_ratio\endcsname{0.997 [0.976, 1.010]}
+\expandafter\def\csname ev@allocation.panda.p95_p50.p99_ratio\endcsname{1.000 [0.998, 1.002]}
+\expandafter\def\csname ev@allocation.panda.p95_p50.time_increase_pct\endcsname{-0.15}
+\expandafter\def\csname ev@allocation.panda.routing_hard.fev_ratio\endcsname{1.001 [1.001, 1.002]}
+\expandafter\def\csname ev@allocation.panda.routing_hard.fev_reduction_pct\endcsname{-0.12}
+\expandafter\def\csname ev@allocation.panda.routing_hard.latency_ratio\endcsname{1.033 [1.030, 1.038]}
+\expandafter\def\csname ev@allocation.panda.routing_hard.time_increase_pct\endcsname{3.34}
+\expandafter\def\csname ev@allocation.ur5e.full_geometry.fev_ratio\endcsname{0.999 [0.996, 1.000]}
+\expandafter\def\csname ev@allocation.ur5e.full_geometry.fev_reduction_pct\endcsname{0.14}
+\expandafter\def\csname ev@allocation.ur5e.full_geometry.latency_ratio\endcsname{1.002 [0.998, 1.005]}
+\expandafter\def\csname ev@allocation.ur5e.full_geometry.p95_ratio\endcsname{0.997 [0.973, 1.017]}
+\expandafter\def\csname ev@allocation.ur5e.full_geometry.p99_ratio\endcsname{0.898 [0.775, 1.034]}
+\expandafter\def\csname ev@allocation.ur5e.full_geometry.time_increase_pct\endcsname{0.17}
+\expandafter\def\csname ev@allocation.ur5e.full_hard.fev_ratio\endcsname{1.000 [1.000, 1.001]}
+\expandafter\def\csname ev@allocation.ur5e.full_hard.fev_reduction_pct\endcsname{-0.05}
+\expandafter\def\csname ev@allocation.ur5e.full_hard.latency_ratio\endcsname{1.293 [1.286, 1.300]}
+\expandafter\def\csname ev@allocation.ur5e.full_hard.p95_ratio\endcsname{1.227 [1.188, 1.261]}
+\expandafter\def\csname ev@allocation.ur5e.full_hard.p99_ratio\endcsname{1.096 [1.006, 1.162]}
+\expandafter\def\csname ev@allocation.ur5e.full_hard.time_increase_pct\endcsname{29.32}
+\expandafter\def\csname ev@allocation.ur5e.joint_failure_share\endcsname{101.31}
+\expandafter\def\csname ev@allocation.ur5e.p95_p50.fev_ratio\endcsname{0.981 [0.974, 0.989]}
+\expandafter\def\csname ev@allocation.ur5e.p95_p50.fev_reduction_pct\endcsname{1.86}
+\expandafter\def\csname ev@allocation.ur5e.p95_p50.latency_ratio\endcsname{0.998 [0.994, 1.002]}
+\expandafter\def\csname ev@allocation.ur5e.p95_p50.p95_ratio\endcsname{0.989 [0.962, 1.010]}
+\expandafter\def\csname ev@allocation.ur5e.p95_p50.p99_ratio\endcsname{0.937 [0.864, 1.053]}
+\expandafter\def\csname ev@allocation.ur5e.p95_p50.time_increase_pct\endcsname{-0.17}
+\expandafter\def\csname ev@allocation.ur5e.routing_hard.fev_ratio\endcsname{1.000 [1.000, 1.001]}
+\expandafter\def\csname ev@allocation.ur5e.routing_hard.fev_reduction_pct\endcsname{-0.05}
+\expandafter\def\csname ev@allocation.ur5e.routing_hard.latency_ratio\endcsname{1.294 [1.286, 1.300]}
+\expandafter\def\csname ev@allocation.ur5e.routing_hard.time_increase_pct\endcsname{29.35}
+\expandafter\def\csname ev@contract.dt_ms\endcsname{20}
+\expandafter\def\csname ev@contract.ep_mm\endcsname{1}
+\expandafter\def\csname ev@contract.er_deg\endcsname{0.5}
+\expandafter\def\csname ev@contract.ev\endcsname{0.0001}
+\expandafter\def\csname ev@dls.panda.admissible_queries\endcsname{2487}
+\expandafter\def\csname ev@dls.panda.median_excess_evaluations\endcsname{2}
+\expandafter\def\csname ev@dls.panda.median_excess_iterations\endcsname{1}
+\expandafter\def\csname ev@dls.panda.mismatch_pct\endcsname{21.92}
+\expandafter\def\csname ev@dls.panda.p95_excess_evaluations\endcsname{49}
+\expandafter\def\csname ev@dls.panda.p95_excess_iterations\endcsname{24}
+\expandafter\def\csname ev@dls.panda.positive_excess_queries\endcsname{2397}
+\expandafter\def\csname ev@dls.ur5e.admissible_queries\endcsname{2499}
+\expandafter\def\csname ev@dls.ur5e.median_excess_evaluations\endcsname{2}
+\expandafter\def\csname ev@dls.ur5e.median_excess_iterations\endcsname{1}
+\expandafter\def\csname ev@dls.ur5e.mismatch_pct\endcsname{21.24}
+\expandafter\def\csname ev@dls.ur5e.p95_excess_evaluations\endcsname{49}
+\expandafter\def\csname ev@dls.ur5e.p95_excess_iterations\endcsname{24}
+\expandafter\def\csname ev@dls.ur5e.positive_excess_queries\endcsname{2346}
+\expandafter\def\csname ev@family.panda.high_curvature.gained\endcsname{0}
+\expandafter\def\csname ev@family.panda.joint_limit_return.gained\endcsname{0}
+\expandafter\def\csname ev@family.panda.near_singular.gained\endcsname{3}
+\expandafter\def\csname ev@family.panda.smooth.gained\endcsname{0}
+\expandafter\def\csname ev@family.ur5e.high_curvature.gained\endcsname{1}
+\expandafter\def\csname ev@family.ur5e.joint_limit_return.gained\endcsname{0}
+\expandafter\def\csname ev@family.ur5e.near_singular.gained\endcsname{0}
+\expandafter\def\csname ev@family.ur5e.smooth.gained\endcsname{1}
+\expandafter\def\csname ev@point.panda.dls_strict.accepted_within_20ms\endcsname{99.48}
+\expandafter\def\csname ev@point.panda.dls_strict.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.panda.dls_strict.contrast.lost\endcsname{13}
+\expandafter\def\csname ev@point.panda.dls_strict.contrast.saving_pct\endcsname{-1175.58}
+\expandafter\def\csname ev@point.panda.dls_strict.contrast.success_pp\endcsname{-0.520 [-0.840, -0.280]}
+\expandafter\def\csname ev@point.panda.dls_strict.contrast.time_ratio\endcsname{12.756 [12.313, 13.187]}
+\expandafter\def\csname ev@point.panda.dls_strict.internal_failure__task_accept\endcsname{548}
+\expandafter\def\csname ev@point.panda.dls_strict.internal_failure__task_reject\endcsname{13}
+\expandafter\def\csname ev@point.panda.dls_strict.internal_success\endcsname{77.56}
+\expandafter\def\csname ev@point.panda.dls_strict.internal_success__task_accept\endcsname{1939}
+\expandafter\def\csname ev@point.panda.dls_strict.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.dls_strict.mean\endcsname{3.015}
+\expandafter\def\csname ev@point.panda.dls_strict.miss_uid\endcsname{13}
+\expandafter\def\csname ev@point.panda.dls_strict.orientation_max\endcsname{0.2378}
+\expandafter\def\csname ev@point.panda.dls_strict.orientation_p50\endcsname{0.0001}
+\expandafter\def\csname ev@point.panda.dls_strict.orientation_p95\endcsname{0.0036}
+\expandafter\def\csname ev@point.panda.dls_strict.orientation_p99\endcsname{0.0474}
+\expandafter\def\csname ev@point.panda.dls_strict.p50\endcsname{1.038}
+\expandafter\def\csname ev@point.panda.dls_strict.p95\endcsname{8.944}
+\expandafter\def\csname ev@point.panda.dls_strict.p99\endcsname{9.230}
+\expandafter\def\csname ev@point.panda.dls_strict.position_max\endcsname{0.8801}
+\expandafter\def\csname ev@point.panda.dls_strict.position_p50\endcsname{0.0007}
+\expandafter\def\csname ev@point.panda.dls_strict.position_p95\endcsname{0.0572}
+\expandafter\def\csname ev@point.panda.dls_strict.position_p99\endcsname{0.2693}
+\expandafter\def\csname ev@point.panda.dls_strict.verified_success\endcsname{99.48}
+\expandafter\def\csname ev@point.panda.dls_task.accepted_within_20ms\endcsname{99.48}
+\expandafter\def\csname ev@point.panda.dls_task.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.panda.dls_task.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.panda.dls_task.contrast.saving_pct\endcsname{74.72}
+\expandafter\def\csname ev@point.panda.dls_task.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.panda.dls_task.contrast.time_ratio\endcsname{0.253 [0.243, 0.264]}
+\expandafter\def\csname ev@point.panda.dls_task.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.panda.dls_task.internal_failure__task_reject\endcsname{13}
+\expandafter\def\csname ev@point.panda.dls_task.internal_success\endcsname{99.48}
+\expandafter\def\csname ev@point.panda.dls_task.internal_success__task_accept\endcsname{2487}
+\expandafter\def\csname ev@point.panda.dls_task.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.dls_task.mean\endcsname{0.762}
+\expandafter\def\csname ev@point.panda.dls_task.miss_uid\endcsname{13}
+\expandafter\def\csname ev@point.panda.dls_task.orientation_max\endcsname{0.4988}
+\expandafter\def\csname ev@point.panda.dls_task.orientation_p50\endcsname{0.0154}
+\expandafter\def\csname ev@point.panda.dls_task.orientation_p95\endcsname{0.1447}
+\expandafter\def\csname ev@point.panda.dls_task.orientation_p99\endcsname{0.3157}
+\expandafter\def\csname ev@point.panda.dls_task.p50\endcsname{0.625}
+\expandafter\def\csname ev@point.panda.dls_task.p95\endcsname{1.042}
+\expandafter\def\csname ev@point.panda.dls_task.p99\endcsname{4.479}
+\expandafter\def\csname ev@point.panda.dls_task.position_max\endcsname{0.9958}
+\expandafter\def\csname ev@point.panda.dls_task.position_p50\endcsname{0.1126}
+\expandafter\def\csname ev@point.panda.dls_task.position_p95\endcsname{0.8004}
+\expandafter\def\csname ev@point.panda.dls_task.position_p99\endcsname{0.9639}
+\expandafter\def\csname ev@point.panda.dls_task.verified_success\endcsname{99.48}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.contrast.saving_pct\endcsname{-4.30}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.contrast.time_ratio\endcsname{1.043 [1.025, 1.064]}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.mean\endcsname{0.247}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.orientation_max\endcsname{0.3762}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.orientation_p95\endcsname{0.0031}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.orientation_p99\endcsname{0.2667}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.p50\endcsname{0.210}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.p95\endcsname{0.382}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.p99\endcsname{0.799}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.position_max\endcsname{0.0157}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.position_p50\endcsname{0.0003}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.position_p95\endcsname{0.0103}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.position_p99\endcsname{0.0129}
+\expandafter\def\csname ev@point.panda.trac_orientation_5ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.contrast.saving_pct\endcsname{-2.16}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.contrast.time_ratio\endcsname{1.022 [1.011, 1.032]}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.mean\endcsname{0.241}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.orientation_max\endcsname{0.0009}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.orientation_p95\endcsname{0.0005}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.orientation_p99\endcsname{0.0007}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.p50\endcsname{0.211}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.p95\endcsname{0.379}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.p99\endcsname{0.681}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.position_max\endcsname{0.9651}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.position_p95\endcsname{0.4487}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.position_p99\endcsname{0.7651}
+\expandafter\def\csname ev@point.panda.trac_position_5ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.contrast.saving_pct\endcsname{0.27}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.contrast.time_ratio\endcsname{0.997 [0.993, 1.002]}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.mean\endcsname{0.236}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.orientation_max\endcsname{0.0009}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.orientation_p95\endcsname{0.0005}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.orientation_p99\endcsname{0.0007}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.p50\endcsname{0.211}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.p95\endcsname{0.362}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.p99\endcsname{0.485}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.position_max\endcsname{0.0161}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.position_p95\endcsname{0.0073}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.position_p99\endcsname{0.0109}
+\expandafter\def\csname ev@point.panda.trac_strict_20ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.mean\endcsname{0.236}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.orientation_max\endcsname{0.0009}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.orientation_p95\endcsname{0.0005}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.orientation_p99\endcsname{0.0007}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.p50\endcsname{0.211}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.p95\endcsname{0.367}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.p99\endcsname{0.487}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.position_max\endcsname{0.0153}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.position_p95\endcsname{0.0073}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.position_p99\endcsname{0.0109}
+\expandafter\def\csname ev@point.panda.trac_strict_5ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.contrast.saving_pct\endcsname{6.46}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.contrast.time_ratio\endcsname{0.935 [0.928, 0.943]}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.mean\endcsname{0.220}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.orientation_max\endcsname{0.4432}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.orientation_p50\endcsname{0.0064}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.orientation_p95\endcsname{0.1397}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.orientation_p99\endcsname{0.2884}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.p50\endcsname{0.199}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.p95\endcsname{0.331}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.p99\endcsname{0.467}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.position_max\endcsname{0.9834}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.position_p50\endcsname{0.0675}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.position_p95\endcsname{0.5698}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.position_p99\endcsname{0.7403}
+\expandafter\def\csname ev@point.panda.trac_task_20ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.contrast.saving_pct\endcsname{6.41}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.contrast.time_ratio\endcsname{0.936 [0.928, 0.945]}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.mean\endcsname{0.221}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.orientation_max\endcsname{0.4432}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.orientation_p50\endcsname{0.0065}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.orientation_p95\endcsname{0.1397}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.orientation_p99\endcsname{0.2884}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.p50\endcsname{0.199}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.p95\endcsname{0.332}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.p99\endcsname{0.478}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.position_max\endcsname{0.8799}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.position_p50\endcsname{0.0678}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.position_p95\endcsname{0.5760}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.position_p99\endcsname{0.7445}
+\expandafter\def\csname ev@point.panda.trac_task_5ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.dls_strict.accepted_within_20ms\endcsname{99.92}
+\expandafter\def\csname ev@point.ur5e.dls_strict.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.dls_strict.contrast.lost\endcsname{1}
+\expandafter\def\csname ev@point.ur5e.dls_strict.contrast.saving_pct\endcsname{-1164.64}
+\expandafter\def\csname ev@point.ur5e.dls_strict.contrast.success_pp\endcsname{-0.040 [-0.120, 0.000]}
+\expandafter\def\csname ev@point.ur5e.dls_strict.contrast.time_ratio\endcsname{12.646 [12.173, 13.119]}
+\expandafter\def\csname ev@point.ur5e.dls_strict.internal_failure__task_accept\endcsname{531}
+\expandafter\def\csname ev@point.ur5e.dls_strict.internal_failure__task_reject\endcsname{1}
+\expandafter\def\csname ev@point.ur5e.dls_strict.internal_success\endcsname{78.72}
+\expandafter\def\csname ev@point.ur5e.dls_strict.internal_success__task_accept\endcsname{1968}
+\expandafter\def\csname ev@point.ur5e.dls_strict.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.dls_strict.mean\endcsname{2.757}
+\expandafter\def\csname ev@point.ur5e.dls_strict.miss_uid\endcsname{1}
+\expandafter\def\csname ev@point.ur5e.dls_strict.orientation_max\endcsname{0.0867}
+\expandafter\def\csname ev@point.ur5e.dls_strict.orientation_p50\endcsname{0.0001}
+\expandafter\def\csname ev@point.ur5e.dls_strict.orientation_p95\endcsname{0.0036}
+\expandafter\def\csname ev@point.ur5e.dls_strict.orientation_p99\endcsname{0.0141}
+\expandafter\def\csname ev@point.ur5e.dls_strict.p50\endcsname{1.185}
+\expandafter\def\csname ev@point.ur5e.dls_strict.p95\endcsname{8.113}
+\expandafter\def\csname ev@point.ur5e.dls_strict.p99\endcsname{8.427}
+\expandafter\def\csname ev@point.ur5e.dls_strict.position_max\endcsname{0.6873}
+\expandafter\def\csname ev@point.ur5e.dls_strict.position_p50\endcsname{0.0011}
+\expandafter\def\csname ev@point.ur5e.dls_strict.position_p95\endcsname{0.0595}
+\expandafter\def\csname ev@point.ur5e.dls_strict.position_p99\endcsname{0.1468}
+\expandafter\def\csname ev@point.ur5e.dls_strict.verified_success\endcsname{99.96}
+\expandafter\def\csname ev@point.ur5e.dls_task.accepted_within_20ms\endcsname{99.96}
+\expandafter\def\csname ev@point.ur5e.dls_task.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.dls_task.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.dls_task.contrast.saving_pct\endcsname{76.19}
+\expandafter\def\csname ev@point.ur5e.dls_task.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.ur5e.dls_task.contrast.time_ratio\endcsname{0.238 [0.230, 0.247]}
+\expandafter\def\csname ev@point.ur5e.dls_task.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.dls_task.internal_failure__task_reject\endcsname{1}
+\expandafter\def\csname ev@point.ur5e.dls_task.internal_success\endcsname{99.96}
+\expandafter\def\csname ev@point.ur5e.dls_task.internal_success__task_accept\endcsname{2499}
+\expandafter\def\csname ev@point.ur5e.dls_task.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.dls_task.mean\endcsname{0.656}
+\expandafter\def\csname ev@point.ur5e.dls_task.miss_uid\endcsname{1}
+\expandafter\def\csname ev@point.ur5e.dls_task.orientation_max\endcsname{0.4824}
+\expandafter\def\csname ev@point.ur5e.dls_task.orientation_p50\endcsname{0.0157}
+\expandafter\def\csname ev@point.ur5e.dls_task.orientation_p95\endcsname{0.1315}
+\expandafter\def\csname ev@point.ur5e.dls_task.orientation_p99\endcsname{0.2469}
+\expandafter\def\csname ev@point.ur5e.dls_task.p50\endcsname{0.578}
+\expandafter\def\csname ev@point.ur5e.dls_task.p95\endcsname{0.926}
+\expandafter\def\csname ev@point.ur5e.dls_task.p99\endcsname{1.458}
+\expandafter\def\csname ev@point.ur5e.dls_task.position_max\endcsname{0.9994}
+\expandafter\def\csname ev@point.ur5e.dls_task.position_p50\endcsname{0.1477}
+\expandafter\def\csname ev@point.ur5e.dls_task.position_p95\endcsname{0.7908}
+\expandafter\def\csname ev@point.ur5e.dls_task.position_p99\endcsname{0.9406}
+\expandafter\def\csname ev@point.ur5e.dls_task.verified_success\endcsname{99.96}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.accepted_within_20ms\endcsname{99.99}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.contrast.lost\endcsname{1}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.contrast.saving_pct\endcsname{-0.56}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.contrast.success_pp\endcsname{-0.013 [-0.040, 0.000]}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.contrast.time_ratio\endcsname{1.006 [0.993, 1.019]}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.internal_failure__task_reject\endcsname{1}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.internal_success\endcsname{99.99}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.internal_success__task_accept\endcsname{7499}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.mean\endcsname{0.219}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.miss_uid\endcsname{1}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.orientation_max\endcsname{0.4075}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.orientation_p95\endcsname{0.0018}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.orientation_p99\endcsname{0.1187}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.p50\endcsname{0.200}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.p95\endcsname{0.324}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.p99\endcsname{0.445}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.position_max\endcsname{0.0146}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.position_p50\endcsname{0.0002}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.position_p95\endcsname{0.0091}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.position_p99\endcsname{0.0121}
+\expandafter\def\csname ev@point.ur5e.trac_orientation_5ms.verified_success\endcsname{99.99}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.contrast.saving_pct\endcsname{1.06}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.contrast.time_ratio\endcsname{0.989 [0.979, 0.998]}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.mean\endcsname{0.216}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.orientation_max\endcsname{0.0008}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.orientation_p95\endcsname{0.0005}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.orientation_p99\endcsname{0.0006}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.p50\endcsname{0.199}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.p95\endcsname{0.317}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.p99\endcsname{0.414}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.position_max\endcsname{0.8589}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.position_p50\endcsname{0.0002}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.position_p95\endcsname{0.1120}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.position_p99\endcsname{0.5958}
+\expandafter\def\csname ev@point.ur5e.trac_position_5ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.contrast.saving_pct\endcsname{-1.77}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.contrast.time_ratio\endcsname{1.018 [0.997, 1.053]}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.mean\endcsname{0.222}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.orientation_max\endcsname{0.0007}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.orientation_p95\endcsname{0.0004}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.orientation_p99\endcsname{0.0006}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.p50\endcsname{0.200}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.p95\endcsname{0.320}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.p99\endcsname{0.424}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.position_max\endcsname{0.0146}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.position_p95\endcsname{0.0075}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.position_p99\endcsname{0.0114}
+\expandafter\def\csname ev@point.ur5e.trac_strict_20ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.mean\endcsname{0.218}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.orientation_max\endcsname{0.0007}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.orientation_p95\endcsname{0.0004}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.orientation_p99\endcsname{0.0006}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.p50\endcsname{0.201}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.p95\endcsname{0.318}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.p99\endcsname{0.409}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.position_max\endcsname{0.0146}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.position_p95\endcsname{0.0075}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.position_p99\endcsname{0.0114}
+\expandafter\def\csname ev@point.ur5e.trac_strict_5ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.contrast.saving_pct\endcsname{5.55}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.contrast.time_ratio\endcsname{0.944 [0.910, 0.967]}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.mean\endcsname{0.210}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.orientation_max\endcsname{0.4458}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.orientation_p50\endcsname{0.0049}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.orientation_p95\endcsname{0.0661}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.orientation_p99\endcsname{0.2468}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.p50\endcsname{0.192}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.p95\endcsname{0.313}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.p99\endcsname{0.410}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.position_max\endcsname{0.9737}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.position_p50\endcsname{0.0667}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.position_p95\endcsname{0.4992}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.position_p99\endcsname{0.6803}
+\expandafter\def\csname ev@point.ur5e.trac_task_20ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.contrast.saving_pct\endcsname{4.00}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.contrast.time_ratio\endcsname{0.960 [0.949, 0.970]}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.internal_success__task_accept\endcsname{7500}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.mean\endcsname{0.209}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.miss_uid\endcsname{0}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.orientation_max\endcsname{0.4628}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.orientation_p50\endcsname{0.0049}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.orientation_p95\endcsname{0.0694}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.orientation_p99\endcsname{0.2681}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.p50\endcsname{0.191}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.p95\endcsname{0.312}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.p99\endcsname{0.415}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.position_max\endcsname{0.9641}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.position_p50\endcsname{0.0671}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.position_p95\endcsname{0.5029}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.position_p99\endcsname{0.6803}
+\expandafter\def\csname ev@point.ur5e.trac_task_5ms.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sample.frames\endcsname{150}
+\expandafter\def\csname ev@sample.inexecutable\endcsname{500}
+\expandafter\def\csname ev@sample.point\endcsname{2500}
+\expandafter\def\csname ev@sample.sensitivity\endcsname{500}
+\expandafter\def\csname ev@sample.trajectory\endcsname{40}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.accepted_within_20ms\endcsname{99.60}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.internal_failure__task_reject\endcsname{2}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.internal_success\endcsname{99.60}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.internal_success__task_accept\endcsname{498}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.mean\endcsname{0.819}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.miss_uid\endcsname{2}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.orientation_max\endcsname{0.2445}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.orientation_p50\endcsname{0.0100}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.orientation_p95\endcsname{0.0951}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.orientation_p99\endcsname{0.1606}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.p50\endcsname{0.589}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.p95\endcsname{1.098}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.p99\endcsname{7.122}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.position_max\endcsname{0.4993}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.position_p50\endcsname{0.0802}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.position_p95\endcsname{0.4463}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.position_p99\endcsname{0.4900}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.0.5.verified_success\endcsname{99.60}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.internal_success__task_accept\endcsname{500}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.mean\endcsname{0.711}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.orientation_max\endcsname{0.3640}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.orientation_p50\endcsname{0.0129}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.orientation_p95\endcsname{0.1326}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.orientation_p99\endcsname{0.2601}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.p50\endcsname{0.589}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.p95\endcsname{0.941}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.p99\endcsname{4.167}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.position_max\endcsname{0.9958}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.position_p50\endcsname{0.0936}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.position_p95\endcsname{0.8383}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.position_p99\endcsname{0.9668}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.1.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.internal_success__task_accept\endcsname{500}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.mean\endcsname{0.630}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.orientation_max\endcsname{0.9094}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.orientation_p50\endcsname{0.0203}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.orientation_p95\endcsname{0.3464}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.orientation_p99\endcsname{0.5366}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.p50\endcsname{0.586}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.p95\endcsname{0.927}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.p99\endcsname{1.941}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.position_max\endcsname{1.9596}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.position_p50\endcsname{0.1442}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.position_p95\endcsname{1.6052}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.position_p99\endcsname{1.9232}
+\expandafter\def\csname ev@sensitivity.panda.dls_task.2.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.mean\endcsname{0.222}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.orientation_max\endcsname{0.0009}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.orientation_p95\endcsname{0.0005}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.orientation_p99\endcsname{0.0007}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.p50\endcsname{0.207}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.p95\endcsname{0.334}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.p99\endcsname{0.434}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.position_max\endcsname{0.0141}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.position_p95\endcsname{0.0070}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.position_p99\endcsname{0.0109}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.0.5.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.mean\endcsname{0.219}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.orientation_max\endcsname{0.0009}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.orientation_p95\endcsname{0.0005}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.orientation_p99\endcsname{0.0007}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.p50\endcsname{0.206}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.p95\endcsname{0.321}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.p99\endcsname{0.407}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.position_max\endcsname{0.0141}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.position_p95\endcsname{0.0073}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.position_p99\endcsname{0.0109}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.1.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.mean\endcsname{0.221}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.orientation_max\endcsname{0.0009}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.orientation_p95\endcsname{0.0005}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.orientation_p99\endcsname{0.0007}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.p50\endcsname{0.207}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.p95\endcsname{0.320}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.p99\endcsname{0.395}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.position_max\endcsname{0.0141}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.position_p95\endcsname{0.0070}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.position_p99\endcsname{0.0109}
+\expandafter\def\csname ev@sensitivity.panda.trac_strict_5ms.2.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.mean\endcsname{0.211}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.orientation_max\endcsname{0.2162}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.orientation_p50\endcsname{0.0043}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.orientation_p95\endcsname{0.0508}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.orientation_p99\endcsname{0.1513}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.p50\endcsname{0.196}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.p95\endcsname{0.289}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.p99\endcsname{0.486}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.position_max\endcsname{0.4632}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.position_p50\endcsname{0.0466}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.position_p95\endcsname{0.3068}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.position_p99\endcsname{0.3652}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.0.5.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.mean\endcsname{0.203}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.orientation_max\endcsname{0.3587}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.orientation_p50\endcsname{0.0053}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.orientation_p95\endcsname{0.1013}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.orientation_p99\endcsname{0.2779}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.p50\endcsname{0.194}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.p95\endcsname{0.262}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.p99\endcsname{0.389}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.position_max\endcsname{0.8032}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.position_p50\endcsname{0.0570}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.position_p95\endcsname{0.5072}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.position_p99\endcsname{0.6988}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.1.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.mean\endcsname{0.203}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.orientation_max\endcsname{0.7253}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.orientation_p50\endcsname{0.0075}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.orientation_p95\endcsname{0.2838}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.orientation_p99\endcsname{0.5215}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.p50\endcsname{0.194}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.p95\endcsname{0.253}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.p99\endcsname{0.351}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.position_max\endcsname{1.8806}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.position_p50\endcsname{0.0778}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.position_p95\endcsname{1.1605}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.position_p99\endcsname{1.4663}
+\expandafter\def\csname ev@sensitivity.panda.trac_task_5ms.2.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.internal_success__task_accept\endcsname{500}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.mean\endcsname{0.695}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.orientation_max\endcsname{0.1901}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.orientation_p50\endcsname{0.0113}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.orientation_p95\endcsname{0.0968}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.orientation_p99\endcsname{0.1388}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.p50\endcsname{0.547}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.p95\endcsname{0.989}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.p99\endcsname{2.033}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.position_max\endcsname{0.4982}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.position_p50\endcsname{0.1104}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.position_p95\endcsname{0.4513}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.position_p99\endcsname{0.4941}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.0.5.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.internal_success__task_accept\endcsname{500}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.mean\endcsname{0.614}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.orientation_max\endcsname{0.4181}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.orientation_p50\endcsname{0.0177}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.orientation_p95\endcsname{0.1377}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.orientation_p99\endcsname{0.3119}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.p50\endcsname{0.543}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.p95\endcsname{0.864}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.p99\endcsname{1.150}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.position_max\endcsname{0.9964}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.position_p50\endcsname{0.1564}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.position_p95\endcsname{0.8203}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.position_p99\endcsname{0.9668}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.1.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.internal_success__task_accept\endcsname{500}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.mean\endcsname{0.553}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.orientation_max\endcsname{0.9717}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.orientation_p50\endcsname{0.0267}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.orientation_p95\endcsname{0.2701}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.orientation_p99\endcsname{0.6979}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.p50\endcsname{0.539}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.p95\endcsname{0.844}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.p99\endcsname{0.875}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.position_max\endcsname{1.9911}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.position_p50\endcsname{0.2523}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.position_p95\endcsname{1.5410}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.position_p99\endcsname{1.8647}
+\expandafter\def\csname ev@sensitivity.ur5e.dls_task.2.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.mean\endcsname{0.203}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.orientation_max\endcsname{0.0007}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.orientation_p95\endcsname{0.0003}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.orientation_p99\endcsname{0.0006}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.p50\endcsname{0.195}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.p95\endcsname{0.254}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.p99\endcsname{0.326}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.position_max\endcsname{0.0140}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.position_p95\endcsname{0.0074}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.position_p99\endcsname{0.0120}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.0.5.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.mean\endcsname{0.203}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.orientation_max\endcsname{0.0007}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.orientation_p95\endcsname{0.0003}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.orientation_p99\endcsname{0.0006}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.p50\endcsname{0.194}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.p95\endcsname{0.253}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.p99\endcsname{0.370}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.position_max\endcsname{0.0124}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.position_p95\endcsname{0.0073}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.position_p99\endcsname{0.0120}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.1.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.mean\endcsname{0.201}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.orientation_max\endcsname{0.0007}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.orientation_p95\endcsname{0.0003}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.orientation_p99\endcsname{0.0006}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.p50\endcsname{0.193}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.p95\endcsname{0.252}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.p99\endcsname{0.330}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.position_max\endcsname{0.0143}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.position_p95\endcsname{0.0074}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.position_p99\endcsname{0.0120}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_strict_5ms.2.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.mean\endcsname{0.195}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.orientation_max\endcsname{0.1877}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.orientation_p50\endcsname{0.0029}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.orientation_p95\endcsname{0.0327}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.orientation_p99\endcsname{0.0971}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.p50\endcsname{0.187}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.p95\endcsname{0.237}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.p99\endcsname{0.316}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.position_max\endcsname{0.4708}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.position_p50\endcsname{0.0521}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.position_p95\endcsname{0.2775}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.position_p99\endcsname{0.3492}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.0.5.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.mean\endcsname{0.193}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.orientation_max\endcsname{0.3462}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.orientation_p50\endcsname{0.0048}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.orientation_p95\endcsname{0.0599}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.orientation_p99\endcsname{0.2117}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.p50\endcsname{0.185}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.p95\endcsname{0.238}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.p99\endcsname{0.310}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.position_max\endcsname{0.8148}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.position_p50\endcsname{0.0708}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.position_p95\endcsname{0.4526}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.position_p99\endcsname{0.6802}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.1.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.accepted_within_20ms\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.internal_failure__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.internal_success\endcsname{100.00}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.internal_success__task_accept\endcsname{1500}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.mean\endcsname{0.189}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.miss_uid\endcsname{0}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.orientation_max\endcsname{0.7558}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.orientation_p50\endcsname{0.0075}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.orientation_p95\endcsname{0.1871}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.orientation_p99\endcsname{0.5559}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.p50\endcsname{0.183}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.p95\endcsname{0.223}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.p99\endcsname{0.301}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.position_max\endcsname{1.6654}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.position_p50\endcsname{0.1013}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.position_p95\endcsname{1.0677}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.position_p99\endcsname{1.4219}
+\expandafter\def\csname ev@sensitivity.ur5e.trac_task_5ms.2.verified_success\endcsname{100.00}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.accepted_within_20ms\endcsname{96.80}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.completion\endcsname{37}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.completion_range\endcsname{37}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.cumulative_s\endcsname{14.255}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.deadline\endcsname{37}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.internal_failure__task_accept\endcsname{760}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.internal_failure__task_reject\endcsname{192}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.internal_success\endcsname{84.13}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.internal_success__task_accept\endcsname{5048}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.mean\endcsname{2.376}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.orientation_max\endcsname{0.3663}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.orientation_p95\endcsname{0.0051}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.orientation_p99\endcsname{0.0180}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.p50\endcsname{0.943}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.p95\endcsname{9.119}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.p99\endcsname{10.624}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.position_max\endcsname{0.9528}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.position_p50\endcsname{0.0001}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.position_p95\endcsname{0.1357}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.position_p99\endcsname{0.4210}
+\expandafter\def\csname ev@trajectory.panda.dls_strict.verified_success\endcsname{96.80}
+\expandafter\def\csname ev@trajectory.panda.dls_task.accepted_within_20ms\endcsname{96.80}
+\expandafter\def\csname ev@trajectory.panda.dls_task.completion\endcsname{37}
+\expandafter\def\csname ev@trajectory.panda.dls_task.completion_range\endcsname{37}
+\expandafter\def\csname ev@trajectory.panda.dls_task.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.dls_task.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.dls_task.contrast.saving_pct\endcsname{66.23}
+\expandafter\def\csname ev@trajectory.panda.dls_task.contrast.success_pp\endcsname{0.000 [0.000, 0.000]}
+\expandafter\def\csname ev@trajectory.panda.dls_task.contrast.time_ratio\endcsname{0.338 [0.269, 0.415]}
+\expandafter\def\csname ev@trajectory.panda.dls_task.cumulative_s\endcsname{4.814}
+\expandafter\def\csname ev@trajectory.panda.dls_task.deadline\endcsname{37}
+\expandafter\def\csname ev@trajectory.panda.dls_task.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.dls_task.internal_failure__task_reject\endcsname{192}
+\expandafter\def\csname ev@trajectory.panda.dls_task.internal_success\endcsname{96.80}
+\expandafter\def\csname ev@trajectory.panda.dls_task.internal_success__task_accept\endcsname{5808}
+\expandafter\def\csname ev@trajectory.panda.dls_task.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.dls_task.mean\endcsname{0.802}
+\expandafter\def\csname ev@trajectory.panda.dls_task.orientation_max\endcsname{0.4964}
+\expandafter\def\csname ev@trajectory.panda.dls_task.orientation_p50\endcsname{0.0055}
+\expandafter\def\csname ev@trajectory.panda.dls_task.orientation_p95\endcsname{0.0523}
+\expandafter\def\csname ev@trajectory.panda.dls_task.orientation_p99\endcsname{0.1913}
+\expandafter\def\csname ev@trajectory.panda.dls_task.p50\endcsname{0.550}
+\expandafter\def\csname ev@trajectory.panda.dls_task.p95\endcsname{1.451}
+\expandafter\def\csname ev@trajectory.panda.dls_task.p99\endcsname{6.830}
+\expandafter\def\csname ev@trajectory.panda.dls_task.position_max\endcsname{1.0000}
+\expandafter\def\csname ev@trajectory.panda.dls_task.position_p50\endcsname{0.0780}
+\expandafter\def\csname ev@trajectory.panda.dls_task.position_p95\endcsname{0.7363}
+\expandafter\def\csname ev@trajectory.panda.dls_task.position_p99\endcsname{0.9774}
+\expandafter\def\csname ev@trajectory.panda.dls_task.verified_success\endcsname{96.80}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.accepted_within_20ms\endcsname{93.99}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.completion\endcsname{34/34/34}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.completion_range\endcsname{34}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.cumulative_s\endcsname{8.654}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.deadline\endcsname{34/34/34}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.internal_failure__task_reject\endcsname{1081}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.internal_success\endcsname{93.99}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.internal_success__task_accept\endcsname{16919}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.mean\endcsname{1.442}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.orientation_max\endcsname{0.0008}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.orientation_p95\endcsname{0.0003}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.orientation_p99\endcsname{0.0006}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.p50\endcsname{0.192}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.p95\endcsname{20.352}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.p99\endcsname{20.559}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.position_max\endcsname{0.0146}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.position_p50\endcsname{0.0000}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.position_p95\endcsname{0.0035}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.position_p99\endcsname{0.0080}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_20ms.verified_success\endcsname{93.99}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.accepted_within_20ms\endcsname{93.98}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.completion\endcsname{34/34/34}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.completion_range\endcsname{34}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.cumulative_s\endcsname{3.187}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.deadline\endcsname{34/34/33}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.internal_failure__task_reject\endcsname{1083}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.internal_success\endcsname{93.98}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.internal_success__task_accept\endcsname{16917}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.mean\endcsname{0.531}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.orientation_max\endcsname{0.0008}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.orientation_p95\endcsname{0.0003}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.orientation_p99\endcsname{0.0006}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.p50\endcsname{0.190}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.p95\endcsname{5.249}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.p99\endcsname{5.434}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.position_max\endcsname{0.0146}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.position_p50\endcsname{0.0000}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.position_p95\endcsname{0.0035}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.position_p99\endcsname{0.0080}
+\expandafter\def\csname ev@trajectory.panda.trac_strict_5ms.verified_success\endcsname{93.98}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.accepted_within_20ms\endcsname{98.16}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.completion\endcsname{37/37/38}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.completion_range\endcsname{37--38}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.contrast.gained\endcsname{4}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.contrast.saving_pct\endcsname{58.40}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.contrast.success_pp\endcsname{8.333 [1.667, 16.667]}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.contrast.time_ratio\endcsname{0.416 [0.231, 0.720]}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.cumulative_s\endcsname{3.600}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.deadline\endcsname{37/37/38}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.internal_failure__task_reject\endcsname{331}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.internal_success\endcsname{98.16}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.internal_success__task_accept\endcsname{17669}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.mean\endcsname{0.600}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.orientation_max\endcsname{0.4587}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.orientation_p50\endcsname{0.0036}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.orientation_p95\endcsname{0.0392}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.orientation_p99\endcsname{0.2927}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.p50\endcsname{0.180}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.p95\endcsname{0.462}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.p99\endcsname{20.392}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.position_max\endcsname{0.9952}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.position_p50\endcsname{0.0498}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.position_p95\endcsname{0.3964}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.position_p99\endcsname{0.6994}
+\expandafter\def\csname ev@trajectory.panda.trac_task_20ms.verified_success\endcsname{98.16}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.accepted_within_20ms\endcsname{97.27}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.completion\endcsname{36/37/37}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.completion_range\endcsname{36--37}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.contrast.gained\endcsname{3}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.contrast.saving_pct\endcsname{32.53}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.contrast.success_pp\endcsname{6.667 [1.667, 13.333]}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.contrast.time_ratio\endcsname{0.675 [0.482, 0.890]}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.cumulative_s\endcsname{2.150}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.deadline\endcsname{36/36/37}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.internal_failure__task_reject\endcsname{490}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.internal_success\endcsname{97.28}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.internal_success__task_accept\endcsname{17510}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.mean\endcsname{0.358}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.orientation_max\endcsname{0.4663}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.orientation_p50\endcsname{0.0037}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.orientation_p95\endcsname{0.0379}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.orientation_p99\endcsname{0.2853}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.p50\endcsname{0.179}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.p95\endcsname{0.484}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.p99\endcsname{5.305}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.position_max\endcsname{0.9680}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.position_p50\endcsname{0.0493}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.position_p95\endcsname{0.3915}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.position_p99\endcsname{0.6886}
+\expandafter\def\csname ev@trajectory.panda.trac_task_5ms.verified_success\endcsname{97.28}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.accepted_within_20ms\endcsname{95.32}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.completion\endcsname{35}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.completion_range\endcsname{35}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.cumulative_s\endcsname{16.965}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.deadline\endcsname{35}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.internal_failure__task_accept\endcsname{1403}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.internal_failure__task_reject\endcsname{281}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.internal_success\endcsname{71.93}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.internal_success__task_accept\endcsname{4316}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.mean\endcsname{2.827}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.orientation_max\endcsname{0.1524}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.orientation_p50\endcsname{0.0001}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.orientation_p95\endcsname{0.0088}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.orientation_p99\endcsname{0.0335}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.p50\endcsname{0.816}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.p95\endcsname{7.813}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.p99\endcsname{7.955}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.position_max\endcsname{0.9964}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.position_p50\endcsname{0.0010}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.position_p95\endcsname{0.2342}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.position_p99\endcsname{0.6763}
+\expandafter\def\csname ev@trajectory.ur5e.dls_strict.verified_success\endcsname{95.32}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.accepted_within_20ms\endcsname{88.37}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.completion\endcsname{28}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.completion_range\endcsname{28}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.contrast.gained\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.contrast.lost\endcsname{7}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.contrast.saving_pct\endcsname{61.18}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.contrast.success_pp\endcsname{-17.500 [-30.000, -7.500]}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.contrast.time_ratio\endcsname{0.388 [0.287, 0.499]}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.cumulative_s\endcsname{6.586}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.deadline\endcsname{28}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.internal_failure__task_reject\endcsname{698}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.internal_success\endcsname{88.37}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.internal_success__task_accept\endcsname{5302}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.mean\endcsname{1.098}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.orientation_max\endcsname{0.4963}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.orientation_p50\endcsname{0.0077}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.orientation_p95\endcsname{0.0900}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.orientation_p99\endcsname{0.1859}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.p50\endcsname{0.495}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.p95\endcsname{5.066}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.p99\endcsname{7.769}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.position_max\endcsname{1.0000}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.position_p50\endcsname{0.1109}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.position_p95\endcsname{0.8125}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.position_p99\endcsname{0.9886}
+\expandafter\def\csname ev@trajectory.ur5e.dls_task.verified_success\endcsname{88.37}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.accepted_within_20ms\endcsname{96.81}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.completion\endcsname{37/37/37}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.completion_range\endcsname{37}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.cumulative_s\endcsname{4.932}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.deadline\endcsname{37/36/37}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.internal_failure__task_reject\endcsname{573}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.internal_success\endcsname{96.82}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.internal_success__task_accept\endcsname{17427}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.mean\endcsname{0.822}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.orientation_max\endcsname{0.0009}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.orientation_p95\endcsname{0.0004}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.orientation_p99\endcsname{0.0006}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.p50\endcsname{0.169}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.p95\endcsname{0.303}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.p99\endcsname{20.357}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.position_max\endcsname{0.0151}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.position_p50\endcsname{0.0000}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.position_p95\endcsname{0.0066}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.position_p99\endcsname{0.0108}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_20ms.verified_success\endcsname{96.82}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.accepted_within_20ms\endcsname{96.82}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.completion\endcsname{37/37/37}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.completion_range\endcsname{37}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.cumulative_s\endcsname{2.032}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.deadline\endcsname{37/37/37}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.internal_failure__task_reject\endcsname{573}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.internal_success\endcsname{96.82}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.internal_success__task_accept\endcsname{17427}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.mean\endcsname{0.339}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.orientation_max\endcsname{0.0009}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.orientation_p50\endcsname{0.0000}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.orientation_p95\endcsname{0.0004}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.orientation_p99\endcsname{0.0006}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.p50\endcsname{0.169}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.p95\endcsname{0.300}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.p99\endcsname{5.256}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.position_max\endcsname{0.0151}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.position_p50\endcsname{0.0000}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.position_p95\endcsname{0.0066}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.position_p99\endcsname{0.0108}
+\expandafter\def\csname ev@trajectory.ur5e.trac_strict_5ms.verified_success\endcsname{96.82}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.accepted_within_20ms\endcsname{99.58}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.completion\endcsname{39/39/39}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.completion_range\endcsname{39}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.contrast.gained\endcsname{2}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.contrast.saving_pct\endcsname{68.21}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.contrast.success_pp\endcsname{5.000 [0.000, 12.500]}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.contrast.time_ratio\endcsname{0.318 [0.125, 0.985]}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.cumulative_s\endcsname{1.568}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.deadline\endcsname{39/39/38}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.internal_failure__task_reject\endcsname{75}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.internal_success\endcsname{99.58}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.internal_success__task_accept\endcsname{17925}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.mean\endcsname{0.261}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.orientation_max\endcsname{0.4499}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.orientation_p50\endcsname{0.0028}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.orientation_p95\endcsname{0.0345}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.orientation_p99\endcsname{0.2224}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.p50\endcsname{0.161}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.p95\endcsname{0.229}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.p99\endcsname{0.412}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.position_max\endcsname{0.9368}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.position_p50\endcsname{0.0334}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.position_p95\endcsname{0.3796}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.position_p99\endcsname{0.6271}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_20ms.verified_success\endcsname{99.58}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.accepted_within_20ms\endcsname{99.57}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.completion\endcsname{39/39/39}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.completion_range\endcsname{39}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.contrast.gained\endcsname{2}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.contrast.lost\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.contrast.saving_pct\endcsname{42.59}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.contrast.success_pp\endcsname{5.000 [0.000, 12.500]}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.contrast.time_ratio\endcsname{0.574 [0.330, 0.979]}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.cumulative_s\endcsname{1.167}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.deadline\endcsname{39/39/39}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.internal_failure__task_accept\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.internal_failure__task_reject\endcsname{77}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.internal_success\endcsname{99.57}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.internal_success__task_accept\endcsname{17923}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.internal_success__task_reject\endcsname{0}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.mean\endcsname{0.194}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.orientation_max\endcsname{0.4943}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.orientation_p50\endcsname{0.0028}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.orientation_p95\endcsname{0.0357}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.orientation_p99\endcsname{0.2378}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.p50\endcsname{0.161}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.p95\endcsname{0.223}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.p99\endcsname{0.405}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.position_max\endcsname{0.9678}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.position_p50\endcsname{0.0335}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.position_p95\endcsname{0.3853}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.position_p99\endcsname{0.6436}
+\expandafter\def\csname ev@trajectory.ur5e.trac_task_5ms.verified_success\endcsname{99.57}
+\expandafter\def\csname ev@verification.violations\endcsname{0}

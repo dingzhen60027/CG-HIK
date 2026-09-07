@@ -1,1405 +1,1110 @@
 \documentclass[10pt,a4paper]{article}
-
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{mathpazo}
 \usepackage[margin=20mm]{geometry}
-\usepackage{microtype}
-\usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{multirow}
-\usepackage{array}
-\usepackage{tabularx}
-\usepackage{amsmath,amssymb}
+\usepackage{microtype,graphicx,booktabs,array,tabularx,amsmath,amssymb}
 \usepackage[numbers,sort&compress]{natbib}
-\usepackage{xcolor}
-\usepackage{caption}
-\usepackage{float}
-\usepackage{placeins}
-\usepackage{fancyhdr}
-\usepackage{hyperref}
-\usepackage{siunitx}
-
-\definecolor{cghikblue}{HTML}{1F5A94}
-\hypersetup{
-  colorlinks=true,
-  citecolor=cghikblue,
-  linkcolor=cghikblue,
-  urlcolor=cghikblue,
-  pdfauthor={Anonymous Author(s)},
-  pdftitle={CG-HIK: Query-Conditioned Computation Allocation for Verified Online Inverse Kinematics}
-}
+\usepackage{xcolor,caption,placeins,fancyhdr,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black,
+pdftitle={Task-Contract-Aware Online Inverse Kinematics: Aligning Solver Convergence with Command Admissibility}}
 \captionsetup{font=small,labelfont=bf}
 \graphicspath{{figures/}}
 \input{generated/paper_numbers.tex}
-
-\newcommand{\method}{CG-HIK}
-\newcommand{\fixedrobust}{Fixed robust cascade}
-\newcommand{\fixedhard}{Fixed hard-entry cascade}
-\newcommand{\contract}{\mathcal{V}}
-\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\textit{CG-HIK}}
-\rhead{Anonymous manuscript}
-\cfoot{\thepage}
-\setlength{\headheight}{14pt}
-
-\title{\textbf{CG-HIK: Query-Conditioned Computation Allocation for Verified Online Inverse Kinematics}}
-\author{Anonymous Author(s)\\
-\small Affiliation withheld for blinded review}
+\newcommand{\ev}[1]{\ifcsname ev@#1\endcsname\csname ev@#1\endcsname\else\PackageError{evidence}{Undefined evidence key #1}{}\fi}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\textit{Task-contract-aware online IK}}\rhead{Research manuscript}
+\cfoot{\thepage}\setlength{\headheight}{14pt}
+\title{\textbf{Task-Contract-Aware Online Inverse Kinematics:\\
+Aligning Solver Convergence with Command Admissibility}}
+\author{Author information to be supplied for submission}
 \date{}
-
 \begin{document}
 \maketitle
-
 \begin{abstract}
-Online inverse kinematics (IK) must generate valid joint commands for queries with
-different numerical demands. Fixed cascades already stop after an early success,
-but their entry point can still impose unnecessary refinement prefixes or spend
-large budgets on unsuccessful requests. We investigate the hypothesis that robust
-coverage need not require uniform worst-case computation. CG-HIK learns
-query-conditioned pathway costs from action-complete observations of a shared
-solver portfolio and selects an entry using predicted tail latency. Learning
-allocates solver effort; numerical geometry generates joint commands; deterministic
-verification governs acceptance.
-
-We evaluate the frozen method through the original held-out tests and a supplementary
-mechanism study on Panda and UR5e. On 2,500 witness-feasible point queries per robot,
-CG-HIK matched always-hard success but increased mean end-to-end time by 3.33\% and
-29.32\%; a geometry rule and a reject-only control performed similarly. Selecting by
-predicted P95 rather than P50 reduced FEV by 0.58\% and 1.86\%, without a resolved
-P95 or P99 advantage. Reanalysis showed that 99.07\% and 101.31\% of the original
-trajectory time savings lay in trajectories neither method completed, offsetting
-additional cost on jointly completed paths. On new continuously feasible reference
-paths, CG-HIK completed 34/40 versus 37/40 for always-hard on Panda and 36/40 for both
-on UR5e. A Panda joint-limit family retained successful-solve savings, whereas
-near-singular branch evolution caused three lost completions. Official TRAC-IK
-provided a substantially faster external comparison. These findings identify
-failure handling as the dominant aggregate benefit in the tested portfolio and
-show why learned entry selection, successful-path computation, and acceptance
-validity require separate evidence.
+Online inverse kinematics is often judged by solver-specific convergence, although
+a robot needs commands satisfying task-level pose, joint and rate constraints
+within a finite time. We study this mismatch through a task-contract-aware
+interface that conservatively maps public pose tolerances into native solver
+conditions, imposes dynamic joint bounds and independently verifies every return.
+We compare official TRAC-IK and an existing adaptive damped-least-squares solver
+on Panda and UR5e using witnessed points, contract-scale sensitivity and complete
+online trajectories. Strict DLS reports nonconvergence for admissible returns on
+\ev{dls.panda.mismatch_pct}\% and \ev{dls.ur5e.mismatch_pct}\% of feasible points.
+Strict TRAC-IK already solves all nominal witnessed points; full alignment
+preserves that success with modest computational savings.
+On continuous trajectories, aligned TRAC-IK at a 5 ms search budget increases
+completion from \ev{trajectory.panda.trac_strict_5ms.completion_range} to
+\ev{trajectory.panda.trac_task_5ms.completion_range} of \ev{sample.trajectory}
+Panda paths across repeated runs, and from
+\ev{trajectory.ur5e.trac_strict_5ms.completion_range} to
+\ev{trajectory.ur5e.trac_task_5ms.completion_range} on UR5e, reducing cumulative time by
+\ev{trajectory.panda.trac_task_5ms.contrast.saving_pct}\% and
+\ev{trajectory.ur5e.trac_task_5ms.contrast.saving_pct}\%.
+DLS alignment reduces computation but loses UR5e trajectory completions, exposing
+a closed-loop trade-off. A frozen learned-allocation case study likewise finds no
+universal acceleration of successful solving. The evidence supports aligning
+solver conditions with the task contract before adding adaptive computation,
+while evaluating complete tracking rather than local acceptance alone.
 \end{abstract}
+\noindent\textbf{Keywords:} inverse kinematics; task tolerance; command admissibility;
+joint-rate constraints; TRAC-IK; damped least squares; algorithm selection
 
-\noindent\textbf{Keywords:} inverse kinematics; adaptive computation; algorithm
-selection; tail latency; damped least squares; hybrid learning and optimization;
-deterministic verification
 
 \section{Introduction}
+\label{sec:introduction}
 
-Online inverse kinematics (IK) repeatedly converts end-effector targets into joint
-commands. A request consists of a desired pose, the previous accepted configuration,
-and a finite command interval. The returned command changes the state from which the
-next request is solved, making branch continuity and recovery part of the problem
-rather than optional post-processing
-\cite{rakita2018relaxedik,morgan2024cppflow,nguyen2026sequential,yang2026mimik}.
-Nearby targets may need different amounts of work because the current configuration
-can approach a singularity, a joint limit, or an unfavorable inverse branch.
-Online IK therefore couples query-level computational cost to the trajectory of
-accepted commands.
+A robot receiving Cartesian targets from a planner, a teleoperator or a learned
+policy must convert them into joint commands that can be issued from its current
+configuration. This repeated use of inverse kinematics (IK) differs from solving an
+isolated geometric equation. The input includes both the desired end-effector pose
+and the last accepted joint state, while the time available to return the next
+command is finite. A numerically accurate solution can be unsuitable if reaching
+it requires excessive joint motion during the command interval. Conversely, an
+approximate solution may already meet every requirement of the task. Online IK is
+therefore a command-generation problem: its useful output is a configuration that
+satisfies specified execution conditions at an acceptable computational cost.
+Continuity matters because each accepted configuration determines the starting
+point of the next query \cite{siciliano1990tutorial,rakita2018relaxedik}.
+Evaluating this process requires more than counting roots or recording a library's
+success flag. It requires an explicit account of what the robot is allowed to
+accept, how a numerical return is checked, and whether the complete interface
+returns that command before its deadline. The relevant latency includes preparing
+solver inputs and checking the result, since neither operation can be omitted by
+an application issuing the command.
 
-Analytical and numerical IK supply complementary tools for this interface.
-Structural decompositions can enumerate branches rapidly for compatible geometries
-\cite{elias2025ikgeo,ostermeier2025eaik,lopezcustodio2025geofik}.
-Jacobian and damped-least-squares (DLS) methods exploit a good local initialization,
-with damping limiting amplification near rank loss
+Analytical and numerical IK offer strong foundations for this purpose. Analytical
+solutions exploit manipulator geometry and can be extremely efficient when a
+robot admits a suitable decomposition. Recent geometric solvers broaden the
+range of structures handled systematically and make this option easier to use
+\cite{elias2025ikgeo,ostermeier2025eaik}. Jacobian methods offer a direct local
+relationship between Cartesian and joint motion; damped least squares (DLS)
+moderates the amplification associated with small singular values
 \cite{wampler1986dls,nakamura1986singularity,chiaverini1994review}.
-Restarts, constrained optimization, and complementary solver portfolios broaden
-recovery \cite{beeson2015tracik,colan2024variablestep,wu2024ikspark,zhang2026viability,yasutake2026hjcdik}.
-Their common strength is explicit geometry: a proposed configuration can be checked
-against pose, joint, and single-step continuity conditions before acceptance.
-The availability of several useful stages, however, leaves their scheduling open.
+TRAC-IK combines complementary numerical searches to address failures associated
+with joint limits and local search behavior \cite{beeson2015tracik}.
+Quadratic programming and constrained optimization can represent joint and motion
+restrictions explicitly, and structure-aware numerical implementations reduce
+their computational burden \cite{wingo2024linear}.
+These methods solve different numerical formulations, with different stopping
+rules and search budgets, but all can serve an online command-generation pipeline.
+The question considered here concerns the interface around these established
+solvers. Their geometric and numerical capabilities should be assessed under
+the same task requirements before differences in internal precision or return
+semantics are interpreted as differences in useful solving ability.
 
-Learned and generative IK improve a different part of the pipeline: finding useful
-candidates in a set-valued inverse map \cite{siciliano1990tutorial}.
-Conditional flows, diffusion, graph representations, invertible networks, and set
-predictors represent alternative solutions or redundancy
-\cite{ames2022ikflow,limoyo2025ggik,diprasetya2025kinenn,go2025emiknet,zhang2025ikdiffuser,nguyen2026setik}.
-History conditioning can favor the neighborhood of a previous configuration
-\cite{demby2024learning,nguyen2026sequential,yang2026mimik}.
-These models amortize proposal generation, but candidate quality and verified
-system cost are different quantities. Similar proposal errors can lead to different
-refinement work, and a neural output can still violate a command constraint.
+The task itself usually supplies a set of acceptable outcomes rather than a
+single infinitely precise mathematical root. A target pose can have separate
+position and orientation allowances; joint ranges restrict the available
+configuration space; and the command interval converts velocity limits into
+per-joint admissible displacements. Set-based tasks and pose-constrained
+manipulation already express the value of admissible regions
+\cite{moe2016setbased,berenson2011tsr}. Such task requirements differ from the
+residual threshold used inside a solver to stop an iteration. They also differ
+from an elapsed-time requirement. A solver may converge to a pose within its
+internal threshold yet return too late, or it may stop without convergence while
+retaining a configuration that meets the task. We distinguish solver-internal
+success, task-command admissibility, and within-deadline admissible success.
+This distinction makes the application requirement explicit without prescribing
+one numerical algorithm. It also permits a fair comparison between a solver
+using componentwise error bounds and one using error norms, provided that the
+relationship between those native conditions and the public task contract is
+documented and every returned command is independently checked. A bound on an
+individual iteration's step is also not a bound on the displacement accumulated
+over an entire solve.
 
-Hybrid proposal--refinement systems combine these strengths. Learned candidates
-supply an initialization; numerical geometry restores precision; explicit checks
-govern the returned command. IKFlow and CycleIK support numerical refinement
-\cite{ames2022ikflow,habekost2023cycleik}, while path-level generative proposals can
-be coupled to optimization and checking \cite{morgan2024cppflow}.
-Diffusion-seeded, execution-aware, graph, and neuro-fuzzy approaches offer further
-forms of this cooperation
-\cite{huang2025diffusionseeder,carvalho2025mpd,tang2025etaik,jayabalan2026hybrid,jlidi2026xgnn}.
-Once several refinement paths coexist, a hybrid system also has to decide how much
-of that available computation to use for the current query.
+A mismatch between these layers has two practical consequences. An unnecessarily
+strict internal pose condition can spend iterations refining a command that is
+already admissible, or exhaust a search budget without returning an available
+task-level solution. An internal success can also fail the application's joint
+or rate constraints if those constraints were absent or represented differently
+inside the search. Treating all negative return codes as infeasibility hides the
+first problem; treating all positive return codes as executable commands hides
+the second. Solver convergence is not command admissibility.
+For a failed query, a saved legal configuration under the identical target,
+previous state and command interval can establish that an admissible command
+was missed. Without such a witness, failure remains a statement about the
+particular numerical search. This is especially important in a trajectory:
+a feasible reference path proves that one sequence exists, but a solver's own
+accepted states can depart from that path. A later failure from a different
+state does not by itself reveal whether the cause is insufficient search,
+an unfavorable configuration, or a genuinely empty next-command set.
 
-A fixed cascade already implements conditional computation: it stops on verified
-success and escalates on failure. Its remaining limitation is the fixed \emph{entry},
-not execution of every stage on every request. An inexpensive prefix can either
-solve a continuation or add work before a later stage that was sufficient on its own.
-Requests with little prospect of success can consume a large fallback budget.
-Seed selection and failure detection address related decisions
-\cite{yuan2025iksel,xu2025faildetect}, but do not by themselves establish that learning
-complete pathway costs improves on a strong fixed entry or a simple geometric rule.
-The allocation question must include prediction overhead and distinguish savings
-during successful solving from savings in failure handling.
+We study these issues through a task-contract-aware solver interface. The task
+first defines a public acceptance set. The interface then maps its pose
+allowances conservatively into solver-native conditions and intersects the
+robot's joint ranges with the displacement interval allowed from the actual
+previous command. A numerical solver searches this domain, after which an
+independent verifier evaluates its returned configuration against the original
+contract. The verifier, rather than the native return code, governs acceptance.
+We instantiate this sequence with the official Cartesian-bound capability of
+TRAC-IK and the norm-based stopping conditions of an existing Adaptive DLS
+implementation. The two instances deliberately retain their established search
+mechanisms. Their native acceptance sets are not assumed to be identical:
+TRAC-IK's component box is an inscribed approximation to the public norm balls,
+whereas DLS tests the norms directly. The contribution is a common formulation,
+an explicit mapping and outcome interface, and evidence about its computational
+and closed-loop consequences. It does not depend on introducing another IK
+solver or learning a new validity rule.
 
-We study this question with \method, a query-conditioned allocation policy over one
-shared numerical portfolio, following the per-instance algorithm-selection viewpoint
-\cite{rice1976selection,bischl2016aslib}. The hypothesis is that
-\emph{robust coverage does not require uniform worst-case computation}.
-Executing every entry on the same development queries replaces manual difficulty
-labels with observed success and cost. The policy predicts pathway latency, selects
-a sufficient entry, and can decline a request predicted to exhaust the portfolio.
-Its responsibilities remain separate:
-\emph{learning allocates solver effort per query; numerical geometry generates joint
-commands; deterministic verification governs acceptance}.
-The frozen implementation still prepares learned candidates on every query; its
-allocation decision concerns subsequent numerical work, not elimination of all
-neural inference on easy requests.
+This interface also changes how adaptive computation should be evaluated.
+Per-instance algorithm selection is useful when alternative computational paths
+have predictably different costs \cite{rice1976selection,bischl2016aslib}.
+For IK, choosing an initial seed or a refinement entry can improve some queries
+\cite{yuan2025iksel}; learned proposals can also supply configurations for numerical
+refinement. However, selection itself has a cost. Its apparent benefit can depend
+on a strict baseline spending time on unnecessary precision, on different
+implementations accepting different commands, or on avoiding work for requests
+that no compared policy completes. We therefore treat learned computation
+allocation as a secondary layer and examine a frozen CG-HIK portfolio as an
+empirical case study. Its purpose is to test the value left for entry selection
+and early rejection once convergence, admissibility and timing are distinguished.
+This ordering preserves the useful role of learned or hybrid IK without assuming
+that prediction is needed for every query. It also separates savings on successful
+command generation from savings on unsuccessful numerical work, which can imply
+different engineering choices even when their aggregate latency reductions look
+similar.
 
-Our contributions are the shared-contract allocation formulation, action-complete
-pathway supervision, and an empirical separation of entry selection, rejection,
-prediction overhead, and closed-loop effects. The original held-out tests compare
-the method with a fixed early-entry cascade. A supplementary study then asks the
-stronger questions that this comparison leaves open: whether the learned entry
-beats hard entry or a simple rule, whether P95 selection adds measurable value,
-whether savings persist on continuously feasible paths, and where the system sits
-relative to an external numerical solver. The resulting evidence includes local
-successful-solve gains and substantial failure-handling savings, but does not support
-a general learned-routing advantage over always-hard. This distinction makes the
-resource-allocation hypothesis testable rather than assuming that a lower aggregate
-runtime identifies its mechanism.
+The paper makes three contributions. First, it formulates online IK under a
+joint pose-and-rate command contract and defines an outcome taxonomy that
+distinguishes native convergence, admissible returns and deadline-qualified
+returns, including exact-input witness-confirmed misses. Second, it provides
+a task-contract-aware interface for two existing solver families, documenting
+conservative native tolerance mapping, dynamic joint domains and independent
+acceptance. Third, it presents a two-robot empirical study covering witnessed
+point queries, separate position and orientation alignment, search budgets,
+contract-scale sensitivity and complete online trajectories, followed by an
+allocation-boundary analysis using frozen results. The point study separates
+current-query semantics from closed-loop effects; the trajectory study tests
+whether locally admissible numerical choices sustain tracking. Both improvements
+and losses are retained, so the evidence can identify where alignment is useful
+and where early stopping remains insufficient. The resulting engineering
+principle is to align the solver with the task contract before introducing
+adaptive computation, and then judge any additional decision layer by the
+remaining workload rather than by an assumed need for greater algorithmic
+complexity.
 
 \section{Related Work}
+\label{sec:related}
 
-The computation-allocation problem lies at the intersection of four established
-lines of work: numerical IK, learned multi-solution proposal, hybrid refinement, and
-per-instance solver selection. Their complementary strengths define both the building
-blocks of \method\ and the allocation question that remains.
+\subsection{Numerical and constrained inverse kinematics}
 
-\subsection{Numerical, Analytical, and Constrained IK}
+Classical DLS methods address singularity-sensitive Jacobian inversion by trading
+exact residual reduction against bounded numerical steps
+\cite{wampler1986dls,nakamura1986singularity,chiaverini1994review}.
+TRAC-IK combines a modified Newton-style search with nonlinear optimization
+\cite{beeson2015tracik}. Current numerical work includes variable step-size
+Jacobian iteration \cite{colan2024variablestep}, structure-exploiting differential
+IK \cite{wingo2024linear}, and modular kinematic optimization
+\cite{kim2025pyroki}. Analytical alternatives exploit geometric subproblems or
+automated decomposition \cite{elias2025ikgeo,ostermeier2025eaik}.
+GeoFIK studies Franka-specific redundancy parameterizations
+\cite{lopezcustodio2025geofik}, while the HJCD-IK preprint combines batched
+coordinate-descent initialization with Jacobian polishing
+\cite{yasutake2026hjcdik}. IKSPARK investigates convex-relaxation formulations
+with obstacle constraints \cite{wu2024ikspark}.
+These approaches improve numerical search or the representation of constraints.
+Our comparison instead keeps two numerical implementations fixed and varies
+their interface to a stated task-level pose contract.
 
-Classical IK spans exact structural solutions and general iterative updates.
-Geometric and analytical methods exploit screw structure and subproblem
-decomposition, providing rapid branch enumeration for suitable manipulators
-\cite{elias2025ikgeo,ostermeier2025eaik,lopezcustodio2025geofik}. Jacobian inverse and
-pseudoinverse methods generalize across chains, while DLS and singularity-robust
-inverses stabilize updates near rank loss
-\cite{wampler1986dls,nakamura1986singularity,chiaverini1994review}. Modern numerical
-extensions vary the step, run complementary solvers, batch initializations, or encode
-viability constraints
-\cite{beeson2015tracik,colan2024variablestep,wu2024ikspark,zhang2026viability,yasutake2026hjcdik}.
-RelaxedIK shows how pose, continuity, collision, and singularity objectives can be
-treated jointly as online motion synthesis \cite{rakita2018relaxedik}, while recent
-analysis distinguishes local numerical conditioning from the topology of branch
-transitions \cite{boschi2026singularity}. These methods make robust IK a portfolio of
-complementary local and recovery mechanisms. \method\ adds a learned allocation
-policy over that fixed portfolio.
+\subsection{Set-based and tolerance-aware robot tasks}
 
-\subsection{Learned Multi-Solution and History-Conditioned IK}
+Task Space Regions represent sets of allowed end-effector poses for manipulation
+planning \cite{berenson2011tsr}. Set-based task-priority IK explicitly accommodates
+variables that need to stay within an interval rather than attain a single value
+\cite{moe2016setbased}. RelaxedIK optimizes accurate and feasible arm motion through
+a combination of task and motion objectives \cite{rakita2018relaxedik}, and smooth
+task switching addresses continuity when task priorities change
+\cite{gamper2024switching}. These works establish that tolerated deviation and
+constraint sets are longstanding robotics concepts. The present interface uses
+them at the boundary between an application and a solver: a public norm-based
+pose allowance must be translated into the solver's own residual coordinates,
+bounds and stopping tests. A soft optimization objective, a componentwise
+acceptance box and a norm-ball verifier have different meanings even when all
+use a quantity called a tolerance.
 
-Learned IK has progressed from point regression toward explicit representations of a
-set-valued inverse. Conditional normalizing flows, graph-equivariant generators,
-invertible modular networks, multiple-instance models, diffusion, and
-permutation-invariant set prediction improve diversity or structural transfer
-\cite{ames2022ikflow,limoyo2025ggik,diprasetya2025kinenn,go2025emiknet,zhang2025ikdiffuser,nguyen2026setik}.
-History-conditioned models add a reference configuration or predict a joint increment,
-making branch preference explicit rather than averaging globally separated solutions
-\cite{demby2024learning,nguyen2026sequential,yang2026mimik}. The diffusion and MimicIK
-records are treated here as preprints, and the sequential model as an online
-forthcoming record. Collectively, these methods show the value of learned proposal
-distributions. \method\ uses such a proposal upstream, but evaluates it through
-downstream numerical pathways and never treats a neural prediction as an accepted
-command.
+\subsection{Online IK, continuity, and joint-rate constraints}
 
-\subsection{Learned Proposals with Numerical Refinement}
+Redundant kinematic control has long used secondary objectives to manage
+configuration evolution \cite{siciliano1990tutorial}.
+Predictive online IK anticipates upcoming motion demands
+\cite{schuetz2014predictive}. Trajectory scaling and predictive quadratic
+optimization offer ways to handle motion constraints
+\cite{wolinski2024scaling,wolinski2025predictive};
+look-ahead optimization manages nullspace motion in dual-arm impedance control
+\cite{origanti2025lookahead}. Viability-constrained IK explicitly seeks to retain
+feasible motion under joint range, velocity and acceleration constraints
+\cite{zhang2026viability}. Singularity transitions in UR-like mechanisms
+\cite{boschi2026singularity} concern a distinct geometric structure from the
+redundant configuration evolution of a Panda arm.
+CppFlow searches and refines candidate joint trajectories for Cartesian paths
+\cite{morgan2024cppflow}. Our online measurements neither optimize a future
+window nor rescale the target sequence. They test current-target solver
+interfaces while keeping the actual accepted-state feedback, target timing
+and final verifier common. This exposes continuity effects without attributing
+every failure to a branch transition or proposing a preview controller.
 
-Hybrid pipelines combine the global coverage of learning with the precision and
-constraint handling of numerical geometry. IKFlow and CycleIK refine learned
-solutions numerically \cite{ames2022ikflow,habekost2023cycleik}; CppFlow performs
-path-level proposal, search, and refinement \cite{morgan2024cppflow}; and diffusion
-priors can seed or guide trajectory optimization
-\cite{huang2025diffusionseeder,carvalho2025mpd}. Execution-time-aware redundancy
-selection, graph warm starts, and neuro-fuzzy approximators likewise make learned
-outputs useful through their effect on a downstream solver
-\cite{tang2025etaik,jayabalan2026hybrid,jlidi2026xgnn}. We retain this cooperative
-architecture but shift the learned target from the joint command to the amount and
-entry of numerical work. This enables an interpretable system comparison: the primary
-baselines and \method\ share proposals, solvers, fallback, budgets, and verification,
-differing in their computation-allocation rule.
+\subsection{Adaptive computation and solver selection}
 
-\subsection{Adaptive Computation and Solver Routing}
+Algorithm selection chooses a computational procedure conditional on the instance
+\cite{rice1976selection,bischl2016aslib}. IKSel applies informed seed selection
+and reselection to numerical IK \cite{yuan2025iksel}, while ETA-IK considers
+motion execution time in dual-arm redundancy resolution
+\cite{tang2025etaik}; motion execution time is different from solver latency.
+Learning-based IK can generate diverse or structured proposals, as in IKFlow
+\cite{ames2022ikflow}, CycleIK \cite{habekost2023cycleik}, generative graphical
+IK \cite{limoyo2025ggik}, and learning-by-example methods
+\cite{demby2024learning}. Recent set prediction and the MimicIK preprint address
+multiple solutions and teleoperation-conditioned generation, respectively
+\cite{nguyen2026setik,yang2026mimik}.
+Hybrid numerical refinement of learned approximations is also studied in an
+industrial-arm setting \cite{jayabalan2026hybrid}.
+These developments motivate measuring proposal and selection costs as part of
+the full interface, while leaving acceptance to numerical verification.
 
-Per-instance algorithm selection maps instance features to algorithms with different
-cost and success profiles \cite{rice1976selection}. Benchmark libraries formalize the
-corresponding instance--algorithm performance matrix and the distinction between a
-selected system and its empirical oracle \cite{bischl2016aslib}. Calibration and
-ensembles provide tools for controlling predictive confidence
-\cite{guo2017calibration,lakshminarayanan2017ensembles}, while runtime failure
-detection motivates conservative fallback under uncertainty \cite{xu2025faildetect}.
-Within IK, seed selection and reselection already demonstrate that basin choice and
-failure recovery affect runtime \cite{yuan2025iksel}. \method\ applies per-instance
-algorithm selection to the entries of a shared IK portfolio, using observed terminal
-success and query-conditioned P95 cost as routing targets. This places learning at the
-computation-allocation layer while retaining the proposal, numerical refinement, and
-verification mechanisms established by prior work. We formalize that decision next.
+Existing research thus separately covers task tolerance, constrained IK,
+continuous motion and algorithm selection. This study examines their interface:
+how solver-native convergence relates to the task-level command contract, and
+how that relationship affects missed admissible returns, computation and the
+interpretation of adaptive allocation. The empirical scope is two established
+solvers, not a claim to be the first use of task tolerances or solver bounds.
 
 \section{Problem Formulation}
+\label{sec:problem}
 
-\subsection{Online query and command contract}
-
-At control step $t$, an IK query is
+Let $f(q)=(p(q),R(q))$ denote forward kinematics for a bounded-joint manipulator,
+with $R(q)\in SO(3)$. An online query is
 \begin{equation}
-  \xi_t = \left(x_t^d, q_{t-1}, \Delta t\right),
+ \xi_t=(x_t^d,q_{t-1},\Delta t), \qquad x_t^d=(p_t^d,R_t^d),
 \end{equation}
-where $x_t^d=(p_t^d,R_t^d)\in SE(3)$ is the desired end-effector pose,
-$q_{t-1}\in\mathcal{Q}$ is the previously accepted configuration, and
-$\Delta t$ is the command interval. A numerical pathway proposes $q_t$. The shared
-deterministic contract is
+where $q_{t-1}$ is the actual last accepted configuration, not a reference state
+substituted after failure. The public command contract is
 \begin{equation}
 \begin{split}
-\contract(q_t;\xi_t)=
-&\ \mathbf{1}\!\left[\|p(q_t)-p_t^d\|_2 \le \varepsilon_p\right]\\
-&\land \mathbf{1}\!\left[d_R(R(q_t),R_t^d)\le\varepsilon_R\right]\\
-&\land \mathbf{1}\!\left[q_{\min}-\epsilon_q \le q_t\le q_{\max}+\epsilon_q\right]\\
-&\land \mathbf{1}\!\left[|\Delta q_t|\le \dot q_{\max}\Delta t+\epsilon_v\right]\\
-&\land \mathbf{1}\!\left[q_t\text{ is finite}\right].
+V(q;\xi_t)=1\quad\Longleftrightarrow\quad&
+ \|p(q)-p_t^d\|_2\leq\epsilon_p,\quad
+ d_R(R(q),R_t^d)\leq\epsilon_R,\\
+& q_{\min}\leq q\leq q_{\max},\\
+& |q_i-q_{t-1,i}|\leq \dot q_{\max,i}\Delta t+\epsilon_v
+ \quad\text{for every joint }i,\\
+&\text{all evaluated values are finite},
 \end{split}
 \label{eq:contract}
 \end{equation}
-The orientation distance $d_R$ is the norm of the rotation logarithm. This is a
-kinematic command contract, not a universal safety certificate: it contains no
-collision, torque, contact, or tracking model.
+with $d_R(R,R_d)=\|\operatorname{Log}(R_d^\top R)^\vee\|_2$.
+Angles are in radians and positions in metres. The nominal contract uses
+$\epsilon_p=\ev{contract.ep_mm}$ mm,
+$\epsilon_R=\ev{contract.er_deg}^{\circ}$,
+$\Delta t=\ev{contract.dt_ms}$ ms and
+$\epsilon_v=\ev{contract.ev}$ rad, together with the original per-joint URDF
+limits. Equation~\eqref{eq:contract} gives the mathematical joint interval;
+the unchanged numerical verifier retains its pre-existing $10^{-9}$ rad
+joint-bound comparison allowance. Dynamic search domains use the strict URDF
+intersection. This distinction is recorded rather than silently changing the
+numerical acceptance boundary.
 
-\subsection{Entry actions and tail-cost objective}
-
-Let $\mathcal{A}=\{\mathrm{easy},\mathrm{medium},\mathrm{hard}\}$ denote entry actions
-into a nested numerical cascade. For query $\xi$ and entry $a$, let
-$Y(\xi,a)\in\{0,1\}$ be terminal verified success and let $T(\xi,a)$ be the observed
-action-pathway wall-clock latency, including proposal preparation, numerical solving,
-verification, and pathway framework overhead. The learned routing decision itself is
-excluded from these development labels because each action is forced during
-collection. Repeated measurements define conditional latency quantiles
-$Q_\tau(T\mid\xi,a)$. Fresh system measurements instead enclose the complete runtime,
-including the router's fixed batch-one overhead.
-
-The learned policy predicts $\widehat p_s(\xi)$ and entry-specific
-$\widehat Q_{0.50}(\xi,a)$ and $\widehat Q_{0.95}(\xi,a)$. Given a calibrated success
-threshold $\pi_{\min}$ and deadline $D$, the eligible set is
+For solver $s$, write a call as
 \begin{equation}
-  \mathcal{A}(\xi)=
-  \left\{a\in\mathcal{A}:
-  \widehat p_s(\xi)\ge\pi_{\min},\
-  \widehat Q_{0.95}(\xi,a)\le D\right\}.
+ (\widehat q_t,c_t,\tau_t)=s(\xi_t),
+ \qquad I_t=\mathbb{1}\{c_t\text{ is native success}\},\quad
+ A_t=V(\widehat q_t;\xi_t),\quad
+ D_t=A_t\,\mathbb{1}\{\tau_t\leq T\}.
+\label{eq:outcomes}
 \end{equation}
-When this set is nonempty, the idealized routing rule is
+Here $I_t$ denotes solver-internal success, $A_t$ denotes task admissibility,
+and $D_t$ denotes within-deadline admissible success for $T=20$ ms.
+A missing or non-finite return has $A_t=0$. The time $\tau_t$ covers the full
+query interface, including conversion, dynamic bounds and final verification.
+An admissible return with $I_t=0$ is usable under this contract; $I_t=1$ alone
+never authorizes a command.
+
+A \emph{witness-confirmed missed-admissible query} has $A_t=0$ for the measured
+call and a separately retained $q_t^w$ satisfying $V(q_t^w;\xi_t)=1$.
+The witness must use the identical target, previous state, interval and verifier.
+It establishes existence for this input, not a global property of the solver.
+Conversely, an unsuccessful local or timed search without such evidence does
+not establish mathematical infeasibility.
+
+For a trajectory, geometric completion requires $\prod_t A_t=1$ and deadline
+completion requires $\prod_t D_t=1$. A reference-feasible path consists of a
+saved sequence satisfying the contract from its own preceding states.
+It does not establish feasibility from a different solver-generated state.
+In our geometric feedback loop an accepted return updates $q_{t-1}$; a rejected
+return leaves it unchanged while the external target index advances.
+Geometrically admissible but late returns update this same loop and are counted
+as late. Deadline-triggered actuator behavior is outside this evaluation.
+
+\section{Task-Contract-Aware Solver Interface}
+\label{sec:interface}
+
+\subsection{Task-level command contract}
+
+An interface needs to know what constitutes a useful return before it can
+decide how much numerical accuracy to request. We express that requirement
+as Equation~\eqref{eq:contract}, independently of the solver and any learning
+component. The contract is an acceptance set rather than a cost function.
+This allows a return with a small but nonzero residual to be judged on its
+task meaning, while keeping joint motion and timing visible as separate
+conditions. Pose allowances are supplied by the application; no experimental
+outcome is used to choose them.
+
+\subsection{Solver-native contract mapping}
+\label{sec:mapping}
+
+Solvers represent residuals differently, so passing the same scalar tolerance
+to different APIs does not necessarily define the same problem.
+TRAC-IK uses componentwise \texttt{KDL::Twist} bounds.
+In the verified implementation, the relative error is expressed in the target
+frame:
 \begin{equation}
-  a^\star(\xi)=\arg\min_{a\in\mathcal{A}(\xi)}
-  \widehat Q_{0.95}(\xi,a),
-\label{eq:route}
+ e_p^K=(R_t^d)^\top(p(q)-p_t^d),\qquad
+ e_R^K=\operatorname{Log}((R_t^d)^\top R(q))^\vee .
 \end{equation}
-with a conservative tie rule described below. Empty eligibility does not itself imply
-infeasibility: the policy must distinguish confident portfolio failure from
-uncertainty.
+The rotational quantity is an axis-angle vector, not roll, pitch and yaw.
+Orthogonal rotation preserves the translation norm, and the rotation-vector
+norm agrees with the public geodesic distance.
 
-\subsection{Research questions}
-
-The evaluation links three questions.
-
-\noindent\textbf{RQ1---Allocation opportunity.}
-How large and stable are pathway-cost differences when fixed entries, the learned
-policy, and an empirical oracle are compared on the same queries?
-
-\noindent\textbf{RQ2---Entry choice, rejection, and tail-aware selection.}
-On identical fresh queries, does learned entry choice outperform hard entry and a
-simple rule, and does P95-based selection improve on P50-based selection once actual
-runtime overhead is included?
-
-\noindent\textbf{RQ3---Successful continuous computation.}
-Do savings persist while completing continuously feasible trajectories, how much
-comes from handling failures, and how does performance compare with TRAC-IK?
-
-The method defines the allocation and acceptance decisions first. The experiments
-then separate these mechanisms with fixed-query controls and method-specific
-closed-loop state.
-
-\section{CG-HIK Method}
-
-\method\ separates the choice of computational effort from the generation and
-acceptance of a joint command. Figure~\ref{fig:framework} follows that separation from
-the shared numerical portfolio, through pathway observations and tail-cost routing,
-to deterministic verification.
-
-\subsection{Shared Numerical Solver Portfolio}
-
-An early-terminating cascade can still pay for an unnecessary prefix before reaching
-a sufficient stage. We therefore treat the three actions as alternative entries
-into the same escalating cascade (Figure~\ref{fig:framework}). The easy
-entry begins with one DLS update initialized at
-$q_{t-1}$. If verification fails, it escalates to medium and then hard. Medium begins
-with the best learned history-conditioned candidate and a bounded DLS refinement, then
-escalates to hard. Hard runs longer DLS attempts from the learned candidate and
-$q_{t-1}$ and, if needed, a bounded trust-region-reflective fallback from heterogeneous
-previous, learned, and retrieved seed-bank configurations. Duplicated seeds are
-removed. The \fixedrobust\ always enters at easy; the \fixedhard\ starts directly at
-hard.
-
-For a DLS step with task residual $e$ and Jacobian $J$, the update has the weighted,
-damped form
+For fully aligned TRAC-IK, each translation and rotation component receives
 \begin{equation}
-  \Delta q = J_w^\top\left(J_wJ_w^\top+\lambda^2 I\right)^{-1}e_w,
+ b_p=\operatorname{nextafter}(\epsilon_p/\sqrt{3},0),\qquad
+ b_R=\operatorname{nextafter}(\epsilon_R/\sqrt{3},0).
+\label{eq:box}
 \end{equation}
-with adaptive damping, joint-step clipping, and joint-limit clipping. The shared
-portfolio uses the same tolerances, budgets, seed bank, fallback, and verifier for all
-methods (Table~\ref{tab:configuration}). Entry names describe execution order, not
-latent difficulty; an easy entry can still traverse the complete cascade after local
-failure.
+Thus, a vector lying inside the corresponding component box also lies inside
+the task norm ball. This is a conservative inner approximation: some
+task-admissible residual vectors lie outside the box.
+Zero additional bounds define the strict setting. Position-only and
+orientation-only settings apply Equation~\eqref{eq:box} to just that part.
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\textwidth]{figure1_cghik_framework.pdf}
-\caption{\textbf{\method\ framework.} During development (left), the same query is
-executed from every cascade entry and all verifier outcomes, FEV, fallback events, and
-raw timing repeats are retained. The compact predictor is fitted and calibrated on
-disjoint development roles. At runtime (right), the learned policy selects one eligible
-entry, rejects only high-confidence portfolio failure, or defers uncertainty to the
-complete cascade. Numerical solvers generate commands; the common deterministic
-verifier alone authorizes return.}
-\label{fig:framework}
-\end{figure}
+The original internal epsilon remains $10^{-5}$. The native bounded-error test
+zeros components inside their specified bounds before comparing the retained
+error with epsilon. Its effective per-component threshold is
+$\max(b,\epsilon_{\rm int})$, not $b+\epsilon_{\rm int}$.
+The norms of the effective component-limit vectors are checked against the
+public tolerances at every prescribed scale.
+All aligned bounds exceed the internal epsilon here.
+Independent final verification handles numerical boundary effects and remains
+necessary even with a conservative mapping.
 
-\subsection{History-Conditioned Candidate Proposal}
+DLS computes separate position and orientation norms directly. Its aligned
+stopping conditions are the two public pose tests; its strict conditions are
+$10^{-5}$ m and $10^{-5}$ rad. The damping, singular-value threshold, orientation
+weight, line search, maximum update, minimum improvement and stagnation rule are
+unchanged. Table~\ref{tab:mapping} gives the native settings. These are uses of
+existing Cartesian bounds and DLS stopping conditions, not new numerical algorithms.
 
-Previous-state continuation is inexpensive in a favorable basin but can be a poor
-initializer after a difficult target or branch transition. The hard pathways therefore
-need a stronger proposal without allowing that proposal to become a command source. A
-\SeedEnsembleMembers{}-member feed-forward ensemble proposes bounded joint increments
-conditioned on the previous configuration and desired pose. Each member contains
-\SeedModelHiddenLayers\ hidden layers of width \SeedModelHiddenWidth\ and predicts a
-normalized increment clipped to a maximum joint-space
-step. The ensemble is not used as an acceptance mechanism. Its best candidate is
-selected by a composite score over position and orientation residual, joint step,
-and joint-limit penalty, then supplied to medium/hard numerical refinement.
-
-The frozen implementation prepares these learned candidates on every query,
-including easy-entry and rejected queries. Routing can skip numerical prefixes;
-it does not remove this proposal-generation cost. The direct hard baseline retains
-the same proposals but omits diagnostic features and predictions it does not need.
-
-The routing feature vector contains \RoutingFeatureCount\ diagnostics available after candidate
-preparation: learned-candidate position and orientation residual, mean and maximum
-ensemble uncertainty, candidate Jacobian minimum singular value, candidate
-joint-limit margin, candidate-to-history joint step, and the position and orientation
-step from the current end-effector pose. These features describe both the proposal and
-the local query geometry. No feature relaxes the verifier.
-
-\subsection{Action-Complete Pathway Data Collection}
-
-Hand-assigned easy or hard labels cannot identify the least costly sufficient entry
-once escalation, verification, and fallback are included. For each development query,
-we therefore execute easy, medium, and hard entries rather than infer a label from a
-heuristic category. Every action retains repeated,
-Latin-rotated wall-clock measurements and the terminal verifier result, FEV,
-iterations, fallback status, executed stages, and command. A fixed-cascade
-control arm confirms that entering at easy reproduces the semantics of the primary
-baseline. The resulting matrix is action-complete: all alternative pathways were
-observed for the same query.
-
-Because every entry is observed rather than imputed, we refer to this target as
-\emph{action-complete pathway supervision}. Data roles are separated by query identity: model
-fitting, probability/OOD calibration, and policy selection use disjoint development
-subsets, and no fresh test outcome participates in training or threshold selection.
-
-\subsection{Shared Success and Action-Specific Latency Prediction}
-
-All entries eventually share the same terminal fallback and verifier. The
-action-complete observations showed exact terminal semantic invariance across entries,
-so separate action-success predictions would introduce distinctions absent from the
-labels. This is an observed development regularity, not a guarantee for arbitrary
-queries or for later states reached by different closed-loop methods. Entry choice
-nevertheless changes which prefixes are executed and therefore
-changes cost, even when the final command is the same. Rare failed prefixes and
-fallback calls create the latency tail, which motivates predicting P95 as well as the
-median.
-
-The predictor is a SiLU multilayer perceptron with \RoutingFeatureCount\ inputs and
-\RoutingHiddenLayers\ hidden layers of width \RoutingHiddenWidth; its hidden
-representation is shared by all heads. It has (i) one calibrated terminal-success
-logit broadcast across the three entries, (ii) six positive outputs for entry-specific
-P50 and non-crossing P95 latency, and (iii) a calibrated fail-all logit. P50 and P95
-are optimized with pinball loss against all raw timing repeats rather than unstable
-single-run winners. Platt scaling is fitted only on the calibration role
-\cite{guo2017calibration}. Development latency labels exclude the router's own
-inference cost because every action is forced during collection; the fresh end-to-end
-measurements include that cost and expose its fixed P50 overhead.
-
-\subsection{Tail-Latency-Aware Routing Policy}
-
-Low predicted latency is useful only when the selected pathway is also likely to be
-sufficient. After calibration, an entry is therefore eligible when the shared success
-probability is at least the prespecified minimum and its predicted P95 does not exceed the
-\SI{\RoutingDeadlineMilliseconds}{ms} deadline. The policy selects the eligible entry with minimum predicted
-P95. If the predicted advantage over the most conservative eligible entry is smaller
-than the prespecified tie margin, it keeps the conservative entry. This prevents small,
-noisy predicted differences from inducing an aggressive skip.
-
-The policy, thresholds, model weights, and numerical budgets remain fixed in all
-original and supplementary evaluations. The supplementary geometry and P50-selection
-controls change the specified decision rule only; they are not new trained methods.
-
-\subsection{Deterministic Verification, Reject, and Conservative Defer}
-
-Predicted pathway cost or success is not proof that a joint command is valid. For
-every numerical path, reported convergence alone is insufficient: the returned
-configuration must pass Eq.~\eqref{eq:contract}, or the runtime escalates or reports
-failure. The learned system cannot override that decision. The fresh trajectory
-evaluator additionally reruns the same contract independently on every reported
-accepted command and counts any discrepancy as a contract violation.
-
-Some queries also make every available pathway predictably futile. The predictor
-therefore estimates the probability that the complete portfolio fails. A query can be
-rejected only when no numerical entry is eligible, the fail-all probability exceeds
-the fixed threshold, and the embedding is not flagged as OOD. Reject executes zero
-numerical stages and returns no command. Uncertainty is treated differently from
-predicted futility: an OOD query, or one lacking sufficient fail-all agreement, is
-deferred to the complete \fixedrobust. This defer outcome is an auxiliary conservative
-mechanism rather than the main route by which \method\ saves computation.
-
-\subsection{Batch-One Cost Accounting}
-
-Per-query routing is worthwhile only if its implementation cost does not erase the
-numerical work it avoids. To preserve batch-one cost accounting, the predictor and
-policy are exported as one runtime module. The fresh evaluations include this routing
-cost, so measured savings reflect the deployed execution path rather than solver work
-alone.
-
-\begin{table}[t]
-\centering
-\small
-\caption{\textbf{Shared solver portfolio and evaluation configuration.} All evaluated
-internal methods use these numerical and verification settings; only allocation
-changes. TRAC-IK retains the same public verifier but uses its own numerical
-implementation. Values are generated from the original configurations.}
-\label{tab:configuration}
-\begin{tabularx}{\textwidth}{@{}lYY@{}}
-\toprule
-Component & Evaluation setting & Role \\
-\midrule
-\input generated/table_solver_rows.tex
-\bottomrule
-\end{tabularx}
-\end{table}
-
-These choices create three empirical tests rather than guarantees: whether pathway
-differences are stable enough to exploit, whether they repay prediction overhead,
-and whether altered commands preserve future recovery along a trajectory.
-
-\section{Experimental Protocol}
-
-The original tests establish performance relative to the initial fixed cascade.
-The supplementary evaluation probes the mechanism with stronger fixed-entry
-controls, explicit feasibility witnesses, and an external solver. No supplementary
-outcome is used to retrain the model or select its thresholds, budgets, or fallback.
-
-\subsection{Shared implementation and timing}
-
-Panda and UR5e use the repository's URDFKinematics forward-kinematics and geometric
-Jacobian implementation, without a physics simulator. SciPy supplies the bounded
-trust-region-reflective fallback \cite{virtanen2020scipy}; PyTorch supplies the
-learned modules \cite{paszke2019pytorch}, and scikit-learn utilities support the
-original calibration stack \cite{pedregosa2011sklearn}. The supplementary measurements
-use an Intel Core i7-13700K, an NVIDIA Quadro RTX 8000 for candidate generation,
-PyTorch 2.11.0+cu128, eight intra-op threads and one inter-op thread. Methods are
-measured sequentially, with no concurrent benchmark.
-
-Whole-call timing includes input conversion, required candidate preparation,
-diagnostics, prediction, decision, numerical solving, fallback, and in-runtime
-verification. GPU synchronization encloses applicable calls. Initialization, warmup,
-serialization, and independent verification replay are outside the timed interval.
-The supplementary always-hard wrapper omits unused routing features and prediction
-while retaining the frozen hard-stage commands and budgets; smoke comparisons
-confirmed command, FEV, stage, and fallback agreement with the original wrapper.
-Historical pathway-label timings and the original profiling wrapper are therefore
-not substituted for this directly measured deployment baseline.
-
-\subsection{Pathway observations and original result decomposition}
-
-The original action-complete corpus contains \DevelopmentQueryCount\ queries, each
-with \DevelopmentTimingRepeats\ interleaved calls per entry. Fitting, calibration,
-and policy-selection roles are disjoint. To compare fixed easy, medium, hard, the
-frozen policy, and an empirical oracle on one population, we use only successful,
-non-abstained policy-validation queries: 2,031 for Panda and 2,049 for UR5e.
-We report numerical-plus-verification cost separately from the historical label
-pipeline, which also contains candidate preparation and a constant-risk profiling
-shell. Deployment routing overhead was not measured on that population and is
-left unreported. An oracle chosen from five-repeat empirical P95 is a noisy
-in-sample diagnostic, not a known true optimum.
-
-We also partition every original fresh trajectory by the two observed completion
-outcomes: both complete, only \method\ completes, only always-hard completes, and
-neither completes. All 150 frames remain in each trajectory's latency and FEV sum.
-Group counts, costs, first failures, and reject/defer/fallback events add back to
-the original totals. This is explicitly post-hoc descriptive decomposition;
-outcome-conditioned groups are not causal treatment strata.
-
-\subsection{Identical-query mechanism controls}
-
-Each robot receives 3,000 newly generated point queries: 1,000 local continuations,
-500 near-singular, 500 near-limit, 500 difficult feasible, and 500 constructively
-inexecutable requests. The first 2,500 retain a reference joint configuration that
-passes the unchanged verifier. Near-singular configurations are selected by geometric
-Jacobian conditioning; feasible targets are generated by FK from bounded joint
-increments. Inexecutable target positions lie outside a global reach bound obtained
-from the sum of URDF segment-translation lengths for these fixed/revolute chains.
-No query is labeled infeasible because an evaluated method fails.
-
-All methods receive identical target pose, previous configuration, and interval.
-The previous state is not updated between point calls. Each query has three
-randomized, cyclically interleaved repetitions of the six internal controls in
-Table~\ref{tab:controls}, plus all four TRAC-IK budgets. Geometry thresholds are
-selected using old calibration labels only: 0.02 m/0.01 rad for Panda and
-0.005 m/0.025 rad for UR5e. The geometry control shares the frozen reject/defer
-predictor; it tests the need for learned \emph{entry ordering}, not the elimination
-of all model cost.
-
-\begin{table}[t]
+\begin{table}[tb]
 \centering\small
-\caption{\textbf{Controlled allocation rules.} All internal numerical commands use
-the frozen solver portfolio and public verifier. Original eligibility means the
-same success threshold and predicted-P95 deadline criterion. Defer always enters
-the complete easy-entry cascade.}
-\label{tab:controls}
-\begin{tabularx}{\textwidth}{@{}lYYY@{}}
-\toprule
-Method & Reject/defer & Eligibility & Non-abstained entry\\
-\midrule
-Always-hard & Neither & None & Hard; no routing diagnostics or prediction\\
-Geometry rule & Original & Determines abstention only & Easy if both step thresholds pass, otherwise hard\\
-Reject-only + hard & Original & Original & Hard\\
-Routing-only & Reject becomes hard; defer unchanged & Original & Original P95 ordering\\
-P50-selection & Original & Original & P50 ordering with the same conservative-entry tie framework\\
-\method & Original & Original & Frozen P95 ordering and tie rule\\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-A prespecified 500-query feasible subset per robot contains 200 local and 100 from
-each other feasible family. Each forced entry is measured ten times. Five even
-interleaved repeats select the lowest empirical P95 among entries successful on all
-five; the five odd repeats evaluate that choice, and then the roles swap. Queries
-without a successful selection entry are reported separately. We measure preference
-stability, held-out cost relative to hard, and the fraction whose entry means differ
-by at most 0.15 ms. The last threshold is a descriptive near-equivalence diagnostic,
-not a trained parameter. No oracle choice feeds back into the method.
-
-\subsection{External solver under the same command contract}
-
-The external comparison uses official \texttt{trac\_ik\_lib} 2.2.0
-\cite{beeson2015tracik} in Speed mode.\footnote{Upstream source commit:
-\texttt{90162ac2ecc6ea8f88c6e99df6ee01efd217a3fb}.}
-Its KDL and nonlinear optimization workers run concurrently. The unmodified official
-sources are compiled with GNU C++ 9.5.0 and NLopt 2.7.1 behind a small C interface.
-The adapter uses the same URDF, base/tool chain, joint ordering, and previous-state
-initialization. KDL FK agrees with the public model below $7\times10^{-16}$ on
-100 configurations per robot.
-
-For every query, \texttt{setKDLLimits} intersects URDF bounds with the allowed
-one-frame joint interval. Both supplied chains have bounded revolute active joints,
-including UR5e's wide but finite bounds; they are not wrapped as continuous joints.
-The adapter separately supports genuine continuous variables using a local
-unwrapped search interval. Internal epsilon is $10^{-5}$ per Cartesian component
-with zero additional Twist tolerance, stricter than the public pose tolerances.
-A nonnegative solver return still requires the public verifier. Per-query bound
-updates and their internal solver reconstruction are included in timing; model
-loading is not. TRAC-IK FEV is unavailable under the internal definition and is
-not compared.
-
-All point results retain the fixed 5/20/100/400 ms search budgets. Curves count a
-success only when a verified command actually returns within the displayed elapsed
-time. The trajectory budget is selected independently on 120 old calibration
-queries per robot, maximizing success, then minimizing measured total time, then
-budget; both robots select 5 ms before point-test outcomes are opened.
-
-\subsection{Continuously feasible reference trajectories}
-
-Each robot has 40 new trajectories, ten each from smooth motion, a low-manipulability
-neighborhood, joint-limit approach and return, and high-curvature/faster motion.
-Every trajectory has 150 target frames at $\Delta t=0.02$ s. A reference joint path
-is generated first and converted to targets through FK. Geometric amplitude scaling
-enforces joint and one-step velocity constraints before evaluation; every reference
-transition passes the public verifier. Seeds and trajectory identities are new and
-fixed before comparison, with query-hash isolation recorded in the manifest.
-No method's success rate is used to retain or reject a path.
-
-Always-hard, routing-only, \method, and calibration-selected TRAC-IK start at the
-same reference initial configuration. Online calls receive no future reference
-joints, extra reference seed, or branch label. Each method then evolves its own
-state: acceptance updates the state, failure holds it, and targets advance through
-all 150 fixed indices. Reference feasibility proves the existence of a path, not
-recoverability from every state an online method might reach.
-
-Geometric completion requires acceptance at every frame. We separately report the
-fraction of calls accepted within their measured 20 ms interval and the number of
-trajectories accepted within 20 ms on every frame. A geometrically accepted late
-command still updates state in this kinematic sequence evaluation, but does not
-count as timely acceptance. Thus nominal $\Delta t$ does not establish real-time
-control at 50 Hz. Lost and gained completion UIDs are reported, not suppressed
-by requiring identical completion vectors.
-
-\subsection{Statistical units and preservation}
-
-Point uncertainty uses paired queries, retaining all three technical repetitions
-within each resampled query. Trajectory uncertainty uses complete paired
-trajectories, never 150 independent frames. We report ratios of total cost and
-success differences with 95\% percentile intervals from 4,000 paired,
-family-stratified bootstrap resamples. Frame quantiles are empirical whole-call
-quantiles; paired quantile intervals resample query clusters. These are descriptive
-intervals, without multiplicity-adjusted significance claims or a composite gate.
-
-The original results and source data are unchanged. A first incomplete Panda
-supplementary point run was interrupted after code inspection found a redundant
-P95 sorting operation in the control adapter. That partial run was excluded in
-full and preserved separately; no aggregate outcomes were inspected or used.
-The corrected controls perform one inference and only the ranking required by
-their definition. Fresh identities, calibration choices, the main method, and
-numerical settings remained fixed. The complete supplementary measurements and
-findings report precede this manuscript revision.
-
-\section{Results}
-
-The evidence proceeds from the allocation opportunity to direct mechanism controls
-and then to continuous execution. Original held-out results remain unchanged
-(Appendix~\ref{app:original}); the new analyses test what those aggregate gains mean.
-
-\subsection{RQ1: pathway differences and the stability of empirical winners}
-
-RQ1 asks whether pathway costs provide a stable opportunity for learned allocation,
-rather than merely different winners under noisy timing. Table~\ref{tab:samepopulation}
-compares all five choices on the same policy-validation queries. Starting at hard
-already removes much of the numerical prefix cost paid by easy. The learned policy
-is close to hard in numerical-plus-verification cost: 0.811 versus 0.811 ms on Panda,
-and 0.630 versus 0.630 ms on UR5e at the displayed precision.
-Historical pipeline means differ slightly, but do not include the deployed learned
-decision. These measurements therefore do not establish an end-to-end advantage
-for learned routing.
-
-\begin{table}[t]
-\centering\small
-\caption{\textbf{Same-population pathway comparison.} Times are milliseconds.
-\emph{Numerical} includes verification; \emph{label pipeline} additionally includes
-candidate preparation and the historical constant-risk profiling shell.
-The last measured column averages noisy per-query P95 estimates from five calls.
-Actual deployed routing overhead was not measured here (--) and is not imputed.
-The empirical oracle minimizes the observed label-pathway P95, not the separate
-numerical-cost component.}
-\label{tab:samepopulation}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llrrrrr}
-\toprule
-Robot & Choice & Queries & Mean numerical & Mean label pipeline & Mean query P95 & Deployment\\
-\midrule
-\input revision_generated/same_population_rows.tex
-\bottomrule
-\end{tabular}}
-\end{table}
-
-The ten-repeat diagnostic tests whether an empirical preference survives new
-measurements of the same input. Among queries with a successful entry in both
-selection folds, preference agreement is 41.61\% for Panda and 43.80\% for UR5e.
-Panda has 29 additional queries with no successful entry in either fold; they are
-not counted as stable successful preferences. The cross-fitted mean-time ratios
-relative to hard are 0.9978 and 1.0015, with both intervals spanning 1
-(Table~\ref{tab:crossfit}). Ten-repeat entry means are within 0.15 ms for 57.6\% and
-78.0\% of all diagnostic queries, respectively. The corresponding fractions for
-entry P95 are only 9.2\% and 23.6\%, illustrating how much less stable an upper
-quantile can be with few repeats.
-
-\begin{table}[t]
-\centering\small
-\caption{\textbf{Independent-fold empirical entry diagnostic.} Each robot has 500
-prespecified feasible queries and ten calls per entry. Even/odd groups select and
-evaluate separately, then swap. Stability uses queries with a successful choice in
-both folds; the near-equal mean fraction uses all 500. The held-out ratio includes
-candidate and forced-path costs, without learned routing overhead.}
-\label{tab:crossfit}
-\begin{tabularx}{\textwidth}{@{}lrrrY@{}}
-\toprule
-Robot & Two valid folds & Stable (\%) & Near-equal means (\%) & Held-out time / hard [95\% CI]\\
-\midrule
-\input revision_generated/oracle_rows.tex
-\bottomrule
-\end{tabularx}
-\end{table}
-
-Thus pathway prefixes have measurable costs, but low regret in this portfolio is
-also compatible with nearly equivalent entries and unstable empirical winners.
-RQ1 does not by itself establish a useful learned advantage beyond hard entry;
-RQ2 measures that advantage directly, including the cost of making the decision.
-
-\FloatBarrier
-\subsection{RQ2: learned entry choice, rejection, and P95 selection}
-
-RQ2 asks whether learned entry ordering improves actual computation over a strong
-fixed entry or a simple rule, and whether its P95 objective matters. The original
-point test preserved verified success while reducing FEV and P95 relative to the
-fixed easy-entry cascade (Appendix~\ref{app:originalpoints}). The supplementary
-comparison is more demanding: it uses a direct hard deployment baseline, exact
-matched inputs, and feasibility witnesses independently of all evaluated methods.
-
-All six internal controls achieve the same feasible-query verified success:
-94.92\% for Panda and 100\% for UR5e (Table~\ref{tab:suppoints}).
-All witness-feasible queries have zero learned false rejection. The 127 Panda
-queries that fail under the internal controls remain labeled feasible: a solver
-failure does not invalidate their witnesses. Removing early rejection makes no
-difference to feasible-point commands because no rejection occurs in this subset.
-
-\begin{table}[t]
-\centering\small
-\caption{\textbf{Six internal strategies on witness-feasible points.} There are
-2,500 paired queries per robot, with three interleaved calls each. Latency is in ms;
-success and timely acceptance use the same verifier. No witness-feasible query is
-rejected by the learned policy.}
-\label{tab:suppoints}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llrrrrrr}
-\toprule
-Robot & Method & Verified (\%) & Mean FEV & P50 & P95 & P99 & Within 20 ms (\%)\\
-\midrule
-\input revision_generated/point_internal_rows.tex
-\bottomrule
-\end{tabular}}
-\end{table}
-
-Neither full nor routing-only \method\ reduces feasible-point time relative to hard.
-Full mean time increases by 3.33\% on Panda and 29.32\% on UR5e;
-routing-only increases it by 3.34\% and 29.35\%.
-The paired full-minus-hard mean differences are 0.503 ms [0.486, 0.525]
-and 0.448 ms [0.440, 0.455]. FEV is nearly unchanged rather than reduced
-(Figure~\ref{fig:mechanism}; Table~\ref{tab:suppaired}).
-Full and the geometry or reject-only controls have very similar cost, with the
-mean-time ratio intervals spanning 1. Together with nearly unchanged numerical
-work, this is consistent with decision overhead outweighing saved prefixes:
-the simple rule still pays for the shared abstention predictor, whereas direct hard
-does not pay for unused routing diagnostics.
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=\textwidth]{revision_figures/internal_strategy_mechanisms.pdf}
-\caption{\textbf{Entry mechanisms on the same feasible queries.}
-Left: mean complete-call cost relative to direct hard; middle: mean internal FEV
-relative to hard. Error bars are paired, query-cluster 95\% bootstrap intervals.
-Right: empirical complete-call P95. The reference line at 1 identifies equal cost;
-different horizontal ranges reflect the robot-specific effect sizes.
-No constructed inexecutable points contribute to these panels.}
-\label{fig:mechanism}
-\end{figure}
-
-\begin{table}[t]
-\centering\small
-\caption{\textbf{Paired feasible-point effects.} Ratios below 1 favor the numerator.
-Intervals resample paired queries while retaining their three calls.}
-\label{tab:suppaired}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llll}
-\toprule
-Robot & Comparison & Mean time ratio [95\% CI] & Mean FEV ratio [95\% CI]\\
-\midrule
-\input revision_generated/point_paired_rows.tex
-\bottomrule
-\end{tabular}}
-\end{table}
-
-\paragraph{Does P95 selection add value?}
-
-P95-based selection reduces FEV relative to P50-based selection by 0.58\% on Panda
-and 1.86\% on UR5e, with unchanged success. Panda also shows a small mean-time
-reduction of about 0.024 ms; the UR5e mean-time interval spans zero difference.
-These are measurable numerical-work effects, not evidence that the method needs
-a mean-latency-trained alternative. The control uses the existing median prediction.
-The P95 and P99 ratio intervals both span 1 on both robots
-(Table~\ref{tab:p95ablation}), so this experiment does not resolve a distinct
-tail-latency advantage of P95 selection.
-
-\begin{table}[t]
-\centering\small
-\caption{\textbf{Direct P95-versus-P50 decision ablation.} Full \method\ divided by
-P50-selection, with identical success thresholds, P95 eligibility, abstention, and
-tie-rule framework. Query-cluster intervals retain all within-query repetitions.}
-\label{tab:p95ablation}
-\begin{tabular}{lll}
-\toprule
-Robot & Observed P95 ratio [95\% CI] & Observed P99 ratio [95\% CI]\\
-\midrule
-\input revision_generated/p95_ablation_rows.tex
-\bottomrule
+\caption{Nominal task-to-native pose mapping, identical for both robots.
+TRAC-IK columns give each component's additional bound; zero retains its
+$10^{-5}$ internal epsilon. DLS columns give separate norm stopping thresholds.
+The public contract remains \ev{contract.ep_mm} mm and
+\ev{contract.er_deg}$^\circ$ for every row.}
+\label{tab:mapping}
+\begin{tabular}{lrrll}\toprule
+Setting & Position (mm) & Orientation (rad) & Native set & Budget\\\midrule
+\input{generated/task_mapping_rows.tex}
 \end{tabular}
 \end{table}
 
-\paragraph{Separating rejection from entry choice.}
+\subsection{Dynamic joint and joint-rate bounds}
 
-On constructively inexecutable points, full \method\ rejects 44.0\% of Panda
-queries and 12.8\% of UR5e queries; the remaining requests defer to the full cascade.
-All methods return no accepted commands. Relative to hard, full \method\ saves
-44.4\% and 9.8\% of total time on this subset. Geometry, P50-selection, and
-reject-only controls execute the same rejection/defer pattern and nearly the same
-cost, whereas routing-only incurs the hard work avoided by rejection.
-Thus aggregate savings can arise without a learned entry advantage on feasible
-queries. These failed-request costs are reported separately rather than pooled
-into the main feasible-point comparison.
+Joint-range constraints alone cannot enforce an online displacement allowance.
+For every query, the interface forms
+\begin{equation}
+ \ell_i=\max(q_{\min,i},q_{t-1,i}-a_i),\quad
+ u_i=\min(q_{\max,i},q_{t-1,i}+a_i),\qquad
+ a_i=\dot q_{\max,i}\Delta t+\epsilon_v .
+\label{eq:dynamic}
+\end{equation}
+TRAC-IK receives this dynamic joint interval before numerical search.
+A kinematics wrapper restricts DLS clipping to the same interval.
+Both start from the actual previous configuration.
+A representable interior construction handles floating-point endpoints
+consistently, moving a computed endpoint inward when necessary to satisfy the
+original displacement comparison. It does not increase the verifier tolerance.
+The final total displacement is still checked: clipping one numerical iteration
+is not a substitute for constraining the command's displacement from $q_{t-1}$.
 
-\paragraph{External success--time position.}
+\subsection{Independent command verification}
 
-TRAC-IK occupies a substantially faster feasible-point operating region
-(Figure~\ref{fig:external}; Table~\ref{tab:externalpoints}).
-Its four budgets give Panda verified success of 97.83--97.93\%, above \method's
-94.92\%, and UR5e success of 99.947--99.960\%, slightly below \method's 100\%.
-Relative to the 5 ms configuration, full \method's mean-time ratios are
-59.31 [52.20, 66.38] and 8.50 [8.37, 8.63].
-The corresponding success differences are $-2.987$ percentage points
-[$-3.747$, $-2.253$] for Panda and $+0.053$ [0.000, 0.160] for UR5e.
-Longer search budgets change little on these feasible point inputs; they remain
-reported rather than selecting a test winner.
+A solver's convergence report summarizes its own computation, whereas
+Equation~\eqref{eq:contract} determines acceptance.
+The interface retains the raw configuration and native status, evaluates
+nonlinear forward kinematics, and checks every public condition independently.
+Only $A_t=1$ authorizes a state update, including when the native status is
+failure. Rejection records preserve the residuals and specific finite-value,
+pose, joint or rate reason. A failed candidate is not projected, retried or
+replaced by a reference witness after the measured call.
+The recorded time extends through this final verification.
 
-\begin{table}[t]
-\centering\small
-\caption{\textbf{Official TRAC-IK on the same feasible points.} Budget is search
-time in ms, not a bound on complete-call time. Mean and P50/P95/P99 use actual
-elapsed calls. External FEV is not equated with internal FEV.}
-\label{tab:externalpoints}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{lrrrrrrr}
-\toprule
-Robot & Budget & Verified (\%) & Mean ms & P50 & P95 & P99 & Within 20 ms (\%)\\
-\midrule
-\input revision_generated/point_external_rows.tex
-\bottomrule
-\end{tabular}}
-\end{table}
+\subsection{Outcome taxonomy and witness analysis}
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\textwidth]{revision_figures/trac_ik_success_time.pdf}
-\caption{\textbf{Verified commands returned within actual elapsed time.}
-All 2,500 witness-feasible queries and three calls per method contribute.
-The four external curves largely overlap; all four are retained. Late successes
-only enter at their actual elapsed-time threshold. The dotted 20 ms line is a
-reporting threshold, not a hard upper bound supplied by \method.}
-\label{fig:external}
+Figure~\ref{fig:taxonomy} separates the four native/task combinations.
+The internal-failure/task-accept cell measures disagreement in return semantics.
+Witness-confirmed misses require an additional existence check and can occur
+with either native status when no command is accepted.
+For repeated searches, we distinguish UIDs with any failed call, UIDs with all
+calls failed and the mean missed-call count per sweep.
+These quantities answer different questions about input coverage and search
+variability. None treats repeated calls as independent new queries.
+
+\begin{figure}[tb]
+\centering\includegraphics[width=\linewidth]{figure1_taxonomy.pdf}
+\caption{Solver-internal success and task admissibility form independent outcome
+axes. Deadline qualification is an additional test on accepted returns.
+A witness-confirmed miss requires a legal configuration for the exact input;
+a failed numerical search alone is insufficient. This schematic defines the
+taxonomy and does not imply that every empirical cell is nonempty.}
+\label{fig:taxonomy}
 \end{figure}
 
-RQ2 therefore separates the mechanisms: learned entry selection does not beat hard
-or the geometry rule on these feasible points, P95 selection saves a small amount
-of FEV without a resolved tail advantage, and rejection reduces failed-request work.
-The next test asks whether those savings survive when each accepted command changes
-the following query's state.
+\subsection{Adaptive computation as a secondary layer}
 
-\FloatBarrier
-\subsection{RQ3: feasible continuous paths and the source of trajectory savings}
+After specifying acceptance, an optional policy can allocate numerical effort.
+The frozen CG-HIK case study selects among entries of a shared numerical
+portfolio using query-conditioned cost predictions. Action-complete observations
+measure all entries on a common input, avoiding a manually assigned difficulty
+label. Predicted tail cost includes fallback work, and a shared terminal-success
+target reflects the common acceptance semantics.
+Reject avoids predicted futile computation; defer retains a conservative
+numerical path. Neither changes the public verifier.
 
-RQ3 asks whether lower cumulative computation corresponds to faster successful
-continuous solving. The original transition-rich evaluation reported lower
-aggregate time and FEV, with Panda completion 41/80 versus 40/80 for hard and UR5e
-34/80 for both. Splitting those same frozen records by completion outcome changes
-the interpretation of that total (Table~\ref{tab:olddecomposition};
-Figure~\ref{fig:decomposition}). Jointly completed paths are slower under \method:
-11.88\% on Panda and 12.45\% on UR5e. The jointly unsuccessful groups account for
-99.07\% and 101.31\% of net time savings, offsetting additional cost elsewhere.
-Panda's single gained completion contributes a further 1.52\%.
-These are exact descriptive allocations of observed cost, not estimates of a causal
-effect within outcome-selected groups.
+The empirical controls isolate direct hard entry, a geometric entry rule,
+reject-only followed by hard, routing without reject, median-cost selection
+and the full policy. This comparison tests whether entry ranking and failure
+avoidance justify their prediction overhead. It uses frozen historical records;
+the current study neither trains a policy nor adds one to the aligned native
+solvers.
 
-\begin{table}[t]
+\section{Experimental Protocol}
+\label{sec:protocol}
+
+\subsection{Robots, numerical implementations, and common conditions}
+
+We use the seven-joint Panda and six-joint UR5e with their original URDF geometry,
+joint order and per-joint limits. The public forward-kinematics and Jacobian
+backend is the repository's \texttt{URDFKinematics}; the native solver uses the
+matching KDL chain. Smoke checks confirm their pose agreement and the
+rotation-vector mapping. TRAC-IK is official version 2.2.0 in Speed mode with
+its original internal epsilon and two native search workers.
+The measured process uses the same Python 3.12.13 and NumPy 2.4.4 environment as
+the authoritative Panda trajectories, on an Intel Core i7-13700K workstation.
+BLAS and OpenMP thread counts are fixed to one. The Python scientific stack
+supports analysis and verification \cite{virtanen2020scipy};
+PyTorch and scikit-learn are used by the frozen allocation case study
+\cite{paszke2019pytorch,pedregosa2011sklearn}.
+No learned model is trained or changed in this study.
+
+Six TRAC-IK point configurations are fixed: strict, position-aligned,
+orientation-aligned and fully aligned at 5 ms; strict and fully aligned at
+20 ms. Two DLS configurations use strict or task pose stops with the same
+25-iteration cap. A fixed iteration cap is not an equal wall-time budget.
+Actual return-within-budget proportions are recorded instead of assuming
+that DLS is a 5 or 20 ms solver.
+
+\subsection{Witness-feasible and inexecutable point queries}
+
+For each robot we reuse the previously fixed set of \ev{sample.point}
+witness-feasible points and \ev{sample.inexecutable} constructed inexecutable
+points. The feasible families contain local, near-singular, near-limit and
+hard-feasible queries, with their original proportions.
+Every witness is checked under the exact input and public contract before
+measurement. The inexecutable targets exceed a conservative global reach
+bound obtained from URDF link translations; they are not labeled by solver
+failure. Their rejection and computation are reported separately.
+
+All settings receive identical targets, previous configurations and intervals.
+Point calls do not update the previous state. TRAC-IK has three interleaved
+search repeats for each input and configuration; deterministic DLS runs once.
+A predetermined shuffled order interleaves the eligible settings.
+The library's random search is retained, without claiming control of its
+internal random seed. Raw records include native status, returned configuration,
+all public checks, residuals, deadline outcome and timing components.
+
+For both DLS point settings, an observation wrapper records actual FK evaluations
+without changing numerical operations. It identifies main iterates and
+line-search evaluations separately. Offline verifier replay locates the first
+admissible main iterate, then counts the remaining iterations and evaluations
+before the strict solver stops. Both point settings pay the same logging
+instrumentation. Offline trace processing is excluded from solve latency;
+no unmeasured phase-specific time saving is inferred.
+
+\subsection{Contract-scale sensitivity}
+
+Before any sensitivity solve, we select \ev{sample.sensitivity} fixed witnessed
+queries per robot whose witnesses also pass the half-scale pose contract.
+Selection uses a fixed family allocation and UID ordering, not solver outcomes.
+The same inputs are evaluated at half, nominal and double position and
+orientation tolerances, keeping joint limits, velocity limits, velocity allowance,
+target poses, previous configurations and $\Delta t$ unchanged.
+Strict TRAC-IK 5 ms, fully aligned TRAC-IK 5 ms and task-aligned DLS are the only
+settings. Native bounds follow Equation~\eqref{eq:box} at every scale.
+The nominal contract remains primary; a success gained by changing the public
+contract is not labeled a same-contract algorithmic improvement.
+
+\subsection{Complete continuous trajectories}
+
+Panda's existing \ev{sample.trajectory} reference-feasible trajectories and all
+of their measured runs are used unchanged. The symmetric UR5e experiment uses
+\ev{sample.trajectory} new trajectories, ten each for smooth motion,
+near-singular motion, joint-limit return and high curvature.
+Each contains \ev{sample.frames} frames at $\Delta t=20$ ms.
+The same geometry-only generator first constructs a continuous reference
+joint path and then obtains targets through FK. Every reference transition
+passes the public contract; identities are fixed before solver outcomes.
+All trajectories are retained without success-based screening.
+
+Every setting starts from the same initial reference configuration.
+For each target it receives only that target and its own previous accepted
+state. Future reference joints are stripped from the online input.
+Accepted commands update the state; rejected commands hold it.
+All methods still process all target frames, without restarting on the
+reference branch. Four TRAC-IK configurations (strict/aligned at both budgets)
+each have three full repeats; each DLS setting has one.
+The new UR5e runs reuse the identical wrapper and timing scope of the prior
+Panda study. No point-trace logging is enabled in either robot's trajectory
+measurements.
+
+\subsection{Measurement, statistical units, and evidence use}
+
+Outer latency includes required input conversion, dynamic-bound construction
+and setup, numerical solving, final task verification and intervening interface
+costs. Initial library/chain loading and offline serialization are excluded.
+Point records separately retain conversion, bounds/setup, solve, verification
+and accounting remainder. Latency quantiles include failed returns; cumulative
+trajectory time includes every fixed target frame.
+Accepted position and orientation distributions are reported alongside success
+and cost. No failure, long call or unfavorable family is deleted or winsorized.
+
+The independent unit is the query UID for points and the complete trajectory UID
+for tracking. Search repeats are averaged within each unit before paired
+success-difference and mean/cumulative-cost comparisons.
+We use 4,000 paired, family-stratified percentile bootstrap resamples for
+95\% intervals. Frame quantiles and within-trajectory search-repeat variation
+are descriptive; frames and repeated calls are not independent inferential
+samples. Zero-width empirical success intervals at a ceiling do not bound
+failure probability on other workloads. Family effects are reported in full
+without multiple-comparison significance claims.
+
+The point inputs have been observed in earlier mechanism work, and the Panda
+trajectory outcomes predate the new supplementary experiment.
+The new UR5e input identities, mappings, budgets and analysis rules were fixed
+before its outcomes. This is a planned supplementary study with an authoritative
+historical arm, not a claim that all evidence is a fresh formal test.
+The historical allocation analysis retains its own frozen measurements and
+failure semantics. All new measurements were completed and published before
+manuscript reconstruction; no result triggered tuning or an additional solver.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{RQ1: How often do solver convergence and task admissibility disagree?}
+\label{sec:rq1}
+
+The first question is whether a native return flag correctly identifies commands
+that satisfy the public contract. The witnessed point population separates this
+question from uncertainty about whether an acceptable configuration exists.
+The complete status matrix is reported in Appendix~\ref{app:matrix};
+Table~\ref{tab:points} summarizes its task-level consequences. Each TRAC-IK
+setting has three calls per query, whereas each DLS setting has one.
+
+The largest observed disagreement is an internal failure that still returns an
+admissible command. Strict DLS exhibits this outcome on
+\ev{point.panda.dls_strict.internal_failure__task_accept} Panda queries
+(\ev{dls.panda.mismatch_pct}\%) and
+\ev{point.ur5e.dls_strict.internal_failure__task_accept} UR5e queries
+(\ev{dls.ur5e.mismatch_pct}\%). Its internal success rates are therefore substantially
+below its task-admissible rates. Accepting only a positive convergence flag would
+discard these valid numerical returns. Task-aligned DLS removes this semantic
+disagreement on the measured points, but the actual missed-admissible counts remain
+\ev{point.panda.dls_task.miss_uid} and \ev{point.ur5e.dls_task.miss_uid}.
+Changing the flag's interpretation and recovering a previously unavailable command
+are different effects.
+
+In contrast, strict and fully aligned TRAC-IK accept every witnessed nominal point
+in every repeat. Their internal and task outcomes agree on this population.
+Position-only alignment also retains all successes; orientation-only alignment has
+\ev{point.ur5e.trac_orientation_5ms.internal_failure__task_reject} failed call on
+\ev{point.ur5e.trac_orientation_5ms.miss_uid} UR5e query with a valid witness.
+Thus, the component arms
+recover no strict failures here. The point data do not identify a position-driven
+or orientation-driven share of the later trajectory gains.
+There are no internal-success/task-reject calls in the new nominal point arms.
+The taxonomy accommodates that outcome without requiring every cell to be occupied.
+
+The DLS traces explain a separate computational mismatch.
+Of the \ev{dls.panda.admissible_queries} Panda and
+\ev{dls.ur5e.admissible_queries} UR5e strict-DLS queries that reach an admissible
+main iterate, \ev{dls.panda.positive_excess_queries} and
+\ev{dls.ur5e.positive_excess_queries} continue iterating.
+The median is \ev{dls.panda.median_excess_iterations} excess iteration and the
+P95 is \ev{dls.panda.p95_excess_iterations} for both robots
+(Appendix~\ref{app:trace}). These are directly observed excess iterations after
+task admissibility, not an inference from separate runtimes.
+TRAC-IK does not expose a comparable trace.
+
+All constructed inexecutable points are rejected by every setting, with no false
+acceptance. Independently replaying the point and trajectory returns finds
+\ev{verification.violations} accepted contract violations.
+The observed disagreement is therefore concentrated in strict DLS's interpretation
+of otherwise admissible returns; the next question is whether native tolerance
+alignment reduces computation under unchanged public acceptance.
+
+\begin{table}[tb]
 \centering\small
-\caption{\textbf{Post-hoc decomposition of the original frozen trajectories.}
-All fixed-length frames remain included. Four groups reconstruct the total time
-and FEV exactly. A contribution above 100\% offsets extra cost in other groups;
-negative contributions increase total computation.}
-\label{tab:olddecomposition}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llrrrrr}
-\toprule
-Robot & Completion group & Paths & Hard time (s) & CG-HIK time (s) & Hard / CG-HIK FEV & Net savings (\%)\\
-\midrule
-\input revision_generated/old_decomposition_rows.tex
-\bottomrule
-\end{tabular}}
+\setlength{\tabcolsep}{3pt}
+\caption{Witness-feasible point queries, \ev{sample.point} independent queries per
+robot. Internal and verified columns are percentages. Miss is the number of UIDs
+with at least one missed-admissible call. TRAC-IK has three within-query repeats;
+DLS has one. All latency columns are milliseconds and include the final verifier.
+DLS point timings include the same trace instrumentation in both settings.}
+\label{tab:points}
+\begin{tabular}{llrrrrrrr}\toprule
+Robot & Setting & Internal & Verified & Miss & Mean & P50 & P95 & P99\\\midrule
+\input{generated/task_point_rows.tex}
+\end{tabular}
 \end{table}
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\textwidth]{revision_figures/cost_sources_decomposition.pdf}
-\caption{\textbf{Where the original cumulative-time savings occur.}
-Bars show hard minus \method\ time, summed over all frames in each trajectory group.
-Negative bars are retained. Most savings lie in paths neither method completes,
-whereas jointly completed paths pay additional time.
-This outcome-conditioned figure is descriptive, not causal.}
-\label{fig:decomposition}
+\subsection{RQ2: Does contract alignment improve task-level success and computation?}
+\label{sec:rq2}
+
+With acceptance held fixed, does using the available pose tolerance reduce work,
+and does any gain persist across contracts and solver budgets?
+Figure~\ref{fig:points} shows all prespecified point settings.
+On the nominal witnessed points, fully aligned TRAC-IK at 5 ms reduces mean
+whole-call time by
+\ev{point.panda.trac_task_5ms.contrast.saving_pct}\% on Panda and
+\ev{point.ur5e.trac_task_5ms.contrast.saving_pct}\% on UR5e, while preserving complete
+success. The paired mean-cost ratios are
+\ev{point.panda.trac_task_5ms.contrast.time_ratio} and
+\ev{point.ur5e.trac_task_5ms.contrast.time_ratio}, respectively
+(brackets denote 95\% intervals). These are modest interface-level savings on a
+population that strict TRAC-IK already solves reliably.
+
+Partial alignment has no uniform cost advantage. On Panda, position-only and
+orientation-only cost ratios are
+\ev{point.panda.trac_position_5ms.contrast.time_ratio} and
+\ev{point.panda.trac_orientation_5ms.contrast.time_ratio}.
+The corresponding UR5e ratios are
+\ev{point.ur5e.trac_position_5ms.contrast.time_ratio} and
+\ev{point.ur5e.trac_orientation_5ms.contrast.time_ratio}.
+Tolerance dimensions interact with numerical search, so the effects of the
+component arms need not add to the fully aligned effect.
+Increasing strict TRAC-IK's budget to 20 ms adds no point successes.
+Constructed inexecutable requests still consume approximately the search budget
+under either mapping; their cost is reported separately in the source tables.
+
+Task-aligned DLS preserves the same point-level acceptance sets while reducing
+mean time by \ev{point.panda.dls_task.contrast.saving_pct}\% and
+\ev{point.ur5e.dls_task.contrast.saving_pct}\%.
+P95 falls from \ev{point.panda.dls_strict.p95} to
+\ev{point.panda.dls_task.p95} ms on Panda and from
+\ev{point.ur5e.dls_strict.p95} to \ev{point.ur5e.dls_task.p95} ms on UR5e.
+The direct trace evidence supports attributing this reduction to earlier stopping,
+within the instrumentation scope of these measurements. Absolute DLS and native
+TRAC-IK times also reflect different implementations and are not equal-time-budget
+comparisons.
+
+The saved work accompanies larger legal errors. For fully aligned TRAC-IK at
+5 ms, accepted position P95 rises from
+\ev{point.panda.trac_strict_5ms.position_p95} to
+\ev{point.panda.trac_task_5ms.position_p95} mm on Panda and from
+\ev{point.ur5e.trac_strict_5ms.position_p95} to
+\ev{point.ur5e.trac_task_5ms.position_p95} mm on UR5e.
+Accepted orientation P95 becomes
+\ev{point.panda.trac_task_5ms.orientation_p95}$^\circ$ and
+\ev{point.ur5e.trac_task_5ms.orientation_p95}$^\circ$.
+The full error distributions, including maxima and DLS returns, accompany the
+source tables. These errors spend an existing task allowance; the final nominal
+limits have not changed.
+
+\begin{figure}[tb]
+\centering\includegraphics[width=\linewidth]{figure2_point_alignment.pdf}
+\caption{Nominal witnessed points for both robots. Verified success and whole-call
+P95 are shown separately for every prescribed setting. The near-ceiling success
+bars should be read with the exact counts in Table~\ref{tab:points}.
+The numbers 5 and 20 label TRAC-IK search budgets in milliseconds; DLS uses a fixed
+iteration cap. Bars are descriptive call summaries, not independent-call inference.}
+\label{fig:points}
 \end{figure}
 
-\paragraph{Reference feasibility and completion.}
-
-The supplementary reference paths remove uncertainty about the existence of a
-continuous feasible solution. They do not eliminate method-specific branch evolution.
-\method\ and routing-only each complete 34/40 Panda paths, versus 37/40 for hard;
-all three complete the same 36/40 UR5e paths (Table~\ref{tab:suptrajectories}).
-Panda loses three hard-successful paths and gains none.
-Its completion-rate difference is $-7.5$ percentage points [$-15.0$, 0.0].
-No accepted command violates the public contract.
-
-\begin{table}[t]
-\centering\small
-\caption{\textbf{New continuously feasible reference paths.}
-Each robot has 40 trajectories of 150 frames. Timely completion requires every frame
-to return an accepted command within 20 ms; geometric completion has no such
-timing requirement. Cumulative time includes all calls, including failures and
-late returns. Frame latencies are milliseconds.}
-\label{tab:suptrajectories}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llrrrrrrr}
-\toprule
-Robot & Method & Complete & Timely & Total (s) & Mean FEV & P50 & P95 & P99\\
-\midrule
-\input revision_generated/trajectory_rows.tex
-\bottomrule
-\end{tabular}}
-\end{table}
-
-Full \method\ has lower observed Panda cumulative time, 55.346 to 39.003 s,
-but this accompanies the three lost completions. Its total-time ratio is
-0.7047 [0.3147, 2.4703], and its FEV ratio is 0.7309 [0.3410, 1.9626].
-UR5e preserves completion but takes longer overall, 15.950 to 17.021 s:
-time ratio 1.0671 [0.9262, 1.2859], FEV ratio 0.9062 [0.7859, 1.0021].
-The wide trajectory intervals reflect a few expensive paths rather than thousands
-of independent frame observations. P50 and P95 increase on both robots; P99 decreases
-in the full method. Routing-only takes more total time than hard on both robots
-(Table~\ref{tab:trajpaired}).
-
-\begin{table}[t]
-\centering\small
-\caption{\textbf{Paired reference-trajectory effects.}
-All ratios retain the same 40 full trajectory units per robot.
-Completion differences are percentage points, not frame-level differences.}
-\label{tab:trajpaired}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{lllll}
-\toprule
-Robot & Comparison & Total time ratio [95\% CI] & FEV ratio [95\% CI] & Completion difference [95\% CI]\\
-\midrule
-\input revision_generated/trajectory_paired_rows.tex
-\bottomrule
-\end{tabular}}
-\end{table}
-
-\paragraph{Successful-path work and family structure.}
-
-Among jointly completed reference paths, full \method's cumulative time increases
-by 18.23\% on Panda (34 paths) and 32.12\% on UR5e (36 paths).
-Panda FEV decreases from 16,607 to 15,108 on this group, but its fixed runtime
-overhead offsets that numerical-work reduction; UR5e FEV changes from 16,042 to
-16,052. In the Panda jointly failed group, time savings of 27.641 s offset the
-extra 1.500 s on jointly completed paths and 9.799 s on the three lost completions.
-On UR5e, failed-group savings of 1.303 s do not offset 2.374 s extra on the
-jointly completed group.
-
-The family results identify a positive local exception rather than a uniform effect
-(Table~\ref{tab:supfamilies}). Panda joint-limit-return retains 10/10 completions
-while reducing time by 5.58\% and FEV by 25.53\%; routing-only also saves time there.
-In contrast, Panda near-singular completion falls from 8/10 to 5/10 and cumulative
-time increases. UR5e near-singular completion is unchanged but computation increases.
-The smooth family's large Panda aggregate saving includes a failed path and should
-not be interpreted as uniformly faster completed smooth motion.
-
-\begin{table}[t]
-\centering\small
-\caption{\textbf{Predefined reference-trajectory families.} Each row has ten
-trajectories. Paired entries are hard / full \method. The last column reports
-TRAC-IK's completion count and all-frame cumulative seconds. Full four-method
-family records and paired intervals accompany the source tables.}
-\label{tab:supfamilies}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llrrrr}
-\toprule
-Robot & Family & Completed H / CG & Time H / CG (s) & FEV H / CG & TRAC: completed / seconds\\
-\midrule
-\input revision_generated/family_rows.tex
-\bottomrule
-\end{tabular}}
-\end{table}
-
-\paragraph{Branch evolution and the role of rejection.}
-
-All three lost Panda paths first return different, valid commands at frame 0:
-easy-entry \method\ and hard differ by approximately 0.00165--0.00187 rad in the
-most changed joint. At the first failures, frames 96, 120, and 125 (zero-indexed),
-their previous states differ from hard by approximately 0.078--0.087 rad.
-Each failure follows the complete easy--medium--hard cascade, not an early reject.
-Removing rejection loses the same three paths. The records therefore identify
-closed-loop sensitivity to accepted branch evolution, rather than rejection of an
-otherwise rescued command, as the relevant mechanism in these examples.
-
-Across all reference paths, full \method\ saves 45.90\% of Panda and 8.83\% of UR5e
-time relative to routing-only, with identical completion sets. At every full-method
-reject event (133 Panda and 68 UR5e frames), routing-only receives the identical
-complete query but its hard call does not return a verified command.
-This paired observation establishes avoided unsuccessful work for those calls,
-not a proof that no feasible command exists from that state.
-
-\paragraph{External continuous performance and deadlines.}
-
-Calibration-selected 5 ms TRAC-IK completes 36/40 Panda and 39/40 UR5e reference
-paths, using 3.040 and 1.699 s in total (Figure~\ref{fig:reference}).
-Full \method's total-time ratios relative to it are 12.83 [6.44, 21.91] and
-10.02 [7.08, 14.87]. Completion sets are not interchangeable: on Panda,
-\method\ loses four TRAC-IK-successful paths but completes two TRAC-IK failures;
-on UR5e it loses three and gains none. Thus the external comparison shows different
-coverage as well as a large implementation-level speed difference.
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=\textwidth]{revision_figures/feasible_reference_trajectories.pdf}
-\caption{\textbf{Completion and all-frame cost on feasible reference paths.}
-Four methods begin from the same initial reference state and then evolve independently.
-The right panels include all 150 calls per path, including unsuccessful paths.
-TRAC-IK uses the budget selected on old calibration, not a point-test-selected winner.}
-\label{fig:reference}
+\begin{figure}[tb]
+\centering\includegraphics[width=\linewidth]{figure3_contract_sensitivity.pdf}
+\caption{Contract sensitivity on the same \ev{sample.sensitivity} witnessed queries
+per robot at every scale. Only the two pose tolerances change. Missed-call rates,
+whole-call P95, and accepted position P95 divided by the applicable tolerance are
+shown. Overlapping zero-miss curves indicate complete observed success; they do
+not establish zero population failure probability. Orientation distributions are
+included in the accompanying source data.}
+\label{fig:scales}
 \end{figure}
 
-Geometric completion and timely completion also differ. Panda hard completes
-37 trajectories geometrically but only 36 within 20 ms on every frame;
-full \method\ completes 34 under either definition. On UR5e the corresponding
-internal counts are all 36. TRAC-IK's 36 Panda and 39 UR5e complete paths are
-also timely throughout. Frame-level timely acceptance is 95.95\% / 95.75\%
-for Panda/UR5e hard and 94.62\% / 95.75\% for full \method.
-The methods still process every fixed target; late calls are not truncated.
+Across the fixed contract scales, strict and fully aligned TRAC-IK remain fully
+successful (Figure~\ref{fig:scales}). Panda task-aligned DLS misses
+\ev{sensitivity.panda.dls_task.0.5.miss_uid} queries at
+the half-scale contract and none at nominal or double scale; UR5e misses none.
+Its mean times decrease as the permitted pose sets expand.
+Fully aligned TRAC-IK also generally obtains a larger relative mean-cost advantage
+at larger scales, although individual quantiles are not strictly monotonic.
+The scale study therefore supports a computational interpretation, not a broad
+claim of tolerance-dependent recovery for TRAC-IK on these points.
+Alignment reduces work under a fixed nominal contract in both implementations,
+but whether earlier accepted commands sustain a continuous trajectory requires
+a closed-loop test.
 
-RQ3 is therefore not supported as a general successful-trajectory acceleration
-claim: the witnessed paths expose Panda completion losses and UR5e time overhead,
-alongside a real but localized joint-limit benefit. Combined with the original
-decomposition, these results locate the dominant aggregate savings in failure
-handling and motivate a more specific interpretation of learned allocation.
+\subsection{RQ3: Does the effect persist in trajectories, and when is adaptive computation useful?}
+\label{sec:rq3}
 
-\FloatBarrier
+A faster admissible point return is useful online only if the resulting sequence
+continues to meet the contract. We therefore compare complete trajectories with
+each setting feeding back its own last accepted command. Table~\ref{tab:trajectories}
+and Figure~\ref{fig:trajectories} retain every target frame and every planned
+search repeat.
+
+At 5 ms, Panda TRAC-IK completion increases from
+\ev{trajectory.panda.trac_strict_5ms.completion} to
+\ev{trajectory.panda.trac_task_5ms.completion} out of
+\ev{sample.trajectory} per sweep.
+UR5e increases from \ev{trajectory.ur5e.trac_strict_5ms.completion} to
+\ev{trajectory.ur5e.trac_task_5ms.completion}.
+No strict-completed UID is lost. The paired completion-rate differences are
+\ev{trajectory.panda.trac_task_5ms.contrast.success_pp} percentage points for Panda
+and \ev{trajectory.ur5e.trac_task_5ms.contrast.success_pp} for UR5e.
+Cumulative solver time decreases by
+\ev{trajectory.panda.trac_task_5ms.contrast.saving_pct}\% and
+\ev{trajectory.ur5e.trac_task_5ms.contrast.saving_pct}\%;
+paired cost ratios are \ev{trajectory.panda.trac_task_5ms.contrast.time_ratio} and
+\ev{trajectory.ur5e.trac_task_5ms.contrast.time_ratio}.
+The intervals reflect independent trajectory variation, not thousands of
+independent frames.
+
+Larger search budgets do not substitute for the mapping.
+Strict TRAC-IK at 20 ms completes the same number of trajectories as strict 5 ms
+on both robots, while spending more time on unsuccessful requests.
+Aligned 20 ms sometimes completes more Panda paths than aligned 5 ms, but raises
+cumulative time; UR5e completion is unchanged.
+Whole-trajectory deadline success is separately listed in
+Table~\ref{tab:trajectories}. Occasional late frames make it differ from geometric
+completion even when the nominal sampling interval is 20 ms.
+
+The family analysis localizes the gains rather than hiding them in a total.
+Panda's 5 ms recovery is confined to near-singular paths.
+UR5e gains \ev{family.ur5e.smooth.gained} smooth and
+\ev{family.ur5e.high_curvature.gained} high-curvature path, while its near-singular
+completion remains unchanged. Joint-limit-return UR5e time changes little, and
+Panda high-curvature time does not improve.
+Figure~\ref{fig:families} and Appendix~\ref{app:family} include every family.
+
+\begin{table}[tb]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Complete online trajectories. Each robot has \ev{sample.trajectory}
+independent paths with \ev{sample.frames} targets each. Complete and deadline columns
+give counts per planned sweep; the latter requires every frame to be admissible
+and returned within 20 ms. Frame is the verified percentage. Time is cumulative
+seconds per full sweep, averaged over the three TRAC-IK sweeps. Latency quantiles
+are in milliseconds. Panda measurements are the unchanged authoritative prior runs.}
+\label{tab:trajectories}
+\begin{tabular}{llrrrrrrr}\toprule
+Robot & Setting & Complete & Deadline & Frame & Time & P50 & P95 & P99\\\midrule
+\input{generated/task_trajectory_rows.tex}
+\end{tabular}
+\end{table}
+
+\begin{figure}[p]
+\centering\includegraphics[width=.96\linewidth]{figure4_trajectories.pdf}
+\caption{Continuous online operation. Columns separate robots; rows report
+geometric completion, cumulative cost, frame admissibility and latency quantiles.
+Dots on completion bars show the planned search repeats. In the bottom row,
+increasing marker sizes denote P50, P95 and P99; connecting segments only group
+the three quantiles of one setting. All fixed target frames contribute to cost.
+UR5e's lower DLS-aligned completion is retained alongside its lower cost.}
+\label{fig:trajectories}
+\end{figure}
+
+\begin{figure}[tb]
+\centering\includegraphics[width=\linewidth]{figure5_family_effects.pdf}
+\caption{Fully aligned versus strict TRAC-IK at 5 ms, by trajectory family.
+Intervals resample paired trajectory UIDs within the stated family.
+Annotations count UIDs with increased/decreased completion fractions across repeats,
+not independent new paths; Panda's gains include a partial search-repeat recovery.
+The reference line denotes unchanged cumulative cost.}
+\label{fig:families}
+\end{figure}
+
+DLS exposes an important boundary. On Panda, both stopping rules complete
+\ev{trajectory.panda.dls_task.completion} paths, and task alignment reduces cumulative
+time by \ev{trajectory.panda.dls_task.contrast.saving_pct}\%.
+On UR5e, completion falls from \ev{trajectory.ur5e.dls_strict.completion} to
+\ev{trajectory.ur5e.dls_task.completion}, losing
+\ev{trajectory.ur5e.dls_task.contrast.lost} strict-completed paths despite saving
+\ev{trajectory.ur5e.dls_task.contrast.saving_pct}\% of cumulative computation.
+The completion difference is
+\ev{trajectory.ur5e.dls_task.contrast.success_pp} percentage points.
+The losses span smooth, near-singular and joint-limit-return families.
+Both settings still submit only admissible commands. Earlier stopping therefore
+changes more than time spent on the current query: it changes the configuration
+presented to subsequent queries. These trajectories do not isolate the cause of
+each failure or establish infeasibility from the failed setting's state.
+
+\paragraph{The residual role of computation allocation.}
+The frozen CG-HIK case study asks whether additional entry selection compensates
+for its own overhead. Table~\ref{tab:allocation} uses historical paired point
+measurements, not newly routed calls to the aligned solvers.
+On witnessed points, full CG-HIK matches direct hard-entry success but increases
+mean time by \ev{allocation.panda.full_hard.time_increase_pct}\% on Panda and
+\ev{allocation.ur5e.full_hard.time_increase_pct}\% on UR5e.
+Routing-only is also slower, and a geometric entry rule is close to the full
+policy. Selecting by predicted P95 rather than P50 reduces function evaluations
+by \ev{allocation.panda.p95_p50.fev_reduction_pct}\% and
+\ev{allocation.ur5e.p95_p50.fev_reduction_pct}\%, but its P95 and P99 ratio
+intervals include unity on both robots.
+
+Post-hoc decomposition of the original transition-rich workload assigns
+\ev{allocation.panda.joint_failure_share}\% and
+\ev{allocation.ur5e.joint_failure_share}\% of net time savings to paths neither
+method completed. A share above one hundred percent means that savings in that
+group offset additional cost elsewhere. Independently witnessed reference paths
+likewise provide no universal successful-tracking advantage for learned routing.
+Reject-only controls show that avoiding unsuccessful numerical work is useful
+on failure-heavy requests. The historical external TRAC-IK comparison is much
+faster than this learned/numerical portfolio; its documented floating-point
+endpoint issue remains an implementation caveat, not a newly attributed
+tolerance-alignment benefit.
+
+Taken together, continuous trajectories support the aligned TRAC-IK interface on
+both tested robots while revealing a DLS stopping-rule trade-off that points alone
+miss. The allocation evidence favors paying for a secondary decision layer only
+when the remaining unsuccessful-solve cost is large enough to justify it.
+
+\begin{table}[tb]
+\centering\small
+\caption{Secondary allocation case study on the same historical witnessed point
+population. Ratios compare the named policies; brackets are paired query-level
+95\% intervals. The success difference is in percentage points.
+Geometry and reject-only controls retain the same reject/defer predictor.
+These are not new measurements of a router added to aligned TRAC-IK or DLS.}
+\label{tab:allocation}
+\begin{tabular}{llrrr}\toprule
+Robot & Contrast & Mean time ratio & FEV ratio & Success diff.\\\midrule
+\input{generated/task_allocation_rows.tex}
+\end{tabular}
+\end{table}
+
 \section{Discussion}
+\label{sec:discussion}
 
-The supplementary evidence separates three questions often compressed into one
-runtime comparison: whether an entry avoids numerical work, whether its decision
-overhead is repaid, and whether accepted commands preserve later recoverability.
-The original aggregate gains are real under their recorded protocols, but their
-dominant source differs from the stronger successful-routing interpretation.
+\subsection{A return code answers a different question from a task verifier}
 
-\subsection{Allocation opportunity is not the same as learned advantage}
+A native convergence flag describes whether a numerical procedure met its
+configured conditions. The public verifier describes whether its returned
+configuration meets the command contract. Strict DLS demonstrates the practical
+difference: many negative flags accompany legal returns, and its observed
+iteration traces show substantial work after admissibility.
+TRAC-IK's agreement on the witnessed point population is equally informative.
+An explicit taxonomy helps identify when disagreement matters; it does not
+require disagreement to be common in every solver.
 
-Action-complete data are useful because they expose the cost of every available
-entry under a common command contract. They also expose when the allocation problem
-offers little headroom. Fixed hard is close to the empirical oracle on the matched
-population, and cross-fitting does not reveal a stable average improvement beyond it.
-A low router regret can therefore arise from near-equivalent options rather than
-accurate identification of a uniquely cheaper path.
+Witnesses strengthen failure interpretation only when they refer to an identical
+input. The point dataset supplies that comparison directly.
+Reference paths in the trajectory study supply a weaker existence statement:
+they verify the reference sequence, not every state visited by another solver.
+Accordingly, improved closed-loop completion is evidence about the interface
+and its induced trajectory, while individual failures remain numerical outcomes
+unless an exact-input witness has been saved.
 
-The direct controls reinforce this reading. On feasible point inputs, full,
-geometry, and reject-only variants have similar cost, and all pay more than direct
-hard. The fixed cascade's existing early stopping already makes numerical work
-query dependent; learned allocation must improve on that conditional execution,
-not receive credit for it. P95 selection produces a small FEV benefit over P50
-selection, but the measured tail intervals do not establish its necessity.
-Predicting a tail cost remains a reasonable design objective whose incremental
-benefit must be demonstrated, rather than inferred from the objective itself.
+\subsection{Alignment can remove work, but earlier acceptance changes feedback}
 
-\subsection{Failure handling can dominate aggregate savings}
+The DLS trace supplies direct evidence for excess iterations after task
+admissibility. Allowing termination at the public pose threshold reduces that
+work on both point populations. Fully aligned TRAC-IK has smaller point-level
+cost benefits and larger continuous-trajectory benefits. A longer strict search
+budget does not recover the same completions, which argues against attributing
+the trajectory difference solely to too little wall time. Because its internal
+search path is not observed, the TRAC-IK measurements establish outcomes rather
+than a count of unnecessary internal iterations.
 
-Rejecting a request likely to exhaust the portfolio can avoid much more work than
-skipping a short numerical prefix. The old trajectory decomposition and the new
-full-versus-routing-only comparison both identify this mechanism. This is a useful
-form of resource allocation: no command is issued, and expensive unsuccessful work
-is avoided. It is distinct from accelerating a task that the solver completes.
+The UR5e DLS result limits the interpretation of earlier stopping.
+An admissible set can contain configurations with different subsequent tracking
+behavior. Stopping at its first reached point changes the feedback state and
+may preserve less useful pose accuracy or joint-space geometry for the next
+target. The present comparison changes those quantities together; it does not
+identify either as the sole cause. Thus, contract-aware acceptance is a sound
+interface requirement, but choosing the earliest admissible iterate is not
+guaranteed to preserve whole-trajectory completion. The difference between the
+two robots is part of the finding: contract mismatch and the benefit of its
+correction are robot-, solver- and workload-dependent.
 
-The distinction is quantitative here. Original jointly completed paths take longer
-under \method, and the new jointly completed groups again pay additional wall time.
-Panda joint-limit-return shows that successful-solve numerical savings do occur, but
-the overall benefit is not uniform. Every-query candidate preparation and diagnostic
-inference impose a fixed cost that a small reduction in FEV may not repay.
-The correct comparison is the full returned-command pathway, with success and
-failure handling reported alongside its cumulative cost.
+\subsection{Using a task allowance is not loosening the final task}
 
-\subsection{A verified current command need not preserve future recovery}
+The strict/aligned comparisons retain identical public position, orientation,
+joint and rate tests. Task-aligned returns have larger residuals because they
+use an allowance already present in that contract. Reporting those distributions
+makes the precision--computation trade-off visible without treating all accepted
+commands as equally accurate.
+For an application that requires tighter pose accuracy, the correct response
+is a tighter public contract and a corresponding native mapping, not an
+undocumented strict threshold inside one baseline.
 
-The verifier certifies the current pose, joint, and velocity conditions. It does not
-certify that the resulting branch is favorable for later targets. The three lost
-Panda reference paths make this distinction observable: different valid first
-commands precede different later states, and the learned-entry paths eventually
-exhaust the same robust stages that still succeed from hard's state. Disabling
-rejection does not restore those completions.
+The sensitivity study makes that distinction explicit. It changes the public
+pose contract in separate, prespecified arms while preserving the same witnessed
+inputs and motion limits. Increasing the permitted pose set generally reduces
+aligned computation, but the nominal point TRAC-IK success ceiling leaves no
+recovery trend to estimate. Moreover, the inscribed native box may exclude
+legal norm-ball residuals. Conservativeness protects the interpretation of
+native bounds; it does not make the two admissible sets equivalent or ensure
+that the solver finds all legal commands.
 
-Development-only temporal shortcuts likewise produced long runs of inexpensive
-local solving but showed branch-dependent recovery and inconsistent cross-robot
-behavior. These observations motivate examining the whole closed-loop command
-sequence even for a policy that makes a fresh decision at each query. They are
-mechanism observations, not an additional main method or a new temporal experiment.
+\subsection{Allocation should be judged after the numerical interface}
 
-\subsection{Practical position relative to an external solver}
+The historical allocation study shows why aggregate speed alone can mislead
+solver-design decisions. Avoiding futile fallback work can save considerable
+time even when successful paths do not become faster. A learned entry policy
+can also reduce numerical evaluations yet lose that saving to inference and
+interface overhead. These are useful distinctions for engineering a service
+that processes both feasible and failure-heavy requests.
 
-The TRAC-IK comparison changes the deployment interpretation. Under the tested
-exact-kinematics contract it generally returns feasible commands much faster than
-the learned-proposal portfolio, and its new reference-path completion exceeds
-full \method\ on both robots. \method\ retains a small UR5e point-success advantage
-and completes two Panda paths missed by TRAC-IK, so the solution sets are not
-identical. Those differences do not establish a general cost advantage.
-
-This comparison includes implementation as well as numerical choices: native
-parallel TRAC-IK and the Python/PyTorch portfolio have different execution costs.
-For an application choosing between these measured systems, that cost is relevant.
-For an algorithmic attribution, the six shared-solver controls are the cleaner
-comparison. Taken together, they position \method\ as an interpretable study of
-learned portfolio allocation and failure handling, not as a demonstrated replacement
-for a mature general numerical IK solver.
+For the measured portfolio, complex routing does not generally accelerate
+successful IK, and simple entry controls are competitive. Reject remains useful
+when unsuccessful numerical work is expensive. The current native comparison
+does not directly measure a router added to an aligned solver, so its marginal
+value in that setting is an empirical boundary rather than a new measured
+speedup. The supported ordering is nevertheless concrete: first establish a
+common command contract, configure the numerical interface to use it, and then
+compare the remaining failed-request cost with the full overhead of any
+adaptive decision. Better configuration of a mature solver is an engineering
+result, not a reason to rename that solver as a new algorithm.
 
 \section{Limitations}
+\label{sec:limitations}
 
-The command contract uses exact URDF forward kinematics and Jacobians. It excludes
-collision, contact, dynamics, torque, sensing, tracking, acceleration, and jerk.
-No physics simulator or physical robot is stepped. Zero accepted-contract violations
-mean consistency with these explicit kinematic conditions, not universal safety.
+The study uses exact software kinematics on two manipulators. It excludes
+collision checking, dynamics, contact, torque limits, calibration uncertainty
+and physical controller behavior. Geometric admissibility under the stated
+contract is not physical safety certification. The 20 ms deadline is an
+evaluation endpoint; nominal sampling at that interval does not establish
+hard real-time control.
 
-A feasible reference path establishes existence from its own sequence of states.
-Methods can leave that branch, so later frame inputs differ even under the same
-target index. Only the point study holds complete inputs fixed throughout.
-Outcome-conditioned trajectory groups describe observed cost and do not constitute
-randomized causal subsets.
+TRAC-IK and the existing Adaptive DLS are the only newly measured solvers.
+Their native acceptance regions differ, with the component box conservatively
+approximating a norm ball. Search budgets and iteration caps are not equivalent
+resources. Absolute latency depends on hardware, native/Python implementation,
+threading, operating-system scheduling and the shared workstation.
+Both DLS point settings include trace logging, whereas trajectories use the
+same uninstrumented wrapper across robots.
 
-The study uses two robot-specific models and predetermined supplementary families,
-not a prevalence-weighted deployment sample or cross-robot transfer test.
-Forty trajectories per robot and ten per family provide limited precision when a
-few paths dominate cumulative time. Paired bootstrap intervals preserve this
-trajectory dependence but do not establish distribution-free success guarantees.
-Five-repeat empirical P95 estimates are noisy; the independent-fold diagnostic
-reduces selection bias without turning them into a true optimal-cost oracle.
-
-Latency depends on the recorded hardware, synchronization, and implementations.
-TRAC-IK uses Speed mode, its stated internal tolerance, and per-query limit updates;
-a different configuration is a different comparison. Some nonnegative TRAC-IK
-returns fail the common velocity check and remain failures: at the 5 ms point
-budget there are 157 such Panda calls and three UR5e calls, plus one UR5e search
-failure. The raw records retain those reasons. External FEV is not comparable.
-No method's nominal command interval is treated as a measured real-time guarantee.
-
-The frozen abstention rule also leaves many constructively inexecutable requests
-on the conservative defer path, where they still incur numerical work. The
-supplementary study does not retune that rule. Original OOD diagnostics and
-operational criteria are retained in Appendix~\ref{app:originalboundaries};
-no additional OOD experiment is introduced.
+The supplementary point workload is fixed and previously observed, and its
+TRAC-IK success ceiling limits recovery analysis. Panda's authoritative
+trajectories were measured earlier than the symmetric UR5e runs.
+The paired intervals quantify variation within the sampled families, not
+coverage of all online IK tasks. A reference-feasible path does not guarantee
+a legal continuation from every method-specific state.
+Finally, the allocation boundary uses historical controls rather than a new
+factorial experiment adding a router to each aligned solver. The conclusions
+therefore distinguish directly measured alignment effects from the engineering
+judgment about when an additional decision layer is worth its cost.
 
 \section{Conclusions}
+\label{sec:conclusions}
 
-We studied whether learned query-conditioned costs can improve computation
-allocation within a fixed IK portfolio. \method\ supplies an action-complete
-learning formulation while preserving numerical command generation and
-deterministic acceptance.
+Solver convergence is not command admissibility.
+A common task contract separates native convergence, legal command generation
+and deadline-qualified success, and provides a basis for configuring existing
+solver interfaces. In this study, task-aligned TRAC-IK preserves point success,
+improves complete tracking on both robots and reduces cumulative trajectory
+computation under the same final acceptance conditions. DLS exposes frequent
+internal-failure/admissible-return disagreement and excess iterations, but its
+UR5e completion loss shows that earlier local acceptance is not a universal
+closed-loop improvement. The frozen allocation case study further places most
+aggregate benefit in failure handling rather than broadly faster successful
+entry selection.
 
-The evidence distinguishes useful failure handling from a general learned-entry
-advantage. Original gains relative to fixed cascades remain intact, but their large
-trajectory savings mostly occur on paths neither method completes. Supplementary
-feasible-point controls do not outperform direct hard or a simple geometry rule;
-P95 selection yields small FEV savings without a resolved tail advantage.
-Continuously feasible paths retain a positive Panda joint-limit result, while
-Panda near-singular completion losses and UR5e total-time overhead prevent a
-cross-robot successful-path acceleration claim. TRAC-IK supplies a faster external
-operating point with different completion coverage.
+The resulting design principle is to align the solver with the task contract
+before introducing adaptive computation. Any subsequent allocation layer should
+earn its overhead from the residual workload, with success, precision and
+complete-trajectory behavior reported alongside time.
 
-The hypothesis that robust coverage need not require uniform worst-case computation
-therefore requires a more specific operational test than aggregate runtime alone.
-In this portfolio, learned abstention avoids substantial unsuccessful work, whereas
-learned entry selection does not establish the broader claimed benefit.
-The architectural separation remains:
-\emph{learning allocates solver effort per query; numerical geometry generates joint
-commands; deterministic verification governs acceptance}.
+\section*{Data and code availability}
 
-\section*{Data and Code Availability}
-
-The repository contains the manuscript source, figure source data, deterministic
-evidence extractor, frozen configurations, release manifests, and hash-addressed
-evaluation outputs. The generated evidence snapshot records the source path and SHA-256
-for every value used in the paper. A citable archival DOI will be added to the
-accepted-manuscript record.
-
-\section*{Author Contributions}
-
-Author identities and CRediT roles are withheld for blinded review.
-
-\section*{Funding}
-
-Funding information is withheld for blinded review.
-
-\section*{Use of Generative Artificial Intelligence}
-
-OpenAI Codex assisted with supplementary experiment adapters, analysis code,
-language editing, LaTeX preparation, and reproducible figure generation.
-Original evidence is retained unchanged; supplementary tables and figures are
-derived from the recorded calls. The authors remain responsible for the scientific
-claims and for review and approval before submission.
-
-\section*{Conflicts of Interest}
-
-The authors declare no conflict of interest.
+The implementation, fixed protocol, input identities, raw returned configurations,
+timing records, aggregate tables and verified witness indices are available in
+the public repository \url{https://github.com/dingzhen60027/CG-HIK}, branch
+\texttt{codex/hierarchical-v5}. The paper's evidence snapshot identifies the
+frozen measurement commit and file hashes. Manuscript numbers and figures are
+generated from those records without solving new queries. Historical evidence
+and the previous manuscript are retained separately. The repository supports
+inspection of the reported software benchmark; it is not a hardware deployment
+package.
 
 \appendix
-\section{Original Frozen Evaluations}
-\label{app:original}
+\section{Complete nominal point outcome matrix}
+\label{app:matrix}
 
-This appendix preserves the original evidence and its protocol boundaries.
-Its populations and profiling implementation differ from the supplementary study.
-No original result is replaced by a new measurement, and the original macros,
-source-data files, and solver configuration table remain unchanged.
+Table~\ref{tab:matrix} gives raw call counts for the witnessed nominal population.
+The independent sample size remains \ev{sample.point} query UIDs per robot.
+Every internal-failure/task-reject entry in this population has a saved legal
+witness under the identical input. Counts across search repeats do not represent
+additional independent queries.
 
-\subsection{Original development diagnostics}
-
-Among successful action-complete development queries, the empirical oracle
-assignments were \PandaDevOracleEasy{} easy, \PandaDevOracleMedium{} medium, and
-\PandaDevOracleHard{} hard on Panda, and \URDevOracleEasy, \URDevOracleMedium,
-and \URDevOracleHard\ on UR5e. The original five-repeat in-sample best-fixed
-mean gaps were \PandaDevBestFixedOracleGap{} and
-\URDevBestFixedOracleGap{} ms; easy-entry gaps were \PandaDevEasyOracleGap{}
-and \URDevEasyOracleGap{} ms.
-
-The separate successful, non-abstained policy-selection population had exact
-oracle agreement of \PandaDevOracleAgreement{} / \URDevOracleAgreement.
-Its mean regrets were \PandaDevRoutingRegretMean{} /
-\URDevRoutingRegretMean{} ms, medians \PandaDevRoutingRegretMedian{} /
-\URDevRoutingRegretMedian{} ms, and P95
-\PandaDevRoutingRegretPNinetyFive{} / \URDevRoutingRegretPNinetyFive{} ms.
-These original diagnostics describe different populations; they are not directly
-contrasted as a best-fixed-versus-learned improvement. RQ1 instead supplies the
-matched-population and independent-fold comparisons.
-
-\subsection{Original point-query protocol and results}
-\label{app:originalpoints}
-
-Each robot's original point analysis has \PointFeasibleQueriesPerRobot\ feasible
-queries: \PointIDFeasibleQueriesPerRobot\ in-distribution and
-\PointOODFeasibleQueriesPerRobot\ shifted feasible points, plus
-\PointInfeasibleQueriesPerRobot\ known-infeasible or one-frame-inadmissible points.
-Each feasible point has \PointTimingRepeats\ raw calls per method.
-The primary released training seed is \PointPrimaryTrainingSeed;
-\PointSensitivityTrainingSeeds\ are sensitivity runs on the same queries,
-not independent replications.
-
-\begin{table}[ht]
+\begin{table}[htbp]
 \centering\small
-\caption{\textbf{Unchanged original feasible point results.} The primary comparator
-always enters the full cascade at easy. Latency is in milliseconds; values are
-read from the original frozen source-data export.}
-\label{tab:originalpoint}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llrrrrrr}
-\toprule
-Robot & Method & Success (\%) & Mean FEV & P50 & P95 & P99 & Fallback (\%)\\
-\midrule
-\input generated/table_point_rows.tex
-\bottomrule
-\end{tabular}}
+\caption{Native/task outcome matrix for witnessed nominal points.
+$I$ is native success and $A$ is task acceptance. Three TRAC-IK calls and one
+DLS call per UID are retained; counts are not pooled into a larger statistical
+sample. Constructed inexecutable points are reported separately in source data.}
+\label{tab:matrix}
+\begin{tabular}{llrrrr}\toprule
+Robot & Setting & $I{=}1,A{=}1$ & $I{=}1,A{=}0$ & $I{=}0,A{=}1$ & $I{=}0,A{=}0$\\\midrule
+\input{generated/task_status_rows.tex}
+\end{tabular}
 \end{table}
 
-Verified success was unchanged relative to the \fixedrobust.
-Mean FEV fell by \PandaPointFEVReduction{} / \URPointFEVReduction;
-P95 ratios were \PandaPointPNinetyFiveRatio{} /
-\URPointPNinetyFiveRatio, and P99 ratios
-\PandaPointPNinetyNineRatio{} / \URPointPNinetyNineRatio.
-Fallback was unchanged at \PandaPointCGFallback{} /
-\URPointCGFallback. On the constructed rejectable subset, command-reject recall
-was \PandaRejectRecall{} / \URRejectRecall, and rejected commands executed zero
-numerical stages and FEV. Relative to the fixed cascade, rejection avoided
-\PandaRejectFEVAvoided{} / \URRejectFEVAvoided{} of infeasible-point FEV.
+\section{Directly observed DLS excess iterations}
+\label{app:trace}
 
-\subsection{Original transition-rich trajectories}
+The observation wrapper records the unchanged solver's FK calls and identifies
+main iterates by their call site. A complete residual/evaluation trace remains
+available for every strict point query, including those that never produce an
+admissible iterate. Figure~\ref{fig:excess} conditions only the excess-iteration
+quantity on its being defined. The full population is retained in the source
+table; a query without an admissible iterate is not assigned zero excess work.
+No comparable unobserved TRAC-IK iteration quantity is inferred.
 
-The original evaluation has \FreshTrajectoriesPerRobot\ trajectories per robot,
-\FreshTrajectoriesPerFamily\ in each of four families, with
-\FreshTrajectoryFrames\ frames at $\Delta t=\ControlIntervalMilliseconds$ ms.
-The methods are the fixed easy-entry cascade, fixed hard-entry cascade, and
-\method. Each evolves its own accepted state while processing the common
-exogenous target sequence.
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{supplement_dls_excess_iterations.pdf}
+\caption{Excess iterations after task admissibility in strict DLS.
+Each included query contributes its stopping iteration minus its first admissible
+main-iterate index. Panel titles count queries with such an iterate, not
+independent iteration samples. Remaining queries are retained with undefined
+excess values in source data. Phase-specific extra time is not estimated.}
+\label{fig:excess}
+\end{figure}
 
-\begin{table}[ht]
-\centering\small
-\caption{\textbf{Unchanged original transition-rich results.}
-Cumulative latency sums every fixed-length frame. These original values are
-retained alongside, not replaced by, the witness-based supplementary evaluation.}
-\label{tab:originaltrajectory}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llrrrrrrr}
-\toprule
-Robot & Method & Completed/\FreshTrajectoriesPerRobot & Time (s) & Mean FEV & P50 & P95 & P99 & Violations\\
-\midrule
-\input generated/table_trajectory_rows.tex
-\bottomrule
-\end{tabular}}
+\section{Complete family-level trajectory effects}
+\label{app:family}
+
+\begin{table}[htbp]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Fully aligned/strict TRAC-IK at 5 ms for all trajectory families.
+Each family contains ten independent paths. Completion lists correspond to
+three complete search repeats; intervals use paired trajectory resampling.
+Gained/lost counts compare per-UID completion fractions.}
+\label{tab:family}
+\begin{tabular}{llrrrl}\toprule
+Robot & Family & Strict & Aligned & Cost ratio [95\% CI] & Gain/loss\\\midrule
+\input{generated/task_family_rows.tex}
+\end{tabular}
 \end{table}
 
-Aggregate time fell by \PandaTrajectoryCumulativeReduction{} /
-\URTrajectoryCumulativeReduction, and mean FEV by
-\PandaTrajectoryFEVReduction{} / \URTrajectoryFEVReduction.
-P50 increased by \PandaTrajectoryMedianIncrease{} /
-\URTrajectoryMedianIncrease; P95 fell by
-\PandaTrajectoryPNinetyFiveReduction{} /
-\URTrajectoryPNinetyFiveReduction. Panda P99 was effectively tied and UR5e P99
-fell by \URTrajectoryPNinetyNineReduction.
-Table~\ref{tab:olddecomposition}'s decomposition identifies which
-completion groups produced these totals.
+The distributed CSV/JSON tables additionally provide per-trajectory cumulative
+mean, median and P95, completion UID sets, accepted-error distributions,
+first-failure inputs and reasons, and repeated-search variability.
+All full trajectories and returned configurations can be inspected through
+the witness and run indices. No conclusion requires selecting only the
+successful trajectories.
 
-Original family cumulative-time reductions were
-\PandaNearSingularCumReduction{} / \URNearSingularCumReduction\ for near-singular,
-\PandaHighCurvatureCumReduction{} / \URHighCurvatureCumReduction\ for
-high-curvature/high-speed, and \PandaSmoothCumReduction{} /
-\URSmoothCumReduction\ for smooth--orientation transitions.
-Panda joint-limit reductions were \PandaJointLimitCumReduction{} in time and
-\PandaJointLimitFEVReduction{} in FEV, indicating regressions where negative.
-UR5e's joint-limit saving accompanied zero completions under both methods.
-Panda high-curvature \method\ completion remained
-\PandaHighCurvatureCGCompletion/\FreshTrajectoriesPerFamily.
-These family totals include unsuccessful trajectories and do not imply the same
-effects on jointly completed paths.
-
-\subsection{Original protocol boundaries}
-\label{app:originalboundaries}
-
-The original primary point system uses training seed \PointPrimaryTrainingSeed.
-The two additional training seeds reuse the same queries.
-Prespecified point margins and a legacy trajectory-completion margin per robot
-form one joint Holm family; all margin nulls were rejected.
-That legacy trajectory arm is distinct from the original final transition-rich
-evaluation. A separate operational gate required a strictly positive improvement
-in OOD-feasible false rejection. Panda fixed and \method\ both had zero such false
-rejects, so that condition and the original point-study paper gate were false.
-No threshold was changed after observing this result.
-
-The original transition-rich criteria required completion not below hard,
-total-time and FEV ratios at most \TrajectoryCumulativeGateMaximum{} and
-\TrajectoryFEVGateMaximum, P95 at most \TrajectoryPNinetyFiveGateMaximum,
-P99 at most \TrajectoryPNinetyNineGateMaximum, and zero contract violations.
-P50 was report-only. These criteria are historical protocol facts, not a new
-composite gate applied to the supplementary data.
-
-Original OOD AUROC was \PandaOODAUROC{} / \UROODAUROC\ and AUPRC
-\PandaOODAUPRC{} / \UROODAUPRC, with no successful defer recovery
-(\PandaDeferRecovery{} / \URDeferRecovery).
-The original categorical and Cartesian-step development baselines are distinct
-from the new controlled geometry rule that shares frozen abstention.
-
-\subsection{Reproducibility without further experiments}
-
-The original evidence builder and figure source data are retained unchanged.
-The supplementary paper exporter reads only completed report tables, verifies
-figure hashes, and writes a separate source-data and figure directory.
-Rebuilding this manuscript executes no IK call and changes no model or output record.
-The frozen predictor, normalization, calibrators, OOD transform, and policy
-constants remain exported as one batch-one runtime module \cite{paszke2019pytorch}.
-The new findings report, method mapping, raw records, complete UID sets, and
-measurement manifests accompany the manuscript.
-
+\FloatBarrier
 \bibliographystyle{unsrtnat}
-\begingroup
-\small
 \bibliography{references}
-\endgroup
 
 \end{document}

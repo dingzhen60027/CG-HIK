@@ -1,0 +1,25 @@
+{
+  "files": {
+    "figures/figure1_taxonomy.pdf": "cf33dc97f05bf7e10b8adf4d43c7110232d9f7aff140652b04e0355e13580584",
+    "figures/figure1_taxonomy.svg": "ed0d88a42a3dc648822b15c6736cbed5e6d4df5c0d2511ffcbb73c3ae56b44e4",
+    "figures/figure1_taxonomy.png": "f369009bf37791835d45460afa7ff91960f2ba9015b6b49d5438da74427903d5",
+    "figures/figure2_point_alignment.pdf": "be81dc43af81a07403a7c7a038f10daa7a6d9a700f29955abfdf1e7e3ec05ee8",
+    "figures/figure2_point_alignment.svg": "ea24c8d3234181259793a7ec2442af6f84e4a483d14aa0961a03e3bec2d2a988",
+    "figures/figure2_point_alignment.png": "9248c34adf20a1b22c62435b89f8451d8e30d4bd71c12c012cf1bea1cec6a317",
+    "figures/figure3_contract_sensitivity.pdf": "545d5b3f53ee5bd44da8ffc1395fefad9c0f9b7bb947267a93b3bc33a436ecb8",
+    "figures/figure3_contract_sensitivity.svg": "e2e60415c4ef04230cf0163e042ca6de87f28c5d186f19e303d35be63554d2df",
+    "figures/figure3_contract_sensitivity.png": "89f95fa27092a9daa36e0213258ae80c47bd5eb1fdb241aa17c66d715f3f9faa",
+    "figures/figure4_trajectories.pdf": "bd02ec89923860740905adcd0d5dd2124a8204844a7cd120e378caf71079b152",
+    "figures/figure4_trajectories.svg": "02b80ad5c65dd331b4a597be6167b9ffac458204e118048636e2e161e102fb70",
+    "figures/figure4_trajectories.png": "9b3f28a2e9af91783ec521448d708d64f40242b797ebf8f4149c49ccec2502ba",
+    "figures/figure5_family_effects.pdf": "6623d63d9fbcb796ffd65d539079a6fd2fbf6595eb5397be408678cde49c3211",
+    "figures/figure5_family_effects.svg": "1bfca645d43673e1c3a5e3de668e9b4a60c6c8f9d1e4b00a82b20548598ec7e1",
+    "figures/figure5_family_effects.png": "af49d943ff3f6d0e5e7a4e31d6f1a2a118f734633166f42c128cebca6b4dacd7",
+    "figures/supplement_dls_excess_iterations.pdf": "4170d4894af2b697a7f8164bd1c656341a90cf40b766a838e4e64490c0557747",
+    "figures/supplement_dls_excess_iterations.svg": "af2ca03769d3155f516cff30880fbfe9ea7c921156de2ca78f9896a77e1986ef",
+    "figures/supplement_dls_excess_iterations.png": "6450728b4f4b472ed134504bf26231e42794ff81dc97318eaeb2b5e3179eaeb2"
+  },
+  "source_data": "source_data/task_*.csv; generated/evidence_snapshot.json",
+  "rendering_source": "src/confik/task_contract_alignment/reporting.py",
+  "note": "Exact copies of reviewed frozen editable PDF/SVG and PNG previews. No experiment or statistics rerun."
+}
