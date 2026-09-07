@@ -1,0 +1,32 @@
+{
+  "utc": "2026-09-07T17:11:21.295164+00:00",
+  "execution_seal_sha256": "5aacf1d96bd96d938b0cbef8622a77e06ac4cb55775737d00d62a76609943957",
+  "reason": "UR5e raw first-failure rows already contain robot; duplicate keyword aborted read-only aggregation before trajectory outputs were written.",
+  "scope": "one dictionary merge; no solver calls, source/input/mapping/budget/measurement changes",
+  "source": "src/confik/task_contract_alignment/aggregate.py",
+  "original_sha256": "845f172741e4c492401f67c2ee9d1a3e0c1e66bfb14a7f06b767cc83be2c9670",
+  "analysis_sha256": "0f46fa1fe3073a44a7637a29e7a4593466728f8eef9c533a59847110e0518f63",
+  "completed_tables_retained": {
+    "outputs/task_contract_alignment/05_aggregate/point_main.json": "451f8e00edf1300e20f514a0ece4823502cf39eb00418be55d8fa4e55e451a6a",
+    "outputs/task_contract_alignment/05_aggregate/point_units.json": "461e9596097f7ed25c253c3dfd661ba1fae49f5c209076f5112b65bc351dfc83",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_units.json": "a574f1ae1d26dcc41018b65366e50d2cdcc9623efcf2370e93ee52eabe127b27",
+    "outputs/task_contract_alignment/05_aggregate/successful_witness_index.json": "7799fbdc5fa95bf6d5536759f7133bd2207da3c221a5b8c459abf6b5fceb8dc7",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_families.json": "41c4a43f9e4009a0ca298ebe103b3277e4513798be321906556bb306e48f5d69",
+    "outputs/task_contract_alignment/05_aggregate/point_paired.csv": "310ef9e07f49efca55526c9c39670ddd13802acada31ed03c23facce5e10d297",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_paired.json": "abfb97643fe32f805a478e763d4275b2f38553719bb56dd77f067312f2f56b73",
+    "outputs/task_contract_alignment/05_aggregate/started.json": "f4eddaa9050950bc55c1de504000b00d7f28136b80e3308e5e91a248623620b6",
+    "outputs/task_contract_alignment/05_aggregate/dls_excess_iterations.json": "3ea341bf9a43ba95fb55ffb567991ef4c62d3d655c7b49dbf0c1c9a6ba625b09",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_main.csv": "c10f6a949968996addaac5b2a1c52edebf8edf99be58853d0d9eaab6e2722f9e",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_units.csv": "299f82db0947fe37c16a1e6409776d209bec69d4b9a015346ed2de6b20877ab9",
+    "outputs/task_contract_alignment/05_aggregate/point_units.csv": "1752e7ae8b9171e308089cc5238e00871ec123eea9348284f7467c8a947dda4d",
+    "outputs/task_contract_alignment/05_aggregate/point_main.csv": "84e7f175316ada8a46de1bdc26b645502d00b2f931dc8d9d063e327a0ca1b35e",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_families.csv": "87d9ffb950e736a66cf4e2e46bfc28439c52da48e9a82082e5066967fa3eb8db",
+    "outputs/task_contract_alignment/05_aggregate/point_families.json": "efa4875cec3e48ac60bef527d16e057fd3dfaff0bf17051a2a9ffc8668a3b9c8",
+    "outputs/task_contract_alignment/05_aggregate/point_paired.json": "446b71d72e207101b9c1ca957c8b59eb3c95daf253b9c1c4aebff54612c2a313",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_main.json": "11c847c287f2d359fd26f503bc4e955c4e99cd4c26b0e82439b7ba22de7a02b9",
+    "outputs/task_contract_alignment/05_aggregate/point_families.csv": "c6357c95c6edec96fd86a85f4bcb88b789f2aa322a6406fde0d68088aab69b78",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_paired.csv": "85846692408abe91ee25a2a2bcec82cf0466b0ecb7d849f857862b64df87706f",
+    "outputs/task_contract_alignment/05_aggregate/dls_excess_iterations.csv": "563a344180997fa33c7592271d9a19ab436e8254400aa550d4e926155984af29",
+    "outputs/task_contract_alignment/05_aggregate/verification.json": "86d6079986beadd1a9f6a8611f12378e75cc459e405b366fb45510baf1b1a788"
+  }
+}

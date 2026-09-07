@@ -1,0 +1,164 @@
+[
+  {
+    "robot": "panda",
+    "scale": 0.5,
+    "method": "trac_task_5ms",
+    "witness_feasible": true,
+    "baseline": "trac_strict_5ms",
+    "units": 500,
+    "gained_uids": [],
+    "lost_uids": [],
+    "stable_gained_uids": [],
+    "stable_lost_uids": [],
+    "success_difference": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "latency_ratio": [
+      0.9494272007260993,
+      0.9350376871166148,
+      0.9653834927220697
+    ],
+    "latency_difference_ns": [
+      -11236.714,
+      -14491.887716666666,
+      -7650.805416666668
+    ]
+  },
+  {
+    "robot": "panda",
+    "scale": 1.0,
+    "method": "trac_task_5ms",
+    "witness_feasible": true,
+    "baseline": "trac_strict_5ms",
+    "units": 500,
+    "gained_uids": [],
+    "lost_uids": [],
+    "stable_gained_uids": [],
+    "stable_lost_uids": [],
+    "success_difference": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "latency_ratio": [
+      0.9252238064779866,
+      0.9132231232516796,
+      0.9370132133758765
+    ],
+    "latency_difference_ns": [
+      -16412.298,
+      -19167.628016666666,
+      -13753.245916666665
+    ]
+  },
+  {
+    "robot": "panda",
+    "scale": 2.0,
+    "method": "trac_task_5ms",
+    "witness_feasible": true,
+    "baseline": "trac_strict_5ms",
+    "units": 500,
+    "gained_uids": [],
+    "lost_uids": [],
+    "stable_gained_uids": [],
+    "stable_lost_uids": [],
+    "success_difference": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "latency_ratio": [
+      0.920902155440824,
+      0.9078194303864197,
+      0.9351877429672952
+    ],
+    "latency_difference_ns": [
+      -17473.929333333337,
+      -20560.19593333333,
+      -14211.981466666666
+    ]
+  },
+  {
+    "robot": "ur5e",
+    "scale": 0.5,
+    "method": "trac_task_5ms",
+    "witness_feasible": true,
+    "baseline": "trac_strict_5ms",
+    "units": 500,
+    "gained_uids": [],
+    "lost_uids": [],
+    "stable_gained_uids": [],
+    "stable_lost_uids": [],
+    "success_difference": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "latency_ratio": [
+      0.959367754464222,
+      0.9462066831393733,
+      0.9720974572752978
+    ],
+    "latency_difference_ns": [
+      -8265.543333333333,
+      -11057.703250000002,
+      -5641.182083333332
+    ]
+  },
+  {
+    "robot": "ur5e",
+    "scale": 1.0,
+    "method": "trac_task_5ms",
+    "witness_feasible": true,
+    "baseline": "trac_strict_5ms",
+    "units": 500,
+    "gained_uids": [],
+    "lost_uids": [],
+    "stable_gained_uids": [],
+    "stable_lost_uids": [],
+    "success_difference": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "latency_ratio": [
+      0.9497027531350594,
+      0.9410807092159368,
+      0.9581484003646811
+    ],
+    "latency_difference_ns": [
+      -10226.870666666666,
+      -12060.67385,
+      -8460.164499999997
+    ]
+  },
+  {
+    "robot": "ur5e",
+    "scale": 2.0,
+    "method": "trac_task_5ms",
+    "witness_feasible": true,
+    "baseline": "trac_strict_5ms",
+    "units": 500,
+    "gained_uids": [],
+    "lost_uids": [],
+    "stable_gained_uids": [],
+    "stable_lost_uids": [],
+    "success_difference": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "latency_ratio": [
+      0.9390440258401638,
+      0.926988693000585,
+      0.9484536606255537
+    ],
+    "latency_difference_ns": [
+      -12275.096666666668,
+      -14912.4259,
+      -10266.602049999998
+    ]
+  }
+]

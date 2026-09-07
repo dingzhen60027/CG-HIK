@@ -1,0 +1,18 @@
+{
+  "utc": "2026-09-07T17:17:11.841222+00:00",
+  "pdf_text_audits": {
+    "figure1_taxonomy.pdf": "Nature Figure PDF Text Audit\npdf: /home/eric/wjg/btry/outputs/task_contract_alignment/reports/figure1_taxonomy.pdf\nminimum required: 5 pt\nminimum found: 8 pt\ntext runs: 14\nbelow minimum: 0\nverdict: PASS\nnote: Tf scanning does not replace final-size visual inspection or account for every PDF transform\n",
+    "figure2_point_alignment.pdf": "Nature Figure PDF Text Audit\npdf: /home/eric/wjg/btry/outputs/task_contract_alignment/reports/figure2_point_alignment.pdf\nminimum required: 5 pt\nminimum found: 8 pt\ntext runs: 62\nbelow minimum: 0\nverdict: PASS\nnote: Tf scanning does not replace final-size visual inspection or account for every PDF transform\n",
+    "figure3_contract_sensitivity.pdf": "Nature Figure PDF Text Audit\npdf: /home/eric/wjg/btry/outputs/task_contract_alignment/reports/figure3_contract_sensitivity.pdf\nminimum required: 5 pt\nminimum found: 7 pt\ntext runs: 71\nbelow minimum: 0\nverdict: PASS\nnote: Tf scanning does not replace final-size visual inspection or account for every PDF transform\n",
+    "figure4_trajectories.pdf": "Nature Figure PDF Text Audit\npdf: /home/eric/wjg/btry/outputs/task_contract_alignment/reports/figure4_trajectories.pdf\nminimum required: 5 pt\nminimum found: 8 pt\ntext runs: 64\nbelow minimum: 0\nverdict: PASS\nnote: Tf scanning does not replace final-size visual inspection or account for every PDF transform\n",
+    "figure5_family_effects.pdf": "Nature Figure PDF Text Audit\npdf: /home/eric/wjg/btry/outputs/task_contract_alignment/reports/figure5_family_effects.pdf\nminimum required: 5 pt\nminimum found: 7 pt\ntext runs: 41\nbelow minimum: 0\nverdict: PASS\nnote: Tf scanning does not replace final-size visual inspection or account for every PDF transform\n",
+    "supplement_dls_excess_iterations.pdf": "Nature Figure PDF Text Audit\npdf: /home/eric/wjg/btry/outputs/task_contract_alignment/reports/supplement_dls_excess_iterations.pdf\nminimum required: 5 pt\nminimum found: 8 pt\ntext runs: 33\nbelow minimum: 0\nverdict: PASS\nnote: Tf scanning does not replace final-size visual inspection or account for every PDF transform\n"
+  },
+  "rendered_inspection": "All six PNG exports inspected; no clipped labels or overlaps; all populations retained.",
+  "static_preflight_exceptions": [
+    "Static whitelist does not recognize DejaVu Sans although this installed sans-serif is embedded in actual PDFs.",
+    "Static parser misses loop-based PDF/SVG/PNG export; all eighteen actual files checked.",
+    "PNG previews are 300 dpi; editable vector PDFs/SVGs are the publication outputs."
+  ],
+  "version_note": "Sealed reporting source retained; no result-driven panel removal or measurement change."
+}

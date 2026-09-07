@@ -1,0 +1,20 @@
+{
+  "backend": "Python matplotlib",
+  "width_inches": 7.2,
+  "exports": [
+    "PDF editable text",
+    "SVG editable text",
+    "PNG preview"
+  ],
+  "figures": {
+    "1": "schematic: four internal/task cells and exact-input witness condition",
+    "2": "quantitative grid: all prespecified point settings, feasibility and P95 shown separately",
+    "3": "quantitative grid: every scale, missed calls, P95, and accepted position relative to contract",
+    "4": "quantitative grid: both robots, completion/repeat spread, full cumulative cost, latency quantiles",
+    "5": "paired effects: all families, cumulative cost ratio/95% interval and gained/lost UIDs",
+    "S1": "observed DLS iteration distribution; no hypothetical TRAC trace"
+  },
+  "uncertainty": "Fig5 family-stratified paired trajectory percentile bootstrap, 4000 resamples; Fig4 completion dots are planned within-trajectory repeats; other panels empirical full-call distributions, descriptive not independent-frame inference",
+  "omissions": "none from prescribed populations; constructed inexecutable point results reported separately in tables",
+  "source_data": "05_aggregate JSON and CSV, directly read without hand-maintained numeric constants"
+}

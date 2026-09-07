@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-07T17:15:32.065213+00:00",
+  "report_sha256": "ca7141cee22279112a341007c48d009b1d04209a23b95f9ea9150296a3653854",
+  "sources": {
+    "outputs/task_contract_alignment/05_aggregate/analysis_revision.json": "ba0bb2fad0a8fe0d8f4767296c355638f61cc7e5f53415cd5c09fe0b6d30bb8a",
+    "outputs/task_contract_alignment/05_aggregate/point_main.json": "451f8e00edf1300e20f514a0ece4823502cf39eb00418be55d8fa4e55e451a6a",
+    "outputs/task_contract_alignment/05_aggregate/trajectory_runs.json": "c550b9603178fc9b8f5aea3668c89725c66218b92cd963919ad50c675d2b0a15",
+    "outputs/task_contract_alignment/05_aggregate/point_units.json": "461e9596097f7ed25c253c3dfd661ba1fae49f5c209076f5112b65bc351dfc83",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_units.json": "a574f1ae1d26dcc41018b65366e50d2cdcc9623efcf2370e93ee52eabe127b27",
+    "outputs/task_contract_alignment/05_aggregate/completed.json": "0efa54c703ebba9f73cdde8420b116377a1337fd3be63ceb75dec945a4d09c47",
+    "outputs/task_contract_alignment/05_aggregate/successful_witness_index.json": "7799fbdc5fa95bf6d5536759f7133bd2207da3c221a5b8c459abf6b5fceb8dc7",
+    "outputs/task_contract_alignment/05_aggregate/trajectory_families.json": "66f921d3afdc32329aebe2b47b76c926a43eec76099844b2c4d724e847770e18",
+    "outputs/task_contract_alignment/05_aggregate/allocation_boundary.json": "4798a0a3df3e514f744b5962a172e611562992f06ab8b930ee620059a06402db",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_families.json": "41c4a43f9e4009a0ca298ebe103b3277e4513798be321906556bb306e48f5d69",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_paired.json": "abfb97643fe32f805a478e763d4275b2f38553719bb56dd77f067312f2f56b73",
+    "outputs/task_contract_alignment/05_aggregate/started.json": "f4eddaa9050950bc55c1de504000b00d7f28136b80e3308e5e91a248623620b6",
+    "outputs/task_contract_alignment/05_aggregate/trajectory_paired.json": "8f3305aa78a6417c1c1d6c1c7a07444d60a2922a373cd9e03e7ce964f4d8d54b",
+    "outputs/task_contract_alignment/05_aggregate/dls_excess_iterations.json": "3ea341bf9a43ba95fb55ffb567991ef4c62d3d655c7b49dbf0c1c9a6ba625b09",
+    "outputs/task_contract_alignment/05_aggregate/completion_uid_sets.json": "cf6f7a36a461aa00ed69a581cc423e852d00a9491885c68cc55205203b689325",
+    "outputs/task_contract_alignment/05_aggregate/point_families.json": "efa4875cec3e48ac60bef527d16e057fd3dfaff0bf17051a2a9ffc8668a3b9c8",
+    "outputs/task_contract_alignment/05_aggregate/trajectory_units.json": "424f081da85a43816416e483220ee5e8514b83d7c3aa13ace7fcc004e6cf8c01",
+    "outputs/task_contract_alignment/05_aggregate/first_failures.json": "83a54a6d63c8e6a395cb492c8aecd6679130012a82c1954db97611366caf9769",
+    "outputs/task_contract_alignment/05_aggregate/point_paired.json": "446b71d72e207101b9c1ca957c8b59eb3c95daf253b9c1c4aebff54612c2a313",
+    "outputs/task_contract_alignment/05_aggregate/sensitivity_main.json": "11c847c287f2d359fd26f503bc4e955c4e99cd4c26b0e82439b7ba22de7a02b9",
+    "outputs/task_contract_alignment/05_aggregate/verification.json": "86d6079986beadd1a9f6a8611f12378e75cc459e405b366fb45510baf1b1a788",
+    "outputs/task_contract_alignment/05_aggregate/key_findings.json": "92db6bfa4ef2292514620051258cc7e2a381c38870e8f3d0df33f3fb82c44a9f",
+    "outputs/task_contract_alignment/05_aggregate/trajectory_main.json": "4e203ed8287abe2254ab7edc578951424c78d465eb693ef5ec46d3a67886bd60"
+  }
+}

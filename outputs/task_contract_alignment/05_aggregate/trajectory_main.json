@@ -1,0 +1,934 @@
+[
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "authority": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison",
+    "calls": 6000,
+    "units": 40,
+    "verified_success": 0.968,
+    "internal_success": 0.8413333333333334,
+    "accepted_within_20ms": 0.968,
+    "returned_within_5ms": 0.8223333333333334,
+    "returned_within_20ms": 1.0,
+    "total_latency_ns": 14254820057,
+    "latency_p50_ms": 0.942662,
+    "latency_p95_ms": 9.11910445,
+    "latency_p99_ms": 10.624158830000004,
+    "latency_mean_ms": 2.375803342833333,
+    "latency_max_ms": 18.055388,
+    "internal_failure__task_reject": 192,
+    "internal_failure__task_accept": 760,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 5048,
+    "accepted_position": {
+      "p50": 5.501076028605034e-08,
+      "p95": 0.00013567018999613182,
+      "p99": 0.00042101463471506517,
+      "mean": 2.0351489032668624e-05,
+      "max": 0.0009528183158590632
+    },
+    "accepted_orientation": {
+      "p50": 1.0939168340051386e-07,
+      "p95": 8.898278862456471e-05,
+      "p99": 0.0003144550268672066,
+      "mean": 1.917491275314489e-05,
+      "max": 0.006392667009914964
+    },
+    "all_returned_position": {
+      "p50": 6.615790622301441e-08,
+      "p95": 0.00031290444437036404,
+      "p99": 0.1649576343062052,
+      "mean": 0.00468612662679915,
+      "max": 0.40559362481253103
+    },
+    "all_returned_orientation": {
+      "p50": 1.3015547446350113e-07,
+      "p95": 0.00023733694703952018,
+      "p99": 0.24565087812934785,
+      "mean": 0.00622607142936387,
+      "max": 0.4693382084652454
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 760,
+    "completion_counts": [
+      37
+    ],
+    "deadline_completion_counts": [
+      37
+    ],
+    "completion_rate": 0.925,
+    "cumulative_latency_ns_per_sweep": 14254820057.0,
+    "per_trajectory_cumulative_ms": {
+      "p50": 167.6451075,
+      "p95": 1034.21583755,
+      "p99": 1164.81598535,
+      "mean": 356.37050142500004,
+      "max": 1219.849016
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 167.6451075,
+      "p95": 1034.21583755,
+      "p99": 1164.81598535,
+      "mean": 356.37050142500004,
+      "max": 1219.849016
+    }
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "authority": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison",
+    "calls": 6000,
+    "units": 40,
+    "verified_success": 0.968,
+    "internal_success": 0.968,
+    "accepted_within_20ms": 0.968,
+    "returned_within_5ms": 0.9678333333333333,
+    "returned_within_20ms": 1.0,
+    "total_latency_ns": 4814010944,
+    "latency_p50_ms": 0.5501785,
+    "latency_p95_ms": 1.4509623500000004,
+    "latency_p99_ms": 6.8304527900000025,
+    "latency_mean_ms": 0.8023351573333333,
+    "latency_max_ms": 13.20112,
+    "internal_failure__task_reject": 192,
+    "internal_failure__task_accept": 0,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 5808,
+    "accepted_position": {
+      "p50": 7.795687230049099e-05,
+      "p95": 0.0007363101193682051,
+      "p99": 0.0009773966269899055,
+      "mean": 0.00017290454008974076,
+      "max": 0.0009999671153337025
+    },
+    "accepted_orientation": {
+      "p50": 9.59219879241105e-05,
+      "p95": 0.0009135812784411222,
+      "p99": 0.003339638982880176,
+      "mean": 0.00028766882382510165,
+      "max": 0.008664497055913383
+    },
+    "all_returned_position": {
+      "p50": 8.138410251389041e-05,
+      "p95": 0.0009311284615480305,
+      "p99": 0.16491490914875623,
+      "mean": 0.004841338332409329,
+      "max": 0.4054242174073069
+    },
+    "all_returned_orientation": {
+      "p50": 0.00010028199470182031,
+      "p95": 0.0018907348602051316,
+      "p99": 0.24667579828575323,
+      "mean": 0.006536708150844377,
+      "max": 0.4692219587565433
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 0,
+    "completion_counts": [
+      37
+    ],
+    "deadline_completion_counts": [
+      37
+    ],
+    "completion_rate": 0.925,
+    "cumulative_latency_ns_per_sweep": 4814010944.0,
+    "per_trajectory_cumulative_ms": {
+      "p50": 90.3136125,
+      "p95": 450.5072374999999,
+      "p99": 514.4354963699999,
+      "mean": 120.3502736,
+      "max": 538.29036
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 90.3136125,
+      "p95": 450.5072374999999,
+      "p99": 514.4354963699999,
+      "mean": 120.3502736,
+      "max": 538.29036
+    }
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "authority": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison",
+    "calls": 18000,
+    "units": 40,
+    "verified_success": 0.9399444444444445,
+    "internal_success": 0.9399444444444445,
+    "accepted_within_20ms": 0.9399444444444445,
+    "returned_within_5ms": 0.9397777777777778,
+    "returned_within_20ms": 0.9399444444444445,
+    "total_latency_ns": 25961346660,
+    "latency_p50_ms": 0.191951,
+    "latency_p95_ms": 20.35191835,
+    "latency_p99_ms": 20.55882407,
+    "latency_mean_ms": 1.4422970366666668,
+    "latency_max_ms": 20.928835,
+    "internal_failure__task_reject": 1081,
+    "internal_failure__task_accept": 0,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 16919,
+    "accepted_position": {
+      "p50": 2.9401172751904733e-08,
+      "p95": 3.488559591477843e-06,
+      "p99": 7.981966811867352e-06,
+      "mean": 5.292683634076582e-07,
+      "max": 1.4632921196975758e-05
+    },
+    "accepted_orientation": {
+      "p50": 5.3864844945263057e-08,
+      "p95": 5.331064709399638e-06,
+      "p99": 1.0851455198269962e-05,
+      "mean": 7.693233958762155e-07,
+      "max": 1.4003528110547373e-05
+    },
+    "all_returned_position": {
+      "p50": 3.411889975079473e-08,
+      "p95": 0.03559659605823052,
+      "p99": 0.31887745324358374,
+      "mean": 0.011033752429841939,
+      "max": 0.46910630907375
+    },
+    "all_returned_orientation": {
+      "p50": 6.463757553327751e-08,
+      "p95": 0.06310479235459616,
+      "p99": 0.5429182388452315,
+      "mean": 0.018770182483645943,
+      "max": 0.7257303609578684
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 0,
+    "completion_counts": [
+      34,
+      34,
+      34
+    ],
+    "deadline_completion_counts": [
+      34,
+      34,
+      34
+    ],
+    "completion_rate": 0.85,
+    "cumulative_latency_ns_per_sweep": 8653782220.0,
+    "per_trajectory_cumulative_ms": {
+      "p50": 34.7187955,
+      "p95": 1541.8608966499996,
+      "p99": 1688.8269976,
+      "mean": 216.34455549999996,
+      "max": 1694.20646
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 34.277821833333334,
+      "p95": 1534.4639647499996,
+      "p99": 1674.4814331633333,
+      "mean": 216.3445555,
+      "max": 1688.5870973333333
+    }
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "authority": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison",
+    "calls": 18000,
+    "units": 40,
+    "verified_success": 0.9398333333333333,
+    "internal_success": 0.9398333333333333,
+    "accepted_within_20ms": 0.9397777777777778,
+    "returned_within_5ms": 0.9397777777777778,
+    "returned_within_20ms": 0.9999444444444444,
+    "total_latency_ns": 9561688579,
+    "latency_p50_ms": 0.189979,
+    "latency_p95_ms": 5.2489707,
+    "latency_p99_ms": 5.434410129999998,
+    "latency_mean_ms": 0.5312049210555555,
+    "latency_max_ms": 48.126981,
+    "internal_failure__task_reject": 1083,
+    "internal_failure__task_accept": 0,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 16917,
+    "accepted_position": {
+      "p50": 2.9402794394244718e-08,
+      "p95": 3.4832687249665355e-06,
+      "p99": 7.985263726552888e-06,
+      "mean": 5.303580165260615e-07,
+      "max": 1.4632921196975758e-05
+    },
+    "accepted_orientation": {
+      "p50": 5.37873169081468e-08,
+      "p95": 5.362085634936274e-06,
+      "p99": 1.087211973341578e-05,
+      "mean": 7.706248085052073e-07,
+      "max": 1.4003528110547373e-05
+    },
+    "all_returned_position": {
+      "p50": 3.412826366430685e-08,
+      "p95": 0.03625994877922138,
+      "p99": 0.31782180705382146,
+      "mean": 0.01102861913410795,
+      "max": 0.46910630907375
+    },
+    "all_returned_orientation": {
+      "p50": 6.463615619833198e-08,
+      "p95": 0.06344212180766971,
+      "p99": 0.5429115636114675,
+      "mean": 0.01876348577635371,
+      "max": 0.7257303609578684
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 0,
+    "completion_counts": [
+      34,
+      34,
+      34
+    ],
+    "deadline_completion_counts": [
+      34,
+      34,
+      33
+    ],
+    "completion_rate": 0.85,
+    "cumulative_latency_ns_per_sweep": 3187229526.3333335,
+    "per_trajectory_cumulative_ms": {
+      "p50": 34.0974505,
+      "p95": 417.52591629999995,
+      "p99": 450.2822596,
+      "mean": 79.68073815833333,
+      "max": 453.528535
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 33.4587165,
+      "p95": 414.73159621666656,
+      "p99": 446.0006490833333,
+      "mean": 79.68073815833334,
+      "max": 450.7277643333333
+    }
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "authority": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison",
+    "calls": 18000,
+    "units": 40,
+    "verified_success": 0.9816111111111111,
+    "internal_success": 0.9816111111111111,
+    "accepted_within_20ms": 0.9816111111111111,
+    "returned_within_5ms": 0.9808333333333333,
+    "returned_within_20ms": 0.9816111111111111,
+    "total_latency_ns": 10800380185,
+    "latency_p50_ms": 0.17978149999999998,
+    "latency_p95_ms": 0.4624013999999999,
+    "latency_p99_ms": 20.391857889999997,
+    "latency_mean_ms": 0.600021121388889,
+    "latency_max_ms": 20.974585,
+    "internal_failure__task_reject": 331,
+    "internal_failure__task_accept": 0,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 17669,
+    "accepted_position": {
+      "p50": 4.9772397512592305e-05,
+      "p95": 0.0003963997308122941,
+      "p99": 0.0006993774173702456,
+      "mean": 9.619653303020137e-05,
+      "max": 0.0009951923359611096
+    },
+    "accepted_orientation": {
+      "p50": 6.357470434005798e-05,
+      "p95": 0.0006846650028072349,
+      "p99": 0.005107824351918411,
+      "mean": 0.0002502186106883186,
+      "max": 0.008005430984573585
+    },
+    "all_returned_position": {
+      "p50": 5.150008267974639e-05,
+      "p95": 0.0005111239974530935,
+      "p99": 0.03979320118706199,
+      "mean": 0.0019839037902732812,
+      "max": 0.3948109948311605
+    },
+    "all_returned_orientation": {
+      "p50": 6.487600958008279e-05,
+      "p95": 0.0017952445747806988,
+      "p99": 0.06521297929784135,
+      "mean": 0.0029259609891527654,
+      "max": 0.44593201150094897
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 0,
+    "completion_counts": [
+      37,
+      37,
+      38
+    ],
+    "deadline_completion_counts": [
+      37,
+      37,
+      38
+    ],
+    "completion_rate": 0.9333333333333332,
+    "cumulative_latency_ns_per_sweep": 3600126728.3333335,
+    "per_trajectory_cumulative_ms": {
+      "p50": 32.9186275,
+      "p95": 664.98902505,
+      "p99": 1111.5346125800008,
+      "mean": 90.00316820833332,
+      "max": 1591.278212
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 32.86337283333333,
+      "p95": 577.8773244999998,
+      "p99": 714.80365172,
+      "mean": 90.00316820833334,
+      "max": 744.696717
+    }
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "authority": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison",
+    "calls": 18000,
+    "units": 40,
+    "verified_success": 0.9727777777777777,
+    "internal_success": 0.9727777777777777,
+    "accepted_within_20ms": 0.9727222222222223,
+    "returned_within_5ms": 0.9726111111111111,
+    "returned_within_20ms": 0.9999444444444444,
+    "total_latency_ns": 6450842547,
+    "latency_p50_ms": 0.1789405,
+    "latency_p95_ms": 0.4836194999999999,
+    "latency_p99_ms": 5.304983239999999,
+    "latency_mean_ms": 0.3583801415,
+    "latency_max_ms": 49.01391,
+    "internal_failure__task_reject": 490,
+    "internal_failure__task_accept": 0,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 17510,
+    "accepted_position": {
+      "p50": 4.93292049170623e-05,
+      "p95": 0.0003915027217962538,
+      "p99": 0.0006886048010524273,
+      "mean": 9.51112841545505e-05,
+      "max": 0.0009679557010285766
+    },
+    "accepted_orientation": {
+      "p50": 6.384567934149903e-05,
+      "p95": 0.0006618330140174024,
+      "p99": 0.004980022313333026,
+      "mean": 0.0002443059963413398,
+      "max": 0.008139200422681337
+    },
+    "all_returned_position": {
+      "p50": 5.185363652085992e-05,
+      "p95": 0.0005615836285726365,
+      "p99": 0.2033325383996418,
+      "mean": 0.004624663038618567,
+      "max": 0.4340109943225915
+    },
+    "all_returned_orientation": {
+      "p50": 6.562430121552333e-05,
+      "p95": 0.0031898826038067045,
+      "p99": 0.2929718312768881,
+      "mean": 0.005971452946467144,
+      "max": 0.4992362093249317
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 0,
+    "completion_counts": [
+      36,
+      37,
+      37
+    ],
+    "deadline_completion_counts": [
+      36,
+      36,
+      37
+    ],
+    "completion_rate": 0.9166666666666666,
+    "cumulative_latency_ns_per_sweep": 2150280849.0,
+    "per_trajectory_cumulative_ms": {
+      "p50": 32.348124,
+      "p95": 212.62222905,
+      "p99": 434.58190092,
+      "mean": 53.757021225,
+      "max": 437.101471
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 32.264697166666664,
+      "p95": 191.95964531666658,
+      "p99": 349.2752488499999,
+      "mean": 53.757021224999995,
+      "max": 434.474825
+    }
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "authority": "outputs/task_contract_alignment/04_trajectory_study",
+    "calls": 6000,
+    "units": 40,
+    "verified_success": 0.9531666666666667,
+    "internal_success": 0.7193333333333334,
+    "accepted_within_20ms": 0.9531666666666667,
+    "returned_within_5ms": 0.7431666666666666,
+    "returned_within_20ms": 1.0,
+    "total_latency_ns": 16964550714,
+    "latency_p50_ms": 0.8162685000000001,
+    "latency_p95_ms": 7.8134080500000005,
+    "latency_p99_ms": 7.954873630000002,
+    "latency_mean_ms": 2.8274251189999995,
+    "latency_max_ms": 9.65248,
+    "internal_failure__task_reject": 281,
+    "internal_failure__task_accept": 1403,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 4316,
+    "accepted_position": {
+      "p50": 9.976863209206513e-07,
+      "p95": 0.00023420374557575396,
+      "p99": 0.0006762616207292988,
+      "mean": 3.928349640305827e-05,
+      "max": 0.000996391276534537
+    },
+    "accepted_orientation": {
+      "p50": 1.1480764825783205e-06,
+      "p95": 0.00015368021125334309,
+      "p99": 0.0005848307889332833,
+      "mean": 3.347781681439809e-05,
+      "max": 0.0026601959488423295
+    },
+    "all_returned_position": {
+      "p50": 1.4797944383026349e-06,
+      "p95": 0.0009110586215999993,
+      "p99": 0.15152759773697336,
+      "mean": 0.004673172144904436,
+      "max": 0.5152970358979431
+    },
+    "all_returned_orientation": {
+      "p50": 1.8742840082262823e-06,
+      "p95": 0.0006656322522510952,
+      "p99": 0.3413729502876171,
+      "mean": 0.008954027837793725,
+      "max": 0.639609101799671
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 1403,
+    "completion_counts": [
+      35
+    ],
+    "deadline_completion_counts": [
+      35
+    ],
+    "completion_rate": 0.875,
+    "cumulative_latency_ns_per_sweep": 16964550714.0,
+    "per_trajectory_cumulative_ms": {
+      "p50": 425.378373,
+      "p95": 866.1467958499999,
+      "p99": 961.4631273099999,
+      "mean": 424.11376785000004,
+      "max": 1011.666997
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 425.378373,
+      "p95": 866.1467958499999,
+      "p99": 961.4631273099999,
+      "mean": 424.11376785000004,
+      "max": 1011.666997
+    }
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "authority": "outputs/task_contract_alignment/04_trajectory_study",
+    "calls": 6000,
+    "units": 40,
+    "verified_success": 0.8836666666666667,
+    "internal_success": 0.8836666666666667,
+    "accepted_within_20ms": 0.8836666666666667,
+    "returned_within_5ms": 0.947,
+    "returned_within_20ms": 1.0,
+    "total_latency_ns": 6585912868,
+    "latency_p50_ms": 0.4954315,
+    "latency_p95_ms": 5.066101400000002,
+    "latency_p99_ms": 7.7690763800000004,
+    "latency_mean_ms": 1.0976521446666665,
+    "latency_max_ms": 9.643231,
+    "internal_failure__task_reject": 698,
+    "internal_failure__task_accept": 0,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 5302,
+    "accepted_position": {
+      "p50": 0.00011091151912849222,
+      "p95": 0.0008125289278486046,
+      "p99": 0.0009885701878012967,
+      "mean": 0.00022127612211892574,
+      "max": 0.0009999623860613362
+    },
+    "accepted_orientation": {
+      "p50": 0.00013425658387991962,
+      "p95": 0.0015707307172452732,
+      "p99": 0.003244516450076073,
+      "mean": 0.00039511489852517246,
+      "max": 0.008662363667267805
+    },
+    "all_returned_position": {
+      "p50": 0.000147239758265641,
+      "p95": 0.09490764558734478,
+      "p99": 0.22331385700455528,
+      "mean": 0.010796088827081452,
+      "max": 0.36576080559347146
+    },
+    "all_returned_orientation": {
+      "p50": 0.00018889949587288607,
+      "p95": 0.18394189082259815,
+      "p99": 0.6915549348089274,
+      "mean": 0.03041371901878721,
+      "max": 0.8332554940109829
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 0,
+    "completion_counts": [
+      28
+    ],
+    "deadline_completion_counts": [
+      28
+    ],
+    "completion_rate": 0.7,
+    "cumulative_latency_ns_per_sweep": 6585912868.0,
+    "per_trajectory_cumulative_ms": {
+      "p50": 75.725259,
+      "p95": 484.3135748499997,
+      "p99": 633.87602764,
+      "mean": 164.64782169999998,
+      "max": 667.750189
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 75.725259,
+      "p95": 484.3135748499997,
+      "p99": 633.87602764,
+      "mean": 164.64782169999998,
+      "max": 667.750189
+    }
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "authority": "outputs/task_contract_alignment/04_trajectory_study",
+    "calls": 18000,
+    "units": 40,
+    "verified_success": 0.9681666666666666,
+    "internal_success": 0.9681666666666666,
+    "accepted_within_20ms": 0.9681111111111111,
+    "returned_within_5ms": 0.9681111111111111,
+    "returned_within_20ms": 0.9681111111111111,
+    "total_latency_ns": 14794995483,
+    "latency_p50_ms": 0.169006,
+    "latency_p95_ms": 0.30270749999999985,
+    "latency_p99_ms": 20.35653435,
+    "latency_mean_ms": 0.8219441935,
+    "latency_max_ms": 44.271374,
+    "internal_failure__task_reject": 573,
+    "internal_failure__task_accept": 0,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 17427,
+    "accepted_position": {
+      "p50": 4.2965108260740884e-08,
+      "p95": 6.576631049480471e-06,
+      "p99": 1.0772684281291257e-05,
+      "mean": 9.470072821201948e-07,
+      "max": 1.514821054922235e-05
+    },
+    "accepted_orientation": {
+      "p50": 1.918548827783132e-08,
+      "p95": 6.508714492073876e-06,
+      "p99": 1.0446391594064344e-05,
+      "mean": 8.698387160703342e-07,
+      "max": 1.6363983430136342e-05
+    },
+    "all_returned_position": {
+      "p50": 4.835616925949615e-08,
+      "p95": 9.46433507424027e-06,
+      "p99": 0.1504599547021263,
+      "mean": 0.0032790980321606195,
+      "max": 0.21867242463946046
+    },
+    "all_returned_orientation": {
+      "p50": 2.2025463389872724e-08,
+      "p95": 9.600366549756998e-06,
+      "p99": 0.6448779175629364,
+      "mean": 0.013512653901027379,
+      "max": 0.9109943613162178
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 0,
+    "completion_counts": [
+      37,
+      37,
+      37
+    ],
+    "deadline_completion_counts": [
+      37,
+      36,
+      37
+    ],
+    "completion_rate": 0.925,
+    "cumulative_latency_ns_per_sweep": 4931665161.0,
+    "per_trajectory_cumulative_ms": {
+      "p50": 26.539927499999997,
+      "p95": 589.250717149999,
+      "p99": 2444.28548633,
+      "mean": 123.291629025,
+      "max": 2444.540744
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 26.6986175,
+      "p95": 588.2090735833323,
+      "p99": 1848.1630766166656,
+      "mean": 123.29162902499999,
+      "max": 2444.2833396666665
+    }
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "authority": "outputs/task_contract_alignment/04_trajectory_study",
+    "calls": 18000,
+    "units": 40,
+    "verified_success": 0.9681666666666666,
+    "internal_success": 0.9681666666666666,
+    "accepted_within_20ms": 0.9681666666666666,
+    "returned_within_5ms": 0.9681666666666666,
+    "returned_within_20ms": 1.0,
+    "total_latency_ns": 6095528297,
+    "latency_p50_ms": 0.168926,
+    "latency_p95_ms": 0.2999887999999998,
+    "latency_p99_ms": 5.256139019999999,
+    "latency_mean_ms": 0.3386404609444445,
+    "latency_max_ms": 5.586301,
+    "internal_failure__task_reject": 573,
+    "internal_failure__task_accept": 0,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 17427,
+    "accepted_position": {
+      "p50": 4.316371476920253e-08,
+      "p95": 6.595674446983611e-06,
+      "p99": 1.0797440940554518e-05,
+      "mean": 9.5366003450712e-07,
+      "max": 1.5148210549117362e-05
+    },
+    "accepted_orientation": {
+      "p50": 1.9342640115799645e-08,
+      "p95": 6.508714492073876e-06,
+      "p99": 1.0438318149119138e-05,
+      "mean": 8.71766401251785e-07,
+      "max": 1.6363983430136342e-05
+    },
+    "all_returned_position": {
+      "p50": 4.857369348525996e-08,
+      "p95": 9.493919799811066e-06,
+      "p99": 0.1504599547021263,
+      "mean": 0.003279104473133722,
+      "max": 0.21867242463946046
+    },
+    "all_returned_orientation": {
+      "p50": 2.2112482681622677e-08,
+      "p95": 9.570787842617498e-06,
+      "p99": 0.6448779175629364,
+      "mean": 0.013512655767347918,
+      "max": 0.9109943613162178
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 0,
+    "completion_counts": [
+      37,
+      37,
+      37
+    ],
+    "deadline_completion_counts": [
+      37,
+      37,
+      37
+    ],
+    "completion_rate": 0.925,
+    "cumulative_latency_ns_per_sweep": 2031842765.6666667,
+    "per_trajectory_cumulative_ms": {
+      "p50": 26.59594,
+      "p95": 169.12474074999977,
+      "p99": 632.86505403,
+      "mean": 50.79606914166667,
+      "max": 637.317124
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 26.705553833333333,
+      "p95": 166.9147334833331,
+      "p99": 483.84424186333314,
+      "mean": 50.79606914166667,
+      "max": 633.2042343333334
+    }
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "authority": "outputs/task_contract_alignment/04_trajectory_study",
+    "calls": 18000,
+    "units": 40,
+    "verified_success": 0.9958333333333333,
+    "internal_success": 0.9958333333333333,
+    "accepted_within_20ms": 0.9957777777777778,
+    "returned_within_5ms": 0.9956111111111111,
+    "returned_within_20ms": 0.9957777777777778,
+    "total_latency_ns": 4702887947,
+    "latency_p50_ms": 0.1607285,
+    "latency_p95_ms": 0.22857534999999998,
+    "latency_p99_ms": 0.4122453099999966,
+    "latency_mean_ms": 0.2612715526111111,
+    "latency_max_ms": 45.207754,
+    "internal_failure__task_reject": 75,
+    "internal_failure__task_accept": 0,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 17925,
+    "accepted_position": {
+      "p50": 3.3436615689832596e-05,
+      "p95": 0.00037957551812926356,
+      "p99": 0.0006271488920061513,
+      "mean": 8.321620085479631e-05,
+      "max": 0.0009367501858205816
+    },
+    "accepted_orientation": {
+      "p50": 4.922935075813975e-05,
+      "p95": 0.0006026721662862112,
+      "p99": 0.0038816505498628457,
+      "mean": 0.0001845324141586258,
+      "max": 0.007852081861234643
+    },
+    "all_returned_position": {
+      "p50": 3.3762471222930284e-05,
+      "p95": 0.0003962147846448765,
+      "p99": 0.0007017896534998047,
+      "mean": 0.00012960624196771688,
+      "max": 0.016215521619673552
+    },
+    "all_returned_orientation": {
+      "p50": 4.9642585321376034e-05,
+      "p95": 0.0006572295603325389,
+      "p99": 0.004873551212366455,
+      "mean": 0.00033870286491572327,
+      "max": 0.05440165262646811
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 0,
+    "completion_counts": [
+      39,
+      39,
+      39
+    ],
+    "deadline_completion_counts": [
+      39,
+      39,
+      38
+    ],
+    "completion_rate": 0.975,
+    "cumulative_latency_ns_per_sweep": 1567629315.6666667,
+    "per_trajectory_cumulative_ms": {
+      "p50": 25.290957499999998,
+      "p95": 34.37149479999999,
+      "p99": 531.23156894,
+      "mean": 39.19073289166667,
+      "max": 540.278957
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 25.381288833333336,
+      "p95": 37.490973283333304,
+      "p99": 343.2111978866664,
+      "mean": 39.19073289166666,
+      "max": 533.6427256666667
+    }
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "authority": "outputs/task_contract_alignment/04_trajectory_study",
+    "calls": 18000,
+    "units": 40,
+    "verified_success": 0.9957222222222222,
+    "internal_success": 0.9957222222222222,
+    "accepted_within_20ms": 0.9957222222222222,
+    "returned_within_5ms": 0.9957222222222222,
+    "returned_within_20ms": 1.0,
+    "total_latency_ns": 3499520664,
+    "latency_p50_ms": 0.160774,
+    "latency_p95_ms": 0.22263024999999997,
+    "latency_p99_ms": 0.40505324999999837,
+    "latency_mean_ms": 0.1944178146666667,
+    "latency_max_ms": 5.360834,
+    "internal_failure__task_reject": 77,
+    "internal_failure__task_accept": 0,
+    "internal_success__task_reject": 0,
+    "internal_success__task_accept": 17923,
+    "accepted_position": {
+      "p50": 3.351761801980815e-05,
+      "p95": 0.00038533033598688244,
+      "p99": 0.0006436354677679015,
+      "mean": 8.411111308529689e-05,
+      "max": 0.0009677532699767389
+    },
+    "accepted_orientation": {
+      "p50": 4.967189656640369e-05,
+      "p95": 0.000623483308923876,
+      "p99": 0.00415111003209975,
+      "mean": 0.00019098090410960063,
+      "max": 0.008626380124635707
+    },
+    "all_returned_position": {
+      "p50": 3.3787239557631795e-05,
+      "p95": 0.00040211879352885593,
+      "p99": 0.0007235582296109807,
+      "mean": 0.00013301594399676268,
+      "max": 0.016945691358022943
+    },
+    "all_returned_orientation": {
+      "p50": 5.0060602842973896e-05,
+      "p95": 0.0006814350412556633,
+      "p99": 0.005029567067149212,
+      "mean": 0.0003487848460096127,
+      "max": 0.0552782546211895
+    },
+    "joint_rejections": 0,
+    "velocity_rejections": 0,
+    "native_failure_task_accept": 0,
+    "completion_counts": [
+      39,
+      39,
+      39
+    ],
+    "deadline_completion_counts": [
+      39,
+      39,
+      39
+    ],
+    "completion_rate": 0.975,
+    "cumulative_latency_ns_per_sweep": 1166506888.0,
+    "per_trajectory_cumulative_ms": {
+      "p50": 25.2581145,
+      "p95": 35.023112,
+      "p99": 155.76545087,
+      "mean": 29.1626722,
+      "max": 156.59004
+    },
+    "paired_unit_cumulative_ms": {
+      "p50": 25.259976333333334,
+      "p95": 32.11778465,
+      "p99": 107.95230322333327,
+      "mean": 29.162672200000003,
+      "max": 155.18080233333333
+    }
+  }
+]

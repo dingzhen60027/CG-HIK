@@ -120,7 +120,7 @@ def trajectory_tables(s):
                 complete=bad is None,complete_within_20ms=all(row['accepted'] and row['returned_within_20ms'] for row in rs),
                 total_latency_ns=sum(row['total_latency_ns'] for row in rs),source=str(p.relative_to(s.root)))
             runs.append(run)
-            if bad:first.append(dict(robot=robot,source=run['source'],**bad))
+            if bad:first.append(dict(bad,robot=robot,source=run['source']))
         def rowset(rs):
             out=summarize(rs);uu=unit_table(rs,True)
             relevant=[r for r in runs if r['robot']==robot and r['method']==rs[0]['method'] and r['uid'] in uu]

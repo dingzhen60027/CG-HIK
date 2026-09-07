@@ -1,0 +1,3842 @@
+[
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "ba9bbb877bd562764b9ad1fe612339400f4396f8e4e3ccdd742d4a4326684c27",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 145805373.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "a62f788b8607be02b7f7a70f0234d741c3a3ffbce60a66d892cb748dca4ac32c",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 143781694.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "98b02d6a697ef616fb15325aca1f5748ceba5d966785b4f1677767ebff16420f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 129945344.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "e928208c5cfa766679be750c366c336bdeb1caea1f8283ea513bc5392401481b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 146020475.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "ea5e2ac9bfe24625cf9368e4931dfe5a7f878c028b94ce7ca271455c05bad4e6",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 164924560.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "972b6c7f62ad2d88a1171405175e002fe4dad516aaa6300e4c090613265f4592",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 170365655.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "0c2a95a498c1bf13c2df4295db29a5367cf069e157e300d36211ce1951b2bf0e",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 149299588.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "cdb906e5ffe0888b5856461ef6bee1b8809232e928fd853beb25f1903a7d798a",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 140324671.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "a74d26d3694c4e4d15b8817c29ef75a4bd43cb4d8d1ebf3ae4154e26d80ab4a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 144275831.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "6b43e53a09d43b068012e38e4082dc1a83a7da4ac12d3b1a7c10621fab8498a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 140308537.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 433354018.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "d8e06950cec2579c739f7f6d3dbb3628755dfd76be5740fad3bec38b4ef94cc6",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 572936360.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 1031872530.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "49e505b5dd8506da453322d27fabacda172e9baf611dd7b1ccac4b4220f68113",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 583571868.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 1078738681.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "1742dca2b4e66648ef384a591bc48af258b7ccf01a3b1f0930d212a06b1f978c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 876003050.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "40c3eae024871d71025c88c09b1bbffc1b50b311548d53112ed8d4118883654a",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 896782274.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 1219849016.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "c99e2c9b46eb1858a0dd2f525833e49b6f0b7c25001781f1b00044934372d935",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 652482032.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "9a94337fb5b3319c8ba9dcce20e827630b16d9a348f1f3aa8709c5d0df3406af",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 1008263116.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "5560810f9d87891ba612f00a19811ec608860538b5dbf8f478a2cc168f4d1547",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 145855571.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "4afc296390cd2da8318a4ba9544aebe6e73de828b20fea6cbaeedda3bf7a189f",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 148077645.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "166f9f9c01b7bdb7e23bb78eb834aa40e45e3eac2d5c263419996286861ad9dc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 186956837.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "703e80ee1a10cacc408a225bf4b9b1d1a8b7cd7c18ef82408fe61c8b6b1a1fa4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 345757624.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "125d0ba81f8f99703f34ce79c430375e614edd8d7281141ad9df7e9828fed992",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 147937276.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "6f61a4f090c2631561aee85944d25bbb3ec9ae75f330ddc67dd8f755fa60ea51",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 184767040.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 612887912.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "62749969a81aa229bd98bbc6a77941b40960bf5ae0886a5dfe36f5eff62e5c1c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 185938396.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "41c501982d64297056fe7d1239938d5f0fb508b8c32ed74b2b5c72d3bf1ddba1",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 585971619.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "16ab30a670ddc1bb59f64aa11421a7a95e2a13b391b17e7261a85fb14178c0bc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 181692044.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "f77f30aad07c01747cccac5f99de0454266b5b9453dc6357da97f2c8d2529cfc",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 139869108.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "b88225558b53c7528d4fc1a56455ceac395ea6a65306515006580362af026e1e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 144536698.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "f786741c9f59d7d552811f1959141226fb4d169d5c149b34b1fb99edb7839b2c",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 137930574.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "8ffc69b10a990e9806b11a88aa9d56ad2edaf960a5dbd463eff00cf8c0b24859",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 202643623.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "bb2d7133de7083285ff7ede00b959e62fc3bf5dc626bfa521b77361d0f3f759e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 151515227.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "e7257c22abc9d850802582540365f4bc972868280e40708e45700776b6ad2aca",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 157712612.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "fd96ca4300b705b343cbde5bb7d97076acca0d187b1d78fc9094c6cac23b640b",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 150928625.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "c27c85dfc1ac902402f2c27d5ecd007325d528654413acef4dab0af30af48583",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 143021725.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "827f4c481262ed599d5a62ea92d72f83f9d2baecaa5e733c4c0018e796d573d5",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 322648710.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_strict",
+    "uid": "380513eac133b886f7e375e39250059ba16f3133d3a5d3b8ff244470af2eb5ae",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 149266518.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "ba9bbb877bd562764b9ad1fe612339400f4396f8e4e3ccdd742d4a4326684c27",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 89404583.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "a62f788b8607be02b7f7a70f0234d741c3a3ffbce60a66d892cb748dca4ac32c",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 93104224.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "98b02d6a697ef616fb15325aca1f5748ceba5d966785b4f1677767ebff16420f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 80659914.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "e928208c5cfa766679be750c366c336bdeb1caea1f8283ea513bc5392401481b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 93273054.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "ea5e2ac9bfe24625cf9368e4931dfe5a7f878c028b94ce7ca271455c05bad4e6",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 90092203.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "972b6c7f62ad2d88a1171405175e002fe4dad516aaa6300e4c090613265f4592",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 89306714.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "0c2a95a498c1bf13c2df4295db29a5367cf069e157e300d36211ce1951b2bf0e",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 89029595.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "cdb906e5ffe0888b5856461ef6bee1b8809232e928fd853beb25f1903a7d798a",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 80528310.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "a74d26d3694c4e4d15b8817c29ef75a4bd43cb4d8d1ebf3ae4154e26d80ab4a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 94619864.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "6b43e53a09d43b068012e38e4082dc1a83a7da4ac12d3b1a7c10621fab8498a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 91912144.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 88457311.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "d8e06950cec2579c739f7f6d3dbb3628755dfd76be5740fad3bec38b4ef94cc6",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 100663223.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 477124043.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "49e505b5dd8506da453322d27fabacda172e9baf611dd7b1ccac4b4220f68113",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 103768394.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 74426582.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "1742dca2b4e66648ef384a591bc48af258b7ccf01a3b1f0930d212a06b1f978c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 87104606.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "40c3eae024871d71025c88c09b1bbffc1b50b311548d53112ed8d4118883654a",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 81018710.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 449106353.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "c99e2c9b46eb1858a0dd2f525833e49b6f0b7c25001781f1b00044934372d935",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 77273855.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "9a94337fb5b3319c8ba9dcce20e827630b16d9a348f1f3aa8709c5d0df3406af",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 78637251.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "5560810f9d87891ba612f00a19811ec608860538b5dbf8f478a2cc168f4d1547",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 88512729.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "4afc296390cd2da8318a4ba9544aebe6e73de828b20fea6cbaeedda3bf7a189f",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 91958164.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "166f9f9c01b7bdb7e23bb78eb834aa40e45e3eac2d5c263419996286861ad9dc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 83891416.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "703e80ee1a10cacc408a225bf4b9b1d1a8b7cd7c18ef82408fe61c8b6b1a1fa4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 119832533.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "125d0ba81f8f99703f34ce79c430375e614edd8d7281141ad9df7e9828fed992",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 81477151.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "6f61a4f090c2631561aee85944d25bbb3ec9ae75f330ddc67dd8f755fa60ea51",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 88702558.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 538290360.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "62749969a81aa229bd98bbc6a77941b40960bf5ae0886a5dfe36f5eff62e5c1c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 89215631.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "41c501982d64297056fe7d1239938d5f0fb508b8c32ed74b2b5c72d3bf1ddba1",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 81386072.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "16ab30a670ddc1bb59f64aa11421a7a95e2a13b391b17e7261a85fb14178c0bc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 90587882.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "f77f30aad07c01747cccac5f99de0454266b5b9453dc6357da97f2c8d2529cfc",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 90265486.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "b88225558b53c7528d4fc1a56455ceac395ea6a65306515006580362af026e1e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 98813254.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "f786741c9f59d7d552811f1959141226fb4d169d5c149b34b1fb99edb7839b2c",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 90361739.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "8ffc69b10a990e9806b11a88aa9d56ad2edaf960a5dbd463eff00cf8c0b24859",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 97234058.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "bb2d7133de7083285ff7ede00b959e62fc3bf5dc626bfa521b77361d0f3f759e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 90416195.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "e7257c22abc9d850802582540365f4bc972868280e40708e45700776b6ad2aca",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 106157135.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "fd96ca4300b705b343cbde5bb7d97076acca0d187b1d78fc9094c6cac23b640b",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 97900612.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "c27c85dfc1ac902402f2c27d5ecd007325d528654413acef4dab0af30af48583",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 96136879.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "827f4c481262ed599d5a62ea92d72f83f9d2baecaa5e733c4c0018e796d573d5",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 98757407.0
+  },
+  {
+    "robot": "panda",
+    "method": "dls_task",
+    "uid": "380513eac133b886f7e375e39250059ba16f3133d3a5d3b8ff244470af2eb5ae",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 84602750.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "ba9bbb877bd562764b9ad1fe612339400f4396f8e4e3ccdd742d4a4326684c27",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33890034.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "a62f788b8607be02b7f7a70f0234d741c3a3ffbce60a66d892cb748dca4ac32c",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 36521732.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "98b02d6a697ef616fb15325aca1f5748ceba5d966785b4f1677767ebff16420f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 36507734.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "e928208c5cfa766679be750c366c336bdeb1caea1f8283ea513bc5392401481b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 34747886.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "ea5e2ac9bfe24625cf9368e4931dfe5a7f878c028b94ce7ca271455c05bad4e6",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33499024.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "972b6c7f62ad2d88a1171405175e002fe4dad516aaa6300e4c090613265f4592",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 34653943.333333336
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "0c2a95a498c1bf13c2df4295db29a5367cf069e157e300d36211ce1951b2bf0e",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 35742956.333333336
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "cdb906e5ffe0888b5856461ef6bee1b8809232e928fd853beb25f1903a7d798a",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 35890909.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "a74d26d3694c4e4d15b8817c29ef75a4bd43cb4d8d1ebf3ae4154e26d80ab4a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 32736318.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "6b43e53a09d43b068012e38e4082dc1a83a7da4ac12d3b1a7c10621fab8498a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 34068248.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 1652418727.6666667
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "d8e06950cec2579c739f7f6d3dbb3628755dfd76be5740fad3bec38b4ef94cc6",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 33186390.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 1528255819.3333333
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "49e505b5dd8506da453322d27fabacda172e9baf611dd7b1ccac4b4220f68113",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 31280143.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 782909281.6666666
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "1742dca2b4e66648ef384a591bc48af258b7ccf01a3b1f0930d212a06b1f978c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 37414755.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "40c3eae024871d71025c88c09b1bbffc1b50b311548d53112ed8d4118883654a",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 31528249.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 746773991.3333334
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "c99e2c9b46eb1858a0dd2f525833e49b6f0b7c25001781f1b00044934372d935",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 33105427.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "9a94337fb5b3319c8ba9dcce20e827630b16d9a348f1f3aa8709c5d0df3406af",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 1096732002.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "5560810f9d87891ba612f00a19811ec608860538b5dbf8f478a2cc168f4d1547",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 35544777.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "4afc296390cd2da8318a4ba9544aebe6e73de828b20fea6cbaeedda3bf7a189f",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33206217.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "166f9f9c01b7bdb7e23bb78eb834aa40e45e3eac2d5c263419996286861ad9dc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33570678.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "703e80ee1a10cacc408a225bf4b9b1d1a8b7cd7c18ef82408fe61c8b6b1a1fa4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 38056581.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "125d0ba81f8f99703f34ce79c430375e614edd8d7281141ad9df7e9828fed992",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33145914.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "6f61a4f090c2631561aee85944d25bbb3ec9ae75f330ddc67dd8f755fa60ea51",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 35823466.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 1688587097.3333333
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "62749969a81aa229bd98bbc6a77941b40960bf5ae0886a5dfe36f5eff62e5c1c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 34487395.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "41c501982d64297056fe7d1239938d5f0fb508b8c32ed74b2b5c72d3bf1ddba1",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 32597397.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "16ab30a670ddc1bb59f64aa11421a7a95e2a13b391b17e7261a85fb14178c0bc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 31987978.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "f77f30aad07c01747cccac5f99de0454266b5b9453dc6357da97f2c8d2529cfc",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 34534587.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "b88225558b53c7528d4fc1a56455ceac395ea6a65306515006580362af026e1e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33683876.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "f786741c9f59d7d552811f1959141226fb4d169d5c149b34b1fb99edb7839b2c",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 32555258.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "8ffc69b10a990e9806b11a88aa9d56ad2edaf960a5dbd463eff00cf8c0b24859",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 35432662.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "bb2d7133de7083285ff7ede00b959e62fc3bf5dc626bfa521b77361d0f3f759e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 35529686.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "e7257c22abc9d850802582540365f4bc972868280e40708e45700776b6ad2aca",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33447560.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "fd96ca4300b705b343cbde5bb7d97076acca0d187b1d78fc9094c6cac23b640b",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 29804549.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "c27c85dfc1ac902402f2c27d5ecd007325d528654413acef4dab0af30af48583",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33707410.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "827f4c481262ed599d5a62ea92d72f83f9d2baecaa5e733c4c0018e796d573d5",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 32965143.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_20ms",
+    "uid": "380513eac133b886f7e375e39250059ba16f3133d3a5d3b8ff244470af2eb5ae",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33250406.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "ba9bbb877bd562764b9ad1fe612339400f4396f8e4e3ccdd742d4a4326684c27",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33160143.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "a62f788b8607be02b7f7a70f0234d741c3a3ffbce60a66d892cb748dca4ac32c",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33517524.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "98b02d6a697ef616fb15325aca1f5748ceba5d966785b4f1677767ebff16420f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 34342773.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "e928208c5cfa766679be750c366c336bdeb1caea1f8283ea513bc5392401481b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33366905.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "ea5e2ac9bfe24625cf9368e4931dfe5a7f878c028b94ce7ca271455c05bad4e6",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 31790581.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "972b6c7f62ad2d88a1171405175e002fe4dad516aaa6300e4c090613265f4592",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33682182.333333336
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "0c2a95a498c1bf13c2df4295db29a5367cf069e157e300d36211ce1951b2bf0e",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33851919.333333336
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "cdb906e5ffe0888b5856461ef6bee1b8809232e928fd853beb25f1903a7d798a",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 32139369.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "a74d26d3694c4e4d15b8817c29ef75a4bd43cb4d8d1ebf3ae4154e26d80ab4a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 35931158.333333336
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "6b43e53a09d43b068012e38e4082dc1a83a7da4ac12d3b1a7c10621fab8498a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 50083411.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 438606956.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "d8e06950cec2579c739f7f6d3dbb3628755dfd76be5740fad3bec38b4ef94cc6",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 33794686.333333336
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 413474998.3333333
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "49e505b5dd8506da453322d27fabacda172e9baf611dd7b1ccac4b4220f68113",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 33245965.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 221758710.66666666
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "1742dca2b4e66648ef384a591bc48af258b7ccf01a3b1f0930d212a06b1f978c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 29789436.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "40c3eae024871d71025c88c09b1bbffc1b50b311548d53112ed8d4118883654a",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 28869516.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 218484827.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "c99e2c9b46eb1858a0dd2f525833e49b6f0b7c25001781f1b00044934372d935",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 36220085.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "9a94337fb5b3319c8ba9dcce20e827630b16d9a348f1f3aa8709c5d0df3406af",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 303206456.3333333
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "5560810f9d87891ba612f00a19811ec608860538b5dbf8f478a2cc168f4d1547",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33059198.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "4afc296390cd2da8318a4ba9544aebe6e73de828b20fea6cbaeedda3bf7a189f",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 35626728.333333336
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "166f9f9c01b7bdb7e23bb78eb834aa40e45e3eac2d5c263419996286861ad9dc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33414748.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "703e80ee1a10cacc408a225bf4b9b1d1a8b7cd7c18ef82408fe61c8b6b1a1fa4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 37109658.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "125d0ba81f8f99703f34ce79c430375e614edd8d7281141ad9df7e9828fed992",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 29608605.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "6f61a4f090c2631561aee85944d25bbb3ec9ae75f330ddc67dd8f755fa60ea51",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 31915239.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 450727764.3333333
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "62749969a81aa229bd98bbc6a77941b40960bf5ae0886a5dfe36f5eff62e5c1c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33155899.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "41c501982d64297056fe7d1239938d5f0fb508b8c32ed74b2b5c72d3bf1ddba1",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33503186.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "16ab30a670ddc1bb59f64aa11421a7a95e2a13b391b17e7261a85fb14178c0bc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 35952773.333333336
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "f77f30aad07c01747cccac5f99de0454266b5b9453dc6357da97f2c8d2529cfc",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33502685.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "b88225558b53c7528d4fc1a56455ceac395ea6a65306515006580362af026e1e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33401719.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "f786741c9f59d7d552811f1959141226fb4d169d5c149b34b1fb99edb7839b2c",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 32406219.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "8ffc69b10a990e9806b11a88aa9d56ad2edaf960a5dbd463eff00cf8c0b24859",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 31672709.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "bb2d7133de7083285ff7ede00b959e62fc3bf5dc626bfa521b77361d0f3f759e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33391797.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "e7257c22abc9d850802582540365f4bc972868280e40708e45700776b6ad2aca",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 32029159.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "fd96ca4300b705b343cbde5bb7d97076acca0d187b1d78fc9094c6cac23b640b",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 30460858.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "c27c85dfc1ac902402f2c27d5ecd007325d528654413acef4dab0af30af48583",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 32354166.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "827f4c481262ed599d5a62ea92d72f83f9d2baecaa5e733c4c0018e796d573d5",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 29673023.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_strict_5ms",
+    "uid": "380513eac133b886f7e375e39250059ba16f3133d3a5d3b8ff244470af2eb5ae",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 34945782.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "ba9bbb877bd562764b9ad1fe612339400f4396f8e4e3ccdd742d4a4326684c27",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33175988.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "a62f788b8607be02b7f7a70f0234d741c3a3ffbce60a66d892cb748dca4ac32c",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33927954.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "98b02d6a697ef616fb15325aca1f5748ceba5d966785b4f1677767ebff16420f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33452140.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "e928208c5cfa766679be750c366c336bdeb1caea1f8283ea513bc5392401481b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 31267244.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "ea5e2ac9bfe24625cf9368e4931dfe5a7f878c028b94ce7ca271455c05bad4e6",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 31469391.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "972b6c7f62ad2d88a1171405175e002fe4dad516aaa6300e4c090613265f4592",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 31345405.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "0c2a95a498c1bf13c2df4295db29a5367cf069e157e300d36211ce1951b2bf0e",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 31395388.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "cdb906e5ffe0888b5856461ef6bee1b8809232e928fd853beb25f1903a7d798a",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 32167138.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "a74d26d3694c4e4d15b8817c29ef75a4bd43cb4d8d1ebf3ae4154e26d80ab4a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 31160103.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "6b43e53a09d43b068012e38e4082dc1a83a7da4ac12d3b1a7c10621fab8498a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 30500877.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 33029836.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "d8e06950cec2579c739f7f6d3dbb3628755dfd76be5740fad3bec38b4ef94cc6",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 31882111.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370",
+    "family": "near_singular",
+    "success": 0.6666666666666666,
+    "time": 437896569.6666667
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "49e505b5dd8506da453322d27fabacda172e9baf611dd7b1ccac4b4220f68113",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 29760823.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 744696717.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "1742dca2b4e66648ef384a591bc48af258b7ccf01a3b1f0930d212a06b1f978c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 33670848.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "40c3eae024871d71025c88c09b1bbffc1b50b311548d53112ed8d4118883654a",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 32290913.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 668047831.6666666
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "c99e2c9b46eb1858a0dd2f525833e49b6f0b7c25001781f1b00044934372d935",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 33328617.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "9a94337fb5b3319c8ba9dcce20e827630b16d9a348f1f3aa8709c5d0df3406af",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 42471072.333333336
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "5560810f9d87891ba612f00a19811ec608860538b5dbf8f478a2cc168f4d1547",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33938832.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "4afc296390cd2da8318a4ba9544aebe6e73de828b20fea6cbaeedda3bf7a189f",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 30400707.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "166f9f9c01b7bdb7e23bb78eb834aa40e45e3eac2d5c263419996286861ad9dc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 34630108.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "703e80ee1a10cacc408a225bf4b9b1d1a8b7cd7c18ef82408fe61c8b6b1a1fa4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33649182.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "125d0ba81f8f99703f34ce79c430375e614edd8d7281141ad9df7e9828fed992",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 32696909.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "6f61a4f090c2631561aee85944d25bbb3ec9ae75f330ddc67dd8f755fa60ea51",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 31804396.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+    "family": "joint_limit_return",
+    "success": 0.6666666666666666,
+    "time": 573131508.3333334
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "62749969a81aa229bd98bbc6a77941b40960bf5ae0886a5dfe36f5eff62e5c1c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 34371596.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "41c501982d64297056fe7d1239938d5f0fb508b8c32ed74b2b5c72d3bf1ddba1",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33092078.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "16ab30a670ddc1bb59f64aa11421a7a95e2a13b391b17e7261a85fb14178c0bc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 31539787.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "f77f30aad07c01747cccac5f99de0454266b5b9453dc6357da97f2c8d2529cfc",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 31914607.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "b88225558b53c7528d4fc1a56455ceac395ea6a65306515006580362af026e1e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33216879.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "f786741c9f59d7d552811f1959141226fb4d169d5c149b34b1fb99edb7839b2c",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 35242121.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "8ffc69b10a990e9806b11a88aa9d56ad2edaf960a5dbd463eff00cf8c0b24859",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 31527121.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "bb2d7133de7083285ff7ede00b959e62fc3bf5dc626bfa521b77361d0f3f759e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33121298.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "e7257c22abc9d850802582540365f4bc972868280e40708e45700776b6ad2aca",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 32689617.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "fd96ca4300b705b343cbde5bb7d97076acca0d187b1d78fc9094c6cac23b640b",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 32651303.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "c27c85dfc1ac902402f2c27d5ecd007325d528654413acef4dab0af30af48583",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 28669102.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "827f4c481262ed599d5a62ea92d72f83f9d2baecaa5e733c4c0018e796d573d5",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 34771947.333333336
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "uid": "380513eac133b886f7e375e39250059ba16f3133d3a5d3b8ff244470af2eb5ae",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 30130651.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "ba9bbb877bd562764b9ad1fe612339400f4396f8e4e3ccdd742d4a4326684c27",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 29258836.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "a62f788b8607be02b7f7a70f0234d741c3a3ffbce60a66d892cb748dca4ac32c",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33520924.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "98b02d6a697ef616fb15325aca1f5748ceba5d966785b4f1677767ebff16420f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 31261660.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "e928208c5cfa766679be750c366c336bdeb1caea1f8283ea513bc5392401481b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 44561763.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "ea5e2ac9bfe24625cf9368e4931dfe5a7f878c028b94ce7ca271455c05bad4e6",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 32286993.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "972b6c7f62ad2d88a1171405175e002fe4dad516aaa6300e4c090613265f4592",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 30512824.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "0c2a95a498c1bf13c2df4295db29a5367cf069e157e300d36211ce1951b2bf0e",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 32807596.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "cdb906e5ffe0888b5856461ef6bee1b8809232e928fd853beb25f1903a7d798a",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 27144531.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "a74d26d3694c4e4d15b8817c29ef75a4bd43cb4d8d1ebf3ae4154e26d80ab4a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33344989.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "6b43e53a09d43b068012e38e4082dc1a83a7da4ac12d3b1a7c10621fab8498a4",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 33988742.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 30053814.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "d8e06950cec2579c739f7f6d3dbb3628755dfd76be5740fad3bec38b4ef94cc6",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 31313757.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370",
+    "family": "near_singular",
+    "success": 0.6666666666666666,
+    "time": 133032188.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "49e505b5dd8506da453322d27fabacda172e9baf611dd7b1ccac4b4220f68113",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 30589937.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 216014373.33333334
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "1742dca2b4e66648ef384a591bc48af258b7ccf01a3b1f0930d212a06b1f978c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 29483266.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "40c3eae024871d71025c88c09b1bbffc1b50b311548d53112ed8d4118883654a",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 32341881.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 190693607.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "c99e2c9b46eb1858a0dd2f525833e49b6f0b7c25001781f1b00044934372d935",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 34013887.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "9a94337fb5b3319c8ba9dcce20e827630b16d9a348f1f3aa8709c5d0df3406af",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 37708892.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "5560810f9d87891ba612f00a19811ec608860538b5dbf8f478a2cc168f4d1547",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 30283003.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "4afc296390cd2da8318a4ba9544aebe6e73de828b20fea6cbaeedda3bf7a189f",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 30458933.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "166f9f9c01b7bdb7e23bb78eb834aa40e45e3eac2d5c263419996286861ad9dc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 31909709.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "703e80ee1a10cacc408a225bf4b9b1d1a8b7cd7c18ef82408fe61c8b6b1a1fa4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 32281645.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "125d0ba81f8f99703f34ce79c430375e614edd8d7281141ad9df7e9828fed992",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 31181802.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "6f61a4f090c2631561aee85944d25bbb3ec9ae75f330ddc67dd8f755fa60ea51",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 32005497.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 434474825.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "62749969a81aa229bd98bbc6a77941b40960bf5ae0886a5dfe36f5eff62e5c1c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 34393455.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "41c501982d64297056fe7d1239938d5f0fb508b8c32ed74b2b5c72d3bf1ddba1",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 34221330.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "16ab30a670ddc1bb59f64aa11421a7a95e2a13b391b17e7261a85fb14178c0bc",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 27691942.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "f77f30aad07c01747cccac5f99de0454266b5b9453dc6357da97f2c8d2529cfc",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 29594855.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "b88225558b53c7528d4fc1a56455ceac395ea6a65306515006580362af026e1e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33256697.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "f786741c9f59d7d552811f1959141226fb4d169d5c149b34b1fb99edb7839b2c",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 33647618.666666664
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "8ffc69b10a990e9806b11a88aa9d56ad2edaf960a5dbd463eff00cf8c0b24859",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 32445121.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "bb2d7133de7083285ff7ede00b959e62fc3bf5dc626bfa521b77361d0f3f759e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 52235086.0
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "e7257c22abc9d850802582540365f4bc972868280e40708e45700776b6ad2aca",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 30045740.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "fd96ca4300b705b343cbde5bb7d97076acca0d187b1d78fc9094c6cac23b640b",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 30315007.666666668
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "c27c85dfc1ac902402f2c27d5ecd007325d528654413acef4dab0af30af48583",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 32000683.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "827f4c481262ed599d5a62ea92d72f83f9d2baecaa5e733c4c0018e796d573d5",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 31655680.333333332
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "uid": "380513eac133b886f7e375e39250059ba16f3133d3a5d3b8ff244470af2eb5ae",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 32247749.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "9a5eaa5a533abb994b7505aca361cebaf65ef495d064d694df4c023580e9cd0b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 459284851.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "2037257a8eb29f55e1baa50497e60c0cb87331a5da7e7a4344c8cded212a709f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 456004804.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "f87cbb198e6aa95e16ea15160dd1d4f545d70b0d61622238ff991b3a2d27786a",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 364774174.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "b0e17067aaf6e660b04f8be634d639d569df55018bfb39821596146afb9736de",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 485160747.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "ae12f9762615d4c9ac155883dd03d430cba862223b3fb491a4a1d1189e10a2b8",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 418666638.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "386ce328d9e893da466d8af1dc09a15e66ae16a35efe9585b2d68e67da964fb7",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 432090108.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "e2e620aa17071c959d153796e3b230f5780cc2b167c0a2e0b4bb029087169848",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 121798458.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "2136e60219e4240e7b97c87a2f481c6642991ff7128b97a75454ffcee69e4a9c",
+    "family": "smooth",
+    "success": 0.0,
+    "time": 607308534.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "13896bc6c5f688854ad405268705ab3bb2a8fec56ac1e75c8a872707a3f652f8",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 1011666997.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "5de0f5ff5025c915a9ca0194e6813b77637e2059d947b69d324216690202559b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 261869256.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "6105bc9f0df7e8baadfc8dd255f78c7bb3ddb066573e8f4fde9c385dbe5db694",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 286595756.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "e4188d53efbb54472d782b035a4214854136b6bb171d9aee6282590944abd39b",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 732731356.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "9ab3a7e22a338adf15a7eb240986a1d682820bcf958fc25dd9058bd66c51d502",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 865262989.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "929479d86d1af1569abbd00ff695f793876d0c13d1b6ef36f9f39dc04d36f80c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 445514036.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "68244e8dec0d66d1a48832b1992c69f7c4c907fc930b958710e9220ae46bd192",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 119887773.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 248452835.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "ce26ff5e9952bacd57c54933b78db77a6ea0e1070f6563c04194dc00457f2656",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 217669829.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "5ff81edc43cf92c445ae661655f0f074229d3861bbbd0b57d14ad453615b9e25",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 882939126.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "17d92c7319719a45d08d673e5023c3f00687e4f5a57bdebde3dccc6370b94c3a",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 671564620.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "cf0b2892659faaddd69ba9d6172f4d41b4cbbe81ea9aa1fa891f59fcc8daec21",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 628896036.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "c0f0fa5983ead9bf72ff425c510b3208de5bd46dcc8efd876a735c868767ac8e",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 304097125.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "28c799f101b845f2577d1584bde9de07634bcdda61cf814be0670f4c7adce911",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 834375069.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "08551a27ac837f8ed54c41a0759eec98dbd199480066ac542298cbb032f6d99a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 459062316.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "08f895e22c5162e0796964649a1fcdb582c61bccc5e4d0e8b349bbca35756523",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 664405040.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "d1ef5ab32f38a93c076857d0eea5dc9836af8df3c2111b752fe4a419473c1ff4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 823112152.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "d30c1e5c8c16af6e606ac7829229200ccae448efeb1a9cdad8b80da506691864",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 130050706.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "234cd2a268d2d4ebc0f1b5ca1926ee196812079496ff3e6e19f17e48a5761d2c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 432703217.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "5e7743615ad75a997da2a3dfac5ecbaa6539b43fd5db8ecf4d7f9cc7331b3e15",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 729595682.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "a4d21e54d799674aa3de252efe1304776a18586a5f8d95b6f975dad09cacd372",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 617384548.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "816b8a675263f8ec8337dc224a3ea9971c9a8387f6953eb1fd1c846b6d1a7c4a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 120645204.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "382307fdf25e31f8b1ae5c14a7545e81bf0c54489223c4626934c3dbe31a195e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 346521069.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "1572bafea0edc3c6cc05d2a9eabd19a06035670328035c0b780d47b54a683769",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 122171167.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "da8a1e7a5ca60a1e40bacf3e76f1002ab39a7b3cb6f8290450d6356089897d78",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 120246008.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "a079baf3b1644afc829cc82c6747ab4482a4f1778e24be557741a87f9aefa38f",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 120438613.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "ad91c93d906d04e8aa7467228cb161965123769d55ad38469161e7830e742868",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 119842425.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "118730753d57a2523105ec3ee6ba017c9c2775dda076f4c79f2396693e83c7a9",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 120505042.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "3bd332b9ef08ab00b11a865fd161af952ecc92241dd59aeac869f7688ac64b79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 253394607.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "1c73e520a3d5bd8f7e29cb08d559a6364a6bdec344a07acd40f2375a56459f79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 330535432.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "5547871d76b6176b3e5dd5d8f20eebc72645f4fdb4a7e415a21928fb85392f9e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 476331337.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_strict",
+    "uid": "a68ec605ba66c3e27686650c1fdc577d4ff40b0c237bb80f93dc329bed511c56",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 120995032.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "9a5eaa5a533abb994b7505aca361cebaf65ef495d064d694df4c023580e9cd0b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 74143121.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "2037257a8eb29f55e1baa50497e60c0cb87331a5da7e7a4344c8cded212a709f",
+    "family": "smooth",
+    "success": 0.0,
+    "time": 667750189.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "f87cbb198e6aa95e16ea15160dd1d4f545d70b0d61622238ff991b3a2d27786a",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 75668022.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "b0e17067aaf6e660b04f8be634d639d569df55018bfb39821596146afb9736de",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 74449283.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "ae12f9762615d4c9ac155883dd03d430cba862223b3fb491a4a1d1189e10a2b8",
+    "family": "smooth",
+    "success": 0.0,
+    "time": 81465291.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "386ce328d9e893da466d8af1dc09a15e66ae16a35efe9585b2d68e67da964fb7",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 82587258.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "e2e620aa17071c959d153796e3b230f5780cc2b167c0a2e0b4bb029087169848",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 75766114.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "2136e60219e4240e7b97c87a2f481c6642991ff7128b97a75454ffcee69e4a9c",
+    "family": "smooth",
+    "success": 0.0,
+    "time": 367482960.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "13896bc6c5f688854ad405268705ab3bb2a8fec56ac1e75c8a872707a3f652f8",
+    "family": "smooth",
+    "success": 0.0,
+    "time": 119524297.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "5de0f5ff5025c915a9ca0194e6813b77637e2059d947b69d324216690202559b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 75345029.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "6105bc9f0df7e8baadfc8dd255f78c7bb3ddb066573e8f4fde9c385dbe5db694",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 67919848.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "e4188d53efbb54472d782b035a4214854136b6bb171d9aee6282590944abd39b",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 247618537.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "9ab3a7e22a338adf15a7eb240986a1d682820bcf958fc25dd9058bd66c51d502",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 98534720.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "929479d86d1af1569abbd00ff695f793876d0c13d1b6ef36f9f39dc04d36f80c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 67490268.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "68244e8dec0d66d1a48832b1992c69f7c4c907fc930b958710e9220ae46bd192",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 72436062.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 65991448.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "ce26ff5e9952bacd57c54933b78db77a6ea0e1070f6563c04194dc00457f2656",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 73065569.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "5ff81edc43cf92c445ae661655f0f074229d3861bbbd0b57d14ad453615b9e25",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 365404985.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "17d92c7319719a45d08d673e5023c3f00687e4f5a57bdebde3dccc6370b94c3a",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 273678109.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "cf0b2892659faaddd69ba9d6172f4d41b4cbbe81ea9aa1fa891f59fcc8daec21",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 472464757.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "c0f0fa5983ead9bf72ff425c510b3208de5bd46dcc8efd876a735c868767ac8e",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 76120940.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "28c799f101b845f2577d1584bde9de07634bcdda61cf814be0670f4c7adce911",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 106576690.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "08551a27ac837f8ed54c41a0759eec98dbd199480066ac542298cbb032f6d99a",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 479230428.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "08f895e22c5162e0796964649a1fcdb582c61bccc5e4d0e8b349bbca35756523",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 463906612.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "d1ef5ab32f38a93c076857d0eea5dc9836af8df3c2111b752fe4a419473c1ff4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 78951676.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "d30c1e5c8c16af6e606ac7829229200ccae448efeb1a9cdad8b80da506691864",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 75140311.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "234cd2a268d2d4ebc0f1b5ca1926ee196812079496ff3e6e19f17e48a5761d2c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 75845405.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "5e7743615ad75a997da2a3dfac5ecbaa6539b43fd5db8ecf4d7f9cc7331b3e15",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 580893365.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "a4d21e54d799674aa3de252efe1304776a18586a5f8d95b6f975dad09cacd372",
+    "family": "joint_limit_return",
+    "success": 0.0,
+    "time": 323215169.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "816b8a675263f8ec8337dc224a3ea9971c9a8387f6953eb1fd1c846b6d1a7c4a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 74732071.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "382307fdf25e31f8b1ae5c14a7545e81bf0c54489223c4626934c3dbe31a195e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 75684404.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "1572bafea0edc3c6cc05d2a9eabd19a06035670328035c0b780d47b54a683769",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 74900074.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "da8a1e7a5ca60a1e40bacf3e76f1002ab39a7b3cb6f8290450d6356089897d78",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 74628810.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "a079baf3b1644afc829cc82c6747ab4482a4f1778e24be557741a87f9aefa38f",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 74659087.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "ad91c93d906d04e8aa7467228cb161965123769d55ad38469161e7830e742868",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 78960934.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "118730753d57a2523105ec3ee6ba017c9c2775dda076f4c79f2396693e83c7a9",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 74183976.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "3bd332b9ef08ab00b11a865fd161af952ecc92241dd59aeac869f7688ac64b79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 73914250.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "1c73e520a3d5bd8f7e29cb08d559a6364a6bdec344a07acd40f2375a56459f79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 75224997.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "5547871d76b6176b3e5dd5d8f20eebc72645f4fdb4a7e415a21928fb85392f9e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 75021913.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "dls_task",
+    "uid": "a68ec605ba66c3e27686650c1fdc577d4ff40b0c237bb80f93dc329bed511c56",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 75335889.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "9a5eaa5a533abb994b7505aca361cebaf65ef495d064d694df4c023580e9cd0b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26726452.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "2037257a8eb29f55e1baa50497e60c0cb87331a5da7e7a4344c8cded212a709f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26681217.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "f87cbb198e6aa95e16ea15160dd1d4f545d70b0d61622238ff991b3a2d27786a",
+    "family": "smooth",
+    "success": 0.0,
+    "time": 2444283339.6666665
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "b0e17067aaf6e660b04f8be634d639d569df55018bfb39821596146afb9736de",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 28393545.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "ae12f9762615d4c9ac155883dd03d430cba862223b3fb491a4a1d1189e10a2b8",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26716017.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "386ce328d9e893da466d8af1dc09a15e66ae16a35efe9585b2d68e67da964fb7",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25976901.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "e2e620aa17071c959d153796e3b230f5780cc2b167c0a2e0b4bb029087169848",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26753884.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "2136e60219e4240e7b97c87a2f481c6642991ff7128b97a75454ffcee69e4a9c",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26240509.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "13896bc6c5f688854ad405268705ab3bb2a8fec56ac1e75c8a872707a3f652f8",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26732852.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "5de0f5ff5025c915a9ca0194e6813b77637e2059d947b69d324216690202559b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26429066.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "6105bc9f0df7e8baadfc8dd255f78c7bb3ddb066573e8f4fde9c385dbe5db694",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 26032855.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "e4188d53efbb54472d782b035a4214854136b6bb171d9aee6282590944abd39b",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25946674.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "9ab3a7e22a338adf15a7eb240986a1d682820bcf958fc25dd9058bd66c51d502",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25584889.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "929479d86d1af1569abbd00ff695f793876d0c13d1b6ef36f9f39dc04d36f80c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 26160139.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "68244e8dec0d66d1a48832b1992c69f7c4c907fc930b958710e9220ae46bd192",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 27502519.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 570969033.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "ce26ff5e9952bacd57c54933b78db77a6ea0e1070f6563c04194dc00457f2656",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 26403848.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "5ff81edc43cf92c445ae661655f0f074229d3861bbbd0b57d14ad453615b9e25",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25630260.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "17d92c7319719a45d08d673e5023c3f00687e4f5a57bdebde3dccc6370b94c3a",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 26462527.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "cf0b2892659faaddd69ba9d6172f4d41b4cbbe81ea9aa1fa891f59fcc8daec21",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25689243.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "c0f0fa5983ead9bf72ff425c510b3208de5bd46dcc8efd876a735c868767ac8e",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 41142493.333333336
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "28c799f101b845f2577d1584bde9de07634bcdda61cf814be0670f4c7adce911",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 28142115.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "08551a27ac837f8ed54c41a0759eec98dbd199480066ac542298cbb032f6d99a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26382327.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "08f895e22c5162e0796964649a1fcdb582c61bccc5e4d0e8b349bbca35756523",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 27904713.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "d1ef5ab32f38a93c076857d0eea5dc9836af8df3c2111b752fe4a419473c1ff4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26561133.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "d30c1e5c8c16af6e606ac7829229200ccae448efeb1a9cdad8b80da506691864",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26953658.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "234cd2a268d2d4ebc0f1b5ca1926ee196812079496ff3e6e19f17e48a5761d2c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26338641.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "5e7743615ad75a997da2a3dfac5ecbaa6539b43fd5db8ecf4d7f9cc7331b3e15",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26903077.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "a4d21e54d799674aa3de252efe1304776a18586a5f8d95b6f975dad09cacd372",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26378208.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "816b8a675263f8ec8337dc224a3ea9971c9a8387f6953eb1fd1c846b6d1a7c4a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26774808.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "382307fdf25e31f8b1ae5c14a7545e81bf0c54489223c4626934c3dbe31a195e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26824097.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "1572bafea0edc3c6cc05d2a9eabd19a06035670328035c0b780d47b54a683769",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26494260.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "da8a1e7a5ca60a1e40bacf3e76f1002ab39a7b3cb6f8290450d6356089897d78",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26526133.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "a079baf3b1644afc829cc82c6747ab4482a4f1778e24be557741a87f9aefa38f",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26115148.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "ad91c93d906d04e8aa7467228cb161965123769d55ad38469161e7830e742868",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26954277.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "118730753d57a2523105ec3ee6ba017c9c2775dda076f4c79f2396693e83c7a9",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26494110.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "3bd332b9ef08ab00b11a865fd161af952ecc92241dd59aeac869f7688ac64b79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 27224762.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "1c73e520a3d5bd8f7e29cb08d559a6364a6bdec344a07acd40f2375a56459f79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 27311230.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "5547871d76b6176b3e5dd5d8f20eebc72645f4fdb4a7e415a21928fb85392f9e",
+    "family": "high_curvature",
+    "success": 0.0,
+    "time": 915769844.6666666
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_20ms",
+    "uid": "a68ec605ba66c3e27686650c1fdc577d4ff40b0c237bb80f93dc329bed511c56",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 27154346.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "9a5eaa5a533abb994b7505aca361cebaf65ef495d064d694df4c023580e9cd0b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26661504.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "2037257a8eb29f55e1baa50497e60c0cb87331a5da7e7a4344c8cded212a709f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26700650.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "f87cbb198e6aa95e16ea15160dd1d4f545d70b0d61622238ff991b3a2d27786a",
+    "family": "smooth",
+    "success": 0.0,
+    "time": 633204234.3333334
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "b0e17067aaf6e660b04f8be634d639d569df55018bfb39821596146afb9736de",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 27052610.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "ae12f9762615d4c9ac155883dd03d430cba862223b3fb491a4a1d1189e10a2b8",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26499610.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "386ce328d9e893da466d8af1dc09a15e66ae16a35efe9585b2d68e67da964fb7",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25931614.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "e2e620aa17071c959d153796e3b230f5780cc2b167c0a2e0b4bb029087169848",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26799316.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "2136e60219e4240e7b97c87a2f481c6642991ff7128b97a75454ffcee69e4a9c",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26305076.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "13896bc6c5f688854ad405268705ab3bb2a8fec56ac1e75c8a872707a3f652f8",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 27128505.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "5de0f5ff5025c915a9ca0194e6813b77637e2059d947b69d324216690202559b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26561244.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "6105bc9f0df7e8baadfc8dd255f78c7bb3ddb066573e8f4fde9c385dbe5db694",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25815714.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "e4188d53efbb54472d782b035a4214854136b6bb171d9aee6282590944abd39b",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 26303623.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "9ab3a7e22a338adf15a7eb240986a1d682820bcf958fc25dd9058bd66c51d502",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25751471.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "929479d86d1af1569abbd00ff695f793876d0c13d1b6ef36f9f39dc04d36f80c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25679214.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "68244e8dec0d66d1a48832b1992c69f7c4c907fc930b958710e9220ae46bd192",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 27755492.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 162529725.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "ce26ff5e9952bacd57c54933b78db77a6ea0e1070f6563c04194dc00457f2656",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25864619.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "5ff81edc43cf92c445ae661655f0f074229d3861bbbd0b57d14ad453615b9e25",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25634710.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "17d92c7319719a45d08d673e5023c3f00687e4f5a57bdebde3dccc6370b94c3a",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 26327833.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "cf0b2892659faaddd69ba9d6172f4d41b4cbbe81ea9aa1fa891f59fcc8daec21",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25917211.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "c0f0fa5983ead9bf72ff425c510b3208de5bd46dcc8efd876a735c868767ac8e",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26710457.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "28c799f101b845f2577d1584bde9de07634bcdda61cf814be0670f4c7adce911",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 28258056.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "08551a27ac837f8ed54c41a0759eec98dbd199480066ac542298cbb032f6d99a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26944761.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "08f895e22c5162e0796964649a1fcdb582c61bccc5e4d0e8b349bbca35756523",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 27936852.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "d1ef5ab32f38a93c076857d0eea5dc9836af8df3c2111b752fe4a419473c1ff4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26290506.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "d30c1e5c8c16af6e606ac7829229200ccae448efeb1a9cdad8b80da506691864",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26750780.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "234cd2a268d2d4ebc0f1b5ca1926ee196812079496ff3e6e19f17e48a5761d2c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26397937.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "5e7743615ad75a997da2a3dfac5ecbaa6539b43fd5db8ecf4d7f9cc7331b3e15",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26491412.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "a4d21e54d799674aa3de252efe1304776a18586a5f8d95b6f975dad09cacd372",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26300699.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "816b8a675263f8ec8337dc224a3ea9971c9a8387f6953eb1fd1c846b6d1a7c4a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 27708499.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "382307fdf25e31f8b1ae5c14a7545e81bf0c54489223c4626934c3dbe31a195e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26403101.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "1572bafea0edc3c6cc05d2a9eabd19a06035670328035c0b780d47b54a683769",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 27097515.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "da8a1e7a5ca60a1e40bacf3e76f1002ab39a7b3cb6f8290450d6356089897d78",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26890386.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "a079baf3b1644afc829cc82c6747ab4482a4f1778e24be557741a87f9aefa38f",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 27044272.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "ad91c93d906d04e8aa7467228cb161965123769d55ad38469161e7830e742868",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 27151935.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "118730753d57a2523105ec3ee6ba017c9c2775dda076f4c79f2396693e83c7a9",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26760663.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "3bd332b9ef08ab00b11a865fd161af952ecc92241dd59aeac869f7688ac64b79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25916788.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "1c73e520a3d5bd8f7e29cb08d559a6364a6bdec344a07acd40f2375a56459f79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26977014.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "5547871d76b6176b3e5dd5d8f20eebc72645f4fdb4a7e415a21928fb85392f9e",
+    "family": "high_curvature",
+    "success": 0.0,
+    "time": 250229894.66666666
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_strict_5ms",
+    "uid": "a68ec605ba66c3e27686650c1fdc577d4ff40b0c237bb80f93dc329bed511c56",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 27157250.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "9a5eaa5a533abb994b7505aca361cebaf65ef495d064d694df4c023580e9cd0b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26146519.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "2037257a8eb29f55e1baa50497e60c0cb87331a5da7e7a4344c8cded212a709f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25430057.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "f87cbb198e6aa95e16ea15160dd1d4f545d70b0d61622238ff991b3a2d27786a",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25409134.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "b0e17067aaf6e660b04f8be634d639d569df55018bfb39821596146afb9736de",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25594316.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "ae12f9762615d4c9ac155883dd03d430cba862223b3fb491a4a1d1189e10a2b8",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25209736.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "386ce328d9e893da466d8af1dc09a15e66ae16a35efe9585b2d68e67da964fb7",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25012450.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "e2e620aa17071c959d153796e3b230f5780cc2b167c0a2e0b4bb029087169848",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25403566.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "2136e60219e4240e7b97c87a2f481c6642991ff7128b97a75454ffcee69e4a9c",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25011344.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "13896bc6c5f688854ad405268705ab3bb2a8fec56ac1e75c8a872707a3f652f8",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25004229.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "5de0f5ff5025c915a9ca0194e6813b77637e2059d947b69d324216690202559b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25959871.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "6105bc9f0df7e8baadfc8dd255f78c7bb3ddb066573e8f4fde9c385dbe5db694",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 24866797.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "e4188d53efbb54472d782b035a4214854136b6bb171d9aee6282590944abd39b",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25093526.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "9ab3a7e22a338adf15a7eb240986a1d682820bcf958fc25dd9058bd66c51d502",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25390469.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "929479d86d1af1569abbd00ff695f793876d0c13d1b6ef36f9f39dc04d36f80c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 24986843.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "68244e8dec0d66d1a48832b1992c69f7c4c907fc930b958710e9220ae46bd192",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25324008.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 533642725.6666667
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "ce26ff5e9952bacd57c54933b78db77a6ea0e1070f6563c04194dc00457f2656",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 24991524.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "5ff81edc43cf92c445ae661655f0f074229d3861bbbd0b57d14ad453615b9e25",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25176340.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "17d92c7319719a45d08d673e5023c3f00687e4f5a57bdebde3dccc6370b94c3a",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 37076984.666666664
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "cf0b2892659faaddd69ba9d6172f4d41b4cbbe81ea9aa1fa891f59fcc8daec21",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25988842.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "c0f0fa5983ead9bf72ff425c510b3208de5bd46dcc8efd876a735c868767ac8e",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25048977.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "28c799f101b845f2577d1584bde9de07634bcdda61cf814be0670f4c7adce911",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 33221385.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "08551a27ac837f8ed54c41a0759eec98dbd199480066ac542298cbb032f6d99a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 30609965.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "08f895e22c5162e0796964649a1fcdb582c61bccc5e4d0e8b349bbca35756523",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 45356757.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "d1ef5ab32f38a93c076857d0eea5dc9836af8df3c2111b752fe4a419473c1ff4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25204059.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "d30c1e5c8c16af6e606ac7829229200ccae448efeb1a9cdad8b80da506691864",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25427294.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "234cd2a268d2d4ebc0f1b5ca1926ee196812079496ff3e6e19f17e48a5761d2c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25227293.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "5e7743615ad75a997da2a3dfac5ecbaa6539b43fd5db8ecf4d7f9cc7331b3e15",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25198631.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "a4d21e54d799674aa3de252efe1304776a18586a5f8d95b6f975dad09cacd372",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25835493.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "816b8a675263f8ec8337dc224a3ea9971c9a8387f6953eb1fd1c846b6d1a7c4a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25417977.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "382307fdf25e31f8b1ae5c14a7545e81bf0c54489223c4626934c3dbe31a195e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26330756.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "1572bafea0edc3c6cc05d2a9eabd19a06035670328035c0b780d47b54a683769",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 24999010.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "da8a1e7a5ca60a1e40bacf3e76f1002ab39a7b3cb6f8290450d6356089897d78",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 24859274.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "a079baf3b1644afc829cc82c6747ab4482a4f1778e24be557741a87f9aefa38f",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25587999.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "ad91c93d906d04e8aa7467228cb161965123769d55ad38469161e7830e742868",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25650102.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "118730753d57a2523105ec3ee6ba017c9c2775dda076f4c79f2396693e83c7a9",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25092386.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "3bd332b9ef08ab00b11a865fd161af952ecc92241dd59aeac869f7688ac64b79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 24900476.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "1c73e520a3d5bd8f7e29cb08d559a6364a6bdec344a07acd40f2375a56459f79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25366757.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "5547871d76b6176b3e5dd5d8f20eebc72645f4fdb4a7e415a21928fb85392f9e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25372108.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "uid": "a68ec605ba66c3e27686650c1fdc577d4ff40b0c237bb80f93dc329bed511c56",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 26203325.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "9a5eaa5a533abb994b7505aca361cebaf65ef495d064d694df4c023580e9cd0b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 26230456.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "2037257a8eb29f55e1baa50497e60c0cb87331a5da7e7a4344c8cded212a709f",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25394372.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "f87cbb198e6aa95e16ea15160dd1d4f545d70b0d61622238ff991b3a2d27786a",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 24944834.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "b0e17067aaf6e660b04f8be634d639d569df55018bfb39821596146afb9736de",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 24826018.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "ae12f9762615d4c9ac155883dd03d430cba862223b3fb491a4a1d1189e10a2b8",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25514633.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "386ce328d9e893da466d8af1dc09a15e66ae16a35efe9585b2d68e67da964fb7",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 24879194.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "e2e620aa17071c959d153796e3b230f5780cc2b167c0a2e0b4bb029087169848",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25781444.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "2136e60219e4240e7b97c87a2f481c6642991ff7128b97a75454ffcee69e4a9c",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 24830858.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "13896bc6c5f688854ad405268705ab3bb2a8fec56ac1e75c8a872707a3f652f8",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25198123.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "5de0f5ff5025c915a9ca0194e6813b77637e2059d947b69d324216690202559b",
+    "family": "smooth",
+    "success": 1.0,
+    "time": 25702608.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "6105bc9f0df7e8baadfc8dd255f78c7bb3ddb066573e8f4fde9c385dbe5db694",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25234926.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "e4188d53efbb54472d782b035a4214854136b6bb171d9aee6282590944abd39b",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25132944.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "9ab3a7e22a338adf15a7eb240986a1d682820bcf958fc25dd9058bd66c51d502",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25088042.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "929479d86d1af1569abbd00ff695f793876d0c13d1b6ef36f9f39dc04d36f80c",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25509735.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "68244e8dec0d66d1a48832b1992c69f7c4c907fc930b958710e9220ae46bd192",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 24861336.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+    "family": "near_singular",
+    "success": 0.0,
+    "time": 155180802.33333334
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "ce26ff5e9952bacd57c54933b78db77a6ea0e1070f6563c04194dc00457f2656",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25782843.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "5ff81edc43cf92c445ae661655f0f074229d3861bbbd0b57d14ad453615b9e25",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25285026.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "17d92c7319719a45d08d673e5023c3f00687e4f5a57bdebde3dccc6370b94c3a",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 32014400.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "cf0b2892659faaddd69ba9d6172f4d41b4cbbe81ea9aa1fa891f59fcc8daec21",
+    "family": "near_singular",
+    "success": 1.0,
+    "time": 25855312.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "c0f0fa5983ead9bf72ff425c510b3208de5bd46dcc8efd876a735c868767ac8e",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 26329570.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "28c799f101b845f2577d1584bde9de07634bcdda61cf814be0670f4c7adce911",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 31546418.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "08551a27ac837f8ed54c41a0759eec98dbd199480066ac542298cbb032f6d99a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 34082086.666666664
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "08f895e22c5162e0796964649a1fcdb582c61bccc5e4d0e8b349bbca35756523",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 28379970.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "d1ef5ab32f38a93c076857d0eea5dc9836af8df3c2111b752fe4a419473c1ff4",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 24910278.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "d30c1e5c8c16af6e606ac7829229200ccae448efeb1a9cdad8b80da506691864",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25431120.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "234cd2a268d2d4ebc0f1b5ca1926ee196812079496ff3e6e19f17e48a5761d2c",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25104283.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "5e7743615ad75a997da2a3dfac5ecbaa6539b43fd5db8ecf4d7f9cc7331b3e15",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25032791.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "a4d21e54d799674aa3de252efe1304776a18586a5f8d95b6f975dad09cacd372",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 25031259.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "816b8a675263f8ec8337dc224a3ea9971c9a8387f6953eb1fd1c846b6d1a7c4a",
+    "family": "joint_limit_return",
+    "success": 1.0,
+    "time": 24954164.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "382307fdf25e31f8b1ae5c14a7545e81bf0c54489223c4626934c3dbe31a195e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25636576.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "1572bafea0edc3c6cc05d2a9eabd19a06035670328035c0b780d47b54a683769",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25663322.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "da8a1e7a5ca60a1e40bacf3e76f1002ab39a7b3cb6f8290450d6356089897d78",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25370664.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "a079baf3b1644afc829cc82c6747ab4482a4f1778e24be557741a87f9aefa38f",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 24961025.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "ad91c93d906d04e8aa7467228cb161965123769d55ad38469161e7830e742868",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25057420.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "118730753d57a2523105ec3ee6ba017c9c2775dda076f4c79f2396693e83c7a9",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25188491.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "3bd332b9ef08ab00b11a865fd161af952ecc92241dd59aeac869f7688ac64b79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 24854828.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "1c73e520a3d5bd8f7e29cb08d559a6364a6bdec344a07acd40f2375a56459f79",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25205508.666666668
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "5547871d76b6176b3e5dd5d8f20eebc72645f4fdb4a7e415a21928fb85392f9e",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25231560.333333332
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "a68ec605ba66c3e27686650c1fdc577d4ff40b0c237bb80f93dc329bed511c56",
+    "family": "high_curvature",
+    "success": 1.0,
+    "time": 25287635.0
+  }
+]
