@@ -1,0 +1,42 @@
+{
+  "tests": {
+    "command": "PYTHONPATH=src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /home/eric/anaconda3/envs/isaaclab_3/bin/python -m pytest -o addopts='' -q tests/test_nonlinear_continuation_reference.py tests/test_nonlinear_reference_reporting.py tests/test_continuation_mechanism.py tests/test_residual_configuration.py tests/test_independent_configuration_selection.py tests/test_independent_selection_reporting.py",
+    "exit_code": 0,
+    "observed_summary": "21 passed in 2.01s",
+    "scope": "unit and regression tests, not additional trajectory experiments"
+  },
+  "report_checks": {
+    "candidate_horizon_markdown_rows_compared_to_full_precision_records": 32,
+    "all_matched": true,
+    "relative_evidence_links_resolved": true,
+    "two_failure_input_targets_equal": true,
+    "protected_old_file_hashes_unchanged": 647,
+    "sealed_measurement_source_hashes_unchanged": true,
+    "tracked_baseline_file_diff_empty_before_staging": true
+  },
+  "literature_access": {
+    "date": "2026-09-07",
+    "academic_search_mcp_available": false,
+    "OpenAlex_fallback": "HTTP 429",
+    "sources": [
+      {
+        "title": "Predictive online inverse kinematics for redundant manipulators",
+        "url": "https://portal.fis.tum.de/en/publications/predictive-online-inverse-kinematics-for-redundant-manipulators/",
+        "verified_scope": "author institution metadata and abstract",
+        "full_text_access": "DOI destination blocked by robots.txt"
+      },
+      {
+        "title": "Look Ahead Optimization for Managing Nullspace in Cartesian Impedance Control of Dual-Arm Robots",
+        "url": "https://www.dfki.de/web/forschung/projekte-publikationen/publikation/15449",
+        "verified_scope": "author institution metadata and abstract",
+        "full_text_access": "linked IEEE page requires browser verification"
+      },
+      {
+        "title": "CppFlow: Generative Inverse Kinematics for Efficient and Robust Cartesian Path Planning",
+        "url": "https://arxiv.org/html/2309.09102v2",
+        "verified_scope": "author full text, especially problem specification and method; explicit exclusion of time parameterization"
+      }
+    ],
+    "novelty_claim": "none; no inference that the first two papers omit exact constraints based only on abstracts"
+  }
+}

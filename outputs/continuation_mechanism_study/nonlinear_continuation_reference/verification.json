@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-07T09:04:05.421961+00:00",
+  "checked_runs": 390,
+  "rechecked_selected_and_last_iterate_frames": 8844,
+  "rechecked_initial_paths": 390,
+  "successful_witness_files": 339,
+  "successful_witness_frames": 2972,
+  "accepted_contract_violations": 0,
+  "fixed_q0_unchanged": true,
+  "same_targets_and_original_verifier": true,
+  "special_inputs_same_target_different_previous_q": true,
+  "protected_old_files_verified": 647,
+  "historical_witness_checks": 84,
+  "reporting_solver_calls": 0,
+  "report_numerical_recheck_timing_excluded_from_original_solver_timing": true,
+  "seal_sha256": "6da7fde031002d05c1c1c9d3b7860cec17ac973e126c686367698d950b90d17c"
+}

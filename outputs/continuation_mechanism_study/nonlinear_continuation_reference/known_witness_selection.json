@@ -1,0 +1,107 @@
+[
+  {
+    "case_id": "state_14_candidate_00",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_14_candidate_00_r0"
+  },
+  {
+    "case_id": "state_14_candidate_01",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_14_candidate_01_r0"
+  },
+  {
+    "case_id": "state_14_candidate_02",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_14_candidate_02_r3"
+  },
+  {
+    "case_id": "state_14_candidate_03",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_14_candidate_03_r0"
+  },
+  {
+    "case_id": "state_14_candidate_05",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_14_candidate_05_r0"
+  },
+  {
+    "case_id": "state_13_candidate_00",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_13_candidate_00_r0"
+  },
+  {
+    "case_id": "state_13_candidate_01",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_13_candidate_01_r0"
+  },
+  {
+    "case_id": "state_13_candidate_02",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_13_candidate_02_r0"
+  },
+  {
+    "case_id": "state_13_candidate_03",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_13_candidate_03_r0"
+  },
+  {
+    "case_id": "state_13_candidate_04",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_13_candidate_04_r0"
+  },
+  {
+    "case_id": "state_13_candidate_05",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_13_candidate_05_r0"
+  },
+  {
+    "case_id": "state_08_candidate_00",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_08_candidate_00_r0"
+  },
+  {
+    "case_id": "state_08_candidate_01",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_08_candidate_01_r0"
+  },
+  {
+    "case_id": "state_08_candidate_02",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_08_candidate_02_r0"
+  },
+  {
+    "case_id": "state_08_candidate_03",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_08_candidate_03_r0"
+  },
+  {
+    "case_id": "state_08_candidate_04",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_08_candidate_04_r0"
+  },
+  {
+    "case_id": "state_08_candidate_05",
+    "source": "independent_successful_witnesses",
+    "run_id": "state_08_candidate_05_r0"
+  },
+  {
+    "case_id": "case_01_matched_01",
+    "source": "outputs/continuation_mechanism_study/residual_configuration_disentanglement/successful_witnesses/case_01_pre_failure_matched_01_ordinary_matched_r0.json",
+    "run_id": "case_01_pre_failure_matched_01_ordinary_matched_r0"
+  },
+  {
+    "case_id": "case_01_matched_02",
+    "source": "outputs/continuation_mechanism_study/residual_configuration_disentanglement/successful_witnesses/case_01_pre_failure_matched_02_ordinary_matched_r0.json",
+    "run_id": "case_01_pre_failure_matched_02_ordinary_matched_r0"
+  },
+  {
+    "case_id": "case_01_matched_04",
+    "source": "outputs/continuation_mechanism_study/residual_configuration_disentanglement/successful_witnesses/case_01_pre_failure_matched_04_ordinary_matched_r0.json",
+    "run_id": "case_01_pre_failure_matched_04_ordinary_matched_r0"
+  },
+  {
+    "case_id": "case_01_matched_05",
+    "source": "outputs/continuation_mechanism_study/residual_configuration_disentanglement/successful_witnesses/case_01_pre_failure_matched_05_ordinary_matched_r0.json",
+    "run_id": "case_01_pre_failure_matched_05_ordinary_matched_r0"
+  }
+]

@@ -1,0 +1,594 @@
+{
+  "checks": [
+    {
+      "case_id": "state_14_candidate_00",
+      "run_id": "state_14_candidate_00_r0",
+      "horizon": 1,
+      "actual_rho": 0.1403547571588084,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_00",
+      "run_id": "state_14_candidate_00_r0",
+      "horizon": 5,
+      "actual_rho": 0.1403547571588084,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_00",
+      "run_id": "state_14_candidate_00_r0",
+      "horizon": 10,
+      "actual_rho": 0.2041101119814691,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_00",
+      "run_id": "state_14_candidate_00_r0",
+      "horizon": 30,
+      "actual_rho": 0.9283431351955777,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_01",
+      "run_id": "state_14_candidate_01_r0",
+      "horizon": 1,
+      "actual_rho": 0.14175389626070262,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_01",
+      "run_id": "state_14_candidate_01_r0",
+      "horizon": 5,
+      "actual_rho": 0.14175389626070262,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_01",
+      "run_id": "state_14_candidate_01_r0",
+      "horizon": 10,
+      "actual_rho": 0.20756949607493913,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_01",
+      "run_id": "state_14_candidate_01_r0",
+      "horizon": 30,
+      "actual_rho": 0.7262095089385122,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_02",
+      "run_id": "state_14_candidate_02_r3",
+      "horizon": 1,
+      "actual_rho": 0.13907263834472922,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_02",
+      "run_id": "state_14_candidate_02_r3",
+      "horizon": 5,
+      "actual_rho": 0.13907263834472922,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_02",
+      "run_id": "state_14_candidate_02_r3",
+      "horizon": 10,
+      "actual_rho": 0.16150966918370938,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_02",
+      "run_id": "state_14_candidate_02_r3",
+      "horizon": 30,
+      "actual_rho": 0.9999999999999917,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_03",
+      "run_id": "state_14_candidate_03_r0",
+      "horizon": 1,
+      "actual_rho": 0.14340300794215732,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_03",
+      "run_id": "state_14_candidate_03_r0",
+      "horizon": 5,
+      "actual_rho": 0.14340300794215732,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_03",
+      "run_id": "state_14_candidate_03_r0",
+      "horizon": 10,
+      "actual_rho": 0.14340300794215732,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_03",
+      "run_id": "state_14_candidate_03_r0",
+      "horizon": 30,
+      "actual_rho": 0.4729790785583044,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_05",
+      "run_id": "state_14_candidate_05_r0",
+      "horizon": 1,
+      "actual_rho": 0.14089384726262644,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_05",
+      "run_id": "state_14_candidate_05_r0",
+      "horizon": 5,
+      "actual_rho": 0.14089384726262644,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_05",
+      "run_id": "state_14_candidate_05_r0",
+      "horizon": 10,
+      "actual_rho": 0.2093432883787489,
+      "verified": true
+    },
+    {
+      "case_id": "state_14_candidate_05",
+      "run_id": "state_14_candidate_05_r0",
+      "horizon": 30,
+      "actual_rho": 0.9207159380094408,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_00",
+      "run_id": "state_13_candidate_00_r0",
+      "horizon": 1,
+      "actual_rho": 0.3058204403337658,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_00",
+      "run_id": "state_13_candidate_00_r0",
+      "horizon": 5,
+      "actual_rho": 0.5980414687533252,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_00",
+      "run_id": "state_13_candidate_00_r0",
+      "horizon": 10,
+      "actual_rho": 0.7047898581238256,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_00",
+      "run_id": "state_13_candidate_00_r0",
+      "horizon": 30,
+      "actual_rho": 0.7047898581238256,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_01",
+      "run_id": "state_13_candidate_01_r0",
+      "horizon": 1,
+      "actual_rho": 0.298742622175409,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_01",
+      "run_id": "state_13_candidate_01_r0",
+      "horizon": 5,
+      "actual_rho": 0.58631478854071,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_01",
+      "run_id": "state_13_candidate_01_r0",
+      "horizon": 10,
+      "actual_rho": 0.6383935587807652,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_01",
+      "run_id": "state_13_candidate_01_r0",
+      "horizon": 30,
+      "actual_rho": 0.6383935587807652,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_02",
+      "run_id": "state_13_candidate_02_r0",
+      "horizon": 1,
+      "actual_rho": 0.31101857395053395,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_02",
+      "run_id": "state_13_candidate_02_r0",
+      "horizon": 5,
+      "actual_rho": 0.5906297904102097,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_02",
+      "run_id": "state_13_candidate_02_r0",
+      "horizon": 10,
+      "actual_rho": 0.7938175158561741,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_02",
+      "run_id": "state_13_candidate_02_r0",
+      "horizon": 30,
+      "actual_rho": 0.8290150582994282,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_03",
+      "run_id": "state_13_candidate_03_r0",
+      "horizon": 1,
+      "actual_rho": 0.29897706980425715,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_03",
+      "run_id": "state_13_candidate_03_r0",
+      "horizon": 5,
+      "actual_rho": 0.5744531275070522,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_03",
+      "run_id": "state_13_candidate_03_r0",
+      "horizon": 10,
+      "actual_rho": 0.6012185964758191,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_03",
+      "run_id": "state_13_candidate_03_r0",
+      "horizon": 30,
+      "actual_rho": 0.6012185964758191,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_04",
+      "run_id": "state_13_candidate_04_r0",
+      "horizon": 1,
+      "actual_rho": 0.314897727491617,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_04",
+      "run_id": "state_13_candidate_04_r0",
+      "horizon": 5,
+      "actual_rho": 0.5706565460235264,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_04",
+      "run_id": "state_13_candidate_04_r0",
+      "horizon": 10,
+      "actual_rho": 0.6690612594377261,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_04",
+      "run_id": "state_13_candidate_04_r0",
+      "horizon": 30,
+      "actual_rho": 0.6901580172400166,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_05",
+      "run_id": "state_13_candidate_05_r0",
+      "horizon": 1,
+      "actual_rho": 0.3032477194547662,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_05",
+      "run_id": "state_13_candidate_05_r0",
+      "horizon": 5,
+      "actual_rho": 0.5921528357411275,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_05",
+      "run_id": "state_13_candidate_05_r0",
+      "horizon": 10,
+      "actual_rho": 0.657501516623423,
+      "verified": true
+    },
+    {
+      "case_id": "state_13_candidate_05",
+      "run_id": "state_13_candidate_05_r0",
+      "horizon": 30,
+      "actual_rho": 0.657501516623423,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_00",
+      "run_id": "state_08_candidate_00_r0",
+      "horizon": 1,
+      "actual_rho": 0.20883796021018297,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_00",
+      "run_id": "state_08_candidate_00_r0",
+      "horizon": 5,
+      "actual_rho": 0.22278021167295176,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_00",
+      "run_id": "state_08_candidate_00_r0",
+      "horizon": 10,
+      "actual_rho": 0.23099233460101326,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_00",
+      "run_id": "state_08_candidate_00_r0",
+      "horizon": 30,
+      "actual_rho": 0.23139270863856068,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_01",
+      "run_id": "state_08_candidate_01_r0",
+      "horizon": 1,
+      "actual_rho": 0.20903355511303115,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_01",
+      "run_id": "state_08_candidate_01_r0",
+      "horizon": 5,
+      "actual_rho": 0.22297818457855895,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_01",
+      "run_id": "state_08_candidate_01_r0",
+      "horizon": 10,
+      "actual_rho": 0.2311790808013924,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_01",
+      "run_id": "state_08_candidate_01_r0",
+      "horizon": 30,
+      "actual_rho": 0.231575230832469,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_02",
+      "run_id": "state_08_candidate_02_r0",
+      "horizon": 1,
+      "actual_rho": 0.20864121793372176,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_02",
+      "run_id": "state_08_candidate_02_r0",
+      "horizon": 5,
+      "actual_rho": 0.22258142122786806,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_02",
+      "run_id": "state_08_candidate_02_r0",
+      "horizon": 10,
+      "actual_rho": 0.23080513652285833,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_02",
+      "run_id": "state_08_candidate_02_r0",
+      "horizon": 30,
+      "actual_rho": 0.2312097961100579,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_03",
+      "run_id": "state_08_candidate_03_r0",
+      "horizon": 1,
+      "actual_rho": 0.2092280087655995,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_03",
+      "run_id": "state_08_candidate_03_r0",
+      "horizon": 5,
+      "actual_rho": 0.22317534148765011,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_03",
+      "run_id": "state_08_candidate_03_r0",
+      "horizon": 10,
+      "actual_rho": 0.23136537339318863,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_03",
+      "run_id": "state_08_candidate_03_r0",
+      "horizon": 30,
+      "actual_rho": 0.23175736062261243,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_04",
+      "run_id": "state_08_candidate_04_r0",
+      "horizon": 1,
+      "actual_rho": 0.2084433228762197,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_04",
+      "run_id": "state_08_candidate_04_r0",
+      "horizon": 5,
+      "actual_rho": 0.22238181252917477,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_04",
+      "run_id": "state_08_candidate_04_r0",
+      "horizon": 10,
+      "actual_rho": 0.23061748912087351,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_04",
+      "run_id": "state_08_candidate_04_r0",
+      "horizon": 30,
+      "actual_rho": 0.23102649612172538,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_05",
+      "run_id": "state_08_candidate_05_r0",
+      "horizon": 1,
+      "actual_rho": 0.20891633552859967,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_05",
+      "run_id": "state_08_candidate_05_r0",
+      "horizon": 5,
+      "actual_rho": 0.22285949887149134,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_05",
+      "run_id": "state_08_candidate_05_r0",
+      "horizon": 10,
+      "actual_rho": 0.23106708742135373,
+      "verified": true
+    },
+    {
+      "case_id": "state_08_candidate_05",
+      "run_id": "state_08_candidate_05_r0",
+      "horizon": 30,
+      "actual_rho": 0.231465764489761,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_01",
+      "run_id": "case_01_pre_failure_matched_01_ordinary_matched_r0",
+      "horizon": 1,
+      "actual_rho": 0.9924898803687598,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_01",
+      "run_id": "case_01_pre_failure_matched_01_ordinary_matched_r0",
+      "horizon": 5,
+      "actual_rho": 0.9924898803687598,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_01",
+      "run_id": "case_01_pre_failure_matched_01_ordinary_matched_r0",
+      "horizon": 10,
+      "actual_rho": 0.9924898803687598,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_01",
+      "run_id": "case_01_pre_failure_matched_01_ordinary_matched_r0",
+      "horizon": 30,
+      "actual_rho": 0.9924898803687598,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_02",
+      "run_id": "case_01_pre_failure_matched_02_ordinary_matched_r0",
+      "horizon": 1,
+      "actual_rho": 0.9920338645265153,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_02",
+      "run_id": "case_01_pre_failure_matched_02_ordinary_matched_r0",
+      "horizon": 5,
+      "actual_rho": 0.9920338645265153,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_02",
+      "run_id": "case_01_pre_failure_matched_02_ordinary_matched_r0",
+      "horizon": 10,
+      "actual_rho": 0.9920338645265153,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_02",
+      "run_id": "case_01_pre_failure_matched_02_ordinary_matched_r0",
+      "horizon": 30,
+      "actual_rho": 0.9920338645265153,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_04",
+      "run_id": "case_01_pre_failure_matched_04_ordinary_matched_r0",
+      "horizon": 1,
+      "actual_rho": 0.9925228907310917,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_04",
+      "run_id": "case_01_pre_failure_matched_04_ordinary_matched_r0",
+      "horizon": 5,
+      "actual_rho": 0.9925228907310917,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_04",
+      "run_id": "case_01_pre_failure_matched_04_ordinary_matched_r0",
+      "horizon": 10,
+      "actual_rho": 0.9925228907310917,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_04",
+      "run_id": "case_01_pre_failure_matched_04_ordinary_matched_r0",
+      "horizon": 30,
+      "actual_rho": 0.9925228907310917,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_05",
+      "run_id": "case_01_pre_failure_matched_05_ordinary_matched_r0",
+      "horizon": 1,
+      "actual_rho": 0.9920354151222273,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_05",
+      "run_id": "case_01_pre_failure_matched_05_ordinary_matched_r0",
+      "horizon": 5,
+      "actual_rho": 0.9920354151222273,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_05",
+      "run_id": "case_01_pre_failure_matched_05_ordinary_matched_r0",
+      "horizon": 10,
+      "actual_rho": 0.9920354151222273,
+      "verified": true
+    },
+    {
+      "case_id": "case_01_matched_05",
+      "run_id": "case_01_pre_failure_matched_05_ordinary_matched_r0",
+      "horizon": 30,
+      "actual_rho": 0.9920354151222273,
+      "verified": true
+    }
+  ],
+  "optimizer_calls": 0,
+  "interpretation": "known legal path recognition only; not evidence of a newly recovered failed candidate"
+}

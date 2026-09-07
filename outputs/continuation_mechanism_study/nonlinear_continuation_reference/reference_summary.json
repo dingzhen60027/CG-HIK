@@ -1,0 +1,315 @@
+{
+  "scope": "observed mechanism development, not fresh/formal test; no new candidates, no TRAC-IK reruns",
+  "groups": [
+    {
+      "site_id": "state_14",
+      "candidates": 6,
+      "ordinary_zero_of_five": 1,
+      "zero_of_five_now_found_L30": 1,
+      "any_ordinary_failure": 3,
+      "any_ordinary_failure_now_found_L30": 3,
+      "L1_found": 6,
+      "L5_found": 6,
+      "L10_found": 6,
+      "L30_found": 6,
+      "any_initial_L30_verified": 6
+    },
+    {
+      "site_id": "state_18",
+      "candidates": 6,
+      "ordinary_zero_of_five": 6,
+      "zero_of_five_now_found_L30": 3,
+      "any_ordinary_failure": 6,
+      "any_ordinary_failure_now_found_L30": 3,
+      "L1_found": 6,
+      "L5_found": 6,
+      "L10_found": 6,
+      "L30_found": 3,
+      "any_initial_L30_verified": 3
+    },
+    {
+      "site_id": "state_13",
+      "candidates": 6,
+      "ordinary_zero_of_five": 0,
+      "zero_of_five_now_found_L30": 0,
+      "any_ordinary_failure": 0,
+      "any_ordinary_failure_now_found_L30": 0,
+      "L1_found": 6,
+      "L5_found": 6,
+      "L10_found": 6,
+      "L30_found": 6,
+      "any_initial_L30_verified": 6
+    },
+    {
+      "site_id": "state_08",
+      "candidates": 6,
+      "ordinary_zero_of_five": 0,
+      "zero_of_five_now_found_L30": 0,
+      "any_ordinary_failure": 0,
+      "any_ordinary_failure_now_found_L30": 0,
+      "L1_found": 6,
+      "L5_found": 6,
+      "L10_found": 6,
+      "L30_found": 6,
+      "any_initial_L30_verified": 6
+    },
+    {
+      "site_id": "case_01_pre_failure",
+      "candidates": 8,
+      "ordinary_zero_of_five": 4,
+      "zero_of_five_now_found_L30": 4,
+      "any_ordinary_failure": 4,
+      "any_ordinary_failure_now_found_L30": 4,
+      "L1_found": 8,
+      "L5_found": 8,
+      "L10_found": 8,
+      "L30_found": 8,
+      "any_initial_L30_verified": 4
+    }
+  ],
+  "timing": [
+    {
+      "horizon": 1,
+      "starts": 102,
+      "problems": 34,
+      "single_start_total_ms": {
+        "count": 102,
+        "total": 800.9046699999999,
+        "mean": 7.85200656862745,
+        "median": 5.4417665,
+        "p95": 8.880314549999996,
+        "maximum": 111.27732
+      },
+      "all_three_starts_ms": {
+        "count": 34,
+        "total": 800.90467,
+        "mean": 23.556019705882353,
+        "median": 17.257918,
+        "p95": 61.02159824999978,
+        "maximum": 137.393602
+      },
+      "initialization_ms": {
+        "count": 102,
+        "total": 17.924796999999995,
+        "mean": 0.17573330392156858,
+        "median": 0.0054815,
+        "p95": 0.531454,
+        "maximum": 0.581418
+      },
+      "optimization_ms": {
+        "count": 102,
+        "total": 719.861999,
+        "mean": 7.0574705784313725,
+        "median": 4.8186420000000005,
+        "p95": 7.900471849999996,
+        "maximum": 110.660476
+      },
+      "verification_ms": {
+        "count": 102,
+        "total": 37.42317,
+        "mean": 0.36689382352941174,
+        "median": 0.3655575,
+        "p95": 0.37884225000000005,
+        "maximum": 0.395779
+      },
+      "setup_and_other_ms": {
+        "count": 102,
+        "total": 25.694703999999998,
+        "mean": 0.251908862745098,
+        "median": 0.2586935,
+        "p95": 0.34158829999999984,
+        "maximum": 0.364214
+      },
+      "fk_calls": 4107,
+      "geometric_jacobian_calls": 1547
+    },
+    {
+      "horizon": 5,
+      "starts": 96,
+      "problems": 32,
+      "single_start_total_ms": {
+        "count": 96,
+        "total": 5365.558497,
+        "mean": 55.89123434375,
+        "median": 45.581311,
+        "p95": 112.76258075,
+        "maximum": 360.703803
+      },
+      "all_three_starts_ms": {
+        "count": 32,
+        "total": 5365.558497,
+        "mean": 167.67370303125,
+        "median": 131.7004415,
+        "p95": 299.73285315,
+        "maximum": 549.779361
+      },
+      "initialization_ms": {
+        "count": 96,
+        "total": 181.74743899999999,
+        "mean": 1.8932024895833333,
+        "median": 0.0108925,
+        "p95": 12.08970675,
+        "maximum": 21.129532
+      },
+      "optimization_ms": {
+        "count": 96,
+        "total": 4945.547834,
+        "mean": 51.51612327083333,
+        "median": 40.128336000000004,
+        "p95": 110.53975575,
+        "maximum": 358.355893
+      },
+      "verification_ms": {
+        "count": 96,
+        "total": 163.694952,
+        "mean": 1.70515575,
+        "median": 1.6910325,
+        "p95": 1.7570055,
+        "maximum": 2.438487
+      },
+      "setup_and_other_ms": {
+        "count": 96,
+        "total": 74.56827200000001,
+        "mean": 0.7767528333333334,
+        "median": 0.9122585,
+        "p95": 1.0312247499999998,
+        "maximum": 1.212852
+      },
+      "fk_calls": 25052,
+      "geometric_jacobian_calls": 16257
+    },
+    {
+      "horizon": 10,
+      "starts": 96,
+      "problems": 32,
+      "single_start_total_ms": {
+        "count": 96,
+        "total": 19284.631408,
+        "mean": 200.8815771666667,
+        "median": 179.848263,
+        "p95": 346.332962,
+        "maximum": 361.541054
+      },
+      "all_three_starts_ms": {
+        "count": 32,
+        "total": 19284.631408,
+        "mean": 602.6447315,
+        "median": 499.385842,
+        "p95": 949.3680195,
+        "maximum": 1056.787015
+      },
+      "initialization_ms": {
+        "count": 96,
+        "total": 246.13870500000002,
+        "mean": 2.5639448437500003,
+        "median": 0.010835000000000001,
+        "p95": 14.10507725,
+        "maximum": 23.118249
+      },
+      "optimization_ms": {
+        "count": 96,
+        "total": 18583.571430999997,
+        "mean": 193.57886907291663,
+        "median": 174.8206155,
+        "p95": 340.35765475,
+        "maximum": 357.304859
+      },
+      "verification_ms": {
+        "count": 96,
+        "total": 322.136475,
+        "mean": 3.35558828125,
+        "median": 3.337979,
+        "p95": 3.44999775,
+        "maximum": 3.604898
+      },
+      "setup_and_other_ms": {
+        "count": 96,
+        "total": 132.784797,
+        "mean": 1.38317496875,
+        "median": 1.697541,
+        "p95": 1.806143,
+        "maximum": 1.840462
+      },
+      "fk_calls": 72942,
+      "geometric_jacobian_calls": 55622
+    },
+    {
+      "horizon": 30,
+      "starts": 96,
+      "problems": 32,
+      "single_start_total_ms": {
+        "count": 96,
+        "total": 157259.745252,
+        "mean": 1638.122346375,
+        "median": 1630.9217755,
+        "p95": 2177.837215,
+        "maximum": 3953.344111
+      },
+      "all_three_starts_ms": {
+        "count": 32,
+        "total": 157259.745252,
+        "mean": 4914.367039125,
+        "median": 5169.094697500001,
+        "p95": 6848.484119099999,
+        "maximum": 8294.302858
+      },
+      "initialization_ms": {
+        "count": 96,
+        "total": 590.5506110000001,
+        "mean": 6.151568864583335,
+        "median": 0.0148165,
+        "p95": 29.16709125,
+        "maximum": 36.832991
+      },
+      "optimization_ms": {
+        "count": 96,
+        "total": 155372.393032,
+        "mean": 1618.4624274166665,
+        "median": 1618.578311,
+        "p95": 2165.4393010000003,
+        "maximum": 3940.950033
+      },
+      "verification_ms": {
+        "count": 96,
+        "total": 955.957083,
+        "mean": 9.95788628125,
+        "median": 9.931886500000001,
+        "p95": 10.14916225,
+        "maximum": 10.453485
+      },
+      "setup_and_other_ms": {
+        "count": 96,
+        "total": 340.84452600000003,
+        "mean": 3.5504638125000003,
+        "median": 2.394742,
+        "p95": 4.9746985,
+        "maximum": 7.589392
+      },
+      "fk_calls": 358510,
+      "geometric_jacobian_calls": 269763
+    }
+  ],
+  "runs": 390,
+  "verified_runs": 339,
+  "problems": 130,
+  "verified_problems": 127,
+  "optimizer_status_counts": {
+    "8": 12,
+    "0": 288,
+    "9": 88,
+    "3": 2
+  },
+  "verified_despite_non_success_status": 51,
+  "total_ms": 182710.839827,
+  "total_fk_calls": 460611,
+  "total_geometric_jacobian_calls": 343189,
+  "function_callbacks": {
+    "objective_calls": 25450,
+    "objective_jacobian_calls": 19102,
+    "pose_constraint_calls": 26642,
+    "pose_constraint_jacobian_calls": 19102,
+    "step_constraint_calls": 25862,
+    "step_constraint_jacobian_calls": 19102
+  },
+  "no_global_optimality_or_infeasibility_claim": true
+}

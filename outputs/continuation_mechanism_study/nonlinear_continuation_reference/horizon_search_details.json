@@ -1,0 +1,5332 @@
+[
+  {
+    "case_id": "state_14_candidate_00",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.06388471731624085,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_00_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 13,
+        "scipy_nfev": 23,
+        "scipy_njev": 9
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 9,
+        "scipy_nfev": 10,
+        "scipy_njev": 9
+      },
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 12,
+        "scipy_nfev": 9,
+        "scipy_njev": 8
+      }
+    ],
+    "all_three_starts_total_ms": 13.260313,
+    "all_three_starts_fk_calls": 61,
+    "all_three_starts_jacobian_calls": 27,
+    "selected_max_position_excess": -3.5462206088299197e-12,
+    "selected_max_orientation_excess": -2.0546956356764373e-05,
+    "selected_minimum_joint_margin": 0.23979698153792284
+  },
+  {
+    "case_id": "state_14_candidate_00",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09316835456175054,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_00_L5_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 24,
+        "scipy_nfev": 25,
+        "scipy_njev": 24
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 22,
+        "scipy_nfev": 23,
+        "scipy_njev": 22
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 22,
+        "scipy_nfev": 23,
+        "scipy_njev": 22
+      }
+    ],
+    "all_three_starts_total_ms": 109.370232,
+    "all_three_starts_fk_calls": 460,
+    "all_three_starts_jacobian_calls": 345,
+    "selected_max_position_excess": -1.2969837877296886e-12,
+    "selected_max_orientation_excess": -2.9431596049178665e-11,
+    "selected_minimum_joint_margin": 0.24132851576586323
+  },
+  {
+    "case_id": "state_14_candidate_00",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09880286787458542,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_00_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 53,
+        "scipy_nfev": 54,
+        "scipy_njev": 53
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 52,
+        "scipy_nfev": 53,
+        "scipy_njev": 52
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 40,
+        "scipy_nfev": 41,
+        "scipy_njev": 40
+      }
+    ],
+    "all_three_starts_total_ms": 509.529402,
+    "all_three_starts_fk_calls": 1720,
+    "all_three_starts_jacobian_calls": 1460,
+    "selected_max_position_excess": -9.939356195726168e-13,
+    "selected_max_orientation_excess": -3.889352555297432e-11,
+    "selected_minimum_joint_margin": 0.2416232008121244
+  },
+  {
+    "case_id": "state_14_candidate_00",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.11304982771602848,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_00_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5936.760591,
+    "all_three_starts_fk_calls": 9930,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.0005139715911563721,
+    "selected_max_orientation_excess": -0.0008623139903531137,
+    "selected_minimum_joint_margin": 0.24132510597599904
+  },
+  {
+    "case_id": "state_14_candidate_01",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.06411648063226172,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_01_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 7,
+        "scipy_nfev": 9,
+        "scipy_njev": 7
+      },
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 12,
+        "scipy_nfev": 9,
+        "scipy_njev": 8
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 9,
+        "scipy_nfev": 10,
+        "scipy_njev": 9
+      }
+    ],
+    "all_three_starts_total_ms": 11.014871,
+    "all_three_starts_fk_calls": 47,
+    "all_three_starts_jacobian_calls": 25,
+    "selected_max_position_excess": -3.316928979743561e-12,
+    "selected_max_orientation_excess": -1.6677078798769257e-05,
+    "selected_minimum_joint_margin": 0.23849135908481445
+  },
+  {
+    "case_id": "state_14_candidate_01",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09351269088682479,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_01_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 25,
+        "scipy_nfev": 26,
+        "scipy_njev": 25
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 24,
+        "scipy_njev": 23
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 23,
+        "scipy_njev": 23
+      }
+    ],
+    "all_three_starts_total_ms": 113.927893,
+    "all_three_starts_fk_calls": 475,
+    "all_three_starts_jacobian_calls": 360,
+    "selected_max_position_excess": -4.893669454039684e-12,
+    "selected_max_orientation_excess": -4.105514192498383e-11,
+    "selected_minimum_joint_margin": 0.24002878088112822
+  },
+  {
+    "case_id": "state_14_candidate_01",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09925072186816081,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_01_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 48,
+        "scipy_nfev": 50,
+        "scipy_njev": 48
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 51,
+        "scipy_nfev": 52,
+        "scipy_njev": 51
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 39,
+        "scipy_nfev": 40,
+        "scipy_njev": 39
+      }
+    ],
+    "all_three_starts_total_ms": 483.413413,
+    "all_three_starts_fk_calls": 1660,
+    "all_three_starts_jacobian_calls": 1390,
+    "selected_max_position_excess": -3.093008054538826e-12,
+    "selected_max_orientation_excess": -2.3678536562043995e-11,
+    "selected_minimum_joint_margin": 0.24032887990145185
+  },
+  {
+    "case_id": "state_14_candidate_01",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.11543093167491977,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_01_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5659.719575,
+    "all_three_starts_fk_calls": 9900,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.0004969879515435935,
+    "selected_max_orientation_excess": -0.000722282399849861,
+    "selected_minimum_joint_margin": 0.23998738816855408
+  },
+  {
+    "case_id": "state_14_candidate_02",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.06366102558865329,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_02_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 15,
+        "scipy_nfev": 42,
+        "scipy_njev": 11
+      },
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 16,
+        "scipy_nfev": 45,
+        "scipy_njev": 12
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 9,
+        "scipy_nfev": 10,
+        "scipy_njev": 9
+      }
+    ],
+    "all_three_starts_total_ms": 20.671029,
+    "all_three_starts_fk_calls": 117,
+    "all_three_starts_jacobian_calls": 33,
+    "selected_max_position_excess": -3.5930136903922216e-12,
+    "selected_max_orientation_excess": -2.2758985878352372e-05,
+    "selected_minimum_joint_margin": 0.24122230806725337
+  },
+  {
+    "case_id": "state_14_candidate_02",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09282728990100556,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_02_L5_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 24,
+        "scipy_njev": 23
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 22,
+        "scipy_nfev": 23,
+        "scipy_njev": 22
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 27,
+        "scipy_njev": 23
+      }
+    ],
+    "all_three_starts_total_ms": 114.105785,
+    "all_three_starts_fk_calls": 480,
+    "all_three_starts_jacobian_calls": 345,
+    "selected_max_position_excess": -2.1994470047331793e-12,
+    "selected_max_orientation_excess": -3.7304275987692925e-11,
+    "selected_minimum_joint_margin": 0.24274770369078935
+  },
+  {
+    "case_id": "state_14_candidate_02",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09838684803218882,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_02_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 54,
+        "scipy_nfev": 55,
+        "scipy_njev": 54
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 50,
+        "scipy_nfev": 51,
+        "scipy_njev": 50
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 40,
+        "scipy_nfev": 41,
+        "scipy_njev": 40
+      }
+    ],
+    "all_three_starts_total_ms": 510.327409,
+    "all_three_starts_fk_calls": 1710,
+    "all_three_starts_jacobian_calls": 1450,
+    "selected_max_position_excess": -3.4545016586867705e-12,
+    "selected_max_orientation_excess": -1.5769845498891932e-11,
+    "selected_minimum_joint_margin": 0.24303846858105033
+  },
+  {
+    "case_id": "state_14_candidate_02",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10956863727733095,
+    "successful_initializations": 1,
+    "initial_path_verified": 1,
+    "selected_run": "runs/state_14_candidate_02_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 6179.602604,
+    "all_three_starts_fk_calls": 9900,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.0005314691479651164,
+    "selected_max_orientation_excess": -4.0070904363725957e-05,
+    "selected_minimum_joint_margin": 0.24278374048818252
+  },
+  {
+    "case_id": "state_14_candidate_03",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.06434160416228327,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_03_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 9,
+        "scipy_nfev": 10,
+        "scipy_njev": 9
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 12,
+        "scipy_njev": 10
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 12,
+        "scipy_njev": 10
+      }
+    ],
+    "all_three_starts_total_ms": 12.63043,
+    "all_three_starts_fk_calls": 54,
+    "all_three_starts_jacobian_calls": 30,
+    "selected_max_position_excess": -4.354908361009491e-12,
+    "selected_max_orientation_excess": -0.001275107131655349,
+    "selected_minimum_joint_margin": 0.23731723758588286
+  },
+  {
+    "case_id": "state_14_candidate_03",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09386117244700813,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_03_L5_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 24,
+        "scipy_njev": 23
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 21,
+        "scipy_njev": 20
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 23,
+        "scipy_njev": 23
+      }
+    ],
+    "all_three_starts_total_ms": 107.300789,
+    "all_three_starts_fk_calls": 450,
+    "all_three_starts_jacobian_calls": 335,
+    "selected_max_position_excess": -4.7085599308438475e-12,
+    "selected_max_orientation_excess": -3.891420866097839e-11,
+    "selected_minimum_joint_margin": 0.23886111100717394
+  },
+  {
+    "case_id": "state_14_candidate_03",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.0997354380597377,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_03_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 52,
+        "scipy_nfev": 54,
+        "scipy_njev": 52
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 47,
+        "scipy_nfev": 48,
+        "scipy_njev": 47
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 38,
+        "scipy_nfev": 39,
+        "scipy_njev": 38
+      }
+    ],
+    "all_three_starts_total_ms": 472.071132,
+    "all_three_starts_fk_calls": 1650,
+    "all_three_starts_jacobian_calls": 1380,
+    "selected_max_position_excess": -2.643467693005941e-12,
+    "selected_max_orientation_excess": -2.4838148898753687e-11,
+    "selected_minimum_joint_margin": 0.23916833509871988
+  },
+  {
+    "case_id": "state_14_candidate_03",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.11775520552936146,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_03_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5394.283496,
+    "all_three_starts_fk_calls": 9990,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.0004806969967651809,
+    "selected_max_orientation_excess": -0.0005453737376517487,
+    "selected_minimum_joint_margin": 0.23878322517862138
+  },
+  {
+    "case_id": "state_14_candidate_04",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.06344739077815893,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_04_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 7,
+        "scipy_nfev": 9,
+        "scipy_njev": 7
+      },
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 18,
+        "scipy_nfev": 43,
+        "scipy_njev": 14
+      },
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 14,
+        "scipy_nfev": 13,
+        "scipy_njev": 10
+      }
+    ],
+    "all_three_starts_total_ms": 17.245272,
+    "all_three_starts_fk_calls": 89,
+    "all_three_starts_jacobian_calls": 32,
+    "selected_max_position_excess": -2.78462582853356e-13,
+    "selected_max_orientation_excess": -0.0012955310142344955,
+    "selected_minimum_joint_margin": 0.24275543352170487
+  },
+  {
+    "case_id": "state_14_candidate_04",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09248864938786168,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_04_L5_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 24,
+        "scipy_nfev": 25,
+        "scipy_njev": 24
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 24,
+        "scipy_nfev": 25,
+        "scipy_njev": 24
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 21,
+        "scipy_nfev": 22,
+        "scipy_njev": 21
+      }
+    ],
+    "all_three_starts_total_ms": 111.017831,
+    "all_three_starts_fk_calls": 465,
+    "all_three_starts_jacobian_calls": 350,
+    "selected_max_position_excess": -2.364439373458982e-12,
+    "selected_max_orientation_excess": -3.2024846316480726e-11,
+    "selected_minimum_joint_margin": 0.24427429134699236
+  },
+  {
+    "case_id": "state_14_candidate_04",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09799877166399087,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_04_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 53,
+        "scipy_nfev": 54,
+        "scipy_njev": 53
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 59,
+        "scipy_nfev": 60,
+        "scipy_njev": 59
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 39,
+        "scipy_nfev": 40,
+        "scipy_njev": 39
+      }
+    ],
+    "all_three_starts_total_ms": 532.717577,
+    "all_three_starts_fk_calls": 1790,
+    "all_three_starts_jacobian_calls": 1520,
+    "selected_max_position_excess": -4.75295323931757e-12,
+    "selected_max_orientation_excess": -3.9816304767126276e-11,
+    "selected_minimum_joint_margin": 0.2445624707420339
+  },
+  {
+    "case_id": "state_14_candidate_04",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10714511083725738,
+    "successful_initializations": 1,
+    "initial_path_verified": 1,
+    "selected_run": "runs/state_14_candidate_04_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 6262.153533,
+    "all_three_starts_fk_calls": 9900,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.0005416369917074162,
+    "selected_max_orientation_excess": -0.0001601179098642911,
+    "selected_minimum_joint_margin": 0.24435121977838214
+  },
+  {
+    "case_id": "state_14_candidate_05",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.06397656893507463,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_05_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 13,
+        "scipy_nfev": 24,
+        "scipy_njev": 9
+      },
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 18,
+        "scipy_nfev": 32,
+        "scipy_njev": 14
+      },
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 13,
+        "scipy_nfev": 11,
+        "scipy_njev": 9
+      }
+    ],
+    "all_three_starts_total_ms": 17.887038,
+    "all_three_starts_fk_calls": 89,
+    "all_three_starts_jacobian_calls": 33,
+    "selected_max_position_excess": -1.3677312320908852e-12,
+    "selected_max_orientation_excess": -0.0012860634778065838,
+    "selected_minimum_joint_margin": 0.2392596821659697
+  },
+  {
+    "case_id": "state_14_candidate_05",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09330564781930757,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_05_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 24,
+        "scipy_nfev": 25,
+        "scipy_njev": 24
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 18,
+        "scipy_nfev": 18,
+        "scipy_njev": 18
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 21,
+        "scipy_nfev": 22,
+        "scipy_njev": 21
+      }
+    ],
+    "all_three_starts_total_ms": 102.123138,
+    "all_three_starts_fk_calls": 430,
+    "all_three_starts_jacobian_calls": 320,
+    "selected_max_position_excess": -4.050158212282051e-12,
+    "selected_max_orientation_excess": -2.3872305174310604e-11,
+    "selected_minimum_joint_margin": 0.2407935929916149
+  },
+  {
+    "case_id": "state_14_candidate_05",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.09897793399671063,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_05_L10_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 52,
+        "scipy_nfev": 54,
+        "scipy_njev": 52
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 53,
+        "scipy_nfev": 54,
+        "scipy_njev": 53
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 38,
+        "scipy_nfev": 39,
+        "scipy_njev": 38
+      }
+    ],
+    "all_three_starts_total_ms": 523.538359,
+    "all_three_starts_fk_calls": 1710,
+    "all_three_starts_jacobian_calls": 1440,
+    "selected_max_position_excess": -2.944259419601636e-14,
+    "selected_max_orientation_excess": -2.9722854386071695e-11,
+    "selected_minimum_joint_margin": 0.24109025355869307
+  },
+  {
+    "case_id": "state_14_candidate_05",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.11399870763970592,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_14_candidate_05_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5690.435132,
+    "all_three_starts_fk_calls": 9900,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.0005071068219933122,
+    "selected_max_orientation_excess": -0.0008029891212988065,
+    "selected_minimum_joint_margin": 0.24077481307703164
+  },
+  {
+    "case_id": "state_18_candidate_00",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10249826209315846,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_00_L1_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 15,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 17,
+        "scipy_njev": 15
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 18,
+        "scipy_njev": 15
+      }
+    ],
+    "all_three_starts_total_ms": 17.270564,
+    "all_three_starts_fk_calls": 70,
+    "all_three_starts_jacobian_calls": 44,
+    "selected_max_position_excess": -4.992902358919027e-12,
+    "selected_max_orientation_excess": -0.00673819248065133,
+    "selected_minimum_joint_margin": 0.35153813194873995
+  },
+  {
+    "case_id": "state_18_candidate_00",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1202326654599134,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_00_L5_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 28,
+        "scipy_nfev": 29,
+        "scipy_njev": 28
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 18,
+        "scipy_nfev": 20,
+        "scipy_njev": 18
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 28,
+        "scipy_nfev": 29,
+        "scipy_njev": 28
+      }
+    ],
+    "all_three_starts_total_ms": 118.499358,
+    "all_three_starts_fk_calls": 490,
+    "all_three_starts_jacobian_calls": 375,
+    "selected_max_position_excess": -7.434467538119938e-13,
+    "selected_max_orientation_excess": -1.8945390395375128e-11,
+    "selected_minimum_joint_margin": 0.3523113519355303
+  },
+  {
+    "case_id": "state_18_candidate_00",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.126819485009298,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_00_L10_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 55,
+        "scipy_nfev": 57,
+        "scipy_njev": 55
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 28,
+        "scipy_nfev": 29,
+        "scipy_njev": 28
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 54,
+        "scipy_nfev": 55,
+        "scipy_njev": 54
+      }
+    ],
+    "all_three_starts_total_ms": 475.22963,
+    "all_three_starts_fk_calls": 1610,
+    "all_three_starts_jacobian_calls": 1380,
+    "selected_max_position_excess": -3.338781508210875e-12,
+    "selected_max_orientation_excess": -3.934376435754672e-11,
+    "selected_minimum_joint_margin": 0.3525985372678836
+  },
+  {
+    "case_id": "state_18_candidate_00",
+    "horizon": 30,
+    "found": false,
+    "best_found_rho_upper_bound": null,
+    "successful_initializations": 0,
+    "initial_path_verified": 0,
+    "selected_run": null,
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 219,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5291.149149,
+    "all_three_starts_fk_calls": 13217,
+    "all_three_starts_jacobian_calls": 9155,
+    "selected_max_position_excess": null,
+    "selected_max_orientation_excess": null,
+    "selected_minimum_joint_margin": null
+  },
+  {
+    "case_id": "state_18_candidate_01",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10275552199928452,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_01_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 12,
+        "scipy_nfev": 15,
+        "scipy_njev": 12
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 17,
+        "scipy_njev": 15
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 14,
+        "scipy_nfev": 18,
+        "scipy_njev": 14
+      }
+    ],
+    "all_three_starts_total_ms": 16.526525,
+    "all_three_starts_fk_calls": 70,
+    "all_three_starts_jacobian_calls": 42,
+    "selected_max_position_excess": -3.809040756419524e-13,
+    "selected_max_orientation_excess": -0.004633792128999762,
+    "selected_minimum_joint_margin": 0.3517368559028733
+  },
+  {
+    "case_id": "state_18_candidate_01",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.12071453152377337,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_01_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 32,
+        "scipy_nfev": 34,
+        "scipy_njev": 32
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 22,
+        "scipy_njev": 20
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 30,
+        "scipy_nfev": 31,
+        "scipy_njev": 30
+      }
+    ],
+    "all_three_starts_total_ms": 129.711259,
+    "all_three_starts_fk_calls": 535,
+    "all_three_starts_jacobian_calls": 415,
+    "selected_max_position_excess": -9.776339893879937e-13,
+    "selected_max_orientation_excess": -2.7159110030372524e-11,
+    "selected_minimum_joint_margin": 0.3525198687181409
+  },
+  {
+    "case_id": "state_18_candidate_01",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.12736948602843004,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_01_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 54,
+        "scipy_nfev": 55,
+        "scipy_njev": 54
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 29,
+        "scipy_nfev": 30,
+        "scipy_njev": 29
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 54,
+        "scipy_nfev": 55,
+        "scipy_njev": 54
+      }
+    ],
+    "all_three_starts_total_ms": 465.117209,
+    "all_three_starts_fk_calls": 1600,
+    "all_three_starts_jacobian_calls": 1380,
+    "selected_max_position_excess": -4.771363425887243e-12,
+    "selected_max_orientation_excess": -3.166527109965678e-11,
+    "selected_minimum_joint_margin": 0.3528100247345435
+  },
+  {
+    "case_id": "state_18_candidate_01",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1922317769952728,
+    "successful_initializations": 1,
+    "initial_path_verified": 1,
+    "selected_run": "runs/state_18_candidate_01_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 103,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 199,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5152.956441,
+    "all_three_starts_fk_calls": 12622,
+    "all_three_starts_jacobian_calls": 9141,
+    "selected_max_position_excess": -1.9712757193322654e-07,
+    "selected_max_orientation_excess": -0.00792373819865193,
+    "selected_minimum_joint_margin": 0.3186255339047803
+  },
+  {
+    "case_id": "state_18_candidate_02",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10223007969259634,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_02_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 14,
+        "scipy_nfev": 17,
+        "scipy_njev": 14
+      },
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 21,
+        "scipy_nfev": 21,
+        "scipy_njev": 17
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 18,
+        "scipy_njev": 15
+      }
+    ],
+    "all_three_starts_total_ms": 18.490182,
+    "all_three_starts_fk_calls": 77,
+    "all_three_starts_jacobian_calls": 47,
+    "selected_max_position_excess": -6.633567393304896e-13,
+    "selected_max_orientation_excess": -0.007150613682846198,
+    "selected_minimum_joint_margin": 0.35139342957329534
+  },
+  {
+    "case_id": "state_18_candidate_02",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.11979847828528978,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_02_L5_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 29,
+        "scipy_nfev": 31,
+        "scipy_njev": 29
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 17,
+        "scipy_nfev": 19,
+        "scipy_njev": 17
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 26,
+        "scipy_nfev": 27,
+        "scipy_njev": 26
+      }
+    ],
+    "all_three_starts_total_ms": 116.304825,
+    "all_three_starts_fk_calls": 485,
+    "all_three_starts_jacobian_calls": 365,
+    "selected_max_position_excess": -4.002952483372901e-12,
+    "selected_max_orientation_excess": -1.1326280191514826e-11,
+    "selected_minimum_joint_margin": 0.35215941175193666
+  },
+  {
+    "case_id": "state_18_candidate_02",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1262660077691933,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_02_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 56,
+        "scipy_nfev": 58,
+        "scipy_njev": 56
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 28,
+        "scipy_nfev": 29,
+        "scipy_njev": 28
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 57,
+        "scipy_nfev": 58,
+        "scipy_njev": 57
+      }
+    ],
+    "all_three_starts_total_ms": 490.201011,
+    "all_three_starts_fk_calls": 1650,
+    "all_three_starts_jacobian_calls": 1420,
+    "selected_max_position_excess": -3.102243071803623e-12,
+    "selected_max_orientation_excess": -1.1052117554477547e-11,
+    "selected_minimum_joint_margin": 0.35244139603743474
+  },
+  {
+    "case_id": "state_18_candidate_02",
+    "horizon": 30,
+    "found": false,
+    "best_found_rho_upper_bound": null,
+    "successful_initializations": 0,
+    "initial_path_verified": 0,
+    "selected_run": null,
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 168,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5167.639373,
+    "all_three_starts_fk_calls": 11732,
+    "all_three_starts_jacobian_calls": 9163,
+    "selected_max_position_excess": null,
+    "selected_max_orientation_excess": null,
+    "selected_minimum_joint_margin": null
+  },
+  {
+    "case_id": "state_18_candidate_03",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10300208199923576,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_03_L1_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 12,
+        "scipy_nfev": 14,
+        "scipy_njev": 12
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 17,
+        "scipy_njev": 15
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 18,
+        "scipy_njev": 14
+      }
+    ],
+    "all_three_starts_total_ms": 16.312495,
+    "all_three_starts_fk_calls": 69,
+    "all_three_starts_jacobian_calls": 42,
+    "selected_max_position_excess": -4.425670550520233e-12,
+    "selected_max_orientation_excess": -0.006790689951389898,
+    "selected_minimum_joint_margin": 0.3519903965159946
+  },
+  {
+    "case_id": "state_18_candidate_03",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1212426977200973,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_03_L5_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 33,
+        "scipy_nfev": 35,
+        "scipy_njev": 33
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 22,
+        "scipy_njev": 20
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 31,
+        "scipy_nfev": 32,
+        "scipy_njev": 31
+      }
+    ],
+    "all_three_starts_total_ms": 132.073404,
+    "all_three_starts_fk_calls": 545,
+    "all_three_starts_jacobian_calls": 425,
+    "selected_max_position_excess": -3.296621222531604e-12,
+    "selected_max_orientation_excess": -3.885813198989396e-11,
+    "selected_minimum_joint_margin": 0.3527856873614238
+  },
+  {
+    "case_id": "state_18_candidate_03",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1279161094992599,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_03_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 54,
+        "scipy_nfev": 55,
+        "scipy_njev": 54
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 29,
+        "scipy_nfev": 30,
+        "scipy_njev": 29
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 52,
+        "scipy_nfev": 53,
+        "scipy_njev": 52
+      }
+    ],
+    "all_three_starts_total_ms": 464.418653,
+    "all_three_starts_fk_calls": 1580,
+    "all_three_starts_jacobian_calls": 1360,
+    "selected_max_position_excess": -4.787527796076829e-12,
+    "selected_max_orientation_excess": -3.175329617299827e-11,
+    "selected_minimum_joint_margin": 0.3530766481149953
+  },
+  {
+    "case_id": "state_18_candidate_03",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.18953028550249518,
+    "successful_initializations": 1,
+    "initial_path_verified": 1,
+    "selected_run": "runs/state_18_candidate_03_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 263,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5476.857505,
+    "all_three_starts_fk_calls": 14480,
+    "all_three_starts_jacobian_calls": 9130,
+    "selected_max_position_excess": -1.130316408753376e-06,
+    "selected_max_orientation_excess": -0.007924719792564578,
+    "selected_minimum_joint_margin": 0.3133238119855424
+  },
+  {
+    "case_id": "state_18_candidate_04",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10195072053261714,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_04_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 18,
+        "scipy_nfev": 21,
+        "scipy_njev": 16
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 18,
+        "scipy_njev": 15
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 17,
+        "scipy_nfev": 20,
+        "scipy_njev": 17
+      }
+    ],
+    "all_three_starts_total_ms": 18.985462,
+    "all_three_starts_fk_calls": 79,
+    "all_three_starts_jacobian_calls": 49,
+    "selected_max_position_excess": -3.342386697274824e-12,
+    "selected_max_orientation_excess": -0.007035351680487606,
+    "selected_minimum_joint_margin": 0.35130218922345047
+  },
+  {
+    "case_id": "state_18_candidate_04",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.11939871118473538,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_04_L5_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 29,
+        "scipy_nfev": 30,
+        "scipy_njev": 29
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 18,
+        "scipy_nfev": 20,
+        "scipy_njev": 18
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 26,
+        "scipy_nfev": 26,
+        "scipy_njev": 26
+      }
+    ],
+    "all_three_starts_total_ms": 117.241592,
+    "all_three_starts_fk_calls": 485,
+    "all_three_starts_jacobian_calls": 370,
+    "selected_max_position_excess": -4.945013799481646e-12,
+    "selected_max_orientation_excess": -3.89350912621822e-11,
+    "selected_minimum_joint_margin": 0.3520629216158827
+  },
+  {
+    "case_id": "state_18_candidate_04",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1257089080167679,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_04_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 55,
+        "scipy_nfev": 56,
+        "scipy_njev": 55
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 30,
+        "scipy_nfev": 30,
+        "scipy_njev": 29
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 58,
+        "scipy_nfev": 59,
+        "scipy_njev": 58
+      }
+    ],
+    "all_three_starts_total_ms": 501.338383,
+    "all_three_starts_fk_calls": 1660,
+    "all_three_starts_jacobian_calls": 1430,
+    "selected_max_position_excess": -3.959715151255483e-12,
+    "selected_max_orientation_excess": -6.447314904178825e-12,
+    "selected_minimum_joint_margin": 0.3523380461977592
+  },
+  {
+    "case_id": "state_18_candidate_04",
+    "horizon": 30,
+    "found": false,
+    "best_found_rho_upper_bound": null,
+    "successful_initializations": 0,
+    "initial_path_verified": 0,
+    "selected_run": null,
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 162,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5266.766889,
+    "all_three_starts_fk_calls": 11591,
+    "all_three_starts_jacobian_calls": 9180,
+    "selected_max_position_excess": null,
+    "selected_max_orientation_excess": null,
+    "selected_minimum_joint_margin": null
+  },
+  {
+    "case_id": "state_18_candidate_05",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10260246355373623,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_05_L1_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 16,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 17,
+        "scipy_njev": 15
+      },
+      {
+        "success": false,
+        "code": 8,
+        "message": "Positive directional derivative for linesearch",
+        "iterations": 25,
+        "scipy_nfev": 73,
+        "scipy_njev": 21
+      }
+    ],
+    "all_three_starts_total_ms": 25.250991,
+    "all_three_starts_fk_calls": 126,
+    "all_three_starts_jacobian_calls": 50,
+    "selected_max_position_excess": -2.074757032843877e-12,
+    "selected_max_orientation_excess": -0.006752882048318231,
+    "selected_minimum_joint_margin": 0.35161109984062344
+  },
+  {
+    "case_id": "state_18_candidate_05",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.12041874931080028,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_05_L5_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 32,
+        "scipy_nfev": 34,
+        "scipy_njev": 32
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 19,
+        "scipy_nfev": 21,
+        "scipy_njev": 19
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 29,
+        "scipy_nfev": 30,
+        "scipy_njev": 29
+      }
+    ],
+    "all_three_starts_total_ms": 128.908944,
+    "all_three_starts_fk_calls": 525,
+    "all_three_starts_jacobian_calls": 405,
+    "selected_max_position_excess": -3.680418600091051e-12,
+    "selected_max_orientation_excess": -3.4846691504553107e-11,
+    "selected_minimum_joint_margin": 0.352387889899631
+  },
+  {
+    "case_id": "state_18_candidate_05",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.12703989598636212,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_18_candidate_05_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 53,
+        "scipy_nfev": 54,
+        "scipy_njev": 53
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 28,
+        "scipy_nfev": 29,
+        "scipy_njev": 28
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 52,
+        "scipy_nfev": 53,
+        "scipy_njev": 52
+      }
+    ],
+    "all_three_starts_total_ms": 452.87383,
+    "all_three_starts_fk_calls": 1560,
+    "all_three_starts_jacobian_calls": 1340,
+    "selected_max_position_excess": -3.856401309398905e-12,
+    "selected_max_orientation_excess": -2.7357250145798595e-11,
+    "selected_minimum_joint_margin": 0.3526765718946857
+  },
+  {
+    "case_id": "state_18_candidate_05",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.20321058620346605,
+    "successful_initializations": 1,
+    "initial_path_verified": 1,
+    "selected_run": "runs/state_18_candidate_05_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 190,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5256.566688,
+    "all_three_starts_fk_calls": 12350,
+    "all_three_starts_jacobian_calls": 9149,
+    "selected_max_position_excess": -4.950508489434246e-07,
+    "selected_max_orientation_excess": -0.00792572641287801,
+    "selected_minimum_joint_margin": 0.3221711920457251
+  },
+  {
+    "case_id": "state_13_candidate_00",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10926970649372082,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_00_L1_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 11,
+        "scipy_njev": 10
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 10,
+        "scipy_njev": 10
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 8,
+        "scipy_nfev": 10,
+        "scipy_njev": 8
+      }
+    ],
+    "all_three_starts_total_ms": 12.221677,
+    "all_three_starts_fk_calls": 52,
+    "all_three_starts_jacobian_calls": 29,
+    "selected_max_position_excess": -4.775407499990614e-12,
+    "selected_max_orientation_excess": -2.1501801061566198e-05,
+    "selected_minimum_joint_margin": 0.3840330802664933
+  },
+  {
+    "case_id": "state_13_candidate_00",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.13601174647022315,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_00_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 22,
+        "scipy_nfev": 23,
+        "scipy_njev": 22
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 25,
+        "scipy_nfev": 26,
+        "scipy_njev": 25
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 21,
+        "scipy_nfev": 22,
+        "scipy_njev": 21
+      }
+    ],
+    "all_three_starts_total_ms": 111.210262,
+    "all_three_starts_fk_calls": 470,
+    "all_three_starts_jacobian_calls": 345,
+    "selected_max_position_excess": -4.678405449501377e-12,
+    "selected_max_orientation_excess": -2.669095326701676e-11,
+    "selected_minimum_joint_margin": 0.3591466787391119
+  },
+  {
+    "case_id": "state_13_candidate_00",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.13858584959736486,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_00_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 44,
+        "scipy_nfev": 44,
+        "scipy_njev": 44
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 53,
+        "scipy_nfev": 54,
+        "scipy_njev": 53
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 39,
+        "scipy_nfev": 40,
+        "scipy_njev": 39
+      }
+    ],
+    "all_three_starts_total_ms": 468.141898,
+    "all_three_starts_fk_calls": 1600,
+    "all_three_starts_jacobian_calls": 1370,
+    "selected_max_position_excess": -4.96973577741866e-12,
+    "selected_max_orientation_excess": -1.573721535030881e-11,
+    "selected_minimum_joint_margin": 0.3283738090451713
+  },
+  {
+    "case_id": "state_13_candidate_00",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.18539114241505936,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_00_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5170.550022,
+    "all_three_starts_fk_calls": 9690,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -2.689388444281505e-05,
+    "selected_max_orientation_excess": -0.007446763786975408,
+    "selected_minimum_joint_margin": 0.20933254451907254
+  },
+  {
+    "case_id": "state_13_candidate_01",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10964735403579169,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_01_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 11,
+        "scipy_njev": 10
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 9,
+        "scipy_nfev": 10,
+        "scipy_njev": 9
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 8,
+        "scipy_nfev": 10,
+        "scipy_njev": 8
+      }
+    ],
+    "all_three_starts_total_ms": 12.005005,
+    "all_three_starts_fk_calls": 52,
+    "all_three_starts_jacobian_calls": 28,
+    "selected_max_position_excess": -2.733885817382542e-12,
+    "selected_max_orientation_excess": -2.3548203317846905e-11,
+    "selected_minimum_joint_margin": 0.38296150736742485
+  },
+  {
+    "case_id": "state_13_candidate_01",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.13695290315294853,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_01_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 26,
+        "scipy_nfev": 27,
+        "scipy_njev": 26
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 34,
+        "scipy_nfev": 44,
+        "scipy_njev": 33
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 24,
+        "scipy_nfev": 25,
+        "scipy_njev": 24
+      }
+    ],
+    "all_three_starts_total_ms": 135.880755,
+    "all_three_starts_fk_calls": 585,
+    "all_three_starts_jacobian_calls": 420,
+    "selected_max_position_excess": -3.728003149239267e-12,
+    "selected_max_orientation_excess": -7.628809042814488e-12,
+    "selected_minimum_joint_margin": 0.35788639911604314
+  },
+  {
+    "case_id": "state_13_candidate_01",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.13947788063955974,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_01_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 50,
+        "scipy_nfev": 51,
+        "scipy_njev": 50
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 50,
+        "scipy_nfev": 51,
+        "scipy_njev": 50
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 40,
+        "scipy_nfev": 41,
+        "scipy_njev": 40
+      }
+    ],
+    "all_three_starts_total_ms": 484.710375,
+    "all_three_starts_fk_calls": 1650,
+    "all_three_starts_jacobian_calls": 1410,
+    "selected_max_position_excess": -4.7937172894391145e-12,
+    "selected_max_orientation_excess": -3.228890418927044e-11,
+    "selected_minimum_joint_margin": 0.326929776044539
+  },
+  {
+    "case_id": "state_13_candidate_01",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1845089423175201,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_01_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5199.878293,
+    "all_three_starts_fk_calls": 9690,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -2.3816944156226797e-05,
+    "selected_max_orientation_excess": -0.007460688841395165,
+    "selected_minimum_joint_margin": 0.20500275593826253
+  },
+  {
+    "case_id": "state_13_candidate_02",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10891405029266119,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_02_L1_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 11,
+        "scipy_njev": 10
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 10,
+        "scipy_njev": 10
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 8,
+        "scipy_nfev": 10,
+        "scipy_njev": 8
+      }
+    ],
+    "all_three_starts_total_ms": 12.347649,
+    "all_three_starts_fk_calls": 52,
+    "all_three_starts_jacobian_calls": 29,
+    "selected_max_position_excess": -4.90981691067538e-12,
+    "selected_max_orientation_excess": -2.6712742180447224e-05,
+    "selected_minimum_joint_margin": 0.3850710072648975
+  },
+  {
+    "case_id": "state_13_candidate_02",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1353780828359221,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_02_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 21,
+        "scipy_nfev": 22,
+        "scipy_njev": 21
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 26,
+        "scipy_nfev": 27,
+        "scipy_njev": 26
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 21,
+        "scipy_njev": 20
+      }
+    ],
+    "all_three_starts_total_ms": 107.977778,
+    "all_three_starts_fk_calls": 455,
+    "all_three_starts_jacobian_calls": 340,
+    "selected_max_position_excess": -4.0726493358289595e-12,
+    "selected_max_orientation_excess": -6.88643586599369e-12,
+    "selected_minimum_joint_margin": 0.36030723779942686
+  },
+  {
+    "case_id": "state_13_candidate_02",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.13814261866431563,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_02_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 44,
+        "scipy_nfev": 44,
+        "scipy_njev": 43
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 51,
+        "scipy_nfev": 52,
+        "scipy_njev": 51
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 42,
+        "scipy_nfev": 38,
+        "scipy_njev": 38
+      }
+    ],
+    "all_three_starts_total_ms": 459.026774,
+    "all_three_starts_fk_calls": 1550,
+    "all_three_starts_jacobian_calls": 1330,
+    "selected_max_position_excess": -4.840527718236176e-12,
+    "selected_max_orientation_excess": -2.9761056466459657e-11,
+    "selected_minimum_joint_margin": 0.3295894781200186
+  },
+  {
+    "case_id": "state_13_candidate_02",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.18632363402501118,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_02_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5108.301169,
+    "all_three_starts_fk_calls": 9690,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -3.0381014711455693e-05,
+    "selected_max_orientation_excess": -0.007432676327668513,
+    "selected_minimum_joint_margin": 0.213820858510499
+  },
+  {
+    "case_id": "state_13_candidate_03",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.11004513142808604,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_03_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 11,
+        "scipy_njev": 10
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 9,
+        "scipy_nfev": 10,
+        "scipy_njev": 9
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 8,
+        "scipy_nfev": 10,
+        "scipy_njev": 8
+      }
+    ],
+    "all_three_starts_total_ms": 11.998396,
+    "all_three_starts_fk_calls": 52,
+    "all_three_starts_jacobian_calls": 28,
+    "selected_max_position_excess": -2.8946142358043936e-12,
+    "selected_max_orientation_excess": -1.0276161151352714e-07,
+    "selected_minimum_joint_margin": 0.3818535998039082
+  },
+  {
+    "case_id": "state_13_candidate_03",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1379582854612962,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_03_L5_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 27,
+        "scipy_nfev": 28,
+        "scipy_njev": 27
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 31,
+        "scipy_nfev": 32,
+        "scipy_njev": 31
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 25,
+        "scipy_nfev": 26,
+        "scipy_njev": 25
+      }
+    ],
+    "all_three_starts_total_ms": 131.327479,
+    "all_three_starts_fk_calls": 535,
+    "all_three_starts_jacobian_calls": 420,
+    "selected_max_position_excess": -1.239028194280345e-12,
+    "selected_max_orientation_excess": -2.7559015833289457e-11,
+    "selected_minimum_joint_margin": 0.35657666130361176
+  },
+  {
+    "case_id": "state_13_candidate_03",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.14051400510515313,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_03_L10_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 49,
+        "scipy_nfev": 50,
+        "scipy_njev": 49
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 49,
+        "scipy_nfev": 50,
+        "scipy_njev": 49
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 43,
+        "scipy_nfev": 44,
+        "scipy_njev": 43
+      }
+    ],
+    "all_three_starts_total_ms": 497.433301,
+    "all_three_starts_fk_calls": 1660,
+    "all_three_starts_jacobian_calls": 1420,
+    "selected_max_position_excess": -7.438073594545624e-13,
+    "selected_max_orientation_excess": -7.845750091273196e-12,
+    "selected_minimum_joint_margin": 0.32538746130832674
+  },
+  {
+    "case_id": "state_13_candidate_03",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.18368293386326448,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_03_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5244.675136,
+    "all_three_starts_fk_calls": 9690,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -2.114855382927337e-05,
+    "selected_max_orientation_excess": -0.007474391152177906,
+    "selected_minimum_joint_margin": 0.20083353829024367
+  },
+  {
+    "case_id": "state_13_candidate_04",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10858168251805449,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_04_L1_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 11,
+        "scipy_njev": 10
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 10,
+        "scipy_njev": 10
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 8,
+        "scipy_nfev": 9,
+        "scipy_njev": 8
+      }
+    ],
+    "all_three_starts_total_ms": 12.095496,
+    "all_three_starts_fk_calls": 51,
+    "all_three_starts_jacobian_calls": 29,
+    "selected_max_position_excess": -4.972647727613522e-12,
+    "selected_max_orientation_excess": -3.0401582482917147e-05,
+    "selected_minimum_joint_margin": 0.3860774021506974
+  },
+  {
+    "case_id": "state_13_candidate_04",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1349593911682046,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_04_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 21,
+        "scipy_njev": 20
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 28,
+        "scipy_nfev": 29,
+        "scipy_njev": 28
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 18,
+        "scipy_nfev": 19,
+        "scipy_njev": 18
+      }
+    ],
+    "all_three_starts_total_ms": 111.073698,
+    "all_three_starts_fk_calls": 445,
+    "all_three_starts_jacobian_calls": 335,
+    "selected_max_position_excess": -4.535693218579717e-12,
+    "selected_max_orientation_excess": -3.798748468564206e-11,
+    "selected_minimum_joint_margin": 0.3613904162338164
+  },
+  {
+    "case_id": "state_13_candidate_04",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.13800032961114572,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_04_L10_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 43,
+        "scipy_nfev": 45,
+        "scipy_njev": 43
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 45,
+        "scipy_nfev": 46,
+        "scipy_njev": 45
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 37,
+        "scipy_nfev": 38,
+        "scipy_njev": 37
+      }
+    ],
+    "all_three_starts_total_ms": 426.993277,
+    "all_three_starts_fk_calls": 1510,
+    "all_three_starts_jacobian_calls": 1260,
+    "selected_max_position_excess": -4.763680986133445e-12,
+    "selected_max_orientation_excess": -1.225636953039455e-11,
+    "selected_minimum_joint_margin": 0.3306434197980279
+  },
+  {
+    "case_id": "state_13_candidate_04",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1873037805876303,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_04_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 103,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5198.676453,
+    "all_three_starts_fk_calls": 9756,
+    "all_three_starts_jacobian_calls": 9123,
+    "selected_max_position_excess": -1.2234362076837552e-06,
+    "selected_max_orientation_excess": -0.0074190063250655506,
+    "selected_minimum_joint_margin": 0.21644775778248906
+  },
+  {
+    "case_id": "state_13_candidate_05",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.10941821581501394,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_05_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 11,
+        "scipy_njev": 10
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 9,
+        "scipy_nfev": 10,
+        "scipy_njev": 9
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 8,
+        "scipy_nfev": 10,
+        "scipy_njev": 8
+      }
+    ],
+    "all_three_starts_total_ms": 12.082403,
+    "all_three_starts_fk_calls": 52,
+    "all_three_starts_jacobian_calls": 28,
+    "selected_max_position_excess": -1.0156125072879885e-12,
+    "selected_max_orientation_excess": -8.447100657837936e-12,
+    "selected_minimum_joint_margin": 0.3836086238711508
+  },
+  {
+    "case_id": "state_13_candidate_05",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1363514705854487,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_05_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 24,
+        "scipy_njev": 23
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 32,
+        "scipy_nfev": 33,
+        "scipy_njev": 32
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 22,
+        "scipy_nfev": 23,
+        "scipy_njev": 22
+      }
+    ],
+    "all_three_starts_total_ms": 122.72074,
+    "all_three_starts_fk_calls": 505,
+    "all_three_starts_jacobian_calls": 390,
+    "selected_max_position_excess": -4.9995168595329265e-12,
+    "selected_max_orientation_excess": -4.0866624320679e-11,
+    "selected_minimum_joint_margin": 0.35865463749305826
+  },
+  {
+    "case_id": "state_13_candidate_05",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.13887726352999044,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_05_L10_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 45,
+        "scipy_nfev": 46,
+        "scipy_njev": 45
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 48,
+        "scipy_nfev": 49,
+        "scipy_njev": 48
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 40,
+        "scipy_nfev": 41,
+        "scipy_njev": 40
+      }
+    ],
+    "all_three_starts_total_ms": 464.02807,
+    "all_three_starts_fk_calls": 1580,
+    "all_three_starts_jacobian_calls": 1340,
+    "selected_max_position_excess": -4.208942656208636e-12,
+    "selected_max_orientation_excess": -2.5144174936597707e-11,
+    "selected_minimum_joint_margin": 0.32782877118161047
+  },
+  {
+    "case_id": "state_13_candidate_05",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.185031914741644,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_13_candidate_05_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 5067.588928,
+    "all_three_starts_fk_calls": 9690,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -2.5613982939243413e-05,
+    "selected_max_orientation_excess": -0.007452356563684008,
+    "selected_minimum_joint_margin": 0.20758150747885454
+  },
+  {
+    "case_id": "state_08_candidate_00",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.16722352078576969,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_00_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 18,
+        "scipy_nfev": 21,
+        "scipy_njev": 18
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 25,
+        "scipy_njev": 20
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 25,
+        "scipy_njev": 20
+      }
+    ],
+    "all_three_starts_total_ms": 22.360252,
+    "all_three_starts_fk_calls": 91,
+    "all_three_starts_jacobian_calls": 59,
+    "selected_max_position_excess": -4.3768072933297875e-12,
+    "selected_max_orientation_excess": -9.516712071167e-12,
+    "selected_minimum_joint_margin": 1.3624790341361046
+  },
+  {
+    "case_id": "state_08_candidate_00",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.18754842992387954,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_00_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 36,
+        "scipy_nfev": 39,
+        "scipy_njev": 36
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 38,
+        "scipy_nfev": 40,
+        "scipy_njev": 38
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 39,
+        "scipy_nfev": 40,
+        "scipy_njev": 39
+      }
+    ],
+    "all_three_starts_total_ms": 176.138939,
+    "all_three_starts_fk_calls": 695,
+    "all_three_starts_jacobian_calls": 570,
+    "selected_max_position_excess": -4.75803684646392e-12,
+    "selected_max_orientation_excess": -4.358045001262578e-11,
+    "selected_minimum_joint_margin": 1.3288844219189588
+  },
+  {
+    "case_id": "state_08_candidate_00",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.19693353504901936,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_00_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 90,
+        "scipy_nfev": 92,
+        "scipy_njev": 90
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 88,
+        "scipy_nfev": 90,
+        "scipy_njev": 88
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 88,
+        "scipy_nfev": 91,
+        "scipy_njev": 88
+      }
+    ],
+    "all_three_starts_total_ms": 922.722402,
+    "all_three_starts_fk_calls": 2950,
+    "all_three_starts_jacobian_calls": 2670,
+    "selected_max_position_excess": -3.387254886300095e-12,
+    "selected_max_orientation_excess": -6.273783575982961e-13,
+    "selected_minimum_joint_margin": 1.2839069583609934
+  },
+  {
+    "case_id": "state_08_candidate_00",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.2229113884302013,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_00_L30_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 103,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 4368.453593,
+    "all_three_starts_fk_calls": 9870,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.00024310554914952075,
+    "selected_max_orientation_excess": -0.007000619748044559,
+    "selected_minimum_joint_margin": 1.1881863628105191
+  },
+  {
+    "case_id": "state_08_candidate_01",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.16734354628960654,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_01_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 96,
+        "scipy_nfev": 768,
+        "scipy_njev": 92
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 25,
+        "scipy_njev": 20
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 27,
+        "scipy_njev": 22
+      }
+    ],
+    "all_three_starts_total_ms": 127.452726,
+    "all_three_starts_fk_calls": 840,
+    "all_three_starts_jacobian_calls": 135,
+    "selected_max_position_excess": -4.97571862184687e-12,
+    "selected_max_orientation_excess": -4.22566304864036e-11,
+    "selected_minimum_joint_margin": 1.363406045670321
+  },
+  {
+    "case_id": "state_08_candidate_01",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.18762389789379566,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_01_L5_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 607,
+        "scipy_njev": 98
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 38,
+        "scipy_nfev": 40,
+        "scipy_njev": 38
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 61,
+        "scipy_nfev": 158,
+        "scipy_njev": 57
+      }
+    ],
+    "all_three_starts_total_ms": 549.779361,
+    "all_three_starts_fk_calls": 4125,
+    "all_three_starts_jacobian_calls": 970,
+    "selected_max_position_excess": -1.6750945248944493e-12,
+    "selected_max_orientation_excess": -1.8153242797858127e-11,
+    "selected_minimum_joint_margin": 1.3298002145477015
+  },
+  {
+    "case_id": "state_08_candidate_01",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.19701410864650112,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_01_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 91,
+        "scipy_nfev": 94,
+        "scipy_njev": 91
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 93,
+        "scipy_nfev": 94,
+        "scipy_njev": 93
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 90,
+        "scipy_nfev": 92,
+        "scipy_njev": 90
+      }
+    ],
+    "all_three_starts_total_ms": 958.475277,
+    "all_three_starts_fk_calls": 3030,
+    "all_three_starts_jacobian_calls": 2750,
+    "selected_max_position_excess": -3.3829015977371313e-13,
+    "selected_max_orientation_excess": -2.9498230247337887e-11,
+    "selected_minimum_joint_margin": 1.2848040729186743
+  },
+  {
+    "case_id": "state_08_candidate_01",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.2230937773483339,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_01_L30_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 103,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 103,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 4321.828137,
+    "all_three_starts_fk_calls": 9930,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.00024286008654341796,
+    "selected_max_orientation_excess": -0.007000546403404778,
+    "selected_minimum_joint_margin": 1.1879234629172728
+  },
+  {
+    "case_id": "state_08_candidate_02",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.16711028614775766,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_02_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 16,
+        "scipy_nfev": 18,
+        "scipy_njev": 16
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 19,
+        "scipy_nfev": 24,
+        "scipy_njev": 19
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 25,
+        "scipy_njev": 20
+      }
+    ],
+    "all_three_starts_total_ms": 21.307643,
+    "all_three_starts_fk_calls": 87,
+    "all_three_starts_jacobian_calls": 56,
+    "selected_max_position_excess": -4.961471988459976e-12,
+    "selected_max_orientation_excess": -2.223575663873323e-11,
+    "selected_minimum_joint_margin": 1.361509071728119
+  },
+  {
+    "case_id": "state_08_candidate_02",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.18748673906041197,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_02_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 36,
+        "scipy_nfev": 39,
+        "scipy_njev": 36
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 37,
+        "scipy_nfev": 39,
+        "scipy_njev": 37
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 39,
+        "scipy_nfev": 40,
+        "scipy_njev": 39
+      }
+    ],
+    "all_three_starts_total_ms": 174.009307,
+    "all_three_starts_fk_calls": 690,
+    "all_three_starts_jacobian_calls": 565,
+    "selected_max_position_excess": -4.8065401485331005e-12,
+    "selected_max_orientation_excess": -3.626246698751334e-11,
+    "selected_minimum_joint_margin": 1.327922971088992
+  },
+  {
+    "case_id": "state_08_candidate_02",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.19692644057988187,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_02_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 90,
+        "scipy_nfev": 92,
+        "scipy_njev": 90
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 83,
+        "scipy_nfev": 84,
+        "scipy_njev": 83
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 80,
+        "scipy_nfev": 81,
+        "scipy_njev": 80
+      }
+    ],
+    "all_three_starts_total_ms": 882.157662,
+    "all_three_starts_fk_calls": 2810,
+    "all_three_starts_jacobian_calls": 2540,
+    "selected_max_position_excess": -3.407427335080926e-12,
+    "selected_max_orientation_excess": -3.822858869739765e-11,
+    "selected_minimum_joint_margin": 1.283157221963124
+  },
+  {
+    "case_id": "state_08_candidate_02",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.22272839260564756,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_02_L30_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 103,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 4365.459723,
+    "all_three_starts_fk_calls": 9900,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.00024334018479321142,
+    "selected_max_orientation_excess": -0.0069999434769139925,
+    "selected_minimum_joint_margin": 1.188452520020875
+  },
+  {
+    "case_id": "state_08_candidate_03",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.16747048671946121,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_03_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 24,
+        "scipy_njev": 20
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 25,
+        "scipy_njev": 20
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 25,
+        "scipy_njev": 20
+      }
+    ],
+    "all_three_starts_total_ms": 23.144801,
+    "all_three_starts_fk_calls": 94,
+    "all_three_starts_jacobian_calls": 61,
+    "selected_max_position_excess": -4.9983552453253255e-12,
+    "selected_max_orientation_excess": -4.361843004840882e-11,
+    "selected_minimum_joint_margin": 1.3642905032271426
+  },
+  {
+    "case_id": "state_08_candidate_03",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.18771299816436837,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_03_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 39,
+        "scipy_nfev": 42,
+        "scipy_njev": 39
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 38,
+        "scipy_nfev": 39,
+        "scipy_njev": 38
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 38,
+        "scipy_nfev": 39,
+        "scipy_njev": 38
+      }
+    ],
+    "all_three_starts_total_ms": 177.515481,
+    "all_three_starts_fk_calls": 700,
+    "all_three_starts_jacobian_calls": 580,
+    "selected_max_position_excess": -4.873187573958826e-12,
+    "selected_max_orientation_excess": -4.25605349574365e-11,
+    "selected_minimum_joint_margin": 1.3306707828482789
+  },
+  {
+    "case_id": "state_08_candidate_03",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.19715605216409776,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_03_L10_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 99,
+        "scipy_nfev": 100,
+        "scipy_njev": 99
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 99,
+        "scipy_nfev": 101,
+        "scipy_njev": 99
+      }
+    ],
+    "all_three_starts_total_ms": 1056.787015,
+    "all_three_starts_fk_calls": 3260,
+    "all_three_starts_jacobian_calls": 3000,
+    "selected_max_position_excess": -4.913810244117078e-12,
+    "selected_max_orientation_excess": -2.491364753387515e-11,
+    "selected_minimum_joint_margin": 1.2856321777045658
+  },
+  {
+    "case_id": "state_08_candidate_03",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.2232755592904018,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_03_L30_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 103,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 4254.2766,
+    "all_three_starts_fk_calls": 9900,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.000242603735561698,
+    "selected_max_orientation_excess": -0.007000440918711288,
+    "selected_minimum_joint_margin": 1.1876637754886306
+  },
+  {
+    "case_id": "state_08_candidate_04",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.16700372027444055,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_04_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 17,
+        "scipy_nfev": 20,
+        "scipy_njev": 17
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 19,
+        "scipy_nfev": 24,
+        "scipy_njev": 19
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 28,
+        "scipy_njev": 23
+      }
+    ],
+    "all_three_starts_total_ms": 22.930775,
+    "all_three_starts_fk_calls": 92,
+    "all_three_starts_jacobian_calls": 60,
+    "selected_max_position_excess": -2.538224188122773e-12,
+    "selected_max_orientation_excess": -1.4839393602805728e-11,
+    "selected_minimum_joint_margin": 1.360495741862394
+  },
+  {
+    "case_id": "state_08_candidate_04",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.18743906416983738,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_04_L5_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 35,
+        "scipy_nfev": 38,
+        "scipy_njev": 35
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 37,
+        "scipy_nfev": 39,
+        "scipy_njev": 37
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 36,
+        "scipy_nfev": 37,
+        "scipy_njev": 36
+      }
+    ],
+    "all_three_starts_total_ms": 168.173195,
+    "all_three_starts_fk_calls": 670,
+    "all_three_starts_jacobian_calls": 545,
+    "selected_max_position_excess": -3.972580077393761e-12,
+    "selected_max_orientation_excess": -4.129172524736102e-11,
+    "selected_minimum_joint_margin": 1.3269153880773357
+  },
+  {
+    "case_id": "state_08_candidate_04",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.19692916162631285,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_04_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 71,
+        "scipy_nfev": 73,
+        "scipy_njev": 71
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 69,
+        "scipy_nfev": 70,
+        "scipy_njev": 69
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 66,
+        "scipy_nfev": 67,
+        "scipy_njev": 66
+      }
+    ],
+    "all_three_starts_total_ms": 693.178866,
+    "all_three_starts_fk_calls": 2320,
+    "all_three_starts_jacobian_calls": 2070,
+    "selected_max_position_excess": -4.540013764237072e-12,
+    "selected_max_orientation_excess": -7.251411276998354e-12,
+    "selected_minimum_joint_margin": 1.2826110291355015
+  },
+  {
+    "case_id": "state_08_candidate_04",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.22254479074091144,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_04_L30_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 104,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 101,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 4292.790966,
+    "all_three_starts_fk_calls": 9870,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.00024356406462393786,
+    "selected_max_orientation_excess": -0.006997844178988867,
+    "selected_minimum_joint_margin": 1.1887219807779505
+  },
+  {
+    "case_id": "state_08_candidate_05",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.16727070918838866,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_05_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 18,
+        "scipy_nfev": 21,
+        "scipy_njev": 18
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 20,
+        "scipy_nfev": 25,
+        "scipy_njev": 20
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 21,
+        "scipy_nfev": 26,
+        "scipy_njev": 21
+      }
+    ],
+    "all_three_starts_total_ms": 22.317476,
+    "all_three_starts_fk_calls": 92,
+    "all_three_starts_jacobian_calls": 60,
+    "selected_max_position_excess": -4.7173465220901045e-12,
+    "selected_max_orientation_excess": -3.6033663899925905e-11,
+    "selected_minimum_joint_margin": 1.3628549701904804
+  },
+  {
+    "case_id": "state_08_candidate_05",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1875769738714317,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_05_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 37,
+        "scipy_nfev": 40,
+        "scipy_njev": 37
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 37,
+        "scipy_nfev": 39,
+        "scipy_njev": 37
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 40,
+        "scipy_nfev": 41,
+        "scipy_njev": 40
+      }
+    ],
+    "all_three_starts_total_ms": 176.578592,
+    "all_three_starts_fk_calls": 700,
+    "all_three_starts_jacobian_calls": 575,
+    "selected_max_position_excess": -4.105504347942657e-12,
+    "selected_max_orientation_excess": -4.363029208753755e-11,
+    "selected_minimum_joint_margin": 1.329256192807123
+  },
+  {
+    "case_id": "state_08_candidate_05",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.19695480329954201,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_05_L10_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 88,
+        "scipy_nfev": 90,
+        "scipy_njev": 88
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 89,
+        "scipy_nfev": 90,
+        "scipy_njev": 89
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 91,
+        "scipy_nfev": 94,
+        "scipy_njev": 91
+      }
+    ],
+    "all_three_starts_total_ms": 941.916627,
+    "all_three_starts_fk_calls": 2970,
+    "all_three_starts_jacobian_calls": 2690,
+    "selected_max_position_excess": -3.931160084957863e-12,
+    "selected_max_orientation_excess": -3.0302357845179984e-11,
+    "selected_minimum_joint_margin": 1.2842756788724943
+  },
+  {
+    "case_id": "state_08_candidate_05",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.2229844168474444,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/state_08_candidate_05_L30_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 103,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 102,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 103,
+        "scipy_njev": 101
+      }
+    ],
+    "all_three_starts_total_ms": 4319.399693,
+    "all_three_starts_fk_calls": 9930,
+    "all_three_starts_jacobian_calls": 9120,
+    "selected_max_position_excess": -0.00024300866699143405,
+    "selected_max_orientation_excess": -0.0070005942674979124,
+    "selected_minimum_joint_margin": 1.188080814517634
+  },
+  {
+    "case_id": "case_01_candidate_00",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.13108216684387256,
+    "successful_initializations": 3,
+    "initial_path_verified": 1,
+    "selected_run": "runs/case_01_candidate_00_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 17,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 17,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 16,
+        "scipy_nfev": 22,
+        "scipy_njev": 16
+      }
+    ],
+    "all_three_starts_total_ms": 17.291835,
+    "all_three_starts_fk_calls": 75,
+    "all_three_starts_jacobian_calls": 43,
+    "selected_max_position_excess": -3.6863682679327825e-12,
+    "selected_max_orientation_excess": -4.35339091164888e-11,
+    "selected_minimum_joint_margin": 1.0466300544426321
+  },
+  {
+    "case_id": "case_01_candidate_00",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.4445960583549955,
+    "successful_initializations": 3,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_candidate_00_L5_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 75,
+        "scipy_nfev": 98,
+        "scipy_njev": 75
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 75,
+        "scipy_nfev": 98,
+        "scipy_njev": 75
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 26,
+        "scipy_nfev": 34,
+        "scipy_njev": 26
+      }
+    ],
+    "all_three_starts_total_ms": 292.727745,
+    "all_three_starts_fk_calls": 1360,
+    "all_three_starts_jacobian_calls": 944,
+    "selected_max_position_excess": -4.431513532868192e-12,
+    "selected_max_orientation_excess": -5.728780297364899e-12,
+    "selected_minimum_joint_margin": 1.0050946225636723
+  },
+  {
+    "case_id": "case_01_candidate_00",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.4445960584921968,
+    "successful_initializations": 1,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_candidate_00_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 186,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 186,
+        "scipy_njev": 101
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 31,
+        "scipy_nfev": 36,
+        "scipy_njev": 31
+      }
+    ],
+    "all_three_starts_total_ms": 815.327651,
+    "all_three_starts_fk_calls": 4360,
+    "all_three_starts_jacobian_calls": 2399,
+    "selected_max_position_excess": -3.910584529809302e-12,
+    "selected_max_orientation_excess": -3.0842972273403824e-11,
+    "selected_minimum_joint_margin": 0.962192322904726
+  },
+  {
+    "case_id": "case_01_candidate_00",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.4445960584935973,
+    "successful_initializations": 1,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_candidate_00_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 251,
+        "scipy_njev": 99
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 251,
+        "scipy_njev": 99
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 31,
+        "scipy_nfev": 36,
+        "scipy_njev": 31
+      }
+    ],
+    "all_three_starts_total_ms": 7565.110391,
+    "all_three_starts_fk_calls": 16740,
+    "all_three_starts_jacobian_calls": 6959,
+    "selected_max_position_excess": -3.918078101544653e-12,
+    "selected_max_orientation_excess": -3.090778327718979e-11,
+    "selected_minimum_joint_margin": 0.7568333623806041
+  },
+  {
+    "case_id": "case_01_candidate_05",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1310804946944303,
+    "successful_initializations": 3,
+    "initial_path_verified": 1,
+    "selected_run": "runs/case_01_candidate_05_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 17,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 17,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 16,
+        "scipy_nfev": 22,
+        "scipy_njev": 16
+      }
+    ],
+    "all_three_starts_total_ms": 17.348687,
+    "all_three_starts_fk_calls": 75,
+    "all_three_starts_jacobian_calls": 43,
+    "selected_max_position_excess": -3.705796737182854e-12,
+    "selected_max_orientation_excess": -4.3532587257200106e-11,
+    "selected_minimum_joint_margin": 1.046630044247021
+  },
+  {
+    "case_id": "case_01_candidate_05",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.4445958956084332,
+    "successful_initializations": 3,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_candidate_05_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 74,
+        "scipy_nfev": 98,
+        "scipy_njev": 74
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 74,
+        "scipy_nfev": 98,
+        "scipy_njev": 74
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 26,
+        "scipy_nfev": 34,
+        "scipy_njev": 26
+      }
+    ],
+    "all_three_starts_total_ms": 288.411459,
+    "all_three_starts_fk_calls": 1360,
+    "all_three_starts_jacobian_calls": 934,
+    "selected_max_position_excess": -3.2291769085091016e-12,
+    "selected_max_orientation_excess": -4.2892314700004874e-11,
+    "selected_minimum_joint_margin": 1.0050946546521065
+  },
+  {
+    "case_id": "case_01_candidate_05",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.4445958957639714,
+    "successful_initializations": 1,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_candidate_05_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 187,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 187,
+        "scipy_njev": 101
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 30,
+        "scipy_nfev": 37,
+        "scipy_njev": 30
+      }
+    ],
+    "all_three_starts_total_ms": 813.699927,
+    "all_three_starts_fk_calls": 4390,
+    "all_three_starts_jacobian_calls": 2389,
+    "selected_max_position_excess": -4.9519425018851315e-12,
+    "selected_max_orientation_excess": -4.06977819500387e-11,
+    "selected_minimum_joint_margin": 0.9622005745450206
+  },
+  {
+    "case_id": "case_01_candidate_05",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.44459589576405284,
+    "successful_initializations": 1,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_candidate_05_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 3,
+        "message": "More than 3*n iterations in LSQ subproblem",
+        "iterations": 99,
+        "scipy_nfev": 327,
+        "scipy_njev": 99
+      },
+      {
+        "success": false,
+        "code": 3,
+        "message": "More than 3*n iterations in LSQ subproblem",
+        "iterations": 99,
+        "scipy_nfev": 327,
+        "scipy_njev": 99
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 30,
+        "scipy_nfev": 37,
+        "scipy_njev": 30
+      }
+    ],
+    "all_three_starts_total_ms": 8294.302858,
+    "all_three_starts_fk_calls": 21330,
+    "all_three_starts_jacobian_calls": 6929,
+    "selected_max_position_excess": -4.952402854127569e-12,
+    "selected_max_orientation_excess": -4.069746276091912e-11,
+    "selected_minimum_joint_margin": 0.7568333597786823
+  },
+  {
+    "case_id": "case_01_matched_00",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.12956929287281946,
+    "successful_initializations": 3,
+    "initial_path_verified": 1,
+    "selected_run": "runs/case_01_matched_00_L1_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 17,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 17,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 21,
+        "scipy_njev": 15
+      }
+    ],
+    "all_three_starts_total_ms": 17.194297,
+    "all_three_starts_fk_calls": 74,
+    "all_three_starts_jacobian_calls": 42,
+    "selected_max_position_excess": -4.8763944271446036e-12,
+    "selected_max_orientation_excess": -4.358871596998881e-11,
+    "selected_minimum_joint_margin": 1.0474256230658994
+  },
+  {
+    "case_id": "case_01_matched_00",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.3485941470917804,
+    "successful_initializations": 3,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_matched_00_L5_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 71,
+        "scipy_nfev": 94,
+        "scipy_njev": 71
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 71,
+        "scipy_nfev": 94,
+        "scipy_njev": 71
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 38,
+        "scipy_nfev": 74,
+        "scipy_njev": 37
+      }
+    ],
+    "all_three_starts_total_ms": 308.294652,
+    "all_three_starts_fk_calls": 1516,
+    "all_three_starts_jacobian_calls": 957,
+    "selected_max_position_excess": -4.867739241201652e-12,
+    "selected_max_orientation_excess": -4.11905023978143e-11,
+    "selected_minimum_joint_margin": 1.0185733065753633
+  },
+  {
+    "case_id": "case_01_matched_00",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.34889993844032785,
+    "successful_initializations": 3,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_matched_00_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 77,
+        "scipy_nfev": 121,
+        "scipy_njev": 77
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 77,
+        "scipy_nfev": 121,
+        "scipy_njev": 77
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 42,
+        "scipy_nfev": 50,
+        "scipy_njev": 42
+      }
+    ],
+    "all_three_starts_total_ms": 696.465134,
+    "all_three_starts_fk_calls": 3216,
+    "all_three_starts_jacobian_calls": 2027,
+    "selected_max_position_excess": -4.716790976896923e-12,
+    "selected_max_orientation_excess": -3.211803045743977e-11,
+    "selected_minimum_joint_margin": 0.9799830375047227
+  },
+  {
+    "case_id": "case_01_matched_00",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.34889993845540307,
+    "successful_initializations": 1,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_matched_00_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 227,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 227,
+        "scipy_njev": 101
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 45,
+        "scipy_nfev": 53,
+        "scipy_njev": 45
+      }
+    ],
+    "all_three_starts_total_ms": 3738.224713,
+    "all_three_starts_fk_calls": 15806,
+    "all_three_starts_jacobian_calls": 7497,
+    "selected_max_position_excess": -4.141209510727384e-12,
+    "selected_max_orientation_excess": -3.900805373158178e-11,
+    "selected_minimum_joint_margin": 0.7972873470934392
+  },
+  {
+    "case_id": "case_01_matched_01",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.13219320868093656,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_01_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 16,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 16,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 21,
+        "scipy_njev": 15
+      }
+    ],
+    "all_three_starts_total_ms": 17.009054,
+    "all_three_starts_fk_calls": 73,
+    "all_three_starts_jacobian_calls": 42,
+    "selected_max_position_excess": -4.541771255958671e-12,
+    "selected_max_orientation_excess": -3.003761822606421e-11,
+    "selected_minimum_joint_margin": 1.0460509422876565
+  },
+  {
+    "case_id": "case_01_matched_01",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.40718445710959206,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_01_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 46,
+        "scipy_nfev": 63,
+        "scipy_njev": 46
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 28,
+        "scipy_njev": 23
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 28,
+        "scipy_njev": 23
+      }
+    ],
+    "all_three_starts_total_ms": 154.531791,
+    "all_three_starts_fk_calls": 757,
+    "all_three_starts_jacobian_calls": 496,
+    "selected_max_position_excess": -4.827341434573973e-12,
+    "selected_max_orientation_excess": -4.0756805916308814e-11,
+    "selected_minimum_joint_margin": 1.0052781925799237
+  },
+  {
+    "case_id": "case_01_matched_01",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.4103316502348519,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_01_L10_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 77,
+        "scipy_nfev": 117,
+        "scipy_njev": 77
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 32,
+        "scipy_nfev": 39,
+        "scipy_njev": 32
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 59,
+        "scipy_nfev": 290,
+        "scipy_njev": 57
+      }
+    ],
+    "all_three_starts_total_ms": 716.875644,
+    "all_three_starts_fk_calls": 4722,
+    "all_three_starts_jacobian_calls": 1701,
+    "selected_max_position_excess": -3.69704310568264e-12,
+    "selected_max_orientation_excess": -4.325046050468462e-11,
+    "selected_minimum_joint_margin": 0.9598221801977433
+  },
+  {
+    "case_id": "case_01_matched_01",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.41033165021441675,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_01_L30_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 198,
+        "scipy_njev": 101
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 35,
+        "scipy_nfev": 43,
+        "scipy_njev": 35
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 29,
+        "scipy_nfev": 36,
+        "scipy_njev": 29
+      }
+    ],
+    "all_three_starts_total_ms": 2317.93052,
+    "all_three_starts_fk_calls": 8942,
+    "all_three_starts_jacobian_calls": 5011,
+    "selected_max_position_excess": -3.729235887109383e-12,
+    "selected_max_orientation_excess": -3.9634484930162195e-11,
+    "selected_minimum_joint_margin": 0.7566752904406453
+  },
+  {
+    "case_id": "case_01_matched_02",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.12764074066126802,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_02_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 18,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 14,
+        "scipy_nfev": 17,
+        "scipy_njev": 14
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 20,
+        "scipy_njev": 15
+      }
+    ],
+    "all_three_starts_total_ms": 17.48738,
+    "all_three_starts_fk_calls": 75,
+    "all_three_starts_jacobian_calls": 43,
+    "selected_max_position_excess": -4.874886301922676e-12,
+    "selected_max_orientation_excess": -4.3513491421176553e-11,
+    "selected_minimum_joint_margin": 1.048529886069928
+  },
+  {
+    "case_id": "case_01_matched_02",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.3181225976585699,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_02_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 46,
+        "scipy_nfev": 62,
+        "scipy_njev": 46
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 27,
+        "scipy_nfev": 32,
+        "scipy_njev": 27
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 31,
+        "scipy_nfev": 42,
+        "scipy_njev": 31
+      }
+    ],
+    "all_three_starts_total_ms": 173.255392,
+    "all_three_starts_fk_calls": 828,
+    "all_three_starts_jacobian_calls": 549,
+    "selected_max_position_excess": -3.733327882948778e-12,
+    "selected_max_orientation_excess": -4.266790393225861e-11,
+    "selected_minimum_joint_margin": 1.0187027246607658
+  },
+  {
+    "case_id": "case_01_matched_02",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.3235091265592846,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_02_L10_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 66,
+        "scipy_nfev": 96,
+        "scipy_njev": 65
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 36,
+        "scipy_nfev": 39,
+        "scipy_njev": 36
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 40,
+        "scipy_nfev": 49,
+        "scipy_njev": 40
+      }
+    ],
+    "all_three_starts_total_ms": 480.334411,
+    "all_three_starts_fk_calls": 2088,
+    "all_three_starts_jacobian_calls": 1444,
+    "selected_max_position_excess": -3.848738818965081e-12,
+    "selected_max_orientation_excess": -2.4122873837351122e-11,
+    "selected_minimum_joint_margin": 0.9807783178596026
+  },
+  {
+    "case_id": "case_01_matched_02",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.3235091265482893,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_02_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 176,
+        "scipy_njev": 101
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 50,
+        "scipy_nfev": 58,
+        "scipy_njev": 50
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 45,
+        "scipy_nfev": 47,
+        "scipy_njev": 45
+      }
+    ],
+    "all_three_starts_total_ms": 2787.698115,
+    "all_three_starts_fk_calls": 9048,
+    "all_three_starts_jacobian_calls": 5934,
+    "selected_max_position_excess": -4.864274781579692e-12,
+    "selected_max_orientation_excess": -1.734156047927815e-11,
+    "selected_minimum_joint_margin": 0.7973226937630522
+  },
+  {
+    "case_id": "case_01_matched_03",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1295676701289851,
+    "successful_initializations": 3,
+    "initial_path_verified": 1,
+    "selected_run": "runs/case_01_matched_03_L1_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 63,
+        "scipy_nfev": 442,
+        "scipy_njev": 60
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 63,
+        "scipy_nfev": 442,
+        "scipy_njev": 60
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 21,
+        "scipy_njev": 15
+      }
+    ],
+    "all_three_starts_total_ms": 137.393602,
+    "all_three_starts_fk_calls": 924,
+    "all_three_starts_jacobian_calls": 136,
+    "selected_max_position_excess": -4.876247626170449e-12,
+    "selected_max_orientation_excess": -4.358849739483084e-11,
+    "selected_minimum_joint_margin": 1.0474256101651602
+  },
+  {
+    "case_id": "case_01_matched_03",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.34859409314756634,
+    "successful_initializations": 3,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_matched_03_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 63,
+        "scipy_nfev": 81,
+        "scipy_njev": 63
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 63,
+        "scipy_nfev": 81,
+        "scipy_njev": 63
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 32,
+        "scipy_nfev": 42,
+        "scipy_njev": 32
+      }
+    ],
+    "all_three_starts_total_ms": 264.103982,
+    "all_three_starts_fk_calls": 1246,
+    "all_three_starts_jacobian_calls": 852,
+    "selected_max_position_excess": -3.999301757817708e-12,
+    "selected_max_orientation_excess": -4.1939698242066115e-11,
+    "selected_minimum_joint_margin": 1.018573313786241
+  },
+  {
+    "case_id": "case_01_matched_03",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.3488999138753397,
+    "successful_initializations": 3,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_matched_03_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 77,
+        "scipy_nfev": 118,
+        "scipy_njev": 77
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 77,
+        "scipy_nfev": 118,
+        "scipy_njev": 77
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 43,
+        "scipy_nfev": 53,
+        "scipy_njev": 43
+      }
+    ],
+    "all_three_starts_total_ms": 689.897375,
+    "all_three_starts_fk_calls": 3186,
+    "all_three_starts_jacobian_calls": 2037,
+    "selected_max_position_excess": -4.593807322386678e-12,
+    "selected_max_orientation_excess": -3.8533074300795e-11,
+    "selected_minimum_joint_margin": 0.9801497049403576
+  },
+  {
+    "case_id": "case_01_matched_03",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.34889991376896706,
+    "successful_initializations": 1,
+    "initial_path_verified": 0,
+    "selected_run": "runs/case_01_matched_03_L30_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 222,
+        "scipy_njev": 101
+      },
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 222,
+        "scipy_njev": 101
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 45,
+        "scipy_nfev": 52,
+        "scipy_njev": 45
+      }
+    ],
+    "all_three_starts_total_ms": 3775.097902,
+    "all_three_starts_fk_calls": 15476,
+    "all_three_starts_jacobian_calls": 7497,
+    "selected_max_position_excess": -4.148429646674834e-12,
+    "selected_max_orientation_excess": -2.474353361092696e-11,
+    "selected_minimum_joint_margin": 0.7972873495189332
+  },
+  {
+    "case_id": "case_01_matched_04",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.13219148511612128,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_04_L1_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 16,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 16,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 21,
+        "scipy_njev": 15
+      }
+    ],
+    "all_three_starts_total_ms": 17.175772,
+    "all_three_starts_fk_calls": 73,
+    "all_three_starts_jacobian_calls": 42,
+    "selected_max_position_excess": -4.517209739943184e-12,
+    "selected_max_orientation_excess": -2.936000574604858e-11,
+    "selected_minimum_joint_margin": 1.0460509350323703
+  },
+  {
+    "case_id": "case_01_matched_04",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.4071843045939874,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_04_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 50,
+        "scipy_nfev": 67,
+        "scipy_njev": 50
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 27,
+        "scipy_njev": 23
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 23,
+        "scipy_nfev": 28,
+        "scipy_njev": 23
+      }
+    ],
+    "all_three_starts_total_ms": 168.703979,
+    "all_three_starts_fk_calls": 772,
+    "all_three_starts_jacobian_calls": 516,
+    "selected_max_position_excess": -1.4850789868681158e-12,
+    "selected_max_orientation_excess": -2.137207077979042e-11,
+    "selected_minimum_joint_margin": 1.005278208329433
+  },
+  {
+    "case_id": "case_01_matched_04",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.4103315516113797,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_04_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 77,
+        "scipy_nfev": 115,
+        "scipy_njev": 77
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 32,
+        "scipy_nfev": 37,
+        "scipy_njev": 32
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 29,
+        "scipy_nfev": 34,
+        "scipy_njev": 29
+      }
+    ],
+    "all_three_starts_total_ms": 470.958952,
+    "all_three_starts_fk_calls": 2122,
+    "all_three_starts_jacobian_calls": 1421,
+    "selected_max_position_excess": -2.6868923752587648e-12,
+    "selected_max_orientation_excess": -3.877913268279798e-11,
+    "selected_minimum_joint_margin": 0.9616211299254398
+  },
+  {
+    "case_id": "case_01_matched_04",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.41033155179654374,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_04_L30_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 204,
+        "scipy_njev": 101
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 34,
+        "scipy_nfev": 44,
+        "scipy_njev": 34
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 29,
+        "scipy_nfev": 36,
+        "scipy_njev": 29
+      }
+    ],
+    "all_three_starts_total_ms": 2318.2616,
+    "all_three_starts_fk_calls": 9152,
+    "all_three_starts_jacobian_calls": 4981,
+    "selected_max_position_excess": -4.894739778424362e-12,
+    "selected_max_orientation_excess": -4.2876218200871286e-11,
+    "selected_minimum_joint_margin": 0.7566751970024383
+  },
+  {
+    "case_id": "case_01_matched_05",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.1276391671430359,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_05_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 13,
+        "scipy_nfev": 18,
+        "scipy_njev": 13
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 14,
+        "scipy_nfev": 17,
+        "scipy_njev": 14
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 20,
+        "scipy_njev": 15
+      }
+    ],
+    "all_three_starts_total_ms": 17.415121,
+    "all_three_starts_fk_calls": 75,
+    "all_three_starts_jacobian_calls": 43,
+    "selected_max_position_excess": -4.8750582563872324e-12,
+    "selected_max_orientation_excess": -4.351321733486735e-11,
+    "selected_minimum_joint_margin": 1.0485298709427093
+  },
+  {
+    "case_id": "case_01_matched_05",
+    "horizon": 5,
+    "found": true,
+    "best_found_rho_upper_bound": 0.3181225399846097,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_05_L5_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 45,
+        "scipy_nfev": 59,
+        "scipy_njev": 45
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 27,
+        "scipy_nfev": 32,
+        "scipy_njev": 27
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 31,
+        "scipy_nfev": 42,
+        "scipy_njev": 31
+      }
+    ],
+    "all_three_starts_total_ms": 172.55886,
+    "all_three_starts_fk_calls": 813,
+    "all_three_starts_jacobian_calls": 544,
+    "selected_max_position_excess": -4.892210551596388e-12,
+    "selected_max_orientation_excess": -2.5214713997301352e-11,
+    "selected_minimum_joint_margin": 1.0187027176097563
+  },
+  {
+    "case_id": "case_01_matched_05",
+    "horizon": 10,
+    "found": true,
+    "best_found_rho_upper_bound": 0.3235091169153883,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_05_L10_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 62,
+        "scipy_nfev": 95,
+        "scipy_njev": 62
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 36,
+        "scipy_nfev": 39,
+        "scipy_njev": 36
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 39,
+        "scipy_nfev": 48,
+        "scipy_njev": 39
+      }
+    ],
+    "all_three_starts_total_ms": 464.724762,
+    "all_three_starts_fk_calls": 2068,
+    "all_three_starts_jacobian_calls": 1404,
+    "selected_max_position_excess": -4.86194287954711e-12,
+    "selected_max_orientation_excess": -4.019007522615414e-11,
+    "selected_minimum_joint_margin": 0.980647855726684
+  },
+  {
+    "case_id": "case_01_matched_05",
+    "horizon": 30,
+    "found": true,
+    "best_found_rho_upper_bound": 0.3235091168844991,
+    "successful_initializations": 2,
+    "initial_path_verified": 2,
+    "selected_run": "runs/case_01_matched_05_L30_historical_prefix.json",
+    "optimizer_statuses": [
+      {
+        "success": false,
+        "code": 9,
+        "message": "Iteration limit reached",
+        "iterations": 100,
+        "scipy_nfev": 171,
+        "scipy_njev": 101
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 49,
+        "scipy_nfev": 57,
+        "scipy_njev": 49
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 44,
+        "scipy_nfev": 48,
+        "scipy_njev": 44
+      }
+    ],
+    "all_three_starts_total_ms": 2816.349464,
+    "all_three_starts_fk_calls": 8898,
+    "all_three_starts_jacobian_calls": 5874,
+    "selected_max_position_excess": -4.806682829539e-12,
+    "selected_max_orientation_excess": -3.432540189585165e-11,
+    "selected_minimum_joint_margin": 0.7973214040617744
+  },
+  {
+    "case_id": "failure_input_candidate_04",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.048255572748046344,
+    "successful_initializations": 3,
+    "initial_path_verified": 1,
+    "selected_run": "runs/failure_input_candidate_04_L1_dls_prediction.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 7,
+        "scipy_nfev": 8,
+        "scipy_njev": 7
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 7,
+        "scipy_nfev": 8,
+        "scipy_njev": 7
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 15,
+        "scipy_nfev": 17,
+        "scipy_njev": 11
+      }
+    ],
+    "all_three_starts_total_ms": 11.730426,
+    "all_three_starts_fk_calls": 52,
+    "all_three_starts_jacobian_calls": 26,
+    "selected_max_position_excess": -4.789986549763592e-12,
+    "selected_max_orientation_excess": -0.005957743501945991,
+    "selected_minimum_joint_margin": 0.30815841619009876
+  },
+  {
+    "case_id": "failure_input_candidate_01",
+    "horizon": 1,
+    "found": true,
+    "best_found_rho_upper_bound": 0.04840964536042236,
+    "successful_initializations": 3,
+    "initial_path_verified": 2,
+    "selected_run": "runs/failure_input_candidate_01_L1_hold.json",
+    "optimizer_statuses": [
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 9,
+        "scipy_nfev": 11,
+        "scipy_njev": 9
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 11,
+        "scipy_nfev": 13,
+        "scipy_njev": 11
+      },
+      {
+        "success": true,
+        "code": 0,
+        "message": "Optimization terminated successfully",
+        "iterations": 10,
+        "scipy_nfev": 12,
+        "scipy_njev": 10
+      }
+    ],
+    "all_three_starts_total_ms": 13.049025,
+    "all_three_starts_fk_calls": 56,
+    "all_three_starts_jacobian_calls": 31,
+    "selected_max_position_excess": -4.967522703944183e-12,
+    "selected_max_orientation_excess": -0.004039258035073259,
+    "selected_minimum_joint_margin": 0.322471819549387
+  }
+]
