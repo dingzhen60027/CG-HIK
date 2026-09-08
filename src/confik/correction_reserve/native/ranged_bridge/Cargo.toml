@@ -1,0 +1,17 @@
+[package]
+name = "crik_ranged_bridge"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "crik_ranged_bridge"
+crate-type = ["cdylib"]
+
+[dependencies]
+relaxed_ik_core = { path = "../../../../../tmp/crik_dependencies/ranged_ik" }
+nalgebra = "0.30"
+optimization_engine = { version = "=0.7.7", features = ["wasm"] }
+
+[profile.release]
+opt-level = 3

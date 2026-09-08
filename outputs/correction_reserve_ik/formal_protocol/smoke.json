@@ -1,0 +1,2409 @@
+{
+  "scope": "adapter implementation smoke, not comparative evaluation",
+  "robots": {
+    "panda": {
+      "upstream": {
+        "metadata": {
+          "method": "RangedIK (official cutoff)",
+          "upstream_url": "https://github.com/uwgraphics/relaxed_ik_core",
+          "upstream_branch": "ranged-ik",
+          "upstream_sha": "1c48d2ae408b4e024ee037641aac1e728267984e",
+          "license": "MIT",
+          "range_mode": "upstream",
+          "mapping": {
+            "bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "frame": "target frame",
+            "position": "R_target.T @ (p_actual - p_target)",
+            "orientation": "Log(R_target.T @ R_actual), principal scaled-axis vector",
+            "orientation_term": "absolute value of each scaled-axis component",
+            "units": [
+              "m",
+              "m",
+              "m",
+              "rad",
+              "rad",
+              "rad"
+            ],
+            "formula": "nextafter(public_norm_tolerance / sqrt(3), 0)",
+            "conservativeness": "the component box is inside the public norm ball, but native ranges are soft objectives",
+            "native_range_mode": "upstream",
+            "range_activation_cutoff": 0.01,
+            "ranged_loss_active": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          },
+          "library_sha256": "8aeb6fac545b85c9434ab6c7f59dcea1cd65abd32f64efd69cf3b5f7621d96e8",
+          "native_max_iterations": 100,
+          "native_panoc_tolerance": 0.0005,
+          "native_max_duration_ms": 18.0,
+          "native_cache": {
+            "tolerance": 1e-14,
+            "lbfgs_memory": 10
+          },
+          "native_weights": {
+            "position_each": 50.0,
+            "rotation_each": 10.0,
+            "joint_limit_each": 0.1,
+            "velocity": 0.7,
+            "acceleration": 0.5,
+            "jerk": 0.3,
+            "manipulability": 1.0,
+            "native_self_collision_each": 0.01
+          },
+          "dynamic_bounds": "unchanged static URDF penalty; hard PANOC Rectangle is narrowed to representable single-frame interval",
+          "history": "actual accepted or held command each frame, never the rejected raw candidate",
+          "native_status": "PANOC convergence only; independent task acceptance may differ",
+          "joint_names": [
+            "panda_joint1",
+            "panda_joint2",
+            "panda_joint3",
+            "panda_joint4",
+            "panda_joint5",
+            "panda_joint6",
+            "panda_joint7"
+          ],
+          "base_link": "panda_link0",
+          "end_link": "panda_link8",
+          "urdf_sha256": "e1fb335ca060722abc830206e23af0ae8d7b32d135e52ee914132d9b19b3e29c",
+          "public_kinematics_backend": "confik.kinematics.urdf.URDFKinematics",
+          "native_kinematics_backend": "official relaxed_ik_core::spacetime::Robot / Arm (nalgebra, URDF via k)",
+          "fk_checks": [
+            {
+              "fraction": 0.0,
+              "position_error": 1.7498999065922787e-16,
+              "orientation_error": 1.3975002363965958e-16
+            },
+            {
+              "fraction": 0.03125,
+              "position_error": 1.3877787807814457e-16,
+              "orientation_error": 3.9016370834683177e-16
+            },
+            {
+              "fraction": -0.0625,
+              "position_error": 3.885780586188048e-16,
+              "orientation_error": 3.019886864139093e-16
+            }
+          ],
+          "collision_scope": "official self-collision objective retained; no collision data, task acceptance check, or claim added"
+        },
+        "calls": [
+          {
+            "method": "ranged_ik_upstream",
+            "q": [
+              -6.244982384326086e-08,
+              9.770694832520855e-06,
+              -6.245099231922939e-08,
+              -1.5708180422500324,
+              -2.5891411396349472e-08,
+              1.86749479343919,
+              -2.5261450439408114e-08
+            ],
+            "raw_returned_q": [
+              -6.244982384326086e-08,
+              9.770694832520855e-06,
+              -6.245099231922939e-08,
+              -1.5708180422500324,
+              -2.5891411396349472e-08,
+              1.86749479343919,
+              -2.5261450439408114e-08
+            ],
+            "submitted_q": [
+              -6.244982384326086e-08,
+              9.770694832520855e-06,
+              -6.245099231922939e-08,
+              -1.5708180422500324,
+              -2.5891411396349472e-08,
+              1.86749479343919,
+              -2.5261450439408114e-08
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 0,
+            "native_objective_calls": 1,
+            "native_gradient_calls": 2,
+            "solver_function_evaluations": null,
+            "native_cost": -180.75445560129194,
+            "native_fixed_point_residual": 2.170347266219029e-05,
+            "finite": true,
+            "position_error": 1.5561857446695574e-05,
+            "orientation_error": 3.301967612631286e-05,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 0.00041381307413841954,
+            "previous_q": [
+              0.0,
+              0.0,
+              0.0,
+              -1.5708,
+              0.0,
+              1.8675,
+              0.0
+            ],
+            "history_q": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.04359999999999999,
+              -0.04359999999999999,
+              -0.04359999999999999,
+              -1.6143999999999998,
+              -0.05229999999999999,
+              1.8152000000000001,
+              -0.05229999999999999
+            ],
+            "native_upper": [
+              0.04359999999999999,
+              0.04359999999999999,
+              0.04359999999999999,
+              -1.5272000000000001,
+              0.05229999999999999,
+              1.9197999999999997,
+              0.05229999999999999
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "upstream",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 73307,
+            "bounds_setup_latency_ns": 33749,
+            "solve_latency_ns": 53948,
+            "native_call_latency_ns": 75476,
+            "verification_latency_ns": 128503,
+            "total_latency_ns": 335986,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_upstream",
+            "q": [
+              0.0001883337835344097,
+              1.550316816462077e-05,
+              0.0001883285262829553,
+              -1.5707632255853434,
+              0.00014615199585336276,
+              1.8675875197818947,
+              4.154599255912487e-05
+            ],
+            "raw_returned_q": [
+              0.0001883337835344097,
+              1.550316816462077e-05,
+              0.0001883285262829553,
+              -1.5707632255853434,
+              0.00014615199585336276,
+              1.8675875197818947,
+              4.154599255912487e-05
+            ],
+            "submitted_q": [
+              0.0001883337835344097,
+              1.550316816462077e-05,
+              0.0001883285262829553,
+              -1.5707632255853434,
+              0.00014615199585336276,
+              1.8675875197818947,
+              4.154599255912487e-05
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 1,
+            "native_objective_calls": 5,
+            "native_gradient_calls": 3,
+            "solver_function_evaluations": null,
+            "native_cost": -180.75431251148467,
+            "native_fixed_point_residual": 0.00014021560063928902,
+            "finite": true,
+            "position_error": 0.00011828149904812023,
+            "orientation_error": 0.00022999416909815447,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 0.004321014526565435,
+            "previous_q": [
+              -6.244982384326086e-08,
+              9.770694832520855e-06,
+              -6.245099231922939e-08,
+              -1.5708180422500324,
+              -2.5891411396349472e-08,
+              1.86749479343919,
+              -2.5261450439408114e-08
+            ],
+            "history_q": [
+              [
+                -6.244982384326086e-08,
+                9.770694832520855e-06,
+                -6.245099231922939e-08,
+                -1.5708180422500324,
+                -2.5891411396349472e-08,
+                1.86749479343919,
+                -2.5261450439408114e-08
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.04360006244982383,
+              -0.04359022930516747,
+              -0.043600062450992315,
+              -1.6144180422500323,
+              -0.05230002589141139,
+              1.81519479343919,
+              -0.05230002526145043
+            ],
+            "native_upper": [
+              0.04359993755017615,
+              0.04360977069483252,
+              0.04359993754900767,
+              -1.5272180422500325,
+              0.052299974108588596,
+              1.9197947934391897,
+              0.052299974738549554
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "upstream",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 78123,
+            "bounds_setup_latency_ns": 21915,
+            "solve_latency_ns": 74828,
+            "native_call_latency_ns": 93025,
+            "verification_latency_ns": 106527,
+            "total_latency_ns": 322345,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_upstream",
+            "q": [
+              0.0004105820538203617,
+              6.614838067232277e-05,
+              0.0004105673311434972,
+              -1.5706881798351435,
+              0.00036768623028011533,
+              1.8677361582870966,
+              0.00014462774409511634
+            ],
+            "raw_returned_q": [
+              0.0004105820538203617,
+              6.614838067232277e-05,
+              0.0004105673311434972,
+              -1.5706881798351435,
+              0.00036768623028011533,
+              1.8677361582870966,
+              0.00014462774409511634
+            ],
+            "submitted_q": [
+              0.0004105820538203617,
+              6.614838067232277e-05,
+              0.0004105673311434972,
+              -1.5706881798351435,
+              0.00036768623028011533,
+              1.8677361582870966,
+              0.00014462774409511634
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 1,
+            "native_objective_calls": 5,
+            "native_gradient_calls": 3,
+            "solver_function_evaluations": null,
+            "native_cost": -180.75412484030267,
+            "native_fixed_point_residual": 0.00018656380915438165,
+            "finite": true,
+            "position_error": 0.00019658337096039384,
+            "orientation_error": 0.00035977831085382055,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 0.005097437391879633,
+            "previous_q": [
+              0.0001883337835344097,
+              1.550316816462077e-05,
+              0.0001883285262829553,
+              -1.5707632255853434,
+              0.00014615199585336276,
+              1.8675875197818947,
+              4.154599255912487e-05
+            ],
+            "history_q": [
+              [
+                0.0001883337835344097,
+                1.550316816462077e-05,
+                0.0001883285262829553,
+                -1.5707632255853434,
+                0.00014615199585336276,
+                1.8675875197818947,
+                4.154599255912487e-05
+              ],
+              [
+                -6.244982384326086e-08,
+                9.770694832520855e-06,
+                -6.245099231922939e-08,
+                -1.5708180422500324,
+                -2.5891411396349472e-08,
+                1.86749479343919,
+                -2.5261450439408114e-08
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.04341166621646558,
+              -0.04358449683183537,
+              -0.04341167147371704,
+              -1.6143632255853433,
+              -0.05215384800414663,
+              1.815287519781895,
+              -0.05225845400744087
+            ],
+            "native_upper": [
+              0.0437883337835344,
+              0.043615503168164614,
+              0.04378832852628295,
+              -1.5271632255853436,
+              0.052446151995853355,
+              1.9198875197818945,
+              0.052341545992559114
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "upstream",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 75433,
+            "bounds_setup_latency_ns": 19478,
+            "solve_latency_ns": 73032,
+            "native_call_latency_ns": 88856,
+            "verification_latency_ns": 112219,
+            "total_latency_ns": 314468,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_upstream",
+            "q": [
+              2.2502431220168496e-05,
+              0.043666148380672315,
+              4.650355445424563e-06,
+              -1.5563621673058394,
+              0.00013159976631279857,
+              1.9200361582870964,
+              6.332966019397111e-05
+            ],
+            "raw_returned_q": [
+              2.2502431220168496e-05,
+              0.043666148380672315,
+              4.650355445424563e-06,
+              -1.5563621673058394,
+              0.00013159976631279857,
+              1.9200361582870964,
+              6.332966019397111e-05
+            ],
+            "submitted_q": null,
+            "held_previous_on_failure": true,
+            "accepted": false,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 4,
+            "native_objective_calls": 15,
+            "native_gradient_calls": 6,
+            "solver_function_evaluations": null,
+            "native_cost": 49743.0371675259,
+            "native_fixed_point_residual": 0.00044442349195816637,
+            "finite": true,
+            "position_error": 9.982291561307342,
+            "orientation_error": 0.023308359129050625,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [
+              "position_tolerance",
+              "orientation_tolerance"
+            ],
+            "velocity_utilization": 0.9999999999999999,
+            "previous_q": [
+              0.0004105820538203617,
+              6.614838067232277e-05,
+              0.0004105673311434972,
+              -1.5706881798351435,
+              0.00036768623028011533,
+              1.8677361582870966,
+              0.00014462774409511634
+            ],
+            "history_q": [
+              [
+                0.0004105820538203617,
+                6.614838067232277e-05,
+                0.0004105673311434972,
+                -1.5706881798351435,
+                0.00036768623028011533,
+                1.8677361582870966,
+                0.00014462774409511634
+              ],
+              [
+                0.0001883337835344097,
+                1.550316816462077e-05,
+                0.0001883285262829553,
+                -1.5707632255853434,
+                0.00014615199585336276,
+                1.8675875197818947,
+                4.154599255912487e-05
+              ],
+              [
+                -6.244982384326086e-08,
+                9.770694832520855e-06,
+                -6.245099231922939e-08,
+                -1.5708180422500324,
+                -2.5891411396349472e-08,
+                1.86749479343919,
+                -2.5261450439408114e-08
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.04318941794617963,
+              -0.04353385161932767,
+              -0.0431894326688565,
+              -1.6142881798351434,
+              -0.05193231376971988,
+              1.8154361582870968,
+              -0.05215537225590488
+            ],
+            "native_upper": [
+              0.04401058205382036,
+              0.043666148380672315,
+              0.04401056733114349,
+              -1.5270881798351437,
+              0.052667686230280106,
+              1.9200361582870964,
+              0.052444627744095106
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "upstream",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 74288,
+            "bounds_setup_latency_ns": 17893,
+            "solve_latency_ns": 155860,
+            "native_call_latency_ns": 171285,
+            "verification_latency_ns": 104714,
+            "total_latency_ns": 385199,
+            "accepted_within_20ms": false
+          }
+        ],
+        "native_position_half_bound_loss": -0.9999950000086806,
+        "native_orientation_half_bound_loss": -0.9996192785626983,
+        "expected_position_half_bound_loss": -0.9999950000086806,
+        "expected_orientation_half_bound_loss": -0.9996192785626983
+      },
+      "positive_range": {
+        "metadata": {
+          "method": "RangedIK (positive-range adapter)",
+          "upstream_url": "https://github.com/uwgraphics/relaxed_ik_core",
+          "upstream_branch": "ranged-ik",
+          "upstream_sha": "1c48d2ae408b4e024ee037641aac1e728267984e",
+          "license": "MIT",
+          "range_mode": "positive_range",
+          "mapping": {
+            "bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "frame": "target frame",
+            "position": "R_target.T @ (p_actual - p_target)",
+            "orientation": "Log(R_target.T @ R_actual), principal scaled-axis vector",
+            "orientation_term": "absolute value of each scaled-axis component",
+            "units": [
+              "m",
+              "m",
+              "m",
+              "rad",
+              "rad",
+              "rad"
+            ],
+            "formula": "nextafter(public_norm_tolerance / sqrt(3), 0)",
+            "conservativeness": "the component box is inside the public norm ball, but native ranges are soft objectives",
+            "native_range_mode": "positive_range",
+            "range_activation_cutoff": 0.0,
+            "ranged_loss_active": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "library_sha256": "d94236cb7916e6209acc88ae6a416a642c68099e78877562cbfa0707cea2e630",
+          "native_max_iterations": 100,
+          "native_panoc_tolerance": 0.0005,
+          "native_max_duration_ms": 18.0,
+          "native_cache": {
+            "tolerance": 1e-14,
+            "lbfgs_memory": 10
+          },
+          "native_weights": {
+            "position_each": 50.0,
+            "rotation_each": 10.0,
+            "joint_limit_each": 0.1,
+            "velocity": 0.7,
+            "acceleration": 0.5,
+            "jerk": 0.3,
+            "manipulability": 1.0,
+            "native_self_collision_each": 0.01
+          },
+          "dynamic_bounds": "unchanged static URDF penalty; hard PANOC Rectangle is narrowed to representable single-frame interval",
+          "history": "actual accepted or held command each frame, never the rejected raw candidate",
+          "native_status": "PANOC convergence only; independent task acceptance may differ",
+          "joint_names": [
+            "panda_joint1",
+            "panda_joint2",
+            "panda_joint3",
+            "panda_joint4",
+            "panda_joint5",
+            "panda_joint6",
+            "panda_joint7"
+          ],
+          "base_link": "panda_link0",
+          "end_link": "panda_link8",
+          "urdf_sha256": "e1fb335ca060722abc830206e23af0ae8d7b32d135e52ee914132d9b19b3e29c",
+          "public_kinematics_backend": "confik.kinematics.urdf.URDFKinematics",
+          "native_kinematics_backend": "official relaxed_ik_core::spacetime::Robot / Arm (nalgebra, URDF via k)",
+          "fk_checks": [
+            {
+              "fraction": 0.0,
+              "position_error": 1.7498999065922787e-16,
+              "orientation_error": 1.3975002363965958e-16
+            },
+            {
+              "fraction": 0.03125,
+              "position_error": 1.3877787807814457e-16,
+              "orientation_error": 3.9016370834683177e-16
+            },
+            {
+              "fraction": -0.0625,
+              "position_error": 3.885780586188048e-16,
+              "orientation_error": 3.019886864139093e-16
+            }
+          ],
+          "collision_scope": "official self-collision objective retained; no collision data, task acceptance check, or claim added"
+        },
+        "calls": [
+          {
+            "method": "ranged_ik_positive_range",
+            "q": [
+              -2.0766070991245465e-07,
+              -2.6198428447391684e-07,
+              -2.076607109482837e-07,
+              -1.570800169345216,
+              -5.169821677884223e-09,
+              1.8675018479739183,
+              -1.5999224325592109e-09
+            ],
+            "raw_returned_q": [
+              -2.0766070991245465e-07,
+              -2.6198428447391684e-07,
+              -2.076607109482837e-07,
+              -1.570800169345216,
+              -5.169821677884223e-09,
+              1.8675018479739183,
+              -1.5999224325592109e-09
+            ],
+            "submitted_q": [
+              -2.0766070991245465e-07,
+              -2.6198428447391684e-07,
+              -2.076607109482837e-07,
+              -1.570800169345216,
+              -5.169821677884223e-09,
+              1.8675018479739183,
+              -1.5999224325592109e-09
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 0,
+            "native_objective_calls": 1,
+            "native_gradient_calls": 2,
+            "solver_function_evaluations": null,
+            "native_cost": -180.75445560129194,
+            "native_fixed_point_residual": 4.289193052083384e-07,
+            "finite": true,
+            "position_error": 3.755971713480263e-07,
+            "orientation_error": 1.98424641943805e-06,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 3.533410933717273e-05,
+            "previous_q": [
+              0.0,
+              0.0,
+              0.0,
+              -1.5708,
+              0.0,
+              1.8675,
+              0.0
+            ],
+            "history_q": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.04359999999999999,
+              -0.04359999999999999,
+              -0.04359999999999999,
+              -1.6143999999999998,
+              -0.05229999999999999,
+              1.8152000000000001,
+              -0.05229999999999999
+            ],
+            "native_upper": [
+              0.04359999999999999,
+              0.04359999999999999,
+              0.04359999999999999,
+              -1.5272000000000001,
+              0.05229999999999999,
+              1.9197999999999997,
+              0.05229999999999999
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "positive_range",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 77825,
+            "bounds_setup_latency_ns": 22401,
+            "solve_latency_ns": 55153,
+            "native_call_latency_ns": 73514,
+            "verification_latency_ns": 113978,
+            "total_latency_ns": 309978,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_positive_range",
+            "q": [
+              0.00013428474745622815,
+              1.825796279771081e-05,
+              0.00013428452315193413,
+              -1.5707962771139068,
+              1.8291675785910045e-05,
+              1.8675106925486786,
+              -1.442804648507082e-07
+            ],
+            "raw_returned_q": [
+              0.00013428474745622815,
+              1.825796279771081e-05,
+              0.00013428452315193413,
+              -1.5707962771139068,
+              1.8291675785910045e-05,
+              1.8675106925486786,
+              -1.442804648507082e-07
+            ],
+            "submitted_q": [
+              0.00013428474745622815,
+              1.825796279771081e-05,
+              0.00013428452315193413,
+              -1.5707962771139068,
+              1.8291675785910045e-05,
+              1.8675106925486786,
+              -1.442804648507082e-07
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 1,
+            "native_objective_calls": 9,
+            "native_gradient_calls": 3,
+            "solver_function_evaluations": null,
+            "native_cost": -179.79423237616098,
+            "native_fixed_point_residual": 6.437498992471148e-05,
+            "finite": true,
+            "position_error": 0.00017844862460809156,
+            "orientation_error": 0.0003968172640627595,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 0.0030846882606912983,
+            "previous_q": [
+              -2.0766070991245465e-07,
+              -2.6198428447391684e-07,
+              -2.076607109482837e-07,
+              -1.570800169345216,
+              -5.169821677884223e-09,
+              1.8675018479739183,
+              -1.5999224325592109e-09
+            ],
+            "history_q": [
+              [
+                -2.0766070991245465e-07,
+                -2.6198428447391684e-07,
+                -2.076607109482837e-07,
+                -1.570800169345216,
+                -5.169821677884223e-09,
+                1.8675018479739183,
+                -1.5999224325592109e-09
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.043600207660709905,
+              -0.04360026198428447,
+              -0.04360020766071094,
+              -1.614400169345216,
+              -0.05230000516982167,
+              1.8152018479739185,
+              -0.05230000159992242
+            ],
+            "native_upper": [
+              0.04359979233929008,
+              0.04359973801571552,
+              0.04359979233928905,
+              -1.5272001693452162,
+              0.05229999483017832,
+              1.919801847973918,
+              0.05229999840007756
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "positive_range",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 74193,
+            "bounds_setup_latency_ns": 18361,
+            "solve_latency_ns": 84467,
+            "native_call_latency_ns": 99664,
+            "verification_latency_ns": 115396,
+            "total_latency_ns": 325900,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_positive_range",
+            "q": [
+              0.004052020153090765,
+              1.8159444362405894e-05,
+              0.004051980406668762,
+              -1.570793298448579,
+              0.0005345463776753811,
+              1.8675142068199277,
+              3.515122339656341e-07
+            ],
+            "raw_returned_q": [
+              0.004052020153090765,
+              1.8159444362405894e-05,
+              0.004051980406668762,
+              -1.570793298448579,
+              0.0005345463776753811,
+              1.8675142068199277,
+              3.515122339656341e-07
+            ],
+            "submitted_q": null,
+            "held_previous_on_failure": true,
+            "accepted": false,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 1,
+            "native_objective_calls": 9,
+            "native_gradient_calls": 3,
+            "solver_function_evaluations": null,
+            "native_cost": 5872.503477574845,
+            "native_fixed_point_residual": 2.1963986825110602e-06,
+            "finite": true,
+            "position_error": 0.004141937964994134,
+            "orientation_error": 0.007599126684479424,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [
+              "position_tolerance"
+            ],
+            "velocity_utilization": 0.08985631664299396,
+            "previous_q": [
+              0.00013428474745622815,
+              1.825796279771081e-05,
+              0.00013428452315193413,
+              -1.5707962771139068,
+              1.8291675785910045e-05,
+              1.8675106925486786,
+              -1.442804648507082e-07
+            ],
+            "history_q": [
+              [
+                0.00013428474745622815,
+                1.825796279771081e-05,
+                0.00013428452315193413,
+                -1.5707962771139068,
+                1.8291675785910045e-05,
+                1.8675106925486786,
+                -1.442804648507082e-07
+              ],
+              [
+                -2.0766070991245465e-07,
+                -2.6198428447391684e-07,
+                -2.076607109482837e-07,
+                -1.570800169345216,
+                -5.169821677884223e-09,
+                1.8675018479739183,
+                -1.5999224325592109e-09
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.043465715252543766,
+              -0.04358174203720228,
+              -0.043465715476848056,
+              -1.6143962771139067,
+              -0.05228170832421408,
+              1.8152106925486788,
+              -0.052300144280464846
+            ],
+            "native_upper": [
+              0.04373428474745622,
+              0.0436182579627977,
+              0.04373428452315193,
+              -1.527196277113907,
+              0.0523182916757859,
+              1.9198106925486784,
+              0.05229985571953514
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "positive_range",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 75309,
+            "bounds_setup_latency_ns": 18466,
+            "solve_latency_ns": 85384,
+            "native_call_latency_ns": 102611,
+            "verification_latency_ns": 110361,
+            "total_latency_ns": 325739,
+            "accepted_within_20ms": false
+          },
+          {
+            "method": "ranged_ik_positive_range",
+            "q": [
+              2.617487475892997e-05,
+              1.8379729519319704e-05,
+              2.617573360523606e-05,
+              -1.570796269282299,
+              4.116927067001345e-06,
+              1.8675126019919186,
+              6.317929783786613e-07
+            ],
+            "raw_returned_q": [
+              2.617487475892997e-05,
+              1.8379729519319704e-05,
+              2.617573360523606e-05,
+              -1.570796269282299,
+              4.116927067001345e-06,
+              1.8675126019919186,
+              6.317929783786613e-07
+            ],
+            "submitted_q": null,
+            "held_previous_on_failure": true,
+            "accepted": false,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 1,
+            "native_objective_calls": 12,
+            "native_gradient_calls": 3,
+            "solver_function_evaluations": null,
+            "native_cost": 9969.337982255562,
+            "native_fixed_point_residual": 4.74579249935738e-05,
+            "finite": true,
+            "position_error": 9.999993141196809,
+            "orientation_error": 5.1965211533752125e-05,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [
+              "position_tolerance"
+            ],
+            "velocity_utilization": 0.002479584236176564,
+            "previous_q": [
+              0.00013428474745622815,
+              1.825796279771081e-05,
+              0.00013428452315193413,
+              -1.5707962771139068,
+              1.8291675785910045e-05,
+              1.8675106925486786,
+              -1.442804648507082e-07
+            ],
+            "history_q": [
+              [
+                0.00013428474745622815,
+                1.825796279771081e-05,
+                0.00013428452315193413,
+                -1.5707962771139068,
+                1.8291675785910045e-05,
+                1.8675106925486786,
+                -1.442804648507082e-07
+              ],
+              [
+                0.00013428474745622815,
+                1.825796279771081e-05,
+                0.00013428452315193413,
+                -1.5707962771139068,
+                1.8291675785910045e-05,
+                1.8675106925486786,
+                -1.442804648507082e-07
+              ],
+              [
+                -2.0766070991245465e-07,
+                -2.6198428447391684e-07,
+                -2.076607109482837e-07,
+                -1.570800169345216,
+                -5.169821677884223e-09,
+                1.8675018479739183,
+                -1.5999224325592109e-09
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.5708,
+                0.0,
+                1.8675,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.043465715252543766,
+              -0.04358174203720228,
+              -0.043465715476848056,
+              -1.6143962771139067,
+              -0.05228170832421408,
+              1.8152106925486788,
+              -0.052300144280464846
+            ],
+            "native_upper": [
+              0.04373428474745622,
+              0.0436182579627977,
+              0.04373428452315193,
+              -1.527196277113907,
+              0.0523182916757859,
+              1.9198106925486784,
+              0.05229985571953514
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "positive_range",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 80200,
+            "bounds_setup_latency_ns": 17769,
+            "solve_latency_ns": 89095,
+            "native_call_latency_ns": 103586,
+            "verification_latency_ns": 108185,
+            "total_latency_ns": 329648,
+            "accepted_within_20ms": false
+          }
+        ],
+        "native_position_half_bound_loss": -0.9689475387583296,
+        "native_orientation_half_bound_loss": -0.9689474761296788,
+        "expected_position_half_bound_loss": -0.9689475387583056,
+        "expected_orientation_half_bound_loss": -0.9689474761296765
+      }
+    },
+    "ur5e": {
+      "upstream": {
+        "metadata": {
+          "method": "RangedIK (official cutoff)",
+          "upstream_url": "https://github.com/uwgraphics/relaxed_ik_core",
+          "upstream_branch": "ranged-ik",
+          "upstream_sha": "1c48d2ae408b4e024ee037641aac1e728267984e",
+          "license": "MIT",
+          "range_mode": "upstream",
+          "mapping": {
+            "bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "frame": "target frame",
+            "position": "R_target.T @ (p_actual - p_target)",
+            "orientation": "Log(R_target.T @ R_actual), principal scaled-axis vector",
+            "orientation_term": "absolute value of each scaled-axis component",
+            "units": [
+              "m",
+              "m",
+              "m",
+              "rad",
+              "rad",
+              "rad"
+            ],
+            "formula": "nextafter(public_norm_tolerance / sqrt(3), 0)",
+            "conservativeness": "the component box is inside the public norm ball, but native ranges are soft objectives",
+            "native_range_mode": "upstream",
+            "range_activation_cutoff": 0.01,
+            "ranged_loss_active": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          },
+          "library_sha256": "8aeb6fac545b85c9434ab6c7f59dcea1cd65abd32f64efd69cf3b5f7621d96e8",
+          "native_max_iterations": 100,
+          "native_panoc_tolerance": 0.0005,
+          "native_max_duration_ms": 18.0,
+          "native_cache": {
+            "tolerance": 1e-14,
+            "lbfgs_memory": 10
+          },
+          "native_weights": {
+            "position_each": 50.0,
+            "rotation_each": 10.0,
+            "joint_limit_each": 0.1,
+            "velocity": 0.7,
+            "acceleration": 0.5,
+            "jerk": 0.3,
+            "manipulability": 1.0,
+            "native_self_collision_each": 0.01
+          },
+          "dynamic_bounds": "unchanged static URDF penalty; hard PANOC Rectangle is narrowed to representable single-frame interval",
+          "history": "actual accepted or held command each frame, never the rejected raw candidate",
+          "native_status": "PANOC convergence only; independent task acceptance may differ",
+          "joint_names": [
+            "shoulder_pan_joint",
+            "shoulder_lift_joint",
+            "elbow_joint",
+            "wrist_1_joint",
+            "wrist_2_joint",
+            "wrist_3_joint"
+          ],
+          "base_link": "base_link",
+          "end_link": "tool0",
+          "urdf_sha256": "e806cecaa2b9c56de58d74177ec6479351bc359f4ef779c7368e09a64116cb12",
+          "public_kinematics_backend": "confik.kinematics.urdf.URDFKinematics",
+          "native_kinematics_backend": "official relaxed_ik_core::spacetime::Robot / Arm (nalgebra, URDF via k)",
+          "fk_checks": [
+            {
+              "fraction": 0.0,
+              "position_error": 4.163336342344337e-17,
+              "orientation_error": 4.887852545751022e-16
+            },
+            {
+              "fraction": 0.03125,
+              "position_error": 3.1401849173675503e-16,
+              "orientation_error": 5.265522146183211e-16
+            },
+            {
+              "fraction": -0.0625,
+              "position_error": 4.47545209131181e-16,
+              "orientation_error": 4.404853580309181e-16
+            }
+          ],
+          "collision_scope": "official self-collision objective retained; no collision data, task acceptance check, or claim added"
+        },
+        "calls": [
+          {
+            "method": "ranged_ik_upstream",
+            "q": [
+              -7.98339370994196e-07,
+              -7.613163255753741e-07,
+              -3.3030330210363093e-07,
+              -2.0122919557532034e-07,
+              -2.0123152259057599e-07,
+              -1.9285426767025752e-07
+            ],
+            "raw_returned_q": [
+              -7.98339370994196e-07,
+              -7.613163255753741e-07,
+              -3.3030330210363093e-07,
+              -2.0122919557532034e-07,
+              -2.0123152259057599e-07,
+              -1.9285426767025752e-07
+            ],
+            "submitted_q": [
+              -7.98339370994196e-07,
+              -7.613163255753741e-07,
+              -3.3030330210363093e-07,
+              -2.0122919557532034e-07,
+              -2.0123152259057599e-07,
+              -1.9285426767025752e-07
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 0,
+            "native_objective_calls": 1,
+            "native_gradient_calls": 2,
+            "solver_function_evaluations": null,
+            "native_cost": -181.57163453380548,
+            "native_fixed_point_residual": 1.20176271542937e-06,
+            "finite": true,
+            "position_error": 1.038061224849905e-06,
+            "orientation_error": 1.6012031277757266e-06,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 1.2685775676800898e-05,
+            "previous_q": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "history_q": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.06293185307179586,
+              -0.06293185307179586,
+              -0.06293185307179586,
+              -0.06293185307179586,
+              -0.06293185307179586,
+              -0.06293185307179586
+            ],
+            "native_upper": [
+              0.06293185307179586,
+              0.06293185307179586,
+              0.06293185307179586,
+              0.06293185307179586,
+              0.06293185307179586,
+              0.06293185307179586
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "upstream",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 67485,
+            "bounds_setup_latency_ns": 29783,
+            "solve_latency_ns": 37633,
+            "native_call_latency_ns": 53118,
+            "verification_latency_ns": 110005,
+            "total_latency_ns": 282725,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_upstream",
+            "q": [
+              2.4097089746833662e-05,
+              5.847599875752077e-05,
+              4.227735771417372e-05,
+              2.7057367004695066e-05,
+              -1.6140527788228154e-06,
+              2.5669151075531928e-05
+            ],
+            "raw_returned_q": [
+              2.4097089746833662e-05,
+              5.847599875752077e-05,
+              4.227735771417372e-05,
+              2.7057367004695066e-05,
+              -1.6140527788228154e-06,
+              2.5669151075531928e-05
+            ],
+            "submitted_q": [
+              2.4097089746833662e-05,
+              5.847599875752077e-05,
+              4.227735771417372e-05,
+              2.7057367004695066e-05,
+              -1.6140527788228154e-06,
+              2.5669151075531928e-05
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 0,
+            "native_objective_calls": 1,
+            "native_gradient_calls": 2,
+            "solver_function_evaluations": null,
+            "native_cost": -181.57059587387172,
+            "native_fixed_point_residual": 8.577951247634666e-05,
+            "finite": true,
+            "position_error": 0.0003142352574714501,
+            "orientation_error": 0.0008469104919923684,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 0.0009412930366997964,
+            "previous_q": [
+              -7.98339370994196e-07,
+              -7.613163255753741e-07,
+              -3.3030330210363093e-07,
+              -2.0122919557532034e-07,
+              -2.0123152259057599e-07,
+              -1.9285426767025752e-07
+            ],
+            "history_q": [
+              [
+                -7.98339370994196e-07,
+                -7.613163255753741e-07,
+                -3.3030330210363093e-07,
+                -2.0122919557532034e-07,
+                -2.0123152259057599e-07,
+                -1.9285426767025752e-07
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.06293265141116686,
+              -0.06293261438812144,
+              -0.06293218337509796,
+              -0.06293205430099143,
+              -0.06293205430331844,
+              -0.06293204592606352
+            ],
+            "native_upper": [
+              0.06293105473242486,
+              0.06293109175547028,
+              0.06293152276849376,
+              0.06293165184260029,
+              0.06293165184027327,
+              0.06293166021752819
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "upstream",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 89078,
+            "bounds_setup_latency_ns": 18960,
+            "solve_latency_ns": 33886,
+            "native_call_latency_ns": 50742,
+            "verification_latency_ns": 94069,
+            "total_latency_ns": 270984,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_upstream",
+            "q": [
+              0.0003373421767133096,
+              0.0006160342217670028,
+              0.0004721237029238046,
+              0.0003390065751414886,
+              2.8007865179823635e-05,
+              0.0003232847998304016
+            ],
+            "raw_returned_q": [
+              0.0003373421767133096,
+              0.0006160342217670028,
+              0.0004721237029238046,
+              0.0003390065751414886,
+              2.8007865179823635e-05,
+              0.0003232847998304016
+            ],
+            "submitted_q": [
+              0.0003373421767133096,
+              0.0006160342217670028,
+              0.0004721237029238046,
+              0.0003390065751414886,
+              2.8007865179823635e-05,
+              0.0003232847998304016
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 1,
+            "native_objective_calls": 4,
+            "native_gradient_calls": 3,
+            "solver_function_evaluations": null,
+            "native_cost": -181.57133962250376,
+            "native_fixed_point_residual": 9.49148036731525e-05,
+            "finite": true,
+            "position_error": 0.00015713524240027073,
+            "orientation_error": 0.00039744610859069105,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 0.008859714052490891,
+            "previous_q": [
+              2.4097089746833662e-05,
+              5.847599875752077e-05,
+              4.227735771417372e-05,
+              2.7057367004695066e-05,
+              -1.6140527788228154e-06,
+              2.5669151075531928e-05
+            ],
+            "history_q": [
+              [
+                2.4097089746833662e-05,
+                5.847599875752077e-05,
+                4.227735771417372e-05,
+                2.7057367004695066e-05,
+                -1.6140527788228154e-06,
+                2.5669151075531928e-05
+              ],
+              [
+                -7.98339370994196e-07,
+                -7.613163255753741e-07,
+                -3.3030330210363093e-07,
+                -2.0122919557532034e-07,
+                -2.0123152259057599e-07,
+                -1.9285426767025752e-07
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.06290775598204902,
+              -0.06287337707303833,
+              -0.06288957571408169,
+              -0.06290479570479116,
+              -0.06293346712457468,
+              -0.06290618392072032
+            ],
+            "native_upper": [
+              0.06295595016154269,
+              0.06299032907055338,
+              0.06297413042951003,
+              0.06295891043880056,
+              0.06293023901901704,
+              0.06295752222287139
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "upstream",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 74605,
+            "bounds_setup_latency_ns": 17634,
+            "solve_latency_ns": 52767,
+            "native_call_latency_ns": 66992,
+            "verification_latency_ns": 91742,
+            "total_latency_ns": 267534,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_upstream",
+            "q": [
+              -0.06259451089508254,
+              -0.048675180166356045,
+              -0.062459729368872056,
+              -0.06259284649665436,
+              0.06295986093697568,
+              0.011455180552348338
+            ],
+            "raw_returned_q": [
+              -0.06259451089508254,
+              -0.048675180166356045,
+              -0.062459729368872056,
+              -0.06259284649665436,
+              0.06295986093697568,
+              0.011455180552348338
+            ],
+            "submitted_q": null,
+            "held_previous_on_failure": true,
+            "accepted": false,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 14,
+            "native_objective_calls": 60,
+            "native_gradient_calls": 33,
+            "solver_function_evaluations": null,
+            "native_cost": 49573.40425108187,
+            "native_fixed_point_residual": 0.00030200401755460277,
+            "finite": true,
+            "position_error": 9.966965819194295,
+            "orientation_error": 0.20507030243309227,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [
+              "position_tolerance",
+              "orientation_tolerance"
+            ],
+            "velocity_utilization": 0.9999999999999998,
+            "previous_q": [
+              0.0003373421767133096,
+              0.0006160342217670028,
+              0.0004721237029238046,
+              0.0003390065751414886,
+              2.8007865179823635e-05,
+              0.0003232847998304016
+            ],
+            "history_q": [
+              [
+                0.0003373421767133096,
+                0.0006160342217670028,
+                0.0004721237029238046,
+                0.0003390065751414886,
+                2.8007865179823635e-05,
+                0.0003232847998304016
+              ],
+              [
+                2.4097089746833662e-05,
+                5.847599875752077e-05,
+                4.227735771417372e-05,
+                2.7057367004695066e-05,
+                -1.6140527788228154e-06,
+                2.5669151075531928e-05
+              ],
+              [
+                -7.98339370994196e-07,
+                -7.613163255753741e-07,
+                -3.3030330210363093e-07,
+                -2.0122919557532034e-07,
+                -2.0123152259057599e-07,
+                -1.9285426767025752e-07
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.06259451089508254,
+              -0.06231581885002886,
+              -0.062459729368872056,
+              -0.06259284649665436,
+              -0.06290384520661603,
+              -0.06260856827196545
+            ],
+            "native_upper": [
+              0.06326919524850917,
+              0.06354788729356287,
+              0.06340397677471966,
+              0.06327085964693735,
+              0.06295986093697568,
+              0.06325513787162626
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "upstream",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 72334,
+            "bounds_setup_latency_ns": 18019,
+            "solve_latency_ns": 572630,
+            "native_call_latency_ns": 587303,
+            "verification_latency_ns": 104902,
+            "total_latency_ns": 801336,
+            "accepted_within_20ms": false
+          }
+        ],
+        "native_position_half_bound_loss": -0.9999950000086806,
+        "native_orientation_half_bound_loss": -0.9996192785626983,
+        "expected_position_half_bound_loss": -0.9999950000086806,
+        "expected_orientation_half_bound_loss": -0.9996192785626983
+      },
+      "positive_range": {
+        "metadata": {
+          "method": "RangedIK (positive-range adapter)",
+          "upstream_url": "https://github.com/uwgraphics/relaxed_ik_core",
+          "upstream_branch": "ranged-ik",
+          "upstream_sha": "1c48d2ae408b4e024ee037641aac1e728267984e",
+          "license": "MIT",
+          "range_mode": "positive_range",
+          "mapping": {
+            "bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "frame": "target frame",
+            "position": "R_target.T @ (p_actual - p_target)",
+            "orientation": "Log(R_target.T @ R_actual), principal scaled-axis vector",
+            "orientation_term": "absolute value of each scaled-axis component",
+            "units": [
+              "m",
+              "m",
+              "m",
+              "rad",
+              "rad",
+              "rad"
+            ],
+            "formula": "nextafter(public_norm_tolerance / sqrt(3), 0)",
+            "conservativeness": "the component box is inside the public norm ball, but native ranges are soft objectives",
+            "native_range_mode": "positive_range",
+            "range_activation_cutoff": 0.0,
+            "ranged_loss_active": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "library_sha256": "d94236cb7916e6209acc88ae6a416a642c68099e78877562cbfa0707cea2e630",
+          "native_max_iterations": 100,
+          "native_panoc_tolerance": 0.0005,
+          "native_max_duration_ms": 18.0,
+          "native_cache": {
+            "tolerance": 1e-14,
+            "lbfgs_memory": 10
+          },
+          "native_weights": {
+            "position_each": 50.0,
+            "rotation_each": 10.0,
+            "joint_limit_each": 0.1,
+            "velocity": 0.7,
+            "acceleration": 0.5,
+            "jerk": 0.3,
+            "manipulability": 1.0,
+            "native_self_collision_each": 0.01
+          },
+          "dynamic_bounds": "unchanged static URDF penalty; hard PANOC Rectangle is narrowed to representable single-frame interval",
+          "history": "actual accepted or held command each frame, never the rejected raw candidate",
+          "native_status": "PANOC convergence only; independent task acceptance may differ",
+          "joint_names": [
+            "shoulder_pan_joint",
+            "shoulder_lift_joint",
+            "elbow_joint",
+            "wrist_1_joint",
+            "wrist_2_joint",
+            "wrist_3_joint"
+          ],
+          "base_link": "base_link",
+          "end_link": "tool0",
+          "urdf_sha256": "e806cecaa2b9c56de58d74177ec6479351bc359f4ef779c7368e09a64116cb12",
+          "public_kinematics_backend": "confik.kinematics.urdf.URDFKinematics",
+          "native_kinematics_backend": "official relaxed_ik_core::spacetime::Robot / Arm (nalgebra, URDF via k)",
+          "fk_checks": [
+            {
+              "fraction": 0.0,
+              "position_error": 4.163336342344337e-17,
+              "orientation_error": 4.887852545751022e-16
+            },
+            {
+              "fraction": 0.03125,
+              "position_error": 3.1401849173675503e-16,
+              "orientation_error": 5.265522146183211e-16
+            },
+            {
+              "fraction": -0.0625,
+              "position_error": 4.47545209131181e-16,
+              "orientation_error": 4.404853580309181e-16
+            }
+          ],
+          "collision_scope": "official self-collision objective retained; no collision data, task acceptance check, or claim added"
+        },
+        "calls": [
+          {
+            "method": "ranged_ik_positive_range",
+            "q": [
+              -6.02269055478682e-08,
+              -5.654500398176744e-08,
+              -1.3827603747267475e-08,
+              -1.043768646776794e-09,
+              -1.0421127614797987e-09,
+              -2.176628047644499e-10
+            ],
+            "raw_returned_q": [
+              -6.02269055478682e-08,
+              -5.654500398176744e-08,
+              -1.3827603747267475e-08,
+              -1.043768646776794e-09,
+              -1.0421127614797987e-09,
+              -2.176628047644499e-10
+            ],
+            "submitted_q": [
+              -6.02269055478682e-08,
+              -5.654500398176744e-08,
+              -1.3827603747267475e-08,
+              -1.043768646776794e-09,
+              -1.0421127614797987e-09,
+              -2.176628047644499e-10
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 0,
+            "native_objective_calls": 1,
+            "native_gradient_calls": 2,
+            "solver_function_evaluations": null,
+            "native_cost": -181.57163453380548,
+            "native_fixed_point_residual": 8.377534776871159e-08,
+            "finite": true,
+            "position_error": 7.437078127495736e-08,
+            "orientation_error": 9.292080103341595e-08,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 9.570178313223715e-07,
+            "previous_q": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "history_q": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.06293185307179586,
+              -0.06293185307179586,
+              -0.06293185307179586,
+              -0.06293185307179586,
+              -0.06293185307179586,
+              -0.06293185307179586
+            ],
+            "native_upper": [
+              0.06293185307179586,
+              0.06293185307179586,
+              0.06293185307179586,
+              0.06293185307179586,
+              0.06293185307179586,
+              0.06293185307179586
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "positive_range",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 76500,
+            "bounds_setup_latency_ns": 22294,
+            "solve_latency_ns": 37400,
+            "native_call_latency_ns": 52361,
+            "verification_latency_ns": 101877,
+            "total_latency_ns": 276999,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_positive_range",
+            "q": [
+              7.766576731890984e-05,
+              0.0001248204877923804,
+              6.278551630450618e-05,
+              5.47919262075213e-06,
+              -4.4053519494153564e-06,
+              1.0718069904844876e-06
+            ],
+            "raw_returned_q": [
+              7.766576731890984e-05,
+              0.0001248204877923804,
+              6.278551630450618e-05,
+              5.47919262075213e-06,
+              -4.4053519494153564e-06,
+              1.0718069904844876e-06
+            ],
+            "submitted_q": [
+              7.766576731890984e-05,
+              0.0001248204877923804,
+              6.278551630450618e-05,
+              5.47919262075213e-06,
+              -4.4053519494153564e-06,
+              1.0718069904844876e-06
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 0,
+            "native_objective_calls": 1,
+            "native_gradient_calls": 2,
+            "solver_function_evaluations": null,
+            "native_cost": -178.80489414809665,
+            "native_fixed_point_residual": 0.0001600935374438606,
+            "finite": true,
+            "position_error": 0.00023592200591888052,
+            "orientation_error": 0.0008100114821900584,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 0.001984321558971036,
+            "previous_q": [
+              -6.02269055478682e-08,
+              -5.654500398176744e-08,
+              -1.3827603747267475e-08,
+              -1.043768646776794e-09,
+              -1.0421127614797987e-09,
+              -2.176628047644499e-10
+            ],
+            "history_q": [
+              [
+                -6.02269055478682e-08,
+                -5.654500398176744e-08,
+                -1.3827603747267475e-08,
+                -1.043768646776794e-09,
+                -1.0421127614797987e-09,
+                -2.176628047644499e-10
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.0629319132987014,
+              -0.06293190961679984,
+              -0.0629318668993996,
+              -0.0629318541155645,
+              -0.06293185411390861,
+              -0.06293185328945866
+            ],
+            "native_upper": [
+              0.06293179284489031,
+              0.06293179652679187,
+              0.06293183924419211,
+              0.06293185202802722,
+              0.0629318520296831,
+              0.06293185285413305
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "positive_range",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 70586,
+            "bounds_setup_latency_ns": 18245,
+            "solve_latency_ns": 33940,
+            "native_call_latency_ns": 49218,
+            "verification_latency_ns": 96909,
+            "total_latency_ns": 254572,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_positive_range",
+            "q": [
+              7.77766668177173e-05,
+              0.00015421624232228985,
+              7.69089977865952e-05,
+              5.487870794924283e-06,
+              -4.413546848858351e-06,
+              1.0722712679671013e-06
+            ],
+            "raw_returned_q": [
+              7.77766668177173e-05,
+              0.00015421624232228985,
+              7.69089977865952e-05,
+              5.487870794924283e-06,
+              -4.413546848858351e-06,
+              1.0722712679671013e-06
+            ],
+            "submitted_q": [
+              7.77766668177173e-05,
+              0.00015421624232228985,
+              7.69089977865952e-05,
+              5.487870794924283e-06,
+              -4.413546848858351e-06,
+              1.0722712679671013e-06
+            ],
+            "held_previous_on_failure": false,
+            "accepted": true,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 0,
+            "native_objective_calls": 1,
+            "native_gradient_calls": 2,
+            "solver_function_evaluations": null,
+            "native_cost": 162.74378282598863,
+            "native_fixed_point_residual": 3.261267277874932e-05,
+            "finite": true,
+            "position_error": 0.0005920593488356658,
+            "orientation_error": 0.0017642301324434012,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [],
+            "velocity_utilization": 0.0004671045439639809,
+            "previous_q": [
+              7.766576731890984e-05,
+              0.0001248204877923804,
+              6.278551630450618e-05,
+              5.47919262075213e-06,
+              -4.4053519494153564e-06,
+              1.0718069904844876e-06
+            ],
+            "history_q": [
+              [
+                7.766576731890984e-05,
+                0.0001248204877923804,
+                6.278551630450618e-05,
+                5.47919262075213e-06,
+                -4.4053519494153564e-06,
+                1.0718069904844876e-06
+              ],
+              [
+                -6.02269055478682e-08,
+                -5.654500398176744e-08,
+                -1.3827603747267475e-08,
+                -1.043768646776794e-09,
+                -1.0421127614797987e-09,
+                -2.176628047644499e-10
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.06285418730447695,
+              -0.06280703258400348,
+              -0.06286906755549135,
+              -0.0629263738791751,
+              -0.06293625842374527,
+              -0.06293078126480538
+            ],
+            "native_upper": [
+              0.06300951883911476,
+              0.06305667355958823,
+              0.06299463858810037,
+              0.06293733226441661,
+              0.06292744771984644,
+              0.06293292487878634
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "positive_range",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 69423,
+            "bounds_setup_latency_ns": 17284,
+            "solve_latency_ns": 33382,
+            "native_call_latency_ns": 47547,
+            "verification_latency_ns": 91482,
+            "total_latency_ns": 242548,
+            "accepted_within_20ms": true
+          },
+          {
+            "method": "ranged_ik_positive_range",
+            "q": [
+              1.4342785703663852e-05,
+              -3.938496650603227e-07,
+              2.307738633168074e-06,
+              4.701696751519603e-06,
+              -4.124016304788472e-06,
+              3.1330445516017954e-07
+            ],
+            "raw_returned_q": [
+              1.4342785703663852e-05,
+              -3.938496650603227e-07,
+              2.307738633168074e-06,
+              4.701696751519603e-06,
+              -4.124016304788472e-06,
+              3.1330445516017954e-07
+            ],
+            "submitted_q": null,
+            "held_previous_on_failure": true,
+            "accepted": false,
+            "internal_ok": true,
+            "native_status": "PANOC_converged",
+            "native_return_code": 0,
+            "native_iterations": 0,
+            "native_objective_calls": 1,
+            "native_gradient_calls": 2,
+            "solver_function_evaluations": null,
+            "native_cost": 4918.962888520839,
+            "native_fixed_point_residual": 0.00018301593551340496,
+            "finite": true,
+            "position_error": 10.000004410852402,
+            "orientation_error": 1.9723901628312786e-05,
+            "joint_limit_ok": true,
+            "velocity_ok": true,
+            "verification_reasons": [
+              "position_tolerance"
+            ],
+            "velocity_utilization": 0.002456785942898632,
+            "previous_q": [
+              7.77766668177173e-05,
+              0.00015421624232228985,
+              7.69089977865952e-05,
+              5.487870794924283e-06,
+              -4.413546848858351e-06,
+              1.0722712679671013e-06
+            ],
+            "history_q": [
+              [
+                7.77766668177173e-05,
+                0.00015421624232228985,
+                7.69089977865952e-05,
+                5.487870794924283e-06,
+                -4.413546848858351e-06,
+                1.0722712679671013e-06
+              ],
+              [
+                7.766576731890984e-05,
+                0.0001248204877923804,
+                6.278551630450618e-05,
+                5.47919262075213e-06,
+                -4.4053519494153564e-06,
+                1.0718069904844876e-06
+              ],
+              [
+                -6.02269055478682e-08,
+                -5.654500398176744e-08,
+                -1.3827603747267475e-08,
+                -1.043768646776794e-09,
+                -1.0421127614797987e-09,
+                -2.176628047644499e-10
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "history_resynchronized": false,
+            "native_lower": [
+              -0.06285407640497814,
+              -0.06277763682947357,
+              -0.06285494407400927,
+              -0.06292636520100094,
+              -0.06293626661864471,
+              -0.06293078080052789
+            ],
+            "native_upper": [
+              0.06300962973861357,
+              0.06308606931411814,
+              0.06300876206958245,
+              0.06293734094259078,
+              0.062927439524947,
+              0.06293292534306383
+            ],
+            "native_bounds": [
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.0005773502691896257,
+              0.00503833156733364,
+              0.00503833156733364,
+              0.00503833156733364
+            ],
+            "range_mode": "positive_range",
+            "native_time_limit_ms": 18.0,
+            "conversion_latency_ns": 76363,
+            "bounds_setup_latency_ns": 18408,
+            "solve_latency_ns": 34627,
+            "native_call_latency_ns": 49140,
+            "verification_latency_ns": 93471,
+            "total_latency_ns": 254726,
+            "accepted_within_20ms": false
+          }
+        ],
+        "native_position_half_bound_loss": -0.9689475387582975,
+        "native_orientation_half_bound_loss": -0.968947476129675,
+        "expected_position_half_bound_loss": -0.9689475387583056,
+        "expected_orientation_half_bound_loss": -0.9689474761296765
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "utc": "2026-09-08T09:31:26.113695+00:00",
+  "code_hashes": {
+    "configs/correction_reserve.yaml": "b4e30d811ae6efdb2c33568828eb3407149ae6e295b783c6125e0b57b2d3bd9b",
+    "docs/CRIK_ALGORITHM_PROTOCOL.md": "2f09cfb3b6aefe170fd1cf1dc02099b29165bee39ba09d20796c5f4fc1584916",
+    "src/confik/correction_reserve/__init__.py": "f0963f1a3fda8f302d8be114c8c86378437d6e8a1986925c8a7deb4bab54d17a",
+    "src/confik/correction_reserve/convex.py": "d10ae908b16fc007795164d3d40b8d6e20c9bd318bbb03733ddf21b145c35014",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native/ranged_bridge/Cargo.lock": "847f90a2b6bbb70378e064098ea007eae0f928ac1e08ab8011edeb9a04c84dcd",
+    "src/confik/correction_reserve/native/ranged_bridge/Cargo.toml": "54238fa1b6584da64364ed1c35a79702e8b425c98563a42697ffe2457929f1ea",
+    "src/confik/correction_reserve/native/ranged_bridge/src/lib.rs": "5767a734fcc41f9070446a6e5f8718fa6f29efd61323ecd2e54b43a1863696f9",
+    "src/confik/correction_reserve/native/ranged_build.py": "9b5bd0345b8acd4eb1b5af32255bfd91e1c41767451ff3cb332ed81781ebfc3e",
+    "src/confik/correction_reserve/native/ranged_positive_range.patch": "0ef16658394005bd3436ffd0dc089450cd5e56d9b6cb46e7b9010124be97f91e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/correction_reserve/ranged_adapter.py": "574a35db2bbe4bf3049125766e3a6b085b83fa6550e1aa89d3adffd947319260",
+    "src/confik/correction_reserve/runtime.py": "65199f86dcb8ccaef7981ca7331a4164d0d6bf17bb1b617c13669f4350446bec",
+    "src/confik/correction_reserve/study.py": "be3a8336c9c7ba073bf2c036d38f7db9c8456f44ed67fd5ccb53818b5c6872d3"
+  },
+  "configuration": {
+    "experiment": "correction_reserve_online_ik",
+    "baseline_commit": "276f3d311aafc67786c916c5fec596dd860cc5dc",
+    "source_config": "configs/paper_v2.yaml",
+    "output": "outputs/correction_reserve_ik",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "native_trac_library": "tmp/task_contract_build/libcontract_trac.so",
+    "clarabel_version": "0.11.1",
+    "dt": 0.02,
+    "deadline_ns": 20000000,
+    "methods": [
+      "trac_task_5ms",
+      "trac_task_20ms",
+      "pink_qp",
+      "ranged_ik",
+      "two_step_predictive",
+      "cr_ik",
+      "single_step_reserve",
+      "two_step_sigma"
+    ],
+    "trac_repeats": 3,
+    "deterministic_repeats": 1,
+    "optimizer": {
+      "outer_iterations": 3,
+      "trust_step": 0.5,
+      "pose_interior": 1e-05,
+      "native_max_iterations": 40,
+      "native_time_limit_ms": 2.0,
+      "total_soft_limit_ms": 18.0,
+      "reserve_tie_relative": 0.001,
+      "reserve_tie_absolute": 1e-08,
+      "current_residual_weight": 1.0,
+      "rank_rtol": 1e-10,
+      "sigma_difference_step": 0.0001
+    },
+    "development": {
+      "panda_targets": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json",
+      "ur5e_targets": "outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json",
+      "selection": "first UID in each robot/family for initial integration; all old paths for development comparison"
+    },
+    "formal": {
+      "trajectories_per_family": 20,
+      "frames": 300,
+      "seed_base": 981009000,
+      "families": [
+        "smooth",
+        "near_singular",
+        "joint_limit_return",
+        "high_curvature"
+      ],
+      "order_seed": 981009901,
+      "bootstrap_seed": 981009902,
+      "bootstrap_resamples": 4000,
+      "primary_comparisons": [
+        "trac_task_5ms",
+        "ranged_ik",
+        "two_step_predictive"
+      ],
+      "note": "New geometric identities fixed before results; no result-based tuning or global gate."
+    },
+    "mechanism": {
+      "frames": [
+        40,
+        80,
+        110
+      ],
+      "directions": "signed_cartesian_axes",
+      "amplitudes": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "continuation_solver": "trac_task_20ms",
+      "repeats": 3,
+      "selection": "first UID of each robot/family, using B1 actual history for common inputs"
+    }
+  },
+  "methods": [
+    "trac_task_5ms",
+    "two_step_predictive",
+    "cr_ik"
+  ],
+  "python": "3.12.13",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+  "git_sha": "276f3d311aafc67786c916c5fec596dd860cc5dc",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "inference_unit": "whole trajectory; search repeats nested",
+  "timing_scope": "solver input conversion, dynamic bounds, numerical solve, prediction/optimization if applicable, command verification; serialization excluded"
+}

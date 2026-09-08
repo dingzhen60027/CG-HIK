@@ -1,0 +1,56 @@
+experiment: correction_reserve_online_ik
+baseline_commit: 276f3d311aafc67786c916c5fec596dd860cc5dc
+source_config: configs/paper_v2.yaml
+output: outputs/correction_reserve_ik
+robots: [panda, ur5e]
+native_trac_library: tmp/task_contract_build/libcontract_trac.so
+clarabel_version: 0.11.1
+dt: 0.02
+deadline_ns: 20000000
+methods:
+  - trac_task_5ms
+  - trac_task_20ms
+  - pink_qp
+  - ranged_ik_upstream
+  - ranged_ik_positive_range
+  - two_step_predictive
+  - cr_ik
+  - single_step_reserve
+  - two_step_sigma
+trac_repeats: 3
+deterministic_repeats: 1
+optimizer:
+  outer_iterations: 3
+  trust_step: 0.5
+  pose_interior: 0.00001
+  native_max_iterations: 40
+  native_time_limit_ms: 2.0
+  total_soft_limit_ms: 18.0
+  reserve_tie_relative: 0.001
+  reserve_tie_absolute: 0.00000001
+  current_residual_weight: 1.0
+  rank_rtol: 0.0000000001
+  sigma_difference_step: 0.0001
+development:
+  panda_targets: outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json
+  ur5e_targets: outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json
+  selection: first UID in each robot/family for initial integration; all old paths for development comparison
+formal:
+  trajectories_per_family: 20
+  frames: 300
+  seed_base: 981009000
+  families: [smooth, near_singular, joint_limit_return, high_curvature]
+  order_seed: 981009901
+  bootstrap_seed: 981009902
+  bootstrap_resamples: 4000
+  primary_comparisons: [trac_task_5ms, ranged_ik_upstream, two_step_predictive]
+  ranged_sensitivity: ranged_ik_positive_range
+  affinity: {panda: [0, 2], ur5e: [4, 6]}
+  note: New geometric identities fixed before results; no result-based tuning or global gate.
+mechanism:
+  frames: [40, 80, 110]
+  directions: signed_cartesian_axes
+  amplitudes: [0.0, 0.5, 1.0, 2.0, 4.0]
+  continuation_solver: trac_task_20ms
+  repeats: 3
+  selection: first UID of each robot/family, using B1 actual history for common inputs

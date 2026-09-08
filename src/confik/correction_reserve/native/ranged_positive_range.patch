@@ -1,0 +1,9 @@
+diff --git a/src/groove/objective.rs b/src/groove/objective.rs
+--- a/src/groove/objective.rs
++++ b/src/groove/objective.rs
+@@ -103,1 +103,1 @@
+-        if (bound <= 1e-2) {
++        if (bound <= 0.0) {
+@@ -140,1 +140,1 @@
+-        if (bound <= 1e-2) {
++        if (bound <= 0.0) {

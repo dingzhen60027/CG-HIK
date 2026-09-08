@@ -1,0 +1,44 @@
+{
+  "utc": "2026-09-08T09:46:29.700757+00:00",
+  "versions": {
+    "clarabel": "0.11.1",
+    "pin-pink": "3.3.0",
+    "pin": "3.9.0",
+    "qpsolvers": "4.13.0",
+    "osqp": "1.0.5",
+    "numpy": "2.4.4",
+    "scipy": "1.17.0"
+  },
+  "trac_library_sha256": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83",
+  "ranged": {
+    "upstream_url": "https://github.com/uwgraphics/relaxed_ik_core.git",
+    "upstream_branch": "ranged-ik",
+    "upstream_sha": "1c48d2ae408b4e024ee037641aac1e728267984e",
+    "license": "MIT",
+    "rustc": "rustc 1.85.1 (4eb161250 2025-03-15)",
+    "source_diff": "src/confik/correction_reserve/native/ranged_positive_range.patch",
+    "source_diff_sha256": "0ef16658394005bd3436ffd0dc089450cd5e56d9b6cb46e7b9010124be97f91e",
+    "bridge_sha256": "5767a734fcc41f9070446a6e5f8718fa6f29efd61323ecd2e54b43a1863696f9",
+    "upstream_objective_sha256": "652511941a79787a1a2087b3fd90924ee712db22823e8d582c09a4e4b76d0dca",
+    "positive_range_objective_sha256": "c3f71b22fd3f081e870aa16db43ed54865620d906e0a69a38637886939b36dcf",
+    "exact_changed_lines": 2,
+    "unchanged_upstream_files": 129,
+    "public_tolerances_changed": false,
+    "variants": {
+      "upstream": {
+        "library": "tmp/crik_dependencies/ranged_adapter_build/upstream/target/release/libcrik_ranged_bridge.so",
+        "library_sha256": "ecfb60b19632105b36388cc39ccbf0162640ae763e61c7560260837453579d8a",
+        "cargo_lock_sha256": "847f90a2b6bbb70378e064098ea007eae0f928ac1e08ab8011edeb9a04c84dcd",
+        "build_log": "tmp/crik_dependencies/ranged_adapter_build/upstream/build.log",
+        "core_path": "tmp/crik_dependencies/ranged_ik"
+      },
+      "positive_range": {
+        "library": "tmp/crik_dependencies/ranged_adapter_build/positive_range/target/release/libcrik_ranged_bridge.so",
+        "library_sha256": "ca5ca2d187f81382d642ec8f9129251f73a493fd96ba66b3ba1d728b1a49de82",
+        "cargo_lock_sha256": "847f90a2b6bbb70378e064098ea007eae0f928ac1e08ab8011edeb9a04c84dcd",
+        "build_log": "tmp/crik_dependencies/ranged_adapter_build/positive_range/build.log",
+        "core_path": "tmp/crik_dependencies/ranged_ik_positive_range"
+      }
+    }
+  }
+}

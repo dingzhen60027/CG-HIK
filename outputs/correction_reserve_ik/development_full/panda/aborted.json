@@ -1,0 +1,6 @@
+{
+  "utc": "2026-09-08T09:35:17.819805+00:00",
+  "reason": "Ranged adapter metadata duplicated previous_q in runner dict construction; fixed serialization only; completed jobs retained; this incomplete integration is not the full comparison",
+  "completed_jobs": 9,
+  "missing_raw_call": "first Ranged query at job 10"
+}
