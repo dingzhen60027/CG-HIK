@@ -1,0 +1,200 @@
+[
+  {
+    "robot": "panda",
+    "method": "cr_ik",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 2.698521527731241,
+    "conditional_probe_success": 0.9603174603174603,
+    "common_input_success": 0.9603174603174603,
+    "all_directions_radius_mean": 3.0833333333333335
+  },
+  {
+    "robot": "panda",
+    "method": "pink_qp",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 2.2036747126813583,
+    "conditional_probe_success": 0.9614512471655329,
+    "common_input_success": 0.9614512471655329,
+    "all_directions_radius_mean": 3.25
+  },
+  {
+    "robot": "panda",
+    "method": "ranged_ik_positive_range",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 1,
+    "mean_predicted_gamma": 3.109718394151476,
+    "conditional_probe_success": 1.0,
+    "common_input_success": 0.08333333333333333,
+    "all_directions_radius_mean": 0.3333333333333333
+  },
+  {
+    "robot": "panda",
+    "method": "ranged_ik_upstream",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 8,
+    "mean_predicted_gamma": 1.7378149278981496,
+    "conditional_probe_success": 0.9430272108843538,
+    "common_input_success": 0.6286848072562359,
+    "all_directions_radius_mean": 1.8333333333333333
+  },
+  {
+    "robot": "panda",
+    "method": "single_step_reserve",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 1.7697662758858783,
+    "conditional_probe_success": 0.9472789115646258,
+    "common_input_success": 0.9472789115646258,
+    "all_directions_radius_mean": 2.3333333333333335
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_20ms",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 2.1889108169007057,
+    "conditional_probe_success": 0.959750566893424,
+    "common_input_success": 0.959750566893424,
+    "all_directions_radius_mean": 2.9166666666666665
+  },
+  {
+    "robot": "panda",
+    "method": "trac_task_5ms",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 2.1438081310678436,
+    "conditional_probe_success": 0.959750566893424,
+    "common_input_success": 0.959750566893424,
+    "all_directions_radius_mean": 3.0
+  },
+  {
+    "robot": "panda",
+    "method": "two_step_predictive",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 2.4640447977432163,
+    "conditional_probe_success": 0.962018140589569,
+    "common_input_success": 0.962018140589569,
+    "all_directions_radius_mean": 3.0833333333333335
+  },
+  {
+    "robot": "panda",
+    "method": "two_step_sigma",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 1.9928021942450196,
+    "conditional_probe_success": 0.9608843537414966,
+    "common_input_success": 0.9608843537414966,
+    "all_directions_radius_mean": 3.0833333333333335
+  },
+  {
+    "robot": "ur5e",
+    "method": "cr_ik",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 1.4520068722117383,
+    "conditional_probe_success": 0.9155328798185939,
+    "common_input_success": 0.9155328798185939,
+    "all_directions_radius_mean": 1.7083333333333333
+  },
+  {
+    "robot": "ur5e",
+    "method": "pink_qp",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 1.1270303274203857,
+    "conditional_probe_success": 0.9160997732426303,
+    "common_input_success": 0.9160997732426303,
+    "all_directions_radius_mean": 1.5416666666666667
+  },
+  {
+    "robot": "ur5e",
+    "method": "ranged_ik_positive_range",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 0,
+    "mean_predicted_gamma": null,
+    "conditional_probe_success": null,
+    "common_input_success": 0.0,
+    "all_directions_radius_mean": 0.0
+  },
+  {
+    "robot": "ur5e",
+    "method": "ranged_ik_upstream",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 8,
+    "mean_predicted_gamma": 1.0632135642110647,
+    "conditional_probe_success": 0.9141156462585034,
+    "common_input_success": 0.6094104308390023,
+    "all_directions_radius_mean": 1.125
+  },
+  {
+    "robot": "ur5e",
+    "method": "single_step_reserve",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 0.8950072058718868,
+    "conditional_probe_success": 0.9138321995464852,
+    "common_input_success": 0.9138321995464852,
+    "all_directions_radius_mean": 1.4583333333333333
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_20ms",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 1.111807045555841,
+    "conditional_probe_success": 0.9155328798185939,
+    "common_input_success": 0.9155328798185939,
+    "all_directions_radius_mean": 1.5416666666666667
+  },
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 1.1082534490971157,
+    "conditional_probe_success": 0.9160997732426303,
+    "common_input_success": 0.9160997732426303,
+    "all_directions_radius_mean": 1.5416666666666667
+  },
+  {
+    "robot": "ur5e",
+    "method": "two_step_predictive",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 1.2826233937145142,
+    "conditional_probe_success": 0.9132653061224488,
+    "common_input_success": 0.9132653061224488,
+    "all_directions_radius_mean": 1.5416666666666667
+  },
+  {
+    "robot": "ur5e",
+    "method": "two_step_sigma",
+    "states": 12,
+    "trajectories": 4,
+    "current_accepted": 12,
+    "mean_predicted_gamma": 1.0994819680843673,
+    "conditional_probe_success": 0.9149659863945576,
+    "common_input_success": 0.9149659863945576,
+    "all_directions_radius_mean": 1.4583333333333333
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "utc": "2026-09-08T10:27:22.795943+00:00",
+  "results": [
+    {
+      "robot": "panda",
+      "runs": 1680,
+      "frames": 504000,
+      "accepted": 403426,
+      "nominal_pairs_checked": 193003,
+      "acceptance_discrepancies": 0,
+      "feedback_discrepancies": 0,
+      "deadline_discrepancies": 0
+    },
+    {
+      "robot": "ur5e",
+      "runs": 1680,
+      "frames": 504000,
+      "accepted": 410189,
+      "nominal_pairs_checked": 196995,
+      "acceptance_discrepancies": 0,
+      "feedback_discrepancies": 0,
+      "deadline_discrepancies": 0
+    }
+  ],
+  "source_sha256": "51c632a9d07499e02cd753362748967ccf94ae5e2971cf333e67928ac0411d2d",
+  "old_tracked_modifications": "",
+  "old_base_commit": "276f3d311aafc67786c916c5fec596dd860cc5dc",
+  "numerical_solver_calls": 0,
+  "operation": "replay original FK verifier and recorded feedback; no new experiment",
+  "witnesses": [
+    {
+      "robot": "panda",
+      "uid": "0947026b3677880f22d0f6f4f7dd7fb9b0dee71bde71d85a87c811f8ee530ce6",
+      "frames": 300
+    },
+    {
+      "robot": "ur5e",
+      "uid": "03220c51c45c68b3946b1c6a58e6a287ca5920e760cc8bfd312b376027c704c9",
+      "frames": 300
+    }
+  ],
+  "unchanged_runtime_hashes": {
+    "configs/correction_reserve.yaml": "a005315bb61c264fa6bbb4cf7565650ac9cebf86f6b2a283784bdf42364f16e4",
+    "docs/CRIK_ALGORITHM_PROTOCOL.md": "a1c5a12b47442fcc204b6c031566f985405fd22bedf80a719300d34ce5dcb514",
+    "src/confik/correction_reserve/__init__.py": "f0963f1a3fda8f302d8be114c8c86378437d6e8a1986925c8a7deb4bab54d17a",
+    "src/confik/correction_reserve/convex.py": "d10ae908b16fc007795164d3d40b8d6e20c9bd318bbb03733ddf21b145c35014",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native/ranged_bridge/Cargo.lock": "847f90a2b6bbb70378e064098ea007eae0f928ac1e08ab8011edeb9a04c84dcd",
+    "src/confik/correction_reserve/native/ranged_bridge/Cargo.toml": "54238fa1b6584da64364ed1c35a79702e8b425c98563a42697ffe2457929f1ea",
+    "src/confik/correction_reserve/native/ranged_bridge/src/lib.rs": "5767a734fcc41f9070446a6e5f8718fa6f29efd61323ecd2e54b43a1863696f9",
+    "src/confik/correction_reserve/native/ranged_build.py": "9b5bd0345b8acd4eb1b5af32255bfd91e1c41767451ff3cb332ed81781ebfc3e",
+    "src/confik/correction_reserve/native/ranged_positive_range.patch": "0ef16658394005bd3436ffd0dc089450cd5e56d9b6cb46e7b9010124be97f91e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/correction_reserve/ranged_adapter.py": "574a35db2bbe4bf3049125766e3a6b085b83fa6550e1aa89d3adffd947319260",
+    "src/confik/correction_reserve/runtime.py": "65199f86dcb8ccaef7981ca7331a4164d0d6bf17bb1b617c13669f4350446bec",
+    "src/confik/correction_reserve/study.py": "b489d082641ec4ed36bcc69aab6df82b6d4935bb16c920f90325bd79313d3a94"
+  }
+}

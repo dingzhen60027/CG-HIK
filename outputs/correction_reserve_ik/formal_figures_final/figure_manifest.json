@@ -1,0 +1,11 @@
+{
+  "source_data": "outputs/correction_reserve_ik/formal_reports/source_data.json",
+  "source_sha256": "ef03d2377f185992bf99fedb9f4a4a4e94869d6d46155ae0743ef350210e14f9",
+  "plotting_source_sha256": "9577663427a98cba05c155f892c1994931452ab94eeb9c17a87daab1e6461271",
+  "backend": "matplotlib, editable SVG/PDF, 600 dpi PNG",
+  "claim": "test whether current/next reserve yields completion and nonlinear correction benefits, with costs visible",
+  "uncertainty": "TSR/DTSR and paired completion: trajectory-bootstrap 95% intervals; frame P95 descriptive, not an inferential mean",
+  "selection": "all independent units for aggregate plots; representative trace selected by UID, not outcomes; mechanism fixed before probes",
+  "exclusions": "mechanism scatter requires an admissible current and a found nominal/unperturbed next; counts saved; all failures remain in mechanism and main tables",
+  "limits": "local gamma is not nonlinear certification; empirical radius is censored at four tolerance units"
+}

@@ -43,6 +43,24 @@ range-activation patch and reproducible bridge builder are retained under
 `src/confik/correction_reserve/native/`. No experiment compiles or downloads a
 dependency during a measured solve.
 
+For a separate reconstruction of the frozen TRAC bridge (not a rerun of the old
+experiment package), its existing CMake target can be built into a new directory:
+
+```bash
+cmake -S src/confik/task_contract_alignment/native -B tmp/crik_reproduction_trac \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DTRAC_SOURCE="$PWD/tmp/revision_dependencies/trac_ik" \
+  -DCMAKE_PREFIX_PATH="$PWD/tmp/revision_dependencies/prefix/usr;/opt/ros/humble" \
+  -DPython3_EXECUTABLE=/usr/bin/python3
+cmake --build tmp/crik_reproduction_trac --parallel 2
+```
+
+This requires the already documented upstream TRAC-IK revision and ROS/KDL/NLopt
+dependencies; it does not fetch them. Pass that new library path to the API above.
+Do not overwrite the measured library or the sealed experiment configuration.
+The measured binary hash and actual dependency versions are saved in
+`outputs/correction_reserve_ik/formal_protocol/dependencies.json`.
+
 Run `bash scripts/run_correction_reserve.sh test` in that environment, setting
 `CRIK_PYTHON` to its Python executable if necessary. `prepare` fixes new reference
 paths without invoking any online solver. Commit code/configuration before

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-08T10:19:10.122176+00:00",
+  "sources": {
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/formal/panda/completed.json": "80b555b1efe889e447951496094615bdf307c7a328e1f73a2614ebc0061fe650",
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/formal/ur5e/completed.json": "4d7af0397991177b9519b1af05662bb26bf4e26f8c7f294c90abd0ff6cfcad97"
+  },
+  "source_code_sha256": "439ffd253c105076eae11ebeba835715812ee2959ace49deaa81b261c259a6a9",
+  "independent_unit": "trajectory UID, not frames or search repetitions",
+  "confidence_intervals": "paired family-stratified trajectory bootstrap, 4000 resamples; average nested searches first; conditional on observed repeats; unadjusted descriptive 95% intervals",
+  "frame_quantiles": "descriptive pooled full-frame quantiles, no failed or over-deadline calls excluded",
+  "accepted_errors": "only truly accepted commands; acceptance counts and rejected frames reported separately",
+  "exclusions": 0,
+  "multiplicity": "no significance tests, no selection by interval; all prespecified comparisons shown",
+  "complete_trajectory_runs": 3360,
+  "frame_calls": 1008000
+}

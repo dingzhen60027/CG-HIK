@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-08T10:39:38.276169+00:00",
+  "report": "docs/CRIK_FINDINGS.md",
+  "report_sha256": "bdad55b00d9622a73a73b76bba951c1831e8375eef768501e5ae79deddb8f9ba",
+  "generator_sha256": "ccfcb79e0018dc97e8e20f5dfffd60c7bc27947a79d5d973f07c60890e72cd98",
+  "sources": {
+    "outputs/correction_reserve_ik/formal_reports/source_data.json": "ef03d2377f185992bf99fedb9f4a4a4e94869d6d46155ae0743ef350210e14f9",
+    "outputs/correction_reserve_ik/formal_verification/verification_manifest.json": "8eb87d39fa3493bdaab54ddc38b791f9aafdea2bebc7948116ea9555d725e672",
+    "outputs/correction_reserve_ik/formal_mechanism/summaries.json": "6773dde2bcd2143ed4f58b38b11db0e3866bfd86fa3ac0e075a9e6bf7c74d0d5",
+    "outputs/correction_reserve_ik/formal_mechanism_comparison/source_data.json": "f36d32e5cf2fdd56cc0dee3ad79cd3ecf0e6228681ffbf811d589b616934cd76",
+    "outputs/correction_reserve_ik/formal_verification/timing_phases.csv": "3969d8e2cdf681dbae9276100b7993d752730e8c8d1c05f5d90ce47dc641d089",
+    "outputs/correction_reserve_ik/formal_verification/abruptness_table.csv": "5184021a22d6d01ec6ef74cb6a990640122a1d726a22d99121f913823a5c2101"
+  }
+}
