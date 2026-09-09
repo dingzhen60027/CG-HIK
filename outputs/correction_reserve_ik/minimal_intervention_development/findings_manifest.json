@@ -1,0 +1,10 @@
+{
+  "report": "docs/CRIK_MINIMAL_INTERVENTION_FINDINGS.md",
+  "report_sha256": "48f29457da43f572b9a8c6d48fc4d64b239911ee4765d3d06452694ba6856f28",
+  "generator_sha256": "3a16f17a6bfc9e7ce1284daf2f9ed712b197225248f8951e102ad6b920737236",
+  "sources": {
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/minimal_intervention_development/reports/source_data.json": "40857d0a5911a65d2569b21ecbff94f69bf522b5cbfad4d760d20115f450057d",
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/minimal_intervention_development/reports/verification_manifest.json": "f93b533d633862ed3a38b2270cdf34b3b96623665ec5e1fc837b66d6e8f55da6",
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/minimal_intervention_development/protocol/demand_parameters.json": "43cddd2b25ccc86664ae205fff7b46c18b6cbf44217e0e75ee752696613b6107"
+  }
+}

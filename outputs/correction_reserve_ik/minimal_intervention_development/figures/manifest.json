@@ -1,0 +1,13 @@
+{
+  "source": "/home/eric/wjg/btry/outputs/correction_reserve_ik/minimal_intervention_development/reports/source_data.json",
+  "source_sha256": "40857d0a5911a65d2569b21ecbff94f69bf522b5cbfad4d760d20115f450057d",
+  "plotting_source_sha256": "b766e318c2c865d01adf784793874359c73607b63858cd6fdf1ed310dc3437f9",
+  "width_mm": 183,
+  "minimum_font_pt": 7,
+  "preview_dpi": 600,
+  "archetype": "quantitative grids",
+  "uncertainty": "paired trajectory bootstrap 95% intervals; no multiplicity correction",
+  "trace_selection": "first UID in high-curvature family, repeat 0; no success-based selection",
+  "trace_interpretation": "one observed development path; actual next error joined offline; missing gamma left as gaps",
+  "exclusions": "none in full paired analysis; one prespecified-geometry trace per robot for illustration"
+}

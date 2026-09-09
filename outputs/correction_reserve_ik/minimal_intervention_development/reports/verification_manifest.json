@@ -1,0 +1,37 @@
+{
+  "utc": "2026-09-09T08:51:47.945957+00:00",
+  "results": [
+    {
+      "robot": "panda",
+      "frames": 132000,
+      "accepted_commands": 129835,
+      "verified_nominal_pairs": 86465,
+      "met_demand_checked": 20873,
+      "direct_returns_checked": 10275,
+      "causal_demands_checked": 54000,
+      "acceptance_discrepancies": 0,
+      "feedback_discrepancies": 0,
+      "demand_discrepancies": 0,
+      "minimum_recomputed_demand_slack": 2.9782565302838293e-12
+    },
+    {
+      "robot": "ur5e",
+      "frames": 132000,
+      "accepted_commands": 130428,
+      "verified_nominal_pairs": 86076,
+      "met_demand_checked": 22317,
+      "direct_returns_checked": 11792,
+      "causal_demands_checked": 54000,
+      "acceptance_discrepancies": 0,
+      "feedback_discrepancies": 0,
+      "demand_discrepancies": 0,
+      "minimum_recomputed_demand_slack": 4.85500528668581e-13
+    }
+  ],
+  "numerical_solver_calls": 0,
+  "operation": "read-only original verifier, causal-demand replay and nonlinear local-map recomputation",
+  "witness_uids": [
+    "ba9bbb877bd562764b9ad1fe612339400f4396f8e4e3ccdd742d4a4326684c27",
+    "9a5eaa5a533abb994b7505aca361cebaf65ef495d064d694df4c023580e9cd0b"
+  ]
+}

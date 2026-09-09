@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-09T08:51:47.946191+00:00",
+  "sources": {
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/minimal_intervention_development/panda/completed.json": "acb7dee0731ea645f09283ae632f23d8366a9c7e5a55442b32d540674cdade89",
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/minimal_intervention_development/ur5e/completed.json": "e1abe9378b0237c14b0805f98c606537bafa454e6f7b2f6e9ee6ecfb31d32bce"
+  },
+  "code_sha256": "3dbb624bd2b7e044c203915d889d68dbf5e3749cf0d6c5c8090d4d3e5bcefa1c",
+  "independent_unit": "40 development trajectory UIDs per robot; searches nested; not a fresh test",
+  "intervals": "paired family-stratified UID bootstrap, 4000 resamples, unadjusted descriptive 95% intervals",
+  "exclusions": 0,
+  "frame_calls": 264000,
+  "runs": 1760,
+  "demand_conditioning": "descriptive after-run join; no causal or probabilistic guarantee",
+  "timing": "all command-ready computation; serialization and offline analysis excluded"
+}
