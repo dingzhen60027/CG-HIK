@@ -1,0 +1,3 @@
+robot,frames,non_direct_backup_return,backup_not_accepted,initial_pair_illegal,rank_condition_insufficient,convex_unsuccessful,solved_but_not_selected_nonlinear_or_demand_ambiguous,returned_initial_pair_legal_demand_unmet,native_status_occurrences,nonlinear_rejection_count,geometrically_legal_improving_partial_trial_rejected_count
+panda,18000,8133,355,812,0,7466,677,7321,"{""PrimalInfeasible"":3954,""Solved"":1326,""AlmostSolved"":18,""AlmostPrimalInfeasible"":20,""MaxTime"":3492}",,
+ur5e,18000,8000,432,901,60,7558,390,7099,"{""PrimalInfeasible"":5386,""Solved"":761,""rank_deficient_no_six_dimensional_reserve"":60,""outer_soft_limit"":2,""AlmostSolved"":9,""MaxTime"":2124,""AlmostPrimalInfeasible"":48}",,

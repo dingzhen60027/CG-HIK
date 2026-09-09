@@ -1,0 +1,22 @@
+experiment: correction_reserve_elastic_demand_development
+baseline_commit: 2a24dd37604e7c3e9f82f48eb3f782f8623fd509
+base_config: configs/correction_reserve.yaml
+previous_output: outputs/correction_reserve_ik/minimal_intervention_development
+output: outputs/correction_reserve_ik/elastic_demand_development
+robots: [panda, ur5e]
+methods: [trac_task_5ms, trac_task_20ms, pink_qp, cr_ik, cr_ik_minimal,
+          cr_ik_elastic_mu0, cr_ik_elastic_mu025, cr_ik_elastic_mu1, cr_ik_elastic_mu4]
+mu_grid: [0, 0.25, 1, 4]
+trac_repeats: 3
+order_seed: 982009201
+bootstrap_seed: 982009202
+bootstrap_resamples: 4000
+cpu_affinity: {panda: [0, 2], ur5e: [4, 6]}
+scope: all_existing_40_development_trajectories_per_robot_only
+fixed_demand_parameters: reuse_previous_protocol_byte_for_byte
+objective: half_squared_normalized_q_intervention_plus_half_squared_z_intervention_plus_half_mu_squared_xi_over_r
+objective_comparison_atol: 1.0e-10
+objective_comparison_rtol: 1.0e-9
+maximum_linearizations: 2
+recovery: unchanged_predictive_feasibility_subproblem_when_initial_pair_illegal_or_backup_failed
+selection: no_mu_selected_this_round_all_four_settings_reported
