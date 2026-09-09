@@ -1,0 +1,8 @@
+{
+  "state": "aborted_read_only_analysis_attempt",
+  "cause": "Analysis treated every baseline native_status as a list of stage dictionaries; some baselines have string/dictionary metadata.",
+  "scope": "reporting parser only; no online solver or raw record changed",
+  "solver_calls": 0,
+  "analysis_source_sha256": "d7a23db8cac8a2610c76b16e7f6cb59ce4a0dfd32853c1a9f67cbd0390348921",
+  "recovery": "Retain this partial directory, normalize metadata type in analysis, rerun only read-only verification and reporting. No IK experiment repeated."
+}

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-09T10:04:44.031564+00:00",
+  "report": "docs/CRIK_ELASTIC_DEMAND_FINDINGS.md",
+  "report_sha256": "e3c7792c75cce23a1a74f4f8cca1ebd2a2588c57922c65fc59623b9f5f66f18c",
+  "generator_sha256": "95016fa4ee40c8faeb5740b565170e152024a002b55d8526bf156d4c497696e6",
+  "sources": {
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/elastic_demand_development/reports/source_data.json": "e4c802a1f7e0f1d72ea564a443ea2526389ac34d4a514c45e3939d1ad6c3c272",
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/elastic_demand_development/reports/verification_manifest.json": "83582d1ea39b78dffb8d0dec0f9fa1a9c10df3b03bbbb89fd91f3f4cde3103e3",
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/elastic_demand_development/protocol/preflight.json": "9eaf521a7f7ec2baed2393ac1256d6ecd21094db051eac8b4d490f865a1e67a5"
+  }
+}

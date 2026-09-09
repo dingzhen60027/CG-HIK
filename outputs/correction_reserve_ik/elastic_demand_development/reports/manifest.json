@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-09T10:04:13.605520+00:00",
+  "sources": {
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/elastic_demand_development/panda/completed.json": "ac0cb6abd1ab71fc712bfd0ec82309e2158d10ceb42109ac1ead04cf48ccb81c",
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/elastic_demand_development/ur5e/completed.json": "8233824bbb66e1596b46a49b43d68addd3faa318c8d0c32c0fc31e4b5680e017"
+  },
+  "code_sha256": "8d8a9b642a7ebc12c4308e3ecc4029c11e666ecc977c0a31f4080fed6a087193",
+  "scope": "observed development, not fresh test",
+  "independent_unit": "40 trajectory UIDs per robot; 3 searches nested, Pink 1",
+  "intervals": "4000 paired family-stratified UID bootstrap resamples, unadjusted descriptive 95% CIs; no significance or equivalence test",
+  "exclusions": 0,
+  "frame_calls": 300000,
+  "runs": 2000,
+  "selected_mu": null
+}
