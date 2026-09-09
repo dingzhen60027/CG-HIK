@@ -1,0 +1,28 @@
+experiment: correction_reserve_minimal_intervention_development
+baseline_commit: 156da7b773fa2d8708babac45f8e8f0e338abd30
+base_config: configs/correction_reserve.yaml
+output: outputs/correction_reserve_ik/minimal_intervention_development
+robots: [panda, ur5e]
+methods: [trac_task_5ms, trac_task_20ms, pink_qp, cr_ik, two_step_predictive,
+          cr_ik_minimal, cr_ik_minimal_fixed, cr_ik_minimal_no_shortcut]
+trac_repeats: 3
+deterministic_repeats: 1
+order_seed: 982009101
+bootstrap_seed: 982009102
+bootstrap_resamples: 4000
+demand:
+  window: 20
+  quantile: 0.95
+  empirical_definition: inverse_empirical_cdf
+  floor_development_quantile: 0.5
+  initialization_development_quantile: 0.95
+  fixed_r: same_as_development_initialization
+  maximum: null
+optimizer:
+  maximum_updates: 2
+  lambda: 1.0
+  reuse_unchanged_optimizer_settings: true
+  warm_start: previous_verified_nominal_clipped_to_actual_backup_interval_then_one_linear_prediction_step
+  no_shortcut_control: solve_even_when_initial_pair_is_sufficient_but_keep_the_zero_cost_pair
+cpu_affinity: {panda: [0, 2], ur5e: [4, 6]}
+scope: all_original_development_targets_only_no_new_formal_trajectories

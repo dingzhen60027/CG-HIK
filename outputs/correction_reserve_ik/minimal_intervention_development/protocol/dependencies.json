@@ -1,0 +1,14 @@
+{
+  "python": "3.12.13",
+  "packages": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.0",
+    "clarabel": "0.11.1",
+    "pin": "3.9.0",
+    "pin-pink": "3.3.0",
+    "qpsolvers": "4.13.0",
+    "osqp": "1.0.5"
+  },
+  "native_library": "tmp/task_contract_build/libcontract_trac.so",
+  "native_library_sha256": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83"
+}

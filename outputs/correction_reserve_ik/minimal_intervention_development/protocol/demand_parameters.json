@@ -1,0 +1,30 @@
+{
+  "panda": {
+    "minimum": 0.32955855896198216,
+    "initial": 4.489481000005857,
+    "observed_errors": 5960,
+    "minimum_source": "target-only median",
+    "initial_source": "target-only Q95",
+    "error_quantiles": {
+      "0.5": 0.32955855896198216,
+      "0.9": 3.1577540757032025,
+      "0.95": 4.489481000005857,
+      "0.99": 7.929491358913101,
+      "1.0": 38.58838537915784
+    }
+  },
+  "ur5e": {
+    "minimum": 0.2714998974251062,
+    "initial": 3.9981641984305902,
+    "observed_errors": 5960,
+    "minimum_source": "target-only median",
+    "initial_source": "target-only Q95",
+    "error_quantiles": {
+      "0.5": 0.2714998974251062,
+      "0.9": 2.5181348820641536,
+      "0.95": 3.9981641984305902,
+      "0.99": 6.171769240998725,
+      "1.0": 17.20203191144491
+    }
+  }
+}
