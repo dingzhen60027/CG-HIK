@@ -1,0 +1,28 @@
+experiment: correction_reserve_elastic_locked_evaluation
+baseline_commit: 01d1dd1c82b97920f67cdf12b3abc539a5329523
+base_config: configs/correction_reserve.yaml
+previous_output: outputs/correction_reserve_ik/elastic_demand_development
+output: outputs/correction_reserve_ik/elastic_locked_evaluation
+robots: [panda, ur5e]
+primary: cr_ik_elastic_mu025
+mu: 0.25
+methods: [cr_ik_elastic_mu025, cr_ik_mu0_analytic, two_step_predictive, trac_task_5ms, trac_task_20ms, pink_qp]
+repeats: 3
+trajectories_per_family: 40
+frames: 300
+dt: 0.02
+families: [smooth, near_singular, joint_limit_return, high_curvature]
+family_display: {high_curvature: curvature-speed variation}
+seed_base: 983009000
+uid_namespace: crik_elastic_locked
+order_seed: 983009901
+bootstrap_seed: 983009902
+bootstrap_resamples: 4000
+cpu_affinity: {panda: [0, 2], ur5e: [4, 6]}
+fixed_demand_parameters: reuse_previous_protocol_byte_for_byte
+selection: unified_mu_025_selected_from_observed_development_not_claimed_optimal
+primary_comparisons: [cr_ik_mu0_analytic, trac_task_5ms, trac_task_20ms, pink_qp]
+additional_comparison: two_step_predictive
+independent_unit: trajectory_uid_average_all_three_repeats_then_family_stratified_paired_analysis
+global_gate: false
+result_dependent_changes: forbidden
