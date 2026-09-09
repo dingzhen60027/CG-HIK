@@ -1,0 +1,35 @@
+{
+  "utc": "2026-09-09T13:14:52.294872+00:00",
+  "results": [
+    {
+      "robot": "panda",
+      "frames": 864000,
+      "accepted_commands": 762158,
+      "causal_demand_checks": 288000,
+      "nominal_pairs": 376372,
+      "actual_selected_objectives": 250885,
+      "exact_direct_returns": 184972,
+      "trial_geometry_checks": 39874,
+      "strict_actual_improvements": 4703,
+      "partial_adoptions": 4678,
+      "acceptance_discrepancies": 0,
+      "actual_objective_discrepancies": 0
+    },
+    {
+      "robot": "ur5e",
+      "frames": 864000,
+      "accepted_commands": 819602,
+      "causal_demand_checks": 288000,
+      "nominal_pairs": 406555,
+      "actual_selected_objectives": 275550,
+      "exact_direct_returns": 215029,
+      "trial_geometry_checks": 53970,
+      "strict_actual_improvements": 5069,
+      "partial_adoptions": 5069,
+      "acceptance_discrepancies": 0,
+      "actual_objective_discrepancies": 0
+    }
+  ],
+  "solver_calls": 0,
+  "operation": "read-only original verifier, actual nonlinear reserve/objective checks including all logged trials, causal-demand replay; no IK reruns"
+}

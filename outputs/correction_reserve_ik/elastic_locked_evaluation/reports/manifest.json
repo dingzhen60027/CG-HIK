@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-09T13:14:52.295088+00:00",
+  "sources": {
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/elastic_locked_evaluation/panda/completed.json": "dee9f645f578cbf8465e9a67bd76539414bc55685e297f7846559f907bc504cf",
+    "/home/eric/wjg/btry/outputs/correction_reserve_ik/elastic_locked_evaluation/ur5e/completed.json": "d003c5d55225b3ed0a182063f0a1e1c400037ceaa53ff7ebd0e99cd07d953dbc"
+  },
+  "code_sha256": "09edbf3a529acb3c643791d97091a725edf4ffcb8068d536483600a31501ce49",
+  "scope": "fixed-candidate independent evaluation",
+  "independent_unit": "160 trajectory UIDs per robot; all settings have 3 nested repeats, Pink timing repeats not independent samples",
+  "intervals": "4000 paired family-stratified UID bootstrap resamples, unadjusted descriptive 95% CIs; no significance or equivalence test",
+  "exclusions": 0,
+  "frame_calls": 1728000,
+  "runs": 5760,
+  "selected_mu": 0.25
+}

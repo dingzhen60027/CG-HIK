@@ -3,7 +3,7 @@ from . import study as old
 from .locked_study import PRIMARY,ANALYTIC,configurations
 
 
-def write_findings(root,tables):
+def write_findings(root,tables,output_path=None):
     cfg,_,_=configurations()
     main={(r['robot'],r['method']):r for r in tables['main_table']}
     pairs={(r['robot'],r['baseline'],r['metric']):r for r in tables['paired_comparisons']}
@@ -58,6 +58,10 @@ def write_findings(root,tables):
             vals=[sum(c['change']==which and (not stable or c['stable_all_vs_none']) for c in group)
                 for which,stable in [('gained',False),('lost',False),('gained',True),('lost',True)]]
             lines.append(f"| {robot} | {main[(robot,base)]['label']} | "+' | '.join(map(str,vals))+' |')
+    stable=[c for c in tables['gained_lost_uids'] if c['baseline']==ANALYTIC and c['change']=='gained' and c['stable_all_vs_none']]
+    for c in stable:
+        lines += ['', f"局部成功实例：{c['robot']} / {c['family']}，UID `{c['uid']}`，Elastic为3/3完成、解析μ=0为0/3。"
+            '这是一个UID内的三次搜索重复，不是三条独立轨迹；它支持存在局部成功实例，不抵消其他UID的损失，也不建立总体收益。']
     lines += ['', '全部UID、三遍完成率和首次失败输入见source-data，不只展示恢复实例。', '',
         '## 4. 相对TRAC/Pink的完成—时限—成本折中', '',
         '| 机器人 | 对照 | ΔTSR [95%区间] | ΔDTSR20 [95%区间] | 累计成本比 [95%区间] |',
@@ -66,7 +70,11 @@ def write_findings(root,tables):
         for base in ('trac_task_5ms','trac_task_20ms','pink_qp','two_step_predictive'):
             lines.append(f"| {robot} | {main[(robot,base)]['label']} | {delta(robot,base,'completion')} | "
                 f"{delta(robot,base,'deadline_completion')} | {ratio(robot,base)} |")
-    lines += ['', '是否值得增加计算必须同时看本表的任务与时限差异，而不是仅与昂贵旧实现比速度。'
+    lines += ['', '本次尚未建立新增修正缺口代价的实用必要性。UR5e相对Pink和原普通双步预测有明确的样本收益，'
+        '但公平解析μ=0保留了近似的完成均值，因此这些对照不能单独归因于修正目标。'
+        '相对TRAC-IK 20ms，UR5e的完成与DTSR20均值更低、累计成本均值更高；'
+        'Panda相对Pink的完成与时限点估计也不利。各区间和尾时延仍完整保留，不据此宣称全指标支配或等效。', '',
+        '是否值得增加计算必须同时看本表的任务与时限差异，而不是仅与昂贵旧实现比速度。'
         '20ms是软件评价deadline，不是硬实时证明；算法总时间包含备用求解、预测/需求、初始对、锥构造/求解和非线性验收。', '',
         '## 全部类别与实际误差', '',
         '| 机器人 | 类别 | 方法 | TSR / DTSR20 | 累计s | P95 ms | 加速度RMS |',
@@ -100,5 +108,68 @@ def write_findings(root,tables):
         '- [首次失败输入](../outputs/correction_reserve_ik/elastic_locked_evaluation/reports/first_failure_inputs.csv)',
         '- [原始记录与协议](../outputs/correction_reserve_ik/elastic_locked_evaluation/)', '',
         '**本轮结束：保留固定结果，不自动搜索μ、增加模块、启动另一轮评估或重写论文。**', '']
-    path=old.ROOT/'docs/CRIK_ELASTIC_LOCKED_EVALUATION.md'
+    lines[2:2]=['**结论：本次未确认修正缺口代价的独立完成收益。** '
+        f"相对公平解析μ=0，Panda的ΔTSR为{delta('panda',ANALYTIC,'completion')}，"
+        f"UR5e为{delta('ur5e',ANALYTIC,'completion')}；累计成本比分别为"
+        f"{ratio('panda',ANALYTIC)}、{ratio('ur5e',ANALYTIC)}。"
+        'UR5e开发期完成增量未得到清楚的独立复现；Panda点估计略降。区间含零不是等效或无退化证明。','']
+    path=output_path if output_path is not None else old.ROOT/'docs/CRIK_ELASTIC_LOCKED_EVALUATION.md'
     with path.open('x',encoding='utf8') as f:f.write('\n'.join(lines))
+
+
+def finalize_delivery():
+    """Package an already completed read-only report; never invoke an IK solver."""
+    import importlib.metadata
+    import json
+    import os
+    import subprocess
+    from .locked_study import verify_seal
+    cfg,_,root=configurations();seal=verify_seal()
+    doc=old.ROOT/'docs/CRIK_ELASTIC_LOCKED_EVALUATION.md'
+    assert doc.is_file() and (root/'reports/verification_manifest.json').is_file()
+    versions=json.loads((root/'protocol/dependencies.json').read_text())
+    assert all(importlib.metadata.version(k)==v for k,v in versions['packages'].items())
+    assert old.sha(old.ROOT/versions['native_library'])==versions['native_library_sha256']
+    hardware=json.loads(subprocess.check_output(['lscpu','-J'],text=True,env=dict(os.environ,LC_ALL='C')))
+    old.write_json(root/'delivery_hardware.json',hardware)
+    readme='''# Elastic CR-IK locked evaluation
+
+Candidate and identities were committed before evaluation. The only primary is
+Elastic mu=0.25, shared by Panda and UR5e; all six settings have three repetitions.
+160 independent UIDs/robot, four equal families, 300 frames each: 5760 runs and
+1,728,000 measured calls. No new mu search, old evidence replacement or paper edit.
+
+`protocol/` contains the pre-outcome seal, online inputs, disjoint identities,
+separate verified reference paths and unchanged dependency/demand parameters.
+`panda/runs/` and `ur5e/runs/` contain every frame and run summary, including
+failures/timeouts. Each robot's completed manifest hashes every raw record.
+`reports/` contains full/family tables, UID-averaged paired comparisons, completion
+UIDs, first-failure inputs, decision/timing tables and a read-only nonlinear audit.
+Successful raw trajectories retain their actual accepted q sequence, not q_ref.
+
+The six-method run is complete. Do not rerun it to replace these results.
+The independent numerical entry point is
+`python -m confik.correction_reserve.locked_study`; its shell wrapper requires an
+explicit prepare/check/panda/ur5e action and refuses occupied result directories.
+Read-only reporting is `python -m confik.correction_reserve.locked_reporting`;
+it also refuses to overwrite an existing report. See the frozen protocol for
+the environment and the main document `docs/CRIK_ELASTIC_LOCKED_EVALUATION.md`.
+
+Outer latency includes all command-ready operations. Offline future-error joins,
+serialization and this audit are not online compute. dt=20 ms is not a hard
+real-time guarantee. All statistical intervals use trajectory UIDs, with the
+three repeats averaged first; Pink timing repeats are not independent samples.
+'''
+    with (root/'README.md').open('x',encoding='utf8') as f:f.write(readme)
+    paths=['src/confik/correction_reserve/locked_reporting.py','src/confik/correction_reserve/locked_findings.py']
+    old.write_json(root/'delivery_manifest.json',dict(utc=old.utc(),baseline=cfg['baseline_commit'],
+        selected_mu=.25,robots=cfg['robots'],trajectories_per_robot=160,runs=5760,frames=1728000,
+        evaluation_git_sha='48b58546a26251225ac450294c4913efc6a16d7f',
+        numerical_seal_sha256=old.sha(root/'protocol/selection_seal.json'),
+        report_sha256=old.sha(doc),analysis_code={p:old.sha(old.ROOT/p) for p in paths},
+        files={str(p.relative_to(root)):old.sha(p) for p in sorted(root.rglob('*')) if p.is_file()},
+        old_tracked_files_changed=[],numerical_configuration_changed_after_outcomes=False,
+        additional_solver_experiments_after_evaluation=0,stop='evaluate fixed results; no tuning, new module or paper rewrite'))
+
+
+if __name__=='__main__':finalize_delivery()

@@ -1,0 +1,15 @@
+robot,method,category,trials
+panda,cr_ik_elastic_mu025,illegal_pair,14538
+panda,cr_ik_elastic_mu025,legal_actual_improvement,8556
+panda,cr_ik_elastic_mu025,legal_but_hard_rule_would_reject,8414
+panda,cr_ik_elastic_mu025,legal_no_actual_improvement,181
+panda,cr_ik_mu0_analytic,illegal_pair,12783
+panda,cr_ik_mu0_analytic,legal_actual_improvement,3816
+panda,cr_ik_mu0_analytic,legal_but_hard_rule_would_reject,3500
+ur5e,cr_ik_elastic_mu025,illegal_pair,19922
+ur5e,cr_ik_elastic_mu025,legal_actual_improvement,9610
+ur5e,cr_ik_elastic_mu025,legal_but_hard_rule_would_reject,10190
+ur5e,cr_ik_elastic_mu025,legal_no_actual_improvement,737
+ur5e,cr_ik_mu0_analytic,illegal_pair,19135
+ur5e,cr_ik_mu0_analytic,legal_actual_improvement,4566
+ur5e,cr_ik_mu0_analytic,legal_but_hard_rule_would_reject,4439

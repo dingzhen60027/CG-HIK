@@ -1,0 +1,29 @@
+robot,method,status,occurrences
+panda,cr_ik_elastic_mu025,AlmostSolved,100
+panda,cr_ik_elastic_mu025,MaxTime,53503
+panda,cr_ik_elastic_mu025,PrimalInfeasible,17331
+panda,cr_ik_elastic_mu025,Solved,12612
+panda,cr_ik_elastic_mu025,outer_soft_limit,11
+panda,cr_ik_mu0_analytic,PrimalInfeasible,17497
+panda,cr_ik_mu0_analytic,Solved,7615
+panda,cr_ik_mu0_analytic,outer_soft_limit,3
+panda,pink_qp,maximum iterations reached,31128
+panda,pink_qp,solved,46353
+panda,pink_qp,solved inaccurate,66519
+panda,two_step_predictive,PrimalInfeasible,17760
+panda,two_step_predictive,Solved,378678
+panda,two_step_predictive,outer_soft_limit,17
+ur5e,cr_ik_elastic_mu025,AlmostSolved,63
+ur5e,cr_ik_elastic_mu025,MaxTime,46213
+ur5e,cr_ik_elastic_mu025,PrimalInfeasible,4378
+ur5e,cr_ik_elastic_mu025,Solved,15454
+ur5e,cr_ik_elastic_mu025,outer_soft_limit,9
+ur5e,cr_ik_mu0_analytic,PrimalInfeasible,4679
+ur5e,cr_ik_mu0_analytic,Solved,10264
+ur5e,cr_ik_mu0_analytic,outer_soft_limit,2
+ur5e,pink_qp,maximum iterations reached,342
+ur5e,pink_qp,solved,143646
+ur5e,pink_qp,solved inaccurate,12
+ur5e,two_step_predictive,PrimalInfeasible,12287
+ur5e,two_step_predictive,Solved,395117
+ur5e,two_step_predictive,outer_soft_limit,10

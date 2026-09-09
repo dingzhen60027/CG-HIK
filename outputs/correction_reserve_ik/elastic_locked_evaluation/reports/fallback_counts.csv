@@ -1,0 +1,15 @@
+robot,method,reason,frames
+panda,cr_ik_elastic_mu025,convex_solve_unsuccessful,70831
+panda,cr_ik_elastic_mu025,no_actual_objective_improvement,30
+panda,cr_ik_elastic_mu025,nonlinear_pair_rejected,1206
+panda,cr_ik_elastic_mu025,outer_soft_limit,11
+panda,cr_ik_mu0_analytic,convex_solve_unsuccessful,17495
+panda,cr_ik_mu0_analytic,nonlinear_pair_rejected,1080
+panda,cr_ik_mu0_analytic,outer_soft_limit,3
+ur5e,cr_ik_elastic_mu025,convex_solve_unsuccessful,50584
+ur5e,cr_ik_elastic_mu025,no_actual_objective_improvement,123
+ur5e,cr_ik_elastic_mu025,nonlinear_pair_rejected,1693
+ur5e,cr_ik_elastic_mu025,outer_soft_limit,9
+ur5e,cr_ik_mu0_analytic,convex_solve_unsuccessful,4672
+ur5e,cr_ik_mu0_analytic,nonlinear_pair_rejected,1713
+ur5e,cr_ik_mu0_analytic,outer_soft_limit,1

@@ -1,0 +1,116 @@
+{
+  "utc": "2026-09-09T12:33:11.258128+00:00",
+  "code_hashes": {
+    "configs/correction_reserve.yaml": "a005315bb61c264fa6bbb4cf7565650ac9cebf86f6b2a283784bdf42364f16e4",
+    "docs/CRIK_ALGORITHM_PROTOCOL.md": "a1c5a12b47442fcc204b6c031566f985405fd22bedf80a719300d34ce5dcb514",
+    "src/confik/correction_reserve/__init__.py": "f0963f1a3fda8f302d8be114c8c86378437d6e8a1986925c8a7deb4bab54d17a",
+    "src/confik/correction_reserve/convex.py": "d10ae908b16fc007795164d3d40b8d6e20c9bd318bbb03733ddf21b145c35014",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native/ranged_bridge/Cargo.lock": "847f90a2b6bbb70378e064098ea007eae0f928ac1e08ab8011edeb9a04c84dcd",
+    "src/confik/correction_reserve/native/ranged_bridge/Cargo.toml": "54238fa1b6584da64364ed1c35a79702e8b425c98563a42697ffe2457929f1ea",
+    "src/confik/correction_reserve/native/ranged_bridge/src/lib.rs": "5767a734fcc41f9070446a6e5f8718fa6f29efd61323ecd2e54b43a1863696f9",
+    "src/confik/correction_reserve/native/ranged_build.py": "9b5bd0345b8acd4eb1b5af32255bfd91e1c41767451ff3cb332ed81781ebfc3e",
+    "src/confik/correction_reserve/native/ranged_positive_range.patch": "0ef16658394005bd3436ffd0dc089450cd5e56d9b6cb46e7b9010124be97f91e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/correction_reserve/ranged_adapter.py": "574a35db2bbe4bf3049125766e3a6b085b83fa6550e1aa89d3adffd947319260",
+    "src/confik/correction_reserve/runtime.py": "65199f86dcb8ccaef7981ca7331a4164d0d6bf17bb1b617c13669f4350446bec",
+    "src/confik/correction_reserve/study.py": "b489d082641ec4ed36bcc69aab6df82b6d4935bb16c920f90325bd79313d3a94",
+    "src/confik/correction_reserve/minimal_demand.py": "ffed84ded59c7083a9a867c3a9e0626382f8cea6ba50a823ac89b818030f3b9b",
+    "src/confik/correction_reserve/minimal_convex.py": "b4b539057c84dcc20d915f83f1c706fdd5b513fca1771bc7b2e6c31b13cbe3c1",
+    "src/confik/correction_reserve/minimal_runtime.py": "1abaf2762f5b4eae07ba3ef5b928ec9c6f25a2bda19cb6f8e00f88793a1d4fad",
+    "src/confik/correction_reserve/minimal_study.py": "f33adfe2c0636f6473a8102817c09ae831a6ad168b44f8c485d13406326b2021",
+    "configs/correction_reserve_minimal.yaml": "72ce092fea8bf33ff3cfae13117cc579af089476a19a9e2954dbd80bf3d3df5d",
+    "docs/CRIK_MINIMAL_INTERVENTION_PROTOCOL.md": "86f4f793bde9abad1908ffba5765422d8868509920e29841e1c124409156a71f",
+    "configs/paper_v2.yaml": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+    "src/confik/task_contract_alignment/outcomes.py": "e9b36e1c59fba49f181fa3cf36f7583e844d3285c2f4c35878c47768a4e885dd",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/correction_reserve/elastic_convex.py": "caaa7b52c044a31099051165d04047cdec6c37e8c577493eaf87d5a69943a5cb",
+    "src/confik/correction_reserve/elastic_runtime.py": "54a97db645ba6bd6fff2ff5be3d5fe0b457752336c06761cdea932437bb53c27",
+    "src/confik/correction_reserve/elastic_study.py": "23977280dc77a0fa13fff02a38078e6afee7c13193c966bab9aef82d8718e82c",
+    "configs/correction_reserve_elastic.yaml": "897305d972aae7e600e701009c3a6b48ca8fa9d167ddd35c16b52fc04b7b178d",
+    "docs/CRIK_ELASTIC_DEMAND_PROTOCOL.md": "fc1d96a2775da688fb56140d60cfd2481a1685ff7827e3ab5849b1a07501bbfb",
+    "tests/test_crik_elastic.py": "553cb6a413ae9545e6d599d407e854f30238686e9cd00d05f2e28dac67d25c53",
+    "configs/correction_reserve_elastic_locked.yaml": "4fba0dc131828965e820734a472c9a0fc2ba14dd9154d4ac5064c45bb1ebf814",
+    "docs/CRIK_ELASTIC_LOCKED_PROTOCOL.md": "defebda626b0e079d429671c979987f47e37b55839a1a4fec279c3dfdf90c719",
+    "tests/test_crik_elastic_locked.py": "95d6ec44b48cb6c640ce3afacb26459070e87e10aa5552a33e8edadd55e94167",
+    "scripts/run_crik_elastic_locked.sh": "8206ab482f45b521b802f54efac6163af96d61eb5e64f0cd76e14dc9f503fb24",
+    "src/confik/correction_reserve/mu0_analytic.py": "4e57676605f0dd675469e00e43138b0a7b811373a0a87ac8aef1bf72254a4bda",
+    "src/confik/correction_reserve/locked_study.py": "2b6501c7c9fe2f271b07fb62b4911750722e7052baabb66d7ca046890303830a",
+    "src/confik/correction_reserve/data.py": "90b29f3dd89fc596e5cecb8a420f477737da0ee931322e94c224aa0eba71d2af",
+    "src/confik/correction_reserve/reporting.py": "439ffd253c105076eae11ebeba835715812ee2959ace49deaa81b261c259a6a9"
+  },
+  "configuration": {
+    "experiment": "correction_reserve_elastic_locked_evaluation",
+    "baseline_commit": "01d1dd1c82b97920f67cdf12b3abc539a5329523",
+    "base_config": "configs/correction_reserve.yaml",
+    "previous_output": "outputs/correction_reserve_ik/elastic_demand_development",
+    "output": "outputs/correction_reserve_ik/elastic_locked_evaluation",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "primary": "cr_ik_elastic_mu025",
+    "mu": 0.25,
+    "methods": [
+      "cr_ik_elastic_mu025",
+      "cr_ik_mu0_analytic",
+      "two_step_predictive",
+      "trac_task_5ms",
+      "trac_task_20ms",
+      "pink_qp"
+    ],
+    "repeats": 3,
+    "trajectories_per_family": 40,
+    "frames": 300,
+    "dt": 0.02,
+    "families": [
+      "smooth",
+      "near_singular",
+      "joint_limit_return",
+      "high_curvature"
+    ],
+    "family_display": {
+      "high_curvature": "curvature-speed variation"
+    },
+    "seed_base": 983009000,
+    "uid_namespace": "crik_elastic_locked",
+    "order_seed": 983009901,
+    "bootstrap_seed": 983009902,
+    "bootstrap_resamples": 4000,
+    "cpu_affinity": {
+      "panda": [
+        0,
+        2
+      ],
+      "ur5e": [
+        4,
+        6
+      ]
+    },
+    "fixed_demand_parameters": "reuse_previous_protocol_byte_for_byte",
+    "selection": "unified_mu_025_selected_from_observed_development_not_claimed_optimal",
+    "primary_comparisons": [
+      "cr_ik_mu0_analytic",
+      "trac_task_5ms",
+      "trac_task_20ms",
+      "pink_qp"
+    ],
+    "additional_comparison": "two_step_predictive",
+    "independent_unit": "trajectory_uid_average_all_three_repeats_then_family_stratified_paired_analysis",
+    "global_gate": false,
+    "result_dependent_changes": "forbidden"
+  },
+  "git_sha": "48b58546a26251225ac450294c4913efc6a16d7f",
+  "cpu_affinity": [
+    4,
+    6
+  ],
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "timing_scope": "all command-ready computation, not serialization or post-trajectory diagnostic joins",
+  "startup_warmup_calls_per_method": 1
+}
