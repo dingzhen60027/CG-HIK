@@ -301,9 +301,76 @@ def report(root,cfg):
         [round(row[x],3) for x in ('p50_ms','p95_ms','p99_ms')],round(row['cumulative_ms_per_sweep']/1000,3))
 
 
+def audit(root,cfg,stage):
+    """No new IK calls: reconstruct causal feedback, merit and saved witnesses."""
+    totals=Counter();largest_tau_error=0.;largest_merit_error=0.
+    for robot in cfg['robots']:
+        _,kin,v,_=context(robot,cfg);scale=task_scale(v)
+        byuid={i['uid']:i for i in items(cfg,robot)}
+        folder=root/f'{stage}_{robot}'
+        for s in json.loads((folder/'summaries.json').read_text()):
+            rows=read_rows(folder/s['raw_file']);item=byuid[s['uid']];previous=np.array(item['initial_q']);last=None
+            assert len(rows)==150
+            for row in rows:
+                totals['frames']+=1
+                np.testing.assert_array_equal(previous,row['previous_q'])
+                target=Pose(np.array(row['target_position']),np.array(row['target_rotation']))
+                query=IKQuery(target,previous,.02)
+                q=np.array(row['q']) if row['q'] is not None else np.full(kin.nq,np.nan)
+                check=v.check(q,query);assert check.accepted==row['accepted']
+                if row['accepted']:previous=q.copy();totals['accepted']+=1
+                np.testing.assert_array_equal(previous,row['accepted_state_q'])
+                assert row['accepted_within_20ms']==bool(row['accepted'] and row['total_latency_ns']<=20_000_000)
+                if row['method'].startswith('tar_'):
+                    prediction=predict_target(target,last)
+                    np.testing.assert_array_equal(prediction.position,row['predicted_position'])
+                    np.testing.assert_array_equal(prediction.rotation,row['predicted_rotation'])
+                    assert len(row['native_status'])<=2
+                    assert row['total_latency_ns']>=sum(row['phase_times_ns'].values())
+                    nodes=scenario_nodes(row['method']=='tar_nominal')
+                    anchor=np.array(row['backup']['q']) if row['backup']['accepted'] else np.array(row['previous_q'])
+                    step=kin.limits.velocity*.02+v.config.velocity_tolerance
+                    if row['planned_z'] is not None:
+                        zs=np.array(row['planned_z']);assert len(zs)==len(nodes)
+                        assert np.all(zs>=kin.limits.lower) and np.all(zs<=kin.limits.upper)
+                        assert np.all(np.abs(zs-q)<=step)
+                        errs=[];checks=[]
+                        for z,w in zip(zs,nodes):
+                            goal=perturb_target(prediction,w,1,scale)
+                            c=v.check(z,IKQuery(goal,q,.02));checks.append(bool(c.accepted))
+                            errs.append(max(c.position_error/scale[0],c.orientation_error/scale[3]))
+                        assert checks==row['planned_node_verified']
+                        assert all(checks)==row['all_nodes_verified']
+                        tau=max(0.,max(errs)-1)
+                        largest_tau_error=max(largest_tau_error,abs(tau-row['tau_actual']))
+                        # Public acos orientation and log differ near machine zero;
+                        # normalized discrepancy is checked rather than hidden.
+                        assert abs(tau-row['tau_actual'])<2e-5
+                        merit=.5*np.sum(((q-anchor)/step)**2)+.5*row['tau_actual']**2
+                        largest_merit_error=max(largest_merit_error,abs(merit-row['objective_actual']))
+                        assert abs(merit-row['objective_actual'])<1e-8
+                        if row['method']=='tar_fixed':
+                            np.testing.assert_allclose(zs,zs[0]+nodes@np.array(row['fixed_B_normalized']).T*step,atol=1e-12,rtol=0)
+                        totals['planned_frames']+=1;totals['all_nodes_verified']+=all(checks)
+                    if row['backup_used']:np.testing.assert_array_equal(row['q'],row['backup']['q'])
+                    for trial in row['nonlinear_trials']:
+                        if trial['adopted']:
+                            assert trial['geometric'] and v.check(np.array(trial['q']),query).accepted
+                            assert np.all(np.abs(np.array(trial['z'])-trial['q'])<=step)
+                            totals['adopted_trials']+=1
+                    if row['initial_geometric'] and row['objective_actual'] is not None:
+                        assert row['objective_actual']<=row['initial_objective']+1e-12
+                last=target
+    write_json(root/f'{stage}_audit.json',dict(utc=utc(),counts=dict(totals),
+        largest_tau_public_vs_native_error=largest_tau_error,largest_merit_error=largest_merit_error,
+        tests='all current outputs/public verifier, feedback holds, causal prediction, final scenario bounds/rates/verifier, fixed-map equality, merit, iteration/timing counts',
+        solver_calls=0))
+
+
 def main():
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','test','integration','development','mechanism','report'])
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','test','integration','development','mechanism','report','audit'])
     p.add_argument('--config',default='configs/task_recourse.yaml');p.add_argument('--out',type=Path,default=DEFAULT)
+    p.add_argument('--stage',choices=['integration','development'],default='development')
     p.add_argument('--robot',choices=['panda','ur5e']);args=p.parse_args();cfg=yaml.safe_load(Path(args.config).read_text())
     if args.action=='prepare':prepare(args.out,cfg)
     elif args.action=='test':math_tests(args.out)
@@ -313,6 +380,7 @@ def main():
     elif args.action=='mechanism':
         if not args.robot:p.error('--robot required')
         mechanism(args.out,cfg,args.robot)
+    elif args.action=='audit':audit(args.out,cfg,args.stage)
     else:report(args.out,cfg)
 
 

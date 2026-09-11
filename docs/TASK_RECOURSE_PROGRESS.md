@@ -81,4 +81,35 @@ development table and same-input nonlinear records, not reduced tau alone.
 
 Task package extracted and read completely. Source archive SHA256:
 `e775572642e21155abb8d99aed35503f90349a554aa6deecd6c6d47c33bcaa57`.
-Implementation and tests in progress; no robot performance conclusion yet.
+Actual joint-SOCP regressions and seven unit tests passed. The two-robot fixed
+integration set completed (48 whole-trajectory calls per robot, 150 frames each).
+All current outputs, causal feedback, future joint/rate bounds, final node
+verifications, fixed-map equalities, and recorded merit were independently
+recomputed without new IK calls. UR5e free recourse lost the selected
+near-singular trajectory_10 in this integration run; it is retained. No numerical
+solver, derivative, mapping, target or budget was changed based on integration
+outcomes. Only a read-only validation entry was added before the full run.
+
+The ignored `outputs/` policy required a separate explicit evidence commit:
+code/protocol `30c34d47`, input identities and mathematical records `b48d17ee`.
+Both precede the full development comparison. Original package bytes and newly
+executed mathematical results live in separate directories.
+
+Run with the already installed environment (no upgrades):
+
+```bash
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+export PYTHONPATH=tmp/crik_dependencies/python:src
+export PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
+/home/eric/anaconda3/envs/isaaclab_3/bin/python scripts/run_task_recourse.py development --robot panda
+/home/eric/anaconda3/envs/isaaclab_3/bin/python scripts/run_task_recourse.py development --robot ur5e
+/home/eric/anaconda3/envs/isaaclab_3/bin/python scripts/run_task_recourse.py mechanism --robot panda
+/home/eric/anaconda3/envs/isaaclab_3/bin/python scripts/run_task_recourse.py mechanism --robot ur5e
+/home/eric/anaconda3/envs/isaaclab_3/bin/python scripts/run_task_recourse.py report
+/home/eric/anaconda3/envs/isaaclab_3/bin/python scripts/run_task_recourse.py audit
+```
+
+Existing directories are never overwritten by these commands. Recorded runs use
+separate equivalent performance cores (Panda 0/2, UR5e 4/6); all methods for a
+robot run in the same process resources and interleaved order. Reporting and
+read-only validation use another core.

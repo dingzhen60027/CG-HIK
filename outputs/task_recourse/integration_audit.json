@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-11T12:58:18.299367+00:00",
+  "counts": {
+    "frames": 14400,
+    "accepted": 14334,
+    "planned_frames": 6647,
+    "all_nodes_verified": 6565,
+    "adopted_trials": 6731
+  },
+  "largest_tau_public_vs_native_error": 1.8895995879120164e-13,
+  "largest_merit_error": 0.0,
+  "tests": "all current outputs/public verifier, feedback holds, causal prediction, final scenario bounds/rates/verifier, fixed-map equality, merit, iteration/timing counts",
+  "solver_calls": 0
+}
