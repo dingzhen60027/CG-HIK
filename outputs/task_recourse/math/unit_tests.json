@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": ".......                                                                  [100%]\n=============================== warnings summary ===============================\ntests/test_task_recourse.py::test_zero_objective_returns_exact_backup\n  /home/eric/anaconda3/envs/isaaclab_3/lib/python3.12/site-packages/cmeel.prefix/lib/python3.12/site-packages/hppfcl/__init__.py:3: DeprecationWarning: Please update your 'hppfcl' imports to 'coal'\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n",
+  "stderr": ""
+}

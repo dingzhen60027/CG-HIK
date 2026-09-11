@@ -1,0 +1,212 @@
+{
+  "tolerance_A": {
+    "tau": 0.3000000007458545,
+    "actual_tau": 0.3000000004358305,
+    "q": [
+      5.061150343130493e-17
+    ],
+    "z": [
+      [
+        -0.0008643991037920398
+      ],
+      [
+        0.12358489977011966
+      ],
+      [
+        0.5999999995641694
+      ]
+    ],
+    "status": {
+      "status": "Solved",
+      "iterations": 9,
+      "native_seconds": 0.000113312,
+      "primal_residual": 1.0261491180671429e-16,
+      "dual_residual": 1.8237314418962992e-14,
+      "build_ns": 180558,
+      "solve_ns": 79324,
+      "affine_tau": 0.3000000007458545,
+      "variables": 5,
+      "sparse_nonzeros": 51,
+      "updates": 0
+    }
+  },
+  "tolerance_B": {
+    "tau": 7.968540637704247e-05,
+    "actual_tau": 0,
+    "q": [
+      1.7154469676457575e-35
+    ],
+    "z": [
+      [
+        -0.23666797860261715
+      ],
+      [
+        -6.54522804096517e-17
+      ],
+      [
+        0.2366679786026176
+      ]
+    ],
+    "status": {
+      "status": "Solved",
+      "iterations": 13,
+      "native_seconds": 0.000119521,
+      "primal_residual": 3.84721341176051e-15,
+      "dual_residual": 9.29644751239257e-15,
+      "build_ns": 99367,
+      "solve_ns": 98885,
+      "affine_tau": 7.968540637704247e-05,
+      "variables": 5,
+      "sparse_nonzeros": 51,
+      "updates": 0
+    }
+  },
+  "allocation_A": {
+    "tau": 6.631952806901072e-05,
+    "actual_tau": 0,
+    "q": [
+      -8.469364368399107e-36,
+      -8.532333367143936e-36
+    ],
+    "z": [
+      [
+        -0.07987130421524596,
+        -0.9544530448408735
+      ],
+      [
+        9.409257605240389e-17,
+        -2.700837388722046e-16
+      ],
+      [
+        0.07987130421525179,
+        0.9544530448408877
+      ]
+    ],
+    "status": {
+      "status": "Solved",
+      "iterations": 13,
+      "native_seconds": 0.000156373,
+      "primal_residual": 2.4719499495694747e-15,
+      "dual_residual": 7.070468380227571e-15,
+      "build_ns": 109285,
+      "solve_ns": 127620,
+      "affine_tau": 6.631952806901072e-05,
+      "variables": 9,
+      "sparse_nonzeros": 95,
+      "updates": 0
+    }
+  },
+  "allocation_B": {
+    "tau": 0.2000000003641181,
+    "actual_tau": 0.20000000023416686,
+    "q": [
+      1.5428656789968932e-30,
+      -8.777627247158748e-31
+    ],
+    "z": [
+      [
+        -0.39999999988291657,
+        -0.39999999988291657
+      ],
+      [
+        -2.2282009430201703e-16,
+        -5.03360843289019e-17
+      ],
+      [
+        0.39999999988291657,
+        0.39999999988291657
+      ]
+    ],
+    "status": {
+      "status": "Solved",
+      "iterations": 10,
+      "native_seconds": 0.000124373,
+      "primal_residual": 1.6642478682506353e-16,
+      "dual_residual": 2.4413206972668687e-16,
+      "build_ns": 109372,
+      "solve_ns": 92651,
+      "affine_tau": 0.2000000003641181,
+      "variables": 9,
+      "sparse_nonzeros": 95,
+      "updates": 0
+    }
+  },
+  "rank_zero": {
+    "tau": 4.604662600272429e-05,
+    "actual_tau": 0,
+    "q": [
+      -1.2560411432599736e-37,
+      7.569273110375344e-38
+    ],
+    "z": [
+      [
+        5.574249949517425e-18,
+        5.5741741460316454e-18
+      ],
+      [
+        5.574249949517896e-18,
+        5.574174146032131e-18
+      ],
+      [
+        5.57424994951744e-18,
+        5.574174146032131e-18
+      ]
+    ],
+    "status": {
+      "status": "Solved",
+      "iterations": 14,
+      "native_seconds": 0.000143011,
+      "primal_residual": 1.7190657064225151e-15,
+      "dual_residual": 3.2617581341085476e-15,
+      "build_ns": 103504,
+      "solve_ns": 117026,
+      "affine_tau": 4.604662600272429e-05,
+      "variables": 9,
+      "sparse_nonzeros": 95,
+      "updates": 0
+    }
+  },
+  "shared_current": {
+    "tau": 0.40000000029069543,
+    "actual_tau": 0.40000000019636905,
+    "q": [
+      6.800312899587953e-16
+    ],
+    "z": [
+      [
+        -0.4999999999018155
+      ],
+      [
+        0.49999999990181687
+      ]
+    ],
+    "status": {
+      "status": "Solved",
+      "iterations": 8,
+      "native_seconds": 8.0733e-05,
+      "primal_residual": 2.198580355261336e-15,
+      "dual_residual": 4.232031040145807e-13,
+      "build_ns": 85173,
+      "solve_ns": 59274,
+      "affine_tau": 0.40000000029069543,
+      "variables": 4,
+      "sparse_nonzeros": 37,
+      "updates": 0
+    }
+  },
+  "incorrect_independent_current": {
+    "q": [
+      -0.5,
+      0.5
+    ],
+    "z": [
+      -1,
+      1
+    ],
+    "actual_tau": 0.0
+  },
+  "common_affine_interpolation": {
+    "points": 21,
+    "max_error": 0.9656756509438806
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "scope": "Linear scalar-task mathematical tests only; not Panda/UR5e performance or a novelty claim.",
+  "tolerance_example": {
+    "A": {
+      "shortfall": 0.30000000000000004,
+      "corrections": [
+        [
+          -0.6
+        ],
+        [
+          0.6
+        ],
+        [
+          0.6
+        ]
+      ],
+      "residuals": [
+        0.5,
+        0.30000000000000004,
+        1.2999999999999998
+      ],
+      "perturbations": [
+        -1.0,
+        0.0,
+        1.0
+      ]
+    },
+    "B": {
+      "shortfall": 0.0,
+      "corrections": [
+        [
+          -0.4
+        ],
+        [
+          -0.4
+        ],
+        [
+          0.4
+        ]
+      ],
+      "residuals": [
+        -0.6,
+        0.4,
+        0.6
+      ],
+      "perturbations": [
+        -1.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "redundancy_example": {
+    "A": {
+      "shortfall": 0.0,
+      "corrections": [
+        [
+          -0.1,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0
+        ],
+        [
+          0.1,
+          1.0
+        ]
+      ],
+      "residuals": [
+        -0.8999999999999999,
+        -1.0,
+        0.8999999999999999
+      ],
+      "perturbations": [
+        -2.0,
+        0.0,
+        2.0
+      ]
+    },
+    "B": {
+      "shortfall": 0.19999999999999996,
+      "corrections": [
+        [
+          -0.4,
+          -0.4
+        ],
+        [
+          -0.4,
+          -0.4
+        ],
+        [
+          0.4,
+          0.4
+        ]
+      ],
+      "residuals": [
+        -1.2,
+        0.8,
+        1.2
+      ],
+      "perturbations": [
+        -2.0,
+        0.0,
+        2.0
+      ]
+    }
+  },
+  "rank_deficient_tolerance_example": {
+    "shortfall": 0.0,
+    "corrections": [
+      [
+        -0.1,
+        -0.1
+      ],
+      [
+        -0.1,
+        -0.1
+      ],
+      [
+        -0.1,
+        -0.1
+      ]
+    ],
+    "residuals": [
+      -0.5,
+      0.0,
+      0.5
+    ],
+    "perturbations": [
+      -0.5,
+      0.0,
+      0.5
+    ]
+  },
+  "nonanticipativity": {
+    "correct": {
+      "shared_current": true,
+      "shortfall": 0.3999999999999999,
+      "current": [
+        -0.0
+      ],
+      "next": [
+        -0.5,
+        0.5
+      ]
+    },
+    "incorrect_separate_current": {
+      "shared_current": false,
+      "shortfall": 0.0,
+      "current": [
+        -0.5,
+        0.5
+      ],
+      "next": [
+        -1.0,
+        1.0
+      ]
+    }
+  },
+  "affine_convex_interpolation": {
+    "checked_points": 21,
+    "max_abs_error": 0.8999999999999999
+  },
+  "checks_passed": true
+}

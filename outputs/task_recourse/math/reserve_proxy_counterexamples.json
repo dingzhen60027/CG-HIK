@@ -1,0 +1,126 @@
+{
+  "scope": "Exact linear one-dimensional mathematical counterexamples; not robot performance",
+  "residual_allowance": {
+    "A": {
+      "jacobian": [
+        1.0
+      ],
+      "correction_half_widths": [
+        0.6
+      ],
+      "nominal_residual": 0.9,
+      "task_tolerance": 1.0,
+      "fixed_right_inverse": [
+        1.0
+      ],
+      "fixed_policy_radius": 0.6,
+      "admissible_shift_interval": [
+        -2.5,
+        0.7000000000000001
+      ],
+      "exact_task_radius": 0.7000000000000001,
+      "left_endpoint_witness": [
+        -0.6,
+        -2.5
+      ],
+      "right_endpoint_witness": [
+        0.6,
+        0.7
+      ]
+    },
+    "B": {
+      "jacobian": [
+        1.0
+      ],
+      "correction_half_widths": [
+        0.4
+      ],
+      "nominal_residual": 0.0,
+      "task_tolerance": 1.0,
+      "fixed_right_inverse": [
+        1.0
+      ],
+      "fixed_policy_radius": 0.4,
+      "admissible_shift_interval": [
+        -1.4,
+        1.4
+      ],
+      "exact_task_radius": 1.4,
+      "left_endpoint_witness": [
+        -0.4,
+        -1.4
+      ],
+      "right_endpoint_witness": [
+        0.4,
+        1.4
+      ]
+    }
+  },
+  "redundancy_allocation": {
+    "A": {
+      "jacobian": [
+        1.0,
+        1.0
+      ],
+      "correction_half_widths": [
+        0.1,
+        1.0
+      ],
+      "nominal_residual": 0.0,
+      "task_tolerance": 1.0,
+      "fixed_right_inverse": [
+        0.5,
+        0.5
+      ],
+      "fixed_policy_radius": 0.2,
+      "admissible_shift_interval": [
+        -2.1,
+        2.1
+      ],
+      "exact_task_radius": 2.1,
+      "left_endpoint_witness": [
+        -0.1,
+        -1.0,
+        -2.1
+      ],
+      "right_endpoint_witness": [
+        0.1,
+        1.0,
+        2.1
+      ]
+    },
+    "B": {
+      "jacobian": [
+        1.0,
+        1.0
+      ],
+      "correction_half_widths": [
+        0.4,
+        0.4
+      ],
+      "nominal_residual": 0.0,
+      "task_tolerance": 1.0,
+      "fixed_right_inverse": [
+        0.5,
+        0.5
+      ],
+      "fixed_policy_radius": 0.8,
+      "admissible_shift_interval": [
+        -1.8,
+        1.8
+      ],
+      "exact_task_radius": 1.8,
+      "left_endpoint_witness": [
+        -0.4,
+        -0.4,
+        -1.8
+      ],
+      "right_endpoint_witness": [
+        0.4,
+        0.4,
+        1.8
+      ]
+    }
+  },
+  "checks_passed": true
+}
