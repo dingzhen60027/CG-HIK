@@ -1,0 +1,33 @@
+baseline: e9b621a3cfb5b6b4d2d0a0f2588a3d118ff7f02e
+source_config: configs/paper_v2.yaml
+native_trac_library: tmp/task_contract_build/libcontract_trac.so
+robots: [panda, ur5e]
+methods: [trac_task_5ms, trac_task_20ms, pink_qp, tar_nominal, tar_fixed, tar_free]
+repeats: 3
+order_seed: 2026091101
+bootstrap_seed: 2026091102
+bootstrap_samples: 4000
+development:
+  panda_targets: outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json
+  ur5e_targets: outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json
+integration:
+  selection: first_two_in_original_file_order_per_family
+  repeats: 1
+mechanism:
+  frame: 80
+  history_source: trac_task_5ms_repeat_0
+  reference: trac_task_20ms
+  reference_repeats: 3
+  mixed_l1_radii: [0.75, 1.5]
+  mixed_axes: [[0, 3], [1, 4], [2, 5]]
+optimizer:
+  outer_iterations: 2
+  trust_step: 0.5
+  native_max_iterations: 40
+  native_time_limit_ms: 2.0
+  total_soft_limit_ms: 18.0
+  pose_interior: 0.00001
+  rate_interior: 0.0000000001
+  objective_atol: 0.0000000001
+  objective_rtol: 0.00000001
+  rank_rtol: 0.0000000001
