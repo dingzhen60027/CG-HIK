@@ -17,7 +17,8 @@ import zipfile
 import numpy as np
 import yaml
 
-from confik.task_recourse import TaskRecourseIK, scenario_nodes
+from confik.task_recourse import TaskRecourseIK, scenario_nodes, common_model
+from confik.correction_reserve.native_geometry import NativeGeometry
 from confik.correction_reserve.study import ROOT, clean, write_json, sha, utc, context, execute_trajectory, read_rows
 from confik.correction_reserve.reporting import csv_write, group_table, paired_intervals, LABELS
 from confik.correction_reserve.geometry import predict_target, perturb_target, task_scale
@@ -225,11 +226,19 @@ def mechanism(root,cfg,robot):
 
 
 def report(root,cfg):
+    # Read-only source verification. No outcome-driven numerical reruns.
+    for robot in cfg['robots']:
+        for stage in ('development','mechanism'):
+            folder=root/f'{stage}_{robot}'
+            seal=json.loads((folder/'completed.json').read_text())
+            for name,digest in seal['files'].items():assert sha(folder/name)==digest,(folder,name)
     out=root/'reports';out.mkdir(exist_ok=False)
-    summaries=[];arrays={};extra=defaultdict(list);failures=[]
+    summaries=[];arrays={};extra=defaultdict(list);failures=[];model_rows=[]
     for robot in cfg['robots']:
         folder=root/f'development_{robot}'
         assert (folder/'completed.json').exists()
+        _,kin,v,urdf=context(robot,cfg);geometry=NativeGeometry(kin,urdf)
+        scale=task_scale(v);step=kin.limits.velocity*.02+v.config.velocity_tolerance
         for s in json.loads((folder/'summaries.json').read_text()):
             rows=read_rows(folder/s['raw_file']);summaries.append(s)
             arrays[s['run_id']]=dict(latency=np.array([r['total_latency_ns'] for r in rows]),
@@ -240,9 +249,29 @@ def report(root,cfg):
                     'target_position','target_rotation','q','position_error','orientation_error','failure_kind','total_latency_ns')})
             for r in rows:
                 if s['method'].startswith('tar_'):
-                    extra[(robot,s['method'])].append(dict(tau=r['tau_actual'],affine_tau=r['native_status'][-1]['affine_tau'] if r['native_status'] else None,
+                    extra[(robot,s['method'])].append(dict(tau=r['tau_actual'],
                         next_inside=r.get('actual_next_in_l1'),next_success=r.get('next_frame_accepted'),
                         all_verified=r['all_nodes_verified'],phases=r['phase_times_ns'],decision=r['decision']))
+                    # Compare the SAME backtracked candidate in the affine model
+                    # and true FK, not a solver optimum with a different fallback.
+                    anchor=np.array(r['backup']['q'] if r['backup']['accepted'] else r['previous_q'])
+                    z0=anchor.copy();outer=None
+                    predicted=Pose(np.array(r['predicted_position']),np.array(r['predicted_rotation']))
+                    nodes=scenario_nodes(s['method']=='tar_nominal')
+                    for trial in r['nonlinear_trials']:
+                        if trial['outer']!=outer:
+                            outer=trial['outer'];origin=z0.copy()
+                            e,F,C,_=common_model(geometry,predicted,origin,scale,step)
+                        zs=np.array(trial['z'])
+                        affine=e+((zs-origin)/step)@F.T+nodes@C.T
+                        affine_tau=max(0.,float(np.max(np.stack((np.linalg.norm(affine[:,:3],axis=1),np.linalg.norm(affine[:,3:],axis=1)))))-1.)
+                        true=np.array([pose_error(perturb_target(predicted,w,1,scale),geometry.forward(z))/scale for w,z in zip(nodes,zs)])
+                        actual_tau=max(0.,float(np.max(np.stack((np.linalg.norm(true[:,:3],axis=1),np.linalg.norm(true[:,3:],axis=1)))))-1.)
+                        assert abs(actual_tau-trial['tau_actual'])<1e-9
+                        model_rows.append(dict(robot=robot,uid=s['uid'],method=s['method'],repeat=s['repeat'],frame=r['frame'],
+                            outer=outer,alpha=trial['alpha'],adopted=trial['adopted'],geometric=trial['geometric'],
+                            affine_tau=affine_tau,actual_tau=actual_tau,difference=actual_tau-affine_tau))
+                        if trial['adopted']:z0=zs[0].copy()
     main=group_table(summaries,arrays);families=group_table(summaries,arrays,True)
     for row in main+families:
         ss=[s for s in summaries if s['robot']==row['robot'] and s['method']==row['method'] and (row['family']=='all' or s['family']==row['family'])]
@@ -275,24 +304,75 @@ def report(root,cfg):
         diagnostics.append(dict(robot=robot,method=method,decisions=dict(Counter(r['decision'] for r in rows)),
             actual_next_l1_coverage=float(np.mean([r['next_inside'] for r in next_rows])),phases=phases,
             mean_actual_tau=float(np.mean([r['tau'] for r in rows if r['tau'] is not None])),
-            mean_affine_tau=float(np.mean([r['affine_tau'] for r in rows if r['affine_tau'] is not None])),
             next_success_when_all_nodes_verified=float(np.mean([r['next_success'] for r in next_rows if r['all_verified']])) if any(r['all_verified'] for r in next_rows) else None))
-    mechanisms=[];mechanism_units=[]
+    mechanisms=[];mechanism_units=[];mechanism_pairs=[];witness_counts=Counter()
     for robot in cfg['robots']:
         folder=root/f'mechanism_{robot}'
         if not (folder/'completed.json').exists():raise RuntimeError('mechanism incomplete')
-        rows=json.loads((folder/'summaries.json').read_text());mechanism_units.extend(rows)
+        rows=json.loads((folder/'summaries.json').read_text())
+        _,kin,v,_=context(robot,cfg)
+        for item in items(cfg,robot):
+            saved=json.loads((folder/f'{item["site_id"]}_inputs.json').read_text())
+            query=IKQuery(Pose(np.array(saved['target_position']),np.array(saved['target_rotation'])),np.array(saved['previous_q']),.02)
+            returned={x['method']:x['result'] for x in saved['methods']}
+            for method,r in returned.items():
+                q=np.array(r['q']) if r['q'] is not None else np.full(kin.nq,np.nan)
+                assert v.check(q,query).accepted==r['accepted']
+                witness_counts['common_current_calls']+=1
+            raw=read_rows(folder/f'{item["site_id"]}.jsonl.gz')
+            for r in raw:
+                result=returned[r['method']]
+                assert r['current_q']==result['q'] and r['current_accepted']==result['accepted']
+                witness_counts['reference_rows']+=1
+                if result['accepted']:
+                    command=r['reference_result']['q']
+                    command=np.array(command) if command is not None else np.full(kin.nq,np.nan)
+                    query_next=IKQuery(Pose(np.array(r['target_position']),np.array(r['target_rotation'])),np.array(result['q']),.02)
+                    check=v.check(command,query_next)
+                    assert bool(check.accepted)==r['witness']
+                    witness_counts['actual_reference_calls']+=1
+                    witness_counts['verified_witnesses']+=bool(check.accepted)
+                else:assert not r['witness']
+            inside=next(r['inside_l1'] for r in raw if r['group']=='actual_next')
+            for summary in [r for r in rows if r['uid']==item['uid'] and r['group']=='actual_next']:
+                rows.append(dict(summary,group='actual_next_inside' if inside else 'actual_next_outside'))
+        mechanism_units.extend(rows)
         for method in cfg['methods']:
             for group in sorted({r['group'] for r in rows}):
                 sub=[r for r in rows if r['method']==method and r['group']==group]
                 mechanisms.append(dict(robot=robot,method=method,group=group,states=len(sub),
                     current_available=sum(r['current_accepted'] for r in sub),
                     correction_success=float(np.mean([r['correction_success'] for r in sub]))))
+        for group in sorted({r['group'] for r in rows}):
+            free=sorted([r for r in rows if r['method']=='tar_free' and r['group']==group],key=lambda r:r['uid'])
+            for base in [m for m in cfg['methods'] if m!='tar_free']:
+                other=sorted([r for r in rows if r['method']==base and r['group']==group],key=lambda r:r['uid'])
+                assert [r['uid'] for r in free]==[r['uid'] for r in other]
+                mechanism_pairs.append(dict(robot=robot,group=group,baseline=base,states=len(free),
+                    **paired_intervals(np.array([r['correction_success'] for r in free]),np.array([r['correction_success'] for r in other]),
+                        [r['family'] for r in free],cfg['bootstrap_seed'],cfg['bootstrap_samples'])))
+    model_summary=[]
+    for robot in cfg['robots']:
+        for method in ('tar_free','tar_fixed','tar_nominal'):
+            for adopted_only in (False,True):
+                sub=[r for r in model_rows if r['robot']==robot and r['method']==method and (not adopted_only or r['adopted'])]
+                delta=np.array([r['difference'] for r in sub])
+                model_summary.append(dict(robot=robot,method=method,subset='adopted' if adopted_only else 'all_trials',trials=len(sub),
+                    mean_affine_tau=float(np.mean([r['affine_tau'] for r in sub])),mean_actual_tau=float(np.mean([r['actual_tau'] for r in sub])),
+                    mean_absolute_discrepancy=float(np.mean(np.abs(delta))),p95_absolute_discrepancy=float(np.percentile(np.abs(delta),95)),
+                    maximum_absolute_discrepancy=float(np.max(np.abs(delta))),
+                    affine_zero_actual_positive=sum(r['affine_tau']<=1e-5 and r['actual_tau']>1e-5 for r in sub)))
     for name,rows in [('main_table',main),('family_table',families),('trajectory_units',units),('paired_comparisons',pairs),
                       ('gained_lost_uids',changes),('first_failure_inputs',failures),('run_summaries',summaries),
-                      ('same_input_correction',mechanisms),('same_input_units',mechanism_units)]:csv_write(out/f'{name}.csv',rows)
+                      ('same_input_correction',mechanisms),('same_input_units',mechanism_units),
+                      ('same_input_paired_comparisons',mechanism_pairs),('affine_nonlinear_summary',model_summary)]:csv_write(out/f'{name}.csv',rows)
+    with gzip.open(out/'matched_affine_nonlinear_trials.jsonl.gz','xt') as f:
+        for row in model_rows:f.write(json.dumps(clean(row),allow_nan=False,separators=(',',':'))+'\n')
+    write_json(out/'same_input_witness_audit.json',dict(counts=dict(witness_counts),new_solver_calls=0,
+        meaning='All successful corrections reverified from their own saved current command at the common input; failed searches do not prove infeasibility.'))
     write_json(out/'completion_uids.json',completion)
-    write_json(out/'source_data.json',dict(main=main,family=families,pairs=pairs,changes=changes,diagnostics=diagnostics,mechanism=mechanisms))
+    write_json(out/'source_data.json',dict(main=main,family=families,pairs=pairs,changes=changes,diagnostics=diagnostics,
+        mechanism=mechanisms,mechanism_pairs=mechanism_pairs,matched_model=model_summary))
     write_json(out/'manifest.json',dict(utc=utc(),code_hashes=hashes(),units=80,runs=len(summaries),frames=sum(s['frames'] for s in summaries),
         inference='whole UID, average three repeats, paired family-stratified bootstrap, unadjusted descriptive 95% intervals',
         sources={str(p.relative_to(root)):sha(p) for p in root.glob('*/completed.json')},
@@ -367,8 +447,57 @@ def audit(root,cfg,stage):
         solver_calls=0))
 
 
+def figures(root,cfg):
+    """Read frozen aggregate data only; editable exports, no IK or statistics refit."""
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    from matplotlib.ticker import FormatStrFormatter
+    data=json.loads((root/'reports/source_data.json').read_text())
+    out=root/'figures';out.mkdir(exist_ok=False)
+    plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['DejaVu Sans'],'font.size':7,'axes.titlesize':8,
+        'axes.labelsize':7,'xtick.labelsize':6.5,'ytick.labelsize':7,
+        'pdf.fonttype':42,'ps.fonttype':42,'svg.fonttype':'none',
+        'axes.spines.top':False,'axes.spines.right':False})
+    bases=['tar_fixed','tar_nominal','trac_task_5ms','trac_task_20ms','pink_qp']
+    names=['Fixed compensation','Nominal prediction','TRAC-IK 5 ms','TRAC-IK 20 ms','Pink']
+    fig,axes=plt.subplots(2,3,figsize=(7.2047244094,4.5669291339),layout='constrained')
+    source=[]
+    for row,robot in enumerate(cfg['robots']):
+        for col,metric in enumerate(('completion','deadline_completion','total_latency_ns')):
+            ax=axes[row,col];color='#0072B2' if row==0 else '#D55E00'
+            for y,base in enumerate(bases):
+                pair=next(p for p in data['pairs'] if p['robot']==robot and p['baseline']==base and p['metric']==metric)
+                value=pair['ratio'] if col==2 else 100*pair['difference']
+                ci=np.array(pair['ratio_ci'] if col==2 else pair['difference_ci'])*(1 if col==2 else 100)
+                ax.errorbar(value,y,xerr=[[max(0,value-ci[0])],[max(0,ci[1]-value)]],fmt='o',
+                    color=color,markersize=3.5,elinewidth=.9,capsize=2)
+                source.append(dict(robot=robot,baseline=base,metric=metric,value=value,low=ci[0],high=ci[1]))
+            ax.set_yticks(range(5),names if col==0 else ['']*5);ax.set_ylim(4.6,-.6)
+            ax.axvline(1 if col==2 else 0,color='#777777',linewidth=.6,linestyle='--',zorder=0)
+            ax.grid(axis='x',color='#dddddd',linewidth=.4);ax.set_axisbelow(True)
+            ax.set_title(chr(65+row*3+col)+('  '+('Panda' if row==0 else 'UR5e') if col==0 else ''))
+            if col==2:
+                ax.set_xscale('log')
+                ax.xaxis.set_major_formatter(FormatStrFormatter('%g'))
+            ax.set_xlabel(['TSR difference (pp)\npositive favors free recourse',
+                           'DTSR20 difference (pp)\npositive favors free recourse',
+                           'Cumulative time ratio\nlower favors free recourse'][col])
+    fig.suptitle('Shared-command free recourse versus each control',fontsize=9)
+    fig.savefig(out/'paired_task_cost.pdf')
+    fig.savefig(out/'paired_task_cost.svg')
+    fig.savefig(out/'paired_task_cost.png',dpi=360)
+    plt.close(fig)
+    csv_write(out/'paired_task_cost.csv',source)
+    write_json(out/'manifest.json',dict(source_sha256=sha(root/'reports/source_data.json'),
+        statistical_unit='40 trajectory UIDs per robot; 3 repeats averaged within UID',
+        intervals='paired family-stratified 95% bootstrap; descriptive, unadjusted; not equivalence intervals',
+        figure_size_mm=[183,116],minimum_intended_font_pt=6.5,
+        files={p.name:sha(p) for p in out.iterdir() if p.is_file()}))
+
+
 def main():
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','test','integration','development','mechanism','report','audit'])
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','test','integration','development','mechanism','report','audit','figures'])
     p.add_argument('--config',default='configs/task_recourse.yaml');p.add_argument('--out',type=Path,default=DEFAULT)
     p.add_argument('--stage',choices=['integration','development'],default='development')
     p.add_argument('--robot',choices=['panda','ur5e']);args=p.parse_args();cfg=yaml.safe_load(Path(args.config).read_text())
@@ -381,6 +510,7 @@ def main():
         if not args.robot:p.error('--robot required')
         mechanism(args.out,cfg,args.robot)
     elif args.action=='audit':audit(args.out,cfg,args.stage)
+    elif args.action=='figures':figures(args.out,cfg)
     else:report(args.out,cfg)
 
 

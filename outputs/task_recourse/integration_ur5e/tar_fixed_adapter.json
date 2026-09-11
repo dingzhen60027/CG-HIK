@@ -1,0 +1,14 @@
+{
+  "type": "TaskRecourseIK",
+  "warmup": "one stationary call, reset before each trajectory",
+  "public_backend": "URDFKinematics",
+  "joint_names": [
+    "shoulder_pan_joint",
+    "shoulder_lift_joint",
+    "elbow_joint",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "wrist_3_joint"
+  ],
+  "native_metadata": null
+}

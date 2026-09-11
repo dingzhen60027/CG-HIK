@@ -1,0 +1,75 @@
+{
+  "type": "PinkAdapter",
+  "warmup": "one stationary call, reset before each trajectory",
+  "public_backend": "URDFKinematics",
+  "joint_names": [
+    "panda_joint1",
+    "panda_joint2",
+    "panda_joint3",
+    "panda_joint4",
+    "panda_joint5",
+    "panda_joint6",
+    "panda_joint7"
+  ],
+  "native_metadata": {
+    "method": "pink_qp",
+    "versions": {
+      "pin-pink": "3.3.0",
+      "pin": "3.9.0",
+      "qpsolvers": "4.13.0",
+      "osqp": "1.0.5"
+    },
+    "settings": {
+      "qp_solver": "osqp",
+      "frame_gain": 1.0,
+      "frame_lm_damping": 0.0,
+      "posture_cost": 0.001,
+      "posture_gain": 1.0,
+      "tikhonov_damping": 1e-12,
+      "configuration_limit_gain": 1.0,
+      "qp_eps_abs": 1e-09,
+      "qp_eps_rel": 0.0,
+      "qp_max_iter": 2000,
+      "qp_time_limit_s": 0.018,
+      "qp_polishing": true,
+      "qp_adaptive_rho_interval": 25,
+      "bound_roundoff_clip_max_rad": 1e-08,
+      "differential_steps_per_query": 1
+    },
+    "urdf": "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/robots/panda_arm.urdf",
+    "joint_order": [
+      "panda_joint1",
+      "panda_joint2",
+      "panda_joint3",
+      "panda_joint4",
+      "panda_joint5",
+      "panda_joint6",
+      "panda_joint7"
+    ],
+    "base_frame": "panda_link0",
+    "end_frame": "panda_link8",
+    "source_configuration": "/home/eric/wjg/btry/configs/paper_v2.yaml",
+    "model_agreement": {
+      "configurations": 5,
+      "joint_order_equal": true,
+      "fk_max_position_component_error_m": 1.1102230246251565e-16,
+      "fk_max_rotation_component_error": 2.7755575615628914e-16,
+      "jacobian_max_component_error": 2.220446049250313e-16,
+      "public_backend": "URDFKinematics",
+      "solver_backend": "Pinocchio"
+    },
+    "task_error": "Pinocchio SE(3) body log; linear followed by angular components",
+    "task_jacobian": "official Pink FrameTask Jlog6 derivative",
+    "pose_cost": [
+      1000.0,
+      1000.0,
+      1000.0,
+      114.59155902579235,
+      114.59155902579235,
+      114.59155902579235
+    ],
+    "posture_target": "actual previous accepted q, updated each query",
+    "uses_future_targets": false,
+    "public_verifier_modified": false
+  }
+}

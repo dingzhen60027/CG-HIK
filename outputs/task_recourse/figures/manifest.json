@@ -1,0 +1,16 @@
+{
+  "source_sha256": "76d8f1a962d6897e5f892eb4ec5ee27db315ba687fe4e5436f941dd1a03bbee4",
+  "statistical_unit": "40 trajectory UIDs per robot; 3 repeats averaged within UID",
+  "intervals": "paired family-stratified 95% bootstrap; descriptive, unadjusted; not equivalence intervals",
+  "figure_size_mm": [
+    183,
+    116
+  ],
+  "minimum_intended_font_pt": 6.5,
+  "files": {
+    "paired_task_cost.csv": "1967a63946d18e070252e56b18d339c09d2b8af26dab4f50f07f72a6ca7729f8",
+    "paired_task_cost.pdf": "cee688432c165d699135ada21fe7e5bfc0c53e87ce2de58f51abc3d723fef4fc",
+    "paired_task_cost.png": "a66b420f6e62c92af428b954f286d72dcfb2b709f1d939f341565b0f22fb676f",
+    "paired_task_cost.svg": "42ee468053a893328c7282cae5976e1ad8459ac41b1d19aa9fc73dff974029bd"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "utc": "2026-09-11T12:59:12.193610+00:00",
+  "code_hashes": {
+    "src/confik/task_recourse.py": "7eaedbbc45f914f69121cb0701ab08e4f0fcc8d7526b3007fc6e18a7fa9eb6b7",
+    "configs/task_recourse.yaml": "7cdc6ed69bbe08f3b167c90192cb6fe96d68ae6513ff12f87b55226caf74f432",
+    "scripts/run_task_recourse.py": "508b1d60ec163b0ee97a53cd4ea31539bb05b6b34c8e7048e072c28670aeae91",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/task_contract_alignment/outcomes.py": "e9b36e1c59fba49f181fa3cf36f7583e844d3285c2f4c35878c47768a4e885dd",
+    "src/confik/task_contract_alignment/trac_adapter.py": "09a5c40506621c078b7abf4f2086ca79a0a7e605407a586919cbb1c36af2762c",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/continuation_mechanism/observation.py": "5c31972d1f3041379b5ab769a54e41cf19ce1b3c398a4dc6b5a320e3e63ef6c1",
+    "tmp/task_contract_build/libcontract_trac.so": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83"
+  },
+  "configuration": {
+    "baseline": "e9b621a3cfb5b6b4d2d0a0f2588a3d118ff7f02e",
+    "source_config": "configs/paper_v2.yaml",
+    "native_trac_library": "tmp/task_contract_build/libcontract_trac.so",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "methods": [
+      "trac_task_5ms",
+      "trac_task_20ms",
+      "pink_qp",
+      "tar_nominal",
+      "tar_fixed",
+      "tar_free"
+    ],
+    "repeats": 3,
+    "order_seed": 2026091101,
+    "bootstrap_seed": 2026091102,
+    "bootstrap_samples": 4000,
+    "development": {
+      "panda_targets": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json",
+      "ur5e_targets": "outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json"
+    },
+    "integration": {
+      "selection": "first_two_in_original_file_order_per_family",
+      "repeats": 1
+    },
+    "mechanism": {
+      "frame": 80,
+      "history_source": "trac_task_5ms_repeat_0",
+      "reference": "trac_task_20ms",
+      "reference_repeats": 3,
+      "mixed_l1_radii": [
+        0.75,
+        1.5
+      ],
+      "mixed_axes": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ]
+    },
+    "optimizer": {
+      "outer_iterations": 2,
+      "trust_step": 0.5,
+      "native_max_iterations": 40,
+      "native_time_limit_ms": 2.0,
+      "total_soft_limit_ms": 18.0,
+      "pose_interior": 1e-05,
+      "rate_interior": 1e-10,
+      "objective_atol": 1e-10,
+      "objective_rtol": 1e-08,
+      "rank_rtol": 1e-10
+    }
+  },
+  "git_sha": "cb7d5ae22e8ac2a61ddc6fa520f4ae2597fc56f9",
+  "python": "3.12.13",
+  "affinity": [
+    4,
+    6
+  ],
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "stage": "development",
+  "scope": "whole trajectory, nested repeats; all frames and timeouts retained"
+}

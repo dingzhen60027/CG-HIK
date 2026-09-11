@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "common_current_calls": 480,
+    "reference_rows": 37440,
+    "actual_reference_calls": 36972,
+    "verified_witnesses": 36770
+  },
+  "new_solver_calls": 0,
+  "meaning": "All successful corrections reverified from their own saved current command at the common input; failed searches do not prove infeasibility."
+}
