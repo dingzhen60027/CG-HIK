@@ -1,0 +1,16 @@
+{
+  "created": "2026-09-12T06:21:36.124385+00:00",
+  "source_files": {
+    "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json": "c92f978503b36756baef19b2529ab1efa789d099f16c1f8a035443b780eea2ce",
+    "outputs/single_solver_development/task_package/single_solver/data/panda_reconstructed.json": "9d1b462aa2a675bf300704519baa4f0558b894bcb106cb5695f6be2de88dd3f5",
+    "outputs/single_solver_development/task_package/single_solver/measured/portable_repeated.json": "2f97d1eeaa29f2e46e71599065e6e3e1ed5cff265f6b29adae7c5517b30e4d98"
+  },
+  "files": {
+    "runs.csv": "560a2c33acf53d53c414477702c505698aaa61f3d59133cd2b1cba2a3a9a55f6",
+    "identity_comparison.csv": "d1ba4ceaa597427f30f8d2062876a435939aa7071c892f57dc98bb59d09e40f8",
+    "mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "summary.json": "e06291cc5286ee53cc01d9b07b9231f579557e9b0a5ca48aa5760c1257902568",
+    "verified_commands.jsonl.gz": "61a1d18067406b5f504b92d0ffa6ece163c8541677b1ea6b01d92aa72959f511"
+  },
+  "solver_calls": 0
+}

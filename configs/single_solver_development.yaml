@@ -1,0 +1,19 @@
+baseline: f72f89d76019f7887ae5105dd87050cfa699a0e5
+source_config: configs/paper_v2.yaml
+native_trac_library: tmp/task_contract_build/libcontract_trac.so
+robots: [panda, ur5e]
+methods: [trac_task_5ms, pink_qp, single_gn_k0, single_gn_k1]
+repeats: 3
+order_seed: 2026091205
+bootstrap_seed: 2026091206
+bootstrap_samples: 4000
+development:
+  panda_targets: outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json
+  ur5e_targets: outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json
+settings:
+  damping: 0.01
+  posture_weights: [0.0, 1.0]
+  task_stop: 1.0
+  maximum_iterations: 30
+  deadline_ms: 20.0
+scope: unchanged supplied portable core and adapter; no parameter search or fallback; existing development trajectories

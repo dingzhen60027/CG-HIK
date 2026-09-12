@@ -1,0 +1,27 @@
+[
+  {
+    "case": "panda_trajectory14_pink_r1_f122",
+    "position_difference": 5.551115123125783e-17,
+    "rotation_difference": 2.220446049250313e-16
+  },
+  {
+    "case": "panda_trajectory14_tar_r0_f115",
+    "position_difference": 0.0,
+    "rotation_difference": 1.6653345369377348e-16
+  },
+  {
+    "case": "panda_trajectory14_trac_r1_f115",
+    "position_difference": 0.0,
+    "rotation_difference": 1.6653345369377348e-16
+  },
+  {
+    "case": "panda_trajectory26_tar_r1_f72",
+    "position_difference": 1.1102230246251565e-16,
+    "rotation_difference": 1.1102230246251565e-16
+  },
+  {
+    "case": "panda_trajectory12_tar_r0_f88",
+    "position_difference": 1.3877787807814457e-17,
+    "rotation_difference": 1.1102230246251565e-16
+  }
+]

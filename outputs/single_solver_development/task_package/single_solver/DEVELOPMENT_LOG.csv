@@ -1,0 +1,15 @@
+file,alpha,task_stop,damping,posture_weight,completed,selected
+a0.0_t0.01_d0.001.json,0.0,0.01,0.001,0.0,38,False
+a0.0_t0.1_d0.01.json,0.0,0.1,0.01,0.0,39,False
+a0.0_t1.0_d0.01.json,0.0,1.0,0.01,0.0,39,False
+a0.0_w1.0.json,0.0,1.0,0.01,1.0,40,True
+a0.0_w10.0.json,0.0,1.0,0.01,10.0,38,False
+a0.25_t1.0_d0.01.json,0.25,1.0,0.01,0.0,39,False
+a0.5_t1.0_d0.01.json,0.5,1.0,0.01,0.0,39,False
+a0.75_t1.0_d0.01.json,0.75,1.0,0.01,0.0,38,False
+a1.0_t0.1_d0.01.json,1.0,0.1,0.01,0.0,39,False
+a1.0_t0.1_d0.1.json,1.0,0.1,0.1,0.0,39,False
+a1.0_t0.5_d0.01.json,1.0,0.5,0.01,0.0,39,False
+a1.0_t1.0_d0.01.json,1.0,1.0,0.01,0.0,39,False
+a1.0_w1.0.json,1.0,1.0,0.01,1.0,37,False
+a1.0_w10.0.json,1.0,1.0,0.01,10.0,39,False
