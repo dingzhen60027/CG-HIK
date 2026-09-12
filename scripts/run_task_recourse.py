@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Single entry point for TAR-IK mathematics, online runs and source-backed report."""
 import argparse
+import copy
 from collections import Counter, defaultdict
 import gzip
 import importlib.util
@@ -12,6 +13,7 @@ import shutil
 import subprocess
 import sys
 import time
+import types
 import zipfile
 
 import numpy as np
@@ -30,6 +32,8 @@ from confik.geometry import pose_error
 LABELS.update(tar_free='TAR-IK free recourse',tar_fixed='Same-core fixed compensation',
               tar_nominal='Same-core nominal prediction')
 DEFAULT=ROOT/'outputs/task_recourse'
+NUMERIC_BASELINE='1a9db5071e6212bc25a9cdae9fe278328e47646a'
+NUMERIC_ROOT=DEFAULT/'numerical_completion_development'
 
 
 def hashes():
@@ -496,12 +500,254 @@ def figures(root,cfg):
         files={p.name:sha(p) for p in out.iterdir() if p.is_file()}))
 
 
+def numerical_prepare(root,cfg):
+    root.mkdir(parents=True,exist_ok=False)
+    write_json(root/'protocol.json',dict(baseline=NUMERIC_BASELINE,created=utc(),configuration=cfg,
+        methods=['tar_old','tar_corrected','trac_task_5ms','pink_qp'],repeats=3,
+        probe_fixed_updates=[2,4,6],probe_joint_updates=2,probe_repeats=3,
+        total_soft_limit_ms=18,order_seed=2026091201,
+        selection='Among fixed-update budgets with reconstructed outer P95 <=20 ms, maximize known-zero states solved in all three probes, then minimize fixed updates; if none meet 20 ms select lowest P95. No trajectory outcomes used.',
+        scope='Observed 80 mechanism inputs; existing 40 trajectories/robot. No fresh data or new objective.',
+        initial='One existing scaled least-squares nominal predictor step, then common-Jacobian node initial guesses; clipped to exact-anchor joint/rate interval. No node IK searches.',
+        objective='0.5*||S^-1(q-anchor)||^2 + 0.5*tau^2; unchanged 13 nodes and contract',
+        comparisons='Same-input numerical replay uses the identical saved TAR internal backup. Replay time and saved backup time are distinguished. Whole trajectories use actual new calls.',
+        original_input_hash=sha(DEFAULT/'input_identities.json'),original_code=sha(ROOT/'src/confik/task_recourse.py')))
+    print('Prepared numerical-completion protocol; no solver calls.')
+
+
+def zero_references(root,cfg):
+    folder=root/'zero_reference';folder.mkdir(exist_ok=False)
+    table=[];checks=[];witnesses=[]
+    for robot in cfg['robots']:
+        _,kin,v,_=context(robot,cfg);scale=task_scale(v)
+        for item in items(cfg,robot):
+            origin=DEFAULT/f'mechanism_{robot}'
+            data=json.loads((origin/f'{item["site_id"]}_inputs.json').read_text())
+            original=next(x['result'] for x in data['methods'] if x['method']=='tar_free')
+            anchor=np.array(original['backup']['q'])
+            target=Pose(np.array(data['target_position']),np.array(data['target_rotation']))
+            query=IKQuery(target,np.array(data['previous_q']),.02)
+            anchor_check=v.check(anchor,query)
+            predicted=predict_target(target,Pose(np.array(data['last_position']),np.array(data['last_rotation'])))
+            np.testing.assert_array_equal(predicted.position,original['predicted_position'])
+            np.testing.assert_array_equal(predicted.rotation,original['predicted_rotation'])
+            raw=read_rows(origin/f'{item["site_id"]}.jsonl.gz');chosen=[]
+            for node,w in enumerate(scenario_nodes()):
+                goal=perturb_target(predicted,w,1,scale);pool=[]
+                # Previously accepted witness configurations are candidates, not
+                # evidence until rechecked from THIS exact internal backup.
+                for index,r in enumerate(raw):
+                    if r['witness'] and np.array_equal(r['target_position'],goal.position) and np.array_equal(r['target_rotation'],goal.rotation):
+                        pool.append((r['reference_result']['q'],dict(file=str((origin/f'{item["site_id"]}.jsonl.gz').relative_to(ROOT)),row=index,
+                            source_method=r['method'],source_previous_q=r['current_q'])))
+                for m in data['methods']:
+                    r=m['result'];plan=r.get('planned_z');flags=r.get('planned_node_verified',[])
+                    if plan is not None and node<len(plan) and node<len(flags) and flags[node]:
+                        # Nominal node zero matches, but does not supply axes.
+                        pool.append((plan[node],dict(file=str((origin/f'{item["site_id"]}_inputs.json').relative_to(ROOT)),
+                            source_method=m['method'],planned_node=node,source_previous_q=r['q'])))
+                valid=[]
+                for q,source in pool:
+                    z=np.array(q);c=v.check(z,IKQuery(goal,anchor,.02))
+                    exact_bounds=bool(np.all(z>=kin.limits.lower) and np.all(z<=kin.limits.upper))
+                    checks.append(dict(robot=robot,uid=item['uid'],node=node,anchor=anchor,z=z,source=source,
+                        same_source_previous=np.array_equal(source['source_previous_q'],anchor),accepted=c.accepted,
+                        exact_joint_bounds=exact_bounds,reasons=list(c.reasons),position_error=c.position_error,orientation_error=c.orientation_error))
+                    if c.accepted and exact_bounds:valid.append((z,source))
+                chosen.append(dict(node=node,w=w,target_position=goal.position,target_rotation=goal.rotation,
+                    available=len(valid),z=valid[0][0] if valid else None,source=valid[0][1] if valid else None))
+            known=bool(anchor_check.accepted and original['backup']['accepted'] and all(x['available'] for x in chosen))
+            current=np.array(original['q']) if original['q'] is not None else None
+            step=kin.limits.velocity*.02+v.config.velocity_tolerance
+            change=float(np.max(np.abs(current-anchor))) if current is not None else None
+            row=dict(robot=robot,uid=item['uid'],site_id=item['site_id'],family=item['family'],
+                anchor_accepted=anchor_check.accepted,known_zero=known,status='witness_confirmed_zero' if known else 'unknown',
+                nodes_available=sum(bool(x['available']) for x in chosen),online_objective=original['objective_actual'],online_tau=original['tau_actual'],
+                changed_exact=bool(current is not None and not np.array_equal(current,anchor)),max_change_rad=change,
+                normalized_intervention=float(np.linalg.norm((current-anchor)/step)) if current is not None else None,
+                zero_gap=original['objective_actual'] if known else None,
+                gap_above_old_comparison_tolerance=bool(known and original['objective_actual'] is not None and original['objective_actual']>cfg['optimizer']['objective_atol']),
+                source_input_hash=sha(origin/f'{item["site_id"]}_inputs.json'),source_witness_hash=sha(origin/f'{item["site_id"]}.jsonl.gz'))
+            table.append(row)
+            witnesses.append(dict(**row,anchor=anchor,previous_q=data['previous_q'],target_position=target.position,target_rotation=target.rotation,
+                predicted_position=predicted.position,predicted_rotation=predicted.rotation,dt=.02,nodes=chosen,
+                objective_lower_bound=0 if known else None,reason='Nonnegative objective, exact q=anchor and all 13 original-contract checks pass.' if known else 'No complete matched witness in saved data; no additional search.'))
+    csv_write(folder/'zero_cost_comparison.csv',table)
+    write_json(folder/'witnesses.json',witnesses)
+    with gzip.open(folder/'reverification.jsonl.gz','xt') as f:
+        for row in checks:f.write(json.dumps(clean(row),allow_nan=False,separators=(',',':'))+'\n')
+    summary={r:dict(states=sum(x['robot']==r for x in table),known_zero=sum(x['robot']==r and x['known_zero'] for x in table),
+        changed_exact=sum(x['robot']==r and x['known_zero'] and x['changed_exact'] for x in table),
+        changed_over_1e8rad=sum(x['robot']==r and x['known_zero'] and (x['max_change_rad'] or 0)>1e-8 for x in table),
+        gap_above_old_tolerance=sum(x['robot']==r and x['gap_above_old_comparison_tolerance'] for x in table)) for r in cfg['robots']}
+    write_json(folder/'summary.json',summary)
+    write_json(folder/'manifest.json',dict(solver_calls=0,files={p.name:sha(p) for p in folder.iterdir() if p.is_file()}))
+    print(json.dumps(summary,indent=2))
+
+
+def original_kernel():
+    """Load the exact Git baseline in memory, not a maintained second runtime."""
+    name='confik._task_recourse_baseline'
+    if name not in sys.modules:
+        source=subprocess.check_output(['git','show',f'{NUMERIC_BASELINE}:src/confik/task_recourse.py'],cwd=ROOT,text=True)
+        module=types.ModuleType(name);module.__package__='confik';sys.modules[name]=module
+        exec(compile(source,f'git:{NUMERIC_BASELINE}:src/confik/task_recourse.py','exec'),module.__dict__)
+    return sys.modules[name].TaskRecourseIK
+
+
+def numeric_factory(method,robot,cfg,fixed_updates=2):
+    source,kin,v,urdf=context(robot,cfg)
+    if method in ('tar_old','tar_corrected'):
+        cls=original_kernel() if method=='tar_old' else TaskRecourseIK
+        options=dict(cfg['optimizer'])
+        if method=='tar_corrected':options.update(anchor_first=True,fixed_updates=fixed_updates)
+        solver=cls(kin,v,source,str(ROOT/cfg['native_trac_library']),urdf,mode='free',config=options)
+    elif method=='pink_qp':solver=PinkAdapter(kin,v,source,urdf)
+    else:solver=ContractSolver(method,kin,v,source,str(ROOT/cfg['native_trac_library']),urdf)
+    return solver,kin,v
+
+
+class RecordedBackup:
+    """Offline numeric replay only: not used by any complete online run."""
+    def __init__(self,data):self.data=data;self.calls=0
+    def close(self):pass
+    def solve(self,p,R,previous,dt):
+        np.testing.assert_array_equal(p,self.data['target_position'])
+        np.testing.assert_array_equal(R,self.data['target_rotation'])
+        np.testing.assert_array_equal(previous,self.data['previous_q'])
+        assert dt==.02;self.calls+=1
+        return copy.deepcopy(next(x['result']['backup'] for x in self.data['methods'] if x['method']=='tar_free'))
+
+
+def numerical_probe(root,cfg,tag='initial'):
+    folder=root/('same_input' if tag=='initial' else f'same_input_{tag}');folder.mkdir(exist_ok=False)
+    protocol=json.loads((root/'protocol.json').read_text());before=hashes();summaries=[]
+    known={(r['robot'],r['uid']):r['known_zero'] for r in json.loads((root/'zero_reference/witnesses.json').read_text())}
+    variants=[('tar_old',0)]+[('tar_corrected',n) for n in protocol['probe_fixed_updates']]
+    rng=np.random.default_rng(protocol['order_seed'])
+    for robot in cfg['robots']:
+        solvers={key:numeric_factory(key[0],robot,cfg,key[1] or 2) for key in variants}
+        for solver,_,_ in solvers.values():solver.backup.close()
+        try:
+            for item in items(cfg,robot):
+                data=json.loads((DEFAULT/f'mechanism_{robot}'/f'{item["site_id"]}_inputs.json').read_text())
+                jobs=[(variant,rep) for variant in variants for rep in range(protocol['probe_repeats'])]
+                rows=[]
+                for index in rng.permutation(len(jobs)):
+                    (method,updates),rep=jobs[index];solver,kin,v=solvers[(method,updates)]
+                    solver.reset(np.array(data['previous_q']))
+                    solver.last_target=Pose(np.array(data['last_position']),np.array(data['last_rotation']))
+                    replay=RecordedBackup(data);solver.backup=replay
+                    result=solver.solve(data['target_position'],data['target_rotation'],np.array(data['previous_q']),.02)
+                    assert replay.calls==1
+                    numeric_ns=result['total_latency_ns']-result['phase_times_ns']['backup_ns']
+                    anchor=np.array(result['backup']['q'])
+                    q=np.array(result['q']) if result['q'] is not None else None
+                    zero=bool(q is not None and np.array_equal(q,anchor) and result['all_nodes_verified'] and result['accepted'])
+                    row=dict(robot=robot,uid=item['uid'],site_id=item['site_id'],family=item['family'],method=method,
+                        fixed_updates=updates,repeat=rep,known_zero=known[(robot,item['uid'])],zero_found=zero,
+                        objective=result['objective_actual'],tau=result['tau_actual'],accepted=result['accepted'],
+                        changed_exact=bool(q is not None and not np.array_equal(q,anchor)),
+                        max_change_rad=float(np.max(np.abs(q-anchor))) if q is not None else None,
+                        numerical_ns=numeric_ns,saved_backup_ns=result['backup']['total_latency_ns'],
+                        reconstructed_outer_ns=numeric_ns+result['backup']['total_latency_ns'],
+                        fixed_actual_updates=sum(r.get('phase')=='fixed' for r in result['native_status']),
+                        joint_actual_updates=sum(r.get('phase','joint')=='joint' for r in result['native_status']),
+                        zero_found_stage=result.get('zero_found_stage'),numerical_phase_times_ns=result.get('numerical_phase_times_ns'))
+                    summaries.append(row);rows.append(dict(summary=row,result=result))
+                with gzip.open(folder/f'{robot}_{item["site_id"]}.jsonl.gz','xt') as f:
+                    for r in rows:f.write(json.dumps(clean(r),allow_nan=False,separators=(',',':'))+'\n')
+                print(f'same-input {robot} {item["site_id"]}',flush=True)
+        finally:
+            for s,_,_ in solvers.values():s.close()
+    assert hashes()==before
+    write_json(folder/'summaries.json',summaries);csv_write(folder/'comparison.csv',summaries)
+    write_json(folder/'completed.json',dict(code_hashes=before,utc=utc(),scope='identical frozen backup, numerical replay; reconstructed outer time is not a measured online TRAC call',
+        files={p.name:sha(p) for p in folder.iterdir() if p.is_file()}))
+
+
+def numerical_select(root,cfg,tag='initial'):
+    protocol=json.loads((root/'protocol.json').read_text())
+    folder=root/('same_input' if tag=='initial' else f'same_input_{tag}')
+    rows=json.loads((folder/'summaries.json').read_text());table=[]
+    for budget in protocol['probe_fixed_updates']:
+        sub=[r for r in rows if r['method']=='tar_corrected' and r['fixed_updates']==budget]
+        states=sorted({(r['robot'],r['uid']) for r in sub})
+        success=sum(all(r['zero_found'] for r in sub if (r['robot'],r['uid'])==key) for key in states
+                    if next(r['known_zero'] for r in sub if (r['robot'],r['uid'])==key))
+        p95=float(np.percentile([r['reconstructed_outer_ns'] for r in sub],95)/1e6)
+        table.append(dict(fixed_updates=budget,joint_updates=2,known_zero_all_repeats=success,
+            reconstructed_p95_ms=p95,eligible_timing=p95<=20))
+    eligible=[r for r in table if r['eligible_timing']]
+    chosen=min(eligible,key=lambda r:(-r['known_zero_all_repeats'],r['fixed_updates'])) if eligible else min(table,key=lambda r:r['reconstructed_p95_ms'])
+    write_json(root/('selection.json' if tag=='initial' else f'selection_{tag}.json'),dict(created=utc(),candidates=table,selected=chosen,
+        reason=protocol['selection'],code_hashes=hashes(),same_input_hash=sha(folder/'completed.json'),
+        explicit_boundary='development-only numerical budget; no full-trajectory corrected outcomes opened yet'))
+    print(json.dumps(chosen,indent=2))
+
+
+def numerical_run(root,cfg,robot):
+    selection=json.loads((root/'selection_roundoff_corrected.json').read_text())
+    assert sha(ROOT/'src/confik/task_recourse.py')==selection['code_hashes']['src/confik/task_recourse.py']
+    budget=selection['selected']['fixed_updates'];protocol=json.loads((root/'protocol.json').read_text())
+    folder=root/f'development_{robot}';folder.mkdir(exist_ok=False);(folder/'runs').mkdir()
+    identity=json.loads((DEFAULT/'input_identities.json').read_text())
+    for entry in identity['input_files'].values():assert sha(ROOT/entry['path'])==entry['sha256']
+    before=hashes();data=items(cfg,robot)
+    jobs=[(i,m,r) for i in data for m in protocol['methods'] for r in range(protocol['repeats'])]
+    order=np.random.default_rng(protocol['order_seed']).permutation(len(jobs))
+    write_json(folder/'started.json',dict(utc=utc(),code_hashes=before,selected_budget=selection['selected'],
+        selection_hash=sha(root/'selection_roundoff_corrected.json'),original_kernel_git=NUMERIC_BASELINE,
+        git_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+        affinity=sorted(os.sched_getaffinity(0)),python=platform.python_version(),
+        threads={k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS')}))
+    write_json(folder/'job_order.json',[dict(uid=jobs[j][0]['uid'],method=jobs[j][1],repeat=jobs[j][2]) for j in order])
+    solvers={};summaries=[];begin=time.monotonic()
+    try:
+        for count,j in enumerate(order):
+            item,method,repeat=jobs[j]
+            if method not in solvers:
+                solvers[method]=numeric_factory(method,robot,cfg,budget)
+                s,k,v=solvers[method];q=np.array(item['initial_q']);target=k.forward(q)
+                s.solve(target.position,target.rotation,q,.02)
+            solver,kin,v=solvers[method]
+            assert not isinstance(getattr(solver,'backup',None),RecordedBackup)
+            rows,summary=execute_trajectory(solver,kin,v,item,method,repeat)
+            rid=f'{robot}_{item["site_id"]}_{method}_r{repeat}'
+            path=folder/'runs'/f'{rid}.jsonl.gz'
+            with gzip.open(path,'xt') as f:
+                for row in rows:f.write(json.dumps(clean(row),allow_nan=False,separators=(',',':'))+'\n')
+            summary.update(robot=robot,method=method,repeat=repeat,uid=item['uid'],site_id=item['site_id'],family=item['family'],
+                run_id=rid,raw_file=str(path.relative_to(folder)),
+                zero_cost_verified_rate=float(np.mean([r.get('zero_cost_verified',False) for r in rows])),
+                optimization_rate=float(np.mean([r.get('optimization_called',False) for r in rows])),
+                command_change_rate=float(np.mean([r.get('command_changed',False) for r in rows])),
+                mean_intervention=float(np.mean([r.get('intervention') or 0 for r in rows])))
+            summaries.append(summary);write_json(folder/'runs'/f'{rid}.summary.json',summary)
+            print(f'numerical development {robot} {count+1}/{len(jobs)} {method} {item["site_id"]} r{repeat} '
+                f'complete={summary["completion"]} P95={summary["p95_ms"]:.3f} elapsed={(time.monotonic()-begin)/60:.1f}min',flush=True)
+    finally:
+        for solver,_,_ in solvers.values():solver.close()
+    assert hashes()==before
+    write_json(folder/'summaries.json',summaries)
+    write_json(folder/'completed.json',dict(utc=utc(),runs=len(summaries),frames=sum(s['frames'] for s in summaries),
+        files={str(p.relative_to(folder)):sha(p) for p in folder.rglob('*') if p.is_file()}))
+
+
 def main():
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','test','integration','development','mechanism','report','audit','figures'])
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','test','integration','development','mechanism','report','audit','figures','numeric_prepare','zero_reference','numeric_probe','numeric_select','numeric_run'])
     p.add_argument('--config',default='configs/task_recourse.yaml');p.add_argument('--out',type=Path,default=DEFAULT)
     p.add_argument('--stage',choices=['integration','development'],default='development')
+    p.add_argument('--probe-tag',choices=['initial','roundoff_corrected'],default='initial')
     p.add_argument('--robot',choices=['panda','ur5e']);args=p.parse_args();cfg=yaml.safe_load(Path(args.config).read_text())
     if args.action=='prepare':prepare(args.out,cfg)
+    elif args.action=='numeric_prepare':numerical_prepare(NUMERIC_ROOT,cfg)
+    elif args.action=='zero_reference':zero_references(NUMERIC_ROOT,cfg)
+    elif args.action=='numeric_probe':numerical_probe(NUMERIC_ROOT,cfg,args.probe_tag)
+    elif args.action=='numeric_select':numerical_select(NUMERIC_ROOT,cfg,args.probe_tag)
+    elif args.action=='numeric_run':
+        if not args.robot:p.error('--robot required')
+        numerical_run(NUMERIC_ROOT,cfg,args.robot)
     elif args.action=='test':math_tests(args.out)
     elif args.action in ('integration','development'):
         if not args.robot:p.error('--robot required')

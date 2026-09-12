@@ -1,0 +1,92 @@
+{
+  "baseline": "1a9db5071e6212bc25a9cdae9fe278328e47646a",
+  "created": "2026-09-12T03:06:43.283317+00:00",
+  "configuration": {
+    "baseline": "e9b621a3cfb5b6b4d2d0a0f2588a3d118ff7f02e",
+    "source_config": "configs/paper_v2.yaml",
+    "native_trac_library": "tmp/task_contract_build/libcontract_trac.so",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "methods": [
+      "trac_task_5ms",
+      "trac_task_20ms",
+      "pink_qp",
+      "tar_nominal",
+      "tar_fixed",
+      "tar_free"
+    ],
+    "repeats": 3,
+    "order_seed": 2026091101,
+    "bootstrap_seed": 2026091102,
+    "bootstrap_samples": 4000,
+    "development": {
+      "panda_targets": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json",
+      "ur5e_targets": "outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json"
+    },
+    "integration": {
+      "selection": "first_two_in_original_file_order_per_family",
+      "repeats": 1
+    },
+    "mechanism": {
+      "frame": 80,
+      "history_source": "trac_task_5ms_repeat_0",
+      "reference": "trac_task_20ms",
+      "reference_repeats": 3,
+      "mixed_l1_radii": [
+        0.75,
+        1.5
+      ],
+      "mixed_axes": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ]
+    },
+    "optimizer": {
+      "outer_iterations": 2,
+      "trust_step": 0.5,
+      "native_max_iterations": 40,
+      "native_time_limit_ms": 2.0,
+      "total_soft_limit_ms": 18.0,
+      "pose_interior": 1e-05,
+      "rate_interior": 1e-10,
+      "objective_atol": 1e-10,
+      "objective_rtol": 1e-08,
+      "rank_rtol": 1e-10
+    }
+  },
+  "methods": [
+    "tar_old",
+    "tar_corrected",
+    "trac_task_5ms",
+    "pink_qp"
+  ],
+  "repeats": 3,
+  "probe_fixed_updates": [
+    2,
+    4,
+    6
+  ],
+  "probe_joint_updates": 2,
+  "probe_repeats": 3,
+  "total_soft_limit_ms": 18,
+  "order_seed": 2026091201,
+  "selection": "Among fixed-update budgets with reconstructed outer P95 <=20 ms, maximize known-zero states solved in all three probes, then minimize fixed updates; if none meet 20 ms select lowest P95. No trajectory outcomes used.",
+  "scope": "Observed 80 mechanism inputs; existing 40 trajectories/robot. No fresh data or new objective.",
+  "initial": "One existing scaled least-squares nominal predictor step, then common-Jacobian node initial guesses; clipped to exact-anchor joint/rate interval. No node IK searches.",
+  "objective": "0.5*||S^-1(q-anchor)||^2 + 0.5*tau^2; unchanged 13 nodes and contract",
+  "comparisons": "Same-input numerical replay uses the identical saved TAR internal backup. Replay time and saved backup time are distinguished. Whole trajectories use actual new calls.",
+  "original_input_hash": "3bb07df1f88ad1ae43e5975b7e78c005357ee42c0a5e9eca90672b0b21c3d0c2",
+  "original_code": "7eaedbbc45f914f69121cb0701ab08e4f0fcc8d7526b3007fc6e18a7fa9eb6b7"
+}

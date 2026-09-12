@@ -1,6 +1,9 @@
 """The actual joint SOCP, nonlinear geometry, and causal command semantics."""
 import numpy as np
 import pytest
+import copy
+import json
+from pathlib import Path
 
 from confik.task_recourse import JointSOCP, RecourseConfig, scenario_nodes, common_model, TaskRecourseIK
 from confik.correction_reserve.geometry import task_scale, perturb_target, residual_linearization
@@ -119,4 +122,47 @@ def test_zero_objective_returns_exact_backup():
         assert r['accepted'] and not r['optimization_called']
         assert np.array_equal(r['q'],r['backup']['q'])
         assert r['all_nodes_verified'] and r['tau_actual']==0
+    finally:solver.close()
+
+
+@pytest.mark.parametrize('robot,site',[('panda','trajectory_00'),('ur5e','trajectory_00'),('ur5e','trajectory_22')])
+def test_corrected_initialization_and_exact_anchor(robot,site):
+    data=json.loads(Path(f'outputs/task_recourse/mechanism_{robot}/{site}_inputs.json').read_text())
+    frozen=next(x['result']['backup'] for x in data['methods'] if x['method']=='tar_free')
+    source,kin,v,urdf=context(robot,CFG)
+    solver=TaskRecourseIK(kin,v,source,'tmp/task_contract_build/libcontract_trac.so',urdf)
+    solver.backup.close()
+    class Replay:
+        calls=0
+        def solve(self,p,R,q,dt):
+            self.calls+=1
+            np.testing.assert_array_equal(q,data['previous_q'])
+            return copy.deepcopy(frozen)
+        def close(self):pass
+    replay=Replay();solver.backup=replay
+    solver.last_target=Pose(np.array(data['last_position']),np.array(data['last_rotation']))
+    try:
+        r=solver.solve(data['target_position'],data['target_rotation'],np.array(data['previous_q']))
+        assert replay.calls==1 and r['zero_cost_verified']
+        assert r['objective_actual']==0 and r['tau_actual']==0
+        np.testing.assert_array_equal(r['q'],frozen['q'])
+        assert not np.all(np.array(r['planned_z'])==np.array(frozen['q']))
+        assert all(r['planned_node_verified'])
+        assert r['total_latency_ns']>=sum(r['phase_times_ns'].values())
+        assert len(r['native_status'])<=4
+    finally:solver.close()
+
+
+def test_zero_requires_original_checks_not_small_scalar():
+    # A zero-cost witness requires all true task constraints, not a tiny solver
+    # epigraph. Deliberately invalid rate fails even for exact FK at its target.
+    from confik.types import IKQuery
+    source,kin,v,urdf=context('panda',CFG)
+    solver=TaskRecourseIK(kin,v,source,'tmp/task_contract_build/libcontract_trac.so',urdf)
+    q=(kin.limits.lower+kin.limits.upper)/2
+    step=kin.limits.velocity*.02+v.config.velocity_tolerance
+    zs=np.tile(q,(13,1));zs[0,0]+=1.1*step[0]
+    try:
+        info=solver.inspect(q,zs,IKQuery(kin.forward(q),q,.02),[kin.forward(z) for z in zs],q,step)
+        assert info['tau']<1e-10 and not info['geometric']
     finally:solver.close()

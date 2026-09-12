@@ -32,6 +32,8 @@ class RecourseConfig:
     objective_atol: float = 1e-10
     objective_rtol: float = 1e-8
     rank_rtol: float = 1e-10
+    anchor_first: bool = True
+    fixed_updates: int = 2
 
 
 def scenario_nodes(nominal=False):
@@ -186,7 +188,8 @@ class TaskRecourseIK:
         if mode not in ('free','fixed','nominal'):raise ValueError(mode)
         self.kin,self.verifier,self.mode=kin,verifier,mode
         self.cfg=RecourseConfig(**(config or {}))
-        if self.cfg.outer_iterations != 2:raise ValueError('fixed two-linearization protocol')
+        if self.cfg.outer_iterations != 2:raise ValueError('joint update budget remains two')
+        if not 1 <= self.cfg.fixed_updates <= 6:raise ValueError('bounded fixed-current updates: one to six')
         self.geometry=NativeGeometry(kin,urdf)
         self.backup=ContractSolver('trac_task_5ms',kin,verifier,source,library,urdf)
         self.nodes=scenario_nodes(mode=='nominal')
@@ -214,6 +217,20 @@ class TaskRecourseIK:
                     future_bounds_ok=bounds,future_rate_ok=rate,tau=tau,objective=objective,
                     residuals=residual,normalized_errors=errors)
 
+    def initialize_future(self, predicted, anchor, dt, step):
+        """Two common geometric evaluations, no per-node IK and no witness input.
+
+        The existing scaled nominal predictor supplies the expansion point.
+        A common least-squares map supplies node INITIAL guesses only; the joint
+        program keeps all z blocks free, including at deficient rank.
+        """
+        lo,hi=representable_interior(self.kin,IKQuery(predicted,anchor,dt),self.verifier)
+        e,J,_=residual_linearization(self.geometry,predicted,anchor,self.scale)
+        nominal=np.clip(anchor+np.linalg.lstsq(J*step,-e,rcond=1e-12)[0]*step,lo,hi)
+        e,F,C,_=common_model(self.geometry,predicted,nominal,self.scale,step,self.cfg.rank_rtol)
+        delta=np.linalg.lstsq(F,-(e+self.nodes@C.T).T,rcond=1e-12)[0].T
+        return np.clip(nominal+delta*step,lo,hi)
+
     def solve(self, position, rotation, previous, dt=.02):
         start=perf_counter_ns()
         if dt != .02:raise ValueError('the frozen online contract uses dt=.02')
@@ -228,55 +245,98 @@ class TaskRecourseIK:
         phases['backup_ns']=perf_counter_ns()-t
         anchor=np.asarray(backup['q'],float) if backup['accepted'] else query.previous_q.copy()
         q=anchor.copy();zs=np.tile(anchor,(len(self.nodes),1));B=None
+        corrected=bool(self.mode=='free' and self.cfg.anchor_first)
         t=perf_counter_ns()
-        if self.mode=='fixed':
+        if corrected:
+            zs=self.initialize_future(predicted,anchor,dt,step)
+        elif self.mode=='fixed':
             _,_,_,B=common_model(self.geometry,predicted,anchor,self.scale,step,self.cfg.rank_rtol)
             zs=anchor+self.nodes@B.T*step
+        phases['initialization_ns']=perf_counter_ns()-t
+        t=perf_counter_ns()
         initial=self.inspect(q,zs,query,targets,anchor,step)
+        if corrected and backup['accepted']:
+            # Keep the known feasible hold plan as an incumbent, not as every
+            # node's default initial guess. Initial guesses never justify losing
+            # a lower true objective already available at this exact anchor.
+            held=np.tile(anchor,(len(self.nodes),1))
+            held_info=self.inspect(anchor,held,query,targets,anchor,step)
+            if held_info['geometric'] and (not initial['geometric'] or held_info['objective']<initial['objective']):
+                zs,initial=held,held_info
+        def verified_zero(q,zs,info):
+            if not (info['geometric'] and np.array_equal(q,anchor) and info['tau']<=self.cfg.objective_atol):return False
+            # The scalar tolerance only avoids unnecessary checks: it does NOT
+            # establish zero. All original verifier checks and exact bounds/rates
+            # are required. Canonical zero is justified by those actual checks.
+            legal=all(self.verifier.check(z,IKQuery(goal,anchor,dt)).accepted for z,goal in zip(zs,targets))
+            if legal:info['tau']=0.;info['objective']=0.
+            return legal
+        zero=verified_zero(q,zs,initial) if corrected else bool(initial['geometric'] and initial['objective']==0.)
         best=(q.copy(),zs.copy(),initial,B) if initial['geometric'] else None
         phases['initial_check_ns']=perf_counter_ns()-t
         records=[];trials=[];phases['linearization_ns']=0;phases['cone_build_ns']=0
         phases['cone_solve_ns']=0;phases['nonlinear_check_ns']=0
-        zero=bool(best is not None and initial['objective']==0.)
-        for outer in range(0 if zero else self.cfg.outer_iterations):
-            if perf_counter_ns()-start>=self.cfg.total_soft_limit_ms*1e6:break
-            t=perf_counter_ns()
-            u=(q-query.previous_q)/step;vs=(zs-query.previous_q)/step
-            ec,Fc,_=residual_linearization(self.geometry,query.target,q,self.scale);Fc=Fc*step
-            ef,Ff,C,B=common_model(self.geometry,predicted,zs[0],self.scale,step,self.cfg.rank_rtol)
-            phases['linearization_ns']+=perf_counter_ns()-t
-            x,status=self.program.solve((anchor-query.previous_q)/step,u,vs,
-                (lower-query.previous_q)/step,(upper-query.previous_q)/step,
-                (self.kin.limits.lower-query.previous_q)/step,(self.kin.limits.upper-query.previous_q)/step,
-                ec,Fc,ef,Ff,C,self.nodes,B,
-                time_limit=max(1e-6,min(self.cfg.native_time_limit_ms/1000,
-                    self.cfg.total_soft_limit_ms/1000-(perf_counter_ns()-start)/1e9)))
-            records.append(dict(outer=outer,**status));phases['cone_build_ns']+=status['build_ns']
-            phases['cone_solve_ns']+=status['solve_ns']
-            if not np.isfinite(x).all():continue
-            # Native non-success iterates are not silently called solutions;
-            # like any candidate they need all true constraints and merit checks.
-            candidate_q=query.previous_q+step*x[:self.kin.nq]
-            candidate_z=query.previous_q+step*x[self.kin.nq:-1].reshape(len(self.nodes),self.kin.nq)
-            t=perf_counter_ns();adopted=False
-            for alpha in (1.,.5,.25):
-                qt=q+alpha*(candidate_q-q);zt=zs+alpha*(candidate_z-zs)
-                if self.mode=='fixed':zt=zt[0]+self.nodes@B.T*step
-                # Tiny reconstruction rounding only; no substantive projection.
-                excess=max(float(np.max(lower-qt)),float(np.max(qt-upper)),0.)
-                if excess<=1e-8:qt=np.clip(qt,lower,upper)
-                info=self.inspect(qt,zt,query,targets,anchor,step)
-                threshold=0 if best is None else self.cfg.objective_atol+self.cfg.objective_rtol*abs(best[2]['objective'])
-                improve=info['geometric'] and (best is None or info['objective']<best[2]['objective']-threshold)
-                trials.append(dict(outer=outer,alpha=alpha,q=qt.copy(),z=zt.copy(),
-                    tau_actual=info['tau'],objective_actual=info['objective'],geometric=info['geometric'],
-                    current_accepted=info['current'].accepted,current_reasons=list(info['current'].reasons),
-                    future_bounds_ok=info['future_bounds_ok'],future_rate_ok=info['future_rate_ok'],
-                    adopted=bool(improve),fixed_B_normalized=B.copy() if self.mode=='fixed' else None))
-                if improve:
-                    q,zs=qt,zt;best=(qt.copy(),zt.copy(),info,B.copy());adopted=True;break
-            phases['nonlinear_check_ns']+=perf_counter_ns()-t
-            if not adopted:break
+        stage_compute=dict(fixed_current_ns=0,joint_update_ns=0)
+        zero_stage='initialization' if zero else None
+        stages=([('fixed',self.cfg.fixed_updates)] if corrected and backup['accepted'] else [])+[('joint',self.cfg.outer_iterations)]
+        for stage,limit in stages:
+            for update in range(0 if zero else limit):
+                if perf_counter_ns()-start>=self.cfg.total_soft_limit_ms*1e6:break
+                outer=len(records);t=perf_counter_ns()
+                u=(q-query.previous_q)/step;vs=(zs-query.previous_q)/step
+                ec,Fc,_=residual_linearization(self.geometry,query.target,q,self.scale);Fc=Fc*step
+                ef,Ff,C,B=common_model(self.geometry,predicted,zs[0],self.scale,step,self.cfg.rank_rtol)
+                lin_ns=perf_counter_ns()-t;phases['linearization_ns']+=lin_ns
+                ua=(anchor-query.previous_q)/step
+                fixed=stage=='fixed'
+                # Exactly the same sparse program; only q's lower/upper bounds
+                # are clamped. A verified anchor must not be excluded by the
+                # optional native pose-interior margin used in the released step.
+                x,status=self.program.solve(ua,u,vs,
+                    ua if fixed else (lower-query.previous_q)/step,
+                    ua if fixed else (upper-query.previous_q)/step,
+                    (self.kin.limits.lower-query.previous_q)/step,(self.kin.limits.upper-query.previous_q)/step,
+                    ec,Fc,ef,Ff,C,self.nodes,B,current_radius=1. if fixed else None,
+                    time_limit=max(1e-6,min(self.cfg.native_time_limit_ms/1000,
+                        self.cfg.total_soft_limit_ms/1000-(perf_counter_ns()-start)/1e9)))
+                records.append(dict(outer=outer,phase=stage,phase_update=update,**status))
+                phases['cone_build_ns']+=status['build_ns'];phases['cone_solve_ns']+=status['solve_ns']
+                stage_compute['fixed_current_ns' if fixed else 'joint_update_ns']+=lin_ns+status['build_ns']+status['solve_ns']
+                if not np.isfinite(x).all():continue
+                candidate_q=anchor.copy() if fixed else query.previous_q+step*x[:self.kin.nq]
+                candidate_z=query.previous_q+step*x[self.kin.nq:-1].reshape(len(self.nodes),self.kin.nq)
+                t=perf_counter_ns();adopted=False
+                for alpha in (1.,.5,.25):
+                    qt=anchor.copy() if fixed else q+alpha*(candidate_q-q)
+                    zt=zs+alpha*(candidate_z-zs)
+                    if self.mode=='fixed':zt=zt[0]+self.nodes@B.T*step
+                    excess=max(float(np.max(lower-qt)),float(np.max(qt-upper)),0.)
+                    if not fixed and excess<=1e-8:qt=np.clip(qt,lower,upper)
+                    future_roundoff=0.
+                    if corrected:
+                        zl,zu=representable_interior(self.kin,IKQuery(predicted,qt,dt),self.verifier)
+                        future_roundoff=max(float(np.max(zl-zt)),float(np.max(zt-zu)),0.)
+                        # Same reconstruction-only threshold already used for q.
+                        # No native/true constraint is relaxed, and substantial
+                        # violations are not repaired. Recompute FK after clipping.
+                        if future_roundoff<=1e-8:zt=np.clip(zt,zl,zu)
+                    info=self.inspect(qt,zt,query,targets,anchor,step)
+                    found_zero=verified_zero(qt,zt,info) if corrected else False
+                    threshold=0 if best is None else self.cfg.objective_atol+self.cfg.objective_rtol*abs(best[2]['objective'])
+                    improve=info['geometric'] and (best is None or info['objective']<best[2]['objective']-threshold or
+                        (found_zero and best[2]['objective']>0))
+                    trials.append(dict(outer=outer,phase=stage,alpha=alpha,q=qt.copy(),z=zt.copy(),
+                        tau_actual=info['tau'],objective_actual=info['objective'],geometric=info['geometric'],
+                        current_accepted=info['current'].accepted,current_reasons=list(info['current'].reasons),
+                        future_bounds_ok=info['future_bounds_ok'],future_rate_ok=info['future_rate_ok'],
+                        adopted=bool(improve),zero_verified=found_zero,fixed_B_normalized=B.copy() if self.mode=='fixed' else None))
+                    if corrected:trials[-1]['future_roundoff_reconstruction_rad']=future_roundoff
+                    if improve:
+                        q,zs=qt,zt;best=(qt.copy(),zt.copy(),info,B.copy());adopted=True
+                        if found_zero:zero=True;zero_stage=f'{stage}_{update+1}'
+                        break
+                phases['nonlinear_check_ns']+=perf_counter_ns()-t
+                if zero or not adopted:break
         t=perf_counter_ns()
         if best is not None:
             q,zs,info,best_B=best
@@ -314,6 +374,10 @@ class TaskRecourseIK:
             max_difference_from_backup=float(np.max(np.abs(q-anchor))) if check.finite_ok else None,
             velocity_utilization=float(np.max(np.abs(q-query.previous_q)/step)) if check.finite_ok else None,
             native_status=records,nonlinear_trials=trials,phase_times_ns=phases)
+        out.update(numerical_completion=corrected,zero_cost_verified=bool(corrected and zero and check.accepted and
+            np.array_equal(q,anchor) and node_checks and all(c.accepted for c in node_checks)),zero_found_stage=zero_stage,
+            numerical_phase_times_ns=dict(initialization_ns=phases['initialization_ns'],**stage_compute,
+                fk_check_ns=phases['initial_check_ns']+phases['nonlinear_check_ns']+phases['final_verification_ns']))
         # Include conversion, full numerical work, acceptance, and record assembly;
         # disk serialization / experiment-only future diagnostics are excluded.
         elapsed=perf_counter_ns()-start

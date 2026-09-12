@@ -1,0 +1,16 @@
+{
+  "panda": {
+    "states": 40,
+    "known_zero": 39,
+    "changed_exact": 39,
+    "changed_over_1e8rad": 0,
+    "gap_above_old_tolerance": 0
+  },
+  "ur5e": {
+    "states": 40,
+    "known_zero": 40,
+    "changed_exact": 40,
+    "changed_over_1e8rad": 1,
+    "gap_above_old_tolerance": 1
+  }
+}
