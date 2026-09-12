@@ -1,0 +1,5 @@
+robot,method,states,known_zero,unknown,known_zero_not_found_all_repeats,known_zero_but_changed_exact,known_zero_but_changed_above_1e_minus_8,known_zero_gap_above_1e_minus_10,known_zero_max_objective_gap,known_zero_max_change_rad,numerical_p50_ms,numerical_p95_ms,numerical_p99_ms,reconstructed_outer_p50_ms,reconstructed_outer_p95_ms,reconstructed_outer_p99_ms
+panda,tar_old,40,39,1,39,39,0,0,3.0026471380671117e-16,8.153139274824639e-10,5.2036785,5.48065935,5.704524600000001,5.43104,5.93432825,7.9360485899999995
+panda,tar_corrected,40,39,1,0,0,0,0,0,0,3.33359,4.8799211499999995,5.864990500000002,3.593626,5.63880435,8.35087253
+ur5e,tar_old,40,40,0,40,40,1,1,4.6408911475687645e-10,1.917282944408072e-06,4.8484565,5.05484955,5.247533390000001,5.0486075,5.3120476,7.16267398
+ur5e,tar_corrected,40,40,0,0,0,0,0,0,0,4.453918,4.6905057,5.78119504,4.628473,5.059994749999997,6.690569320000001

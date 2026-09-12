@@ -1,0 +1,32 @@
+{
+  "utc": "2026-09-12T03:34:26.489162+00:00",
+  "sources": {
+    "outputs/task_recourse/numerical_completion_development/validated_panda": "70e5b4cdc80fae8c19936fb494376c690ec29474a06e73ffa594e29bd876092d",
+    "outputs/task_recourse/numerical_completion_development/validated_ur5e": "98ee5bf2e61225048c28c52e61dd324931f83a296033286d530e05e81bdad6ca"
+  },
+  "source_code_sha256": "8cfb021db0b59eb91849964f36dfcac97a05b5782cea87a395cb257230eea011",
+  "selection_hash": "60b63d70dfdac0a835af6b9526734059e93a5e67b2227336a8feeba0eb1a8339",
+  "same_input_source_sha256": "076415f07be13e6f4dbd9dcc8d8ca616a93141897b11cd49e5e957371a7e78e1",
+  "independent_unit": "40 trajectory UIDs/robot, 3 runs averaged per UID; paired family-stratified bootstrap, 4000 resamples, unadjusted descriptive 95% intervals; no equivalence claim",
+  "timing": "Full outer solver work and acceptance, including failures and timeouts. Serialization and offline re-verification excluded. Old initialization has no separately instrumented component, recorded null.",
+  "exclusions": 0,
+  "complete_runs": 960,
+  "frames": 144000,
+  "preliminary_scope": "First partial Panda and complete UR5e attempts preserved separately; not pooled into the fixed guarded comparison.",
+  "files": {
+    "first_failure_inputs.csv": "1fd6367131282758ecfa45755b05ccc8b4685106d2be385a78f39f885833078b",
+    "run_summaries.csv": "e19447c0bf28b85a5061f6a2fc0323da55f82a1c48068a39eb04ec2269c1dce5",
+    "family_table.csv": "98296cb585d43e5c1063b0daf416ebd0c32e66130561148af511b65211b89a5b",
+    "completion_uids.json": "f54d1f2684e7d27a13fd43e603932f29891540cd04aa905a6009d575e924c042",
+    "trajectory_units.csv": "0f55ef3f0b670bbca45a65fa6dd1bb5e1a935a85b3ed629e2ecd4d812af9ae50",
+    "verification_audit.json": "69f02fc4ff4ac8944e7fd8a99b6e2a4c7565650f00bec749823917d0ec63211b",
+    "numerical_phase_times.csv": "4c1e2f770ac1e78aa41823253f48a651c66dda5b62387509b6c47429bf894e34",
+    "same_input_table.csv": "0cae2fa589fd7c0d754bf1e0b129d093648d691f809dfcec07a88e0a361a0fa2",
+    "same_input_units.csv": "7477028da2955d7881c64bb30048d130d911f16da0e8d7fcebbe1bfc449bc4fa",
+    "paired_comparisons.csv": "6be384ceb258751b821ffb5e8da836a8b27025a6a4d7de2ca3f4e9a6c5096e28",
+    "main_table.csv": "56f4e22a95a98b7eaa721ffb55260ab52d96a2f253eb905d47fd3a2e54bcdaab",
+    "source_data.json": "a6b5b48113559e4e58513289f38060a446f454a4f4e0fc4083fc3ea43ae0f9e6",
+    "gained_lost_uids.csv": "77347b55f26f4c17fd00facb863e4a2f5a34bda49f9b7c6129cc6fc7f46a58ef",
+    "online_zero_witnesses.json": "87b6f9caddeb665529e927698336677153f4218d38e684771fe2b22984914573"
+  }
+}

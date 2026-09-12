@@ -1,0 +1,36 @@
+{
+  "utc": "2026-09-12T03:18:16.907080+00:00",
+  "code_hashes": {
+    "src/confik/task_recourse.py": "b19e5b0bcb60c3f539c10dda611e04dbdc078fa247cff63143a5c81a3c804504",
+    "configs/task_recourse.yaml": "7cdc6ed69bbe08f3b167c90192cb6fe96d68ae6513ff12f87b55226caf74f432",
+    "scripts/run_task_recourse.py": "f001dce6b4dce0ff0480822a83671735eb084203a164535992d770be9cfcd866",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/task_contract_alignment/outcomes.py": "e9b36e1c59fba49f181fa3cf36f7583e844d3285c2f4c35878c47768a4e885dd",
+    "src/confik/task_contract_alignment/trac_adapter.py": "09a5c40506621c078b7abf4f2086ca79a0a7e605407a586919cbb1c36af2762c",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/continuation_mechanism/observation.py": "5c31972d1f3041379b5ab769a54e41cf19ce1b3c398a4dc6b5a320e3e63ef6c1",
+    "tmp/task_contract_build/libcontract_trac.so": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83"
+  },
+  "selected_budget": {
+    "fixed_updates": 2,
+    "joint_updates": 2,
+    "known_zero_all_repeats": 79,
+    "reconstructed_p95_ms": 5.638804349999997,
+    "eligible_timing": true
+  },
+  "selection_hash": "1d5ff09d3b3781553c34e29a5e3fdec08c3d7360d96b58a46b78afebc6d06cf3",
+  "original_kernel_git": "1a9db5071e6212bc25a9cdae9fe278328e47646a",
+  "git_sha": "915a48a59f3330192159b1dae6b652a178fbffd0",
+  "affinity": [
+    0,
+    2
+  ],
+  "python": "3.12.13",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

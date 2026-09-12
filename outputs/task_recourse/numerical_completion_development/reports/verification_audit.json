@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "current_commands_reverified": 144000,
+    "accepted_commands": 141389,
+    "over_20ms_frames": 17,
+    "planned_nodes_reverified": 916318,
+    "adopted_true_merit_decreases": 41370,
+    "exact_zero_returns_reverified": 34750
+  },
+  "accepted_contract_violations": 0,
+  "max_recomputed_tau_difference": 0.0,
+  "max_recomputed_objective_difference": 0.0,
+  "checking": "All current commands, all saved final planned nodes, accepted-only feedback, causal prediction, complete cost, clamped-current trials and monotone accepted true merit. Numerical assertion tolerances never alter contract checks."
+}

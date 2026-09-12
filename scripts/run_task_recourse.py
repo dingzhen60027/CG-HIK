@@ -757,8 +757,206 @@ def numerical_run(root,cfg,robot):
         files={str(p.relative_to(folder)):sha(p) for p in folder.rglob('*') if p.is_file()}))
 
 
+def numerical_report(root,cfg):
+    """Read-only nonlinear verification and UID-level reporting; no solver calls."""
+    out=root/'reports';out.mkdir(exist_ok=False)
+    protocol=json.loads((root/'protocol.json').read_text())
+    summaries=[];arrays={};extra=defaultdict(list);failures=[];audit=Counter();sources={}
+    online_witnesses=[];max_tau_error=0.;max_objective_error=0.
+    for robot in cfg['robots']:
+        folder=root/f'validated_{robot}'
+        seal=json.loads((folder/'completed.json').read_text())
+        for name,digest in seal['files'].items():assert sha(folder/name)==digest,(folder,name)
+        sources[str(folder.relative_to(ROOT))]=sha(folder/'completed.json')
+        jobs=json.loads((folder/'summaries.json').read_text());assert len(jobs)==480
+        _,kin,v,urdf=context(robot,cfg);geometry=NativeGeometry(kin,urdf)
+        scale=task_scale(v);step=kin.limits.velocity*.02+v.config.velocity_tolerance
+        data={i['uid']:i for i in items(cfg,robot)};witness_uids=set()
+        for count,s in enumerate(jobs):
+            item=data[s['uid']];rows=read_rows(folder/s['raw_file']);assert len(rows)==150
+            summaries.append(s)
+            arrays[s['run_id']]=dict(latency=np.array([r['total_latency_ns'] for r in rows]),
+                errors=np.array([[r['position_error'],r['orientation_error']] for r in rows if r['accepted']]).reshape(-1,2))
+            previous=np.array(item['initial_q']);last=None
+            assert sum(r['total_latency_ns'] for r in rows)==s['total_latency_ns']
+            assert all(r['accepted'] for r in rows)==s['completion']
+            assert all(r['accepted_within_20ms'] for r in rows)==s['deadline_completion']
+            for frame,r in enumerate(rows):
+                assert r['frame']==frame and r['dt']==.02 and r['uid']==item['uid']
+                np.testing.assert_array_equal(r['previous_q'],previous)
+                np.testing.assert_array_equal(r['target_position'],item['target_position'][frame])
+                np.testing.assert_array_equal(r['target_rotation'],item['target_rotation'][frame])
+                target=Pose(np.array(r['target_position']),np.array(r['target_rotation']))
+                query=IKQuery(target,previous,.02)
+                q=np.array(r['q']) if r['q'] is not None else np.full(kin.nq,np.nan)
+                check=v.check(q,query);assert check.accepted==r['accepted']
+                assert r['accepted_within_20ms']==bool(check.accepted and r['total_latency_ns']<=20_000_000)
+                audit['current_commands_reverified']+=1
+                audit['accepted_commands']+=check.accepted
+                audit['over_20ms_frames']+=r['total_latency_ns']>20_000_000
+                if s['first_failure_frame']==frame:
+                    failures.append({k:r.get(k) for k in ('robot','uid','site_id','method','repeat','family','frame','previous_q',
+                        'target_position','target_rotation','q','position_error','orientation_error','failure_kind',
+                        'total_latency_ns','backup','native_status')})
+                if s['method'].startswith('tar_'):
+                    predicted=predict_target(target,last)
+                    np.testing.assert_array_equal(r['predicted_position'],predicted.position)
+                    np.testing.assert_array_equal(r['predicted_rotation'],predicted.rotation)
+                    targets=[perturb_target(predicted,w,1,scale) for w in scenario_nodes()]
+                    backup=r['backup'];anchor=np.array(backup['q'] if backup['accepted'] else previous)
+                    if backup['accepted']:assert v.check(anchor,query).accepted
+                    calls=r['native_status'];assert len(calls)<= (4 if s['method']=='tar_corrected' else 2)
+                    if s['method']=='tar_corrected':
+                        assert sum(c['phase']=='fixed' for c in calls)<=2
+                        assert sum(c['phase']=='joint' for c in calls)<=2
+                    assert sum(r['phase_times_ns'].values())+r['accounting_remainder_ns']==r['total_latency_ns']
+                    assert r['accounting_remainder_ns']>=0
+                    if r['planned_z'] is not None:
+                        zs=np.array(r['planned_z']);assert zs.shape==(13,kin.nq)
+                        assert np.all(zs>=kin.limits.lower) and np.all(zs<=kin.limits.upper)
+                        assert np.all(np.abs(zs-q)<=step)
+                        flags=[v.check(z,IKQuery(goal,q,.02)).accepted for z,goal in zip(zs,targets)]
+                        assert flags==r['planned_node_verified'] and all(flags)==r['all_nodes_verified']
+                        audit['planned_nodes_reverified']+=13
+                        residual=np.array([pose_error(goal,geometry.forward(z))/scale for z,goal in zip(zs,targets)])
+                        tau=max(0.,float(np.max([np.linalg.norm(residual[:,:3],axis=1),np.linalg.norm(residual[:,3:],axis=1)]))-1)
+                        objective=.5*np.sum(((q-anchor)/step)**2)+.5*tau*tau
+                        max_tau_error=max(max_tau_error,abs(tau-r['tau_actual']))
+                        max_objective_error=max(max_objective_error,abs(objective-r['objective_actual']))
+                        np.testing.assert_allclose(tau,r['tau_actual'],rtol=1e-9,atol=1e-8)
+                        np.testing.assert_allclose(objective,r['objective_actual'],rtol=1e-9,atol=1e-8)
+                    else:assert not r['all_nodes_verified']
+                    if r.get('zero_cost_verified'):
+                        assert check.accepted and backup['accepted'] and r['all_nodes_verified']
+                        np.testing.assert_array_equal(q,anchor)
+                        assert r['objective_actual']==r['tau_actual']==0
+                        audit['exact_zero_returns_reverified']+=1
+                        if s['uid'] not in witness_uids:
+                            online_witnesses.append(dict(robot=robot,uid=s['uid'],repeat=s['repeat'],frame=frame,
+                                raw_file=str((folder/s['raw_file']).relative_to(ROOT)),previous_q=previous,anchor=anchor,
+                                target_position=target.position,target_rotation=target.rotation,dt=.02,objective=0,
+                                nodes=[dict(w=w,z=z,target_position=g.position,target_rotation=g.rotation)
+                                    for w,z,g in zip(scenario_nodes(),r['planned_z'],targets)]))
+                            witness_uids.add(s['uid'])
+                    incumbent=r['initial_objective'] if r['initial_geometric'] else None
+                    for trial in r['nonlinear_trials']:
+                        if trial.get('phase')=='fixed':np.testing.assert_array_equal(trial['q'],anchor)
+                        if not trial['adopted']:continue
+                        assert trial['geometric'] and trial['current_accepted'] and trial['future_bounds_ok'] and trial['future_rate_ok']
+                        if incumbent is not None:assert trial['objective_actual']<incumbent
+                        incumbent=trial['objective_actual'];audit['adopted_true_merit_decreases']+=1
+                    if incumbent is not None:
+                        np.testing.assert_allclose(r['objective_actual'],incumbent,rtol=1e-9,atol=1e-8)
+                    extra[(robot,s['method'])].append({k:r.get(k) for k in
+                        ('numerical_phase_times_ns','phase_times_ns','native_status','zero_cost_verified','total_latency_ns')})
+                last=target
+                if check.accepted:previous=q.copy()
+                np.testing.assert_array_equal(r['accepted_state_q'],previous)
+            if count%80==0:print(f'reverify {robot} {count+1}/480',flush=True)
+    assert len(summaries)==960 and audit['current_commands_reverified']==144000
+    main=group_table(summaries,arrays);families=group_table(summaries,arrays,True)
+    for row in main+families:
+        selected=[s for s in summaries if s['robot']==row['robot'] and s['method']==row['method'] and
+                  (row['family']=='all' or s['family']==row['family'])]
+        for key in ('zero_cost_verified_rate','optimization_rate','command_change_rate','mean_intervention'):
+            row[key]=float(np.mean([s[key] for s in selected]))
+    units=[];pairs=[];changes=[];completion={}
+    metrics=('completion','deadline_completion','total_latency_ns','frame_success','acceleration_rms','successful_prefix')
+    for robot in cfg['robots']:
+        ss=[s for s in summaries if s['robot']==robot];uids=sorted({s['uid'] for s in ss});unit={}
+        fam=[next(s['family'] for s in ss if s['uid']==uid) for uid in uids];assert len(uids)==40
+        for method in protocol['methods']:
+            completion.setdefault(robot,{})[method]={str(rep):sorted(s['uid'] for s in ss if s['method']==method and s['repeat']==rep and s['completion']) for rep in range(3)}
+            for uid,family in zip(uids,fam):
+                rr=[s for s in ss if s['method']==method and s['uid']==uid];assert sorted(s['repeat'] for s in rr)==[0,1,2]
+                val={k:float(np.mean([s[k] for s in rr])) for k in metrics}
+                unit[(method,uid)]=val;units.append(dict(robot=robot,method=method,uid=uid,site_id=rr[0]['site_id'],family=family,repeats=3,**val))
+        for base in [m for m in protocol['methods'] if m!='tar_corrected']:
+            for metric in metrics:
+                a=np.array([unit[('tar_corrected',u)][metric] for u in uids]);b=np.array([unit[(base,u)][metric] for u in uids])
+                pairs.append(dict(robot=robot,method='tar_corrected',baseline=base,metric=metric,
+                    **paired_intervals(a,b,fam,cfg['bootstrap_seed'],cfg['bootstrap_samples'])))
+            for uid,family in zip(uids,fam):
+                a=unit[('tar_corrected',uid)]['completion'];b=unit[(base,uid)]['completion']
+                changes.append(dict(robot=robot,baseline=base,uid=uid,site_id=next(s['site_id'] for s in ss if s['uid']==uid),family=family,
+                    corrected_fraction=a,baseline_fraction=b,change='gained' if a>b else 'lost' if a<b else 'same',stable_all_vs_none=bool(abs(a-b)==1)))
+    phases=[]
+    for (robot,method),rows in sorted(extra.items()):
+        def components(r):
+            if method=='tar_corrected':return r['numerical_phase_times_ns']
+            p=r['phase_times_ns']
+            return dict(initialization_ns=None,fixed_current_ns=0,
+                joint_update_ns=sum(p[k] for k in ('linearization_ns','cone_build_ns','cone_solve_ns')),
+                fk_check_ns=sum(p[k] for k in ('initial_check_ns','nonlinear_check_ns','final_verification_ns')))
+        for category in ('all','exact_zero_return','not_exact_zero_return'):
+            rr=[r for r in rows if category=='all' or bool(r.get('zero_cost_verified'))==(category=='exact_zero_return')]
+            if not rr:continue
+            p=[components(r) for r in rr];record=dict(robot=robot,method=method,subset=category,frames=len(rr))
+            for key in ('initialization_ns','fixed_current_ns','joint_update_ns','fk_check_ns'):
+                vals=[r[key] for r in p if r[key] is not None]
+                record[key.removesuffix('_ns')+'_mean_ms']=float(np.mean(vals)/1e6) if vals else None
+                record[key.removesuffix('_ns')+'_median_ms']=float(np.median(vals)/1e6) if vals else None
+            record.update(backup_mean_ms=float(np.mean([r['phase_times_ns']['backup_ns'] for r in rr])/1e6),
+                outer_mean_ms=float(np.mean([r['total_latency_ns'] for r in rr])/1e6),
+                outer_median_ms=float(np.median([r['total_latency_ns'] for r in rr])/1e6),
+                fixed_updates_mean=float(np.mean([sum(c.get('phase')=='fixed' for c in r['native_status']) for r in rr])),
+                joint_updates_mean=float(np.mean([sum(c.get('phase','joint')=='joint' for c in r['native_status']) for r in rr])))
+            phases.append(record)
+    probe_folder=root/'same_input_roundoff_corrected'
+    probe=json.loads((probe_folder/'summaries.json').read_text())
+    probe=[r for r in probe if r['fixed_updates'] in (0,2)]
+    same_units=[];same_table=[]
+    for robot in cfg['robots']:
+        for method in ('tar_old','tar_corrected'):
+            rr=[r for r in probe if r['robot']==robot and r['method']==method]
+            uu=[]
+            for uid in sorted({r['uid'] for r in rr}):
+                state=[r for r in rr if r['uid']==uid];assert len(state)==3
+                row=dict(robot=robot,uid=uid,site_id=state[0]['site_id'],family=state[0]['family'],method=method,
+                    known_zero=state[0]['known_zero'],zero_all_repeats=all(r['zero_found'] for r in state),
+                    exact_changed_any=any(r['changed_exact'] for r in state),
+                    meaningful_changed_any=any((r['max_change_rad'] or 0)>1e-8 for r in state),
+                    objective_max=max((r['objective'] or 0) for r in state) if any(r['objective'] is not None for r in state) else None,
+                    tau_max=max((r['tau'] or 0) for r in state) if any(r['tau'] is not None for r in state) else None,
+                    max_change_rad=max((r['max_change_rad'] or 0) for r in state),
+                    numerical_mean_ms=float(np.mean([r['numerical_ns'] for r in state])/1e6),
+                    reconstructed_outer_mean_ms=float(np.mean([r['reconstructed_outer_ns'] for r in state])/1e6))
+                same_units.append(row);uu.append(row)
+            known=[r for r in uu if r['known_zero']]
+            table=dict(robot=robot,method=method,states=40,known_zero=len(known),unknown=40-len(known),
+                known_zero_not_found_all_repeats=sum(not r['zero_all_repeats'] for r in known),
+                known_zero_but_changed_exact=sum(r['exact_changed_any'] for r in known),
+                known_zero_but_changed_above_1e_minus_8=sum(r['meaningful_changed_any'] for r in known),
+                known_zero_gap_above_1e_minus_10=sum((r['objective_max'] or 0)>1e-10 for r in known),
+                known_zero_max_objective_gap=max(r['objective_max'] for r in known),
+                known_zero_max_change_rad=max(r['max_change_rad'] for r in known))
+            for key in ('numerical_ns','reconstructed_outer_ns'):
+                for p in (50,95,99):table[f'{key.removesuffix("_ns")}_p{p}_ms']=float(np.percentile([r[key] for r in rr],p)/1e6)
+            same_table.append(table)
+    csv_write(out/'main_table.csv',main);csv_write(out/'family_table.csv',families)
+    csv_write(out/'trajectory_units.csv',units);csv_write(out/'paired_comparisons.csv',pairs)
+    csv_write(out/'gained_lost_uids.csv',changes);csv_write(out/'run_summaries.csv',summaries)
+    csv_write(out/'numerical_phase_times.csv',phases);csv_write(out/'first_failure_inputs.csv',failures)
+    csv_write(out/'same_input_units.csv',same_units);csv_write(out/'same_input_table.csv',same_table)
+    write_json(out/'completion_uids.json',completion)
+    write_json(out/'online_zero_witnesses.json',online_witnesses)
+    write_json(out/'verification_audit.json',dict(counts=dict(audit),accepted_contract_violations=0,
+        max_recomputed_tau_difference=max_tau_error,max_recomputed_objective_difference=max_objective_error,
+        checking='All current commands, all saved final planned nodes, accepted-only feedback, causal prediction, complete cost, clamped-current trials and monotone accepted true merit. Numerical assertion tolerances never alter contract checks.'))
+    write_json(out/'source_data.json',dict(main=main,family=families,pairs=pairs,changes=changes,units=units,phases=phases,same_input=same_table))
+    write_json(out/'manifest.json',dict(utc=utc(),sources=sources,source_code_sha256=sha(__file__),
+        selection_hash=sha(root/'selection_final.json'),same_input_source_sha256=sha(probe_folder/'completed.json'),
+        independent_unit='40 trajectory UIDs/robot, 3 runs averaged per UID; paired family-stratified bootstrap, 4000 resamples, unadjusted descriptive 95% intervals; no equivalence claim',
+        timing='Full outer solver work and acceptance, including failures and timeouts. Serialization and offline re-verification excluded. Old initialization has no separately instrumented component, recorded null.',
+        exclusions=0,complete_runs=960,frames=144000,
+        preliminary_scope='First partial Panda and complete UR5e attempts preserved separately; not pooled into the fixed guarded comparison.',
+        files={p.name:sha(p) for p in out.iterdir() if p.is_file()}))
+    for r in main:print(r['robot'],r['method'],r['completion_by_repeat'],r['deadline_completion_by_repeat'],
+        np.round([r['p50_ms'],r['p95_ms'],r['p99_ms']],3),round(r['cumulative_ms_per_sweep']/1000,3))
+
+
 def main():
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','test','integration','development','mechanism','report','audit','figures','numeric_prepare','zero_reference','numeric_probe','numeric_select','numeric_finalize','numeric_run'])
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','test','integration','development','mechanism','report','audit','figures','numeric_prepare','zero_reference','numeric_probe','numeric_select','numeric_finalize','numeric_run','numeric_report'])
     p.add_argument('--config',default='configs/task_recourse.yaml');p.add_argument('--out',type=Path,default=DEFAULT)
     p.add_argument('--stage',choices=['integration','development'],default='development')
     p.add_argument('--probe-tag',choices=['initial','roundoff_corrected'],default='initial')
@@ -769,6 +967,7 @@ def main():
     elif args.action=='numeric_probe':numerical_probe(NUMERIC_ROOT,cfg,args.probe_tag)
     elif args.action=='numeric_select':numerical_select(NUMERIC_ROOT,cfg,args.probe_tag)
     elif args.action=='numeric_finalize':numerical_finalize(NUMERIC_ROOT)
+    elif args.action=='numeric_report':numerical_report(NUMERIC_ROOT,cfg)
     elif args.action=='numeric_run':
         if not args.robot:p.error('--robot required')
         numerical_run(NUMERIC_ROOT,cfg,args.robot)
