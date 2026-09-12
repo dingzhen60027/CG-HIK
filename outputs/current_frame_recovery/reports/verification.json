@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "current_commands_checked": 144000,
+    "accepted_commands": 141141,
+    "trf_iterates_checked": 131026
+  },
+  "accepted_contract_violations": 0,
+  "full_success_witnesses": 877,
+  "checks": "Original current verifier, actual own feedback, all 150 targets, callback stopping and 50-call limit, at most one same-input TRF after rejected TRAC with original remaining period. No solver rerun."
+}

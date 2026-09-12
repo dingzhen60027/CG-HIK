@@ -1,0 +1,9 @@
+robot,source_method,unique_inputs,recovered_all,unrecovered,note
+panda,pink_qp,3,1,2,Source categories can overlap for identical inputs; do not sum to independent total.
+panda,tar_corrected,10,10,0,Source categories can overlap for identical inputs; do not sum to independent total.
+panda,tar_old,10,10,0,Source categories can overlap for identical inputs; do not sum to independent total.
+panda,trac_task_5ms,10,10,0,Source categories can overlap for identical inputs; do not sum to independent total.
+ur5e,pink_qp,2,1,1,Source categories can overlap for identical inputs; do not sum to independent total.
+ur5e,tar_corrected,4,3,1,Source categories can overlap for identical inputs; do not sum to independent total.
+ur5e,tar_old,3,1,2,Source categories can overlap for identical inputs; do not sum to independent total.
+ur5e,trac_task_5ms,3,1,2,Source categories can overlap for identical inputs; do not sum to independent total.

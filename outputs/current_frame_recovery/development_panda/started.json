@@ -1,0 +1,67 @@
+{
+  "utc": "2026-09-12T04:55:48.054650+00:00",
+  "code_hashes": {
+    "src/confik/current_frame_trf.py": "9a06512d61a48933e793430c6ccef66fa1d07cef86339bd662364ea2aad44c48",
+    "scripts/run_current_frame_recovery.py": "f19951f57ba3157f4babefc8e5c1104126c7e479bb0cbfa8e4772d249ce43c42",
+    "configs/current_frame_recovery.yaml": "87163787b0d4bbff31d4a8212db8a8ed1eb4627c0ea8d6d414b647d8cd1915fa",
+    "src/confik/correction_reserve/study.py": "b489d082641ec4ed36bcc69aab6df82b6d4935bb16c920f90325bd79313d3a94",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/task_contract_alignment/outcomes.py": "e9b36e1c59fba49f181fa3cf36f7583e844d3285c2f4c35878c47768a4e885dd",
+    "src/confik/task_contract_alignment/trac_adapter.py": "09a5c40506621c078b7abf4f2086ca79a0a7e605407a586919cbb1c36af2762c",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/continuation_mechanism/observation.py": "5c31972d1f3041379b5ab769a54e41cf19ce1b3c398a4dc6b5a320e3e63ef6c1",
+    "tmp/task_contract_build/libcontract_trac.so": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83",
+    "configs/paper_v2.yaml": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a"
+  },
+  "configuration": {
+    "baseline": "8e754127bb56ec6054ef197f7f1b4e2324611b91",
+    "source_config": "configs/paper_v2.yaml",
+    "native_trac_library": "tmp/task_contract_build/libcontract_trac.so",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "methods": [
+      "trac_task_5ms",
+      "pink_qp",
+      "current_trf",
+      "trac_then_current_trf"
+    ],
+    "repeats": 3,
+    "order_seed": 2026091203,
+    "bootstrap_seed": 2026091204,
+    "bootstrap_samples": 4000,
+    "development": {
+      "panda_targets": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json",
+      "ur5e_targets": "outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json"
+    },
+    "first_failures": "outputs/task_recourse/numerical_completion_development/reports/first_failure_inputs.csv",
+    "point_repeats": 3,
+    "scope": "existing development data; no new trajectories, no parameter search",
+    "formal": {
+      "order_seed": 2026091203
+    }
+  },
+  "methods": [
+    "trac_task_5ms",
+    "pink_qp",
+    "current_trf",
+    "trac_then_current_trf"
+  ],
+  "python": "3.12.13",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+  "git_sha": "c993ef39120894e0a7bf57175d351045beadcb62",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "cpu_affinity": [
+    0,
+    2
+  ],
+  "inference_unit": "whole trajectory; search repeats nested",
+  "timing_scope": "solver input conversion, dynamic bounds, numerical solve, prediction/optimization if applicable, command verification; serialization excluded"
+}

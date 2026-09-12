@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "panda": "88f77888f60c957dc64339739abf17cc84ae1689cb5d18eec12d4b18e0ef52c2",
+    "ur5e": "4abf56ed0a67dfc55f2aef30d01739c60ed75153bd349590bef6a9bb214b1839"
+  },
+  "created": "2026-09-12T05:01:51.697575+00:00",
+  "baseline": "8e754127bb56ec6054ef197f7f1b4e2324611b91",
+  "reporting_code_hash": "b5932bd0a56a3c029dce9854fdab780652c717a5b5f933980aaf590aff74fafd",
+  "independent_unit": "40 trajectory UIDs/robot; average 3 repeats within UID; family-stratified paired bootstrap, 4000 resamples, descriptive unadjusted 95% intervals",
+  "timing": "Complete outer latency including failures/timeouts. For composition, trac_outer_ns + trf_outer_ns + composition_remainder_ns is the total; inherited stage fields belong to the selected inner solver, not to a second outer total.",
+  "point_scope": "44 exact selected hard inputs from 9 trajectory UIDs, 3 timing repeats; no general incidence inference",
+  "files": {
+    "first_failure_inputs.csv": "e128a4753b9f533c70787f48a19d17725fc73efe06ebbf6921005048d69ebf1a",
+    "run_summaries.csv": "0fa38d0ee3352e636f3922fb69381b649b82a2c4774460abb2e9190b706c7279",
+    "family_table.csv": "72e4eb8cf18ef66bb4e69bc6ad26e89cebb815ca236fcc68d947e99c204f4b00",
+    "completion_uids.json": "2b2c7797d7112a6b69241bda33c30e872d93d7a228266f6168a0938160e35408",
+    "trajectory_units.csv": "7863af6f77b1186d3460389e7b2d7c02fe0f7e5acb9d77eaad5b27112818c510",
+    "same_frame_recovery_records.jsonl.gz": "909ba62c91da5367bbd2649d5a1d0078626060902237d05d76f5164c93132071",
+    "point_recovery_by_source.csv": "efd39a437dba1546890598e26ec23ce48a4c19d205140881f3fc33458b99bac5",
+    "paired_comparisons.csv": "ab7a4aa68d883920b98d55d2e8ecd8028f0afb3622483025aaf0ab1a142361cd",
+    "main_table.csv": "c45d743a445f915bcbd8d89714ed5b80a4dce2e6f4af737b6a968e854f0b4dd6",
+    "source_data.json": "1c1ea63d98046a165669e6801d0da4ab0b1a190da46f36bf3e94bb5d9d0d5abc",
+    "gained_lost_uids.csv": "1affedf4111fb0716efa9e06a5d18ffeb778a9c2659e0575cd61b6226d02c014",
+    "point_recovery_summary.csv": "8b7be9dffe52cf4643de001d798f79ef52d9db850d532216c91cec488de7364a",
+    "verification.json": "868f3a4e0cd05a2bef10d3aef7758a322a92ee1faac88b3db343b259f17af17c"
+  },
+  "witness_index_sha256": "7cdc1b74c8539b880c93a46340b3334b0880891f663f2f8e2b916fe5770ac941"
+}
