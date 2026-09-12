@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "commands_checked": 144000,
+    "accepted_commands": 142896
+  },
+  "accepted_contract_violations": 0,
+  "successful_runs": 928,
+  "solver_calls": 0,
+  "checks": "Original target and actual accepted-state feedback on every frame; original verifier and residuals; complete outer time and all failures retained; 30-update bound; no recovery calls."
+}

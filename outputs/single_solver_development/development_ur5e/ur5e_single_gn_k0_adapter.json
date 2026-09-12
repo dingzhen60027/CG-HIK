@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "optional_backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "settings": {
+      "damping": 0.01,
+      "posture_weight": 0.0,
+      "task_stop": 1.0,
+      "maximum_iterations": 30,
+      "deadline_ms": 20.0
+    },
+    "byte_identical_package_sources": true,
+    "additional_pre_measurement_warmup": {
+      "box_qp_calls": 1,
+      "full_adapter_calls": 3,
+      "evaluation_counts": [
+        4,
+        4,
+        4
+      ]
+    },
+    "timing": "Unchanged supplied adapter outer time includes conversion, solve and final original verifier; no serialization or warmup. Core 20 ms soft check starts inside adapter, so outer overruns remain possible."
+  },
+  "startup_warmup_calls": 1
+}

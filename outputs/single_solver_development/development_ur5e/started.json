@@ -1,0 +1,76 @@
+{
+  "utc": "2026-09-12T06:26:46.202962+00:00",
+  "code_hashes": {
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/bounded_gn_adapter.py": "ab6212f2f8f70dee4c0eef639f8bb768739376796341df6482de2b915819651a",
+    "scripts/run_single_solver_development.py": "5a730227fa56dfd17592f5409b993cf0fdf12e2ae6cc49647620fe4bfe2c8f77",
+    "configs/single_solver_development.yaml": "f1eb157af809d37234a9b2f5197e050da2827839db6b72db5c99c1d3a5f7f27e",
+    "src/confik/correction_reserve/study.py": "b489d082641ec4ed36bcc69aab6df82b6d4935bb16c920f90325bd79313d3a94",
+    "src/confik/correction_reserve/reporting.py": "439ffd253c105076eae11ebeba835715812ee2959ace49deaa81b261c259a6a9",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/task_contract_alignment/outcomes.py": "e9b36e1c59fba49f181fa3cf36f7583e844d3285c2f4c35878c47768a4e885dd",
+    "src/confik/task_contract_alignment/trac_adapter.py": "09a5c40506621c078b7abf4f2086ca79a0a7e605407a586919cbb1c36af2762c",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "tmp/task_contract_build/libcontract_trac.so": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83",
+    "configs/paper_v2.yaml": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a"
+  },
+  "configuration": {
+    "baseline": "f72f89d76019f7887ae5105dd87050cfa699a0e5",
+    "source_config": "configs/paper_v2.yaml",
+    "native_trac_library": "tmp/task_contract_build/libcontract_trac.so",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "methods": [
+      "trac_task_5ms",
+      "pink_qp",
+      "single_gn_k0",
+      "single_gn_k1"
+    ],
+    "repeats": 3,
+    "order_seed": 2026091205,
+    "bootstrap_seed": 2026091206,
+    "bootstrap_samples": 4000,
+    "development": {
+      "panda_targets": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json",
+      "ur5e_targets": "outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json"
+    },
+    "settings": {
+      "damping": 0.01,
+      "posture_weights": [
+        0.0,
+        1.0
+      ],
+      "task_stop": 1.0,
+      "maximum_iterations": 30,
+      "deadline_ms": 20.0
+    },
+    "scope": "unchanged supplied portable core and adapter; no parameter search or fallback; existing development trajectories",
+    "formal": {
+      "order_seed": 2026091205
+    }
+  },
+  "methods": [
+    "trac_task_5ms",
+    "pink_qp",
+    "single_gn_k0",
+    "single_gn_k1"
+  ],
+  "python": "3.12.13",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+  "git_sha": "bad8b0abf5f7215b7548a5fcef2bebcea88b519b",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "cpu_affinity": [
+    4,
+    6
+  ],
+  "inference_unit": "whole trajectory; search repeats nested",
+  "timing_scope": "solver input conversion, dynamic bounds, numerical solve, prediction/optimization if applicable, command verification; serialization excluded"
+}

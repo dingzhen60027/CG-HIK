@@ -1,0 +1,29 @@
+{
+  "created": "2026-09-12T06:29:43.451113+00:00",
+  "sources": {
+    "panda": {
+      "path": "outputs/single_solver_development/development_panda",
+      "completed_sha256": "26b42cd9862b314f1b74de9fbc3f1a5028a5ce0c25eccba3a9ef0726da2260ba"
+    },
+    "ur5e": {
+      "path": "outputs/single_solver_development/development_ur5e",
+      "completed_sha256": "311c4170f5f94bb80902e82d6263fbd126c38fe147f0b9c55f0139af2f5023c0"
+    }
+  },
+  "reporting_sha256": "07be50c1034e502c4ed37384a28554f198b9bd5eb67a37215d0cfbdcd80d3ae2",
+  "source_policy": "All statistics are new original-server calls; historical portable timings are not mixed in.",
+  "independent_unit": "40 trajectory UIDs/robot; average 3 nested repeats, then paired family-stratified bootstrap; descriptive unadjusted 95% intervals",
+  "files": {
+    "first_failure_inputs.csv": "d17d891b6ad65d0a00eb06eebc8349f17fa51b5d19c0e373ce73cc34443814e7",
+    "run_summaries.csv": "c8157db462c36308f250836d176ed263ffa9c2ed54af0eb41923fe7d24273094",
+    "family_table.csv": "3362cb32b14b3a8de0bc94680d0c9be941191be9e15dd98544d1d018f0d70f81",
+    "completion_uids.json": "9c344f2e9134d84e5f7e51c226ca14530fcaf253986733728257915048853439",
+    "trajectory_units.csv": "abe15a50cdf2c9f7b3fd1a0f6b6d7131450c5e828f3db5a863b0d66f4687f5a0",
+    "paired_comparisons.csv": "0e30b55593c7636f82ff2225d27285c47300422dcb85d8037337b91ded38e81b",
+    "main_table.csv": "dfb30a6613c35202f926e2f7fbf713d87ada6b308246ecb0e857c9578b053494",
+    "source_data.json": "4b3b2182e37f23756bbd346d07f5bc4948fe3f364df2d4bccf55519d786a0af3",
+    "gained_lost_uids.csv": "bf2f0b0f83f2b73beea938b3c18d31c78ee666161da54cd5e4400122cb57393c",
+    "verification.json": "ee13f7cc1defb44a6071e1ca8680e9ae2d277bb90bd72ffd2ccdd82276ec0258",
+    "successful_trajectory_index.json": "22facfe2e276fb2f23e9b1c6310fcc5af47ad53309dd504c0567ce75ccc0169d"
+  }
+}
