@@ -1,0 +1,292 @@
+{
+  "model_agreement": [
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "recorded": [
+        0.0012992839328331773,
+        0.004631253155571994
+      ],
+      "recomputed": [
+        0.0012992839328331773,
+        0.0046312531555720285
+      ],
+      "absolute_difference": [
+        0.0,
+        3.469446951953614e-17
+      ]
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "recorded": [
+        0.0034535995934168867,
+        0.007814299369663286
+      ],
+      "recomputed": [
+        0.003453599593416899,
+        0.007814299369663286
+      ],
+      "absolute_difference": [
+        1.214306433183765e-17,
+        0.0
+      ]
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "recorded": [
+        0.0032967721333230274,
+        0.006124485041746941
+      ],
+      "recomputed": [
+        0.0032967721333230526,
+        0.006124485041746863
+      ],
+      "absolute_difference": [
+        2.5153490401663703e-17,
+        7.806255641895632e-17
+      ]
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "recorded": [
+        0.012542362744525656,
+        0.024533186881132853
+      ],
+      "recomputed": [
+        0.012542362744525621,
+        0.024533186881132794
+      ],
+      "absolute_difference": [
+        3.469446951953614e-17,
+        5.898059818321144e-17
+      ]
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "recorded": [
+        0.0071159456362062746,
+        0.015926583070896755
+      ],
+      "recomputed": [
+        0.007115945636206258,
+        0.015926583070896855
+      ],
+      "absolute_difference": [
+        1.6479873021779667e-17,
+        1.0061396160665481e-16
+      ]
+    }
+  ],
+  "jacobian_error": 1.1158693169477374e-07,
+  "results": [
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 14.564237999991292,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ]
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 51.34009799999717,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ]
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 3.776430000016262,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ]
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 6.25577100001351,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ]
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.311942000000954,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ]
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.4033669999946596,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ]
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.2718529999963266,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ]
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 5.7000369999968825,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ]
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.9818840000027649,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ]
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 5.892201999984081,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ]
+    }
+  ]
+}

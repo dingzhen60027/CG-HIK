@@ -1,0 +1,2538 @@
+[
+  {
+    "input_uid": "4f66472474cc30aa94b603a09895b17cb22bf28c31e3b301200631a5ec54ed75",
+    "robot": "panda",
+    "previous_q": [
+      -2.580960908165891,
+      0.045225535505242616,
+      2.8972999999999995,
+      -0.5738462902928353,
+      -2.8972999999999995,
+      2.0299278701804253,
+      -1.7646994928786397
+    ],
+    "target_position": [
+      0.20345807338386102,
+      0.045433628449392,
+      1.1610273074352238
+    ],
+    "target_rotation": [
+      [
+        0.34441197335250046,
+        0.8332610360490273,
+        -0.43250021781952736
+      ],
+      [
+        -0.9093383559548955,
+        0.18154820955192075,
+        -0.3743581199837129
+      ],
+      [
+        -0.2334183947350436,
+        0.5222224558662657,
+        0.8202435977124855
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 0,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "pink_qp",
+        "repeat": 1,
+        "frame": 122,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_pink_qp_r1.jsonl.gz",
+        "historical_failure_kind": "position_tolerance",
+        "historical_q": [
+          -2.578042024040462,
+          0.036008619969428904,
+          2.8972999999999995,
+          -0.5589157909530367,
+          -2.8972999999999995,
+          2.0324139277175353,
+          -1.7685271154541125
+        ]
+      },
+      {
+        "source_csv_row": 24,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "pink_qp",
+        "repeat": 0,
+        "frame": 122,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_pink_qp_r0.jsonl.gz",
+        "historical_failure_kind": "position_tolerance",
+        "historical_q": [
+          -2.578042024040462,
+          0.036008619969428904,
+          2.8972999999999995,
+          -0.5589157909530367,
+          -2.8972999999999995,
+          2.0324139277175353,
+          -1.7685271154541125
+        ]
+      },
+      {
+        "source_csv_row": 29,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "pink_qp",
+        "repeat": 2,
+        "frame": 122,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_pink_qp_r2.jsonl.gz",
+        "historical_failure_kind": "position_tolerance",
+        "historical_q": [
+          -2.578042024040462,
+          0.036008619969428904,
+          2.8972999999999995,
+          -0.5589157909530367,
+          -2.8972999999999995,
+          2.0324139277175353,
+          -1.7685271154541125
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "600a9f779c1d032ab44ee2f105a424e1d28cce1971cb57fee8ad8f9eae35e5ba",
+    "robot": "panda",
+    "previous_q": [
+      -2.1438080350350557,
+      0.05329899431860638,
+      2.45049230073697,
+      -0.5585506551483025,
+      -2.897299999758884,
+      2.0671755660802966,
+      -1.752459466423062
+    ],
+    "target_position": [
+      0.20861375575358249,
+      0.026903607247617728,
+      1.1614330491751486
+    ],
+    "target_rotation": [
+      [
+        0.34229102437705455,
+        0.8425791812818971,
+        -0.41580906423650105
+      ],
+      [
+        -0.9074290555980031,
+        0.18164137962248073,
+        -0.3789180891239665
+      ],
+      [
+        -0.24374036121952192,
+        0.507017487350456,
+        0.8267550446374108
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 1,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "tar_corrected",
+        "repeat": 0,
+        "frame": 115,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_tar_corrected_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "42ebc04895bf6aa269655065a1cc9b8d01f38d7e342bd7079d60e1305d74ed2f",
+    "robot": "panda",
+    "previous_q": [
+      -2.271496215287015,
+      0.05635762476489381,
+      2.5662068857508156,
+      -0.5700076469642632,
+      -2.896034749633398,
+      2.0642965613790434,
+      -1.7430298825193924
+    ],
+    "target_position": [
+      0.20861375575358249,
+      0.026903607247617728,
+      1.1614330491751486
+    ],
+    "target_rotation": [
+      [
+        0.34229102437705455,
+        0.8425791812818971,
+        -0.41580906423650105
+      ],
+      [
+        -0.9074290555980031,
+        0.18164137962248073,
+        -0.3789180891239665
+      ],
+      [
+        -0.24374036121952192,
+        0.507017487350456,
+        0.8267550446374108
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 2,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "trac_task_5ms",
+        "repeat": 1,
+        "frame": 115,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_trac_task_5ms_r1.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance",
+        "historical_q": [
+          -2.271496215287015,
+          0.05635762476489381,
+          2.5662068857508156,
+          -0.5700076469642632,
+          -2.896034749633398,
+          2.0642965613790434,
+          -1.7430298825193924
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "dbfc00c971bbb0f9cf7ab1cd80d4a09de15ebd088ace3ef2e2d89a14b673c8c3",
+    "robot": "panda",
+    "previous_q": [
+      -1.1639954548486624,
+      0.5353856535970403,
+      0.24494794116457477,
+      -0.9575487106914551,
+      2.8909076134262737,
+      2.7952076472041076,
+      0.5137465510857151
+    ],
+    "target_position": [
+      0.37719423030748733,
+      -0.6378831642217682,
+      0.6422111927532251
+    ],
+    "target_rotation": [
+      [
+        0.5275670504201451,
+        0.6604035474662989,
+        0.534359580998522
+      ],
+      [
+        -0.10416908689423132,
+        0.6745619459455053,
+        -0.7308317059472961
+      ],
+      [
+        -0.8431024900014291,
+        0.3298989778343376,
+        0.424670290669419
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 3,
+        "trajectory_uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+        "site_id": "trajectory_26",
+        "method": "tar_corrected",
+        "repeat": 1,
+        "frame": 72,
+        "family": "joint_limit_return",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_26_tar_corrected_r1.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "fdfb651a13498c780a58386debe627a0f9e01d6c64b8fbcb60932e8a4e37cf1c",
+    "robot": "panda",
+    "previous_q": [
+      1.0553777074897555,
+      -0.06954642181667957,
+      1.250238389752356,
+      -0.27990444430191647,
+      1.2944146799097758,
+      2.887950844810127,
+      1.9241793077097602
+    ],
+    "target_position": [
+      -0.07726759269901129,
+      0.07668869761084363,
+      1.1698773132063292
+    ],
+    "target_rotation": [
+      [
+        -0.6556085626488005,
+        -0.6131555357539996,
+        -0.44070137457897657
+      ],
+      [
+        0.675307884141976,
+        -0.7372338854612545,
+        0.021105917260096793
+      ],
+      [
+        -0.3378411967141688,
+        -0.28377189272711234,
+        0.8974056154832164
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 4,
+        "trajectory_uid": "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370",
+        "site_id": "trajectory_12",
+        "method": "tar_corrected",
+        "repeat": 0,
+        "frame": 88,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_12_tar_corrected_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "9b62280a4d8f4c0ae8e3435d91641584211d9b1b71f1adb697873344fac80b4c",
+    "robot": "panda",
+    "previous_q": [
+      2.0360563419994255,
+      -0.06539686027627456,
+      1.7754951483643535,
+      -0.5368952952152504,
+      1.4186730111785946,
+      0.17447711050817122,
+      -0.09478676477992756
+    ],
+    "target_position": [
+      -0.05604202970298775,
+      -0.22751560872190718,
+      0.9250271404969971
+    ],
+    "target_rotation": [
+      [
+        0.5110467357904374,
+        -0.7292783656147628,
+        0.4549552717402005
+      ],
+      [
+        -0.8581530407395744,
+        -0.4630815448243769,
+        0.22165026846925157
+      ],
+      [
+        0.04903664453611699,
+        -0.5036948960326373,
+        -0.8624887588851864
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 5,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "tar_old",
+        "repeat": 1,
+        "frame": 102,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_tar_old_r1.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "8c64fb0ed2a8f41102cfefc3ef9d376654a0d3895da737f0bb3034ad8c32406a",
+    "robot": "panda",
+    "previous_q": [
+      -2.1887592239281872,
+      0.04364049138942872,
+      2.4510796673340107,
+      -0.5460816312138562,
+      -2.863272681138199,
+      2.076102613663043,
+      -1.7423405843345712
+    ],
+    "target_position": [
+      0.2101951828709031,
+      0.021021791875536586,
+      1.1614518861885486
+    ],
+    "target_rotation": [
+      [
+        0.34178788900162776,
+        0.8454662657569564,
+        -0.4103264948779187
+      ],
+      [
+        -0.9067247437488449,
+        0.1818961380037802,
+        -0.3804786906686123
+      ],
+      [
+        -0.24704509306076639,
+        0.5020961944152706,
+        0.8287750801926298
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 6,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "trac_task_5ms",
+        "repeat": 0,
+        "frame": 113,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_trac_task_5ms_r0.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance",
+        "historical_q": [
+          -2.1887592239281872,
+          0.04364049138942872,
+          2.4510796673340107,
+          -0.5460816312138562,
+          -2.863272681138199,
+          2.076102613663043,
+          -1.7423405843345712
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "25de123fc669fa1a0cf9de49f27a83f1f3953e9b6097438bb3060c35d81f3e64",
+    "robot": "panda",
+    "previous_q": [
+      -2.0775161805982183,
+      0.060979301408322674,
+      2.3757648011532666,
+      -0.5613201347152601,
+      -2.8941260897377505,
+      2.0740087540516594,
+      -1.744947216985779
+    ],
+    "target_position": [
+      0.21099924818866234,
+      0.017992557794831096,
+      1.1614408546079218
+    ],
+    "target_rotation": [
+      [
+        0.34156137241689644,
+        0.8469392471770006,
+        -0.40746747166361774
+      ],
+      [
+        -0.9063431108539755,
+        0.18207095540760465,
+        -0.3813034652406142
+      ],
+      [
+        -0.24875287793355155,
+        0.4995438707343101,
+        0.829805957397004
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 7,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "tar_old",
+        "repeat": 1,
+        "frame": 112,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_tar_old_r1.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "7c2787bd68c26948703a584b97c3a466b1886b3018cfb00953af9f4f6ad42093",
+    "robot": "panda",
+    "previous_q": [
+      -0.29890812302948927,
+      0.6501893171993048,
+      0.15842787091403504,
+      -0.06980000000000001,
+      0.37630819867383475,
+      1.0383314852110515,
+      0.27493358057509076
+    ],
+    "target_position": [
+      0.5386324067017476,
+      -0.0890863944736938,
+      0.8244160345204308
+    ],
+    "target_rotation": [
+      [
+        0.91949543392027,
+        -0.13962573615186571,
+        0.36746809494679145
+      ],
+      [
+        -0.27315610011680863,
+        -0.8991820107761838,
+        0.34184419911046454
+      ],
+      [
+        0.28269045256030595,
+        -0.4147003319272225,
+        -0.86493337473513
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 8,
+        "trajectory_uid": "827f4c481262ed599d5a62ea92d72f83f9d2baecaa5e733c4c0018e796d573d5",
+        "site_id": "trajectory_38",
+        "method": "pink_qp",
+        "repeat": 1,
+        "frame": 105,
+        "family": "high_curvature",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_38_pink_qp_r1.jsonl.gz",
+        "historical_failure_kind": "position_tolerance+orientation_tolerance",
+        "historical_q": [
+          -0.29677849720720634,
+          0.6322722729599511,
+          0.11482787091403505,
+          -0.06980000000000001,
+          0.4139754548757427,
+          1.03909267198161,
+          0.2798914939718913
+        ]
+      },
+      {
+        "source_csv_row": 27,
+        "trajectory_uid": "827f4c481262ed599d5a62ea92d72f83f9d2baecaa5e733c4c0018e796d573d5",
+        "site_id": "trajectory_38",
+        "method": "pink_qp",
+        "repeat": 2,
+        "frame": 105,
+        "family": "high_curvature",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_38_pink_qp_r2.jsonl.gz",
+        "historical_failure_kind": "position_tolerance+orientation_tolerance",
+        "historical_q": [
+          -0.29677849720720634,
+          0.6322722729599511,
+          0.11482787091403505,
+          -0.06980000000000001,
+          0.4139754548757427,
+          1.03909267198161,
+          0.2798914939718913
+        ]
+      },
+      {
+        "source_csv_row": 35,
+        "trajectory_uid": "827f4c481262ed599d5a62ea92d72f83f9d2baecaa5e733c4c0018e796d573d5",
+        "site_id": "trajectory_38",
+        "method": "pink_qp",
+        "repeat": 0,
+        "frame": 105,
+        "family": "high_curvature",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_38_pink_qp_r0.jsonl.gz",
+        "historical_failure_kind": "position_tolerance+orientation_tolerance",
+        "historical_q": [
+          -0.29677849720720634,
+          0.6322722729599511,
+          0.11482787091403505,
+          -0.06980000000000001,
+          0.4139754548757427,
+          1.03909267198161,
+          0.2798914939718913
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "9f57f6ae6788b0a7a0237c5ae0646b733063eae9c690c7e8a9af272162f203d5",
+    "robot": "panda",
+    "previous_q": [
+      2.8972999999999995,
+      0.2208501889085296,
+      1.71267687290282,
+      -0.6933050514508895,
+      0.8237396789143764,
+      0.3642165226420566,
+      0.10348506575471131
+    ],
+    "target_position": [
+      -0.06365257251620854,
+      -0.26256401938349483,
+      0.9061759282087597
+    ],
+    "target_rotation": [
+      [
+        0.5560616649394297,
+        -0.6796655486174742,
+        0.47838286633960614
+      ],
+      [
+        -0.8306996908455809,
+        -0.4357232051395866,
+        0.3465303913539789
+      ],
+      [
+        -0.02708225274687437,
+        -0.5900847655425395,
+        -0.8068869320175911
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 9,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "pink_qp",
+        "repeat": 0,
+        "frame": 122,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_pink_qp_r0.jsonl.gz",
+        "historical_failure_kind": "position_tolerance",
+        "historical_q": [
+          2.8972999999999995,
+          0.24092726647793833,
+          1.7562768729028198,
+          -0.7068710601948309,
+          0.7938662328714136,
+          0.37838831385312666,
+          0.11901884516860067
+        ]
+      },
+      {
+        "source_csv_row": 23,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "pink_qp",
+        "repeat": 1,
+        "frame": 122,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_pink_qp_r1.jsonl.gz",
+        "historical_failure_kind": "position_tolerance",
+        "historical_q": [
+          2.8972999999999995,
+          0.24092726647793833,
+          1.7562768729028198,
+          -0.7068710601948309,
+          0.7938662328714136,
+          0.37838831385312666,
+          0.11901884516860067
+        ]
+      },
+      {
+        "source_csv_row": 34,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "pink_qp",
+        "repeat": 2,
+        "frame": 122,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_pink_qp_r2.jsonl.gz",
+        "historical_failure_kind": "position_tolerance",
+        "historical_q": [
+          2.8972999999999995,
+          0.24092726647793833,
+          1.7562768729028198,
+          -0.7068710601948309,
+          0.7938662328714136,
+          0.37838831385312666,
+          0.11901884516860067
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "9adbe7d9162e61bec63a476709e879b40b65ef9cde8a3127e1823d4cc438bbeb",
+    "robot": "panda",
+    "previous_q": [
+      2.879787295810309,
+      0.18917152481309918,
+      1.6653529388567587,
+      -0.6657544831136349,
+      0.855180841034812,
+      0.34322823272553377,
+      0.07201356007837152
+    ],
+    "target_position": [
+      -0.06191101117000993,
+      -0.2569398691732451,
+      0.9094463974840075
+    ],
+    "target_rotation": [
+      [
+        0.5485944334063589,
+        -0.6883113438429131,
+        0.4746278980135061
+      ],
+      [
+        -0.8359417731707867,
+        -0.44091363393388183,
+        0.32679736730778625
+      ],
+      [
+        -0.01566842377641365,
+        -0.5760405032186382,
+        -0.8172709704547085
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 10,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "tar_old",
+        "repeat": 0,
+        "frame": 118,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_tar_old_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "88c205ab16f68aa058692b7c57ec3b2e7546f0bf15f9937d0cb4d4497e657bb8",
+    "robot": "panda",
+    "previous_q": [
+      0.8252382995242301,
+      -0.1420649185596657,
+      1.1124818505672744,
+      -0.2678698729247994,
+      1.6781658887990165,
+      2.8371384329947165,
+      1.893647382033361
+    ],
+    "target_position": [
+      -0.0876088670778926,
+      0.05987856614116665,
+      1.1700859576871954
+    ],
+    "target_rotation": [
+      [
+        -0.645105860289506,
+        -0.613757973873873,
+        -0.45512589305199364
+      ],
+      [
+        0.6905720154310897,
+        -0.7232552186426011,
+        -0.003490015714314948
+      ],
+      [
+        -0.3270301523156229,
+        -0.31654863482959683,
+        0.8904202610362925
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 11,
+        "trajectory_uid": "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370",
+        "site_id": "trajectory_12",
+        "method": "trac_task_5ms",
+        "repeat": 2,
+        "frame": 91,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_12_trac_task_5ms_r2.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance+orientation_tolerance",
+        "historical_q": [
+          0.8252382995242301,
+          -0.1420649185596657,
+          1.1124818505672744,
+          -0.2678698729247994,
+          1.6781658887990165,
+          2.8371384329947165,
+          1.893647382033361
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "418957843231cbd224b9c9916ccecc353d77784233c9b3a9f0255063c0a25529",
+    "robot": "panda",
+    "previous_q": [
+      -2.1464200594401097,
+      0.05192091716472915,
+      2.4531465013256795,
+      -0.557799560119491,
+      -2.8971553273849664,
+      2.0625182591573044,
+      -1.7528474127590326
+    ],
+    "target_position": [
+      0.20861375575358249,
+      0.026903607247617728,
+      1.1614330491751486
+    ],
+    "target_rotation": [
+      [
+        0.34229102437705455,
+        0.8425791812818971,
+        -0.41580906423650105
+      ],
+      [
+        -0.9074290555980031,
+        0.18164137962248073,
+        -0.3789180891239665
+      ],
+      [
+        -0.24374036121952192,
+        0.507017487350456,
+        0.8267550446374108
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 12,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "tar_corrected",
+        "repeat": 2,
+        "frame": 115,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_tar_corrected_r2.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "f1d3764b99375c8427303c37807b359d6089b6db21f6bd3b78cc8bbaa3d4f88c",
+    "robot": "panda",
+    "previous_q": [
+      -2.1032211633861078,
+      0.05379702681963915,
+      2.4077211487626595,
+      -0.5566181597916038,
+      -2.89552012244424,
+      2.066140061490353,
+      -1.751859718982367
+    ],
+    "target_position": [
+      0.2093997000375418,
+      0.023992813196638395,
+      1.161449008205382
+    ],
+    "target_rotation": [
+      [
+        0.34203163240143825,
+        0.8440123545533905,
+        -0.41310713840122565
+      ],
+      [
+        -0.9070865282734593,
+        0.18175357540054604,
+        -0.3796836420678684
+      ],
+      [
+        -0.24537398529919738,
+        0.5045877358699475,
+        0.8277577086007893
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 13,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "tar_old",
+        "repeat": 2,
+        "frame": 114,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_tar_old_r2.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "6c1fbe485f44255da85b98c10347c096c20e7fbd53c6c49245ff871d82944249",
+    "robot": "panda",
+    "previous_q": [
+      -1.2261310344602496,
+      0.5442240353246025,
+      0.288512175960532,
+      -0.9692952195385323,
+      2.8971949574973697,
+      2.777124953123424,
+      0.4737070815872624
+    ],
+    "target_position": [
+      0.3569148782906584,
+      -0.6533742062748258,
+      0.6344994544290563
+    ],
+    "target_rotation": [
+      [
+        0.5203477485650665,
+        0.6856813383513327,
+        0.5089983524531209
+      ],
+      [
+        -0.12868594654447588,
+        0.6522038563142368,
+        -0.7470408670017928
+      ],
+      [
+        -0.8442026698164478,
+        0.32322009845546956,
+        0.4276103602921915
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 14,
+        "trajectory_uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+        "site_id": "trajectory_26",
+        "method": "tar_old",
+        "repeat": 0,
+        "frame": 74,
+        "family": "joint_limit_return",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_26_tar_old_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "34018512fa06d679e3f55cdb4e77edd40a42b5fa057bef6f00a5fb3c96bd796e",
+    "robot": "panda",
+    "previous_q": [
+      0.9002340164667796,
+      -0.12156780908687327,
+      1.282197791116698,
+      -0.25781482743112405,
+      1.428171602192042,
+      2.861493537455517,
+      1.8927366688662335
+    ],
+    "target_position": [
+      -0.09440275994367925,
+      0.04900663477280743,
+      1.1699343623012006
+    ],
+    "target_rotation": [
+      [
+        -0.6383613534216706,
+        -0.6137933405483921,
+        -0.4644916765197182
+      ],
+      [
+        0.7002405716577843,
+        -0.7136453834461497,
+        -0.019323780436990894
+      ],
+      [
+        -0.31962153285101497,
+        -0.33759147172943077,
+        0.8853666325051583
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 15,
+        "trajectory_uid": "ea5503530085a4b7fba1457389f090742de31c9aa6ebe8907aa867289b032370",
+        "site_id": "trajectory_12",
+        "method": "tar_old",
+        "repeat": 0,
+        "frame": 93,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_12_tar_old_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "b8b73d2fa9e7676acadc30e1d766a96c82230608a2941dd563a973b8da35236a",
+    "robot": "panda",
+    "previous_q": [
+      -2.0734465811286964,
+      0.05547266423517292,
+      2.3712063892264084,
+      -0.5547579187256935,
+      -2.894993967742049,
+      2.0732929039211716,
+      -1.7487857606114943
+    ],
+    "target_position": [
+      0.2101951828709031,
+      0.021021791875536586,
+      1.1614518861885486
+    ],
+    "target_rotation": [
+      [
+        0.34178788900162776,
+        0.8454662657569564,
+        -0.4103264948779187
+      ],
+      [
+        -0.9067247437488449,
+        0.1818961380037802,
+        -0.3804786906686123
+      ],
+      [
+        -0.24704509306076639,
+        0.5020961944152706,
+        0.8287750801926298
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 16,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "tar_old",
+        "repeat": 0,
+        "frame": 113,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_tar_old_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "411ccdcd0fde26d9cecba60717ddadabc0cad512eba9c667ff363443f274d4ab",
+    "robot": "panda",
+    "previous_q": [
+      -1.1330919920705091,
+      0.5310336635570948,
+      0.24977297004247864,
+      -0.943621707922951,
+      2.8968189120709105,
+      2.8170533659702897,
+      0.5107366076041324
+    ],
+    "target_position": [
+      0.396400236698004,
+      -0.6222003221191696,
+      0.6495423728735656
+    ],
+    "target_rotation": [
+      [
+        0.5334090415878396,
+        0.6347454779592699,
+        0.5590822592093228
+      ],
+      [
+        -0.07922695805984556,
+        0.6955513886843764,
+        -0.714094779994798
+      ],
+      [
+        -0.8421388742178605,
+        0.3366102254975236,
+        0.42130235297417984
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 17,
+        "trajectory_uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+        "site_id": "trajectory_26",
+        "method": "trac_task_5ms",
+        "repeat": 2,
+        "frame": 70,
+        "family": "joint_limit_return",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_26_trac_task_5ms_r2.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance+orientation_tolerance",
+        "historical_q": [
+          -1.1330919920705091,
+          0.5310336635570948,
+          0.24977297004247864,
+          -0.943621707922951,
+          2.8968189120709105,
+          2.8170533659702897,
+          0.5107366076041324
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "9f086d7dd95adc6c649009cad25aa782aa41ed4e0dce939862e2dc38021b8fcc",
+    "robot": "panda",
+    "previous_q": [
+      -1.1838492302361756,
+      0.5397868140075538,
+      0.22115934784646188,
+      -0.9695389748260373,
+      2.8966820709222856,
+      2.7723651528072932,
+      0.5136525117711404
+    ],
+    "target_position": [
+      0.3569148782906584,
+      -0.6533742062748258,
+      0.6344994544290563
+    ],
+    "target_rotation": [
+      [
+        0.5203477485650665,
+        0.6856813383513327,
+        0.5089983524531209
+      ],
+      [
+        -0.12868594654447588,
+        0.6522038563142368,
+        -0.7470408670017928
+      ],
+      [
+        -0.8442026698164478,
+        0.32322009845546956,
+        0.4276103602921915
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 18,
+        "trajectory_uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+        "site_id": "trajectory_26",
+        "method": "tar_old",
+        "repeat": 1,
+        "frame": 74,
+        "family": "joint_limit_return",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_26_tar_old_r1.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "c85241b6695dfc0954c856434a92b0eaf2e37679044ff064cc22e950f4def478",
+    "robot": "panda",
+    "previous_q": [
+      -2.1747536852143607,
+      0.05313090924129041,
+      2.466043717224148,
+      -0.5606718005343905,
+      -2.8953986925843496,
+      2.0637731138702904,
+      -1.7458615582259494
+    ],
+    "target_position": [
+      0.2093997000375418,
+      0.023992813196638395,
+      1.161449008205382
+    ],
+    "target_rotation": [
+      [
+        0.34203163240143825,
+        0.8440123545533905,
+        -0.41310713840122565
+      ],
+      [
+        -0.9070865282734593,
+        0.18175357540054604,
+        -0.3796836420678684
+      ],
+      [
+        -0.24537398529919738,
+        0.5045877358699475,
+        0.8277577086007893
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 19,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "trac_task_5ms",
+        "repeat": 2,
+        "frame": 114,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_trac_task_5ms_r2.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance",
+        "historical_q": [
+          -2.1747536852143607,
+          0.05313090924129041,
+          2.466043717224148,
+          -0.5606718005343905,
+          -2.8953986925843496,
+          2.0637731138702904,
+          -1.7458615582259494
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "922064c7701fd3e635320b0f0715388af679b3d9afb9214c6b9741ab9c8d11c1",
+    "robot": "panda",
+    "previous_q": [
+      -1.1909164436833084,
+      0.5334100673622649,
+      0.22902374410415452,
+      -0.9805393322905994,
+      2.897117193497598,
+      2.7688920847791674,
+      0.5106459391962016
+    ],
+    "target_position": [
+      0.3569148782906584,
+      -0.6533742062748258,
+      0.6344994544290563
+    ],
+    "target_rotation": [
+      [
+        0.5203477485650665,
+        0.6856813383513327,
+        0.5089983524531209
+      ],
+      [
+        -0.12868594654447588,
+        0.6522038563142368,
+        -0.7470408670017928
+      ],
+      [
+        -0.8442026698164478,
+        0.32322009845546956,
+        0.4276103602921915
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 20,
+        "trajectory_uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+        "site_id": "trajectory_26",
+        "method": "tar_corrected",
+        "repeat": 0,
+        "frame": 74,
+        "family": "joint_limit_return",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_26_tar_corrected_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "98f4df42d177e3501d1af10ef7c4225ef0ae4a8c9d4c6caf612cd841ecd03ad6",
+    "robot": "panda",
+    "previous_q": [
+      2.8910998001666632,
+      0.19204650057859823,
+      1.660299208959349,
+      -0.6618224723005,
+      0.8554979313070099,
+      0.3431317776754041,
+      0.08289400339231225
+    ],
+    "target_position": [
+      -0.06191101117000993,
+      -0.2569398691732451,
+      0.9094463974840075
+    ],
+    "target_rotation": [
+      [
+        0.5485944334063589,
+        -0.6883113438429131,
+        0.4746278980135061
+      ],
+      [
+        -0.8359417731707867,
+        -0.44091363393388183,
+        0.32679736730778625
+      ],
+      [
+        -0.01566842377641365,
+        -0.5760405032186382,
+        -0.8172709704547085
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 21,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "trac_task_5ms",
+        "repeat": 1,
+        "frame": 118,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_trac_task_5ms_r1.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance+orientation_tolerance",
+        "historical_q": [
+          2.8910998001666632,
+          0.19204650057859823,
+          1.660299208959349,
+          -0.6618224723005,
+          0.8554979313070099,
+          0.3431317776754041,
+          0.08289400339231225
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "160a6000dbffd33626af692b59d99139cfe60861434e36f2f39ef563ee3deeb9",
+    "robot": "panda",
+    "previous_q": [
+      -1.1718982312448858,
+      0.5371019303630358,
+      0.20162398163655182,
+      -0.971237969079529,
+      2.897297713181713,
+      2.77097304702346,
+      0.5203285716976803
+    ],
+    "target_position": [
+      0.3569148782906584,
+      -0.6533742062748258,
+      0.6344994544290563
+    ],
+    "target_rotation": [
+      [
+        0.5203477485650665,
+        0.6856813383513327,
+        0.5089983524531209
+      ],
+      [
+        -0.12868594654447588,
+        0.6522038563142368,
+        -0.7470408670017928
+      ],
+      [
+        -0.8442026698164478,
+        0.32322009845546956,
+        0.4276103602921915
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 22,
+        "trajectory_uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+        "site_id": "trajectory_26",
+        "method": "trac_task_5ms",
+        "repeat": 1,
+        "frame": 74,
+        "family": "joint_limit_return",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_26_trac_task_5ms_r1.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance+orientation_tolerance",
+        "historical_q": [
+          -1.1718982312448858,
+          0.5371019303630358,
+          0.20162398163655182,
+          -0.971237969079529,
+          2.897297713181713,
+          2.77097304702346,
+          0.5203285716976803
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "a0f625b7acb14756f546f7e28b17c0232e457ddf333ccbeaa0a3837436ef8cbb",
+    "robot": "panda",
+    "previous_q": [
+      2.413476486231183,
+      0.05916822323123026,
+      1.7600206567813135,
+      -0.5719208924063819,
+      1.074485701094968,
+      0.2750546932206823,
+      -0.06392359644110192
+    ],
+    "target_position": [
+      -0.05560961304635677,
+      -0.22313745655277453,
+      0.927145560103503
+    ],
+    "target_rotation": [
+      [
+        0.505640181913006,
+        -0.7348472365107153,
+        0.4520260450765501
+      ],
+      [
+        -0.8607056771603997,
+        -0.4656624625515559,
+        0.20577708393861233
+      ],
+      [
+        0.059276839818264156,
+        -0.4931105453779971,
+        -0.8679448405850305
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 25,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "tar_corrected",
+        "repeat": 1,
+        "frame": 100,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_tar_corrected_r1.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "ee7e9cb2b5b95e385f55706c8f1206f233733f37292f22e748722c82724d3539",
+    "robot": "panda",
+    "previous_q": [
+      2.8902416475320796,
+      0.20676677219140663,
+      1.6936063808418194,
+      -0.6764336879506156,
+      0.8370174776868875,
+      0.35627989034990604,
+      0.09334859080285064
+    ],
+    "target_position": [
+      -0.06234755816855856,
+      -0.2584147739463928,
+      0.9085985723227469
+    ],
+    "target_rotation": [
+      [
+        0.5505424179895927,
+        -0.6860724429890204,
+        0.47561291925814
+      ],
+      [
+        -0.8345978352700153,
+        -0.4395820439607435,
+        0.3319850598895969
+      ],
+      [
+        -0.01869490189268268,
+        -0.5797173704473346,
+        -0.8146031371440027
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 26,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "trac_task_5ms",
+        "repeat": 0,
+        "frame": 119,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_trac_task_5ms_r0.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance",
+        "historical_q": [
+          2.8902416475320796,
+          0.20676677219140663,
+          1.6936063808418194,
+          -0.6764336879506156,
+          0.8370174776868875,
+          0.35627989034990604,
+          0.09334859080285064
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "ad80b2fd24a95d2c3de3743d5ace62ff7e7ce602fc00785e411011d061c30ff4",
+    "robot": "panda",
+    "previous_q": [
+      -1.1300882519230162,
+      0.5309488447798025,
+      0.21985656827274586,
+      -0.9503900382660043,
+      2.8963453481553016,
+      2.8061500519224727,
+      0.5221810200543192
+    ],
+    "target_position": [
+      0.38693943824308696,
+      -0.6300532542719856,
+      0.6459277823269656
+    ],
+    "target_rotation": [
+      [
+        0.5306617129559349,
+        0.6476029799554461,
+        0.5468167213568902
+      ],
+      [
+        -0.09173420140043374,
+        0.685240687155057,
+        -0.7225164613769637
+      ],
+      [
+        -0.8426048793450567,
+        0.33325002778708235,
+        0.42303833902355853
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 28,
+        "trajectory_uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+        "site_id": "trajectory_26",
+        "method": "trac_task_5ms",
+        "repeat": 0,
+        "frame": 71,
+        "family": "joint_limit_return",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_26_trac_task_5ms_r0.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance+orientation_tolerance",
+        "historical_q": [
+          -1.1300882519230162,
+          0.5309488447798025,
+          0.21985656827274586,
+          -0.9503900382660043,
+          2.8963453481553016,
+          2.8061500519224727,
+          0.5221810200543192
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "d07e09f424cf8f9dd1d080682d631db379fb1fb8751efe6bd66a35f8cfe29be9",
+    "robot": "panda",
+    "previous_q": [
+      2.891099658691964,
+      0.19204677049117747,
+      1.66030001354989,
+      -0.66182260030478,
+      0.8554974255263461,
+      0.34313197583778465,
+      0.08289420904409049
+    ],
+    "target_position": [
+      -0.06191101117000993,
+      -0.2569398691732451,
+      0.9094463974840075
+    ],
+    "target_rotation": [
+      [
+        0.5485944334063589,
+        -0.6883113438429131,
+        0.4746278980135061
+      ],
+      [
+        -0.8359417731707867,
+        -0.44091363393388183,
+        0.32679736730778625
+      ],
+      [
+        -0.01566842377641365,
+        -0.5760405032186382,
+        -0.8172709704547085
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 30,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "trac_task_5ms",
+        "repeat": 2,
+        "frame": 118,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_trac_task_5ms_r2.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance+orientation_tolerance",
+        "historical_q": [
+          2.891099658691964,
+          0.19204677049117747,
+          1.66030001354989,
+          -0.66182260030478,
+          0.8554974255263461,
+          0.34313197583778465,
+          0.08289420904409049
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "c42de4179081514c950b831ca18c8f7f47ea3947d2b0eb8443363c49405510b8",
+    "robot": "panda",
+    "previous_q": [
+      -1.1579807330005387,
+      0.5342682317696072,
+      0.23696747384927402,
+      -0.9574229382638674,
+      2.892767488483961,
+      2.7951672426922625,
+      0.5164107982815827
+    ],
+    "target_position": [
+      0.37719423030748733,
+      -0.6378831642217682,
+      0.6422111927532251
+    ],
+    "target_rotation": [
+      [
+        0.5275670504201451,
+        0.6604035474662989,
+        0.534359580998522
+      ],
+      [
+        -0.10416908689423132,
+        0.6745619459455053,
+        -0.7308317059472961
+      ],
+      [
+        -0.8431024900014291,
+        0.3298989778343376,
+        0.424670290669419
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 31,
+        "trajectory_uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+        "site_id": "trajectory_26",
+        "method": "tar_old",
+        "repeat": 2,
+        "frame": 72,
+        "family": "joint_limit_return",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_26_tar_old_r2.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "2c07510cdc6a6a2b9328aa405291d8f8bf9f2630b8eeed8ba855ed378759f939",
+    "robot": "panda",
+    "previous_q": [
+      2.2166091166759827,
+      0.021789520332467095,
+      1.8257499949436253,
+      -0.5417388634400795,
+      1.1693405260814715,
+      0.2511660332254921,
+      -0.09627915968692197
+    ],
+    "target_position": [
+      -0.05515314922878735,
+      -0.2163202290886089,
+      0.9303491524503381
+    ],
+    "target_rotation": [
+      [
+        0.49729500599426313,
+        -0.7432861553301588,
+        0.4474632591707128
+      ],
+      [
+        -0.8642911890392752,
+        -0.4693094760874165,
+        0.18096783195814195
+      ],
+      [
+        0.07548786367517347,
+        -0.4767329513984378,
+        -0.8758009337107909
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 32,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "tar_corrected",
+        "repeat": 0,
+        "frame": 97,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_tar_corrected_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "fff4f943b72ab664dd86754dbc9f9cd61003cf6c4a96a2dce36ec3b8dd7b5bc1",
+    "robot": "panda",
+    "previous_q": [
+      2.8844796936940025,
+      0.20008835146633147,
+      1.6806864121270118,
+      -0.6751881931152062,
+      0.8493965857033048,
+      0.3495160828900574,
+      0.08478505085166518
+    ],
+    "target_position": [
+      -0.06234755816855856,
+      -0.2584147739463928,
+      0.9085985723227469
+    ],
+    "target_rotation": [
+      [
+        0.5505424179895927,
+        -0.6860724429890204,
+        0.47561291925814
+      ],
+      [
+        -0.8345978352700153,
+        -0.4395820439607435,
+        0.3319850598895969
+      ],
+      [
+        -0.01869490189268268,
+        -0.5797173704473346,
+        -0.8146031371440027
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 33,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "tar_corrected",
+        "repeat": 2,
+        "frame": 119,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_tar_corrected_r2.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "6461b529c7d8d70295c9e2f8894f58e0c0c420e36cd0f5fb51454f3250b1fcd2",
+    "robot": "panda",
+    "previous_q": [
+      2.8768722814677394,
+      0.19575105990757957,
+      1.6816445781378029,
+      -0.670441241384069,
+      0.8498365121166054,
+      0.34794608074981787,
+      0.08280913342996463
+    ],
+    "target_position": [
+      -0.06191101117000993,
+      -0.2569398691732451,
+      0.9094463974840075
+    ],
+    "target_rotation": [
+      [
+        0.5485944334063589,
+        -0.6883113438429131,
+        0.4746278980135061
+      ],
+      [
+        -0.8359417731707867,
+        -0.44091363393388183,
+        0.32679736730778625
+      ],
+      [
+        -0.01566842377641365,
+        -0.5760405032186382,
+        -0.8172709704547085
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 36,
+        "trajectory_uid": "ca9065ec04392f64d1cce7cea6e6ae7ba224495be6a41fa0902e34ddeb925465",
+        "site_id": "trajectory_17",
+        "method": "tar_old",
+        "repeat": 2,
+        "frame": 118,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_17_tar_old_r2.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "d9663d82a0b3db84ec81fd6bf21fde467e5a8801465b1ca4729ae4606dc8e080",
+    "robot": "panda",
+    "previous_q": [
+      -1.1566455836661236,
+      0.5328232389449761,
+      0.25965732081427967,
+      -0.9529024069746264,
+      2.888534859775119,
+      2.8034704311058385,
+      0.5144794388874888
+    ],
+    "target_position": [
+      0.38693943824308696,
+      -0.6300532542719856,
+      0.6459277823269656
+    ],
+    "target_rotation": [
+      [
+        0.5306617129559349,
+        0.6476029799554461,
+        0.5468167213568902
+      ],
+      [
+        -0.09173420140043374,
+        0.685240687155057,
+        -0.7225164613769637
+      ],
+      [
+        -0.8426048793450567,
+        0.33325002778708235,
+        0.42303833902355853
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 37,
+        "trajectory_uid": "b47f91198895baa3999a406c9c32516cd3e78dd7e42a8bccccc4cd058a03020a",
+        "site_id": "trajectory_26",
+        "method": "tar_corrected",
+        "repeat": 2,
+        "frame": 71,
+        "family": "joint_limit_return",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_26_tar_corrected_r2.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "01bc2f3f79d42bc2a32b40c721acea8640fac7d90e349640bd65079ef3316463",
+    "robot": "panda",
+    "previous_q": [
+      -2.1447059141067446,
+      0.052062342516059824,
+      2.4391748044917794,
+      -0.5568488739207238,
+      -2.8952888552634737,
+      2.0670044559143097,
+      -1.7461841246284653
+    ],
+    "target_position": [
+      0.2093997000375418,
+      0.023992813196638395,
+      1.161449008205382
+    ],
+    "target_rotation": [
+      [
+        0.34203163240143825,
+        0.8440123545533905,
+        -0.41310713840122565
+      ],
+      [
+        -0.9070865282734593,
+        0.18175357540054604,
+        -0.3796836420678684
+      ],
+      [
+        -0.24537398529919738,
+        0.5045877358699475,
+        0.8277577086007893
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 38,
+        "trajectory_uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "method": "tar_corrected",
+        "repeat": 1,
+        "frame": 114,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_panda/runs/panda_trajectory_14_tar_corrected_r1.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "5c020e69a725e543767661508efbc9fc6e3fc8819f433223abb4a50396c9ea29",
+    "robot": "ur5e",
+    "previous_q": [
+      6.283183441174509,
+      -5.459011992453088,
+      1.6190457121371664,
+      -4.6680183110218785,
+      1.4524445616442527,
+      -5.146233009866036
+    ],
+    "target_position": [
+      0.006357379198625106,
+      0.1465530850994874,
+      -0.2632573644316416
+    ],
+    "target_rotation": [
+      [
+        -0.694770808606833,
+        -0.39269246843327316,
+        -0.6025663023631427
+      ],
+      [
+        0.4121198881958775,
+        -0.9039772943907654,
+        0.11393967254371533
+      ],
+      [
+        -0.589449506964952,
+        -0.1691675987349069,
+        0.7898934119721728
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 39,
+        "trajectory_uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+        "site_id": "trajectory_15",
+        "method": "tar_old",
+        "repeat": 0,
+        "frame": 125,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_15_tar_old_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "f46ffa555d91c0fd0bd95829494f5c37d6249f99fa5fe0fb7c6f511d53dde130",
+    "robot": "ur5e",
+    "previous_q": [
+      6.283185307179585,
+      -5.46123162832147,
+      1.620208730378884,
+      -4.667950362577028,
+      1.4533783220477217,
+      -5.147631249514993
+    ],
+    "target_position": [
+      0.007072289920048387,
+      0.14578043002912777,
+      -0.2626977898743025
+    ],
+    "target_rotation": [
+      [
+        -0.6922972330332325,
+        -0.39512550802463087,
+        -0.6038214753077332
+      ],
+      [
+        0.41483306440331685,
+        -0.9025983660968872,
+        0.11502051207060113
+      ],
+      [
+        -0.5904558152921213,
+        -0.170856730705896,
+        0.7887774767069665
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 40,
+        "trajectory_uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+        "site_id": "trajectory_15",
+        "method": "trac_task_5ms",
+        "repeat": 1,
+        "frame": 124,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_15_trac_task_5ms_r1.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance",
+        "historical_q": [
+          6.283185307179585,
+          -5.46123162832147,
+          1.620208730378884,
+          -4.667950362577028,
+          1.4533783220477217,
+          -5.147631249514993
+        ]
+      },
+      {
+        "source_csv_row": 45,
+        "trajectory_uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+        "site_id": "trajectory_15",
+        "method": "tar_corrected",
+        "repeat": 0,
+        "frame": 124,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_15_tar_corrected_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "09ba0d288168ceb34efaf68123ab1a8bd8e1edbac224ab832b5f527b67f0f3a1",
+    "robot": "ur5e",
+    "previous_q": [
+      2.450420515534097,
+      1.0354765466516107,
+      1.291779128253633,
+      1.4343853766209158,
+      -2.8592467301471394,
+      1.131248096856852
+    ],
+    "target_position": [
+      -0.04381326850673338,
+      -0.014501902314038195,
+      -0.42076445987733185
+    ],
+    "target_rotation": [
+      [
+        0.7330040528339873,
+        -0.5122751977543765,
+        0.4475256197075912
+      ],
+      [
+        -0.4676886975406432,
+        0.09818740396926035,
+        0.878422743270297
+      ],
+      [
+        -0.49393556332955624,
+        -0.8531901051157894,
+        -0.1676135549734039
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 41,
+        "trajectory_uid": "5547871d76b6176b3e5dd5d8f20eebc72645f4fdb4a7e415a21928fb85392f9e",
+        "site_id": "trajectory_38",
+        "method": "pink_qp",
+        "repeat": 1,
+        "frame": 77,
+        "family": "high_curvature",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_38_pink_qp_r1.jsonl.gz",
+        "historical_failure_kind": "position_tolerance",
+        "historical_q": [
+          2.4651934636929735,
+          1.0334415477980525,
+          1.3182176429577586,
+          1.4769067342140672,
+          -2.874761657804875,
+          1.1941799499286476
+        ]
+      },
+      {
+        "source_csv_row": 49,
+        "trajectory_uid": "5547871d76b6176b3e5dd5d8f20eebc72645f4fdb4a7e415a21928fb85392f9e",
+        "site_id": "trajectory_38",
+        "method": "pink_qp",
+        "repeat": 2,
+        "frame": 77,
+        "family": "high_curvature",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_38_pink_qp_r2.jsonl.gz",
+        "historical_failure_kind": "position_tolerance",
+        "historical_q": [
+          2.4651934636929735,
+          1.0334415477980525,
+          1.3182176429577586,
+          1.4769067342140672,
+          -2.874761657804875,
+          1.1941799499286476
+        ]
+      },
+      {
+        "source_csv_row": 52,
+        "trajectory_uid": "5547871d76b6176b3e5dd5d8f20eebc72645f4fdb4a7e415a21928fb85392f9e",
+        "site_id": "trajectory_38",
+        "method": "pink_qp",
+        "repeat": 0,
+        "frame": 77,
+        "family": "high_curvature",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_38_pink_qp_r0.jsonl.gz",
+        "historical_failure_kind": "position_tolerance",
+        "historical_q": [
+          2.4651934636929735,
+          1.0334415477980525,
+          1.3182176429577586,
+          1.4769067342140672,
+          -2.874761657804875,
+          1.1941799499286476
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "1febd0a27c58059d7297752be9e249e886e3abe6d232e6ea38b6e7a858a7c1df",
+    "robot": "ur5e",
+    "previous_q": [
+      2.390309510754326,
+      1.0462993148957807,
+      1.2501745038184051,
+      1.3392719106984559,
+      -2.805690573502698,
+      1.0044945318489968
+    ],
+    "target_position": [
+      -0.04627198591536185,
+      -0.011718107333322028,
+      -0.42329878514068847
+    ],
+    "target_rotation": [
+      [
+        0.7357781078050689,
+        -0.5155053958793134,
+        0.4391864784964408
+      ],
+      [
+        -0.4578176908463514,
+        0.09925030990788489,
+        0.8834887310720513
+      ],
+      [
+        -0.4990326021643345,
+        -0.8511190062514766,
+        -0.16298128473721135
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 42,
+        "trajectory_uid": "5547871d76b6176b3e5dd5d8f20eebc72645f4fdb4a7e415a21928fb85392f9e",
+        "site_id": "trajectory_38",
+        "method": "tar_old",
+        "repeat": 0,
+        "frame": 76,
+        "family": "high_curvature",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_38_tar_old_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "761e240cea87fd5647c6bdf6e5557348246ad7ed84ebf5f2c4dc49bacedd5f64",
+    "robot": "ur5e",
+    "previous_q": [
+      -4.281495638922811,
+      -3.0379994646060005,
+      2.690243367178409,
+      5.3425256236111185,
+      0.0026527079272355104,
+      -3.455325003732475
+    ],
+    "target_position": [
+      -0.22896134247095953,
+      -0.05903745519610541,
+      0.3101480360399678
+    ],
+    "target_rotation": [
+      [
+        0.01116807877260207,
+        -0.4138607791254421,
+        -0.9102716789608534
+      ],
+      [
+        -0.033287147856287704,
+        0.9096700378916924,
+        -0.41399563759745106
+      ],
+      [
+        0.9993834298226694,
+        0.03492388385916315,
+        -0.0036169783064166757
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 43,
+        "trajectory_uid": "5ff81edc43cf92c445ae661655f0f074229d3861bbbd0b57d14ad453615b9e25",
+        "site_id": "trajectory_17",
+        "method": "pink_qp",
+        "repeat": 0,
+        "frame": 73,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_17_pink_qp_r0.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+velocity_limit",
+        "historical_q": [
+          -4.286408762368406,
+          -3.0264655899332826,
+          2.681262720679826,
+          5.4000424405474075,
+          -0.0037224200801888934,
+          -3.518960857953669
+        ]
+      },
+      {
+        "source_csv_row": 47,
+        "trajectory_uid": "5ff81edc43cf92c445ae661655f0f074229d3861bbbd0b57d14ad453615b9e25",
+        "site_id": "trajectory_17",
+        "method": "pink_qp",
+        "repeat": 1,
+        "frame": 73,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_17_pink_qp_r1.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+velocity_limit",
+        "historical_q": [
+          -4.286408762368406,
+          -3.0264655899332826,
+          2.681262720679826,
+          5.4000424405474075,
+          -0.0037224200801888934,
+          -3.518960857953669
+        ]
+      },
+      {
+        "source_csv_row": 51,
+        "trajectory_uid": "5ff81edc43cf92c445ae661655f0f074229d3861bbbd0b57d14ad453615b9e25",
+        "site_id": "trajectory_17",
+        "method": "pink_qp",
+        "repeat": 2,
+        "frame": 73,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_17_pink_qp_r2.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+velocity_limit",
+        "historical_q": [
+          -4.286408762368406,
+          -3.0264655899332826,
+          2.681262720679826,
+          5.4000424405474075,
+          -0.0037224200801888934,
+          -3.518960857953669
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "7387c01983379314b1e2ef84c4eacf3070a37a31f1d9470ee1b1ba4dcc0aa63f",
+    "robot": "ur5e",
+    "previous_q": [
+      6.283185307179585,
+      -5.458334391120092,
+      1.6180975972536646,
+      -4.66538539533528,
+      1.4516232423539606,
+      -5.144813482408433
+    ],
+    "target_position": [
+      0.006357379198625106,
+      0.1465530850994874,
+      -0.2632573644316416
+    ],
+    "target_rotation": [
+      [
+        -0.694770808606833,
+        -0.39269246843327316,
+        -0.6025663023631427
+      ],
+      [
+        0.4121198881958775,
+        -0.9039772943907654,
+        0.11393967254371533
+      ],
+      [
+        -0.589449506964952,
+        -0.1691675987349069,
+        0.7898934119721728
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 44,
+        "trajectory_uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+        "site_id": "trajectory_15",
+        "method": "tar_corrected",
+        "repeat": 1,
+        "frame": 125,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_15_tar_corrected_r1.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "64170b30d135bfb5938d8b63f7e28b6455c660909653e1cdea52c965d23e75f8",
+    "robot": "ur5e",
+    "previous_q": [
+      3.916166804966068,
+      -2.056778347383244,
+      1.0104375733574948,
+      0.5158112578210883,
+      -0.42564918104718974,
+      3.4486727723129236
+    ],
+    "target_position": [
+      0.15176318819029755,
+      -0.16972938711180202,
+      0.7708480634486129
+    ],
+    "target_rotation": [
+      [
+        -0.367701838339846,
+        -0.2700049048366814,
+        0.8898835370123621
+      ],
+      [
+        -0.9098309659158194,
+        -0.09349054408575327,
+        -0.40431068700596684
+      ],
+      [
+        0.19236156461773962,
+        -0.9583093809050834,
+        -0.21128217844184266
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 46,
+        "trajectory_uid": "f87cbb198e6aa95e16ea15160dd1d4f545d70b0d61622238ff991b3a2d27786a",
+        "site_id": "trajectory_02",
+        "method": "tar_corrected",
+        "repeat": 2,
+        "frame": 31,
+        "family": "smooth",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_02_tar_corrected_r2.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "54856754163197e3a2b72ddedb60f111bb633560da642331d0f91d0a3f286867",
+    "robot": "ur5e",
+    "previous_q": [
+      3.915529693694114,
+      -2.056379192479368,
+      1.0095452995568561,
+      0.5158112578213934,
+      -0.42754320121842776,
+      3.4497370143595734
+    ],
+    "target_position": [
+      0.15176318819029755,
+      -0.16972938711180202,
+      0.7708480634486129
+    ],
+    "target_rotation": [
+      [
+        -0.367701838339846,
+        -0.2700049048366814,
+        0.8898835370123621
+      ],
+      [
+        -0.9098309659158194,
+        -0.09349054408575327,
+        -0.40431068700596684
+      ],
+      [
+        0.19236156461773962,
+        -0.9583093809050834,
+        -0.21128217844184266
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 48,
+        "trajectory_uid": "f87cbb198e6aa95e16ea15160dd1d4f545d70b0d61622238ff991b3a2d27786a",
+        "site_id": "trajectory_02",
+        "method": "tar_corrected",
+        "repeat": 0,
+        "frame": 31,
+        "family": "smooth",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_02_tar_corrected_r0.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "56d61febebf601325d122a3ee8718a1c3d7750dde0368da866f5cc495afebfb0",
+    "robot": "ur5e",
+    "previous_q": [
+      3.910481849759496,
+      -2.0577462929482393,
+      1.0095134150920555,
+      0.5213279117186802,
+      -0.4295062873800871,
+      3.4406091361183595
+    ],
+    "target_position": [
+      0.15176318819029755,
+      -0.16972938711180202,
+      0.7708480634486129
+    ],
+    "target_rotation": [
+      [
+        -0.367701838339846,
+        -0.2700049048366814,
+        0.8898835370123621
+      ],
+      [
+        -0.9098309659158194,
+        -0.09349054408575327,
+        -0.40431068700596684
+      ],
+      [
+        0.19236156461773962,
+        -0.9583093809050834,
+        -0.21128217844184266
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 50,
+        "trajectory_uid": "f87cbb198e6aa95e16ea15160dd1d4f545d70b0d61622238ff991b3a2d27786a",
+        "site_id": "trajectory_02",
+        "method": "tar_old",
+        "repeat": 2,
+        "frame": 31,
+        "family": "smooth",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_02_tar_old_r2.jsonl.gz",
+        "historical_failure_kind": "non_finite_or_wrong_shape",
+        "historical_q": null
+      }
+    ]
+  },
+  {
+    "input_uid": "536f4af9086e63b49d709f06d03ed8578ef116e3a22a4206642724b45527e891",
+    "robot": "ur5e",
+    "previous_q": [
+      6.283185307179585,
+      -5.458556823720747,
+      1.6185741021243083,
+      -4.665202283723999,
+      1.4514641041196028,
+      -5.145235242564013
+    ],
+    "target_position": [
+      0.006357379198625106,
+      0.1465530850994874,
+      -0.2632573644316416
+    ],
+    "target_rotation": [
+      [
+        -0.694770808606833,
+        -0.39269246843327316,
+        -0.6025663023631427
+      ],
+      [
+        0.4121198881958775,
+        -0.9039772943907654,
+        0.11393967254371533
+      ],
+      [
+        -0.589449506964952,
+        -0.1691675987349069,
+        0.7898934119721728
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 53,
+        "trajectory_uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+        "site_id": "trajectory_15",
+        "method": "trac_task_5ms",
+        "repeat": 2,
+        "frame": 125,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_15_trac_task_5ms_r2.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance",
+        "historical_q": [
+          6.283185307179585,
+          -5.458556823720747,
+          1.6185741021243083,
+          -4.665202283723999,
+          1.4514641041196028,
+          -5.145235242564013
+        ]
+      }
+    ]
+  },
+  {
+    "input_uid": "dbf57214ac7141099f45707313820f52d336092b8eb74700b8cf47b463c5ee40",
+    "robot": "ur5e",
+    "previous_q": [
+      6.2816519066642895,
+      -5.458343556072061,
+      1.6179178899633349,
+      -4.665867246607242,
+      1.451867596866106,
+      -5.140503572342159
+    ],
+    "target_position": [
+      0.006357379198625106,
+      0.1465530850994874,
+      -0.2632573644316416
+    ],
+    "target_rotation": [
+      [
+        -0.694770808606833,
+        -0.39269246843327316,
+        -0.6025663023631427
+      ],
+      [
+        0.4121198881958775,
+        -0.9039772943907654,
+        0.11393967254371533
+      ],
+      [
+        -0.589449506964952,
+        -0.1691675987349069,
+        0.7898934119721728
+      ]
+    ],
+    "dt": 0.02,
+    "sources": [
+      {
+        "source_csv_row": 54,
+        "trajectory_uid": "bf166cd6db08076d8c85cfd7e7364d2446c3c1ec592ea82609b812c0faa204ea",
+        "site_id": "trajectory_15",
+        "method": "trac_task_5ms",
+        "repeat": 0,
+        "frame": 125,
+        "family": "near_singular",
+        "raw_file": "outputs/task_recourse/numerical_completion_development/validated_ur5e/runs/ur5e_trajectory_15_trac_task_5ms_r0.jsonl.gz",
+        "historical_failure_kind": "internal_nonconvergence+position_tolerance",
+        "historical_q": [
+          6.2816519066642895,
+          -5.458343556072061,
+          1.6179178899633349,
+          -4.665867246607242,
+          1.451867596866106,
+          -5.140503572342159
+        ]
+      }
+    ]
+  }
+]

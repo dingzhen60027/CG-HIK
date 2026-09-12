@@ -1,0 +1,33 @@
+{
+  "baseline": "8e754127bb56ec6054ef197f7f1b4e2324611b91",
+  "archive_sha256": "d4a17f45fd412cf9e32ccf87a24dfbd1ef945438ee2cafa30394b0750675703d",
+  "files": {
+    "probe.py": "3e094af415f3acc07706af7a1fe8e8f124dee26f553a2b77fbb71bd0435eacfc",
+    "recorded_inputs.json": "20ae0b7ed8540eae521c528913b7a3fc33fbccc04d8517594fa0c60b52a933c2",
+    "repeated_results.json": "cff6e9fde32acb39b9415b30810741252cf1cc6496c4e96b1ee24ff9746c9703",
+    "CODEX_NEXT_TASK.md": "76143c46166a27fb399f5e59f733616440fb8434ea19374e41e532e7fefd1aa0",
+    "probe_results.json": "ccc8008e5bf6a8f01744138fb9311d39a320a6cb71cb3c741993486206e768fe",
+    "repeat_probe.py": "1e548e9fb3eda264ff4b4dabc4f39d21f80c0cbfb478562fadd8067c55ae7a12",
+    "README.md": "305249528ffb703929d1e59cba9e49fc34e6ae3deb96c0eef2c1b9f88d917e82",
+    "summary.csv": "6a680d145327ff2a7d29a0a4d20fa58991c84b6085fd9e1f2f82414771ba4a89"
+  },
+  "source_csv_sha256": "1fd6367131282758ecfa45755b05ccc8b4685106d2be385a78f39f885833078b",
+  "public_backend": "URDFKinematics",
+  "verifier_config": {
+    "position_tolerance": 0.001,
+    "orientation_tolerance": 0.00872664626,
+    "joint_limit_tolerance": 1e-09,
+    "velocity_tolerance": 0.0001,
+    "enforce_velocity": true
+  },
+  "joint_names": [
+    "panda_joint1",
+    "panda_joint2",
+    "panda_joint3",
+    "panda_joint4",
+    "panda_joint5",
+    "panda_joint6",
+    "panda_joint7"
+  ],
+  "solver_calls": 0
+}

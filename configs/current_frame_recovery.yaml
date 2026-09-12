@@ -1,0 +1,15 @@
+baseline: 8e754127bb56ec6054ef197f7f1b4e2324611b91
+source_config: configs/paper_v2.yaml
+native_trac_library: tmp/task_contract_build/libcontract_trac.so
+robots: [panda, ur5e]
+methods: [trac_task_5ms, pink_qp, current_trf, trac_then_current_trf]
+repeats: 3
+order_seed: 2026091203
+bootstrap_seed: 2026091204
+bootstrap_samples: 4000
+development:
+  panda_targets: outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json
+  ur5e_targets: outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json
+first_failures: outputs/task_recourse/numerical_completion_development/reports/first_failure_inputs.csv
+point_repeats: 3
+scope: existing development data; no new trajectories, no parameter search

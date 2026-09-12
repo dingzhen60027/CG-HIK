@@ -1,0 +1,3306 @@
+{
+  "metadata": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "scipy": "1.17.0",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "threads": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "scope": "Five archived Panda input rows, three trajectory UIDs. Manually reconstructed public Panda FK; recorded residuals independently matched. Not original verifier runtime, not an online whole-trajectory comparison, not a TRAC/Pink rerun. 11 repeats are timing repeats only.",
+    "network": "Container internet unavailable. Source content retrieved through GitHub tools and transcribed; no repository binaries were executed."
+  },
+  "summary": [
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "method": "least_squares",
+      "accepted_repeats": 0,
+      "repeats": 11,
+      "time_median_ms": 13.091756999983772,
+      "time_p95_ms": 14.557160999999041,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "max_step_fraction": 0.3677331329231603
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "method": "minimax",
+      "accepted_repeats": 0,
+      "repeats": 11,
+      "time_median_ms": 47.62114800001882,
+      "time_p95_ms": 50.75108799999839,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "max_step_fraction": 0.17829134468497795
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "method": "least_squares",
+      "accepted_repeats": 11,
+      "repeats": 11,
+      "time_median_ms": 3.6067710000224906,
+      "time_p95_ms": 4.149384000015743,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "max_step_fraction": 0.9951943315260451
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "method": "minimax",
+      "accepted_repeats": 11,
+      "repeats": 11,
+      "time_median_ms": 5.373346999988371,
+      "time_p95_ms": 6.120463999963022,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "max_step_fraction": 0.24506938791142746
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "method": "least_squares",
+      "accepted_repeats": 11,
+      "repeats": 11,
+      "time_median_ms": 1.2526849999972,
+      "time_p95_ms": 1.4964210000130151,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "max_step_fraction": 0.15000306875804334
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "method": "minimax",
+      "accepted_repeats": 11,
+      "repeats": 11,
+      "time_median_ms": 1.40759399999979,
+      "time_p95_ms": 1.7647130000284506,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "max_step_fraction": 0.10211061556765672
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "method": "least_squares",
+      "accepted_repeats": 11,
+      "repeats": 11,
+      "time_median_ms": 2.4297080000224014,
+      "time_p95_ms": 2.6412965000019994,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "max_step_fraction": 0.26802130017313514
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "method": "minimax",
+      "accepted_repeats": 11,
+      "repeats": 11,
+      "time_median_ms": 5.449159000022519,
+      "time_p95_ms": 6.455494500016812,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "max_step_fraction": 0.40755048127164706
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "method": "least_squares",
+      "accepted_repeats": 11,
+      "repeats": 11,
+      "time_median_ms": 2.1929569999770138,
+      "time_p95_ms": 2.896168500001295,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "max_step_fraction": 0.6513975404663097
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "method": "minimax",
+      "accepted_repeats": 11,
+      "repeats": 11,
+      "time_median_ms": 5.390172000033999,
+      "time_p95_ms": 8.653013499980489,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "max_step_fraction": 0.3285712105139242
+    }
+  ],
+  "raw": [
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 52.03536499999473,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 2,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 12.942285000008269,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 6,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 5.987566999976934,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 5,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.4743930000236105,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 5,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 4.062145000034434,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 2,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 49.46681100000205,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 6,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 5.817414999967241,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 10,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.5184490000024198,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 7,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 3.4895370000072035,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 8,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 47.181818000012754,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 8,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 5.143576999955712,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 8,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 13.338240999985373,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 0,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.2526849999972,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 9,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 5.955178999954569,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 0,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.322958999992352,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 7,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.2445930000239969,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 8,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 3.380937000031281,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 1,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 5.71377199997869,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 6,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 2.252225000006547,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 2,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 2.00592100003405,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 1,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 3.6067710000224906,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 0,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 12.5789869999835,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 9,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 47.58961099997805,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 9,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.4230479999687304,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 2,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.364491000003909,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 4,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.4824160000207485,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 10,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.7444530000148006,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 2,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 6.253360999949109,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 3,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 14.5247279999694,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 7,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 5.773770000018885,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 0,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 6.934788999956254,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 10,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 3.909689000010985,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 6,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 3.8297410000041054,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 10,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 3.217434999953639,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 5,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 3.1808100000034756,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 3,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.40759399999979,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 0,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 11.981512000033945,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 2,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 3.4167100000104256,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 3,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 2.1929569999770138,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 10,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.570114999992711,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 1,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 5.003109000028871,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 9,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 46.86545900000283,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 0,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.3739450000116449,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 3,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 13.348645999997188,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 3,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 12.609822999991138,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 8,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.1808389999714564,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 6,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.209922999952596,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 6,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 5.203725999990638,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 4,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 5.777735999970446,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 3,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.7849730000421005,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 10,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.428946000032738,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 0,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 3.6662589999991724,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 4,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.222660999962045,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 5,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 2.375626999992164,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 9,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.4308389999655446,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 5,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 5.390172000033999,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 5,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 6.229464999989887,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 8,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 49.428014000000076,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 3,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 5.449159000022519,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 5,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 2.2885989999963385,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 4,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.5223250000294684,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 3,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 14.324391000002379,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 1,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 2.1306849999973565,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 7,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 3.336079999996855,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 9,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 6.023989999960122,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 3,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 5.361660000005486,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 2,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 5.212348999975802,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 1,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 5.289191999963805,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 10,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 5.386355999974057,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 8,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 5.73922900002799,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 7,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 4.840908000005584,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 1,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 2.201961000025676,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 6,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 6.681524000043737,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 4,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 5.7208410000271215,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 1,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 45.68419999998241,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 7,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.738005000026078,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 4,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.6731580000168833,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 9,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 5.096476999995048,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 2,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 5.064489999995203,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 0,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 4.740560000016103,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 4,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.2953980000247611,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 6,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 2.0204920000423954,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 8,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 46.92153199999893,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 1,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.285533000043415,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 3,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.265474000012091,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 9,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 13.091756999983772,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 10,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 2.164185000026464,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 0,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 10.371238000004723,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 7,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 5.800249000003532,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 6,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 5.207751999989796,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 7,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.7519205916364459,
+      "orientation_deg": 0.36068209529690975,
+      "max_step_fraction": 0.3285712105139242,
+      "calls": 20,
+      "iterations": 11,
+      "elapsed_ms": 5.072482000002765,
+      "status": "early_verified",
+      "q": [
+        1.0557267346416952,
+        -0.07755628128683871,
+        1.2577010524283154,
+        -0.2792577507827193,
+        1.299311409307642,
+        2.8900009989836635,
+        1.906995033399882
+      ],
+      "repeat": 9,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0007519205916364459,
+        "orientation_error_rad": 0.0062950901159230304,
+        "step_max": 0.3285712105139242
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.4297080000224014,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 7,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.2241039999926215,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 0,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 47.62114800001882,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 10,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 5.061274000013327,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 9,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.2213780000251973,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 4,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9890536905550117,
+      "orientation_deg": 0.21968061417862778,
+      "max_step_fraction": 0.10211061556765672,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.2371120000125302,
+      "status": "early_verified",
+      "q": [
+        -2.269672135808533,
+        0.05211105952320467,
+        2.5690595949843167,
+        -0.5656934273022671,
+        -2.8972999999999995,
+        2.0612285551236056,
+        -1.7483702677135808
+      ],
+      "repeat": 8,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009890536905550118,
+        "orientation_error_rad": 0.0038341500202203928,
+        "step_max": 0.10211061556765672
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.1181360000023233,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 1,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.6116825519895306,
+      "orientation_deg": 0.2832199848666027,
+      "max_step_fraction": 0.40755048127164706,
+      "calls": 20,
+      "iterations": 12,
+      "elapsed_ms": 5.0981200000137505,
+      "status": "early_verified",
+      "q": [
+        -1.1817646558321062,
+        0.5357348007993762,
+        0.24379635424283969,
+        -0.9680183811233537,
+        2.8972999999999987,
+        2.7805731118016053,
+        0.5035155650311433
+      ],
+      "repeat": 6,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0006116825519895306,
+        "orientation_error_rad": 0.004943121243370816,
+        "step_max": 0.40755048127164706
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 47.80968800002938,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 4,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "minimax",
+      "accepted": true,
+      "position_mm": 0.9902910405133505,
+      "orientation_deg": 0.4483935482764176,
+      "max_step_fraction": 0.24506938791142746,
+      "calls": 19,
+      "iterations": 10,
+      "elapsed_ms": 5.373346999988371,
+      "status": "early_verified",
+      "q": [
+        -2.1478239740923324,
+        0.047471749892072285,
+        2.457591119026701,
+        -0.5554643876040462,
+        -2.8972999999999995,
+        2.054358437092529,
+        -1.7601921103273077
+      ],
+      "repeat": 2,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.000990291040513353,
+        "orientation_error_rad": 0.007825943762123613,
+        "step_max": 0.24506938791142746
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 11.751281999977436,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 5,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory14_tar_r0_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9717281924803757,
+      "orientation_deg": 0.11807073078611535,
+      "max_step_fraction": 0.9951943315260451,
+      "calls": 8,
+      "iterations": 5,
+      "elapsed_ms": 4.236622999997053,
+      "status": "early_verified",
+      "q": [
+        -2.1871985078895912,
+        0.0481695084384555,
+        2.4916838357276787,
+        -0.5563868637214563,
+        -2.897299999999973,
+        2.0596797491894314,
+        -1.7542426770053827
+      ],
+      "repeat": 7,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009717281924803757,
+        "orientation_error_rad": 0.0020607230024535456,
+        "step_max": 0.9951943315260451
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "least_squares",
+      "accepted": false,
+      "position_mm": 1.3154863461679442,
+      "orientation_deg": 0.24249230609214528,
+      "max_step_fraction": 0.3677331329231603,
+      "calls": 30,
+      "iterations": 21,
+      "elapsed_ms": 14.589594000028683,
+      "status": "`ftol` termination condition is satisfied.",
+      "q": [
+        -2.5786250251954606,
+        0.03536201483861667,
+        2.8972999999969056,
+        -0.5578131256973855,
+        -2.8972999999998756,
+        2.032871619631483,
+        -1.7683276866865352
+      ],
+      "repeat": 4,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.001315486346167944,
+        "orientation_error_rad": 0.004232289152061812,
+        "step_max": 0.3677331329231603
+      }
+    },
+    {
+      "case": "panda_trajectory12_tar_r0_f88",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.9221414313367923,
+      "orientation_deg": 0.2802406931283049,
+      "max_step_fraction": 0.6513975404663097,
+      "calls": 4,
+      "iterations": 3,
+      "elapsed_ms": 1.963868000018465,
+      "status": "early_verified",
+      "q": [
+        1.0792494535355617,
+        -0.07204313012978898,
+        1.2677996517956351,
+        -0.2800735336665541,
+        1.2603465885433878,
+        2.8911778087174707,
+        1.9069748721778963
+      ],
+      "repeat": 5,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0009221414313367923,
+        "orientation_error_rad": 0.004891122793159975,
+        "step_max": 0.6513975404663097
+      }
+    },
+    {
+      "case": "panda_trajectory14_pink_r1_f122",
+      "mode": "minimax",
+      "accepted": false,
+      "position_mm": 1.0865753994957474,
+      "orientation_deg": 0.5432876997497532,
+      "max_step_fraction": 0.17829134468497795,
+      "calls": 208,
+      "iterations": 39,
+      "elapsed_ms": 49.404319000018404,
+      "status": "Optimization terminated successfully",
+      "q": [
+        -2.573187405537626,
+        0.03982289654023739,
+        2.8972999999999995,
+        -0.5664759305058724,
+        -2.8972999999999995,
+        2.0253445309326126,
+        -1.7712925792004002
+      ],
+      "repeat": 5,
+      "independent_check": {
+        "accepted": false,
+        "position_error_m": 0.0010865753994957475,
+        "orientation_error_rad": 0.009482159146219605,
+        "step_max": 0.17829134468497795
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.265112999988105,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 10,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.544587999977921,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 1,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory26_tar_r1_f72",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.34062803226587596,
+      "orientation_deg": 0.39392928534119576,
+      "max_step_fraction": 0.26802130017313514,
+      "calls": 5,
+      "iterations": 3,
+      "elapsed_ms": 2.441716000021188,
+      "status": "early_verified",
+      "q": [
+        -1.175681183536211,
+        0.5375245515796138,
+        0.23661092156015243,
+        -0.9627457418925234,
+        2.897119996840643,
+        2.7872855928516715,
+        0.5062931583365584
+      ],
+      "repeat": 8,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.00034062803226587594,
+        "orientation_error_rad": 0.006875363049232122,
+        "step_max": 0.26802130017313514
+      }
+    },
+    {
+      "case": "panda_trajectory14_trac_r1_f115",
+      "mode": "least_squares",
+      "accepted": true,
+      "position_mm": 0.8819760778073586,
+      "orientation_deg": 0.04873976096681077,
+      "max_step_fraction": 0.15000306875804334,
+      "calls": 3,
+      "iterations": 1,
+      "elapsed_ms": 1.1378649999755908,
+      "status": "early_verified",
+      "q": [
+        -2.2682479923637864,
+        0.05288123094978557,
+        2.5696405571637535,
+        -0.5669417218752373,
+        -2.896180730354414,
+        2.057553666952619,
+        -1.750875043015438
+      ],
+      "repeat": 2,
+      "independent_check": {
+        "accepted": true,
+        "position_error_m": 0.0008819760778073544,
+        "orientation_error_rad": 0.0008506693055058349,
+        "step_max": 0.15000306875804334
+      }
+    }
+  ]
+}
