@@ -1,0 +1,7 @@
+robot,method,baseline,independent_source_trajectories,metric,difference,difference_ci,ratio,ratio_ci
+panda,active_numpy,osqp_reset,8,"mean local call ns, equal source UID weight",-27932.683837499997,"[-28084.930199999995,-27780.437475]",0.5818335277220763,"[0.5805444681051374,0.5831336902142638]"
+panda,active_numpy,osqp_warm,8,"mean local call ns, equal source UID weight",-26193.600495833332,"[-26538.789791666662,-25848.4112]",0.5973864611901899,"[0.5943136815459845,0.600494645134861]"
+panda,active_numpy,clip,8,"mean local call ns, equal source UID weight",22230.799931250003,"[22176.74713125,22286.41853125]",2.3364260306811784,"[2.330176516182714,2.3433268453564517]"
+ur5e,active_numpy,osqp_reset,8,"mean local call ns, equal source UID weight",-29622.072,"[-29821.83,-29422.314]",0.5497584182089544,"[0.5479811514259821,0.5515347654593133]"
+ur5e,active_numpy,osqp_warm,8,"mean local call ns, equal source UID weight",-26868.1072,"[-27042.1304,-26694.084]",0.5737760954377823,"[0.5726404372851004,0.5749203791377998]"
+ur5e,active_numpy,clip,8,"mean local call ns, equal source UID weight",19678.136000000002,"[19529.099400000003,19827.1726]",2.1932435690661736,"[2.18331207272466,2.2031900868923002]"

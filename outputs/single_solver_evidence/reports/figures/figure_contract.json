@@ -1,0 +1,24 @@
+{
+  "backend": "Python/matplotlib",
+  "size_mm": [
+    183,
+    112
+  ],
+  "exports": [
+    "editable SVG",
+    "editable PDF",
+    "PNG preview"
+  ],
+  "questions": [
+    "Task/deadline completion versus whole cost",
+    "Paired contribution of each controlled difference",
+    "Same-QP full-call time at independently checked quality"
+  ],
+  "evidence": [
+    "source_data.json",
+    "run_summaries.csv",
+    "qp_quality_time.csv"
+  ],
+  "panels": "task_cost: point/range nested repeats, not independent CIs; paired_contributions: UID bootstrap95%, 4000 stratified, no multiplicity correction; qp_timing: descriptive pooled quantiles, not uncertainty.",
+  "selection": "All seven settings, both robots; no simulated points or removed failures; family detail in complete CSVs."
+}

@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "qp_iteration_unit": "linear solves",
+    "settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "task_stop": 1.0,
+      "maximum_iterations": 30,
+      "deadline_ms": 20.0
+    },
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  },
+  "startup_warmup_calls": 1
+}

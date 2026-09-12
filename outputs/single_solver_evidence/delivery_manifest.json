@@ -1,0 +1,64 @@
+{
+  "baseline": "b34800d4e38f391ad873b0a95c152e7da4a1081f",
+  "pre_evaluation_commit": "c5f729e5d31beee73dd2f06302e7a04d968d4579",
+  "runs": 6720,
+  "frame_calls": 1008000,
+  "commands_reverified": 1008000,
+  "accepted_commands": 993009,
+  "accepted_contract_violations": 0,
+  "independent_trajectories_per_robot": 160,
+  "within_uid_repeats": 3,
+  "qp_unique_inputs": {
+    "panda": 971,
+    "ur5e": 1000
+  },
+  "qp_repeats": 5,
+  "tests": {
+    "passed": 10,
+    "files": [
+      "tests/test_single_solver_evidence.py",
+      "tests/test_single_solver_development.py"
+    ],
+    "scope": "interface and source isolation, not performance evidence"
+  },
+  "figures": {
+    "source_preflight_failures": 0,
+    "pdf_minimum_font_pt": 6,
+    "rendered_panels_inspected": 14
+  },
+  "frozen_paths_unchanged": [
+    "paper",
+    "src/confik/bounded_gn.py",
+    "src/confik/bounded_gn_adapter.py",
+    "src/confik/solvers/verifier.py",
+    "src/confik/correction_reserve",
+    "outputs/single_solver_development"
+  ],
+  "files": {
+    "outputs/single_solver_evidence/protocol/execution_seal.json": "97322b48d8bc21b557b4272a7714b2dd6ae65258f68e90a845fa54654d3281b9",
+    "outputs/single_solver_evidence/protocol/development_protocol.json": "dbf320e904f6f6df13ec86d37c0154c7a148841a1b840c5bce018dea7f0e61be",
+    "outputs/single_solver_evidence/protocol/literature_scope.md": "1b575f65f6b2554070ce88fb451bd5a0f1d47a769158fe5bfd72b066e31a4271",
+    "outputs/single_solver_evidence/protocol/figure_plan.md": "7a971c5362386816f82c036d541e4074f3125919411bc7e6b96a8fb536ab5751",
+    "outputs/single_solver_evidence/protocol/implementation_corrections.md": "0044ce8f2123373f369dac3572d8cbba70661bbe113e4ae3aaa65f9fa430669b",
+    "outputs/single_solver_evidence/qp_benchmark/selection.json": "010dbddc63b5474309f19859675de8a83bc680f5071640d8811b6c678e5a7d09",
+    "outputs/single_solver_evidence/qp_benchmark/micro_1e-08.csv": "da820344b670401cd1f96bfcdcd167ecf9d5696a5b06680446bc1535e90cf1a7",
+    "outputs/single_solver_evidence/trajectories_panda/completed.json": "9a76a7716ec7baef41e6c874beab1491cefbbdbe0d61a6335bf605580b920ea9",
+    "outputs/single_solver_evidence/trajectories_ur5e/completed.json": "8a749c970faf9eb78bc2b01e2a58ab207bb3a8cd580955e789aab2db57fe81cb",
+    "outputs/single_solver_evidence/reports/manifest.json": "fd8c047c593bd74c5950173ee0de0e204175acb1b9b6dbd5fb6f69740e34b53f",
+    "outputs/single_solver_evidence/reports/FIGURE_QA.md": "5967d42eda64ad16c63be8b2ea06059cee280fd9a32034eec1cda339f690a584",
+    "docs/SINGLE_SOLVER_NECESSARY_EXPERIMENTS.md": "51455a4a9a6b8dbc83948eda93d63085ef08ca8faf2ce8e68f0991e9dd96fc3c",
+    "docs/SINGLE_SOLVER_CLAIM_EVIDENCE.md": "a5a3db9d491ec886109458df1cbd96914179b1292888c7fa68555d837cdea3ee",
+    "src/confik/single_solver_evidence_reporting.py": "277ea319eee56108b1aa85f042c006a0eb5cd1c492c124bee59c7a29f2017b20",
+    "outputs/single_solver_evidence/reports/figures/task_cost.pdf": "31def1c67cc48c4708df9797569f722fa932245b585a4b76a2fb14b584b168cc",
+    "outputs/single_solver_evidence/reports/figures/paired_contributions.svg": "c15ddb0241cba297739c4a44f46e67c53a3b5cff5aee2332814aa189644efa3f",
+    "outputs/single_solver_evidence/reports/figures/paired_contributions.png": "ea19908b0f3fd4aa3c5959f4304129d2c61b474df7c8cec735c16aebfd74ff92",
+    "outputs/single_solver_evidence/reports/figures/paired_contributions.pdf": "60250ebab3d1859c471b08ce7d26dfe382c51b109f6b8ddc4c8cf42b611b117d",
+    "outputs/single_solver_evidence/reports/figures/task_cost.svg": "46c1bcad6c01dff63839a6ea06847f801c132ec11bfcf722b8182ee1c195f733",
+    "outputs/single_solver_evidence/reports/figures/task_cost.png": "ce4286b4af9145027f1e5ab348a3f95f07edc59cea941c1be585d51d0aada2c1",
+    "outputs/single_solver_evidence/reports/figures/qp_timing.pdf": "8cd9734a854dc29ee868e2ceb1c64c19ec0e15ff1de222a63e5996ecedf44a73",
+    "outputs/single_solver_evidence/reports/figures/figure_contract.json": "0d5b4acc91d4a569395faf0b8d5aa1381be36500ce6ad99c2d04d0ade37f7cab",
+    "outputs/single_solver_evidence/reports/figures/qp_timing.svg": "3a05e6b411b7ebba654d3abcfa56c10fffc05fb4c169659f94b073524dc6fc8f",
+    "outputs/single_solver_evidence/reports/figures/qp_timing.png": "a60b69a33b4e60e32332d5eacd6f1973cdddeaae0067f2f2ac9eaace4d82b780"
+  },
+  "stop": "No new method/parameter search, paper edits or further experiments. This delivery evaluates the frozen kappa=1 candidate and preserves adverse results."
+}

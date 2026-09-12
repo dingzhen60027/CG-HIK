@@ -33,13 +33,16 @@ def report(out,cfg):
                 target=targetmap[(robot,s['uid'])];previous=np.array(target['initial_q']);counts=Counter()
                 for frame,r in enumerate(rows):
                     assert r['frame']==frame and r['dt']==target['dt']==.02
-                    np.testing.assert_array_equal(r['target_position'],target['target_position'][frame])
-                    np.testing.assert_array_equal(r['target_rotation'],target['target_rotation'][frame])
-                    np.testing.assert_array_equal(r['previous_q'],previous)
+                    assert np.array_equal(r['target_position'],target['target_position'][frame])
+                    assert np.array_equal(r['target_rotation'],target['target_rotation'][frame])
+                    assert np.array_equal(r['previous_q'],previous)
                     query=IKQuery(Pose(np.array(r['target_position']),np.array(r['target_rotation'])),previous,.02)
                     q=np.array(r['q']) if r['q'] is not None else np.full(kin.nq,np.nan)
                     verdict=v.check(q,query)
                     assert verdict.accepted==r['accepted']
+                    if verdict.finite_ok:
+                        assert abs(verdict.position_error-r['position_error'])<=1e-12
+                        assert abs(verdict.orientation_error-r['orientation_error'])<=1e-12
                     assert r['accepted_within_20ms']==bool(verdict.accepted and r['total_latency_ns']<=20_000_000)
                     audit['commands_reverified']+=1;audit['accepted_commands']+=verdict.accepted
                     counts['over_20ms_frames']+=r['total_latency_ns']>20_000_000
@@ -60,7 +63,7 @@ def report(out,cfg):
                         counts['physical_boundary_frames']+=bool(physical.any());counts['rate_boundary_frames']+=bool(rate.any())
                         counts['physical_boundary_joints']+=int(physical.sum());counts['rate_boundary_joints']+=int(rate.sum())
                         previous=q.copy()
-                    np.testing.assert_array_equal(r['accepted_state_q'],previous)
+                    assert np.array_equal(r['accepted_state_q'],previous)
                 calculated=summarize(rows,kin,v)
                 for k in ('completion','deadline_completion','accepted_frames','deadline_frames','total_latency_ns','first_failure_frame'):
                     assert calculated[k]==s[k],(s['run_id'],k)
@@ -140,9 +143,12 @@ def qp_report(out,cfg):
     selection=json.loads((out/'qp_benchmark/selection.json').read_text());rows=csv_rows(out/'qp_benchmark'/selection['source'])
     table=[];pairs=[]
     for robot in cfg['robots']:
-        rr=[r for r in rows if r['robot']==robot];groups=['all','active','inactive']+cfg['fresh']['families']
+        source={str(r['qp_index']):r for r in json.loads((out/f'qp_benchmark/{robot}_qp_metadata.json').read_text())}
+        rr=[r for r in rows if r['robot']==robot]
+        for r in rr:r['source_active_bounds']=source[r['qp_index']]['active_bounds']
+        groups=['all','active','inactive']+cfg['fresh']['families']
         for group in groups:
-            sub=[r for r in rr if group=='all' or (group=='active' and int(r['active_bounds'])>0) or (group=='inactive' and int(r['active_bounds'])==0) or r['family']==group]
+            sub=[r for r in rr if group=='all' or (group=='active' and int(r['source_active_bounds'])>0) or (group=='inactive' and int(r['source_active_bounds'])==0) or r['family']==group]
             if not sub:continue
             for m in ('active_numpy','osqp_reset','osqp_warm','clip'):
                 ss=[r for r in sub if r['method']==m];t=np.array([float(r['total_latency_ns']) for r in ss])
@@ -165,14 +171,15 @@ def figures(out,cfg):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':7,'axes.labelsize':7,'axes.titlesize':8,
+    plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['DejaVu Sans'],'font.size':7,'axes.labelsize':7,'axes.titlesize':8,
         'xtick.labelsize':6,'ytick.labelsize':6,'legend.fontsize':6,'svg.fonttype':'none','pdf.fonttype':42})
     folder=out/'reports/figures';folder.mkdir(exist_ok=False)
     data=json.loads((out/'reports/source_data.json').read_text());main=data['main'];pairs=data['pairs']
     short=['GN 1','GN 0','Clip','OSQP','TRAC 5','TRAC 20','Pink'];methods=cfg['methods']
     # These figures summarize fixed evidence; none claim a prespecified winner.
     def save(fig,name):
-        for ext in ('svg','pdf'):fig.savefig(folder/f'{name}.{ext}')
+        fig.savefig(folder/f'{name}.svg')
+        fig.savefig(folder/f'{name}.pdf')
         fig.savefig(folder/f'{name}.png',dpi=300)
         plt.close(fig)
     fig,axes=plt.subplots(2,3,figsize=(183/25.4,112/25.4),layout='constrained')

@@ -1,0 +1,27 @@
+{
+  "created": "2026-09-12T08:16:16.311895+00:00",
+  "reporting_source_sha256": "277ea319eee56108b1aa85f042c006a0eb5cd1c492c124bee59c7a29f2017b20",
+  "sources": {
+    "panda": "9a76a7716ec7baef41e6c874beab1491cefbbdbe0d61a6335bf605580b920ea9",
+    "ur5e": "8a749c970faf9eb78bc2b01e2a58ab207bb3a8cd580955e789aab2db57fe81cb"
+  },
+  "statistics": "UID average of 3 nested repeats; 4000 family-stratified paired bootstrap; descriptive unadjusted 95%; 160 independent units/robot. Full sample and all families retained.",
+  "errors": "Only accepted commands; failed and late calls in all cost statistics; acceleration is kinematic finite difference.",
+  "files": {
+    "first_failure_inputs.csv": "73fad1500997a7c4df2038a38fbb0f6a12638cc2b61b9ec7acf76d8a3419b3d2",
+    "run_summaries.csv": "e5e4901c6e8353efb7eb34b484d2df7f83e7040c2bf462686ccd76c001209cde",
+    "family_table.csv": "30bd90e84af69c61233c79b2a0404d235c8a72a4473edc91032f8db208e74497",
+    "failure_and_timeout_records.jsonl.gz": "a66d178f5b2d2508c73ab3d9480505e08b6a124099ea9e7c7053500dd148a995",
+    "completion_uids.json": "6e268e7c985e96531d30fad1526626d5e5cb47fd240fd9e57df12e130a2e12e5",
+    "joint_success_cost.csv": "773746eafd76596bc030cda0113192eca9eb10f9c2da2cb496b0a94cf88f8384",
+    "trajectory_units.csv": "a5e7bc5c31973839952b1dd3427b67a41157d0e15e7f8be0de8a429e083b88f3",
+    "paired_comparisons.csv": "eafce0542e892b768d5a7db7fd13130856ee91c79d0bb46efaf7bcee49ebaf58",
+    "main_table.csv": "1a84c77c6979237767f2bc4735c1722a9975ef337cb3997844530c3a87f75926",
+    "source_data.json": "40ca7a5f3f832b9bffc38989d5f685c218e64a20a90907a085cb7ca8ad9651a9",
+    "gained_lost_uids.csv": "a550e1eab4d2126a85074273f8132f0f0954ac26555b0c57309b7670fa79075b",
+    "qp_quality_time.csv": "eae5b4130c601d54d5b5c0f7e1899c1e1bbab08ab7eeb620c2e68b328d6ef5bd",
+    "qp_paired_time.csv": "e93e5d7ccbcd27560e3bbffb8ec7f42766d327d88f0b00950031cec554d82351",
+    "verification.json": "94432dfee90836c85d9f15108e823ec90b55c21b68faf0299c2ae3390b6ea9e5",
+    "successful_trajectory_index.json": "74fa73b7387f7936ee5ea6d8d98209b561e5fb9c90c3fc4699658c0ac5ee30f5"
+  }
+}
