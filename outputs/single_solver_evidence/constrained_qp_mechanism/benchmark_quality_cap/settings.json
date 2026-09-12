@@ -1,0 +1,6 @@
+{
+  "osqp_max_iter": 200000,
+  "eps_abs": 1e-08,
+  "eps_rel": 0.0,
+  "rationale": "Only increase iteration cap to reach the unchanged common QP quality; no online solver change."
+}

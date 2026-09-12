@@ -1,0 +1,17 @@
+robot,cohort,method,failed_qps,failed_calls,calls
+panda,natural,active_numpy,0,0,4855
+panda,natural,osqp_cached,0,0,4855
+panda,natural,qpoases,0,0,4855
+panda,natural,clip,0,0,4855
+panda,targeted,active_numpy,0,0,10000
+panda,targeted,osqp_cached,19,95,10000
+panda,targeted,qpoases,0,0,10000
+panda,targeted,clip,1996,9980,10000
+ur5e,natural,active_numpy,0,0,5000
+ur5e,natural,osqp_cached,0,0,5000
+ur5e,natural,qpoases,0,0,5000
+ur5e,natural,clip,3,15,5000
+ur5e,targeted,active_numpy,0,0,9515
+ur5e,targeted,osqp_cached,2,10,9515
+ur5e,targeted,qpoases,0,0,9515
+ur5e,targeted,clip,1898,9490,9515

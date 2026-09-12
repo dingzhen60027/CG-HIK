@@ -1,0 +1,562 @@
+[
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 0,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 0,
+    "method": "osqp_cached",
+    "initialization_ns": 514298
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 0,
+    "method": "qpoases",
+    "initialization_ns": 134286
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 0,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 1,
+    "method": "osqp_cached",
+    "initialization_ns": 511904
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 1,
+    "method": "qpoases",
+    "initialization_ns": 119775
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 1,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 1,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 2,
+    "method": "qpoases",
+    "initialization_ns": 126868
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 2,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 2,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 2,
+    "method": "osqp_cached",
+    "initialization_ns": 483338
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 3,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 3,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 3,
+    "method": "osqp_cached",
+    "initialization_ns": 478316
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 3,
+    "method": "qpoases",
+    "initialization_ns": 129517
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 4,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 4,
+    "method": "osqp_cached",
+    "initialization_ns": 479329
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 4,
+    "method": "qpoases",
+    "initialization_ns": 117424
+  },
+  {
+    "robot": "panda",
+    "cohort": "natural",
+    "repeat": 4,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 0,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 0,
+    "method": "osqp_cached",
+    "initialization_ns": 477938
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 0,
+    "method": "qpoases",
+    "initialization_ns": 122828
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 0,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 1,
+    "method": "osqp_cached",
+    "initialization_ns": 507747
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 1,
+    "method": "qpoases",
+    "initialization_ns": 129599
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 1,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 1,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 2,
+    "method": "qpoases",
+    "initialization_ns": 126730
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 2,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 2,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 2,
+    "method": "osqp_cached",
+    "initialization_ns": 467639
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 3,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 3,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 3,
+    "method": "osqp_cached",
+    "initialization_ns": 483924
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 3,
+    "method": "qpoases",
+    "initialization_ns": 122576
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 4,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 4,
+    "method": "osqp_cached",
+    "initialization_ns": 493222
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 4,
+    "method": "qpoases",
+    "initialization_ns": 124750
+  },
+  {
+    "robot": "panda",
+    "cohort": "targeted",
+    "repeat": 4,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 0,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 0,
+    "method": "osqp_cached",
+    "initialization_ns": 467310
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 0,
+    "method": "qpoases",
+    "initialization_ns": 116638
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 0,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 1,
+    "method": "osqp_cached",
+    "initialization_ns": 495278
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 1,
+    "method": "qpoases",
+    "initialization_ns": 118599
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 1,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 1,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 2,
+    "method": "qpoases",
+    "initialization_ns": 160978
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 2,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 2,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 2,
+    "method": "osqp_cached",
+    "initialization_ns": 509799
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 3,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 3,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 3,
+    "method": "osqp_cached",
+    "initialization_ns": 480099
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 3,
+    "method": "qpoases",
+    "initialization_ns": 114958
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 4,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 4,
+    "method": "osqp_cached",
+    "initialization_ns": 462637
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 4,
+    "method": "qpoases",
+    "initialization_ns": 122679
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "natural",
+    "repeat": 4,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 0,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 0,
+    "method": "osqp_cached",
+    "initialization_ns": 467529
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 0,
+    "method": "qpoases",
+    "initialization_ns": 123119
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 0,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 1,
+    "method": "osqp_cached",
+    "initialization_ns": 484964
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 1,
+    "method": "qpoases",
+    "initialization_ns": 124106
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 1,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 1,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 2,
+    "method": "qpoases",
+    "initialization_ns": 122712
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 2,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 2,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 2,
+    "method": "osqp_cached",
+    "initialization_ns": 477856
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 3,
+    "method": "clip",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 3,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 3,
+    "method": "osqp_cached",
+    "initialization_ns": 488221
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 3,
+    "method": "qpoases",
+    "initialization_ns": 122659
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 4,
+    "method": "active_numpy",
+    "initialization_ns": 0
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 4,
+    "method": "osqp_cached",
+    "initialization_ns": 471718
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 4,
+    "method": "qpoases",
+    "initialization_ns": 123282
+  },
+  {
+    "robot": "ur5e",
+    "cohort": "targeted",
+    "repeat": 4,
+    "method": "clip",
+    "initialization_ns": 0
+  }
+]

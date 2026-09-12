@@ -1,0 +1,73 @@
+{
+  "files": {
+    "outputs/single_solver_evidence/constrained_qp_mechanism/README.md": "8794275b95bdd6df0eab10baabe312ba5b891157aa7a2da8fffa8a96233b16f1",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark/classification.jsonl.gz": "ff0a3dfdedb531bf8a4f40f613a61676f6b4daf264204ef00bef9445bd76379c",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark/panda_natural_calls.jsonl.gz": "20d76c69946667b70d85bf4f8ff60799caa05d02dd0854a6aff835eaca6319a3",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark/panda_targeted_calls.jsonl.gz": "987d1ce3cc9e179c09923f98f62ec85e92a9207ed14c288d9a66dca87a6b9e1f",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark/setups.json": "0098d5d84dbf5ca6c2ec2a9458c98f1308fb4c22e96746efddcd5f126445e421",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark/ur5e_natural_calls.jsonl.gz": "aa361c5ef1c2f1400d7c4613c73adac218362fc4dbd0f4f8daece02cb11e4ecc",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark/ur5e_targeted_calls.jsonl.gz": "d72dec1006616e734e8bb9495725df42a76e00d86f087a7a80a77a49f09a79b4",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark_quality_cap/classification.jsonl.gz": "393e95a2199ce6bfc00fe5be3c76d90f16ef6effc0859d8e39a16ab21708d5e0",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark_quality_cap/panda_natural_calls.jsonl.gz": "b4be32e1a06e5fde04f300c858158d01487530a0a59c9d64c45713f921522b05",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark_quality_cap/panda_targeted_calls.jsonl.gz": "a0a9a0106162b01f6aa8683b61f1990419e320cde02934b0990913ad11d68142",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark_quality_cap/settings.json": "5c23ee4bcfdd921e060c7c85d0ff47be7632995af0df423e27d2dfba3b7004b9",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark_quality_cap/setups.json": "edbab42b01c0fa109337a8f7fa25602624ba1eeb5defc222dddf5e1680ab6578",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark_quality_cap/ur5e_natural_calls.jsonl.gz": "cf2c2323b35f0d9c7ed521ae9b7ebc54b1cbbc2718e14842a8c245e149d399ff",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/benchmark_quality_cap/ur5e_targeted_calls.jsonl.gz": "f6fe7389251e53eabe8049d58c1bb643c7ca43ea58df736eeb7ad7575d2f6d99",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/capture/panda_all_qp.npz": "90c8ab89209a0b3cabc1f6f722c49d81fdf65f8fe82e0e5b7031bdcb3457d4a1",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/capture/panda_chronological_metadata.jsonl.gz": "6844ca7d19f4f025b5c1e1a9be38743b87509254ca23cd44c9d3165e31ca9606",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/capture/panda_frame_replay.jsonl.gz": "4e6305fe7f6bb2ea12af5826cf4aa6454e64935f9cf21c50e71349a7405d41dc",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/capture/panda_selection.json": "a1df9a670585a69626a49852a2c1860b94abb5b1ee61a09ac5083df44aa844f9",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/capture/ur5e_all_qp.npz": "4c0d621ae7412a15ace7959972869ca66437b38429c589a56089f4b4c92ac509",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/capture/ur5e_chronological_metadata.jsonl.gz": "1535af756ec46a39281372da313ae7a779c4538b6beda1e9d10f836c87608714",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/capture/ur5e_frame_replay.jsonl.gz": "cd5f7429d11bc3c8701ff70f18e6091dad9bf3b24f07e94a60e4024248dee785",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/capture/ur5e_selection.json": "9d467a868c459010e926b059b86741b5d730f7faef5025860d5f7b3c212e7e1e",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/mechanism/panda_trajectory_050_historical_rows.jsonl.gz": "b913daab4b925210d13bd83f7021e8d9c2f4164097b828e5ae6670872f4a6628",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/mechanism/panda_trajectory_052_historical_rows.jsonl.gz": "914fecbf3b6818f1036063c93c0cbdf34a11229ef4a09da97fb8498c8f5fb2d1",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/mechanism/panda_trajectory_094_historical_rows.jsonl.gz": "6f08b8d39acd8204e05960ecbd670c186b7d9f4636a0de0e3423f02fafe6caef",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/mechanism/panda_trajectory_096_historical_rows.jsonl.gz": "3a430cced2794bea15081d58c78f34e845a893b09e994e93e6058b760d1c26bd",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/mechanism/six_same_input_cases.json": "4b0db023476c8d250c78764a68ceb367ce7dd73aee412455c9f2f0c3f54c5bac",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/mechanism/ur5e_trajectory_109_historical_rows.jsonl.gz": "60e62733fb978c4c2153214f86985787a374530ecae2b22713db8fb306fbb04e",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/mechanism/ur5e_trajectory_131_historical_rows.jsonl.gz": "e723682bb89d04d94d784691255f1a7dca2662bb84be017f44c45896470cd83d",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/protocol.md": "ec2c782d8095127b17cecd5c810888cefd5da4b248fd57384b955ecba9f9267f",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/provenance.json": "b9c4c5eac031bd8a8e090e9060ea701b211cbc3279141bb8a0db81ea344273e2",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/qpoases_3.2.1_source.tar.gz": "0ae15a6c05e9e884a274cbf85e4feae50a3570a73cb1152bc5b4059cb0f51a5d",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/quality_followup.md": "25fc97cb3f20edd0b9016a069993ee0e5131f821b689011933eeaa0f66bbf943",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/FIGURE_QA.md": "1641aba800a7d3d1937779655d8cb72637992eb05f396f6e9fabc3520a3ed3c3",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/local_to_tracking.pdf": "e4ecf94afb23facb396f7fc836759912c4502535df8d2b265a882e1a0caa8315",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/local_to_tracking.png": "137e87ad9ee65c40c810f50c699f917e5a88bca5b5025f17165b771c50a16a7b",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/local_to_tracking.svg": "78642a30ec5d98e5ac6e7d2cff7541ab5611f47f21570ac16a3988787c0b8a5f",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/local_to_trajectory.csv": "0d3ba512dc04c216415f9967c70cd9a7e240761f16ac5ef1b544d24bb857a8dd",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/original_cap_quality.csv": "1ead8d681925519d836a85003d525d665aac34c40bf7a168047a8a7db556f473",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/paired_time.csv": "4ea0a4907f81893d51be0b39179c1e1a38f34b4956cbf26ae1ca65245e18f981",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/quality_time.csv": "dad4e4ab959a2178279c0f314001c0cf151f7857f4222e59572dbc9af708fc1b",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/replay_census.csv": "b782eb7815ebb646e194a6682817662abc93177b0e04def9ff7fb090e66dd1b4",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/source_data.json": "fb1e4657a9c23648826493b0100b363a296cb5f9b00a2ffb7cb667028713793f",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/uid_timing_units.csv": "3ad4d5bb475649ebe136eb27120666b4668ccf36ca8e1bf6613b636a5a4b279d",
+    "outputs/single_solver_evidence/constrained_qp_mechanism/reports/workspace_setup.csv": "1e722c25d558e8392cf3efcdf44030b0d61ed710e0a5e83562ece034dc7b08a2"
+  },
+  "new_ik_performance_runs": 0,
+  "old_outputs_untouched": true,
+  "figure_data": "mechanism/six_same_input_cases.json",
+  "code": {
+    "src/confik/constrained_qp_reporting.py": "5a4f780ec8c4ebd2d96a328fab15a6f16ea1c50c82af071c2672f36b54c8f1ea",
+    "src/confik/constrained_qp_reference.py": "cf76faf9a6897629cc062a8bea7d09c615939c71092d0a156fc17abad6912ae7",
+    "scripts/run_constrained_qp_mechanism.py": "e0504c0ac5ca16fa1245f887077eca11e512c96365f8e11e250fff3670c42882",
+    "scripts/native/qpoases_box_reference.cpp": "4231d47321cf986eddf143275fc642db1cb1485a397882ef5654ce38db6f7eb4",
+    "tests/test_constrained_qp_reference.py": "4ada880dea59458df0b0271fd2a8506dec392ac4e862bd54df9c2386cc33a969"
+  },
+  "documents": {
+    "docs/SINGLE_SOLVER_CONSTRAINED_QP_FINDINGS.md": "30cf1f3b19399f4d097d8f119dfd8d22619a3e61120f999dcfe7b395d87ed2bd",
+    "docs/SINGLE_SOLVER_CLAIM_EVIDENCE.md": "995fdf1b69f9f3af189451f41b1a2e89a947b7720276c77fb747a3ee0f97f92f"
+  },
+  "review": {
+    "adapter_and_existing_tests": 7,
+    "minimum_pdf_glyph_pt": 7,
+    "numerical_rounds_retained": 2,
+    "quality_only_offline_osqp_cap": [
+      20000,
+      200000
+    ],
+    "new_trajectory_evaluation": false
+  }
+}

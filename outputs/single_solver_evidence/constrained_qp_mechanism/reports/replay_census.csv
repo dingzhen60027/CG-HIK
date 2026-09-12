@@ -1,0 +1,11 @@
+robot,group,qps,source_uids,physical_active_qps,rate_active_qps,trust_active_qps,weak_contacts,unqualified
+panda,all,28168,160,1079,5286,16,0,0
+panda,unconstrained,22743,160,0,0,0,0,0
+panda,one_active,189,21,139,50,0,0,0
+panda,multiple_active,5236,11,940,5236,16,0,0
+panda,sequence_set_change,375,22,28,345,16,0,0
+ur5e,all,24754,160,6,1891,7,0,0
+ur5e,unconstrained,22856,160,0,0,0,0,0
+ur5e,one_active,179,16,6,172,1,0,0
+ur5e,multiple_active,1719,2,0,1719,6,0,0
+ur5e,sequence_set_change,128,16,2,96,7,0,0
