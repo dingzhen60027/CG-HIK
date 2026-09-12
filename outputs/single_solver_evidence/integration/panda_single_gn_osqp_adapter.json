@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "qp_settings": {
+      "eps_abs": 1e-08,
+      "eps_rel": 0.0,
+      "polishing": true,
+      "max_iter": 20000,
+      "warm_starting": true,
+      "adaptive_rho": true,
+      "adaptive_rho_interval": 25,
+      "verbose": false
+    },
+    "qp_initialization_ns": 489179,
+    "qp_iteration_unit": "OSQP ADMM iterations; not active-set iterations",
+    "warm_start": "previous local QP x/y; reset to zero at trajectory boundary",
+    "roundoff_projection": "raw d projected only when violation <=1e-8; otherwise zero update; task verifier unchanged",
+    "settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "task_stop": 1.0,
+      "maximum_iterations": 30,
+      "deadline_ms": 20.0
+    },
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  },
+  "startup_warmup_calls": 1
+}

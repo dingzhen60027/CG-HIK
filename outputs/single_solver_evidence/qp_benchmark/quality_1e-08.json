@@ -1,0 +1,84 @@
+{
+  "eps_abs": 1e-08,
+  "bad_osqp_calls": 0,
+  "setups": [
+    {
+      "robot": "panda",
+      "method": "osqp_reset",
+      "initialization_ns": 598174,
+      "settings": {
+        "eps_abs": 1e-08,
+        "eps_rel": 0.0,
+        "polishing": true,
+        "max_iter": 20000,
+        "warm_starting": true,
+        "adaptive_rho": true,
+        "adaptive_rho_interval": 25,
+        "verbose": false
+      }
+    },
+    {
+      "robot": "panda",
+      "method": "osqp_warm",
+      "initialization_ns": 343353,
+      "settings": {
+        "eps_abs": 1e-08,
+        "eps_rel": 0.0,
+        "polishing": true,
+        "max_iter": 20000,
+        "warm_starting": true,
+        "adaptive_rho": true,
+        "adaptive_rho_interval": 25,
+        "verbose": false
+      }
+    },
+    {
+      "robot": "ur5e",
+      "method": "osqp_reset",
+      "initialization_ns": 435546,
+      "settings": {
+        "eps_abs": 1e-08,
+        "eps_rel": 0.0,
+        "polishing": true,
+        "max_iter": 20000,
+        "warm_starting": true,
+        "adaptive_rho": true,
+        "adaptive_rho_interval": 25,
+        "verbose": false
+      }
+    },
+    {
+      "robot": "ur5e",
+      "method": "osqp_warm",
+      "initialization_ns": 271380,
+      "settings": {
+        "eps_abs": 1e-08,
+        "eps_rel": 0.0,
+        "polishing": true,
+        "max_iter": 20000,
+        "warm_starting": true,
+        "adaptive_rho": true,
+        "adaptive_rho_interval": 25,
+        "verbose": false
+      }
+    }
+  ],
+  "method_counts": {
+    "osqp_reset": {
+      "calls": 9855,
+      "bad": 0
+    },
+    "osqp_warm": {
+      "calls": 9855,
+      "bad": 0
+    },
+    "active_numpy": {
+      "calls": 9855,
+      "bad": 0
+    },
+    "clip": {
+      "calls": 9855,
+      "bad": 15
+    }
+  }
+}

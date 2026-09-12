@@ -1,0 +1,200 @@
+{
+  "created": "2026-09-12T08:00:24.033092+00:00",
+  "config": {
+    "baseline": "b34800d4e38f391ad873b0a95c152e7da4a1081f",
+    "source_config": "configs/paper_v2.yaml",
+    "native_trac_library": "tmp/task_contract_build/libcontract_trac.so",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "methods": [
+      "single_gn_k1",
+      "single_gn_k0",
+      "single_gn_clip",
+      "single_gn_osqp",
+      "trac_task_5ms",
+      "trac_task_20ms",
+      "pink_qp"
+    ],
+    "repeats": 3,
+    "order_seed": 2026091301,
+    "bootstrap_seed": 2026091302,
+    "bootstrap_samples": 4000,
+    "cpu": 4,
+    "development": {
+      "panda_targets": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json",
+      "ur5e_targets": "outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json"
+    },
+    "fresh": {
+      "seeds": {
+        "panda": 202609130000,
+        "ur5e": 202609140000
+      },
+      "families": [
+        "smooth",
+        "near_singular",
+        "joint_limit_return",
+        "high_curvature"
+      ],
+      "per_family": 40,
+      "frames": 150,
+      "dt": 0.02
+    },
+    "qp": {
+      "sample_seed": 2026091303,
+      "maximum_per_uid": 125,
+      "repeats": 5,
+      "eps_abs_candidates": [
+        1e-08,
+        1e-09,
+        1e-10
+      ],
+      "box_tolerance": 1e-08,
+      "normalized_kkt_tolerance": 1e-08,
+      "raw_kkt_tolerance": 1e-05,
+      "scaled_objective_tolerance": 1e-08
+    },
+    "scope": "frozen NumPy BoundedGN and original verifier; same generator; no new solver/fallback or parameter search"
+  },
+  "frozen_sources": {
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/bounded_gn_adapter.py": "ab6212f2f8f70dee4c0eef639f8bb768739376796341df6482de2b915819651a"
+  },
+  "backend": {
+    "engine": "numpy_supplied_fallback",
+    "versions": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.0",
+      "numba": "0.66.0",
+      "coverage": "7.4.4",
+      "pin": "3.9.0",
+      "pink": null
+    },
+    "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+  },
+  "scope": "Only per-instance local QP callbacks; original core, adapter, generator, verifier unchanged.",
+  "qp_quality": "Independent raw projected KKT <=1e-5, normalized <=1e-8, box <=1e-8; scaled objective difference <=1e-8 on quality-qualified active-set references. Start OSQP eps_abs=1e-8, eps_rel=0, polishing, cap=20000; tighten only for quality. Failed quality samples retained.",
+  "qp_timing": "Five fixed repeated passes, full conversion/reset/update/solve/result check timed; one-time cached setup separately. Warm starts reset at UID changes. No matrix capture in production timing.",
+  "primary_comparisons": "M1 against all six controls; trajectory is unit; three repeats averaged within UID; 4000 family-stratified paired bootstrap, descriptive unadjusted 95% intervals.",
+  "cpu": 4,
+  "development_inputs": [
+    {
+      "robot": "panda",
+      "uid": "ba9bbb877bd562764b9ad1fe612339400f4396f8e4e3ccdd742d4a4326684c27",
+      "family": "smooth",
+      "site_id": "trajectory_00",
+      "seed": 970909000
+    },
+    {
+      "robot": "panda",
+      "uid": "a62f788b8607be02b7f7a70f0234d741c3a3ffbce60a66d892cb748dca4ac32c",
+      "family": "smooth",
+      "site_id": "trajectory_01",
+      "seed": 970909001
+    },
+    {
+      "robot": "panda",
+      "uid": "525ed23e41917cce27c978b0c676be43016f2541aa51a8185bbab7e6ce610192",
+      "family": "near_singular",
+      "site_id": "trajectory_10",
+      "seed": 970909010
+    },
+    {
+      "robot": "panda",
+      "uid": "d8e06950cec2579c739f7f6d3dbb3628755dfd76be5740fad3bec38b4ef94cc6",
+      "family": "near_singular",
+      "site_id": "trajectory_11",
+      "seed": 970909011
+    },
+    {
+      "robot": "panda",
+      "uid": "5560810f9d87891ba612f00a19811ec608860538b5dbf8f478a2cc168f4d1547",
+      "family": "joint_limit_return",
+      "site_id": "trajectory_20",
+      "seed": 970909020
+    },
+    {
+      "robot": "panda",
+      "uid": "4afc296390cd2da8318a4ba9544aebe6e73de828b20fea6cbaeedda3bf7a189f",
+      "family": "joint_limit_return",
+      "site_id": "trajectory_21",
+      "seed": 970909021
+    },
+    {
+      "robot": "panda",
+      "uid": "f77f30aad07c01747cccac5f99de0454266b5b9453dc6357da97f2c8d2529cfc",
+      "family": "high_curvature",
+      "site_id": "trajectory_30",
+      "seed": 970909030
+    },
+    {
+      "robot": "panda",
+      "uid": "b88225558b53c7528d4fc1a56455ceac395ea6a65306515006580362af026e1e",
+      "family": "high_curvature",
+      "site_id": "trajectory_31",
+      "seed": 970909031
+    },
+    {
+      "robot": "ur5e",
+      "uid": "9a5eaa5a533abb994b7505aca361cebaf65ef495d064d694df4c023580e9cd0b",
+      "family": "smooth",
+      "site_id": "trajectory_00",
+      "seed": 971008000
+    },
+    {
+      "robot": "ur5e",
+      "uid": "2037257a8eb29f55e1baa50497e60c0cb87331a5da7e7a4344c8cded212a709f",
+      "family": "smooth",
+      "site_id": "trajectory_01",
+      "seed": 971008001
+    },
+    {
+      "robot": "ur5e",
+      "uid": "6105bc9f0df7e8baadfc8dd255f78c7bb3ddb066573e8f4fde9c385dbe5db694",
+      "family": "near_singular",
+      "site_id": "trajectory_10",
+      "seed": 971008010
+    },
+    {
+      "robot": "ur5e",
+      "uid": "e4188d53efbb54472d782b035a4214854136b6bb171d9aee6282590944abd39b",
+      "family": "near_singular",
+      "site_id": "trajectory_11",
+      "seed": 971008011
+    },
+    {
+      "robot": "ur5e",
+      "uid": "c0f0fa5983ead9bf72ff425c510b3208de5bd46dcc8efd876a735c868767ac8e",
+      "family": "joint_limit_return",
+      "site_id": "trajectory_20",
+      "seed": 971008020
+    },
+    {
+      "robot": "ur5e",
+      "uid": "28c799f101b845f2577d1584bde9de07634bcdda61cf814be0670f4c7adce911",
+      "family": "joint_limit_return",
+      "site_id": "trajectory_21",
+      "seed": 971008021
+    },
+    {
+      "robot": "ur5e",
+      "uid": "382307fdf25e31f8b1ae5c14a7545e81bf0c54489223c4626934c3dbe31a195e",
+      "family": "high_curvature",
+      "site_id": "trajectory_30",
+      "seed": 971008030
+    },
+    {
+      "robot": "ur5e",
+      "uid": "1572bafea0edc3c6cc05d2a9eabd19a06035670328035c0b780d47b54a683769",
+      "family": "high_curvature",
+      "site_id": "trajectory_31",
+      "seed": 971008031
+    }
+  ],
+  "input_hashes": {
+    "panda": "c92f978503b36756baef19b2529ab1efa789d099f16c1f8a035443b780eea2ce",
+    "ur5e": "841aa865cc4de24162955e63d767861dc60e8a8bc4c1c7134f7ad289fcef4f99"
+  },
+  "freshness": "Unchanged generator, 160/robot, 150frames; seeds increment on identity collision only; input verification and identities sealed before fresh outcomes."
+}

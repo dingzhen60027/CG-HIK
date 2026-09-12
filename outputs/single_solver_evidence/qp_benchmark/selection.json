@@ -1,0 +1,15 @@
+{
+  "eps_abs": 1e-08,
+  "source": "micro_1e-08.csv",
+  "reason": "First accuracy setting passing all development QP quality checks, not trajectory outcomes.",
+  "settings": {
+    "eps_abs": 1e-08,
+    "eps_rel": 0.0,
+    "polishing": true,
+    "max_iter": 20000,
+    "warm_starting": true,
+    "adaptive_rho": true,
+    "adaptive_rho_interval": 25,
+    "verbose": false
+  }
+}

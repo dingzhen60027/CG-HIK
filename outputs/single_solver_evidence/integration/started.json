@@ -1,0 +1,102 @@
+{
+  "utc": "2026-09-12T08:03:24.854782+00:00",
+  "code_hashes": {
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/bounded_gn_adapter.py": "ab6212f2f8f70dee4c0eef639f8bb768739376796341df6482de2b915819651a",
+    "scripts/run_single_solver_development.py": "07be50c1034e502c4ed37384a28554f198b9bd5eb67a37215d0cfbdcd80d3ae2",
+    "configs/single_solver_development.yaml": "f1eb157af809d37234a9b2f5197e050da2827839db6b72db5c99c1d3a5f7f27e",
+    "src/confik/correction_reserve/study.py": "b489d082641ec4ed36bcc69aab6df82b6d4935bb16c920f90325bd79313d3a94",
+    "src/confik/correction_reserve/reporting.py": "439ffd253c105076eae11ebeba835715812ee2959ace49deaa81b261c259a6a9",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/task_contract_alignment/outcomes.py": "e9b36e1c59fba49f181fa3cf36f7583e844d3285c2f4c35878c47768a4e885dd",
+    "src/confik/task_contract_alignment/trac_adapter.py": "09a5c40506621c078b7abf4f2086ca79a0a7e605407a586919cbb1c36af2762c",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "tmp/task_contract_build/libcontract_trac.so": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83",
+    "configs/paper_v2.yaml": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+    "scripts/run_single_solver_evidence.py": "b967bf99bfb36191dfeae39a4a9f56cf4b6a8f31095b21801748b5b81296d87e",
+    "src/confik/single_solver_evidence.py": "4d8404b057dd9924f9b23b6379d5f9a3982015343064c3dafb7ec87c0b0b8ede",
+    "configs/single_solver_evidence.yaml": "86ebcd78e422592dc58101cae2665f4368f4b0f37bbab4dc42afcd7fdab286f8",
+    "src/confik/revision_compute_allocation/data.py": "c27b9e377de1f03472fd9f06dccc64af1988035a64ce877a2a45c5a784e60d7c"
+  },
+  "configuration": {
+    "baseline": "b34800d4e38f391ad873b0a95c152e7da4a1081f",
+    "source_config": "configs/paper_v2.yaml",
+    "native_trac_library": "tmp/task_contract_build/libcontract_trac.so",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "methods": [
+      "single_gn_k1",
+      "single_gn_k0",
+      "single_gn_clip",
+      "single_gn_osqp",
+      "trac_task_5ms",
+      "trac_task_20ms",
+      "pink_qp"
+    ],
+    "repeats": 3,
+    "order_seed": 2026091301,
+    "bootstrap_seed": 2026091302,
+    "bootstrap_samples": 4000,
+    "cpu": 4,
+    "development": {
+      "panda_targets": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json",
+      "ur5e_targets": "outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json"
+    },
+    "fresh": {
+      "seeds": {
+        "panda": 202609130000,
+        "ur5e": 202609140000
+      },
+      "families": [
+        "smooth",
+        "near_singular",
+        "joint_limit_return",
+        "high_curvature"
+      ],
+      "per_family": 40,
+      "frames": 150,
+      "dt": 0.02
+    },
+    "qp": {
+      "sample_seed": 2026091303,
+      "maximum_per_uid": 125,
+      "repeats": 5,
+      "eps_abs_candidates": [
+        1e-08,
+        1e-09,
+        1e-10
+      ],
+      "box_tolerance": 1e-08,
+      "normalized_kkt_tolerance": 1e-08,
+      "raw_kkt_tolerance": 1e-05,
+      "scaled_objective_tolerance": 1e-08
+    },
+    "scope": "frozen NumPy BoundedGN and original verifier; same generator; no new solver/fallback or parameter search",
+    "formal": {
+      "order_seed": 2026091301
+    }
+  },
+  "methods": [
+    "single_gn_k1",
+    "single_gn_k0",
+    "single_gn_clip",
+    "single_gn_osqp"
+  ],
+  "python": "3.12.13",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+  "git_sha": "b34800d4e38f391ad873b0a95c152e7da4a1081f",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "cpu_affinity": [
+    4
+  ],
+  "inference_unit": "whole trajectory; search repeats nested",
+  "timing_scope": "solver input conversion, dynamic bounds, numerical solve, prediction/optimization if applicable, command verification; serialization excluded"
+}

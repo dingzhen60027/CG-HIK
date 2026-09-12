@@ -1,0 +1,129 @@
+{
+  "created": "2026-09-12T08:04:21.047147+00:00",
+  "code_hashes": {
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/bounded_gn_adapter.py": "ab6212f2f8f70dee4c0eef639f8bb768739376796341df6482de2b915819651a",
+    "scripts/run_single_solver_development.py": "07be50c1034e502c4ed37384a28554f198b9bd5eb67a37215d0cfbdcd80d3ae2",
+    "configs/single_solver_development.yaml": "f1eb157af809d37234a9b2f5197e050da2827839db6b72db5c99c1d3a5f7f27e",
+    "src/confik/correction_reserve/study.py": "b489d082641ec4ed36bcc69aab6df82b6d4935bb16c920f90325bd79313d3a94",
+    "src/confik/correction_reserve/reporting.py": "439ffd253c105076eae11ebeba835715812ee2959ace49deaa81b261c259a6a9",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/task_contract_alignment/outcomes.py": "e9b36e1c59fba49f181fa3cf36f7583e844d3285c2f4c35878c47768a4e885dd",
+    "src/confik/task_contract_alignment/trac_adapter.py": "09a5c40506621c078b7abf4f2086ca79a0a7e605407a586919cbb1c36af2762c",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "tmp/task_contract_build/libcontract_trac.so": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83",
+    "configs/paper_v2.yaml": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+    "scripts/run_single_solver_evidence.py": "b967bf99bfb36191dfeae39a4a9f56cf4b6a8f31095b21801748b5b81296d87e",
+    "src/confik/single_solver_evidence.py": "4d8404b057dd9924f9b23b6379d5f9a3982015343064c3dafb7ec87c0b0b8ede",
+    "configs/single_solver_evidence.yaml": "86ebcd78e422592dc58101cae2665f4368f4b0f37bbab4dc42afcd7fdab286f8",
+    "src/confik/revision_compute_allocation/data.py": "c27b9e377de1f03472fd9f06dccc64af1988035a64ce877a2a45c5a784e60d7c"
+  },
+  "config": {
+    "baseline": "b34800d4e38f391ad873b0a95c152e7da4a1081f",
+    "source_config": "configs/paper_v2.yaml",
+    "native_trac_library": "tmp/task_contract_build/libcontract_trac.so",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "methods": [
+      "single_gn_k1",
+      "single_gn_k0",
+      "single_gn_clip",
+      "single_gn_osqp",
+      "trac_task_5ms",
+      "trac_task_20ms",
+      "pink_qp"
+    ],
+    "repeats": 3,
+    "order_seed": 2026091301,
+    "bootstrap_seed": 2026091302,
+    "bootstrap_samples": 4000,
+    "cpu": 4,
+    "development": {
+      "panda_targets": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json",
+      "ur5e_targets": "outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json"
+    },
+    "fresh": {
+      "seeds": {
+        "panda": 202609130000,
+        "ur5e": 202609140000
+      },
+      "families": [
+        "smooth",
+        "near_singular",
+        "joint_limit_return",
+        "high_curvature"
+      ],
+      "per_family": 40,
+      "frames": 150,
+      "dt": 0.02
+    },
+    "qp": {
+      "sample_seed": 2026091303,
+      "maximum_per_uid": 125,
+      "repeats": 5,
+      "eps_abs_candidates": [
+        1e-08,
+        1e-09,
+        1e-10
+      ],
+      "box_tolerance": 1e-08,
+      "normalized_kkt_tolerance": 1e-08,
+      "raw_kkt_tolerance": 1e-05,
+      "scaled_objective_tolerance": 1e-08
+    },
+    "scope": "frozen NumPy BoundedGN and original verifier; same generator; no new solver/fallback or parameter search"
+  },
+  "qp_selection": {
+    "eps_abs": 1e-08,
+    "source": "micro_1e-08.csv",
+    "reason": "First accuracy setting passing all development QP quality checks, not trajectory outcomes.",
+    "settings": {
+      "eps_abs": 1e-08,
+      "eps_rel": 0.0,
+      "polishing": true,
+      "max_iter": 20000,
+      "warm_starting": true,
+      "adaptive_rho": true,
+      "adaptive_rho_interval": 25,
+      "verbose": false
+    }
+  },
+  "old_identity_sources": {
+    "outputs/anchored_temporal_v7_smoke/completion_identity_diagnostics.json": "01aacda3b8b08bbfeaeebdeb948a3e71506afde9625961c69372a0144c88afa6",
+    "outputs/archive/anchored_temporal_v7_smoke_pre_recovery_metric_fix_20260904/completion_identity_diagnostics.json": "01aacda3b8b08bbfeaeebdeb948a3e71506afde9625961c69372a0144c88afa6",
+    "outputs/archive/temporal_event_v6_smoke_pre_metric_fix_20260903/completion_identity_diagnostics.json": "94ce8354c78eceb623062dae90b0206a126789314ee5dbcd8e1a7557420b59e0",
+    "outputs/continuation_mechanism_study/independent_configuration_selection/identity_seal.json": "f2eb20b0d026075053910b8ab859765080e31e4f98a1ff8566c7e91d2956c196",
+    "outputs/continuation_mechanism_study/independent_configuration_selection/trajectory_identities.json": "0434a8c10f71327b8cdc9aa6ea0e454f67216e9b7efd1413038fd909f5784ba2",
+    "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/trajectory_identities.json": "942638718af89b8e0affde9a3f7420ab56461da77d70953ee1f8c2045148db51",
+    "outputs/correction_reserve_ik/elastic_locked_evaluation/protocol/identities.json": "ee86c9b54ee6f7c8718aa77c75037cf6de4011e32535f958304f37267c1a4a11",
+    "outputs/correction_reserve_ik/formal_protocol/identities.json": "4b3f2d39df8203c2471451238cdd59cdacd753c5ed93a88b597b79a890862aed",
+    "outputs/fresh_transition_v4_test/panda_identity_manifest.json": "17d9c05ca9c6ce063aea1a34ffdc9048a5fd61c05a61071ad8425c2cd00eefb5",
+    "outputs/fresh_transition_v4_test/ur5e_identity_manifest.json": "04afda4123395503ddff56b4db52bc5a57414ad24aa02845956ded33d6f26116",
+    "outputs/revision_compute_allocation/02_point_mechanism_benchmark/panda_identities.json": "9e0af5df1292d7f9f8f40f531fa70eb616c2bc6818b097caa9d422814d6389ae",
+    "outputs/revision_compute_allocation/02_point_mechanism_benchmark/ur5e_identities.json": "712e56f4ddbdff998b1325a9ee40e0fd012a65f245f70a9f2247ca63123f8e66",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/panda_identities.json": "a12e6a9c6d78d2ae5133462501fdf4c84cd3ce52af84aeffb421d5e230ef51bb",
+    "outputs/revision_compute_allocation/03_feasible_trajectory_benchmark/ur5e_identities.json": "1dcadcf575eff60232ead330f1fd89ee51f208abea1b1c950829365c2775868f",
+    "outputs/revision_compute_allocation/diagnostic_adapter_attempt_01/original_selection_and_identity_seal.json": "01c7a3b29cb71c966c4a3a31b9dc3725a08231666a9eaf81da5995081102183a",
+    "outputs/revision_compute_allocation/selection_and_identity_seal.json": "38c22554adbcd1185174d4a53578f2a739a7c324392ce96ca45723b31807cd02",
+    "outputs/task_contract_alignment/01_protocol/point_identities.json": "687e4c9bd34805d4f7db0205df204e1d9baef488bdd7a7d4d066ff7d05d026d1",
+    "outputs/task_contract_alignment/01_protocol/ur5e_trajectory_identities.json": "79052123d1912668d6c9fb33834c87fdf8b5be248aaa0c62b146cfb012d1e838",
+    "outputs/task_recourse/input_identities.json": "3bb07df1f88ad1ae43e5975b7e78c005357ee42c0a5e9eca90672b0b21c3d0c2",
+    "outputs/temporal_event_v6_pilot/completion_identity_diagnostics.json": "30c679cc2c467ad51d8cfc3bc0e47a38f62081932a27a880a0c7cb7c58171b89",
+    "outputs/temporal_event_v6_smoke/completion_identity_diagnostics.json": "94ce8354c78eceb623062dae90b0206a126789314ee5dbcd8e1a7557420b59e0"
+  },
+  "collisions": [],
+  "reference_frames_verified": 48000,
+  "fresh_solver_calls": 0,
+  "files": {
+    "online_inputs.json": "27d8ffb6f7cf69d1a84066ce5c49058dde13343b2bb16878a6be0b727463cd6f",
+    "identities.json": "be8402a91d7f5182abc66d320df918975c06c54a3d809a7efd77c3e96638ed15",
+    "ur5e_reference_witnesses.npz": "ca10d204fa1496330449761b6ea03914d6e5b45f4c3b86cd394d6bb977f43a49",
+    "development_protocol.json": "dbf320e904f6f6df13ec86d37c0154c7a148841a1b840c5bce018dea7f0e61be",
+    "panda_reference_witnesses.npz": "06e764cc4aa15fa65f2aa6db9855c0a2aedcb605d046fd42f9e8c839c6fc2bb3",
+    "implementation_corrections.md": "0044ce8f2123373f369dac3572d8cbba70661bbe113e4ae3aaa65f9fa430669b"
+  }
+}
