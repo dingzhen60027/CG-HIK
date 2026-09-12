@@ -166,3 +166,21 @@ def test_zero_requires_original_checks_not_small_scalar():
         info=solver.inspect(q,zs,IKQuery(kin.forward(q),q,.02),[kin.forward(z) for z in zs],q,step)
         assert info['tau']<1e-10 and not info['geometric']
     finally:solver.close()
+
+
+def test_infeasible_native_trial_is_rejected_without_interval_assertion(monkeypatch):
+    source,kin,v,urdf=context('panda',CFG)
+    solver=TaskRecourseIK(kin,v,source,'tmp/task_contract_build/libcontract_trac.so',urdf)
+    q=(kin.limits.lower+kin.limits.upper)/2;target=kin.forward(q)
+    solver.last_target=Pose(target.position-np.array([.1,0,0]),target.rotation)
+    def infeasible(*args,**kwargs):
+        return np.full(solver.program.size,1e4),dict(status='PrimalInfeasible',
+            iterations=1,build_ns=1,solve_ns=1,affine_tau=1e4)
+    monkeypatch.setattr(solver.program,'solve',infeasible)
+    try:
+        r=solver.solve(target.position,target.rotation,q)
+        assert r['accepted'] and r['backup']['accepted']
+        assert any(t['phase']=='joint' and not t['current_accepted'] for t in r['nonlinear_trials'])
+        assert not any(t['adopted'] for t in r['nonlinear_trials'])
+        np.testing.assert_array_equal(r['q'],r['backup']['q'])
+    finally:solver.close()

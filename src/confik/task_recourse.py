@@ -313,7 +313,11 @@ class TaskRecourseIK:
                     excess=max(float(np.max(lower-qt)),float(np.max(qt-upper)),0.)
                     if not fixed and excess<=1e-8:qt=np.clip(qt,lower,upper)
                     future_roundoff=0.
-                    if corrected:
+                    # A substantially infeasible CURRENT trial has no valid
+                    # dynamic interval for future reconstruction. Keep it for
+                    # true-FK rejection below, rather than passing it to a helper
+                    # whose precondition is a state inside the current bounds.
+                    if corrected and np.all(qt>=lower) and np.all(qt<=upper):
                         zl,zu=representable_interior(self.kin,IKQuery(predicted,qt,dt),self.verifier)
                         future_roundoff=max(float(np.max(zl-zt)),float(np.max(zt-zu)),0.)
                         # Same reconstruction-only threshold already used for q.

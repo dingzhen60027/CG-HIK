@@ -115,4 +115,19 @@ the recorded rule. Of the 79 states, 45 are zero at initialization, 33 after
 one fixed-current update, and one after two. No released update is needed for
 these known-zero inputs. One Panda state remains unknown/unavailable. These
 results do not establish that the budget suffices on every online input.
-`selection_roundoff_corrected.json` is final and precedes all complete runs.
+`selection_roundoff_corrected.json` fixes that budget before the first complete
+run attempt; `selection_final.json` inherits it unchanged after the interface
+repair described below.
+
+The first full comparison attempt completed UR5e but stopped Panda after 217
+trajectory runs. A substantially infeasible current trial from an unsuccessful
+native solve was passed to `representable_interior`, whose valid-current-state
+precondition did not hold. The helper correctly asserted. The repaired caller
+skips future roundoff reconstruction for such current trials and retains their
+true-FK/verifier rejection; it does not clip a substantive violation or relax a
+constraint. A regression injects a native infeasible trial and checks rejection
+and exact backup retention. All 12 tests pass. Both robots are rerun under the
+same guarded source in `validated_panda/` and `validated_ur5e/`; all preliminary
+records remain in `development_panda/` and `development_ur5e/`, with hashes and
+the interrupted job in `interface_guard_amendment.json`. This is development
+debugging, not a fresh evaluation or outcome-driven numerical-budget change.

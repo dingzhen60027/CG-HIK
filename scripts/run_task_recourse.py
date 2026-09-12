@@ -30,7 +30,8 @@ from confik.types import Pose, IKQuery
 from confik.geometry import pose_error
 
 LABELS.update(tar_free='TAR-IK free recourse',tar_fixed='Same-core fixed compensation',
-              tar_nominal='Same-core nominal prediction')
+              tar_nominal='Same-core nominal prediction',tar_old='Original TAR-IK',
+              tar_corrected='Numerically corrected TAR-IK')
 DEFAULT=ROOT/'outputs/task_recourse'
 NUMERIC_BASELINE='1a9db5071e6212bc25a9cdae9fe278328e47646a'
 NUMERIC_ROOT=DEFAULT/'numerical_completion_development'
@@ -686,18 +687,40 @@ def numerical_select(root,cfg,tag='initial'):
     print(json.dumps(chosen,indent=2))
 
 
+def numerical_finalize(root):
+    original=root/'selection_roundoff_corrected.json'
+    selection=json.loads(original.read_text())
+    folders={}
+    for robot in ('panda','ur5e'):
+        folder=root/f'development_{robot}'
+        runs=list((folder/'runs').glob('*.summary.json'))
+        folders[robot]=dict(completed_runs=len(runs),complete=(folder/'completed.json').exists(),
+            files={str(p.relative_to(folder)):sha(p) for p in folder.rglob('*') if p.is_file()})
+    jobs=json.loads((root/'development_panda/job_order.json').read_text())
+    write_json(root/'interface_guard_amendment.json',dict(utc=utc(),previous_selection_hash=sha(original),
+        original_runs=folders,panda_interrupted_job=jobs[folders['panda']['completed_runs']],
+        cause='representable_interior called on a substantially infeasible current trial from a native unsuccessful solve; its valid-current-state precondition was not met',
+        correction='Skip future roundoff reconstruction for current trials outside their allowed interval; retain true-FK/current-verifier rejection. No constraint, objective, predictor, or budget change.',
+        scope='All preliminary records retained. Restart BOTH robot comparisons with the same guarded source; no outcome-driven data selection.',
+        unchanged_budget=selection['selected']))
+    write_json(root/'selection_final.json',dict(created=utc(),selected=selection['selected'],
+        code_hashes=hashes(),previous_selection_hash=sha(original),
+        reason='Inherited exactly from same-input selection; interface precondition repair only, not a new budget selection.',
+        explicit_boundary='Development numerical debugging; earlier partial Panda and complete UR5e runs retained, not called unseen.'))
+
+
 def numerical_run(root,cfg,robot):
-    selection=json.loads((root/'selection_roundoff_corrected.json').read_text())
+    selection=json.loads((root/'selection_final.json').read_text())
     assert sha(ROOT/'src/confik/task_recourse.py')==selection['code_hashes']['src/confik/task_recourse.py']
     budget=selection['selected']['fixed_updates'];protocol=json.loads((root/'protocol.json').read_text())
-    folder=root/f'development_{robot}';folder.mkdir(exist_ok=False);(folder/'runs').mkdir()
+    folder=root/f'validated_{robot}';folder.mkdir(exist_ok=False);(folder/'runs').mkdir()
     identity=json.loads((DEFAULT/'input_identities.json').read_text())
     for entry in identity['input_files'].values():assert sha(ROOT/entry['path'])==entry['sha256']
     before=hashes();data=items(cfg,robot)
     jobs=[(i,m,r) for i in data for m in protocol['methods'] for r in range(protocol['repeats'])]
     order=np.random.default_rng(protocol['order_seed']).permutation(len(jobs))
     write_json(folder/'started.json',dict(utc=utc(),code_hashes=before,selected_budget=selection['selected'],
-        selection_hash=sha(root/'selection_roundoff_corrected.json'),original_kernel_git=NUMERIC_BASELINE,
+        selection_hash=sha(root/'selection_final.json'),original_kernel_git=NUMERIC_BASELINE,
         git_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         affinity=sorted(os.sched_getaffinity(0)),python=platform.python_version(),
         threads={k:os.environ.get(k) for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS')}))
@@ -735,7 +758,7 @@ def numerical_run(root,cfg,robot):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','test','integration','development','mechanism','report','audit','figures','numeric_prepare','zero_reference','numeric_probe','numeric_select','numeric_run'])
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','test','integration','development','mechanism','report','audit','figures','numeric_prepare','zero_reference','numeric_probe','numeric_select','numeric_finalize','numeric_run'])
     p.add_argument('--config',default='configs/task_recourse.yaml');p.add_argument('--out',type=Path,default=DEFAULT)
     p.add_argument('--stage',choices=['integration','development'],default='development')
     p.add_argument('--probe-tag',choices=['initial','roundoff_corrected'],default='initial')
@@ -745,6 +768,7 @@ def main():
     elif args.action=='zero_reference':zero_references(NUMERIC_ROOT,cfg)
     elif args.action=='numeric_probe':numerical_probe(NUMERIC_ROOT,cfg,args.probe_tag)
     elif args.action=='numeric_select':numerical_select(NUMERIC_ROOT,cfg,args.probe_tag)
+    elif args.action=='numeric_finalize':numerical_finalize(NUMERIC_ROOT)
     elif args.action=='numeric_run':
         if not args.robot:p.error('--robot required')
         numerical_run(NUMERIC_ROOT,cfg,args.robot)
