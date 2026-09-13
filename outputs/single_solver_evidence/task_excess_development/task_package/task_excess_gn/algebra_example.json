@@ -1,0 +1,17 @@
+{
+  "scope": "scalar synthetic algebra check, not a robot experiment",
+  "point_least_squares_minimizer": 0.56,
+  "point_min_residuals": [
+    0.56,
+    1.1199999999999999
+  ],
+  "task_feasible_interval": [
+    0.8,
+    1.0
+  ],
+  "feasible_example": 0.9,
+  "feasible_example_residuals": [
+    0.9,
+    0.95
+  ]
+}

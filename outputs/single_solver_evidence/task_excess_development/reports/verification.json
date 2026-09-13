@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "commands_checked": 216000,
+    "accepted_commands": 212347
+  },
+  "accepted_contract_violations": 0,
+  "successful_runs": 1351,
+  "solver_calls": 0,
+  "checks": "All original targets, actual accepted-state feedback and original verifier; every command and all outer latencies retained."
+}

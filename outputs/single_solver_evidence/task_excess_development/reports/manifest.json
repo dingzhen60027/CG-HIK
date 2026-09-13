@@ -1,0 +1,35 @@
+{
+  "created": "2026-09-13T10:49:51.234234+00:00",
+  "sources": {
+    "panda": {
+      "path": "outputs/single_solver_evidence/task_excess_development/development_panda",
+      "sha256": "71fd8556462a7a8392a10d1d606444e330a6199a026f8c998a0193abb6fb3a52"
+    },
+    "ur5e": {
+      "path": "outputs/single_solver_evidence/task_excess_development/development_ur5e",
+      "sha256": "7e939ffe5f79669892d7bea805df18dd36b5228f4a243f42568c1f02a9a94413"
+    }
+  },
+  "reporting_sha256": "f3832d5341046bb0abdee5ab8d5612bf688afc618c5fda4a324d3dc6754e5a20",
+  "independent_unit": "40 trajectory UIDs/robot; 3 nested repeats averaged; family-stratified 4000-resample paired 95% descriptive intervals",
+  "frame_quantiles": "All frames pooled descriptively, not treated as independent inferential units",
+  "files": {
+    "first_failure_inputs.csv": "c3a2c3c6e3b735f0063a4bacc1eb786a5ad06e364ee06c906bf75a7252760133",
+    "run_summaries.csv": "495d1e8466d0a22f479b0b2016abaef9e267fbc853f1812cb9d982562df59467",
+    "family_table.csv": "d0801437bc53ac34e27613002650811ae9c4a3535a29ccd98f1cfa1df76ef344",
+    "completion_uids.json": "0ffd7927f195612fcf7eb94bced25684863bb99aca64c3ce3059243a85c5ad64",
+    "local_comparisons.csv": "f0987bc11571ee190dc8c3a53de3b2d07e21821c786083c2da32fc4a22efdb62",
+    "trajectory_units.csv": "de14ed5c913a93119bff59caee1d33bc109fea019e0bd0bab3a3a3fdbe523da1",
+    "stationarity_and_witnesses.csv": "bb9698797ebd07d4e3bd7a5e0f8d1b4b63922ec274476a738d53b2d08342e17a",
+    "local_input_units.csv": "14d9adb8a2e8e0c0e0109efe860171d1b86481bb94db0895bb868c10acadd680",
+    "same_input_first_metric_update.csv": "fd515b4738f0c1dc85942f3c5448d136f5cf9491b22abc593941df9526501646",
+    "local_main.csv": "33754df38a611fdb1f69bcdcce53dea2a105ff67b07ae3740d0a229683235136",
+    "paired_comparisons.csv": "97c6adc7053d38208f459e3589cde54fc63d382b0aaf265e1668e5f04ab4abba",
+    "main_table.csv": "664ae016284ed46322daaef66b1b78ae66119691fee7908c96449479d453fff4",
+    "source_data.json": "b539e35bbc63d7a16a004bd6227e655a8f79a0e48ff8217f44cc9947216c4afb",
+    "gained_lost_uids.csv": "9fce471a51117868cf635616020a03a382107f5777703a352845d8cb1dd0aeda",
+    "verification.json": "b6cc276e4d702e51dd5e03a70df4dc99240d4ad17d9d07996769ea50b7b35ac6",
+    "local_source_groups.csv": "fa7e93277d03055d36b9e8d2985ab29ba1a0ec6be300400c5a135125133732c8",
+    "successful_trajectory_index.json": "ee150f64ebaf585f458657b7276f5a2471477235e58384ab228809f3e13df08a"
+  }
+}

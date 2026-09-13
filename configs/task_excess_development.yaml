@@ -1,0 +1,32 @@
+baseline: c2a136b2bc0531998354f91c22d795fbe9d9e8c1
+source_config: configs/paper_v2.yaml
+native_trac_library: tmp/task_contract_build/libcontract_trac.so
+robots: [panda, ur5e]
+methods: [single_gn_k0, single_gn_k1, task_excess_gn, task_excess_lbfgsb, trac_task_5ms, pink_qp]
+repeats: 3
+order_seed: 2026091304
+bootstrap_seed: 2026091305
+bootstrap_samples: 4000
+cpu: 4
+development:
+  panda_targets: outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json
+  ur5e_targets: outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json
+task_excess:
+  normalized_margin: 0.000001
+  damping: 0.01
+  maximum_iterations: 30
+  backtracking_steps: 8
+  deadline_ms: 20.0
+lbfgsb:
+  joint_variables: normalized_by_original_single_frame_displacement
+  maxiter: 30
+  maxfun: 240
+  maxls: 20
+  gtol: 1.0e-8
+  ftol: 0.0
+  early_stop: original_verifier_accepts_or_outer_deadline
+local:
+  methods: [single_gn_k0, single_gn_k1, task_excess_gn, task_excess_lbfgsb, task_excess_isotropic, point_loop_control]
+  repeats: 3
+  diagnostics_separate_from_timing: true
+scope: previously observed development inputs only; no fallback, future input, parameter search or new trajectories

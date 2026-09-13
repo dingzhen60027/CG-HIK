@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "fixed_settings": {
+      "normalized_margin": 1e-06,
+      "damping": 0.01,
+      "maximum_iterations": 30,
+      "backtracking_steps": 8,
+      "deadline_ms": 20.0
+    },
+    "standard_reference_options": {
+      "joint_variables": "normalized_by_original_single_frame_displacement",
+      "maxiter": 30,
+      "maxfun": 240,
+      "maxls": 20,
+      "gtol": 1e-08,
+      "ftol": 0.0,
+      "early_stop": "original_verifier_accepts_or_outer_deadline"
+    },
+    "warmup": "3 common nonstationary midpoint calls, plus runner stationary startup",
+    "timing": "Complete adapter outer time, including conversion, bounds, all numerical work, task checks and final original verifier; no trace during trajectory timing."
+  },
+  "startup_warmup_calls": 1
+}
