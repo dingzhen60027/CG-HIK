@@ -1,0 +1,16 @@
+[
+  {
+    "robot": "ur5e",
+    "method": "trac_task_5ms",
+    "uid": "ac17b38a5f50a63c6cbf8c492e92d5f2a9edde6b03168843738f904b185faf21",
+    "family": "hard_feasible",
+    "accepted": 0.3333333333333333,
+    "deadline": 0.3333333333333333,
+    "total_latency_ns": 3697011.0,
+    "accepted_by_repeat": [
+      false,
+      false,
+      true
+    ]
+  }
+]

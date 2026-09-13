@@ -43,6 +43,8 @@ Queries or full trajectory UIDs are statistical units. Average three repeats wit
 
 The numerical-comparison wrapper was finalized before its first results to avoid duplicate Clarabel quality checking and to include all four actual-command timing controls. Development code/runtime hashes and measurements are retained; `protocol/measurement_seal.json` records the wrapper-only revision. No solver or setting changed after development.
 
+Before independent invocation a metadata-only correction removed inapplicable GN default settings from the TRAC20 adapter description. The native mapping and 20 ms budget are recorded instead. `independent_inputs/launch_seal.json` links the unchanged input seal and updated wrapper hash; synthetic midpoint TRAC smoke calls do not use independent inputs. The complete code, development record and input-lock commit is `97be2df6513b84d83dc3eaeaf90de5fa7c65619c`, created before any independent solver result. The numerical core and configuration remain those sealed before development; later table-rendering edits do not change either.
+
 ## Prior foundations, not transferred guarantees
 
 The `nature-academic-search` citation-verification workflow checked the three DOIs against Crossref and publisher/author pages; the academic MCP was unavailable and web Crossref access failed, so direct Crossref HTTP was used. Metadata is saved under `literature/`.

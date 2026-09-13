@@ -1,0 +1,15 @@
+{
+  "solver_calls": 0,
+  "counts": {
+    "saved_point_witnesses_verified": 4000,
+    "saved_reference_frames_verified": 24000,
+    "point_consistent_relative_stops": 2043
+  },
+  "common_tight_problem_repeat_pairs": 1775,
+  "source_code_sha256": "afcba1a55fbc46aa0d945bb02a5621ca15aec56c17565b16c7368a002a75b39b",
+  "timing": "Fixed-subproblem command modes use public-verifier callbacks and a final check; this diagnostic is not the cached online native-FK callback timing. No early-stop ability is imputed to Clarabel.",
+  "sources": {
+    "subproblem_calls.csv": "6e242a3bc5cf751f61d7debb17aa6f8aa38055f4d52c1796068f23424918628d",
+    "subproblem_timing_scopes_and_commands.csv": "7799c2f353978beceacfcc8ff7549e9464083750262243051da638733c13db4b"
+  }
+}

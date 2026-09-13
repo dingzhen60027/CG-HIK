@@ -1,0 +1,104 @@
+{
+  "schema": "task-balance-completion-final-delivery-v1",
+  "baseline": "23f8555bd214eb4ac45b164a536ead55e142e44c",
+  "independent_pre_results_commit": "97be2df6513b84d83dc3eaeaf90de5fa7c65619c",
+  "numerical_sources_match_pre_results_seal": true,
+  "historical_runtime_preserved_byte_prefix": true,
+  "old_evidence_paper_and_unrelated_tracked_files_unchanged": true,
+  "reporting_source_snapshots_verified": true,
+  "new_solver_calls_in_delivery_audit": 0,
+  "collection_digest_recipe": "For each directory, recursively sort file paths (excluding __pycache__), create entries with path relative to output root, bytes, sha256; SHA256 of JSON with sort_keys=True and separators=(comma,colon). The delivery manifest itself is outside these directories.",
+  "collections": {
+    "development_panda": {
+      "files": 2174,
+      "bytes": 54123207,
+      "listing_sha256": "98441a50a33ee7ce91680b3eb116c5cfbd1576109de1e86070df8fa6c4c5f3f0"
+    },
+    "development_ur5e": {
+      "files": 2174,
+      "bytes": 52273548,
+      "listing_sha256": "f7105f731f24b526b494432d02bc8940b2455c626e4f0f8ba1442a46a89cde8c"
+    },
+    "independent_inputs": {
+      "files": 9,
+      "bytes": 16557865,
+      "listing_sha256": "c5a74c4c542b31e480ba8162eb3fb601123027be5ebeb9778b8ea09487ff8066"
+    },
+    "independent_points_panda": {
+      "files": 2,
+      "bytes": 3047953,
+      "listing_sha256": "32d1698cbf16c16aca0dcaf249a8ca20df8e9fc0b6e8b4550edb111222000c79"
+    },
+    "independent_points_ur5e": {
+      "files": 2,
+      "bytes": 3082395,
+      "listing_sha256": "9b7be11bc2f025d3969f02c8ba8456d2c5d46fd694850feb68c79a5cc098db69"
+    },
+    "independent_trajectories_panda": {
+      "files": 2891,
+      "bytes": 77079695,
+      "listing_sha256": "59fa5ce62be51de715d9476712eff35ec8eb5fe3bb24e101359b559858fe8381"
+    },
+    "independent_trajectories_ur5e": {
+      "files": 2891,
+      "bytes": 75042538,
+      "listing_sha256": "80083806eb89b9f2af4c0aa7b56985158061a39a75c96851c498cd1c9b866e9d"
+    },
+    "literature": {
+      "files": 1,
+      "bytes": 4442,
+      "listing_sha256": "852a3a6b1e3ea8eb161db0c8799419e5a00daf1384004c7f16c1c5cc284f8a46"
+    },
+    "local": {
+      "files": 56,
+      "bytes": 22763820,
+      "listing_sha256": "abef600f6142c44eaed0a6066e6202700a90e18d8000b72950e3a19a868cad1a"
+    },
+    "mathematics": {
+      "files": 1,
+      "bytes": 65207,
+      "listing_sha256": "533c034ca823d00657d3a37e5c1ade43063fc3c5ab04e020708101788925b138"
+    },
+    "package_verification": {
+      "files": 3,
+      "bytes": 74053,
+      "listing_sha256": "32b253a9456539a05fbb28dc28c087ddc115c464307b817b190dfc3a63b49f20"
+    },
+    "protocol": {
+      "files": 4,
+      "bytes": 1737774,
+      "listing_sha256": "c3b344cca66233a5cf8403bf47ed18fa090364355959c4fb88b46659b8a3ad92"
+    },
+    "reports": {
+      "files": 37,
+      "bytes": 36844927,
+      "listing_sha256": "9b7472baaa11c06d73875a6e3406a777bb317bba0cb31fc06a191bbc0fc03320"
+    },
+    "subproblems": {
+      "files": 2,
+      "bytes": 20351671,
+      "listing_sha256": "40399a3b4fb10b86b9aa8173ed069011e1f5cc2258dde13b256f4c42330002f6"
+    },
+    "task_package": {
+      "files": 28,
+      "bytes": 72070354,
+      "listing_sha256": "15ed888a5a8807298c6a08334071c9d2643d7cddcda6df83e110810b61fa4c97"
+    }
+  },
+  "sources_sha256": {
+    "configs/task_balance_completion.yaml": "e8225819910025b2ddfb326972922ab5dd3b7641a0d88d26c150f29d330bbd95",
+    "docs/TASK_BALANCE_COMPLETION_FINDINGS.md": "b841730e84e9f78af113070a4d9a12b1de9b05bb1adcfc3c8950a2cbfd103b36",
+    "docs/TASK_BALANCE_COMPLETION_METHOD.md": "3ae33d96d388efef248cd7816a3c3c35ca4342fbfe2286295073d00844beee0c",
+    "outputs/single_solver_evidence/task_balance_completion/verify_delivery.py": "04a1704c15b9d65a349d9a746cff09aed0d1d346a0965b39daceea125ba08b3d",
+    "scripts/report_task_balance_completion.py": "afcba1a55fbc46aa0d945bb02a5621ca15aec56c17565b16c7368a002a75b39b",
+    "scripts/run_task_balance_completion.py": "fec749f92d11ff75090a88fbaa9fa712597c20cb6b648c4a01c412c8310ff1a3",
+    "src/confik/task_balance_gn.py": "752a69afede984d0617997d6c412753c327f9f642eb0f08ef2ab33c464a68d57",
+    "tests/test_task_balance_completion.py": "3f07975893cd69f045d10d489d6997234b76cfec15b799d308b4c561bd41689e"
+  },
+  "tests": {
+    "command": "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=tmp/crik_dependencies/python:src PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 /home/eric/anaconda3/envs/isaaclab_3/bin/python -m pytest -q tests/test_task_balance_completion.py tests/test_task_balance_gn.py",
+    "passed": 23,
+    "scope": "Unit/math/interface regression, not a new performance experiment."
+  },
+  "stop": "No further algorithm, parameter, data or paper changes are authorized by this delivery."
+}

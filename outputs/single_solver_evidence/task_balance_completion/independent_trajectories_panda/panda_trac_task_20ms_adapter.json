@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "settings": {
+      "method": "trac_task_20ms",
+      "budget_ms": 20,
+      "native_mapping": {
+        "bounds": [
+          0.0005773502691896257,
+          0.0005773502691896257,
+          0.0005773502691896257,
+          0.00503833156733364,
+          0.00503833156733364,
+          0.00503833156733364
+        ],
+        "effective_component_limits": [
+          0.0005773502691896257,
+          0.0005773502691896257,
+          0.0005773502691896257,
+          0.00503833156733364,
+          0.00503833156733364,
+          0.00503833156733364
+        ],
+        "internal_epsilon": 1e-05,
+        "public_contract": {
+          "position_tolerance": 0.001,
+          "orientation_tolerance": 0.00872664626,
+          "joint_limit_tolerance": 1e-09,
+          "velocity_tolerance": 0.0001,
+          "enforce_velocity": true
+        },
+        "frame": "target frame",
+        "position": "R_target.T @ (p_actual - p_target)",
+        "rotation": "Log(R_target.T @ R_actual), axis-angle vector, not RPY",
+        "units": [
+          "m",
+          "m",
+          "m",
+          "rad",
+          "rad",
+          "rad"
+        ],
+        "formula": "aligned: nextafter(epsilon/sqrt(3),0); strict: zero additional bound",
+        "conservativeness": "inscribed component box, NOT equivalent to full norm ball; max(bound, internal epsilon), not their sum"
+      }
+    },
+    "warmup": "3 common nonstationary midpoint calls plus one runner stationary startup",
+    "timing": "Complete outer solve: conversion, fixed bounds, cached native residual/Jacobian, all QPs/trials and independent final verifier; no serialization.",
+    "local_progress": "80% of optimal regularized local MODEL reduction only, conditional on numerically consistent bounds; no nonlinear/trajectory guarantee."
+  },
+  "startup_warmup_calls": 1
+}

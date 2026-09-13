@@ -3,6 +3,7 @@
 import importlib.util
 from collections import Counter,defaultdict
 import json
+import sys
 from pathlib import Path
 import numpy as np
 import yaml
@@ -198,9 +199,79 @@ def main():
     for stage in ('development','independent'):result[stage]=trajectory_tables(stage,cfg,folder)
     result['points']=point_tables(cfg,folder)
     write_json(folder/'source_data.json',result)
+    lines=['# Complete source-generated result tables','',
+        'All three repeats are nested within UID. Latency quantiles include failures and late calls. See CSV/source_data for family results and paired intervals.','']
+    for stage in ('development','independent'):
+        lines += ['## '+stage+' trajectories','',
+            '| Robot | Method | TSR counts, repeats | DTSR20 counts | P50/P95/P99 ms | Cumulative ms/sweep | Edge % | Acceleration RMS |',
+            '|---|---|---|---|---|---:|---:|---:|']
+        for r in result[stage]['main']:
+            lines.append('| '+str(r['robot'])+' | '+r['method']+' | '+str(r['completion_by_repeat'])+' | '+str(r['deadline_completion_by_repeat'])+
+                ' | '+('/'.join(f'{r[k]:.4f}' for k in ('p50_ms','p95_ms','p99_ms')))+f" | {r['cumulative_ms_per_sweep']:.3f} | {100*r['edge_fraction']:.3f} | {r['acceleration_rms_mean']:.5f} |")
+        lines+=['']
+    lines+=['## Independent witness-feasible points','',
+        '| Robot | Method | Accepted /2000, repeats | Missed, repeats | P50/P95/P99 ms | Mean ms | Within20 % | Edge % |',
+        '|---|---|---|---|---|---:|---:|---:|']
+    for r in result['points']['main']:
+        if r['family']!='all':continue
+        lines.append('| '+r['robot']+' | '+r['method']+' | '+str(r['success_by_repeat'])+' | '+str(r['missed_per_repeat'])+' | '+
+            '/'.join(f'{x:.4f}' for x in r['p50_p95_p99_ms'])+f" | {r['mean_latency_ms']:.4f} | {100*r['within20']:.3f} | {100*r['edge_fraction']:.3f} |")
+    (folder/'TABLES.md').write_text('\n'.join(lines)+'\n')
     write_json(folder/'manifest.json',dict(created=utc(),reporting_sha256=sha(__file__),solver_calls=0,
         statistical_unit='Query or complete trajectory UID, three within-unit repeats averaged. Paired family-stratified 4000-resample descriptive unadjusted 95% intervals. No equivalence claim.',
         frame_quantiles='All calls pooled for descriptive latency quantiles; failure and late frames retained.',
         files={p.name:sha(p) for p in folder.iterdir() if p.is_file()}))
 
-if __name__=='__main__':main()
+def supplement():
+    """Complete timing-scope and witness checks from saved data, no solver calls."""
+    import csv
+    from confik.data.datasets import QueryDataset
+    cfg=yaml.safe_load(entry.CONFIG.read_text());folder=OUT/'reports'
+    rows=json.loads((OUT/'subproblems/raw_results.json').read_text());groups=defaultdict(list)
+    with (folder/'subproblem_calls.csv').open() as f:quality_rows=list(csv.DictReader(f))
+    tight=('old_tight','cached_tight','clarabel_epigraph');quality_by=defaultdict(list)
+    for r in quality_rows:
+        if r['method'] in tight:quality_by[r['problem_id'],int(r['repeat'])].append(r['tight_quality_pass']=='True')
+    common={k for k,v in quality_by.items() if len(v)==3 and all(v)}
+    for r in rows:groups[r['robot'],r['stratum'],r['kappa'],r['method']].append(r)
+    table=[]
+    for key,rr in sorted(groups.items()):
+        matched=[r for r in rr if (r['problem_id'],r['repeat']) in common]
+        table.append(dict(zip(('robot','stratum','kappa','method'),key),calls=len(rr),
+            command_accepted_calls=sum(r['command_accepted'] is True for r in rr) if key[-1].endswith('command') else None,
+            verifier_calls=sum(r['verifier_calls'] for r in rr),
+            full_call_p50_ms=float(np.median([r['outer_ns'] for r in rr])/1e6),
+            common_tight_quality_calls=len(matched),
+            common_tight_full_call_p50_ms=float(np.median([r['outer_ns'] for r in matched])/1e6) if matched else None,
+            native_clarabel_solve_p50_ms=float(np.median([r['solve_ns'] for r in rr])/1e6) if key[-1].startswith('clarabel') else None,
+            clarabel_setup_update_p50_ms=float(np.median([r['setup_update_ns'] for r in rr])/1e6) if key[-1].startswith('clarabel') else None,
+            call_segment_p50_ms=float(np.median([r['kernel_ns'] for r in rr])/1e6),
+            segment_note='kernel_ns is the solver-subroutine invocation, not a matched bare native kernel: Clarabel includes its internal setup/update/quality. Use solve_ns for native conic solve. outer_ns includes common final quality/command checks.'))
+    csv_write(folder/'subproblem_timing_scopes_and_commands.csv',table)
+    audit=Counter()
+    for robot in cfg['robots']:
+        _,kin,v,_=context(robot,cfg);ds=QueryDataset.load(OUT/f'independent_inputs/{robot}_points.npz')
+        for i in range(len(ds.previous_q)):
+            query=IKQuery(Pose(ds.target_position[i],ds.target_rotation[i]),ds.previous_q[i],.02)
+            assert v.check(ds.reference_q[i],query).accepted;audit['saved_point_witnesses_verified']+=1
+        data=[r for r in json.loads((OUT/'independent_inputs/online_inputs.json').read_text()) if r['robot']==robot]
+        refs=np.load(OUT/f'independent_inputs/{robot}_trajectory_witnesses.npz')['q']
+        for item,qs in zip(data,refs):
+            np.testing.assert_array_equal(item['initial_q'],qs[0])
+            for frame in range(150):
+                query=IKQuery(Pose(np.array(item['target_position'][frame]),np.array(item['target_rotation'][frame])),qs[frame],.02)
+                assert v.check(qs[frame+1],query).accepted;audit['saved_reference_frames_verified']+=1
+        for r in read_rows(OUT/f'independent_points_{robot}/records.jsonl.gz'):
+            for info in r.get('subproblems',[]):
+                if info.get('reason')=='relative_progress':
+                    p,u,l=info['pzero'],info['upper'],info['lower'];tol=64*np.finfo(float).eps*max(1,abs(p),abs(u),abs(l))
+                    assert info['bounds_valid'] and relative_stop(p,u,l,.25,tol)
+                    audit['point_consistent_relative_stops']+=1
+    write_json(folder/'supplementary_verification.json',dict(solver_calls=0,counts=dict(audit),
+        common_tight_problem_repeat_pairs=len(common),source_code_sha256=sha(__file__),
+        timing='Fixed-subproblem command modes use public-verifier callbacks and a final check; this diagnostic is not the cached online native-FK callback timing. No early-stop ability is imputed to Clarabel.',
+        sources={p.name:sha(p) for p in [folder/'subproblem_calls.csv',folder/'subproblem_timing_scopes_and_commands.csv']}))
+
+if __name__=='__main__':
+    if '--supplement' in sys.argv:supplement()
+    else:main()
