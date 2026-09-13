@@ -1,0 +1,14 @@
+{
+  "executed_here": true,
+  "not_server": true,
+  "no_remote_repository_writes": true,
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "numba": "0.65.1",
+  "time_local": "2026-09-13",
+  "dataset_reconstruction": "160-Panda seeds read from repository config; matching recipe manually ported; only one historical target/UID crosschecked; all-array original repo check still required",
+  "interruption": "Initial batch invoked gn,cached_tight,relative sequentially for observed160. Container batch timed out during relative before output was written; a separate completed relative sweep was then run. No faster-result selection. Single completed sweep per setting; no confidence interval.",
+  "preregistered": false,
+  "performance_scope": "Exploratory development code and single local sweeps; does not establish novelty, original-server speed, statistical advantage, UR5e performance or new trajectory benefit."
+}

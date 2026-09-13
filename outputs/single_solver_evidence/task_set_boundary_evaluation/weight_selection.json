@@ -1,0 +1,118 @@
+{
+  "created": "2026-09-13T19:21:40.729242+00:00",
+  "theta": 0.35,
+  "scores": [
+    {
+      "theta": 0.2,
+      "robot_scores": [
+        {
+          "robot": "panda",
+          "accepted": 795,
+          "calls": 810,
+          "success": 0.9814814814814815,
+          "mean_ms": 0.482055412345679
+        },
+        {
+          "robot": "ur5e",
+          "accepted": 780,
+          "calls": 810,
+          "success": 0.9629629629629629,
+          "mean_ms": 0.5856913901234568
+        }
+      ],
+      "success": 0.9722222222222222,
+      "mean_ms": 0.533873401234568
+    },
+    {
+      "theta": 0.35,
+      "robot_scores": [
+        {
+          "robot": "panda",
+          "accepted": 810,
+          "calls": 810,
+          "success": 1.0,
+          "mean_ms": 0.42296615679012345
+        },
+        {
+          "robot": "ur5e",
+          "accepted": 801,
+          "calls": 810,
+          "success": 0.9888888888888889,
+          "mean_ms": 0.45429647654320987
+        }
+      ],
+      "success": 0.9944444444444445,
+      "mean_ms": 0.43863131666666666
+    },
+    {
+      "theta": 0.5,
+      "robot_scores": [
+        {
+          "robot": "panda",
+          "accepted": 804,
+          "calls": 810,
+          "success": 0.9925925925925926,
+          "mean_ms": 0.444030912345679
+        },
+        {
+          "robot": "ur5e",
+          "accepted": 801,
+          "calls": 810,
+          "success": 0.9888888888888889,
+          "mean_ms": 0.4396302617283951
+        }
+      ],
+      "success": 0.9907407407407407,
+      "mean_ms": 0.44183058703703704
+    },
+    {
+      "theta": 0.65,
+      "robot_scores": [
+        {
+          "robot": "panda",
+          "accepted": 801,
+          "calls": 810,
+          "success": 0.9888888888888889,
+          "mean_ms": 0.473155124691358
+        },
+        {
+          "robot": "ur5e",
+          "accepted": 786,
+          "calls": 810,
+          "success": 0.9703703703703703,
+          "mean_ms": 0.5204699604938272
+        }
+      ],
+      "success": 0.9796296296296296,
+      "mean_ms": 0.4968125425925926
+    },
+    {
+      "theta": 0.8,
+      "robot_scores": [
+        {
+          "robot": "panda",
+          "accepted": 786,
+          "calls": 810,
+          "success": 0.9703703703703703,
+          "mean_ms": 0.5416218530864197
+        },
+        {
+          "robot": "ur5e",
+          "accepted": 768,
+          "calls": 810,
+          "success": 0.9481481481481482,
+          "mean_ms": 0.6388762209876543
+        }
+      ],
+      "success": 0.9592592592592593,
+      "mean_ms": 0.590249037037037
+    }
+  ],
+  "rule": "Equal-robot verified success, then equal-robot mean outer time, then distance to .5, then smaller theta for an exact remaining tie.",
+  "input_seal_sha256": "eb51349e2d66a15d76863f8553c730e0c9ccb7e2d95fc4cf00b18394c5fbf433",
+  "validation_solver_calls": 0,
+  "development_sources": {
+    "panda": "a3272d9fd032f2ff199335c51e496013c6339a2efba1ef1ccd8291f036fd3944",
+    "ur5e": "e2345228465a82b7ab6d6eb0c6f7e3f1bf3ad87cb17c3ac4652620020c02637c"
+  }
+}

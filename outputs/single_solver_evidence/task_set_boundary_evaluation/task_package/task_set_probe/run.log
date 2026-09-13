@@ -1,0 +1,98 @@
+60 / 360
+120 / 360
+180 / 360
+240 / 360
+300 / 360
+360 / 360
+[
+  {
+    "alpha": 0.0,
+    "family": "all",
+    "method": "gn",
+    "n": 120,
+    "success": 120,
+    "on_time": 120,
+    "p50_ms": 0.294877,
+    "mean_ms": 0.31728919166666664
+  },
+  {
+    "alpha": 0.0,
+    "family": "all",
+    "method": "tight",
+    "n": 120,
+    "success": 120,
+    "on_time": 120,
+    "p50_ms": 0.27691,
+    "mean_ms": 0.3746701416666667
+  },
+  {
+    "alpha": 0.0,
+    "family": "all",
+    "method": "relative",
+    "n": 120,
+    "success": 120,
+    "on_time": 120,
+    "p50_ms": 0.2837405,
+    "mean_ms": 0.3218996666666667
+  },
+  {
+    "alpha": 0.5,
+    "family": "all",
+    "method": "gn",
+    "n": 120,
+    "success": 120,
+    "on_time": 120,
+    "p50_ms": 0.2938705,
+    "mean_ms": 0.3184379666666666
+  },
+  {
+    "alpha": 0.5,
+    "family": "all",
+    "method": "tight",
+    "n": 120,
+    "success": 120,
+    "on_time": 120,
+    "p50_ms": 0.29807700000000004,
+    "mean_ms": 0.37824660000000004
+  },
+  {
+    "alpha": 0.5,
+    "family": "all",
+    "method": "relative",
+    "n": 120,
+    "success": 120,
+    "on_time": 120,
+    "p50_ms": 0.28200250000000004,
+    "mean_ms": 0.31751418333333337
+  },
+  {
+    "alpha": 0.95,
+    "family": "all",
+    "method": "gn",
+    "n": 120,
+    "success": 120,
+    "on_time": 120,
+    "p50_ms": 0.3081065,
+    "mean_ms": 0.32253555000000006
+  },
+  {
+    "alpha": 0.95,
+    "family": "all",
+    "method": "tight",
+    "n": 120,
+    "success": 120,
+    "on_time": 120,
+    "p50_ms": 0.2808755,
+    "mean_ms": 0.405969325
+  },
+  {
+    "alpha": 0.95,
+    "family": "all",
+    "method": "relative",
+    "n": 120,
+    "success": 120,
+    "on_time": 120,
+    "p50_ms": 0.28458700000000003,
+    "mean_ms": 0.32072592499999997
+  }
+]

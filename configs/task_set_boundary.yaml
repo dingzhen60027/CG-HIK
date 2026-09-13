@@ -1,0 +1,21 @@
+baseline: 8e4aa63975d465f3de8a1eef2f7773889252c91d
+source_config: configs/paper_v2.yaml
+native_trac_library: tmp/task_contract_build/libcontract_trac.so
+robots: [panda, ur5e]
+cpu: 4
+repeats: 3
+order_seed: 202609140921
+bootstrap_seed: 202609140922
+bootstrap_samples: 4000
+dt: 0.02
+alpha: [0.0, 0.5, 0.95]
+anchor_families: [ordinary, near_singular, near_limit]
+displacements: [regular, high_utilization, multijoint_boundary]
+development:
+  anchors_per_family: 10
+  seeds: {panda: 202609140931, ur5e: 202609140932}
+validation:
+  anchors_per_family: 80
+  seeds: {panda: 202609140941, ur5e: 202609140942}
+weight_candidates: [0.2, 0.35, 0.5, 0.65, 0.8]
+methods: [gn, relative, tight, fixed_weight, clarabel, trac_task_5ms, trac_task_20ms]

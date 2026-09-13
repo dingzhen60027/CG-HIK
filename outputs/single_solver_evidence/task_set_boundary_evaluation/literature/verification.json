@@ -1,0 +1,255 @@
+{
+  "workflow": "nature-academic-search citation-verification",
+  "mcp": "Academic MCP not mounted",
+  "fallback": "Crossref HTTP and publisher/author web pages; sandbox proxy failed, escalated read-only HTTP succeeded",
+  "entries": [
+    {
+      "key": "RangedIK",
+      "doi": "10.1109/ICRA48891.2023.10161311",
+      "primary_url": "https://graphics.cs.wisc.edu/Papers/2023/WPRG23/",
+      "crossref": {
+        "DOI": "10.1109/icra48891.2023.10161311",
+        "title": [
+          "RangedIK: An Optimization-based Robot Motion Generation Method for Ranged-Goal Tasks"
+        ],
+        "author": [
+          {
+            "given": "Yeping",
+            "family": "Wang",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Wisconsin-Madison,Department of Computer Sciences,Madison,WI,USA,53706"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Pragathi",
+            "family": "Praveena",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Wisconsin-Madison,Department of Computer Sciences,Madison,WI,USA,53706"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Daniel",
+            "family": "Rakita",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Yale University,Department of Computer Science,New Haven,CT,USA,06520"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Michael",
+            "family": "Gleicher",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Wisconsin-Madison,Department of Computer Sciences,Madison,WI,USA,53706"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              29
+            ]
+          ]
+        },
+        "published_online": null,
+        "container": [
+          "2023 IEEE International Conference on Robotics and Automation (ICRA)"
+        ],
+        "volume": null,
+        "issue": null,
+        "page": "9700-9706",
+        "type": "proceedings-article"
+      },
+      "status": "verified",
+      "note": null
+    },
+    {
+      "key": "set_based",
+      "doi": "10.3389/frobt.2016.00016",
+      "primary_url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2016.00016/full",
+      "crossref": {
+        "DOI": "10.3389/frobt.2016.00016",
+        "title": [
+          "Set-Based Tasks within the Singularity-Robust Multiple Task-Priority Inverse Kinematics Framework: General Formulation, Stability Analysis, and Experimental Results"
+        ],
+        "author": [
+          {
+            "given": "Signe",
+            "family": "Moe",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Gianluca",
+            "family": "Antonelli",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Andrew R.",
+            "family": "Teel",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Kristin Y.",
+            "family": "Pettersen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Johannes",
+            "family": "Schrimpf",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              4,
+              18
+            ]
+          ]
+        },
+        "published_online": {
+          "date-parts": [
+            [
+              2016,
+              4,
+              18
+            ]
+          ]
+        },
+        "container": [
+          "Frontiers in Robotics and AI"
+        ],
+        "volume": "3",
+        "issue": null,
+        "page": null,
+        "type": "journal-article"
+      },
+      "status": "verified",
+      "note": null
+    },
+    {
+      "key": "inexact_GN",
+      "doi": "10.1007/s11590-011-0430-z",
+      "primary_url": "https://flore.unifi.it/handle/2158/1351282",
+      "crossref": {
+        "DOI": "10.1007/s11590-011-0430-z",
+        "title": [
+          "On the convergence of an inexact Gauss–Newton trust-region method for nonlinear least-squares problems with simple bounds"
+        ],
+        "author": [
+          {
+            "given": "Margherita",
+            "family": "Porcelli",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2011,
+              12,
+              28
+            ]
+          ]
+        },
+        "published_online": {
+          "date-parts": [
+            [
+              2011,
+              12,
+              28
+            ]
+          ]
+        },
+        "container": [
+          "Optimization Letters"
+        ],
+        "volume": "7",
+        "issue": "3",
+        "page": "447-465",
+        "type": "journal-article"
+      },
+      "status": "verified",
+      "note": "Published online 2011; volume 7(3),447–465 is 2013 per author repository. Do not conflate dates."
+    }
+  ]
+}

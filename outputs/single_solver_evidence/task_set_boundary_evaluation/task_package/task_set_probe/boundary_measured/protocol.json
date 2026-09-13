@@ -1,0 +1,30 @@
+{
+  "seed": 202609140714,
+  "anchors_per_family": 30,
+  "families": [
+    "local",
+    "near_singular",
+    "near_limit",
+    "high_utilization"
+  ],
+  "alpha": [
+    0.0,
+    0.5,
+    0.95
+  ],
+  "dt": 0.02,
+  "position_tolerance": 0.001,
+  "orientation_tolerance": 0.00872664626,
+  "kappa": 1.0,
+  "methods": [
+    "gn",
+    "tight",
+    "relative"
+  ],
+  "repeats": 1,
+  "source": "user supplied task_balance_completion_package.zip, numerical files unmodified",
+  "witness_step": "All joints at 99.9% of velocity*dt before physical-limit clipping; dedicated near-boundary stress, not representative frequency",
+  "scope": "one local Panda development coverage probe; not original-server verification, no input screening by solver results",
+  "offset": "fixed independent unit translation and rotation directions per anchor; same direction for all alpha levels",
+  "accelerator": "numba"
+}

@@ -1,0 +1,18 @@
+{
+  "source_commit": "8e4aa63975d465f3de8a1eef2f7773889252c91d",
+  "source_archive": "task_balance_completion_package.zip",
+  "source_archive_sha256": "558fa6f9ba679304d422a1f0a139d7e80f729b0b2e1d6858c5a755398392d8c0",
+  "python": "3.13.5",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "numba": "0.65.1"
+  },
+  "scope": "Local exploratory one-frame Panda probe, single repeat. Uses supplied local prototype numerical code and model, not the original repository verifier or server. No robot trajectories, no TRAC/Pink, no GitHub writes.",
+  "design_sequence": [
+    "Interior-offset probe: all methods accepted all 360 inputs.",
+    "After inspecting that result, a new, explicitly near-dynamic-boundary probe was specified. All 360 inputs were stored and witnesses checked before running any method. No input was excluded based on solver outcomes."
+  ],
+  "independent_units": "240 geometric anchor states, 120 per probe. Three offset levels share each anchor. This is exploratory development, not a held-out population test.",
+  "verification": "independent homogeneous-transform FK for every witness and returned command; original server verifier still required"
+}
