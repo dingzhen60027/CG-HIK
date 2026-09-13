@@ -1,0 +1,218 @@
+[
+  {
+    "title": [
+      "RangedIK: An Optimization-based Robot Motion Generation Method for Ranged-Goal Tasks"
+    ],
+    "author": [
+      {
+        "given": "Yeping",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Wisconsin-Madison,Department of Computer Sciences,Madison,WI,USA,53706"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Pragathi",
+        "family": "Praveena",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Wisconsin-Madison,Department of Computer Sciences,Madison,WI,USA,53706"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Daniel",
+        "family": "Rakita",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Yale University,Department of Computer Science,New Haven,CT,USA,06520"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Michael",
+        "family": "Gleicher",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Wisconsin-Madison,Department of Computer Sciences,Madison,WI,USA,53706"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "2023 IEEE International Conference on Robotics and Automation (ICRA)"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    },
+    "published_print": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    },
+    "published_online": null,
+    "volume": null,
+    "issue": null,
+    "page": "9700-9706",
+    "DOI": "10.1109/icra48891.2023.10161311",
+    "URL": "https://doi.org/10.1109/icra48891.2023.10161311"
+  },
+  {
+    "title": [
+      "On the convergence of an inexact Gauss–Newton trust-region method for nonlinear least-squares problems with simple bounds"
+    ],
+    "author": [
+      {
+        "given": "Margherita",
+        "family": "Porcelli",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "Optimization Letters"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2011,
+          12,
+          28
+        ]
+      ]
+    },
+    "published_print": {
+      "date-parts": [
+        [
+          2013,
+          3
+        ]
+      ]
+    },
+    "published_online": {
+      "date-parts": [
+        [
+          2011,
+          12,
+          28
+        ]
+      ]
+    },
+    "volume": "7",
+    "issue": "3",
+    "page": "447-465",
+    "DOI": "10.1007/s11590-011-0430-z",
+    "URL": "https://doi.org/10.1007/s11590-011-0430-z"
+  },
+  {
+    "title": [
+      "The smoothed duality gap as a stopping criterion"
+    ],
+    "author": [
+      {
+        "given": "Iyad",
+        "family": "Walwil",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Olivier",
+        "family": "Fercoq",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container": [
+      "Mathematical Programming Computation"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          24
+        ]
+      ]
+    },
+    "published_print": {
+      "date-parts": [
+        [
+          2025,
+          12
+        ]
+      ]
+    },
+    "published_online": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          24
+        ]
+      ]
+    },
+    "volume": "17",
+    "issue": "4",
+    "page": "653-697",
+    "DOI": "10.1007/s12532-025-00284-0",
+    "URL": "https://doi.org/10.1007/s12532-025-00284-0"
+  }
+]

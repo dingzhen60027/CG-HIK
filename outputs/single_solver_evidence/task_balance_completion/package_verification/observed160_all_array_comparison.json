@@ -1,0 +1,1767 @@
+{
+  "records": [
+    {
+      "uid": "95f75106b91876cd6f738407fc0ef5a94df2060332a02c67ac9ea3733c714ed4",
+      "site_id": "trajectory_000",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "a614e3a4c0b7636e17bf50037f1bf43f2ef3b76be9053ce9be5e9d2970b350aa",
+      "site_id": "trajectory_001",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "98a64163a7bd63a545af06f06534fbce4eb6002995e513221ad2614b1706b9ad",
+      "site_id": "trajectory_002",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "3d9860380251b55343a936ce0ba8b1f5348fe374983de15e16235a13e53cf704",
+      "site_id": "trajectory_003",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "a1b85e534d2e0cdb72790b6734610df5aa37117f3174bde1e7216baec8456552",
+      "site_id": "trajectory_004",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "52bfa11a7beed01ba2979eed87aff5a6d1878b46392075e49e79297e367f7fa5",
+      "site_id": "trajectory_005",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "d6a977914b0b3a11523a9e5e9bfe0aec9b82ee4dc4e9aaf198c39e1d12aa50ec",
+      "site_id": "trajectory_006",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.498001805406602e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "479acbcb94748d65126d5afb88aa88d3c2356d029199485ebdb36946117ccfaf",
+      "site_id": "trajectory_007",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "4d8dfd105e6967177e92702e792e3fcfeb8cab41c72b787e436a4b5f2cbf4cef",
+      "site_id": "trajectory_008",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.1102230246251565e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "dd0122570b896479af2d5e319728e4940246870fb490724adba3c30f961e0e7e",
+      "site_id": "trajectory_009",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "3248dc23a4aa12b9dc7e39d0d5346d0ef2270be722bf5961d5c5f736dd88bfcc",
+      "site_id": "trajectory_010",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "3b1c31e411ac6d014c0cba23d0c07be341aaec10cd7aadf586bb9fa3b4f47768",
+      "site_id": "trajectory_011",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "1b39b898eb092990b04abf224824637c9d3158b64e555f4ee7f8b5df09af055b",
+      "site_id": "trajectory_012",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "01e6d3003da6b2fa52c23d3609faa8b8bff293815dffc7a4940980b2338958be",
+      "site_id": "trajectory_013",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.498001805406602e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "42cf116720f75d6fad1700cdcdf43c62d73a67ece9c9450f48aed630d0fe0b22",
+      "site_id": "trajectory_014",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.498001805406602e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "4c6f3e4c4938f1d045ad81cc0b00279c7e4deeb0090877a2457fc71d699e5669",
+      "site_id": "trajectory_015",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "ada02d8a4041f5f9598faabf38e8bb5f2ac9e20ffdbab433149955384b914051",
+      "site_id": "trajectory_016",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 2.498001805406602e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "3cc83c847094c062d9a1677d819e0323896e630be7a2918f43397133c151e1ec",
+      "site_id": "trajectory_017",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "91dba0fb58c14a6382c14e9d6f796faac1dae38265d099f7bf09cdb6e2f2f8cc",
+      "site_id": "trajectory_018",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.1796119636642288e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "79a9d8a888407eb550cf8684661f49bc7ef7579e670e95b79b09ae9c996b9b0d",
+      "site_id": "trajectory_019",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "6f45a8b6059397bd23d369002df06b9d4a367c8e87cafa78af25eef62d2ba906",
+      "site_id": "trajectory_020",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "009db6557800243ff65e0c7333cde1b7ddd0e6c46910706588a593a3f4acb624",
+      "site_id": "trajectory_021",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "c068c4a69ab7818dfd663ebe0bd5f26cb404ea2a0142fa63589d2368c63c96c2",
+      "site_id": "trajectory_022",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "68eda3224034b5683d377b5d7cddd0db39a9c6a0fc30def562c3282bdf4cfda6",
+      "site_id": "trajectory_023",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "cf1ac8c4297fcd0132ef27f0d2fb9f45010d63c137bcd423126e4d2759aec7e2",
+      "site_id": "trajectory_024",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "366389682e3e8bf025f25394f9bfd07e17264eab42f95422f126e8422ab8c2cc",
+      "site_id": "trajectory_025",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 4.440892098500626e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "5bdcc2d8aebc7b7d2e138df541304b09eb972c06a781fbf126b84888026ce734",
+      "site_id": "trajectory_026",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "e1f06a0cbe2bf8492fefa4cc723935b4aadc170e685425ed9329cc5dc9c746b5",
+      "site_id": "trajectory_027",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "1ea0a808ba7693c99b08e547a054e536a85f836775c00d3ed9898d53321ca266",
+      "site_id": "trajectory_028",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 4.440892098500626e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "49a1edd5201a14cde7f8a9bbd2c4de7814b5dff477df1c6ed6df571c6cfa3e5d",
+      "site_id": "trajectory_029",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "11e5dd61197a24709eda8bbdf4933108e3a2cd75096cc1d83c67519e8f53cd3b",
+      "site_id": "trajectory_030",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "ce2ecca87ee582df7b70a4be4252ec5077978137e18a0facb8f7569fae9cde3b",
+      "site_id": "trajectory_031",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "367f1baec203a4ae08849509f9426baeda64e8ae57fb00c78716b03927eff0ba",
+      "site_id": "trajectory_032",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "b6b9be5e9dbb7e471bc7de18813d720f027151c79c5e2f6bc24083939afd3715",
+      "site_id": "trajectory_033",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "4560ce06cdb032d006dfd81e869438fc013004a708606761affafddac71844ba",
+      "site_id": "trajectory_034",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "75d52c890b861cdb7f9862279ecbe3d5318b78f4d93cd28cc30414ef5493341c",
+      "site_id": "trajectory_035",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "6b2979d02b4c234eab22bfc97da014daf8f5b7c94a6d47eaee20dd8705a29e94",
+      "site_id": "trajectory_036",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "39db9e21b7437b9c1d0091ef2a3aabbd08543d9a7e7b1cf2cbb9cebd5e88d8e3",
+      "site_id": "trajectory_037",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "27c86cc0a672e7ca289d7e168325677711ec7e91facd0395bd5e092387fad4f4",
+      "site_id": "trajectory_038",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "0a2537c3c40ba62c63727d6ed654546b317bfd0d8693efc85faa222da123debc",
+      "site_id": "trajectory_039",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.3592239273284576e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "eb8a219ef38c40148c14bd361d543fb02881dc6779e79ab9e201a7c3fdfcf201",
+      "site_id": "trajectory_040",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.498001805406602e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "480587c598ca589e82de0deeb2ce9a0e3addfeae1cad8d4b5250a048cf275b3d",
+      "site_id": "trajectory_041",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "617dfe3c6044a249e2b35c9a35fdace22f1d096e467cd2c20a564e43995edf0f",
+      "site_id": "trajectory_042",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.608224830031759e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "182336d73a5b3e410318ecc89f8fff003cd4774c6c196286f77fbed7422ba22d",
+      "site_id": "trajectory_043",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "92b622165930ed028b13c8c2a3d6133c389f1a260daf0561cfcff77a8d9f844b",
+      "site_id": "trajectory_044",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "1085f3e04aaffe00c129d91100b2cf03f3de069fa72a1f43ac92c05905fe372d",
+      "site_id": "trajectory_045",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "79076cd9aa84b436fcbb836548e693b733aa35a2d7be5ccd28163e80bd3fcb82",
+      "site_id": "trajectory_046",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "7c4f7297f4e3c51c94bbff33f1f6fea524a7aeb44e815849ac855cd47cb12778",
+      "site_id": "trajectory_047",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 3.3306690738754696e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "9e7027908956f6feea8630c453988b56b38fb5654bc6494312db6fec4fe6e93e",
+      "site_id": "trajectory_048",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "169492dbe3686e9bed801ec404d2386157ca73430efc2035673600b4d72e8a66",
+      "site_id": "trajectory_049",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "f273e2cf840747e85e3dc4a774925882a9057bc0672355948aab35c0de41c7d8",
+      "site_id": "trajectory_050",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 3.3306690738754696e-16,
+        "target_rotation": 4.163336342344337e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "bf6096f502134513e2313f50fbc04736f435a97794c75f88da9741bbf3b306f0",
+      "site_id": "trajectory_051",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "d7da3b52b00c623aa961e4db17e1e3c8b05d3c4295e5905a19047bd8a7f4482c",
+      "site_id": "trajectory_052",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "0d40fff84f0487f95ec2df4cd930981c8e49b45348a20e6e2fe0587a9381dd29",
+      "site_id": "trajectory_053",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "ca9cd0ec53e341e94f32ed243e8aa7157ceaccebe06c876d98959a6523575b0c",
+      "site_id": "trajectory_054",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 3.3306690738754696e-16,
+        "target_rotation": 3.885780586188048e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "4588e0448a7051a3cca903c21654de3352717cf1f1ea512d4688a78fdfe7488c",
+      "site_id": "trajectory_055",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "1e6df7d7a97068128c87d603d3c0e9f668d12f42bd3ad7bb6844038e1d000f49",
+      "site_id": "trajectory_056",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "47ae8f807e48c4c002530f6da0fb351b873959f64a26b5a550694c685ae73c4a",
+      "site_id": "trajectory_057",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 4.440892098500626e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "dadc09c8bbc4e0450405f77e51a38d5d8546bb051ad9cfc1e1398bcdd4f1d27a",
+      "site_id": "trajectory_058",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 4.440892098500626e-16,
+        "target_rotation": 4.440892098500626e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "d1b6f99f9dd68c456e81713c3f5adafb553bd17ccdb5e0cb02ef57464d7180fc",
+      "site_id": "trajectory_059",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "b2e4231b22fe2f97c2c16de3eabbd347cfea7ab68444a1afccbe3ac3079b4f48",
+      "site_id": "trajectory_060",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "a32f076fd84a50b0746febbd023dfac09cce4d08b2e19b8eee9393caa4f35a24",
+      "site_id": "trajectory_061",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 3.3306690738754696e-16,
+        "target_rotation": 3.885780586188048e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "bb90da78357615fc1a654b326ac620375a16ab26042ef42f52b32bafb2663527",
+      "site_id": "trajectory_062",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "883e06904863f75da01f0a8b29601d8d6c4e5e3d4391b559c9a576779b153be2",
+      "site_id": "trajectory_063",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "b7d9f59b33a2dda6c19ff77ca7e30b88fa3fe1ea9f416b1340aa4cb29a2d7580",
+      "site_id": "trajectory_064",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 4.440892098500626e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "59fb6a8924934a79c09136da28b7a3ff8bbd61498838a8128a1bd053a2a3f32d",
+      "site_id": "trajectory_065",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "76014196d575d651386f649f98c4d3dd7f03787edbfd42b80122072d25c83bba",
+      "site_id": "trajectory_066",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "c413c8e51512e31288411e26b66641b2d288db860038d5c93c92eaed0e5a4262",
+      "site_id": "trajectory_067",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "4b11ed64f31d9ba64758d060a1591e0d395d58a23b7e1e258546c85cd3c09b33",
+      "site_id": "trajectory_068",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 3.3306690738754696e-16,
+        "target_rotation": 2.498001805406602e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "39418c26c7c0ee7720f0a16e2b5930a336a74379ed31dd975416d5d9ab5766b1",
+      "site_id": "trajectory_069",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "bdcd3ffd414ccd41a775496dcc9690aff30070fdb1d6d42ba00798b9b3fce457",
+      "site_id": "trajectory_070",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "969ba5d44c0c1d23ec4d7872e24f6fb53691d315f926ddf3bba5bf77a876acba",
+      "site_id": "trajectory_071",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "d18f14b16c53cbd1c1811adc5279f00e6745676ca71c477595565e5b21ad5248",
+      "site_id": "trajectory_072",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "b69f62508019f8a84299bad37e9c92ab1b80bd4b127e8c5b60c969c257ff7cc6",
+      "site_id": "trajectory_073",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+      "site_id": "trajectory_074",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.885780586188048e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "f9dcfa03596d8c86d5fc2d68c4ffb6f789a8b333d25a90867029dce43baae39a",
+      "site_id": "trajectory_075",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 4.440892098500626e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "a4757ca54027f468f26f705c836838ae45f57658e775c4c60a7395323f3fb346",
+      "site_id": "trajectory_076",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "79b541a168d9d17d398c8098d305be992824956b558db5da00571e9427e38c44",
+      "site_id": "trajectory_077",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.498001805406602e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "077b3a8cc515aec835a5b63a21db483c8c301447444b5f66f4859469994a68e3",
+      "site_id": "trajectory_078",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "b63ecbeba848a1d720ff4202885635161c6c2f8a7a27eff5b02409f1b4279172",
+      "site_id": "trajectory_079",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "d705eae3a57ea3fd8966a58397aa9782312a3f2db92812d3a60612d6281d7a69",
+      "site_id": "trajectory_080",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.0531133177191805e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "a05d83f7ddfc14a4cdfa84454006e4d9e5ee9dcf7c2bedac15fd258bf8c34136",
+      "site_id": "trajectory_081",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "1b1432b684aef0b401c66b39b447aa074258ccfbe4d804811e9c02688243235a",
+      "site_id": "trajectory_082",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "aa8b9f192ff1868146667d1b686b24bea6114cf01c1f8c722b16e84737da2ba0",
+      "site_id": "trajectory_083",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "4e1843759088f4a5ab2eb9d0488ded425922f491cc72a77a168a168496703da9",
+      "site_id": "trajectory_084",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "b304104f37dfe87f52e47e4645deb21c8bb6b164549bb941929ab27ce08b714d",
+      "site_id": "trajectory_085",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "1b03f784d41d7fb54612cd0d699abc3bc5985f24c3c9eb72428a6cbaca414c2b",
+      "site_id": "trajectory_086",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "3420bfde4a0fb08a7d93b107e4b8f0dcff0388d37c97df4df7e6d63bc48c2151",
+      "site_id": "trajectory_087",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "45b0f4687b5986b23497d7ff1f5dc551d097cd684f87b9cd87c44d76c37e40b8",
+      "site_id": "trajectory_088",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "d82047102c78a4602cd08dfad44002c7dce3cccfde940bd18afaf6875e44a5e5",
+      "site_id": "trajectory_089",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "4b685f766c2aaa86bbe0149755113dc5f973ef6e7a20b143520733e773f45186",
+      "site_id": "trajectory_090",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "f6dd29d48efd585758ed6330f5475dca353eca61cef94f6b09e8a3a31bb9a2f3",
+      "site_id": "trajectory_091",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 3.3306690738754696e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "6292d6a262da269233959d5b381d94998db141290bc3e30dd2208b51a11c8100",
+      "site_id": "trajectory_092",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "abac8acf60716cc94ba74123dcb5312d1eb7a1b46c62a947ef2b73f2b84e5374",
+      "site_id": "trajectory_093",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 4.440892098500626e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "c2ebae0d24e306f3744e9ac2a38add8502705448e7eda234f19e3082f56fa52c",
+      "site_id": "trajectory_094",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "dd1303e9238be07b9c3435e99535065a7a9cce01608a84e607d928971719def4",
+      "site_id": "trajectory_095",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.0531133177191805e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "98aff3582a84a6146748002550a34794014c19c6a94d633ebdfdfefa61217699",
+      "site_id": "trajectory_096",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "dfaa894d22df9fd9a31cdd4ce8dd11840f0a3026b6833427c58aaa20620b9717",
+      "site_id": "trajectory_097",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "19f667e15e6e2e001adaf2b54858a15da2770a3e032e6f2bf54394b4ae11dd2a",
+      "site_id": "trajectory_098",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.249000902703301e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "a41fa9fd32eb51775be76cb69ed2f1a90c7db2fa4635519af5f36aa1f9882715",
+      "site_id": "trajectory_099",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "e11c2109877d969d2296d7103ee1a32f1f66db688f9df04542727276616d2a40",
+      "site_id": "trajectory_100",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.498001805406602e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "b789a3a68dd93679c394a021695368cd0e7f05fa2f0999fda29ea8cbc55bb1b5",
+      "site_id": "trajectory_101",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "6a1c3a555eddf23620d15ee7cb9500f45bbd54b6f5f7d61f9643b9d310581150",
+      "site_id": "trajectory_102",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "5dac1d49889fe9e09b4c32f417b1bf4ee86389af5d20fc3823371a7ee2bba187",
+      "site_id": "trajectory_103",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+      "site_id": "trajectory_104",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "2a10217792feb2c6e8a32bc9be45b6711415582d2d65586302aaa5860acc9b32",
+      "site_id": "trajectory_105",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "8bebd193c402f03b5f2bdcd9ccfa7c6ea00cd4821f9b4165aa9533694979e773",
+      "site_id": "trajectory_106",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "6586e2c2aa7b28f704b4e4da538ca71d7f5b6ecb11bdc8906e682eca50fbbad1",
+      "site_id": "trajectory_107",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "a9445fc6e5fb718c951f64a65114eec0d3b485d66e12c4a1e5e95a92991dc00b",
+      "site_id": "trajectory_108",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "3a59b93a4c9e9c6b108b10e05344815f47411a6ce98c5ae4e2ed358ddc1d7440",
+      "site_id": "trajectory_109",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "1bbd79bf819cf6ecd63f3982a990a651d52ad71ee7023ec3ae7604b435a5db4b",
+      "site_id": "trajectory_110",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "76723c8484a05a7bc2bff4047708ad396e6759dff58cd347e4b36eeb1bdedfd0",
+      "site_id": "trajectory_111",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "d417c16e467b1bde55181c0022bd7193f19faed3ca6ba4f83228bdb2488af8d5",
+      "site_id": "trajectory_112",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "237fa3357fbe3d06a7b83c1b4d0365e8a361eb6c1d1814dbae706836b5bfb2ce",
+      "site_id": "trajectory_113",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "e59c723f13ae5c53043b764f23592cb10b26f287cd78c271c7158aad043d0a2a",
+      "site_id": "trajectory_114",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "32b81d51ae6fd562afb0aa7e3767f6b3f58bd3a2b885a6ea450cc98383e50b1d",
+      "site_id": "trajectory_115",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "312baf3e2d2b6b13442dfbc9f1a91a6cd7bcec51667a7b9eb7693b59856ac365",
+      "site_id": "trajectory_116",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "7a4b0e446427145d85dd1b448c80c4b2902f9595f8588456fecd4093f299a8df",
+      "site_id": "trajectory_117",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "03bb61badb511b0b1ed87047a9796a921fc66524ca734ee655b56a672c6cb6ae",
+      "site_id": "trajectory_118",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "98a8aab5c8e29361ccafa7a573c6c335bc3b5a38f2b5ffb7af6a8d682c72f8b5",
+      "site_id": "trajectory_119",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "4f1940d91117f91ea27fc47a289476bf2361c47cbbb34e21aa92e2a9bf8c25da",
+      "site_id": "trajectory_120",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 3.3306690738754696e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "ea76edb7fffb2121617f45c85620b2acebff5380ee10e86c623c023a6640180d",
+      "site_id": "trajectory_121",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "fbe58ea6278a7dab5fd757ac4e0b97ee869e320d50461b5af01ee66e258ef8fa",
+      "site_id": "trajectory_122",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "b5d8e2eba24b1d515276c8684f15f9ab4e84e24bd2259b6c109d0288a3b2ed9e",
+      "site_id": "trajectory_123",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "5c3485c9a41783628ed9200eabb9c7aa756b2d1838f092b31a88491623ae52e2",
+      "site_id": "trajectory_124",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.1102230246251565e-16,
+        "target_rotation": 1.1102230246251565e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "c6cfd91b767095758b663e0ee9d436d5e7a392ae0b0f544dc5c1085014080e48",
+      "site_id": "trajectory_125",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.0469737016526324e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "2e9f7ef4bb4fbdc88f8581fc058a669a339276f9db5b4987a20be41acbf962af",
+      "site_id": "trajectory_126",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "1dec5a6acc79ceadb4ebd7ba3aa74faa30e6d2a850fe0fcfc8c37f6568b1a2a3",
+      "site_id": "trajectory_127",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "e40d3f082546ab1357a170ac5ff8c171de91eec0c12f3499c7b0a8b2e47ad61c",
+      "site_id": "trajectory_128",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "ff6263afe4b5d337eafb70a82e8563f760f2ac8b10ba223fe42584c9e366b7d3",
+      "site_id": "trajectory_129",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "5901f315f2447757c1867df962600c1d912c87fe3cb9d65589d6081769488442",
+      "site_id": "trajectory_130",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "9289844cd619fe3c022d910841ace12e165e07777f181c72cc2a1aec1da2e3fb",
+      "site_id": "trajectory_131",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "f39446bf3771ea811293302220c427a31e3e1c1e949786ced0d4215be0e0ad61",
+      "site_id": "trajectory_132",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "ceef73a7c61264683fe087a71b97581b2fa0b224028ef16c560b7751811a39bf",
+      "site_id": "trajectory_133",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "891914e1ae3556ab6b0945f9863bdec1840dd5a264e93c627a51b7581f16dfe8",
+      "site_id": "trajectory_134",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "2de001c20f2661d2eff3deefba47cc19b1426ff5273ca877feab77b0702a34e3",
+      "site_id": "trajectory_135",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "e3a30346944b79b0086c4cb983646ceebe15696d5c9bf69d7496404831b70e03",
+      "site_id": "trajectory_136",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "9408a6fe715e7be47720924bb6ceeff40609fd34a88003747eb1e71abe1a9a2f",
+      "site_id": "trajectory_137",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "bd42c775f0f4134d408d51af225b1d03a8899405721c946646244bcbac33f42f",
+      "site_id": "trajectory_138",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "44780d25bceacad472afc451e0aa3b81359116b7b988792dace49116d842955a",
+      "site_id": "trajectory_139",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "3175105088a2ea7a79edcde8bb9ea0ed512b9b6b3222beeb2342401af88bb389",
+      "site_id": "trajectory_140",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "84f83b0ba1930b447be1abf5134e2558f2120f5657126a3a00b788b94429902d",
+      "site_id": "trajectory_141",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "b6cbd705da27715926d1834f38ee3634efd21ed62a05fe9f858bb938aa8ad66d",
+      "site_id": "trajectory_142",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "710b8798d1f34818e642157f92c158183934342acbc1f8f054abdb7080c71569",
+      "site_id": "trajectory_143",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+      "site_id": "trajectory_144",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "32ab3887d7825b280c6bf3918b479dbeef5eb758062588da83ea9937955d19d2",
+      "site_id": "trajectory_145",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "2cd27cc14429c5bb9961620d46292e849640359e5072de88384099e723596b3b",
+      "site_id": "trajectory_146",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "6b0966e51c74ee179bda979ce90c28e13df86983752592ccef75cfedcedb1271",
+      "site_id": "trajectory_147",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "ae7db0483b9fa61d315d70e1d36b61f099764053013d7cd8b34f1591e5ef70bf",
+      "site_id": "trajectory_148",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 3.3306690738754696e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "941208ad496f124a01969cbcd5952f3d62d67fd41b608983f17a9968782c4827",
+      "site_id": "trajectory_149",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.3877787807814457e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "a9dad4d05a0465b0a7d0f6adc718d5b33d1adc460d8d23ca364b0b32c99a5f43",
+      "site_id": "trajectory_150",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 3.3306690738754696e-16,
+        "target_rotation": 2.636779683484747e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "29a3f6ef1b19352cfb9831f4fe8e2d53991595953116f2431868cb12d34e80bf",
+      "site_id": "trajectory_151",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "8eb0376749a7bcb5bb763b8809e852eb2830de76762dcdd0f2ef9dcf64a3ccec",
+      "site_id": "trajectory_152",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "fba0889c16a2e83db85f027c9f5a508183ca0b8504c97c510caf8090ad04ab36",
+      "site_id": "trajectory_153",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "3e415f820d053f2d414a09831137a936dfa8fffec0e1ebb8457c8d2055627c90",
+      "site_id": "trajectory_154",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "d4ff5150093d260a061aa45d09215d38d3f65c8fc3ba45841188479b3784eac3",
+      "site_id": "trajectory_155",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.6653345369377348e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "56e3826cb8c9c1d2669f86c094648f3a15468966904942f865b6138ae1a34089",
+      "site_id": "trajectory_156",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 3.3306690738754696e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "8159f4b8a9c566ba4d2d648b7a0ce5497eff71c08df175337922b21578479645",
+      "site_id": "trajectory_157",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "4f748698c3c2c641dfd36bbbeddb6bf166b308236fd594b727a9a25f58549651",
+      "site_id": "trajectory_158",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 2.220446049250313e-16,
+        "target_rotation": 2.220446049250313e-16
+      },
+      "within_1e12": true
+    },
+    {
+      "uid": "0a63ba1ae1e8450c4c3af9a6b1963ce87395c993548888753b0b6cb4f3583ea1",
+      "site_id": "trajectory_159",
+      "dt_equal": true,
+      "max_abs_difference": {
+        "initial_q": 0.0,
+        "target_position": 1.1102230246251565e-16,
+        "target_rotation": 2.7755575615628914e-16
+      },
+      "within_1e12": true
+    }
+  ],
+  "exact_uid_identity": true,
+  "source_sha256": "27d8ffb6f7cf69d1a84066ce5c49058dde13343b2bb16878a6be0b727463cd6f",
+  "note": "Observed historical input reconstruction only; floating FK differences retained; not new independent evidence."
+}

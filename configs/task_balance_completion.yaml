@@ -1,0 +1,40 @@
+baseline: 23f8555bd214eb4ac45b164a536ead55e142e44c
+source_config: configs/paper_v2.yaml
+native_trac_library: tmp/task_contract_build/libcontract_trac.so
+robots: [panda, ur5e]
+repeats: 3
+order_seed: 2026091314
+bootstrap_seed: 2026091315
+bootstrap_samples: 4000
+cpu: 4
+development:
+  panda_targets: outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json
+  ur5e_targets: outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json
+methods: [single_gn_k0, single_gn_k1, task_balance_k0, task_balance_k1, balance_cached_k0, balance_cached_k1, balance_progress_k0, balance_progress_k1, pink_qp]
+independent_methods: [single_gn_k1, task_balance_k1, balance_cached_k1, balance_progress_k1, trac_task_5ms, trac_task_20ms]
+task_balance:
+  max_dual_updates: 16
+task_excess:
+  normalized_margin: 0.000001
+  damping: 0.01
+  maximum_iterations: 30
+  backtracking_steps: 8
+  deadline_ms: 20.0
+completion:
+  forcing: 0.25
+  max_iterations: 30
+  max_dual_updates: 16
+  max_backtracking: 8
+  damping: 0.01
+  gap_atol: 1.0e-9
+  gap_rtol: 1.0e-7
+  deadline_ms: 20.0
+subproblems:
+  repeat: 5
+fresh:
+  point_seeds: {panda: 2026091800001, ur5e: 2026091800002}
+  trajectory_seeds: {panda: 2026091900001, ur5e: 2026091900002}
+  point_counts: {local: 500, near_singular: 500, near_limit: 500, hard_feasible: 500}
+  trajectories_per_family: 20
+  trajectory_frames: 150
+  dt: 0.02

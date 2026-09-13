@@ -1,0 +1,4322 @@
+[
+  {
+    "input_id": "016894bfe7220eb5304b71d9dc330e9a2a7872794dd09c7fb3f449f4be61911d",
+    "robot": "panda",
+    "previous_q": [
+      -0.4204036654871291,
+      -0.1352875078561473,
+      -0.7479184101818351,
+      -1.7565675086908759,
+      2.897299999999,
+      1.9090280224781317,
+      -0.8487365263350845
+    ],
+    "target_position": [
+      0.19641911618610228,
+      -0.5294395619380362,
+      0.7632061316251734
+    ],
+    "target_rotation": [
+      [
+        -0.46526835440914216,
+        0.8400441325944378,
+        0.27901830348396106
+      ],
+      [
+        -0.8675071824025526,
+        -0.37008348016679626,
+        -0.332369532580255
+      ],
+      [
+        -0.1759450109136194,
+        -0.3966914077734624,
+        0.9009324503720106
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "c2ebae0d24e306f3744e9ac2a38add8502705448e7eda234f19e3082f56fa52c",
+        "site_id": "trajectory_094",
+        "family": "joint_limit_return",
+        "method": "single_gn_k0",
+        "repeat": "2",
+        "frame": "53",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.380856846714828,
+          -0.1456240815058321,
+          -0.7915184101817916,
+          -1.7584102890493407,
+          2.897299999999,
+          1.9174127459789105,
+          -0.8466715507098628
+        ],
+        "position_error": "0.00026077928565498756",
+        "orientation_error": "0.00952695583525228",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "c2ebae0d24e306f3744e9ac2a38add8502705448e7eda234f19e3082f56fa52c",
+        "site_id": "trajectory_094",
+        "family": "joint_limit_return",
+        "method": "single_gn_k0",
+        "repeat": "1",
+        "frame": "53",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.380856846714828,
+          -0.1456240815058321,
+          -0.7915184101817916,
+          -1.7584102890493407,
+          2.897299999999,
+          1.9174127459789105,
+          -0.8466715507098628
+        ],
+        "position_error": "0.00026077928565498756",
+        "orientation_error": "0.00952695583525228",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "c2ebae0d24e306f3744e9ac2a38add8502705448e7eda234f19e3082f56fa52c",
+        "site_id": "trajectory_094",
+        "family": "joint_limit_return",
+        "method": "single_gn_k0",
+        "repeat": "0",
+        "frame": "53",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.380856846714828,
+          -0.1456240815058321,
+          -0.7915184101817916,
+          -1.7584102890493407,
+          2.897299999999,
+          1.9174127459789105,
+          -0.8466715507098628
+        ],
+        "position_error": "0.00026077928565498756",
+        "orientation_error": "0.00952695583525228",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "01b3d371907cb3f346fff18bae595c23d7574141a7c95d86ab1006bcd4e9fabe",
+    "robot": "panda",
+    "previous_q": [
+      -0.6837699193342475,
+      -0.07906657026631123,
+      -1.3239165977778464,
+      -1.6264612037172872,
+      0.9079126971296397,
+      1.5360357771657518,
+      -0.25056065420164264
+    ],
+    "target_position": [
+      -0.1987494486605856,
+      -0.5174620358187976,
+      0.6475908600526888
+    ],
+    "target_rotation": [
+      [
+        -0.29727922321826594,
+        -0.5694116981556053,
+        0.7664172371797844
+      ],
+      [
+        -0.9435421587955503,
+        0.05234908939843509,
+        -0.327089846089094
+      ],
+      [
+        0.1461275402454204,
+        -0.8203839898746832,
+        -0.5528262395537304
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_osqp",
+        "repeat": "2",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.7134899063249106,
+          -0.03546657026635482,
+          -1.3675165977778028,
+          -1.6264631049404075,
+          0.9462227135180259,
+          1.5227189742469938,
+          -0.2747939467787936
+        ],
+        "position_error": "0.0013528943289841228",
+        "orientation_error": "0.012513914523861715",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "051833cbe006de8ff0b74c24491dc92760ae8fa05993116db6211ab7fa33682b",
+    "robot": "ur5e",
+    "previous_q": [
+      -2.144713396243686,
+      1.477041427917039,
+      0.09407089253077763,
+      1.2010012394620266,
+      0.687702250164157,
+      2.2826365718616555
+    ],
+    "target_position": [
+      0.19764046555437653,
+      -0.08404379224933615,
+      -0.5829618876855436
+    ],
+    "target_rotation": [
+      [
+        -0.26739762317106086,
+        -0.01737665771016101,
+        0.9634295837731429
+      ],
+      [
+        0.34287211358419417,
+        0.9326832101385683,
+        0.11198546000228321
+      ],
+      [
+        -0.9005205299429743,
+        0.36027778351216644,
+        -0.24343930220649626
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "e621fdc4f247e6d4f941602738d8470496c5f9695bfc622242db0628c871b460",
+        "site_id": "trajectory_131",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "1",
+        "frame": "98",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.081781543171953,
+          1.4367599611749244,
+          0.09518575068795057,
+          1.2052697705968753,
+          0.6600789490530781,
+          2.275703822476913
+        ],
+        "position_error": "0.0015165967921019197",
+        "orientation_error": "0.007053610088858627",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "e621fdc4f247e6d4f941602738d8470496c5f9695bfc622242db0628c871b460",
+        "site_id": "trajectory_131",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "2",
+        "frame": "98",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.081781543171953,
+          1.4367599611749244,
+          0.09518575068795057,
+          1.2052697705968753,
+          0.6600789490530781,
+          2.275703822476913
+        ],
+        "position_error": "0.0015165967921019197",
+        "orientation_error": "0.007053610088858627",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "e621fdc4f247e6d4f941602738d8470496c5f9695bfc622242db0628c871b460",
+        "site_id": "trajectory_131",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "0",
+        "frame": "98",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.081781543171953,
+          1.4367599611749244,
+          0.09518575068795057,
+          1.2052697705968753,
+          0.6600789490530781,
+          2.275703822476913
+        ],
+        "position_error": "0.0015165967921019197",
+        "orientation_error": "0.007053610088858627",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "09356f4513b62701731efafd2203596a897cfefe0acf13426c5f18d02b61686e",
+    "robot": "panda",
+    "previous_q": [
+      -0.39112216304394704,
+      -0.03840120900721368,
+      -1.3454438875584427,
+      -1.6100820014157062,
+      0.4287949964210716,
+      2.1041976082850753,
+      1.4491280856276971
+    ],
+    "target_position": [
+      -0.10853438665351567,
+      -0.5890354085508129,
+      0.6709694859232095
+    ],
+    "target_rotation": [
+      [
+        -0.8974056055116345,
+        0.31925665259942243,
+        0.3045297505455063
+      ],
+      [
+        0.10550221222570139,
+        0.8254735863849605,
+        -0.5544931391786867
+      ],
+      [
+        -0.42840688884724953,
+        -0.4654766889456044,
+        -0.7744669067406672
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "4f1940d91117f91ea27fc47a289476bf2361c47cbbb34e21aa92e2a9bf8c25da",
+        "site_id": "trajectory_120",
+        "family": "high_curvature",
+        "method": "single_gn_osqp",
+        "repeat": "2",
+        "frame": "53",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -0.39133749874092144,
+          -0.01507147449526017,
+          -1.389043887558399,
+          -1.6125676508271156,
+          0.4810949964210193,
+          2.112027065625866,
+          1.4570620592025765
+        ],
+        "position_error": "0.001332146250290152",
+        "orientation_error": "0.008051598942486861",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "0d2f0b8c4906d449cde87c2f3b3eb6368cf63ec256a2ba134f1429a0a8661022",
+    "robot": "panda",
+    "previous_q": [
+      -0.14748867990986606,
+      0.0002322390439027731,
+      0.9595125320657906,
+      -1.8786957210673223,
+      -0.9176265708151216,
+      2.1313778451543595,
+      2.897299999999
+    ],
+    "target_position": [
+      0.42781595804821826,
+      0.4091754964140285,
+      0.5502362213379999
+    ],
+    "target_rotation": [
+      [
+        -0.16437955860593648,
+        -0.6530437348470292,
+        0.7392653387583921
+      ],
+      [
+        -0.9768851695797841,
+        0.003947726513608904,
+        -0.21372828757665704
+      ],
+      [
+        0.1366555017831115,
+        -0.757309907390902,
+        -0.6385976652008597
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "6292d6a262da269233959d5b381d94998db141290bc3e30dd2208b51a11c8100",
+        "site_id": "trajectory_092",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "78",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.1374395678575515,
+          0.0008510495991837781,
+          0.9631851889915306,
+          -1.8680405534230915,
+          -0.9291872450134618,
+          2.1135338662372343,
+          2.897299999999
+        ],
+        "position_error": "0.000235374683896826",
+        "orientation_error": "0.009173886411483822",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "6292d6a262da269233959d5b381d94998db141290bc3e30dd2208b51a11c8100",
+        "site_id": "trajectory_092",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "78",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.1374395678575515,
+          0.0008510495991837781,
+          0.9631851889915306,
+          -1.8680405534230915,
+          -0.9291872450134618,
+          2.1135338662372343,
+          2.897299999999
+        ],
+        "position_error": "0.000235374683896826",
+        "orientation_error": "0.009173886411483822",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "6292d6a262da269233959d5b381d94998db141290bc3e30dd2208b51a11c8100",
+        "site_id": "trajectory_092",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "78",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.1374395678575515,
+          0.0008510495991837781,
+          0.9631851889915306,
+          -1.8680405534230915,
+          -0.9291872450134618,
+          2.1135338662372343,
+          2.897299999999
+        ],
+        "position_error": "0.000235374683896826",
+        "orientation_error": "0.009173886411483822",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "0fadcee75ebee19eeaf8f75e6cb4051343a5b42ad78fcbf01575d902138cfeb5",
+    "robot": "panda",
+    "previous_q": [
+      -0.7014150930636276,
+      -0.07284233509058799,
+      -1.3125249115997346,
+      -1.624675018854845,
+      0.9159465044365859,
+      1.5286422294208561,
+      -0.2543022905708798
+    ],
+    "target_position": [
+      -0.1987494486605856,
+      -0.5174620358187976,
+      0.6475908600526888
+    ],
+    "target_rotation": [
+      [
+        -0.29727922321826594,
+        -0.5694116981556053,
+        0.7664172371797844
+      ],
+      [
+        -0.9435421587955503,
+        0.05234908939843509,
+        -0.327089846089094
+      ],
+      [
+        0.1461275402454204,
+        -0.8203839898746832,
+        -0.5528262395537304
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.735344962939976,
+          -0.029242335090631587,
+          -1.3522668795434094,
+          -1.6249480350214554,
+          0.9557141945096514,
+          1.5138535956652506,
+          -0.27917166097207513
+        ],
+        "position_error": "0.0015732506130654174",
+        "orientation_error": "0.011149613095387447",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.735344962939976,
+          -0.029242335090631587,
+          -1.3522668795434094,
+          -1.6249480350214554,
+          0.9557141945096514,
+          1.5138535956652506,
+          -0.27917166097207513
+        ],
+        "position_error": "0.0015732506130654174",
+        "orientation_error": "0.011149613095387447",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.735344962939976,
+          -0.029242335090631587,
+          -1.3522668795434094,
+          -1.6249480350214554,
+          0.9557141945096514,
+          1.5138535956652506,
+          -0.27917166097207513
+        ],
+        "position_error": "0.0015732506130654174",
+        "orientation_error": "0.011149613095387447",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "10fa3fce33e1e01e44e4352b9ece7fac8d666b9b0ae0006cd95a27e4ae80f955",
+    "robot": "panda",
+    "previous_q": [
+      -0.6837699193327994,
+      -0.07906657026698163,
+      -1.3239165977787724,
+      -1.626461203717411,
+      0.9079126971290065,
+      1.5360357771662836,
+      -0.25056065420135704
+    ],
+    "target_position": [
+      -0.1987494486605856,
+      -0.5174620358187976,
+      0.6475908600526888
+    ],
+    "target_rotation": [
+      [
+        -0.29727922321826594,
+        -0.5694116981556053,
+        0.7664172371797844
+      ],
+      [
+        -0.9435421587955503,
+        0.05234908939843509,
+        -0.327089846089094
+      ],
+      [
+        0.1461275402454204,
+        -0.8203839898746832,
+        -0.5528262395537304
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_osqp",
+        "repeat": "0",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.713489906323465,
+          -0.03546657026702523,
+          -1.3675165977787287,
+          -1.626463104940574,
+          0.946222713517412,
+          1.5227189742475853,
+          -0.27479394677853436
+        ],
+        "position_error": "0.0013528943289944839",
+        "orientation_error": "0.01251391452395586",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "12c8309cfc40ab3f04aa67bfde8845b4ac42a2b7671ea5e61b1a7471afc4c358",
+    "robot": "panda",
+    "previous_q": [
+      1.7805974990328421,
+      -0.31649377327690187,
+      1.5796923647602377,
+      -1.4328204328166008,
+      0.31912765313151314,
+      2.0044320761965237,
+      1.107080598488013
+    ],
+    "target_position": [
+      -0.547673554849864,
+      -0.2587268162879398,
+      0.7166598160495782
+    ],
+    "target_rotation": [
+      [
+        -0.5848694733587828,
+        0.627708227648646,
+        -0.5137217924861818
+      ],
+      [
+        0.780377756195101,
+        0.6081877084487991,
+        -0.14532126110001123
+      ],
+      [
+        0.22121992850762628,
+        -0.4858910291762897,
+        -0.8455599629813884
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_osqp",
+        "repeat": "1",
+        "frame": "126",
+        "failure_kind": "position_tolerance",
+        "q": [
+          1.7369974990330819,
+          -0.3302756180786781,
+          1.5883702002154045,
+          -1.4259883757920997,
+          0.36037273356005833,
+          2.0088432674069647,
+          1.0935763740804127
+        ],
+        "position_error": "0.0010609369206934732",
+        "orientation_error": "0.006718837374508666",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "1339de0a2b7e0c7fe442d1cc16653ecd1e53cb39b6001175c3ee189d588f0123",
+    "robot": "panda",
+    "previous_q": [
+      -0.9217342844750744,
+      -1.7627999999989998,
+      0.8390549108069338,
+      -0.3132710237018131,
+      -0.983984739548748,
+      1.1179929650810168,
+      -0.7110107329121282
+    ],
+    "target_position": [
+      -0.3865918484967333,
+      0.6395808375663093,
+      0.4084497824572213
+    ],
+    "target_rotation": [
+      [
+        0.26654770468255445,
+        -0.9628543383776211,
+        0.0431722618802273
+      ],
+      [
+        0.8531009173564242,
+        0.21484611026477562,
+        -0.4754576465992773
+      ],
+      [
+        0.448521065206629,
+        0.16356244058918026,
+        0.8786786569016126
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "d7da3b52b00c623aa961e4db17e1e3c8b05d3c4295e5905a19047bd8a7f4482c",
+        "site_id": "trajectory_052",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "107",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -0.9297679185765548,
+          -1.7627999999989998,
+          0.8372330173559834,
+          -0.3043397696736338,
+          -0.9880512890601584,
+          1.1155755605524977,
+          -0.7143609448973386
+        ],
+        "position_error": "0.0010464377736997433",
+        "orientation_error": "0.0006732418695296179",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "d7da3b52b00c623aa961e4db17e1e3c8b05d3c4295e5905a19047bd8a7f4482c",
+        "site_id": "trajectory_052",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "107",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -0.9297679185765548,
+          -1.7627999999989998,
+          0.8372330173559834,
+          -0.3043397696736338,
+          -0.9880512890601584,
+          1.1155755605524977,
+          -0.7143609448973386
+        ],
+        "position_error": "0.0010464377736997433",
+        "orientation_error": "0.0006732418695296179",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "d7da3b52b00c623aa961e4db17e1e3c8b05d3c4295e5905a19047bd8a7f4482c",
+        "site_id": "trajectory_052",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "107",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -0.9297679185765548,
+          -1.7627999999989998,
+          0.8372330173559834,
+          -0.3043397696736338,
+          -0.9880512890601584,
+          1.1155755605524977,
+          -0.7143609448973386
+        ],
+        "position_error": "0.0010464377736997433",
+        "orientation_error": "0.0006732418695296179",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "155366d9e36c3f00bb36d11c0390273736b0dcdcef6bce568f7f9c1042a2ae95",
+    "robot": "panda",
+    "previous_q": [
+      -2.2850285660354865,
+      0.08489562763703598,
+      1.0221396268930005,
+      -0.5384835409351374,
+      2.897299999999,
+      2.3830778471416747,
+      1.6249057768857569
+    ],
+    "target_position": [
+      0.03692261789942734,
+      -0.31102154184400743,
+      1.1280156521549072
+    ],
+    "target_rotation": [
+      [
+        0.986337284398095,
+        -0.1605715508508907,
+        0.036817637940685766
+      ],
+      [
+        0.15177382709355522,
+        0.9726334217947753,
+        0.17592308608355586
+      ],
+      [
+        -0.06405830793556173,
+        -0.1679315451757842,
+        0.9837151667628726
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "617dfe3c6044a249e2b35c9a35fdace22f1d096e467cd2c20a564e43995edf0f",
+        "site_id": "trajectory_042",
+        "family": "near_singular",
+        "method": "single_gn_k1",
+        "repeat": "1",
+        "frame": "96",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.32373417286239,
+          0.08945778797871529,
+          1.0657396268929569,
+          -0.5411136800413667,
+          2.897299999999,
+          2.3847069737773836,
+          1.6162520937357456
+        ],
+        "position_error": "0.0010495305637705464",
+        "orientation_error": "0.0017599075157499313",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "617dfe3c6044a249e2b35c9a35fdace22f1d096e467cd2c20a564e43995edf0f",
+        "site_id": "trajectory_042",
+        "family": "near_singular",
+        "method": "single_gn_k1",
+        "repeat": "0",
+        "frame": "96",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.32373417286239,
+          0.08945778797871529,
+          1.0657396268929569,
+          -0.5411136800413667,
+          2.897299999999,
+          2.3847069737773836,
+          1.6162520937357456
+        ],
+        "position_error": "0.0010495305637705464",
+        "orientation_error": "0.0017599075157499313",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "617dfe3c6044a249e2b35c9a35fdace22f1d096e467cd2c20a564e43995edf0f",
+        "site_id": "trajectory_042",
+        "family": "near_singular",
+        "method": "single_gn_k1",
+        "repeat": "2",
+        "frame": "96",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.32373417286239,
+          0.08945778797871529,
+          1.0657396268929569,
+          -0.5411136800413667,
+          2.897299999999,
+          2.3847069737773836,
+          1.6162520937357456
+        ],
+        "position_error": "0.0010495305637705464",
+        "orientation_error": "0.0017599075157499313",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "2377abf039b320ecbf2e642f1611dc1077ccf851439e8f61cddae7c22bda8d5b",
+    "robot": "panda",
+    "previous_q": [
+      0.14941817668528212,
+      0.03194751105390615,
+      -1.8844665215679837,
+      -1.0554267365863839,
+      -0.22754390948063577,
+      3.4062715537092743,
+      0.4165444710163142
+    ],
+    "target_position": [
+      -0.0229372480940417,
+      -0.3889780549485607,
+      1.0485139181895016
+    ],
+    "target_rotation": [
+      [
+        -0.05384250514455203,
+        -0.9970756582331352,
+        -0.05423206061657158
+      ],
+      [
+        0.7097362428535166,
+        -9.280015601437455e-06,
+        -0.7044675049241487
+      ],
+      [
+        0.7024068979017312,
+        -0.07642075420225791,
+        0.7076612311743701
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "97",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          0.10581817668532573,
+          0.03055719224223526,
+          -1.8412860019973818,
+          -1.0581100237508092,
+          -0.1780195628352699,
+          3.404159660010651,
+          0.3642444710163665
+        ],
+        "position_error": "0.0012330257495125527",
+        "orientation_error": "0.010891588230393127",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "97",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          0.10581817668532573,
+          0.03055719224223526,
+          -1.8412860019973818,
+          -1.0581100237508092,
+          -0.1780195628352699,
+          3.404159660010651,
+          0.3642444710163665
+        ],
+        "position_error": "0.0012330257495125527",
+        "orientation_error": "0.010891588230393127",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "97",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          0.10581817668532573,
+          0.03055719224223526,
+          -1.8412860019973818,
+          -1.0581100237508092,
+          -0.1780195628352699,
+          3.404159660010651,
+          0.3642444710163665
+        ],
+        "position_error": "0.0012330257495125527",
+        "orientation_error": "0.010891588230393127",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "2fd3a57eec6395bc3eb33f31da38087b302c57fc3e36e858c612b5478ea52b46",
+    "robot": "panda",
+    "previous_q": [
+      -0.39567660218017436,
+      -0.03400464453307601,
+      -1.3440391777605953,
+      -1.6082939274114594,
+      0.4287949964206062,
+      2.1007090200086593,
+      1.4461074740145792
+    ],
+    "target_position": [
+      -0.10853438665351567,
+      -0.5890354085508129,
+      0.6709694859232095
+    ],
+    "target_rotation": [
+      [
+        -0.8974056055116345,
+        0.31925665259942243,
+        0.3045297505455063
+      ],
+      [
+        0.10550221222570139,
+        0.8254735863849605,
+        -0.5544931391786867
+      ],
+      [
+        -0.42840688884724953,
+        -0.4654766889456044,
+        -0.7744669067406672
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "4f1940d91117f91ea27fc47a289476bf2361c47cbbb34e21aa92e2a9bf8c25da",
+        "site_id": "trajectory_120",
+        "family": "high_curvature",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "53",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.405940589848204,
+          -0.012106365060791697,
+          -1.3764747478151664,
+          -1.611382049754448,
+          0.4810949964205539,
+          2.109265879034782,
+          1.4560031648090934
+        ],
+        "position_error": "0.0013286158389925046",
+        "orientation_error": "0.009391302884481291",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "4f1940d91117f91ea27fc47a289476bf2361c47cbbb34e21aa92e2a9bf8c25da",
+        "site_id": "trajectory_120",
+        "family": "high_curvature",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "53",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.405940589848204,
+          -0.012106365060791697,
+          -1.3764747478151664,
+          -1.611382049754448,
+          0.4810949964205539,
+          2.109265879034782,
+          1.4560031648090934
+        ],
+        "position_error": "0.0013286158389925046",
+        "orientation_error": "0.009391302884481291",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "4f1940d91117f91ea27fc47a289476bf2361c47cbbb34e21aa92e2a9bf8c25da",
+        "site_id": "trajectory_120",
+        "family": "high_curvature",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "53",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.405940589848204,
+          -0.012106365060791697,
+          -1.3764747478151664,
+          -1.611382049754448,
+          0.4810949964205539,
+          2.109265879034782,
+          1.4560031648090934
+        ],
+        "position_error": "0.0013286158389925046",
+        "orientation_error": "0.009391302884481291",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "38a05d1395bf5c619495c550deeb27ab986b2f0ac6adb5ae722cd2a37e61e49e",
+    "robot": "panda",
+    "previous_q": [
+      -2.2850285541162165,
+      0.0848956281107795,
+      1.0221396147662083,
+      -0.5384835389053542,
+      2.897299999999,
+      2.383077848078133,
+      1.624905777256006
+    ],
+    "target_position": [
+      0.03692261789942734,
+      -0.31102154184400743,
+      1.1280156521549072
+    ],
+    "target_rotation": [
+      [
+        0.986337284398095,
+        -0.1605715508508907,
+        0.036817637940685766
+      ],
+      [
+        0.15177382709355522,
+        0.9726334217947753,
+        0.17592308608355586
+      ],
+      [
+        -0.06405830793556173,
+        -0.1679315451757842,
+        0.9837151667628726
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "617dfe3c6044a249e2b35c9a35fdace22f1d096e467cd2c20a564e43995edf0f",
+        "site_id": "trajectory_042",
+        "family": "near_singular",
+        "method": "single_gn_osqp",
+        "repeat": "0",
+        "frame": "96",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.323734160948875,
+          0.08945778842047471,
+          1.0657396147661646,
+          -0.5411136779454772,
+          2.897299999999,
+          2.384706974746876,
+          1.616252094120531
+        ],
+        "position_error": "0.0010495305921100267",
+        "orientation_error": "0.001759907569247285",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "39c75753efb5d6819f9e2fa625acc562639c1984188f4add89936eef1680ed81",
+    "robot": "panda",
+    "previous_q": [
+      -0.1510058993722704,
+      -0.00048313333978956536,
+      0.9623217730947459,
+      -1.87877902323721,
+      -0.9128023062413125,
+      2.13231484187152,
+      2.8972999999966134
+    ],
+    "target_position": [
+      0.42781595804821826,
+      0.4091754964140285,
+      0.5502362213379999
+    ],
+    "target_rotation": [
+      [
+        -0.16437955860593648,
+        -0.6530437348470292,
+        0.7392653387583921
+      ],
+      [
+        -0.9768851695797841,
+        0.003947726513608904,
+        -0.21372828757665704
+      ],
+      [
+        0.1366555017831115,
+        -0.757309907390902,
+        -0.6385976652008597
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "6292d6a262da269233959d5b381d94998db141290bc3e30dd2208b51a11c8100",
+        "site_id": "trajectory_092",
+        "family": "joint_limit_return",
+        "method": "single_gn_osqp",
+        "repeat": "2",
+        "frame": "78",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.10740589937231401,
+          0.00044827350494759476,
+          0.932812185345964,
+          -1.8682854443898265,
+          -0.9278682291802457,
+          2.114281978245764,
+          2.897299999999
+        ],
+        "position_error": "0.00027719655656746763",
+        "orientation_error": "0.00897808135241635",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "3cb5ae5e3ed83e96de6ea7b6a86708da3bcaaf99454050465495c03aa329b03d",
+    "robot": "panda",
+    "previous_q": [
+      -2.285028554116417,
+      0.08489562811077164,
+      1.0221396147664128,
+      -0.5384835389053882,
+      2.897299999999,
+      2.383077848078117,
+      1.6249057772559994
+    ],
+    "target_position": [
+      0.03692261789942734,
+      -0.31102154184400743,
+      1.1280156521549072
+    ],
+    "target_rotation": [
+      [
+        0.986337284398095,
+        -0.1605715508508907,
+        0.036817637940685766
+      ],
+      [
+        0.15177382709355522,
+        0.9726334217947753,
+        0.17592308608355586
+      ],
+      [
+        -0.06405830793556173,
+        -0.1679315451757842,
+        0.9837151667628726
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "617dfe3c6044a249e2b35c9a35fdace22f1d096e467cd2c20a564e43995edf0f",
+        "site_id": "trajectory_042",
+        "family": "near_singular",
+        "method": "single_gn_osqp",
+        "repeat": "2",
+        "frame": "96",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.3237341609490763,
+          0.08945778842046724,
+          1.0657396147663691,
+          -0.5411136779455124,
+          2.897299999999,
+          2.3847069747468597,
+          1.6162520941205245
+        ],
+        "position_error": "0.0010495305921092992",
+        "orientation_error": "0.001759907569246203",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "4481318d5ddc42ad85a73ca7db0930f598865b9f9facc5c5befea12352f1e43b",
+    "robot": "panda",
+    "previous_q": [
+      -0.39112216304289693,
+      -0.03840120900755557,
+      -1.3454438875592494,
+      -1.6100820014157884,
+      0.4287949964206062,
+      2.104197608285259,
+      1.4491280856279491
+    ],
+    "target_position": [
+      -0.10853438665351567,
+      -0.5890354085508129,
+      0.6709694859232095
+    ],
+    "target_rotation": [
+      [
+        -0.8974056055116345,
+        0.31925665259942243,
+        0.3045297505455063
+      ],
+      [
+        0.10550221222570139,
+        0.8254735863849605,
+        -0.5544931391786867
+      ],
+      [
+        -0.42840688884724953,
+        -0.4654766889456044,
+        -0.7744669067406672
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "4f1940d91117f91ea27fc47a289476bf2361c47cbbb34e21aa92e2a9bf8c25da",
+        "site_id": "trajectory_120",
+        "family": "high_curvature",
+        "method": "single_gn_k1",
+        "repeat": "1",
+        "frame": "53",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -0.39133749873986134,
+          -0.015071474495616842,
+          -1.3890438875592057,
+          -1.6125676508272195,
+          0.4810949964205539,
+          2.1120270656260876,
+          1.4570620592028214
+        ],
+        "position_error": "0.0013321462502991024",
+        "orientation_error": "0.008051598942527691",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "4f1940d91117f91ea27fc47a289476bf2361c47cbbb34e21aa92e2a9bf8c25da",
+        "site_id": "trajectory_120",
+        "family": "high_curvature",
+        "method": "single_gn_k1",
+        "repeat": "0",
+        "frame": "53",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -0.39133749873986134,
+          -0.015071474495616842,
+          -1.3890438875592057,
+          -1.6125676508272195,
+          0.4810949964205539,
+          2.1120270656260876,
+          1.4570620592028214
+        ],
+        "position_error": "0.0013321462502991024",
+        "orientation_error": "0.008051598942527691",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "4f1940d91117f91ea27fc47a289476bf2361c47cbbb34e21aa92e2a9bf8c25da",
+        "site_id": "trajectory_120",
+        "family": "high_curvature",
+        "method": "single_gn_k1",
+        "repeat": "2",
+        "frame": "53",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -0.39133749873986134,
+          -0.015071474495616842,
+          -1.3890438875592057,
+          -1.6125676508272195,
+          0.4810949964205539,
+          2.1120270656260876,
+          1.4570620592028214
+        ],
+        "position_error": "0.0013321462502991024",
+        "orientation_error": "0.008051598942527691",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "45a6400afbe2a6553d656117bcbb5cd6eb766305192d712c5c29a37e44b96fae",
+    "robot": "panda",
+    "previous_q": [
+      -0.15100589937319975,
+      -0.00048313333979249,
+      0.9623217730956733,
+      -1.8787790232372117,
+      -0.9128023062413108,
+      2.1323148418715236,
+      2.8972999999966134
+    ],
+    "target_position": [
+      0.42781595804821826,
+      0.4091754964140285,
+      0.5502362213379999
+    ],
+    "target_rotation": [
+      [
+        -0.16437955860593648,
+        -0.6530437348470292,
+        0.7392653387583921
+      ],
+      [
+        -0.9768851695797841,
+        0.003947726513608904,
+        -0.21372828757665704
+      ],
+      [
+        0.1366555017831115,
+        -0.757309907390902,
+        -0.6385976652008597
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "6292d6a262da269233959d5b381d94998db141290bc3e30dd2208b51a11c8100",
+        "site_id": "trajectory_092",
+        "family": "joint_limit_return",
+        "method": "single_gn_osqp",
+        "repeat": "0",
+        "frame": "78",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.10740589937324335,
+          0.00044827350494523255,
+          0.9328121853468921,
+          -1.868285444389829,
+          -0.9278682291802447,
+          2.114281978245768,
+          2.897299999999
+        ],
+        "position_error": "0.00027719655656781333",
+        "orientation_error": "0.008978081352416106",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "4a572d8f78d78baeb87b2b0623b7c585bda754c65c59e35bfb451b8b93f4e402",
+    "robot": "panda",
+    "previous_q": [
+      0.12295693197617819,
+      0.032544625928451185,
+      -1.8596778372279887,
+      -1.0546614286079077,
+      -0.22686985873434587,
+      3.406682986095677,
+      0.416803415837539
+    ],
+    "target_position": [
+      -0.0229372480940417,
+      -0.3889780549485607,
+      1.0485139181895016
+    ],
+    "target_rotation": [
+      [
+        -0.05384250514455203,
+        -0.9970756582331352,
+        -0.05423206061657158
+      ],
+      [
+        0.7097362428535166,
+        -9.280015601437455e-06,
+        -0.7044675049241487
+      ],
+      [
+        0.7024068979017312,
+        -0.07642075420225791,
+        0.7076612311743701
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_osqp",
+        "repeat": "1",
+        "frame": "97",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          0.07935693197622179,
+          0.031212223923589882,
+          -1.8162044635628931,
+          -1.0571849008708407,
+          -0.1772641435786733,
+          3.404454918022718,
+          0.36450341583759127
+        ],
+        "position_error": "0.0011648613145514677",
+        "orientation_error": "0.010115652858782543",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "4d824fcbe98ef5c10812f59139ebd51a12365b7e6d7efadfc76ffdcdccd427c6",
+    "robot": "ur5e",
+    "previous_q": [
+      -2.144691676374478,
+      1.4770198177438125,
+      0.09410529287868849,
+      1.20097545968863,
+      0.6876832430060409,
+      2.282650551539931
+    ],
+    "target_position": [
+      0.19764046555437653,
+      -0.08404379224933615,
+      -0.5829618876855436
+    ],
+    "target_rotation": [
+      [
+        -0.26739762317106086,
+        -0.01737665771016101,
+        0.9634295837731429
+      ],
+      [
+        0.34287211358419417,
+        0.9326832101385683,
+        0.11198546000228321
+      ],
+      [
+        -0.9005205299429743,
+        0.36027778351216644,
+        -0.24343930220649626
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "e621fdc4f247e6d4f941602738d8470496c5f9695bfc622242db0628c871b460",
+        "site_id": "trajectory_131",
+        "family": "high_curvature",
+        "method": "single_gn_osqp",
+        "repeat": "1",
+        "frame": "98",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.081759823302745,
+          1.436733031537144,
+          0.09523031534110278,
+          1.205236555808788,
+          0.6600618824502128,
+          2.2757202641814467
+        ],
+        "position_error": "0.0015160615352729917",
+        "orientation_error": "0.007050709315825829",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "5920dd051364a2dc65b383b67ee2307d07472209a36afe30ad84d89588e685f2",
+    "robot": "panda",
+    "previous_q": [
+      0.7790256244473865,
+      -0.017929558335922687,
+      -1.3819788044045698,
+      -0.6178741032551074,
+      0.32905741114817605,
+      1.178055499503542,
+      -0.07051380347191548
+    ],
+    "target_position": [
+      0.29921546570835594,
+      -0.1921564150264579,
+      0.9720631395041626
+    ],
+    "target_rotation": [
+      [
+        0.7516020536148966,
+        -0.29652985247719715,
+        0.5892065848170075
+      ],
+      [
+        -0.3451565867733855,
+        -0.9380068152830247,
+        -0.03178277976426892
+      ],
+      [
+        0.5621043351628024,
+        -0.1794805311794271,
+        -0.8073570804289353
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "c6cfd91b767095758b663e0ee9d436d5e7a392ae0b0f544dc5c1085014080e48",
+        "site_id": "trajectory_125",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "1",
+        "frame": "146",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          0.7597875293818591,
+          -0.054312161456237,
+          -1.3383788044046134,
+          -0.6165267482755991,
+          0.2767574111482283,
+          1.1641717353368228,
+          -0.04768350447268712
+        ],
+        "position_error": "0.000948644744289054",
+        "orientation_error": "0.009980288793048669",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "c6cfd91b767095758b663e0ee9d436d5e7a392ae0b0f544dc5c1085014080e48",
+        "site_id": "trajectory_125",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "2",
+        "frame": "146",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          0.7597875293818591,
+          -0.054312161456237,
+          -1.3383788044046134,
+          -0.6165267482755991,
+          0.2767574111482283,
+          1.1641717353368228,
+          -0.04768350447268712
+        ],
+        "position_error": "0.000948644744289054",
+        "orientation_error": "0.009980288793048669",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "c6cfd91b767095758b663e0ee9d436d5e7a392ae0b0f544dc5c1085014080e48",
+        "site_id": "trajectory_125",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "0",
+        "frame": "146",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          0.7597875293818591,
+          -0.054312161456237,
+          -1.3383788044046134,
+          -0.6165267482755991,
+          0.2767574111482283,
+          1.1641717353368228,
+          -0.04768350447268712
+        ],
+        "position_error": "0.000948644744289054",
+        "orientation_error": "0.009980288793048669",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "5be03d09d1d94309b2e2bcdbd947cd30c346ebece6c2b58ab606780cb72ba53a",
+    "robot": "panda",
+    "previous_q": [
+      0.3011820637962039,
+      0.028389579462709286,
+      -2.0115345795103403,
+      -1.0582191839101955,
+      -0.22778512851960447,
+      3.4090022347704085,
+      0.39886265905712426
+    ],
+    "target_position": [
+      -0.016369080532618735,
+      -0.3877681221803293,
+      1.0486074848119717
+    ],
+    "target_rotation": [
+      [
+        -0.05770673580061479,
+        -0.9975474307996001,
+        -0.039611310863882275
+      ],
+      [
+        0.7089188731652978,
+        -0.013008588280041679,
+        -0.7051700560155719
+      ],
+      [
+        0.7029252904208831,
+        -0.06877426797921905,
+        0.7079308837384056
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_k0",
+        "repeat": "0",
+        "frame": "96",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          0.25878390269727286,
+          0.02560027261487645,
+          -1.967934579510384,
+          -1.0598816938104494,
+          -0.1800237514200091,
+          3.406763968314493,
+          0.34656265905717654
+        ],
+        "position_error": "0.0008666992799708165",
+        "orientation_error": "0.009094924015238986",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_k0",
+        "repeat": "1",
+        "frame": "96",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          0.25878390269727286,
+          0.02560027261487645,
+          -1.967934579510384,
+          -1.0598816938104494,
+          -0.1800237514200091,
+          3.406763968314493,
+          0.34656265905717654
+        ],
+        "position_error": "0.0008666992799708165",
+        "orientation_error": "0.009094924015238986",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_k0",
+        "repeat": "2",
+        "frame": "96",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          0.25878390269727286,
+          0.02560027261487645,
+          -1.967934579510384,
+          -1.0598816938104494,
+          -0.1800237514200091,
+          3.406763968314493,
+          0.34656265905717654
+        ],
+        "position_error": "0.0008666992799708165",
+        "orientation_error": "0.009094924015238986",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "5c20cedcb0e226c817c20c7973b792c6237dae669f8f72560feb8931f1a58fdd",
+    "robot": "panda",
+    "previous_q": [
+      0.12295693197736068,
+      0.03254462592836463,
+      -1.8596778372288902,
+      -1.0546614286079576,
+      -0.2268698587339311,
+      3.4066829860956727,
+      0.4168034158368725
+    ],
+    "target_position": [
+      -0.0229372480940417,
+      -0.3889780549485607,
+      1.0485139181895016
+    ],
+    "target_rotation": [
+      [
+        -0.05384250514455203,
+        -0.9970756582331352,
+        -0.05423206061657158
+      ],
+      [
+        0.7097362428535166,
+        -9.280015601437455e-06,
+        -0.7044675049241487
+      ],
+      [
+        0.7024068979017312,
+        -0.07642075420225791,
+        0.7076612311743701
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_osqp",
+        "repeat": "2",
+        "frame": "97",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          0.07935693197740429,
+          0.03121222392350304,
+          -1.8162044635637902,
+          -1.0571849008708896,
+          -0.1772641435782588,
+          3.4044549180227155,
+          0.3645034158369248
+        ],
+        "position_error": "0.0011648613145522789",
+        "orientation_error": "0.01011565285880174",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "5c958deb3dc1f5919302388d58c9a5d961bec7d2f0bb8d7685e59c6d95b72459",
+    "robot": "panda",
+    "previous_q": [
+      1.0354805779452796,
+      -0.05334346998502054,
+      1.658082332571742,
+      -1.3469203290596283,
+      -1.5369206305366858,
+      1.5976231732893242,
+      1.1491005419261089
+    ],
+    "target_position": [
+      -0.42446284463746775,
+      0.32099651806446805,
+      0.8297959968947229
+    ],
+    "target_rotation": [
+      [
+        -0.16465145788731175,
+        0.8772871115787609,
+        0.45084057190250454
+      ],
+      [
+        0.08738343119703519,
+        -0.4423076473830344,
+        0.892596258685145
+      ],
+      [
+        0.982473426290918,
+        0.1863632713929436,
+        -0.003833758978364707
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "2e9f7ef4bb4fbdc88f8581fc058a669a339276f9db5b4987a20be41acbf962af",
+        "site_id": "trajectory_126",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "1",
+        "frame": "93",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          1.0723650697496958,
+          -0.014547124933454097,
+          1.6144823325717856,
+          -1.3530478493221985,
+          -1.55373216054472,
+          1.5453231732893766,
+          1.1663194496758964
+        ],
+        "position_error": "0.001343878749052378",
+        "orientation_error": "0.009057548141082809",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "2e9f7ef4bb4fbdc88f8581fc058a669a339276f9db5b4987a20be41acbf962af",
+        "site_id": "trajectory_126",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "0",
+        "frame": "93",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          1.0723650697496958,
+          -0.014547124933454097,
+          1.6144823325717856,
+          -1.3530478493221985,
+          -1.55373216054472,
+          1.5453231732893766,
+          1.1663194496758964
+        ],
+        "position_error": "0.001343878749052378",
+        "orientation_error": "0.009057548141082809",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "2e9f7ef4bb4fbdc88f8581fc058a669a339276f9db5b4987a20be41acbf962af",
+        "site_id": "trajectory_126",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "2",
+        "frame": "93",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          1.0723650697496958,
+          -0.014547124933454097,
+          1.6144823325717856,
+          -1.3530478493221985,
+          -1.55373216054472,
+          1.5453231732893766,
+          1.1663194496758964
+        ],
+        "position_error": "0.001343878749052378",
+        "orientation_error": "0.009057548141082809",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "627e5c96e87407119a14e91c76336465ed5c018ce852ee1b241cf08a79550502",
+    "robot": "ur5e",
+    "previous_q": [
+      -2.514477589039262,
+      3.788836915361774,
+      1.9423409666810476,
+      -5.964240134100235,
+      -0.02590207275802042,
+      2.9428466242487636
+    ],
+    "target_position": [
+      0.12537064749736798,
+      -0.19791848653863542,
+      0.5279897607723442
+    ],
+    "target_rotation": [
+      [
+        -0.7126457756022562,
+        -0.3500472817450963,
+        0.6079497504392345
+      ],
+      [
+        -0.5541331925214953,
+        -0.25055336465120487,
+        -0.7938258098650457
+      ],
+      [
+        0.4302004224337694,
+        -0.902601746067904,
+        -0.015417020885268745
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "c173bc1217a828de6205bf0d0c767d2505fbe856597d39d948838ce9d559a094",
+        "site_id": "trajectory_071",
+        "family": "near_singular",
+        "method": "single_gn_osqp",
+        "repeat": "0",
+        "frame": "100",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.521564464907341,
+          3.769432505682133,
+          1.9429270222534516,
+          -6.021654413170089,
+          -0.0363371136100014,
+          3.0057784773204967
+        ],
+        "position_error": "0.0010917291575246741",
+        "orientation_error": "0.004492888493230691",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "6a7217fc67b9b7666d71bab36d05ac04297bba7ad75a01c4adcae0a4a9b88de5",
+    "robot": "ur5e",
+    "previous_q": [
+      -2.1446916763744412,
+      1.4770198177437908,
+      0.0941052928787168,
+      1.200975459688602,
+      0.6876832430060404,
+      2.282650551539956
+    ],
+    "target_position": [
+      0.19764046555437653,
+      -0.08404379224933615,
+      -0.5829618876855436
+    ],
+    "target_rotation": [
+      [
+        -0.26739762317106086,
+        -0.01737665771016101,
+        0.9634295837731429
+      ],
+      [
+        0.34287211358419417,
+        0.9326832101385683,
+        0.11198546000228321
+      ],
+      [
+        -0.9005205299429743,
+        0.36027778351216644,
+        -0.24343930220649626
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "e621fdc4f247e6d4f941602738d8470496c5f9695bfc622242db0628c871b460",
+        "site_id": "trajectory_131",
+        "family": "high_curvature",
+        "method": "single_gn_osqp",
+        "repeat": "2",
+        "frame": "98",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.081759823302708,
+          1.4367330315367308,
+          0.09523031534192297,
+          1.2052365558082556,
+          0.6600618824501926,
+          2.2757202641815546
+        ],
+        "position_error": "0.0015160615352726257",
+        "orientation_error": "0.007050709315811979",
+        "internal_status": "deadline",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "6b6aaf1e1768445f8c978d98191ac18f2fdd9339e124c9caf1411cec09edf352",
+    "robot": "ur5e",
+    "previous_q": [
+      -2.1446916763754316,
+      1.4770198177633307,
+      0.09410529283999552,
+      1.200975459715453,
+      0.6876832430060578,
+      2.2826505515335085
+    ],
+    "target_position": [
+      0.19764046555437653,
+      -0.08404379224933615,
+      -0.5829618876855436
+    ],
+    "target_rotation": [
+      [
+        -0.26739762317106086,
+        -0.01737665771016101,
+        0.9634295837731429
+      ],
+      [
+        0.34287211358419417,
+        0.9326832101385683,
+        0.11198546000228321
+      ],
+      [
+        -0.9005205299429743,
+        0.36027778351216644,
+        -0.24343930220649626
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "e621fdc4f247e6d4f941602738d8470496c5f9695bfc622242db0628c871b460",
+        "site_id": "trajectory_131",
+        "family": "high_curvature",
+        "method": "single_gn_k1",
+        "repeat": "0",
+        "frame": "98",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.0817598233036985,
+          1.4367330305917316,
+          0.0952303172603924,
+          1.2052365545802437,
+          0.6600618824565134,
+          2.2757202643768206
+        ],
+        "position_error": "0.0015160615356383969",
+        "orientation_error": "0.007050709310467525",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "e621fdc4f247e6d4f941602738d8470496c5f9695bfc622242db0628c871b460",
+        "site_id": "trajectory_131",
+        "family": "high_curvature",
+        "method": "single_gn_k1",
+        "repeat": "1",
+        "frame": "98",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.0817598233036985,
+          1.4367330305917316,
+          0.0952303172603924,
+          1.2052365545802437,
+          0.6600618824565134,
+          2.2757202643768206
+        ],
+        "position_error": "0.0015160615356383969",
+        "orientation_error": "0.007050709310467525",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "e621fdc4f247e6d4f941602738d8470496c5f9695bfc622242db0628c871b460",
+        "site_id": "trajectory_131",
+        "family": "high_curvature",
+        "method": "single_gn_k1",
+        "repeat": "2",
+        "frame": "98",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.0817598233036985,
+          1.4367330305917316,
+          0.0952303172603924,
+          1.2052365545802437,
+          0.6600618824565134,
+          2.2757202643768206
+        ],
+        "position_error": "0.0015160615356383969",
+        "orientation_error": "0.007050709310467525",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "6bbddc027841533c944d5fccacaa71c6ae80d2814987226ff64e72d169d46a50",
+    "robot": "panda",
+    "previous_q": [
+      -0.6837699193334605,
+      -0.0790665702666904,
+      -1.323916597778338,
+      -1.6264612037173605,
+      0.9079126971292826,
+      1.5360357771660558,
+      -0.25056065420148166
+    ],
+    "target_position": [
+      -0.1987494486605856,
+      -0.5174620358187976,
+      0.6475908600526888
+    ],
+    "target_rotation": [
+      [
+        -0.29727922321826594,
+        -0.5694116981556053,
+        0.7664172371797844
+      ],
+      [
+        -0.9435421587955503,
+        0.05234908939843509,
+        -0.327089846089094
+      ],
+      [
+        0.1461275402454204,
+        -0.8203839898746832,
+        -0.5528262395537304
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_osqp",
+        "repeat": "1",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.7134899063241248,
+          -0.03546657026673399,
+          -1.3675165977782944,
+          -1.6264631049405032,
+          0.9462227135176793,
+          1.5227189742473308,
+          -0.27479394677864727
+        ],
+        "position_error": "0.0013528943289899482",
+        "orientation_error": "0.012513914523917265",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "777cecb834c2d2a97ee11f30726a9c1a3bfdbf129e98653491a9be48b524a07f",
+    "robot": "panda",
+    "previous_q": [
+      -2.5808788242134333,
+      0.04529988210385024,
+      2.897299999999,
+      -0.5739845017554034,
+      -2.897299999999,
+      2.029832303950535,
+      -1.7648163006722346
+    ],
+    "target_position": [
+      0.20345807338386102,
+      0.045433628449392,
+      1.1610273074352238
+    ],
+    "target_rotation": [
+      [
+        0.34441197335250046,
+        0.8332610360490273,
+        -0.43250021781952736
+      ],
+      [
+        -0.9093383559548955,
+        0.18154820955192075,
+        -0.3743581199837129
+      ],
+      [
+        -0.2334183947350436,
+        0.5222224558662657,
+        0.8202435977124855
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "family": "near_singular",
+        "method": "single_gn_k0",
+        "repeat": "2",
+        "frame": "122",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.578625057562058,
+          0.03536197734721825,
+          2.897299999999,
+          -0.5578130621809242,
+          -2.897299999999,
+          2.0328716416401473,
+          -1.7683276689601262
+        ],
+        "position_error": "0.001315487164951526",
+        "orientation_error": "0.004232269771441956",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_development/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "family": "near_singular",
+        "method": "single_gn_k0",
+        "repeat": "1",
+        "frame": "122",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.578625057562058,
+          0.03536197734721825,
+          2.897299999999,
+          -0.5578130621809242,
+          -2.897299999999,
+          2.0328716416401473,
+          -1.7683276689601262
+        ],
+        "position_error": "0.001315487164951526",
+        "orientation_error": "0.004232269771441956",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_development/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "4e626ba28da6a8d45d22f023c3732e2d796c83a0e74df2aa41168fe26f6dccab",
+        "site_id": "trajectory_14",
+        "family": "near_singular",
+        "method": "single_gn_k0",
+        "repeat": "0",
+        "frame": "122",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.578625057562058,
+          0.03536197734721825,
+          2.897299999999,
+          -0.5578130621809242,
+          -2.897299999999,
+          2.0328716416401473,
+          -1.7683276689601262
+        ],
+        "position_error": "0.001315487164951526",
+        "orientation_error": "0.004232269771441956",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_development/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "7ade05b4a35b609b65f62a72b9938ae9cfaaadc9380544f3dc0319f559c13519",
+    "robot": "panda",
+    "previous_q": [
+      1.7805974990334237,
+      -0.33833182801778494,
+      1.5610972676017292,
+      -1.4318761272595797,
+      0.35078689922417444,
+      1.9969041939330168,
+      1.0908214326387768
+    ],
+    "target_position": [
+      -0.547673554849864,
+      -0.2587268162879398,
+      0.7166598160495782
+    ],
+    "target_rotation": [
+      [
+        -0.5848694733587828,
+        0.627708227648646,
+        -0.5137217924861818
+      ],
+      [
+        0.780377756195101,
+        0.6081877084487991,
+        -0.14532126110001123
+      ],
+      [
+        0.22121992850762628,
+        -0.4858910291762897,
+        -0.8455599629813884
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "126",
+        "failure_kind": "position_tolerance",
+        "q": [
+          1.7369974990334673,
+          -0.33627616895251117,
+          1.5830672782599309,
+          -1.4247344475395418,
+          0.3695337392237034,
+          2.0043389896906914,
+          1.0888784043806143
+        ],
+        "position_error": "0.0012323073636101166",
+        "orientation_error": "0.0049737137960904",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "126",
+        "failure_kind": "position_tolerance",
+        "q": [
+          1.7369974990334673,
+          -0.33627616895251117,
+          1.5830672782599309,
+          -1.4247344475395418,
+          0.3695337392237034,
+          2.0043389896906914,
+          1.0888784043806143
+        ],
+        "position_error": "0.0012323073636101166",
+        "orientation_error": "0.0049737137960904",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "126",
+        "failure_kind": "position_tolerance",
+        "q": [
+          1.7369974990334673,
+          -0.33627616895251117,
+          1.5830672782599309,
+          -1.4247344475395418,
+          0.3695337392237034,
+          2.0043389896906914,
+          1.0888784043806143
+        ],
+        "position_error": "0.0012323073636101166",
+        "orientation_error": "0.0049737137960904",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "7e954bb8a4f7b108c34380f1fc198c04883f2e3b2216de70ca4aae281e3842d4",
+    "robot": "panda",
+    "previous_q": [
+      -0.15100589937357944,
+      -0.0004831333397937214,
+      0.9623217730960523,
+      -1.8787790232372124,
+      -0.9128023062413101,
+      2.132314841871525,
+      2.8972999999966134
+    ],
+    "target_position": [
+      0.42781595804821826,
+      0.4091754964140285,
+      0.5502362213379999
+    ],
+    "target_rotation": [
+      [
+        -0.16437955860593648,
+        -0.6530437348470292,
+        0.7392653387583921
+      ],
+      [
+        -0.9768851695797841,
+        0.003947726513608904,
+        -0.21372828757665704
+      ],
+      [
+        0.1366555017831115,
+        -0.757309907390902,
+        -0.6385976652008597
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "6292d6a262da269233959d5b381d94998db141290bc3e30dd2208b51a11c8100",
+        "site_id": "trajectory_092",
+        "family": "joint_limit_return",
+        "method": "single_gn_osqp",
+        "repeat": "1",
+        "frame": "78",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.10740589937362305,
+          0.00044827350494398404,
+          0.9328121853472712,
+          -1.8682854443898302,
+          -0.9278682291802443,
+          2.1142819782457694,
+          2.897299999999
+        ],
+        "position_error": "0.0002771965565679241",
+        "orientation_error": "0.008978081352415889",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "83087a7c16bc37c3c61ae735e33ac0bd25ea0555435bd0734c25156637b53d14",
+    "robot": "panda",
+    "previous_q": [
+      -0.3911221630452449,
+      -0.03840120900676402,
+      -1.3454438875574652,
+      -1.6100820014155939,
+      0.42879499642168806,
+      2.1041976082848284,
+      1.4491280856273636
+    ],
+    "target_position": [
+      -0.10853438665351567,
+      -0.5890354085508129,
+      0.6709694859232095
+    ],
+    "target_rotation": [
+      [
+        -0.8974056055116345,
+        0.31925665259942243,
+        0.3045297505455063
+      ],
+      [
+        0.10550221222570139,
+        0.8254735863849605,
+        -0.5544931391786867
+      ],
+      [
+        -0.42840688884724953,
+        -0.4654766889456044,
+        -0.7744669067406672
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "4f1940d91117f91ea27fc47a289476bf2361c47cbbb34e21aa92e2a9bf8c25da",
+        "site_id": "trajectory_120",
+        "family": "high_curvature",
+        "method": "single_gn_osqp",
+        "repeat": "0",
+        "frame": "53",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -0.39133749874223284,
+          -0.015071474494790267,
+          -1.3890438875574216,
+          -1.612567650826978,
+          0.4810949964216358,
+          2.1120270656255737,
+          1.4570620592022518
+        ],
+        "position_error": "0.001332146250278051",
+        "orientation_error": "0.008051598942431173",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "8cf5b09c2aa354206fc25bce07f8ae45d95624abf37fb6bc2c6205e2350c43bd",
+    "robot": "panda",
+    "previous_q": [
+      1.7805974990331814,
+      -0.31649377327503625,
+      1.579692364761537,
+      -1.4328204328169014,
+      0.3191276531289575,
+      2.0044320761972156,
+      1.1070805984893688
+    ],
+    "target_position": [
+      -0.547673554849864,
+      -0.2587268162879398,
+      0.7166598160495782
+    ],
+    "target_rotation": [
+      [
+        -0.5848694733587828,
+        0.627708227648646,
+        -0.5137217924861818
+      ],
+      [
+        0.780377756195101,
+        0.6081877084487991,
+        -0.14532126110001123
+      ],
+      [
+        0.22121992850762628,
+        -0.4858910291762897,
+        -0.8455599629813884
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_osqp",
+        "repeat": "0",
+        "frame": "126",
+        "failure_kind": "position_tolerance",
+        "q": [
+          1.7369974990333756,
+          -0.33027562337553645,
+          1.5883701955857032,
+          -1.4259883753637566,
+          0.36037274109694317,
+          2.008843265746734,
+          1.093576370263971
+        ],
+        "position_error": "0.0010609369206662402",
+        "orientation_error": "0.006718837374433043",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "94df3da8818589a2259a85811e69046fb88819748d2f5675d92475eea5c7c7c6",
+    "robot": "ur5e",
+    "previous_q": [
+      -2.514477589039267,
+      3.78883691536175,
+      1.942340966681052,
+      -5.964240134100313,
+      -0.025902072758026154,
+      2.9428466242489146
+    ],
+    "target_position": [
+      0.12537064749736798,
+      -0.19791848653863542,
+      0.5279897607723442
+    ],
+    "target_rotation": [
+      [
+        -0.7126457756022562,
+        -0.3500472817450963,
+        0.6079497504392345
+      ],
+      [
+        -0.5541331925214953,
+        -0.25055336465120487,
+        -0.7938258098650457
+      ],
+      [
+        0.4302004224337694,
+        -0.902601746067904,
+        -0.015417020885268745
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "c173bc1217a828de6205bf0d0c767d2505fbe856597d39d948838ce9d559a094",
+        "site_id": "trajectory_071",
+        "family": "near_singular",
+        "method": "single_gn_k1",
+        "repeat": "1",
+        "frame": "100",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.5215644649073305,
+          3.7694325056821,
+          1.9429270222534627,
+          -6.021654413170218,
+          -0.03633711360999212,
+          3.0057784773206477
+        ],
+        "position_error": "0.001091729157524516",
+        "orientation_error": "0.004492888493228415",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "c173bc1217a828de6205bf0d0c767d2505fbe856597d39d948838ce9d559a094",
+        "site_id": "trajectory_071",
+        "family": "near_singular",
+        "method": "single_gn_k1",
+        "repeat": "2",
+        "frame": "100",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.5215644649073305,
+          3.7694325056821,
+          1.9429270222534627,
+          -6.021654413170218,
+          -0.03633711360999212,
+          3.0057784773206477
+        ],
+        "position_error": "0.001091729157524516",
+        "orientation_error": "0.004492888493228415",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "c173bc1217a828de6205bf0d0c767d2505fbe856597d39d948838ce9d559a094",
+        "site_id": "trajectory_071",
+        "family": "near_singular",
+        "method": "single_gn_k1",
+        "repeat": "0",
+        "frame": "100",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.5215644649073305,
+          3.7694325056821,
+          1.9429270222534627,
+          -6.021654413170218,
+          -0.03633711360999212,
+          3.0057784773206477
+        ],
+        "position_error": "0.001091729157524516",
+        "orientation_error": "0.004492888493228415",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "99596b92d749cfb0d60a69c35f886435bac6c03cd106abd1b9d3ecf6ec5f9596",
+    "robot": "panda",
+    "previous_q": [
+      -0.6837699193344622,
+      -0.07906657026608169,
+      -1.3239165977778098,
+      -1.6264612037172146,
+      0.9079126971298486,
+      1.5360357771655362,
+      -0.2505606542017337
+    ],
+    "target_position": [
+      -0.1987494486605856,
+      -0.5174620358187976,
+      0.6475908600526888
+    ],
+    "target_rotation": [
+      [
+        -0.29727922321826594,
+        -0.5694116981556053,
+        0.7664172371797844
+      ],
+      [
+        -0.9435421587955503,
+        0.05234908939843509,
+        -0.327089846089094
+      ],
+      [
+        0.1461275402454204,
+        -0.8203839898746832,
+        -0.5528262395537304
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_k1",
+        "repeat": "0",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.7134899063251253,
+          -0.035466570266125284,
+          -1.3675165977777661,
+          -1.626463104940337,
+          0.9462227135182327,
+          1.5227189742467764,
+          -0.27479394677887975
+        ],
+        "position_error": "0.0013528943289792107",
+        "orientation_error": "0.012513914523817013",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_k1",
+        "repeat": "2",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.7134899063251253,
+          -0.035466570266125284,
+          -1.3675165977777661,
+          -1.626463104940337,
+          0.9462227135182327,
+          1.5227189742467764,
+          -0.27479394677887975
+        ],
+        "position_error": "0.0013528943289792107",
+        "orientation_error": "0.012513914523817013",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_k1",
+        "repeat": "1",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.7134899063251253,
+          -0.035466570266125284,
+          -1.3675165977777661,
+          -1.626463104940337,
+          0.9462227135182327,
+          1.5227189742467764,
+          -0.27479394677887975
+        ],
+        "position_error": "0.0013528943289792107",
+        "orientation_error": "0.012513914523817013",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "99d76050ae371288ad457fc997446305c1a6ea08b5db988906cc87e12168bd95",
+    "robot": "panda",
+    "previous_q": [
+      -1.9293131851160747,
+      0.06421543896210093,
+      0.6301751028543384,
+      -0.5205091626908492,
+      2.897299999999,
+      2.375463562357748,
+      1.675876073517439
+    ],
+    "target_position": [
+      0.051300443138924096,
+      -0.30146039523809065,
+      1.1315991953646352
+    ],
+    "target_rotation": [
+      [
+        0.9805471082637169,
+        -0.18471113228896463,
+        0.06640155182064607
+      ],
+      [
+        0.16834914478824875,
+        0.9653568004977725,
+        0.19936101219087132
+      ],
+      [
+        -0.10092538790971595,
+        -0.18430421954266846,
+        0.9776737803245218
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "617dfe3c6044a249e2b35c9a35fdace22f1d096e467cd2c20a564e43995edf0f",
+        "site_id": "trajectory_042",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "91",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -1.9382406160825567,
+          0.0750687516701895,
+          0.6487234102061137,
+          -0.5067575827757537,
+          2.897299999999,
+          2.38539889817484,
+          1.6662619430858108
+        ],
+        "position_error": "0.001037936025745475",
+        "orientation_error": "0.0038882288070868597",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "617dfe3c6044a249e2b35c9a35fdace22f1d096e467cd2c20a564e43995edf0f",
+        "site_id": "trajectory_042",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "91",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -1.9382406160825567,
+          0.0750687516701895,
+          0.6487234102061137,
+          -0.5067575827757537,
+          2.897299999999,
+          2.38539889817484,
+          1.6662619430858108
+        ],
+        "position_error": "0.001037936025745475",
+        "orientation_error": "0.0038882288070868597",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "617dfe3c6044a249e2b35c9a35fdace22f1d096e467cd2c20a564e43995edf0f",
+        "site_id": "trajectory_042",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "91",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -1.9382406160825567,
+          0.0750687516701895,
+          0.6487234102061137,
+          -0.5067575827757537,
+          2.897299999999,
+          2.38539889817484,
+          1.6662619430858108
+        ],
+        "position_error": "0.001037936025745475",
+        "orientation_error": "0.0038882288070868597",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "9d80e946830f388536d3b0fcb43de10b356b07a1aeaa394a31029c39060ef30a",
+    "robot": "panda",
+    "previous_q": [
+      -0.4758893823140456,
+      -0.124977354421349,
+      -0.688535995086958,
+      -1.7549982855878385,
+      2.897299999999,
+      1.8998231788544164,
+      -0.8525968198964461
+    ],
+    "target_position": [
+      0.20317521064202765,
+      -0.5271481580365005,
+      0.7638566955700778
+    ],
+    "target_rotation": [
+      [
+        -0.46385797375118826,
+        0.8371587002098924,
+        0.28982941681327906
+      ],
+      [
+        -0.8712765866712053,
+        -0.37187610078608646,
+        -0.32028936164460686
+      ],
+      [
+        -0.1603523922678276,
+        -0.4010903593045088,
+        0.9018944694181049
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "c2ebae0d24e306f3744e9ac2a38add8502705448e7eda234f19e3082f56fa52c",
+        "site_id": "trajectory_094",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "52",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.4625990931706785,
+          -0.13006525267907013,
+          -0.7091992320378985,
+          -1.7566360735397393,
+          2.897299999999,
+          1.9069085012313347,
+          -0.846803065813851
+        ],
+        "position_error": "0.0009204036397632918",
+        "orientation_error": "0.012794009457459211",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "c2ebae0d24e306f3744e9ac2a38add8502705448e7eda234f19e3082f56fa52c",
+        "site_id": "trajectory_094",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "52",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.4625990931706785,
+          -0.13006525267907013,
+          -0.7091992320378985,
+          -1.7566360735397393,
+          2.897299999999,
+          1.9069085012313347,
+          -0.846803065813851
+        ],
+        "position_error": "0.0009204036397632918",
+        "orientation_error": "0.012794009457459211",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "c2ebae0d24e306f3744e9ac2a38add8502705448e7eda234f19e3082f56fa52c",
+        "site_id": "trajectory_094",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "52",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.4625990931706785,
+          -0.13006525267907013,
+          -0.7091992320378985,
+          -1.7566360735397393,
+          2.897299999999,
+          1.9069085012313347,
+          -0.846803065813851
+        ],
+        "position_error": "0.0009204036397632918",
+        "orientation_error": "0.012794009457459211",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "a22d51628b40e5812e67f71d55673cd14a221f59d81c4be6844a498fb5c5660e",
+    "robot": "panda",
+    "previous_q": [
+      2.1553392555645745,
+      -0.12465364937541049,
+      1.5150097143652583,
+      -1.4842950905257373,
+      -0.0719991941262553,
+      1.9831611288395048,
+      1.2738325189173565
+    ],
+    "target_position": [
+      -0.49311282027894715,
+      -0.3213998031382726,
+      0.7140948953324298
+    ],
+    "target_rotation": [
+      [
+        -0.6627587327349095,
+        0.5538570951813053,
+        -0.5039773609012049
+      ],
+      [
+        0.6811728083983134,
+        0.725464148804154,
+        -0.09851585607717718
+      ],
+      [
+        0.3110538012665516,
+        -0.40858791822224866,
+        -0.8580800928820324
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_k0",
+        "repeat": "1",
+        "frame": "120",
+        "failure_kind": "position_tolerance",
+        "q": [
+          2.111739255564618,
+          -0.09113858748618055,
+          1.5586097143652147,
+          -1.48555849345145,
+          -0.09921390431636604,
+          1.9984962585357084,
+          1.2965345652274458
+        ],
+        "position_error": "0.0011368256513364485",
+        "orientation_error": "0.007409397483189784",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_k0",
+        "repeat": "0",
+        "frame": "120",
+        "failure_kind": "position_tolerance",
+        "q": [
+          2.111739255564618,
+          -0.09113858748618055,
+          1.5586097143652147,
+          -1.48555849345145,
+          -0.09921390431636604,
+          1.9984962585357084,
+          1.2965345652274458
+        ],
+        "position_error": "0.0011368256513364485",
+        "orientation_error": "0.007409397483189784",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_k0",
+        "repeat": "2",
+        "frame": "120",
+        "failure_kind": "position_tolerance",
+        "q": [
+          2.111739255564618,
+          -0.09113858748618055,
+          1.5586097143652147,
+          -1.48555849345145,
+          -0.09921390431636604,
+          1.9984962585357084,
+          1.2965345652274458
+        ],
+        "position_error": "0.0011368256513364485",
+        "orientation_error": "0.007409397483189784",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "a7181c0f75cd6931b2b802d28abf86ef7bebfc26248fc62458f9b39c5b23ce06",
+    "robot": "ur5e",
+    "previous_q": [
+      -2.514477589039263,
+      3.788836915361776,
+      1.942340966681047,
+      -5.964240134100226,
+      -0.0259020727580212,
+      2.942846624248786
+    ],
+    "target_position": [
+      0.12537064749736798,
+      -0.19791848653863542,
+      0.5279897607723442
+    ],
+    "target_rotation": [
+      [
+        -0.7126457756022562,
+        -0.3500472817450963,
+        0.6079497504392345
+      ],
+      [
+        -0.5541331925214953,
+        -0.25055336465120487,
+        -0.7938258098650457
+      ],
+      [
+        0.4302004224337694,
+        -0.902601746067904,
+        -0.015417020885268745
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "c173bc1217a828de6205bf0d0c767d2505fbe856597d39d948838ce9d559a094",
+        "site_id": "trajectory_071",
+        "family": "near_singular",
+        "method": "single_gn_osqp",
+        "repeat": "1",
+        "frame": "100",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.52156446490734,
+          3.7694325056821283,
+          1.942927022253453,
+          -6.021654413170108,
+          -0.03633711361000033,
+          3.005778477320519
+        ],
+        "position_error": "0.0010917291575246128",
+        "orientation_error": "0.004492888493230241",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "adfda1919c54d142f754a573fd1aa0b0007fdf9d4871403ca32c2d175c02b7c6",
+    "robot": "panda",
+    "previous_q": [
+      1.7805974990334237,
+      -0.3164937732644491,
+      1.579692364770448,
+      -1.4328204328176766,
+      0.3191276531138896,
+      2.004432076200169,
+      1.1070805984971408
+    ],
+    "target_position": [
+      -0.547673554849864,
+      -0.2587268162879398,
+      0.7166598160495782
+    ],
+    "target_rotation": [
+      [
+        -0.5848694733587828,
+        0.627708227648646,
+        -0.5137217924861818
+      ],
+      [
+        0.780377756195101,
+        0.6081877084487991,
+        -0.14532126110001123
+      ],
+      [
+        0.22121992850762628,
+        -0.4858910291762897,
+        -0.8455599629813884
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_k1",
+        "repeat": "0",
+        "frame": "126",
+        "failure_kind": "position_tolerance",
+        "q": [
+          1.7369974990334673,
+          -0.33027566507946926,
+          1.58837015913655,
+          -1.4259883719899853,
+          0.3603728004366731,
+          2.008843252673804,
+          1.0935763402162744
+        ],
+        "position_error": "0.0010609369203293723",
+        "orientation_error": "0.006718837372984205",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_k1",
+        "repeat": "1",
+        "frame": "126",
+        "failure_kind": "position_tolerance",
+        "q": [
+          1.7369974990334673,
+          -0.33027566507946926,
+          1.58837015913655,
+          -1.4259883719899853,
+          0.3603728004366731,
+          2.008843252673804,
+          1.0935763402162744
+        ],
+        "position_error": "0.0010609369203293723",
+        "orientation_error": "0.006718837372984205",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_k1",
+        "repeat": "2",
+        "frame": "126",
+        "failure_kind": "position_tolerance",
+        "q": [
+          1.7369974990334673,
+          -0.33027566507946926,
+          1.58837015913655,
+          -1.4259883719899853,
+          0.3603728004366731,
+          2.008843252673804,
+          1.0935763402162744
+        ],
+        "position_error": "0.0010609369203293723",
+        "orientation_error": "0.006718837372984205",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "b3f003e1e7b251770f17697161638612064e313b5d651355be9eeec2f873853d",
+    "robot": "panda",
+    "previous_q": [
+      -2.897299999999,
+      1.2991250620184007,
+      -0.3481258372838117,
+      -0.5866303477744046,
+      1.0147506266950654,
+      1.5342076497601678,
+      2.192244216699888
+    ],
+    "target_position": [
+      -0.7647878403560582,
+      -0.16618187086133251,
+      0.20223223765641357
+    ],
+    "target_rotation": [
+      [
+        0.6651805325540127,
+        0.6919526426873501,
+        0.28060007018736227
+      ],
+      [
+        0.6823297744181551,
+        -0.4106758798791862,
+        -0.6047903774266962
+      ],
+      [
+        -0.3032506192139258,
+        0.5937565679328933,
+        -0.7453134910780306
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "f273e2cf840747e85e3dc4a774925882a9057bc0672355948aab35c0de41c7d8",
+        "site_id": "trajectory_050",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "133",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.897299999999,
+          1.3015020412733456,
+          -0.35043864359327054,
+          -0.587694975308763,
+          1.0165828732611308,
+          1.5359892220271345,
+          2.191249919567342
+        ],
+        "position_error": "0.0011637144246928316",
+        "orientation_error": "0.0014193473135918815",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "f273e2cf840747e85e3dc4a774925882a9057bc0672355948aab35c0de41c7d8",
+        "site_id": "trajectory_050",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "133",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.897299999999,
+          1.3015020412733456,
+          -0.35043864359327054,
+          -0.587694975308763,
+          1.0165828732611308,
+          1.5359892220271345,
+          2.191249919567342
+        ],
+        "position_error": "0.0011637144246928316",
+        "orientation_error": "0.0014193473135918815",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "f273e2cf840747e85e3dc4a774925882a9057bc0672355948aab35c0de41c7d8",
+        "site_id": "trajectory_050",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "133",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.897299999999,
+          1.3015020412733456,
+          -0.35043864359327054,
+          -0.587694975308763,
+          1.0165828732611308,
+          1.5359892220271345,
+          2.191249919567342
+        ],
+        "position_error": "0.0011637144246928316",
+        "orientation_error": "0.0014193473135918815",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "b80af2c9ad9ddbc0f44ff656687f91201f6f75726644d8c801f23dfc4b44479b",
+    "robot": "panda",
+    "previous_q": [
+      0.12295693501950317,
+      0.03254462579152285,
+      -1.8596778396508484,
+      -1.0546614287817422,
+      -0.22686985755487762,
+      3.40668298609842,
+      0.4168034141426029
+    ],
+    "target_position": [
+      -0.0229372480940417,
+      -0.3889780549485607,
+      1.0485139181895016
+    ],
+    "target_rotation": [
+      [
+        -0.05384250514455203,
+        -0.9970756582331352,
+        -0.05423206061657158
+      ],
+      [
+        0.7097362428535166,
+        -9.280015601437455e-06,
+        -0.7044675049241487
+      ],
+      [
+        0.7024068979017312,
+        -0.07642075420225791,
+        0.7076612311743701
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_osqp",
+        "repeat": "0",
+        "frame": "97",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          0.07935693501954677,
+          0.03121222370020804,
+          -1.816204465876856,
+          -1.0571849009954952,
+          -0.17726414252918574,
+          3.404454918015436,
+          0.3645034141426552
+        ],
+        "position_error": "0.001164861316357143",
+        "orientation_error": "0.01011565290879545",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "cb2737c167ae847af11bc75ead3a073930efac6f76a44fad3cdd855be5fd803a",
+    "robot": "panda",
+    "previous_q": [
+      0.12295690460870606,
+      0.0325446271138234,
+      -1.8596778142437158,
+      -1.0546614273029489,
+      -0.22686986538531007,
+      3.4066829862289425,
+      0.41680342635112133
+    ],
+    "target_position": [
+      -0.0229372480940417,
+      -0.3889780549485607,
+      1.0485139181895016
+    ],
+    "target_rotation": [
+      [
+        -0.05384250514455203,
+        -0.9970756582331352,
+        -0.05423206061657158
+      ],
+      [
+        0.7097362428535166,
+        -9.280015601437455e-06,
+        -0.7044675049241487
+      ],
+      [
+        0.7024068979017312,
+        -0.07642075420225791,
+        0.7076612311743701
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_k1",
+        "repeat": "2",
+        "frame": "97",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          0.07935690460874967,
+          0.031212225704258835,
+          -1.8162044413124854,
+          -1.0571848998769158,
+          -0.17726414934818305,
+          3.404454918192594,
+          0.3645034263511736
+        ],
+        "position_error": "0.0011648612843855486",
+        "orientation_error": "0.010115652266452002",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_k1",
+        "repeat": "1",
+        "frame": "97",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          0.07935690460874967,
+          0.031212225704258835,
+          -1.8162044413124854,
+          -1.0571848998769158,
+          -0.17726414934818305,
+          3.404454918192594,
+          0.3645034263511736
+        ],
+        "position_error": "0.0011648612843855486",
+        "orientation_error": "0.010115652266452002",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "d677d8817a9086e31204c00a069fcd9714941f266e92b8c76d39517d2a87c663",
+        "site_id": "trajectory_074",
+        "family": "near_singular",
+        "method": "single_gn_k1",
+        "repeat": "0",
+        "frame": "97",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          0.07935690460874967,
+          0.031212225704258835,
+          -1.8162044413124854,
+          -1.0571848998769158,
+          -0.17726414934818305,
+          3.404454918192594,
+          0.3645034263511736
+        ],
+        "position_error": "0.0011648612843855486",
+        "orientation_error": "0.010115652266452002",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "dd982443daf4495a5561d3ecec67f47c2c8cfb9c14a38468bb1ec530224e9ffd",
+    "robot": "panda",
+    "previous_q": [
+      -2.285028554116237,
+      0.08489562811077883,
+      1.0221396147662294,
+      -0.5384835389053577,
+      2.897299999999,
+      2.3830778480781314,
+      1.624905777256005
+    ],
+    "target_position": [
+      0.03692261789942734,
+      -0.31102154184400743,
+      1.1280156521549072
+    ],
+    "target_rotation": [
+      [
+        0.986337284398095,
+        -0.1605715508508907,
+        0.036817637940685766
+      ],
+      [
+        0.15177382709355522,
+        0.9726334217947753,
+        0.17592308608355586
+      ],
+      [
+        -0.06405830793556173,
+        -0.1679315451757842,
+        0.9837151667628726
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "617dfe3c6044a249e2b35c9a35fdace22f1d096e467cd2c20a564e43995edf0f",
+        "site_id": "trajectory_042",
+        "family": "near_singular",
+        "method": "single_gn_osqp",
+        "repeat": "1",
+        "frame": "96",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.323734160948896,
+          0.08945778842047396,
+          1.0657396147661857,
+          -0.5411136779454809,
+          2.897299999999,
+          2.3847069747468743,
+          1.6162520941205303
+        ],
+        "position_error": "0.0010495305921098365",
+        "orientation_error": "0.0017599075692474031",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "e151f586479c16aa2176b3b307283c59ff0a56b30e9f612130cfe3184a9a803a",
+    "robot": "ur5e",
+    "previous_q": [
+      -2.144691676374441,
+      1.4770198177437965,
+      0.09410529287870492,
+      1.2009754596886097,
+      0.6876832430060396,
+      2.2826505515399553
+    ],
+    "target_position": [
+      0.19764046555437653,
+      -0.08404379224933615,
+      -0.5829618876855436
+    ],
+    "target_rotation": [
+      [
+        -0.26739762317106086,
+        -0.01737665771016101,
+        0.9634295837731429
+      ],
+      [
+        0.34287211358419417,
+        0.9326832101385683,
+        0.11198546000228321
+      ],
+      [
+        -0.9005205299429743,
+        0.36027778351216644,
+        -0.24343930220649626
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "e621fdc4f247e6d4f941602738d8470496c5f9695bfc622242db0628c871b460",
+        "site_id": "trajectory_131",
+        "family": "high_curvature",
+        "method": "single_gn_osqp",
+        "repeat": "0",
+        "frame": "98",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.0817598233027077,
+          1.4367330315345994,
+          0.09523031534624112,
+          1.2052365558054878,
+          0.6600618824502406,
+          2.275720264182014
+        ],
+        "position_error": "0.0015160615352755198",
+        "orientation_error": "0.007050709315763946",
+        "internal_status": "deadline",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "e3a6c3ac62eaae83cb8a529c34daff20c378b173b9307bcc628ba8730512d8fa",
+    "robot": "ur5e",
+    "previous_q": [
+      2.24348749133799,
+      6.278746895477694,
+      -0.06251048937724761,
+      0.5894970645632238,
+      2.391508893139186,
+      -2.9915416750067996
+    ],
+    "target_position": [
+      -0.5682971378908792,
+      0.5999887181898277,
+      0.06273346450078568
+    ],
+    "target_rotation": [
+      [
+        0.9656294531006749,
+        0.1814086104064333,
+        0.1861469187896978
+      ],
+      [
+        -0.10364377993573248,
+        -0.3880299419807924,
+        0.9158005956577099
+      ],
+      [
+        0.23836469156551873,
+        -0.9036169986209809,
+        -0.3558912665661877
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "5da7af6fee9b0503eed8ff8c985472802b69533e592a05eedf52d9e28bb5b0c9",
+        "site_id": "trajectory_109",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "53",
+        "failure_kind": "position_tolerance",
+        "q": [
+          2.2548588263157736,
+          6.283185307178586,
+          -0.056452047173322424,
+          0.5968946087252379,
+          2.3790488716826323,
+          -2.9892330762921517
+        ],
+        "position_error": "0.0010155691534328019",
+        "orientation_error": "0.0010208960587105218",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "5da7af6fee9b0503eed8ff8c985472802b69533e592a05eedf52d9e28bb5b0c9",
+        "site_id": "trajectory_109",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "53",
+        "failure_kind": "position_tolerance",
+        "q": [
+          2.2548588263157736,
+          6.283185307178586,
+          -0.056452047173322424,
+          0.5968946087252379,
+          2.3790488716826323,
+          -2.9892330762921517
+        ],
+        "position_error": "0.0010155691534328019",
+        "orientation_error": "0.0010208960587105218",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "5da7af6fee9b0503eed8ff8c985472802b69533e592a05eedf52d9e28bb5b0c9",
+        "site_id": "trajectory_109",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "53",
+        "failure_kind": "position_tolerance",
+        "q": [
+          2.2548588263157736,
+          6.283185307178586,
+          -0.056452047173322424,
+          0.5968946087252379,
+          2.3790488716826323,
+          -2.9892330762921517
+        ],
+        "position_error": "0.0010155691534328019",
+        "orientation_error": "0.0010208960587105218",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "ee0ecb2eb3773a23b878ecc7049713169d9807a4f2d86e48059a242608725f29",
+    "robot": "ur5e",
+    "previous_q": [
+      -2.513101357479498,
+      3.8038494985759206,
+      1.939511167881623,
+      -5.913354464643924,
+      -0.024164283229389544,
+      2.8798572780214338
+    ],
+    "target_position": [
+      0.12537064749736798,
+      -0.19791848653863542,
+      0.5279897607723442
+    ],
+    "target_rotation": [
+      [
+        -0.7126457756022562,
+        -0.3500472817450963,
+        0.6079497504392345
+      ],
+      [
+        -0.5541331925214953,
+        -0.25055336465120487,
+        -0.7938258098650457
+      ],
+      [
+        0.4302004224337694,
+        -0.902601746067904,
+        -0.015417020885268745
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "c173bc1217a828de6205bf0d0c767d2505fbe856597d39d948838ce9d559a094",
+        "site_id": "trajectory_071",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "100",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.525416534020935,
+          3.783298491013776,
+          1.9386257144860792,
+          -5.968400641552179,
+          -0.039676052569930856,
+          2.942789131093167
+        ],
+        "position_error": "0.0011525835382059915",
+        "orientation_error": "0.005851278416735033",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "c173bc1217a828de6205bf0d0c767d2505fbe856597d39d948838ce9d559a094",
+        "site_id": "trajectory_071",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "100",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.525416534020935,
+          3.783298491013776,
+          1.9386257144860792,
+          -5.968400641552179,
+          -0.039676052569930856,
+          2.942789131093167
+        ],
+        "position_error": "0.0011525835382059915",
+        "orientation_error": "0.005851278416735033",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "c173bc1217a828de6205bf0d0c767d2505fbe856597d39d948838ce9d559a094",
+        "site_id": "trajectory_071",
+        "family": "near_singular",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "100",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.525416534020935,
+          3.783298491013776,
+          1.9386257144860792,
+          -5.968400641552179,
+          -0.039676052569930856,
+          2.942789131093167
+        ],
+        "position_error": "0.0011525835382059915",
+        "orientation_error": "0.005851278416735033",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "eeeb3d4a230c224f507d58ab1a2cf7380a60fe5bd391ab0cd921f3cfab8c60c7",
+    "robot": "panda",
+    "previous_q": [
+      -0.6791770004716553,
+      -0.08114455691723885,
+      -1.3268920214439832,
+      -1.6268243386613497,
+      0.9059462687480789,
+      1.5376577219671825,
+      -0.24967096857047597
+    ],
+    "target_position": [
+      -0.1987494486605856,
+      -0.5174620358187976,
+      0.6475908600526888
+    ],
+    "target_rotation": [
+      [
+        -0.29727922321826594,
+        -0.5694116981556053,
+        0.7664172371797844
+      ],
+      [
+        -0.9435421587955503,
+        0.05234908939843509,
+        -0.327089846089094
+      ],
+      [
+        0.1461275402454204,
+        -0.8203839898746832,
+        -0.5528262395537304
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "0",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.7089053852697986,
+          -0.037544556917282444,
+          -1.3704920214439396,
+          -1.6269646907861466,
+          0.944318098452881,
+          1.5245325570524988,
+          -0.2739873352273435
+        ],
+        "position_error": "0.0013832753858933071",
+        "orientation_error": "0.01279007827995759",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "1",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.7089053852697986,
+          -0.037544556917282444,
+          -1.3704920214439396,
+          -1.6269646907861466,
+          0.944318098452881,
+          1.5245325570524988,
+          -0.2739873352273435
+        ],
+        "position_error": "0.0013832753858933071",
+        "orientation_error": "0.01279007827995759",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "700234aadb2ef0f2c5056fb078594221aa97a092642689035f4bffd6e6845062",
+        "site_id": "trajectory_144",
+        "family": "high_curvature",
+        "method": "single_gn_k0",
+        "repeat": "2",
+        "frame": "48",
+        "failure_kind": "position_tolerance+orientation_tolerance",
+        "q": [
+          -0.7089053852697986,
+          -0.037544556917282444,
+          -1.3704920214439396,
+          -1.6269646907861466,
+          0.944318098452881,
+          1.5245325570524988,
+          -0.2739873352273435
+        ],
+        "position_error": "0.0013832753858933071",
+        "orientation_error": "0.01279007827995759",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "f5bb666660fc518f44cef9187a1158f5e100b99ce44b8bed15a3ce9b6232e076",
+    "robot": "panda",
+    "previous_q": [
+      -0.1510059809187399,
+      -0.0004831334760536136,
+      0.9623218545625324,
+      -1.8787790233123012,
+      -0.9128023061474079,
+      2.132314842028999,
+      2.897299999999
+    ],
+    "target_position": [
+      0.42781595804821826,
+      0.4091754964140285,
+      0.5502362213379999
+    ],
+    "target_rotation": [
+      [
+        -0.16437955860593648,
+        -0.6530437348470292,
+        0.7392653387583921
+      ],
+      [
+        -0.9768851695797841,
+        0.003947726513608904,
+        -0.21372828757665704
+      ],
+      [
+        0.1366555017831115,
+        -0.757309907390902,
+        -0.6385976652008597
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "6292d6a262da269233959d5b381d94998db141290bc3e30dd2208b51a11c8100",
+        "site_id": "trajectory_092",
+        "family": "joint_limit_return",
+        "method": "single_gn_k1",
+        "repeat": "2",
+        "frame": "78",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.1074059809187835,
+          0.00044827331649423274,
+          0.9328122667862746,
+          -1.868285444589076,
+          -0.9278682291047988,
+          2.1142819785535814,
+          2.897299999999
+        ],
+        "position_error": "0.00027719657806086925",
+        "orientation_error": "0.00897808132681935",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "6292d6a262da269233959d5b381d94998db141290bc3e30dd2208b51a11c8100",
+        "site_id": "trajectory_092",
+        "family": "joint_limit_return",
+        "method": "single_gn_k1",
+        "repeat": "1",
+        "frame": "78",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.1074059809187835,
+          0.00044827331649423274,
+          0.9328122667862746,
+          -1.868285444589076,
+          -0.9278682291047988,
+          2.1142819785535814,
+          2.897299999999
+        ],
+        "position_error": "0.00027719657806086925",
+        "orientation_error": "0.00897808132681935",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "6292d6a262da269233959d5b381d94998db141290bc3e30dd2208b51a11c8100",
+        "site_id": "trajectory_092",
+        "family": "joint_limit_return",
+        "method": "single_gn_k1",
+        "repeat": "0",
+        "frame": "78",
+        "failure_kind": "orientation_tolerance",
+        "q": [
+          -0.1074059809187835,
+          0.00044827331649423274,
+          0.9328122667862746,
+          -1.868285444589076,
+          -0.9278682291047988,
+          2.1142819785535814,
+          2.897299999999
+        ],
+        "position_error": "0.00027719657806086925",
+        "orientation_error": "0.00897808132681935",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "f6f620eab81798b95df8b98f45cf60e2b8b5522631ea729c5f4585b884619b10",
+    "robot": "ur5e",
+    "previous_q": [
+      -2.514477589039262,
+      3.788836915361782,
+      1.9423409666810454,
+      -5.9642401341002085,
+      -0.025902072758020138,
+      2.9428466242487565
+    ],
+    "target_position": [
+      0.12537064749736798,
+      -0.19791848653863542,
+      0.5279897607723442
+    ],
+    "target_rotation": [
+      [
+        -0.7126457756022562,
+        -0.3500472817450963,
+        0.6079497504392345
+      ],
+      [
+        -0.5541331925214953,
+        -0.25055336465120487,
+        -0.7938258098650457
+      ],
+      [
+        0.4302004224337694,
+        -0.902601746067904,
+        -0.015417020885268745
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "c173bc1217a828de6205bf0d0c767d2505fbe856597d39d948838ce9d559a094",
+        "site_id": "trajectory_071",
+        "family": "near_singular",
+        "method": "single_gn_osqp",
+        "repeat": "2",
+        "frame": "100",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -2.5215644649073417,
+          3.7694325056821345,
+          1.9429270222534507,
+          -6.021654413170083,
+          -0.0363371136100019,
+          3.0057784773204896
+        ],
+        "position_error": "0.0010917291575246548",
+        "orientation_error": "0.004492888493230744",
+        "internal_status": "no_descent",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "faaa7d32220bcfa3d2c5ac8b69577acf0d5a75387e62bc63f89738709774e972",
+    "robot": "panda",
+    "previous_q": [
+      -1.0417222784492095,
+      0.9596871210205417,
+      2.897299999999,
+      -1.0942859780704908,
+      0.9614569606751714,
+      1.4611956455314272,
+      -1.353127488233407
+    ],
+    "target_position": [
+      0.10072890918273415,
+      -0.1342640594182684,
+      1.044714852640566
+    ],
+    "target_rotation": [
+      [
+        -0.17895974768707043,
+        0.05164040112500403,
+        -0.9825002176485399
+      ],
+      [
+        -0.883698160778748,
+        0.4305475737692886,
+        0.18359288482301575
+      ],
+      [
+        0.4324938951523343,
+        0.9010893716458027,
+        -0.03141615767298948
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "98aff3582a84a6146748002550a34794014c19c6a94d633ebdfdfefa61217699",
+        "site_id": "trajectory_096",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "2",
+        "frame": "48",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -1.0559555876390072,
+          0.967317432296984,
+          2.897299999999,
+          -1.09608314282956,
+          0.9788341570711727,
+          1.4500686524938318,
+          -1.35122831796699
+        ],
+        "position_error": "0.001045646269757589",
+        "orientation_error": "0.0021264459935490068",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "98aff3582a84a6146748002550a34794014c19c6a94d633ebdfdfefa61217699",
+        "site_id": "trajectory_096",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "1",
+        "frame": "48",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -1.0559555876390072,
+          0.967317432296984,
+          2.897299999999,
+          -1.09608314282956,
+          0.9788341570711727,
+          1.4500686524938318,
+          -1.35122831796699
+        ],
+        "position_error": "0.001045646269757589",
+        "orientation_error": "0.0021264459935490068",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      },
+      {
+        "uid": "98aff3582a84a6146748002550a34794014c19c6a94d633ebdfdfefa61217699",
+        "site_id": "trajectory_096",
+        "family": "joint_limit_return",
+        "method": "single_gn_clip",
+        "repeat": "0",
+        "frame": "48",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -1.0559555876390072,
+          0.967317432296984,
+          2.897299999999,
+          -1.09608314282956,
+          0.9788341570711727,
+          1.4500686524938318,
+          -1.35122831796699
+        ],
+        "position_error": "0.001045646269757589",
+        "orientation_error": "0.0021264459935490068",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "fd7483419acb37b0698d74d96763247c7210ec891dee628d25e00c0b2f5690a2",
+    "robot": "panda",
+    "previous_q": [
+      1.780597499032429,
+      -0.31649377327851486,
+      1.5796923647592267,
+      -1.4328204328162795,
+      0.319127653133883,
+      2.004432076195856,
+      1.1070805984868466
+    ],
+    "target_position": [
+      -0.547673554849864,
+      -0.2587268162879398,
+      0.7166598160495782
+    ],
+    "target_rotation": [
+      [
+        -0.5848694733587828,
+        0.627708227648646,
+        -0.5137217924861818
+      ],
+      [
+        0.780377756195101,
+        0.6081877084487991,
+        -0.14532126110001123
+      ],
+      [
+        0.22121992850762628,
+        -0.4858910291762897,
+        -0.8455599629813884
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "16eb39236436e36522bf1742998d048f374e3572a63c53e2c2e5ca5d926ace93",
+        "site_id": "trajectory_104",
+        "family": "joint_limit_return",
+        "method": "single_gn_osqp",
+        "repeat": "2",
+        "frame": "126",
+        "failure_kind": "position_tolerance",
+        "q": [
+          1.7369974990327084,
+          -0.3302756156536894,
+          1.5883702023351756,
+          -1.4259883759880676,
+          0.360372730109564,
+          2.0088432681669053,
+          1.093576375827646
+        ],
+        "position_error": "0.0010609369206919979",
+        "orientation_error": "0.006718837374460308",
+        "internal_status": "iteration_limit",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  },
+  {
+    "input_id": "fde1ad725563456ef5767c6ec8259b1928f843da4030295adf56e52df9b4e43e",
+    "robot": "panda",
+    "previous_q": [
+      -0.39112216304346065,
+      -0.03840120900737504,
+      -1.3454438875588142,
+      -1.6100820014157458,
+      0.4287949964208516,
+      2.104197608285163,
+      1.4491280856278161
+    ],
+    "target_position": [
+      -0.10853438665351567,
+      -0.5890354085508129,
+      0.6709694859232095
+    ],
+    "target_rotation": [
+      [
+        -0.8974056055116345,
+        0.31925665259942243,
+        0.3045297505455063
+      ],
+      [
+        0.10550221222570139,
+        0.8254735863849605,
+        -0.5544931391786867
+      ],
+      [
+        -0.42840688884724953,
+        -0.4654766889456044,
+        -0.7744669067406672
+      ]
+    ],
+    "dt": 0.02,
+    "aliases": [
+      {
+        "uid": "4f1940d91117f91ea27fc47a289476bf2361c47cbbb34e21aa92e2a9bf8c25da",
+        "site_id": "trajectory_120",
+        "family": "high_curvature",
+        "method": "single_gn_osqp",
+        "repeat": "1",
+        "frame": "53",
+        "failure_kind": "position_tolerance",
+        "q": [
+          -0.3913374987404305,
+          -0.015071474495428335,
+          -1.3890438875587705,
+          -1.612567650827165,
+          0.48109499642079934,
+          2.112027065625971,
+          1.4570620592026922
+        ],
+        "position_error": "0.0013321462502943484",
+        "orientation_error": "0.008051598942506866",
+        "internal_status": "stationary",
+        "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv"
+      }
+    ]
+  }
+]

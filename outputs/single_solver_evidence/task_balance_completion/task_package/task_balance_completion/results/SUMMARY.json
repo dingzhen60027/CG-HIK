@@ -1,0 +1,168 @@
+[
+  {
+    "method": "cached_tight",
+    "kappa": 1,
+    "repeat": 0,
+    "complete": 40,
+    "deadline_complete": 40,
+    "latency_ms": [
+      0.27747299999999997,
+      0.4364580500000002,
+      0.6717213500000007
+    ],
+    "cumulative_ms": 1813.7094280000001,
+    "edge_pct": 0.9333333333333335,
+    "acceleration_rms": 3.2143507266191564,
+    "evaluations": 11889,
+    "dual_updates": 5889,
+    "reason_counts": {
+      "task_first": 5793,
+      "tight_gap": 34
+    },
+    "measurement": "local; same warm Numba geometry and box QP for all variants; independent Python FK in timed final check; one source-reconstructed Panda development set; no server TRAC/Pink benchmark",
+    "file": "cached_tight_k1_r0.json",
+    "dataset": "original 40-path development reconstruction"
+  },
+  {
+    "method": "gn",
+    "kappa": 1,
+    "repeat": 0,
+    "complete": 40,
+    "deadline_complete": 40,
+    "latency_ms": [
+      0.2691205,
+      0.35565455,
+      0.5024457000000001
+    ],
+    "cumulative_ms": 1738.242724,
+    "edge_pct": 0.9333333333333335,
+    "acceleration_rms": 3.2143505507535695,
+    "evaluations": 23654,
+    "dual_updates": 0,
+    "reason_counts": {},
+    "measurement": "local; same warm Numba geometry and box QP for all variants; independent Python FK in timed final check; one source-reconstructed Panda development set; no server TRAC/Pink benchmark",
+    "file": "gn_k1_r0.json",
+    "dataset": "original 40-path development reconstruction"
+  },
+  {
+    "method": "cached_tight",
+    "kappa": 1,
+    "repeat": 0,
+    "complete": 154,
+    "deadline_complete": 154,
+    "latency_ms": [
+      0.26828949999999996,
+      0.4071984999999999,
+      6.563648799999967
+    ],
+    "cumulative_ms": 10311.718689000001,
+    "edge_pct": 0.5322294500295683,
+    "acceleration_rms": 3.7327081162551137,
+    "evaluations": 102100,
+    "dual_updates": 58901,
+    "reason_counts": {
+      "task_first": 23007,
+      "task": 9,
+      "tight_gap": 6261,
+      "cap": 22,
+      "deadline": 25
+    },
+    "measurement": "local; same warm Numba geometry and box QP for all variants; independent Python FK in timed final check; a locally reconstructed previously observed 160-Panda set; not an independent evaluation; no server TRAC/Pink benchmark",
+    "file": "observed160_cached_tight_k1_r0.json",
+    "dataset": "previously observed 160-path reconstruction"
+  },
+  {
+    "method": "gn",
+    "kappa": 1,
+    "repeat": 0,
+    "complete": 154,
+    "deadline_complete": 154,
+    "latency_ms": [
+      0.272756,
+      0.41823304999999983,
+      1.486860429999985
+    ],
+    "cumulative_ms": 7414.0001649999995,
+    "edge_pct": 0.4996189347108138,
+    "acceleration_rms": 3.7251672212027898,
+    "evaluations": 125521,
+    "dual_updates": 0,
+    "reason_counts": {},
+    "measurement": "local; same warm Numba geometry and box QP for all variants; independent Python FK in timed final check; a locally reconstructed previously observed 160-Panda set; not an independent evaluation; no server TRAC/Pink benchmark",
+    "file": "observed160_gn_k1_r0.json",
+    "dataset": "previously observed 160-path reconstruction"
+  },
+  {
+    "method": "relative",
+    "kappa": 1,
+    "repeat": 0,
+    "complete": 154,
+    "deadline_complete": 154,
+    "latency_ms": [
+      0.263928,
+      0.39922004999999994,
+      5.143907529999725
+    ],
+    "cumulative_ms": 9636.748254,
+    "edge_pct": 0.5322294500295683,
+    "acceleration_rms": 3.7328939269854415,
+    "evaluations": 90860,
+    "dual_updates": 48740,
+    "reason_counts": {
+      "task_first": 23009,
+      "relative_progress": 3021,
+      "task": 7,
+      "tight_gap": 2321,
+      "cap": 53,
+      "deadline": 12
+    },
+    "measurement": "local; same warm Numba geometry and box QP for all variants; independent Python FK in timed final check; a locally reconstructed previously observed 160-Panda set; not an independent evaluation; no server TRAC/Pink benchmark",
+    "file": "observed160_relative_k1_r0.json",
+    "dataset": "previously observed 160-path reconstruction"
+  },
+  {
+    "method": "old_local_balance",
+    "kappa": 1,
+    "repeat": 0,
+    "complete": 40,
+    "deadline_complete": 40,
+    "latency_ms": [
+      0.6315535,
+      0.89096805,
+      1.297995540000002
+    ],
+    "cumulative_ms": 4009.23943,
+    "edge_pct": 0.9333333333333335,
+    "acceleration_rms": 3.214350726616722,
+    "evaluations": 23957,
+    "dual_updates": 5889,
+    "reason_counts": {},
+    "measurement": "local; same warm Numba geometry and box QP for all variants; independent Python FK in timed final check; one source-reconstructed Panda development set; no server TRAC/Pink benchmark",
+    "file": "old_local_balance_k1_r0.json",
+    "dataset": "original 40-path development reconstruction"
+  },
+  {
+    "method": "relative",
+    "kappa": 1,
+    "repeat": 0,
+    "complete": 40,
+    "deadline_complete": 40,
+    "latency_ms": [
+      0.2729865,
+      0.41414650000000003,
+      0.5867876200000003
+    ],
+    "cumulative_ms": 1778.814083,
+    "edge_pct": 0.9333333333333335,
+    "acceleration_rms": 3.2143505507535695,
+    "evaluations": 11827,
+    "dual_updates": 5827,
+    "reason_counts": {
+      "task_first": 5793,
+      "relative_progress": 34
+    },
+    "measurement": "local; same warm Numba geometry and box QP for all variants; independent Python FK in timed final check; one source-reconstructed Panda development set; no server TRAC/Pink benchmark",
+    "file": "relative_k1_r0.json",
+    "dataset": "original 40-path development reconstruction"
+  }
+]

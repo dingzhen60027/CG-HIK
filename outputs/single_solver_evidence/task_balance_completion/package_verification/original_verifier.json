@@ -1,0 +1,455 @@
+{
+  "input": {
+    "robot": "panda",
+    "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv",
+    "source_method": "single_gn_k0",
+    "uid": "c2ebae0d24e306f3744e9ac2a38add8502705448e7eda234f19e3082f56fa52c",
+    "site_id": "trajectory_094",
+    "frame": 53,
+    "dt": 0.02,
+    "previous_q": [
+      -0.4204036654871291,
+      -0.1352875078561473,
+      -0.7479184101818351,
+      -1.7565675086908759,
+      2.897299999999,
+      1.9090280224781317,
+      -0.8487365263350845
+    ],
+    "target_position": [
+      0.19641911618610228,
+      -0.5294395619380362,
+      0.7632061316251734
+    ],
+    "target_rotation": [
+      [
+        -0.46526835440914216,
+        0.8400441325944378,
+        0.27901830348396106
+      ],
+      [
+        -0.8675071824025526,
+        -0.37008348016679626,
+        -0.332369532580255
+      ],
+      [
+        -0.1759450109136194,
+        -0.3966914077734624,
+        0.9009324503720106
+      ]
+    ]
+  },
+  "solver_calls": 0,
+  "records": [
+    {
+      "method": "gn",
+      "repeat": 0,
+      "q": [
+        -0.38085684671482817,
+        -0.14562408150583173,
+        -0.7915184101817916,
+        -1.7584102890493405,
+        2.897299999999,
+        1.9174127459789103,
+        -0.8466715507098627
+      ],
+      "accepted": false,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.00026077928565497753,
+      "orientation_rad": 0.009526955835252406,
+      "orientation_deg": 0.5458543609674948,
+      "reasons": [
+        "orientation_tolerance"
+      ],
+      "step": [
+        0.03954681877230093,
+        -0.010336573649684433,
+        -0.04359999999995645,
+        -0.0018427803584646352,
+        0.0,
+        0.008384723500778568,
+        0.0020649756252217877
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "gn",
+      "repeat": 1,
+      "q": [
+        -0.38085684671482817,
+        -0.14562408150583173,
+        -0.7915184101817916,
+        -1.7584102890493405,
+        2.897299999999,
+        1.9174127459789103,
+        -0.8466715507098627
+      ],
+      "accepted": false,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.00026077928565497753,
+      "orientation_rad": 0.009526955835252406,
+      "orientation_deg": 0.5458543609674948,
+      "reasons": [
+        "orientation_tolerance"
+      ],
+      "step": [
+        0.03954681877230093,
+        -0.010336573649684433,
+        -0.04359999999995645,
+        -0.0018427803584646352,
+        0.0,
+        0.008384723500778568,
+        0.0020649756252217877
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "gn",
+      "repeat": 2,
+      "q": [
+        -0.38085684671482817,
+        -0.14562408150583173,
+        -0.7915184101817916,
+        -1.7584102890493405,
+        2.897299999999,
+        1.9174127459789103,
+        -0.8466715507098627
+      ],
+      "accepted": false,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.00026077928565497753,
+      "orientation_rad": 0.009526955835252406,
+      "orientation_deg": 0.5458543609674948,
+      "reasons": [
+        "orientation_tolerance"
+      ],
+      "step": [
+        0.03954681877230093,
+        -0.010336573649684433,
+        -0.04359999999995645,
+        -0.0018427803584646352,
+        0.0,
+        0.008384723500778568,
+        0.0020649756252217877
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "old_local_balance",
+      "repeat": 0,
+      "q": [
+        -0.38027739926017456,
+        -0.14836103734420575,
+        -0.7915184101817916,
+        -1.7612773674567008,
+        2.897299999999,
+        1.9169338885615583,
+        -0.8481138713967367
+      ],
+      "accepted": true,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.0009718537785781093,
+      "orientation_rad": 0.008211448468080746,
+      "orientation_deg": 0.470481340910192,
+      "reasons": [],
+      "step": [
+        0.04012626622695453,
+        -0.013073529488058455,
+        -0.04359999999995645,
+        -0.00470985876582497,
+        0.0,
+        0.007905866083426583,
+        0.0006226549383477886
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "old_local_balance",
+      "repeat": 1,
+      "q": [
+        -0.38027739926017456,
+        -0.14836103734420575,
+        -0.7915184101817916,
+        -1.7612773674567008,
+        2.897299999999,
+        1.9169338885615583,
+        -0.8481138713967367
+      ],
+      "accepted": true,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.0009718537785781093,
+      "orientation_rad": 0.008211448468080746,
+      "orientation_deg": 0.470481340910192,
+      "reasons": [],
+      "step": [
+        0.04012626622695453,
+        -0.013073529488058455,
+        -0.04359999999995645,
+        -0.00470985876582497,
+        0.0,
+        0.007905866083426583,
+        0.0006226549383477886
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "old_local_balance",
+      "repeat": 2,
+      "q": [
+        -0.38027739926017456,
+        -0.14836103734420575,
+        -0.7915184101817916,
+        -1.7612773674567008,
+        2.897299999999,
+        1.9169338885615583,
+        -0.8481138713967367
+      ],
+      "accepted": true,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.0009718537785781093,
+      "orientation_rad": 0.008211448468080746,
+      "orientation_deg": 0.470481340910192,
+      "reasons": [],
+      "step": [
+        0.04012626622695453,
+        -0.013073529488058455,
+        -0.04359999999995645,
+        -0.00470985876582497,
+        0.0,
+        0.007905866083426583,
+        0.0006226549383477886
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "cached_tight",
+      "repeat": 0,
+      "q": [
+        -0.38027739926017456,
+        -0.14836103734420575,
+        -0.7915184101817916,
+        -1.7612773674567008,
+        2.897299999999,
+        1.9169338885615583,
+        -0.8481138713967367
+      ],
+      "accepted": true,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.0009718537785781093,
+      "orientation_rad": 0.008211448468080746,
+      "orientation_deg": 0.470481340910192,
+      "reasons": [],
+      "step": [
+        0.04012626622695453,
+        -0.013073529488058455,
+        -0.04359999999995645,
+        -0.00470985876582497,
+        0.0,
+        0.007905866083426583,
+        0.0006226549383477886
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "cached_tight",
+      "repeat": 1,
+      "q": [
+        -0.38027739926017456,
+        -0.14836103734420575,
+        -0.7915184101817916,
+        -1.7612773674567008,
+        2.897299999999,
+        1.9169338885615583,
+        -0.8481138713967367
+      ],
+      "accepted": true,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.0009718537785781093,
+      "orientation_rad": 0.008211448468080746,
+      "orientation_deg": 0.470481340910192,
+      "reasons": [],
+      "step": [
+        0.04012626622695453,
+        -0.013073529488058455,
+        -0.04359999999995645,
+        -0.00470985876582497,
+        0.0,
+        0.007905866083426583,
+        0.0006226549383477886
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "cached_tight",
+      "repeat": 2,
+      "q": [
+        -0.38027739926017456,
+        -0.14836103734420575,
+        -0.7915184101817916,
+        -1.7612773674567008,
+        2.897299999999,
+        1.9169338885615583,
+        -0.8481138713967367
+      ],
+      "accepted": true,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.0009718537785781093,
+      "orientation_rad": 0.008211448468080746,
+      "orientation_deg": 0.470481340910192,
+      "reasons": [],
+      "step": [
+        0.04012626622695453,
+        -0.013073529488058455,
+        -0.04359999999995645,
+        -0.00470985876582497,
+        0.0,
+        0.007905866083426583,
+        0.0006226549383477886
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "relative",
+      "repeat": 0,
+      "q": [
+        -0.37974026319238063,
+        -0.14882418902790448,
+        -0.7915184101817916,
+        -1.7609080777759363,
+        2.897299999999,
+        1.9172981886651705,
+        -0.8488775578518711
+      ],
+      "accepted": true,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.0009731705850697795,
+      "orientation_rad": 0.00804224380330363,
+      "orientation_deg": 0.4607866277445374,
+      "reasons": [],
+      "step": [
+        0.04066340229474846,
+        -0.013536681171757187,
+        -0.04359999999995645,
+        -0.0043405690850604195,
+        0.0,
+        0.008270166187038797,
+        -0.0001410315167866827
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "relative",
+      "repeat": 1,
+      "q": [
+        -0.37974026319238063,
+        -0.14882418902790448,
+        -0.7915184101817916,
+        -1.7609080777759363,
+        2.897299999999,
+        1.9172981886651705,
+        -0.8488775578518711
+      ],
+      "accepted": true,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.0009731705850697795,
+      "orientation_rad": 0.00804224380330363,
+      "orientation_deg": 0.4607866277445374,
+      "reasons": [],
+      "step": [
+        0.04066340229474846,
+        -0.013536681171757187,
+        -0.04359999999995645,
+        -0.0043405690850604195,
+        0.0,
+        0.008270166187038797,
+        -0.0001410315167866827
+      ],
+      "velocity_utilization": 0.9999999999990011
+    },
+    {
+      "method": "relative",
+      "repeat": 2,
+      "q": [
+        -0.37974026319238063,
+        -0.14882418902790448,
+        -0.7915184101817916,
+        -1.7609080777759363,
+        2.897299999999,
+        1.9172981886651705,
+        -0.8488775578518711
+      ],
+      "accepted": true,
+      "finite": true,
+      "joint_limit_ok": true,
+      "velocity_ok": true,
+      "position_m": 0.0009731705850697795,
+      "orientation_rad": 0.00804224380330363,
+      "orientation_deg": 0.4607866277445374,
+      "reasons": [],
+      "step": [
+        0.04066340229474846,
+        -0.013536681171757187,
+        -0.04359999999995645,
+        -0.0043405690850604195,
+        0.0,
+        0.008270166187038797,
+        -0.0001410315167866827
+      ],
+      "velocity_utilization": 0.9999999999990011
+    }
+  ],
+  "source_sha256": "73fad1500997a7c4df2038a38fbb0f6a12638cc2b61b9ec7acf76d8a3419b3d2",
+  "archive_sha256": "558fa6f9ba679304d422a1f0a139d7e80f729b0b2e1d6858c5a755398392d8c0",
+  "package_files": {
+    "panda_observed160.json": "10d9dbf47262b7aee49957d9bc3ce0d7c5f0c551c9361f2e1c09d98fd2aecfa0",
+    "check_and_run.py": "4d06372a2762ffce76731d7723da4f5f7e04d119fddbed8fe13f816786353ede",
+    "panda_development.json": "9d1b462aa2a675bf300704519baa4f0558b894bcb106cb5695f6be2de88dd3f5",
+    "reconstruct_observed.py": "126a8a41628e245e4adbdec43ad4bfcc1bf8f93ebcaea636dde21aa52b761806",
+    "MANIFEST.json": "d887e644a7ce10052b9a7f6d6048d07627f72df23ff75e6aa07f1ce428192eed",
+    "CODEX_TASK.md": "740df4fd293d50b113b040626c17cc46ac4baa2ce77c9bd9a4f8350e2058089b",
+    "PROVENANCE.json": "dfe5933da48d80047927ed4a985a9b1c4d1200a023ffac95df3052d76ab06ff0",
+    "METHOD.md": "72fbec3297cc53822d4ccabc8645e97dbec06d757060f52c5fa4024f7a4821e3",
+    "README.md": "0d24118f511307acebfb69da2627345955b83558b1ca666e61fc5934136150c3",
+    "inexact_balance.py": "b51c6ac997dd31ccc3494eff5c7f99a04cd5edd63146f8e7028cfb866dbdf94c",
+    "results/math_checks.json": "586396e63481c7e3f09e714193fc4d698041c47a8f28af7ec6153f87b0dd96ff",
+    "results/observed160_relative_k1_r0.json": "afc8e847ee3cea1f66aa6a97136afbfdd543d526fc54f2dfd968788a6273379e",
+    "results/observed160_gn_k1_r0.json": "d1d170aec932a7bcdb6c16a5f6deedfbb0e12c7a6e9ec117399b47de88a389eb",
+    "results/cached_tight_k1_r0.json": "1c13f102a1573feda2a86ef2474341d8aad383a72459040cdaed9169477087e8",
+    "results/relative_k1_r0.json": "26208c66ade99bee239620eb58118b79a206f738e4ee90fc4c6cc230ce8eb0cc",
+    "results/SUMMARY.csv": "21dcfca4b173cf53e612fc14cf78fe12b4b7878a3d8ca034b1bfb050e553b14a",
+    "results/gn_k1_r0.json": "e2f251fc52afa94997d4b2673f8df9383622c4fa1d2f603aa0addb4d8d2a5bb2",
+    "results/old_local_balance_k1_r0.json": "75ea9431457ed5858aa71b8a74bf5bf31d2ba79c77d1ab4c8a065e2f3952c50a",
+    "results/selected.json": "3994b7de82eecf5322701be30100fdecbc2fb590465b0b4d226ed891452fd394",
+    "results/SUMMARY.json": "015eef26a304f8308de2a75b1e1e8186dc29d45c4e7a35e680c3254e73c6e131",
+    "results/reconstruction_check.json": "d3d8086436540ff2028152c68d283605692ab737d48101460d55e6d018b16364",
+    "results/observed160_cached_tight_k1_r0.json": "38565c8562ae90dcf8ee595228cc4aff261426d00d5c8ff423493be9ffbfd0f9",
+    "reference/panda_model_local.py": "6ade2f6e5df8ac98f1f5f58657b8a238d85625cea300361782c4c452e1897cab",
+    "reference/check_selected_input.py": "f10ffb8601ace6f161b36612b91effd4e9e4fffa45770255f3c5320cdbbf6066",
+    "reference/selected_input_source.json": "eb6d1596ddee6d890eac957cd92d53f3a58154cf6fdf24a39f0b5135ab11ab0c",
+    "reference/balanced_old_local.py": "50c3493d0dcfe793c29f9b2b03d3baba7eb560a349392764255d62916e2326ce",
+    "reference/task_excess_gn.py": "a177f363605642421abbe05ca8a49b67ffc20c5c1cb0a7c6d6288029a26a0d09",
+    "reference/bounded_gn_reference.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a"
+  }
+}

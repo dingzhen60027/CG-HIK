@@ -1,0 +1,9 @@
+{
+  "observed_source": "existing 160-trajectory generator; not fresh",
+  "assumed_no_seed_collisions": true,
+  "uid094": "c2ebae0d24e306f3744e9ac2a38add8502705448e7eda234f19e3082f56fa52c",
+  "matches_selected_uid": true,
+  "target094_frame53_max_position_difference": 5.551115123125783e-17,
+  "target094_frame53_max_rotation_difference": 1.6653345369377348e-16,
+  "all_target_identity_status": "Only one historical target crosschecked locally; full array comparison required in original repository."
+}

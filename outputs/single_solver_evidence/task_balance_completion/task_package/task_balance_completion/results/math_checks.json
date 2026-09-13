@@ -1,0 +1,575 @@
+{
+  "random_tests": [
+    {
+      "id": 0,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 16.639037086266217,
+      "upper": 17.449092980866634,
+      "lower": 16.63310439196744,
+      "reason": "relative_progress",
+      "dual_updates": 3,
+      "achieved_fraction": 0.946380698374803
+    },
+    {
+      "id": 1,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 15.33171510102296,
+      "upper": 19.384184172255633,
+      "lower": 13.761951065890129,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.8906849974356109
+    },
+    {
+      "id": 2,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 3.9004478455270646,
+      "upper": 4.840209461311535,
+      "lower": 2.9952926642341997,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.8939551501124472
+    },
+    {
+      "id": 3,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 32.63539385004672,
+      "upper": 32.639528067531295,
+      "lower": 31.143404603142255,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.9999226536895225
+    },
+    {
+      "id": 4,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 74.68689973524609,
+      "upper": 77.4726001444226,
+      "lower": 71.69667908133074,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.8931012624211166
+    },
+    {
+      "id": 5,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 11.360049226839847,
+      "upper": 11.360049226841685,
+      "lower": 11.360049226841685,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.9999999999998195
+    },
+    {
+      "id": 6,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 23.972638344540037,
+      "upper": 24.53683007941787,
+      "lower": 23.968336514290034,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9760727864470803
+    },
+    {
+      "id": 7,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 14.686639989271303,
+      "upper": 14.686639989271246,
+      "lower": 14.686639989271246,
+      "reason": "relative_progress",
+      "dual_updates": 3,
+      "achieved_fraction": 1.0000000000000062
+    },
+    {
+      "id": 8,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 21.034042165125673,
+      "upper": 21.15596182368163,
+      "lower": 21.033890744251394,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.9930211335217138
+    },
+    {
+      "id": 9,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 43.06568067441414,
+      "upper": 48.34952851774098,
+      "lower": 42.93668383945012,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.8627526633790579
+    },
+    {
+      "id": 10,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 7.011980009098006,
+      "upper": 7.345995943714152,
+      "lower": 7.009007969273223,
+      "reason": "relative_progress",
+      "dual_updates": 3,
+      "achieved_fraction": 0.9550970591949812
+    },
+    {
+      "id": 11,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 18.59365913778419,
+      "upper": 20.70314472689095,
+      "lower": 18.32116242264615,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9387803299657459
+    },
+    {
+      "id": 12,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 5.835188769423488,
+      "upper": 7.586917904698979,
+      "lower": 4.849537690201738,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.8791763777440549
+    },
+    {
+      "id": 13,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 1.563890940644645,
+      "upper": 1.9250321408188946,
+      "lower": 1.265417608715577,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9333435802103838
+    },
+    {
+      "id": 14,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 17.221422017959252,
+      "upper": 17.40959905846714,
+      "lower": 17.221080016199032,
+      "reason": "relative_progress",
+      "dual_updates": 4,
+      "achieved_fraction": 0.9724965514354601
+    },
+    {
+      "id": 15,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 9.013594406767414,
+      "upper": 9.102564064610155,
+      "lower": 9.013410707976746,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.9865694342488577
+    },
+    {
+      "id": 16,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 69.69912747110615,
+      "upper": 69.69912747110615,
+      "lower": 69.69912747110615,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 1.0
+    },
+    {
+      "id": 17,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 7.46761089208261,
+      "upper": 8.646243658123788,
+      "lower": 7.395247598466751,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.8972429696165909
+    },
+    {
+      "id": 18,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 9.020729515473436,
+      "upper": 9.813073037587168,
+      "lower": 8.944092992911385,
+      "reason": "relative_progress",
+      "dual_updates": 3,
+      "achieved_fraction": 0.9300210807454915
+    },
+    {
+      "id": 19,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 40.967246294331936,
+      "upper": 40.967246294331936,
+      "lower": 40.967246294331936,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 1.0
+    },
+    {
+      "id": 20,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 5.663522910155701,
+      "upper": 5.831679915062369,
+      "lower": 5.658632355208418,
+      "reason": "relative_progress",
+      "dual_updates": 3,
+      "achieved_fraction": 0.9739837154102495
+    },
+    {
+      "id": 21,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 8.504394606058172,
+      "upper": 10.484231823944146,
+      "lower": 7.938733806056617,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.885162861773337
+    },
+    {
+      "id": 22,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 37.04227339892075,
+      "upper": 38.43723100943948,
+      "lower": 37.02736133947401,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9809824702521902
+    },
+    {
+      "id": 23,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 5.734456184568154,
+      "upper": 8.153498568450646,
+      "lower": 4.870262805764759,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.8925515320137538
+    },
+    {
+      "id": 24,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 4.39721501515021,
+      "upper": 5.914196562453565,
+      "lower": 3.7045326704887724,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.8815602018191011
+    },
+    {
+      "id": 25,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 11.67355812862884,
+      "upper": 13.4209721516143,
+      "lower": 11.590188290613279,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.8808557910703189
+    },
+    {
+      "id": 26,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 40.38096621551382,
+      "upper": 41.329599173852486,
+      "lower": 38.58635385170932,
+      "reason": "relative_progress",
+      "dual_updates": 3,
+      "achieved_fraction": 0.927088279168717
+    },
+    {
+      "id": 27,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 8.010286953277625,
+      "upper": 10.177079451176064,
+      "lower": 7.703774890243024,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9196056645074026
+    },
+    {
+      "id": 28,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 19.08882973827921,
+      "upper": 19.687093513611785,
+      "lower": 16.033745117494867,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9702686338713258
+    },
+    {
+      "id": 29,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 36.36649095965268,
+      "upper": 42.599647082332126,
+      "lower": 36.18747837055157,
+      "reason": "relative_progress",
+      "dual_updates": 5,
+      "achieved_fraction": 0.830951390142434
+    },
+    {
+      "id": 30,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 6.060246792086374,
+      "upper": 8.5441331729944,
+      "lower": 5.107139272692205,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.853160880826671
+    },
+    {
+      "id": 31,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 14.612784635236492,
+      "upper": 14.61278463523649,
+      "lower": 14.61278463523649,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 1.0000000000000002
+    },
+    {
+      "id": 32,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 32.01464661908257,
+      "upper": 32.01464661908256,
+      "lower": 32.01464661908256,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 1.0000000000000004
+    },
+    {
+      "id": 33,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 14.599200751023515,
+      "upper": 19.05026040475539,
+      "lower": 13.430121236031313,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.8576528642114295
+    },
+    {
+      "id": 34,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 10.863018159966014,
+      "upper": 10.863018159966012,
+      "lower": 10.863018159966012,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 1.0000000000000002
+    },
+    {
+      "id": 35,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 18.80131467474683,
+      "upper": 22.303428895410555,
+      "lower": 15.92541171375587,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9041456537110328
+    },
+    {
+      "id": 36,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 2.8902263324268778,
+      "upper": 3.2192484169034166,
+      "lower": 2.116335937455145,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9717640430826855
+    },
+    {
+      "id": 37,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 13.825756586031803,
+      "upper": 16.476145630597788,
+      "lower": 12.479917060890747,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9112371159633906
+    },
+    {
+      "id": 38,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 10.372475461497098,
+      "upper": 10.73166133858986,
+      "lower": 9.76175286566254,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.9820400931945037
+    },
+    {
+      "id": 39,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 15.71981580122119,
+      "upper": 17.75539965120457,
+      "lower": 11.250710007055885,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9438402208460377
+    },
+    {
+      "id": 40,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 10.98295053173803,
+      "upper": 11.575808412901155,
+      "lower": 10.936452811235723,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.9404252118812786
+    },
+    {
+      "id": 41,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 57.41064030016577,
+      "upper": 57.41064030016577,
+      "lower": 57.41064030016577,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 1.0
+    },
+    {
+      "id": 42,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 31.585810923704837,
+      "upper": 32.80260754068885,
+      "lower": 31.317520781622644,
+      "reason": "relative_progress",
+      "dual_updates": 5,
+      "achieved_fraction": 0.881735251383461
+    },
+    {
+      "id": 43,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 11.986842788119436,
+      "upper": 12.814325307258699,
+      "lower": 11.920934153997507,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.9445359834028294
+    },
+    {
+      "id": 44,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 31.51809181448494,
+      "upper": 31.518091814484944,
+      "lower": 31.518091814484944,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.9999999999999998
+    },
+    {
+      "id": 45,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 39.20202215553906,
+      "upper": 39.202022155539076,
+      "lower": 39.202022155539076,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.9999999999999996
+    },
+    {
+      "id": 46,
+      "n": 6,
+      "reference_success": true,
+      "reference_objective": 35.75910652013135,
+      "upper": 37.88853525495297,
+      "lower": 35.39916063953993,
+      "reason": "relative_progress",
+      "dual_updates": 2,
+      "achieved_fraction": 0.8533346493080183
+    },
+    {
+      "id": 47,
+      "n": 7,
+      "reference_success": true,
+      "reference_objective": 7.409406325680687,
+      "upper": 8.454726679588745,
+      "lower": 7.330873495399829,
+      "reason": "relative_progress",
+      "dual_updates": 1,
+      "achieved_fraction": 0.9428118696114862
+    }
+  ],
+  "example": {
+    "point_direction": [
+      0.5555555555555555
+    ],
+    "relative_direction": [
+      1.0
+    ],
+    "trace": {
+      "reason": "relative_progress",
+      "theta": 0.2598262419247048,
+      "dual_updates": 2,
+      "active_updates": 5,
+      "upper": 1.005,
+      "lower": 0.8643669859656938,
+      "gap": 0.14063301403430606,
+      "pzero": 1.9599999999999997,
+      "model_fraction": 0.8716422267010085,
+      "trace": [
+        {
+          "theta": 0.5,
+          "upper": 1.2609259259259258,
+          "lower": 0.7855555555555555,
+          "raw_gap": 0.47537037037037033,
+          "decrease": 0.699074074074074,
+          "fraction_lower": 0.5952380952380952,
+          "fp": 0.3086419753086419,
+          "fr": 1.2593827160493827,
+          "projected_kkt": 1.1102230246251565e-16
+        },
+        {
+          "theta": 0.2598262419247048,
+          "upper": 1.005,
+          "lower": 0.8643669859656938,
+          "raw_gap": 0.14063301403430606,
+          "decrease": 0.9549999999999998,
+          "fraction_lower": 0.8716422267010085,
+          "fp": 1.0,
+          "fr": 0.8099999999999998,
+          "projected_kkt": 0.0
+        }
+      ]
+    }
+  }
+}

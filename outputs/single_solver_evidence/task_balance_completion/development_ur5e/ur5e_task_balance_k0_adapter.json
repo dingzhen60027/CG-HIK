@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "settings": {
+      "damping": 0.01,
+      "posture_weight": 0.0,
+      "max_iterations": 30,
+      "backtracking_steps": 8,
+      "max_dual_updates": 16,
+      "deadline_ms": 20.0
+    },
+    "timing": "Complete solve including input conversion, bounds, residuals/Jacobians, dual and box QPs, true-FK checks and original verifier; no serialization.",
+    "warmup": "3 common nonstationary midpoint calls plus one runner stationary startup",
+    "theta0": 0.5,
+    "gap_atol": 1e-09,
+    "gap_rtol": 1e-07,
+    "task_feasible_early": "Actual full-step accepted command, not convex optimality; gap is null.",
+    "deadline": "One absolute outer 20 ms clock shared by outer/dual/backtracking; no preemption; late results retained."
+  },
+  "startup_warmup_calls": 1
+}
