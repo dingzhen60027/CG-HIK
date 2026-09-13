@@ -1,0 +1,120 @@
+{
+  "baseline": "8e4aa63975d465f3de8a1eef2f7773889252c91d",
+  "validation_pre_results_commit": "00e28a91102e6d71abe03896dbf0d77eb1b0eadc",
+  "current_numerical_code_unchanged": true,
+  "old_evidence_and_paper_unchanged": true,
+  "validation_inputs_sealed_before_any_new_comparisons": true,
+  "selected_common_theta": 0.35,
+  "original_half_weight_equality": {
+    "panda": {
+      "same_input_calls": 810,
+      "identical_decisions": true,
+      "max_joint_difference": 0.0
+    },
+    "ur5e": {
+      "same_input_calls": 810,
+      "identical_decisions": true,
+      "max_joint_difference": 0.0
+    }
+  },
+  "measured_calls": 108540,
+  "geometric_witness_queries": 4860,
+  "report_replay": {
+    "development_panda": {
+      "witnesses": 270,
+      "relative_bound_checks": 339,
+      "calls": 8910,
+      "accepted": 8713,
+      "late_calls": 50
+    },
+    "development_ur5e": {
+      "witnesses": 270,
+      "relative_bound_checks": 426,
+      "calls": 8910,
+      "accepted": 8632,
+      "late_calls": 71
+    },
+    "validation_panda": {
+      "witnesses": 2160,
+      "calls": 45360,
+      "accepted": 44148,
+      "late_calls": 448,
+      "relative_bound_checks": 2781
+    },
+    "validation_ur5e": {
+      "witnesses": 2160,
+      "calls": 45360,
+      "accepted": 43991,
+      "late_calls": 549,
+      "relative_bound_checks": 3459
+    }
+  },
+  "core_tests_passed": 22,
+  "reporting_tests_passed": 3,
+  "tests_note": "Regression tests and saved-command replay are not new benchmark samples.",
+  "code_and_docs_sha256": {
+    "configs/task_set_boundary.yaml": "30f84194b14e61db8adbd47cce842c6b7f7ab895c4d06073fd0badd7afd1df87",
+    "docs/TASK_SET_BOUNDARY_FINDINGS.md": "068ce3c45ad91e278e367877018806574200aab236e35a1dc594fed3deb8d84b",
+    "docs/TASK_SET_BOUNDARY_PROTOCOL.md": "77799fdf211f4e6f3c3cd7f305a0528bbca02ec9bc02536ef1a144e53f26994a",
+    "scripts/report_task_set_boundary.py": "88219baba3f103add65d443f543b26891a6c26a1ca172e9ebd2eab1795e75ec3",
+    "scripts/run_task_set_boundary.py": "981591452e5a5eb53c15314a12a5fb9185f40029f963d109c48a5456fb204019",
+    "src/confik/task_set_controls.py": "ad0013c5367a7af5c87f8076be9e123213fe227a6930a694b193be9f281a7c36",
+    "tests/test_task_set_boundary.py": "465411a1eca0f59c9518b6de12803a76e8a875092ba6002228797f9d8e1aa2ac",
+    "tests/test_task_set_reporting.py": "9ef24163bafdba1acafce63cbcab1739ea225a5b85888b576ee25ec52d98e050"
+  },
+  "audit_script_sha256": "c3e4f7a0d237d4b930976a3f5abfc44dfed31395e86f20549a70774a8b39b8df",
+  "collections": {
+    "development_panda": {
+      "files": 4,
+      "bytes": 995902,
+      "listing_sha256": "12d275b9b2b447722e1a538b836ded78afb46a8be379bf0c867bddfba06bc49f"
+    },
+    "development_ur5e": {
+      "files": 4,
+      "bytes": 993109,
+      "listing_sha256": "24cc338095dc2528a04d974e6f9bc9d242ccbcd2200c706e87906276c047ba79"
+    },
+    "inputs": {
+      "files": 6,
+      "bytes": 13237205,
+      "listing_sha256": "005aa64b22350d917b3cf5dd475b4546f39ef3f45edc246cb783ea9cf88dbab6"
+    },
+    "literature": {
+      "files": 1,
+      "bytes": 6813,
+      "listing_sha256": "8f7a77be6f8ba8f587e8ca19bc762bd7ccf73972a678b30f7d565854b5ad3f7a"
+    },
+    "package_resolve": {
+      "files": 1,
+      "bytes": 106875,
+      "listing_sha256": "e3699c620eea8a6f70cceca22e31aa976a34411acb6e283b50df6d96b8a05ccb"
+    },
+    "package_verification": {
+      "files": 3,
+      "bytes": 2623254,
+      "listing_sha256": "bf756b402eafa6ffeb4beea745a963c9b0824f409ecc161a2fbf93b40299aa7b"
+    },
+    "reports": {
+      "files": 9,
+      "bytes": 14091562,
+      "listing_sha256": "e9b59045f6da18f8d40c8ebbfa157613be9490d68090ab04082b7eafdbcefd70"
+    },
+    "task_package": {
+      "files": 30,
+      "bytes": 1706623,
+      "listing_sha256": "208fcd9caf5cebcb6f03a2afd36be88f10a0981e1b7dcc2e8d0c753cbf95dc18"
+    },
+    "validation_panda": {
+      "files": 4,
+      "bytes": 5661968,
+      "listing_sha256": "89a77d4820583f933fe27bdcc3bd0bdc781affdd4b7e721da7e71f8146052f43"
+    },
+    "validation_ur5e": {
+      "files": 4,
+      "bytes": 5765439,
+      "listing_sha256": "d6c6450119d2db307e2548de9a26d6ba4724b3a9c4109639bb701f7f18c6c09c"
+    }
+  },
+  "digest_recipe": "Within each immediate subdirectory, sort recursive files excluding __pycache__; entries path(relative to result root),sha256,bytes; SHA256 of JSON sort_keys=True,separators=(comma,colon).",
+  "new_solver_calls_in_this_audit": 0
+}

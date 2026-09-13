@@ -1,0 +1,270 @@
+{
+  "gn": {
+    "initialization_ns": 31745548,
+    "warmup_calls": 3,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "additional_conic_structure_warmup": false,
+    "frozen_settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "task_stop": 1.0,
+      "maximum_iterations": 30,
+      "deadline_ms": 20.0
+    },
+    "theta": null,
+    "native_mapping": null,
+    "timing": "Caller perf_counter_ns spans complete solve invocation and final verifier; initialization/warmup/serialization and independent audit are outside. All adapter timing retained separately."
+  },
+  "relative": {
+    "initialization_ns": 1537703,
+    "warmup_calls": 3,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "additional_conic_structure_warmup": false,
+    "frozen_settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "max_iterations": 30,
+      "max_dual_updates": 16,
+      "max_backtracking": 8,
+      "forcing": 0.25,
+      "gap_atol": 1e-09,
+      "gap_rtol": 1e-07,
+      "armijo": 0.0001,
+      "deadline_ms": 20.0
+    },
+    "theta": null,
+    "native_mapping": null,
+    "timing": "Caller perf_counter_ns spans complete solve invocation and final verifier; initialization/warmup/serialization and independent audit are outside. All adapter timing retained separately."
+  },
+  "tight": {
+    "initialization_ns": 1492632,
+    "warmup_calls": 3,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "additional_conic_structure_warmup": false,
+    "frozen_settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "max_iterations": 30,
+      "max_dual_updates": 16,
+      "max_backtracking": 8,
+      "forcing": null,
+      "gap_atol": 1e-09,
+      "gap_rtol": 1e-07,
+      "armijo": 0.0001,
+      "deadline_ms": 20.0
+    },
+    "theta": null,
+    "native_mapping": null,
+    "timing": "Caller perf_counter_ns spans complete solve invocation and final verifier; initialization/warmup/serialization and independent audit are outside. All adapter timing retained separately."
+  },
+  "fixed_weight": {
+    "initialization_ns": 1500010,
+    "warmup_calls": 3,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "additional_conic_structure_warmup": false,
+    "frozen_settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "task_stop": 1.0,
+      "maximum_iterations": 30,
+      "deadline_ms": 20.0
+    },
+    "theta": 0.35,
+    "native_mapping": null,
+    "timing": "Caller perf_counter_ns spans complete solve invocation and final verifier; initialization/warmup/serialization and independent audit are outside. All adapter timing retained separately."
+  },
+  "clarabel": {
+    "initialization_ns": 1791178,
+    "warmup_calls": 3,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "additional_conic_structure_warmup": true,
+    "frozen_settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "max_iterations": 30,
+      "max_dual_updates": 16,
+      "max_backtracking": 8,
+      "forcing": null,
+      "gap_atol": 1e-09,
+      "gap_rtol": 1e-07,
+      "armijo": 0.0001,
+      "deadline_ms": 20.0
+    },
+    "theta": null,
+    "native_mapping": null,
+    "timing": "Caller perf_counter_ns spans complete solve invocation and final verifier; initialization/warmup/serialization and independent audit are outside. All adapter timing retained separately."
+  },
+  "trac_task_5ms": {
+    "initialization_ns": 3691561,
+    "warmup_calls": 3,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "additional_conic_structure_warmup": false,
+    "frozen_settings": null,
+    "theta": null,
+    "native_mapping": {
+      "bounds": [
+        0.0005773502691896257,
+        0.0005773502691896257,
+        0.0005773502691896257,
+        0.00503833156733364,
+        0.00503833156733364,
+        0.00503833156733364
+      ],
+      "effective_component_limits": [
+        0.0005773502691896257,
+        0.0005773502691896257,
+        0.0005773502691896257,
+        0.00503833156733364,
+        0.00503833156733364,
+        0.00503833156733364
+      ],
+      "internal_epsilon": 1e-05,
+      "public_contract": {
+        "position_tolerance": 0.001,
+        "orientation_tolerance": 0.00872664626,
+        "joint_limit_tolerance": 1e-09,
+        "velocity_tolerance": 0.0001,
+        "enforce_velocity": true
+      },
+      "frame": "target frame",
+      "position": "R_target.T @ (p_actual - p_target)",
+      "rotation": "Log(R_target.T @ R_actual), axis-angle vector, not RPY",
+      "units": [
+        "m",
+        "m",
+        "m",
+        "rad",
+        "rad",
+        "rad"
+      ],
+      "formula": "aligned: nextafter(epsilon/sqrt(3),0); strict: zero additional bound",
+      "conservativeness": "inscribed component box, NOT equivalent to full norm ball; max(bound, internal epsilon), not their sum"
+    },
+    "timing": "Caller perf_counter_ns spans complete solve invocation and final verifier; initialization/warmup/serialization and independent audit are outside. All adapter timing retained separately."
+  },
+  "trac_task_20ms": {
+    "initialization_ns": 990816,
+    "warmup_calls": 3,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    },
+    "additional_conic_structure_warmup": false,
+    "frozen_settings": null,
+    "theta": null,
+    "native_mapping": {
+      "bounds": [
+        0.0005773502691896257,
+        0.0005773502691896257,
+        0.0005773502691896257,
+        0.00503833156733364,
+        0.00503833156733364,
+        0.00503833156733364
+      ],
+      "effective_component_limits": [
+        0.0005773502691896257,
+        0.0005773502691896257,
+        0.0005773502691896257,
+        0.00503833156733364,
+        0.00503833156733364,
+        0.00503833156733364
+      ],
+      "internal_epsilon": 1e-05,
+      "public_contract": {
+        "position_tolerance": 0.001,
+        "orientation_tolerance": 0.00872664626,
+        "joint_limit_tolerance": 1e-09,
+        "velocity_tolerance": 0.0001,
+        "enforce_velocity": true
+      },
+      "frame": "target frame",
+      "position": "R_target.T @ (p_actual - p_target)",
+      "rotation": "Log(R_target.T @ R_actual), axis-angle vector, not RPY",
+      "units": [
+        "m",
+        "m",
+        "m",
+        "rad",
+        "rad",
+        "rad"
+      ],
+      "formula": "aligned: nextafter(epsilon/sqrt(3),0); strict: zero additional bound",
+      "conservativeness": "inscribed component box, NOT equivalent to full norm ball; max(bound, internal epsilon), not their sum"
+    },
+    "timing": "Caller perf_counter_ns spans complete solve invocation and final verifier; initialization/warmup/serialization and independent audit are outside. All adapter timing retained separately."
+  }
+}

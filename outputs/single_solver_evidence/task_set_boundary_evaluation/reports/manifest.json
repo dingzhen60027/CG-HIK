@@ -1,0 +1,52 @@
+{
+  "created": "2026-09-13T19:28:12.146731+00:00",
+  "reporting_sha256": "88219baba3f103add65d443f543b26891a6c26a1ca172e9ebd2eab1795e75ec3",
+  "solver_calls": 0,
+  "verification": {
+    "development_panda": {
+      "witnesses": 270,
+      "relative_bound_checks": 339,
+      "calls": 8910,
+      "accepted": 8713,
+      "late_calls": 50
+    },
+    "development_ur5e": {
+      "witnesses": 270,
+      "relative_bound_checks": 426,
+      "calls": 8910,
+      "accepted": 8632,
+      "late_calls": 71
+    },
+    "validation_panda": {
+      "witnesses": 2160,
+      "calls": 45360,
+      "accepted": 44148,
+      "late_calls": 448,
+      "relative_bound_checks": 2781
+    },
+    "validation_ur5e": {
+      "witnesses": 2160,
+      "calls": 45360,
+      "accepted": 43991,
+      "late_calls": 549,
+      "relative_bound_checks": 3459
+    }
+  },
+  "sources": {
+    "development_panda": "a3272d9fd032f2ff199335c51e496013c6339a2efba1ef1ccd8291f036fd3944",
+    "development_ur5e": "e2345228465a82b7ab6d6eb0c6f7e3f1bf3ad87cb17c3ac4652620020c02637c",
+    "validation_panda": "a9aafcba91695c634cc00124e7cfa1c116dff035ce0fa147634f60fb0391c27a",
+    "validation_ur5e": "7662ee4f0791f274b7dda68c0f4afcb4c910a0887eef4cab9d1cfc1a118f5bc4"
+  },
+  "files": {
+    "recovery_commands.json": "fc7fc1c578cf94b5daed33c6a22d6b079159e06b2b8eef6aac224299b7fe4a16",
+    "TABLES.md": "fa266991ff4472de980ce6161c736239b341aacde5b9183abbcf54e2c17b3651",
+    "query_units.csv": "f9aabfb08fc635da7b3352eabd740d47c4ea1b0633ba9c93568f7eeb08b743c3",
+    "all_cells.csv": "734524ca00bbe90820bb2c6397421788ce011098867ed1385f74758eb0ffe69b",
+    "paired_cluster_intervals.csv": "567d6bf3becdd05bc62a1f4b6e32b2d5b9372ea2ca088a89d78ead54fbc8ee14",
+    "source_data.json": "0ba36a3f6cf13579f79207f60e534f73c54571764352d70e29389c3d601d2514",
+    "gained_lost_uids.csv": "263a03f1d9306b07a783c72f9acf134ae550ba17d6431fd0fdd270b2605e4086",
+    "geometric_load.csv": "1d879bc113b069c2be4360a33f32021e09a75db2c8fc92b5c4177b465e242dd6"
+  },
+  "independent_units": "240 anchors per robot, nine derived queries and three nested calls; no trajectory analysis or global infeasibility claims."
+}

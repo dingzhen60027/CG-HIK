@@ -1,0 +1,38 @@
+{
+  "created": "2026-09-13T19:26:43.238740+00:00",
+  "queries": 2160,
+  "calls": 45360,
+  "commit": "00e28a91102e6d71abe03896dbf0d77eb1b0eadc",
+  "input_seal_sha256": "eb51349e2d66a15d76863f8553c730e0c9ccb7e2d95fc4cf00b18394c5fbf433",
+  "frozen_hashes": {
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/bounded_gn_adapter.py": "ab6212f2f8f70dee4c0eef639f8bb768739376796341df6482de2b915819651a",
+    "scripts/run_single_solver_development.py": "07be50c1034e502c4ed37384a28554f198b9bd5eb67a37215d0cfbdcd80d3ae2",
+    "configs/single_solver_development.yaml": "f1eb157af809d37234a9b2f5197e050da2827839db6b72db5c99c1d3a5f7f27e",
+    "src/confik/correction_reserve/study.py": "b489d082641ec4ed36bcc69aab6df82b6d4935bb16c920f90325bd79313d3a94",
+    "src/confik/correction_reserve/reporting.py": "439ffd253c105076eae11ebeba835715812ee2959ace49deaa81b261c259a6a9",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/task_contract_alignment/outcomes.py": "e9b36e1c59fba49f181fa3cf36f7583e844d3285c2f4c35878c47768a4e885dd",
+    "src/confik/task_contract_alignment/trac_adapter.py": "09a5c40506621c078b7abf4f2086ca79a0a7e605407a586919cbb1c36af2762c",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "tmp/task_contract_build/libcontract_trac.so": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83",
+    "configs/paper_v2.yaml": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+    "src/confik/task_balance_gn.py": "752a69afede984d0617997d6c412753c327f9f642eb0f08ef2ab33c464a68d57",
+    "src/confik/task_balance_reference.py": "ec3c534e7ff2d27c5ac64625f1fd06c560d5a463886fded9d6aeedd13d9be4fb",
+    "src/confik/revision_compute_allocation/data.py": "c27b9e377de1f03472fd9f06dccc64af1988035a64ce877a2a45c5a784e60d7c"
+  },
+  "study_hashes": {
+    "scripts/run_task_set_boundary.py": "981591452e5a5eb53c15314a12a5fb9185f40029f963d109c48a5456fb204019",
+    "src/confik/task_set_controls.py": "ad0013c5367a7af5c87f8076be9e123213fe227a6930a694b193be9f281a7c36",
+    "configs/task_set_boundary.yaml": "30f84194b14e61db8adbd47cce842c6b7f7ab895c4d06073fd0badd7afd1df87",
+    "tests/test_task_set_boundary.py": "465411a1eca0f59c9518b6de12803a76e8a875092ba6002228797f9d8e1aa2ac"
+  },
+  "selection_sha256": "d655bb5713ffefb5ddab5f6fce52328421749ad1f39015006571a66b5263d582",
+  "files": {
+    "job_order.json": "cc46d8bcd0b8be70dbae2d978814735f67dea3da8901a922e68361dc61f05288",
+    "records.jsonl.gz": "4e4abd2d331717ec5bba2b0eb5f3a3fc0cedb0457427d2d724b00310f03d8cc2",
+    "adapters.json": "039e17e37beb8bc18ff4683c9caa9e51205be99855e8e31075029e678396ecc0"
+  }
+}
