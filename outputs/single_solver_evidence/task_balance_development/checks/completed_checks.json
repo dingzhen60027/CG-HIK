@@ -1,0 +1,17 @@
+{
+  "test_report": "checks/pytest.xml",
+  "tests": 21,
+  "failures": 0,
+  "package_reproduction": "checks/package_reproduction.json",
+  "original_verifier_commands": 180000,
+  "original_verifier_violations": 0,
+  "source_uid_table_rows": 80,
+  "clarabel_version": "0.11.1",
+  "same_input_measured_calls": 780,
+  "fixed_subproblem_calls": 5400,
+  "trajectory_runs": 1200,
+  "trajectory_frames": 180000,
+  "old_code_and_input_hashes_unchanged": true,
+  "solver_call_reruns": 0,
+  "report_fixes_only": "Field nesting in initial package verification; missing report parenthesis fixed before any report output; no measured results replaced."
+}

@@ -1,0 +1,94 @@
+{
+  "input": {
+    "robot": "panda",
+    "source": "outputs/single_solver_evidence/reports/first_failure_inputs.csv",
+    "source_method": "single_gn_k0",
+    "uid": "c2ebae0d24e306f3744e9ac2a38add8502705448e7eda234f19e3082f56fa52c",
+    "site_id": "trajectory_094",
+    "frame": 53,
+    "dt": 0.02,
+    "previous_q": [
+      -0.4204036654871291,
+      -0.1352875078561473,
+      -0.7479184101818351,
+      -1.7565675086908759,
+      2.897299999999,
+      1.9090280224781317,
+      -0.8487365263350845
+    ],
+    "target_position": [
+      0.19641911618610228,
+      -0.5294395619380362,
+      0.7632061316251734
+    ],
+    "target_rotation": [
+      [
+        -0.46526835440914216,
+        0.8400441325944378,
+        0.27901830348396106
+      ],
+      [
+        -0.8675071824025526,
+        -0.37008348016679626,
+        -0.332369532580255
+      ],
+      [
+        -0.1759450109136194,
+        -0.3966914077734624,
+        0.9009324503720106
+      ]
+    ]
+  },
+  "q": [
+    -0.38028936302665056,
+    -0.14832388470838206,
+    -0.7915184101817916,
+    -1.761246361563397,
+    2.897299999999,
+    1.9169357703556773,
+    -0.8480885681821155
+  ],
+  "solver_calls": 0,
+  "accepted": true,
+  "finite": true,
+  "joint_limit_ok": true,
+  "velocity_ok": true,
+  "position_m": 0.0009637499698772061,
+  "orientation_rad": 0.008228663887168574,
+  "orientation_deg": 0.4714677117664735,
+  "reasons": [],
+  "step": [
+    0.040114302460478535,
+    -0.013036376852234771,
+    -0.04359999999995645,
+    -0.004678852872521233,
+    0.0,
+    0.007907747877545557,
+    0.0006479581529689193
+  ],
+  "velocity_utilization": 0.9999999999990011,
+  "archive_sha256": "57846b0ab80953baaf523667df713e66dc028487a015a38b5e2564da7cd52253",
+  "package_hashes": {
+    "README.md": "465bb8caa62dc4a1d69f62e114cac1c5782590a68a61c85d30b70217ac87c300",
+    "check_prototype.py": "d67b494ad9878666a9ee49794720146e6050d395b010b32221342cb6c9e913a2",
+    "run_local_trajectories.py": "6a29084c20067703afe87708b33ce1f38745557c125a3284c43d96f2ada04ed3",
+    "CODEX_TASK.md": "bcb46a7f42d80703bfcdf9a5750f759609f5808a8b421fc801bb5134421cf706",
+    "balanced_gn.py": "50c3493d0dcfe793c29f9b2b03d3baba7eb560a349392764255d62916e2326ce",
+    "development_history/initial_full_dual_k0.py": "873977fc5c3e2f0a951c1eb9eee6ca69c6b452aa6666729fd37c899be01bae49",
+    "development_history/initial_full_dual_k0.json": "d0b85373c71b0040661e923f13642f1bec7c2a4859814b9ce5d1d304ece785d7",
+    "reference/bounded_gn_reference.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "reference/check_selected_input.py": "f10ffb8601ace6f161b36612b91effd4e9e4fffa45770255f3c5320cdbbf6066",
+    "reference/selected_input_source.json": "eb6d1596ddee6d890eac957cd92d53f3a58154cf6fdf24a39f0b5135ab11ab0c",
+    "reference/panda_model_local.py": "6ade2f6e5df8ac98f1f5f58657b8a238d85625cea300361782c4c452e1897cab",
+    "reference/task_excess_gn.py": "a177f363605642421abbe05ca8a49b67ffc20c5c1cb0a7c6d6288029a26a0d09",
+    "data/panda_reconstructed.json": "9d1b462aa2a675bf300704519baa4f0558b894bcb106cb5695f6be2de88dd3f5",
+    "results/prototype_checks.json": "4bf88e813170fd5bbad506b49b6a0b425d1de5b7cfd7a0a745ccb79af0b5124f",
+    "results/local_excess.json": "86adfbcab1243ec45c8b5c5dcf29f13459804a87216581d70e8f7caa91940d20",
+    "results/local_balanced_k0.json": "b356d1ba7263ac27063adcdead9dc214d7083a125675801b2f38af89877b1999",
+    "results/local_point_k1.json": "6f8340fde8a85917423903620b9198b0083fa70547660f43e9483f7aa07ba0a9",
+    "results/summary.json": "34633fee384c499793092ad84db145e137126eef49d31780ed8070186dac3b67",
+    "results/local_point_k0.json": "7949e480bb40c7d4a74b92e440413e1b87f566fce87ae39e197fe65bdc901f70",
+    "results/local_balanced.json": "51c2318725bc1fce5904d8b95d270143d76dc3a4a8ed3df73ff773d0451cbd74"
+  },
+  "source_sha256": "73fad1500997a7c4df2038a38fbb0f6a12638cc2b61b9ec7acf76d8a3419b3d2"
+}

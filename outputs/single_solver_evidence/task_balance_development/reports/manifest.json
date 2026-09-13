@@ -1,0 +1,32 @@
+{
+  "created": "2026-09-13T11:57:37.859055+00:00",
+  "sources": {
+    "panda": "4ed02220441482db35377a4ee13bead7177fc1cd58e7ea47957b902f6bea9352",
+    "ur5e": "e0efff4b09af9baa144f4f7262ee19c1c8951e1fd8a7a221ead2db30578d6595"
+  },
+  "reporting_sha256": "2d3293363ed0f6e1364c098c03fb90831d3ce49462b720603dd9352857328b48",
+  "independent_unit": "40 trajectory UIDs/robot, three nested repeats averaged; family-stratified paired 4000-resample 95% descriptive intervals",
+  "timing": "All full outer frame times, no exclusions. Frame quantiles descriptive, not independent samples.",
+  "files": {
+    "first_failure_inputs.csv": "8d23fb32a304f950e3eb84ff1048c129040f875750c38ff29f31874244e3a4fc",
+    "run_summaries.csv": "d0eac89d6763e0d183473cebec86d8f78e3c9d9c7874eb2982f0d0fbd2c2541b",
+    "family_table.csv": "aa972e33c3c04308cfd8c97e542955657f320cf1d9a1ee8a8ec278f171c1eecf",
+    "completion_uids.json": "d786ee49b4a55195e35a8e389ff9a9c67d793a8ab38ce547a1b1ef9cf7f1fe51",
+    "trajectory_units.csv": "15ccfbe56bfcdab53f9bc1b179b7ce24148c48072b89cf498ba01a46fa405979",
+    "subproblem_quality_time.csv": "2d0b363f8874ef7ec9dea6ae1b4b5018d418dfad9a5dec0bd07d0802d27abd78",
+    "subproblem_quality_calls.csv": "daf35af1ab4cd2ceaafbfc19a88e82eb77ce69637cbeac7387b06f6909cf2f81",
+    "local_gained_lost.csv": "928ef1c6c98206bbbaaca07639a224897edf79261ec1de4cdf12f9e477bc2670",
+    "local_input_units.csv": "badee818990a24f9abf68daa49f9b47203dc01178192ceb8be88f013ad746de0",
+    "closed_loop_command_differences.csv": "d6a96a3e53602a10ec0d9e4192bbc1f6d44f3348095dd03f16cf1d677f30d56f",
+    "subproblem_early_summary.csv": "e674f6f57d038a5055832dd94b86c9c1cd8dd1fd784aa96b1183fd93c8cee997",
+    "local_commands.csv": "2fe2fb139f77711e01c7533cccd47fffbb9d9d5701ffd02bd9b5104a004e2f26",
+    "subproblem_early_calls.csv": "d3876390bd7585996a31620d32a5bc38605d46e6dd31524c657cb27d19efeec2",
+    "paired_comparisons.csv": "b78aacf3ac97fe4b4aa671028e3831100700f34a7bf0ad05b5f99c894b2588ba",
+    "main_table.csv": "f657c4ce27cc47d23557ff8e6ea2884cac1faa801d9d30661e4fdeb8c7f51397",
+    "source_data.json": "06ab0395e1dd50fbace4e86a97f9d1ec5e7f098cc8e3f4ea1a4282af0adb75a5",
+    "gained_lost_uids.csv": "4483c34d3dd04fab808cc816f5edea71cebafd1752324b918cdbf5467b9d3b0d",
+    "verification.json": "b5d67f36e9fc67e937777a1b2150a3f73dc594fe94a876dfcf1827d59edf33eb",
+    "local_source_groups.csv": "450cca2aae050b2eab5bb9dacbcc63268ae79f6da0cabe982407e8a1668f70b3",
+    "successful_trajectory_index.json": "b21effbc67b7d5664a938261e64672e0220f3a57590b913680265486b57e311f"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "utc": "2026-09-13T11:52:07.408330+00:00",
+  "code_hashes": {
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/bounded_gn_adapter.py": "ab6212f2f8f70dee4c0eef639f8bb768739376796341df6482de2b915819651a",
+    "scripts/run_single_solver_development.py": "07be50c1034e502c4ed37384a28554f198b9bd5eb67a37215d0cfbdcd80d3ae2",
+    "configs/single_solver_development.yaml": "f1eb157af809d37234a9b2f5197e050da2827839db6b72db5c99c1d3a5f7f27e",
+    "src/confik/correction_reserve/study.py": "b489d082641ec4ed36bcc69aab6df82b6d4935bb16c920f90325bd79313d3a94",
+    "src/confik/correction_reserve/reporting.py": "439ffd253c105076eae11ebeba835715812ee2959ace49deaa81b261c259a6a9",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/task_contract_alignment/outcomes.py": "e9b36e1c59fba49f181fa3cf36f7583e844d3285c2f4c35878c47768a4e885dd",
+    "src/confik/task_contract_alignment/trac_adapter.py": "09a5c40506621c078b7abf4f2086ca79a0a7e605407a586919cbb1c36af2762c",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "tmp/task_contract_build/libcontract_trac.so": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83",
+    "configs/paper_v2.yaml": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+    "src/confik/task_excess_gn.py": "b0f56acc4735b4842c106550b83d5b99e07329db5fd4fd2625d9fab43fcdbf4d",
+    "scripts/run_task_excess_development.py": "31d8b5e770286e5af8e05b1802d229b5fa917049319b4d7696828d90ae7f5920",
+    "configs/task_excess_development.yaml": "6a12f7386feae94c58ce30906674f03bf1b3b7c5baf5e4a9313acc1e4b037321",
+    "src/confik/task_balance_gn.py": "448aeb91db215bade48a32b18a52257d902484e30623d893fdb238991893ba41",
+    "src/confik/task_balance_reference.py": "ec3c534e7ff2d27c5ac64625f1fd06c560d5a463886fded9d6aeedd13d9be4fb",
+    "scripts/run_task_balance_development.py": "e476d67d74c1ead43bb83b51e39f8d52fbcb5f036e1bb6c1642171c1c9e30e3f",
+    "configs/task_balance_development.yaml": "81dfb52cc517a616d3b860c3c933b069249e59340fc78b4145c67006eae45f41"
+  },
+  "configuration": {
+    "baseline": "d345fdbfe24ce2d0dedbf3bfc2c09ee7cb62089b",
+    "source_config": "configs/paper_v2.yaml",
+    "native_trac_library": "tmp/task_contract_build/libcontract_trac.so",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "methods": [
+      "single_gn_k0",
+      "single_gn_k1",
+      "task_excess_gn",
+      "task_balance_k0",
+      "task_balance_k1"
+    ],
+    "repeats": 3,
+    "order_seed": 2026091308,
+    "bootstrap_seed": 2026091309,
+    "bootstrap_samples": 4000,
+    "cpu": 4,
+    "development": {
+      "panda_targets": "outputs/continuation_mechanism_study/tolerance_matched_solver_comparison/online_targets.json",
+      "ur5e_targets": "outputs/task_contract_alignment/01_protocol/ur5e_online_targets.json"
+    },
+    "task_excess": {
+      "normalized_margin": 1e-06,
+      "damping": 0.01,
+      "maximum_iterations": 30,
+      "backtracking_steps": 8,
+      "deadline_ms": 20.0
+    },
+    "task_balance": {
+      "damping": 0.01,
+      "max_iterations": 30,
+      "backtracking_steps": 8,
+      "max_dual_updates": 16,
+      "theta0": 0.5,
+      "gap_atol": 1e-09,
+      "gap_rtol": 1e-07,
+      "deadline_ms": 20.0
+    },
+    "subproblems": {
+      "per_uid_kappa": 8,
+      "repeat": 5,
+      "source_repeat": 0,
+      "first_trajectories_per_family": 2,
+      "relative_quality_tolerance": 1e-07,
+      "box_tolerance": 1e-08,
+      "clarabel_tolerance": 1e-09,
+      "clarabel_max_iter": 100
+    },
+    "scope": "same 52 observed failure inputs and original 80 development trajectories; no fresh data, fallback or parameter search",
+    "formal": {
+      "order_seed": 2026091308
+    }
+  },
+  "methods": [
+    "single_gn_k0",
+    "single_gn_k1",
+    "task_excess_gn",
+    "task_balance_k0",
+    "task_balance_k1"
+  ],
+  "python": "3.12.13",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+  "git_sha": "d345fdbfe24ce2d0dedbf3bfc2c09ee7cb62089b",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "cpu_affinity": [
+    4
+  ],
+  "inference_unit": "whole trajectory; search repeats nested",
+  "timing_scope": "solver input conversion, dynamic bounds, numerical solve, prediction/optimization if applicable, command verification; serialization excluded"
+}

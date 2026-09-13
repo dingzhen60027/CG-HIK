@@ -1,0 +1,9 @@
+robot,stratum,kappa,calls,actual_full_step_accepted,theta_half_early,continued_dual_early,call_p50_p95_p99_ms,meaning
+panda,regular_first_subproblems,0,320,315,315,0,"[0.210823,0.2301969,0.39210358]","Early accepted commands, not matched-optimality comparison; no online 20 ms deadline in this fixed diagnostic."
+panda,regular_first_subproblems,1,320,315,315,0,"[0.2109905,0.2316561,0.72448509]","Early accepted commands, not matched-optimality comparison; no online 20 ms deadline in this fixed diagnostic."
+panda,historical_failure_inputs,0,205,80,20,60,"[0.876574,1.9301842,1.98679056]","Early accepted commands, not matched-optimality comparison; no online 20 ms deadline in this fixed diagnostic."
+panda,historical_failure_inputs,1,205,80,20,60,"[0.88873,2.1828046,2.8432148]","Early accepted commands, not matched-optimality comparison; no online 20 ms deadline in this fixed diagnostic."
+ur5e,regular_first_subproblems,0,320,315,315,0,"[0.2005985,0.22144880000000003,0.52175238]","Early accepted commands, not matched-optimality comparison; no online 20 ms deadline in this fixed diagnostic."
+ur5e,regular_first_subproblems,1,320,315,315,0,"[0.199535,0.2177009,0.5234738400000001]","Early accepted commands, not matched-optimality comparison; no online 20 ms deadline in this fixed diagnostic."
+ur5e,historical_failure_inputs,0,55,25,5,20,"[0.593262,0.9549386,0.9776174400000001]","Early accepted commands, not matched-optimality comparison; no online 20 ms deadline in this fixed diagnostic."
+ur5e,historical_failure_inputs,1,55,25,5,20,"[0.589577,0.9610884000000001,0.9853330800000001]","Early accepted commands, not matched-optimality comparison; no online 20 ms deadline in this fixed diagnostic."
