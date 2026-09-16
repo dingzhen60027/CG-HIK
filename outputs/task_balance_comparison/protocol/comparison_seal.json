@@ -1,0 +1,133 @@
+{
+  "utc": "2026-09-16T07:55:41.727198+00:00",
+  "code_hashes": {
+    "src/confik/task_balance_comparison.py": "0edbbd08647295c25276796e26c14201a446bd98366c2273ebecb9dfae7b8464",
+    "scripts/run_task_balance_comparison.py": "daac9070e0608562a63d20e9cfb979b3c559bf39c3ca1d80b80b5db31f8d12d7",
+    "configs/task_balance_comparison.yaml": "c4ff00c5b5123bedeadde2380ab2c618189fef15a3b0b566d17ee29b14025c84"
+  },
+  "files": {
+    "outputs/task_balance_comparison/protocol/points_ur5e_order.json": "3645e76b0fe6b5563f41dd3b3f4983066053bbfbddf08f437c92cf05229261f0",
+    "outputs/task_balance_comparison/protocol/points_panda_order.json": "6d22740180d738789101c702f715f9c201a819f1980720c121ef88a3f6f4b7a8",
+    "outputs/task_balance_comparison/protocol/development_ur5e_order.json": "e77ad8777940507fbf42fc43663cd1306f5f0753ff8de3f1fab4922b16f6d471",
+    "outputs/task_balance_comparison/protocol/application_ur5e_order.json": "7dc1fa4f97c072760e7408df8fa23d6803224b2d11266ba5ea02ec0e25ab81d5",
+    "outputs/task_balance_comparison/protocol/application_panda_order.json": "bd5ecb05be91864a79aaea5c5ffb691186e2061ed8444f9b9bede9d53bc50175",
+    "outputs/task_balance_comparison/protocol/development_panda_order.json": "15ad50a461e65d68e93a4ac8bf0b5179d9958011662fd6c3522052474bc3758c",
+    "outputs/task_balance_comparison/application/inputs_panda.json": "180878d37106b783e346b5e1571064804b50231e7f731f404691c6518c506790",
+    "outputs/task_balance_comparison/application/inputs_ur5e.json": "02ec4079c88287566864c093966f2c34f7d8f6d5607c2767f2ad467671a2d614",
+    "outputs/task_balance_comparison/points/development_panda/manifest.json": "36f9f81c962079cba97c7b26bf1759af9fe29620f96c917ae89e224c76847b0d",
+    "outputs/task_balance_comparison/points/development_sqp_panda/manifest.json": "edc3e62b5b0f334175c33c3923c4b406a185a23c9f084a445de427dcf4435302",
+    "outputs/task_balance_comparison/points/development_ur5e/manifest.json": "280fe2b295f7e14a8ddebc20b053f3ecdfafcf6214d638da5238d9b94b27ccdb",
+    "outputs/task_balance_comparison/points/development_sqp_ur5e/manifest.json": "504390af2530ca2873ee5c4ae14317480597bdcf61a6ca3e684ac01950e475b6"
+  },
+  "official_demo_hash": "425b912cac5b13e5d22ef81240c6788630bfc6b9dd7ec7a180916962a29d98c9",
+  "parameters_selected": "Loss defaults and fixed controls unchanged; SLSQP 1e-7 normalized squared-constraint numerical interior guard after unguarded development endpoint rejection. No main-method tuning.",
+  "study": "supplementary common-input comparison of already observed 2160 queries/robot",
+  "config": {
+    "baseline": "6a7336f64bd48e4e293f2c43a1ec0833e529ed04",
+    "source_config": "configs/paper_v2.yaml",
+    "native_trac_library": "tmp/task_contract_build/libcontract_trac.so",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "cpu": 4,
+    "repeats": 3,
+    "dt": 0.02,
+    "order_seed": 202609160701,
+    "bootstrap_seed": 202609160702,
+    "bootstrap_samples": 4000,
+    "alpha": [
+      0.0,
+      0.5,
+      0.95
+    ],
+    "anchor_families": [
+      "ordinary",
+      "near_singular",
+      "near_limit"
+    ],
+    "displacements": [
+      "regular",
+      "high_utilization",
+      "multijoint_boundary"
+    ],
+    "methods": [
+      "relative",
+      "gn",
+      "tight",
+      "clarabel",
+      "range_loss_matched",
+      "direct_sqp",
+      "fixed_qp1",
+      "fixed_qp2"
+    ],
+    "development_methods": [
+      "range_loss_matched",
+      "direct_sqp",
+      "fixed_qp1",
+      "fixed_qp2"
+    ],
+    "application_methods": [
+      "relative",
+      "gn",
+      "range_loss_matched",
+      "direct_sqp",
+      "fixed_qp1",
+      "fixed_qp2"
+    ],
+    "range_loss": {
+      "g": 0,
+      "l": -1,
+      "u": 1,
+      "c": 2,
+      "f1": 1,
+      "f2": 0.01,
+      "f3": 100,
+      "p": 20
+    },
+    "parameter_selection": "none; one source-default loss and one declared optimizer configuration",
+    "sqp_numerical_amendment": {
+      "normalized_squared_constraint_guard": 1e-07,
+      "maxiter": 100,
+      "ftol": 1e-08
+    },
+    "application": {
+      "class": "synthetic noncontact planar observation scan",
+      "frames": 150,
+      "amplitudes_m": [
+        0.01,
+        0.02,
+        0.03
+      ],
+      "plane_angles_rad": [
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966,
+        2.356194490192345
+      ],
+      "initial_q": {
+        "panda": [
+          0.0,
+          -0.5,
+          0.0,
+          -2.0,
+          0.0,
+          1.5,
+          0.7
+        ],
+        "ur5e": [
+          0.0,
+          -1.2,
+          1.4,
+          -1.7,
+          -1.57,
+          0.0
+        ]
+      },
+      "orientation": "constant initial tool orientation",
+      "formula": "p(s)=p0+A*sin(4*pi*s)*u+(A/2)*sin(2*pi*s)*v, s=frame/149",
+      "provenance": "Cartesian geometric synthetic input; no real sensor, planner log, collision or feasibility claim"
+    }
+  },
+  "main_calls_started": false
+}

@@ -1,0 +1,108 @@
+{
+  "fixed_qp1": {
+    "initialization_ns": 35630522,
+    "warmup_calls": 3,
+    "settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "max_iterations": 30,
+      "max_dual_updates": 16,
+      "max_backtracking": 8,
+      "forcing": 0.25,
+      "gap_atol": 1e-09,
+      "gap_rtol": 1e-07,
+      "armijo": 0.0001,
+      "deadline_ms": 20.0
+    },
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  },
+  "fixed_qp2": {
+    "initialization_ns": 1573016,
+    "warmup_calls": 3,
+    "settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "max_iterations": 30,
+      "max_dual_updates": 16,
+      "max_backtracking": 8,
+      "forcing": 0.25,
+      "gap_atol": 1e-09,
+      "gap_rtol": 1e-07,
+      "armijo": 0.0001,
+      "deadline_ms": 20.0
+    },
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  },
+  "range_loss_matched": {
+    "initialization_ns": 1515777,
+    "warmup_calls": 3,
+    "settings": {
+      "maxiter": 100,
+      "deadline_ms": 20.0,
+      "single_start": "actual previous_q",
+      "optimizer": "L-BFGS-B",
+      "ftol": 1e-12,
+      "gtol": 1e-08,
+      "maxls": 20
+    },
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  },
+  "direct_sqp": {
+    "initialization_ns": 1464314,
+    "warmup_calls": 3,
+    "settings": {
+      "maxiter": 100,
+      "deadline_ms": 20.0,
+      "single_start": "actual previous_q",
+      "optimizer": "SLSQP",
+      "ftol": 1e-08,
+      "gtol": null,
+      "maxls": 20
+    },
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  }
+}

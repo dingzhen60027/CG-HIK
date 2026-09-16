@@ -1,0 +1,28 @@
+{
+  "direct_sqp": {
+    "initialization_ns": 32638586,
+    "warmup_calls": 3,
+    "settings": {
+      "maxiter": 100,
+      "deadline_ms": 20.0,
+      "single_start": "actual previous_q",
+      "optimizer": "SLSQP",
+      "ftol": 1e-08,
+      "constraint_interior_guard": 1e-07,
+      "gtol": null,
+      "maxls": 20
+    },
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  }
+}

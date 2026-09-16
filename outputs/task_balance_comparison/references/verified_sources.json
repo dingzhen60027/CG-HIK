@@ -1,0 +1,12 @@
+{
+  "checked_date": "2026-09-16",
+  "workflow": "nature-academic-search citation-verification; Crossref DOI metadata plus primary author full text; only task-relevant sources",
+  "sources": [
+    {"doi":"10.1109/TSP.2024.3365933","authors":["Zhong Zheng","Shiqian Ma","Lingzhou Xue"],"title":"A New Inexact Proximal Linear Algorithm With Adaptive Stopping Criteria for Robust Phase Retrieval","venue":"IEEE Transactions on Signal Processing","year":2024,"volume":"72","pages":"1081–1093","primary":"https://arxiv.org/html/2304.12522v2","checked_sections":["2.3","3","Eq. (23)","discussion of earlier LACC conditions"],"correspondence":"H-D <= rho_l (H0-H) is the same relative gap principle as U-L <= eta(P0-U); not an original stopping inequality here."},
+    {"doi":"10.1109/ICRA48891.2023.10161311","authors":["Yeping Wang","Pragathi Praveena","Daniel Rakita","Michael Gleicher"],"title":"RangedIK: An Optimization-based Robot Motion Generation Method for Ranged-Goal Tasks","venue":"ICRA","year":2023,"pages":"9700–9706","primary":"https://graphics.cs.wisc.edu/Papers/2023/WPRG23/2023_ICRA_RangedIK.pdf","checked_sections":["III","IV","Eq. (5)","Eq. (10)–(13)"],"code":"https://github.com/uwgraphics/relaxed_ik_core/tree/ranged-ik","commit":"1c48d2ae408b4e024ee037641aac1e728267984e","source_functions":["groove/objective.rs::swamp_groove_loss","MatchEEPosiDoF","MatchEERotaDoF","src/bin/relaxed_ik_bin.rs"]},
+    {"doi":"10.3389/frobt.2016.00016","role":"set-based task-priority foundations; primary article checked"},
+    {"doi":"10.1007/s11590-011-0430-z","role":"inexact bounded Gauss–Newton trust-region foundation, not this solver's convergence theorem","publication":"Optimization Letters 7, 447–465 (2013; online 2011)"},
+    {"primary":"https://web.stanford.edu/~boyd/cvxbook/","role":"standard epigraph and convex duality foundations"}
+  ],
+  "not_claimed":"Full 30-source novelty review or proof of absence of earlier complete methods. Package bibliography is a search lead, not verified wholesale."
+}

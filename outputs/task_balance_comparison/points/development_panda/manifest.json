@@ -1,0 +1,38 @@
+{
+  "utc": "2026-09-16T07:51:19.063512+00:00",
+  "phase": "development",
+  "robot": "panda",
+  "jobs": 3240,
+  "calls": 3240,
+  "input_sha256": "d92fe263b745755cd2c3c52a08c4e71528d5a4c785eeedf08db2735f7b4f25d0",
+  "code_hashes": {
+    "src/confik/task_balance_comparison.py": "85dc41b52f4c3e74ebe740be932052ebcbf5ac22df12a7bc8e91c98fe56d8656",
+    "scripts/run_task_balance_comparison.py": "e494887a571a2817e4a766a4328d296a08f1e056c61480b9f5989c3e2af9936c",
+    "configs/task_balance_comparison.yaml": "7c6b8e19b789d7d2396c33188afaef90c643c09b5e9220b273c8c8ab15b81530"
+  },
+  "head": "6a7336f64bd48e4e293f2c43a1ec0833e529ed04",
+  "backend": {
+    "engine": "numpy_supplied_fallback",
+    "versions": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.0",
+      "numba": "0.66.0",
+      "coverage": "7.4.4",
+      "pin": "3.9.0",
+      "pink": null
+    },
+    "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+  },
+  "affinity": [
+    4
+  ],
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "files": {
+    "records.jsonl.gz": "6356dec4f68012f24b1cd9d3976ebd22585978fd0f654528f25def13245c2427",
+    "adapters.json": "3ada504135d5d64494ec8f51b4482c6902acb6c7da2fd7740a5478450044e502"
+  }
+}

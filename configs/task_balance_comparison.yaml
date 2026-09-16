@@ -1,0 +1,30 @@
+baseline: 6a7336f64bd48e4e293f2c43a1ec0833e529ed04
+source_config: configs/paper_v2.yaml
+native_trac_library: tmp/task_contract_build/libcontract_trac.so
+robots: [panda, ur5e]
+cpu: 4
+repeats: 3
+dt: 0.02
+order_seed: 202609160701
+bootstrap_seed: 202609160702
+bootstrap_samples: 4000
+alpha: [0.0, 0.5, 0.95]
+anchor_families: [ordinary, near_singular, near_limit]
+displacements: [regular, high_utilization, multijoint_boundary]
+methods: [relative, gn, tight, clarabel, range_loss_matched, direct_sqp, fixed_qp1, fixed_qp2]
+development_methods: [range_loss_matched, direct_sqp, fixed_qp1, fixed_qp2]
+application_methods: [relative, gn, range_loss_matched, direct_sqp, fixed_qp1, fixed_qp2]
+range_loss: {g: 0, l: -1, u: 1, c: 2, f1: 1, f2: 0.01, f3: 100, p: 20}
+parameter_selection: none; one source-default loss and one declared optimizer configuration
+sqp_numerical_amendment: {normalized_squared_constraint_guard: 1.0e-7, maxiter: 100, ftol: 1.0e-8}
+application:
+  class: synthetic noncontact planar observation scan
+  frames: 150
+  amplitudes_m: [0.01, 0.02, 0.03]
+  plane_angles_rad: [0.0, 0.7853981633974483, 1.5707963267948966, 2.356194490192345]
+  initial_q:
+    panda: [0.0, -0.5, 0.0, -2.0, 0.0, 1.5, 0.7]
+    ur5e: [0.0, -1.2, 1.4, -1.7, -1.57, 0.0]
+  orientation: constant initial tool orientation
+  formula: p(s)=p0+A*sin(4*pi*s)*u+(A/2)*sin(2*pi*s)*v, s=frame/149
+  provenance: Cartesian geometric synthetic input; no real sensor, planner log, collision or feasibility claim

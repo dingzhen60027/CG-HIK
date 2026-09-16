@@ -1,0 +1,12 @@
+{
+  "kind": "planning_and_handoff_only",
+  "created_date": "2026-09-16",
+  "repository": "dingzhen60027/CG-HIK",
+  "branch": "codex/hierarchical-v5",
+  "known_baseline": "6a7336f64bd48e4e293f2c43a1ec0833e529ed04",
+  "note": "This package contains a task specification and the supplied prior literature review; it contains no new experimental results and makes no claim of GitHub changes. The prior literature matrix is a retrieval aid; primary sources must be checked as specified.",
+  "files": {
+    "CODEX_NEXT_TASK.md": "5f6c4462e2555bb151e80906d67e66d27da7394fbaa6b255e51471a3c91318e7",
+    "NOVELTY_REVIEW_AND_30_SOURCES.md": "1a024c6893e899900c1539eb0abbf05db372aa03ba045ff3f2e2fd78cf511f7a"
+  }
+}
