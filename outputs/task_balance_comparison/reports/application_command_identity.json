@@ -1,0 +1,15 @@
+{
+  "solver_calls": 0,
+  "robots": {
+    "panda": {
+      "commands": 5400,
+      "continued_local_models": 0,
+      "max_abs_q_difference_vs_gn": 0
+    },
+    "ur5e": {
+      "commands": 5400,
+      "continued_local_models": 0,
+      "max_abs_q_difference_vs_gn": 0
+    }
+  }
+}

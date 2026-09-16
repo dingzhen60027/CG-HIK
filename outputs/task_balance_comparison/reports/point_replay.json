@@ -1,0 +1,22 @@
+{
+  "audits": {
+    "panda": {
+      "calls": 51840,
+      "accepted": 51615,
+      "late": 0,
+      "witnesses": 2160
+    },
+    "ur5e": {
+      "calls": 51840,
+      "accepted": 51654,
+      "late": 0,
+      "witnesses": 2160
+    }
+  },
+  "sources": {
+    "outputs/task_balance_comparison/points/points_panda": "047e651e3d5a54d5a0ba949d6f3e3ae88bf0dc568125b6a1a33068bc9d41e5c0",
+    "outputs/task_balance_comparison/points/points_ur5e": "3a910825b844c234a1432286275b699c2c7bc75e3f800c187953e274e9c4fb86"
+  },
+  "accepted_contract_violations": 0,
+  "solver_calls": 0
+}

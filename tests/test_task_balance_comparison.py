@@ -64,3 +64,52 @@ def test_first_admissible_current_input_and_final_authority(method,robot):
     pose=kin.forward(q+.005)
     result=s.solve(pose.position,pose.rotation,q,.02)
     assert v.check(np.array(result['q']),entry.old.query_of(dict(previous_q=q,target_position=pose.position,target_rotation=pose.rotation,dt=.02))).accepted==result['accepted']
+
+def test_official_example_fk_and_return_order_readonly():
+    """Recheck stored author-example outputs, NO IK calls or new targets."""
+    import json
+    from scipy.spatial.transform import Rotation
+    from confik.kinematics.urdf import URDFKinematics
+    from confik.solvers.verifier import SolutionVerifier
+    from confik.correction_reserve.ranged_adapter import RangedAdapter
+    folder=ROOT/'tmp/crik_dependencies/ranged_ik'
+    settings=yaml.safe_load((folder/'configs/settings.yaml').read_text())
+    urdf=folder/'configs/urdfs'/settings['urdf']
+    kin=URDFKinematics.from_file(urdf,base_link=settings['base_links'][0],end_link=settings['ee_links'][0])
+    cfg=yaml.safe_load(entry.CONFIG.read_text());_,_,template,_=entry.context('panda',cfg)
+    v=SolutionVerifier(kin,template.config)
+    native=RangedAdapter(kin,v,{},urdf,range_mode='upstream')
+    demo=json.loads((entry.OUT/'references/official_demo.json').read_text())
+    outputs=[np.array(json.loads(line.split(': ',1)[1])) for line in demo['stdout'].splitlines() if line.startswith('Joint solutions: ')]
+    assert len(outputs)==10 and all(len(q)==kin.nq and np.isfinite(q).all() for q in outputs)
+    start=np.array(settings['starting_config']);initial=kin.forward(start);records=[]
+    native.reset(start)
+    for i,q in enumerate(outputs):
+        a=kin.forward(q);b=native.native_forward(np.ascontiguousarray(q))
+        pe=float(np.linalg.norm(a.position-b.position));re=float(np.linalg.norm(Rotation.from_matrix(a.rotation.T@b.rotation).as_rotvec()))
+        assert pe<1e-9 and re<1e-9
+        records.append(dict(step=i,q=q.tolist(),fk_position_difference_m=pe,fk_rotation_difference_rad=re,
+            demo_target_position_error_m=float(np.linalg.norm(a.position-initial.position-np.array([0,.01*(i+1),0]))),
+            demo_target_rotation_error_rad=float(np.linalg.norm(Rotation.from_matrix(initial.rotation.T@a.rotation).as_rotvec()))))
+    result=dict(joint_names=list(kin.joint_names),base_link=kin.base_link,end_link=kin.end_link,
+        solver_calls=0,source=demo['commit'],records=records,
+        metadata=native.metadata,scope='official Sawyer example FK/order/frame identity check; not a third-robot performance evaluation')
+    native.close()
+    print('OFFICIAL_AUDIT_JSON '+json.dumps(result))
+
+def test_application_identity_readonly():
+    """All saved application commands, not sampled frames; never calls solve."""
+    import gzip,json
+    result={}
+    for robot in ('panda','ur5e'):
+        path=entry.OUT/f'application/application_{robot}/records.jsonl.gz'
+        rows=[json.loads(line) for line in gzip.open(path,'rt')]
+        index={(r['uid'],r['repeat'],r['frame'],r['method']):r for r in rows}
+        selected=[r for r in rows if r['method']=='relative']
+        assert len(selected)==5400
+        assert all(not r.get('subproblems') for r in selected)
+        for r in selected:
+            other=index[r['uid'],r['repeat'],r['frame'],'gn']
+            np.testing.assert_array_equal(r['q'],other['q'])
+        result[robot]=dict(commands=5400,continued_local_models=0,max_abs_q_difference_vs_gn=0.)
+    print('APPLICATION_IDENTITY_JSON '+json.dumps(dict(solver_calls=0,robots=result)))

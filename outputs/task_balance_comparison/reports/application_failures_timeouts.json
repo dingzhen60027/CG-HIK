@@ -1,0 +1,26 @@
+[
+  {
+    "robot": "panda",
+    "uid": "67fc7835df80b245bd45fa8865edfdaac13d61af9238c35a92d40a8e76d1b362",
+    "method": "fixed_qp2",
+    "repeat": 1,
+    "frame": 106,
+    "accepted": true,
+    "latency_ns": 49947183,
+    "reasons": "accepted",
+    "raw_file": "outputs/task_balance_comparison/application/application_panda/records.jsonl.gz",
+    "line": 10307
+  },
+  {
+    "robot": "ur5e",
+    "uid": "bc0747a7bd61fea78beb785aa22e1d71139d880199422ff8361f1510e202872e",
+    "method": "fixed_qp1",
+    "repeat": 2,
+    "frame": 106,
+    "accepted": true,
+    "latency_ns": 49255430,
+    "reasons": "accepted",
+    "raw_file": "outputs/task_balance_comparison/application/application_ur5e/records.jsonl.gz",
+    "line": 9407
+  }
+]

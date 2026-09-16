@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "calls": 64800,
+    "accepted": 64800,
+    "late": 2
+  },
+  "sources": {
+    "outputs/task_balance_comparison/application/application_panda": "ebd8c443a8345c99e762cb180facb38c09117682f4b423658b5652a5c32026f6",
+    "outputs/task_balance_comparison/application/application_ur5e": "4546154fd54867fe19eb86a27aa16a13f17ee625e3c99dae6ae29dbac9a28983"
+  },
+  "solver_calls": 0,
+  "accepted_contract_violations": 0,
+  "application_scope": "synthetic geometric task, no real-world effectiveness estimate"
+}

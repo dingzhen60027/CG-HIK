@@ -1,0 +1,295 @@
+{
+  "joint_names": [
+    "right_j0",
+    "right_j1",
+    "right_j2",
+    "right_j3",
+    "right_j4",
+    "right_j5",
+    "right_j6"
+  ],
+  "base_link": "base_link",
+  "end_link": "right_hand",
+  "solver_calls": 0,
+  "source": "1c48d2ae408b4e024ee037641aac1e728267984e",
+  "records": [
+    {
+      "step": 0,
+      "q": [
+        0.016791783485293484,
+        -0.00018888818972266755,
+        -1.5711324247988643,
+        1.579423795087164,
+        -0.00033941060509340307,
+        -1.565135802109226,
+        0.0005706527159394727
+      ],
+      "fk_position_difference_m": 4.0125770192081414e-16,
+      "fk_rotation_difference_rad": 2.2969409039327127e-16,
+      "demo_target_position_error_m": 0.0016037563088313399,
+      "demo_target_rotation_error_rad": 0.0025192640556665888
+    },
+    {
+      "step": 1,
+      "q": [
+        0.0389371231033892,
+        0.00016162349679382017,
+        -1.5713146984537905,
+        1.591422889277608,
+        0.0002614007576777627,
+        -1.5547112215132377,
+        0.0010567219656677756
+      ],
+      "fk_position_difference_m": 3.554447978966673e-16,
+      "fk_rotation_difference_rad": 2.7546252442621357e-16,
+      "demo_target_position_error_m": 0.0011599904158285021,
+      "demo_target_rotation_error_rad": 0.002293436909468808
+    },
+    {
+      "step": 2,
+      "q": [
+        0.06042129625509469,
+        0.0009153801175816338,
+        -1.5716998023137532,
+        1.6019650715288047,
+        0.001233998496895809,
+        -1.5434799639273,
+        0.0014635960490832643
+      ],
+      "fk_position_difference_m": 2.2887833992611187e-16,
+      "fk_rotation_difference_rad": 6.028207991044531e-16,
+      "demo_target_position_error_m": 0.001035844520624038,
+      "demo_target_rotation_error_rad": 0.0020469764556005337
+    },
+    {
+      "step": 3,
+      "q": [
+        0.081206186021091,
+        0.001743108058549048,
+        -1.5723281540983989,
+        1.611367002456408,
+        0.0020792504413060693,
+        -1.5322696274190812,
+        0.0020643694082399418
+      ],
+      "fk_position_difference_m": 1.4946834900704541e-16,
+      "fk_rotation_difference_rad": 1.616070688276495e-16,
+      "demo_target_position_error_m": 0.0011202419796840933,
+      "demo_target_rotation_error_rad": 0.002215402807229432
+    },
+    {
+      "step": 4,
+      "q": [
+        0.10211194837829242,
+        0.0026405971802747306,
+        -1.5730731334035526,
+        1.6204092549741962,
+        0.002919305698524683,
+        -1.5205697565198353,
+        0.0028515939954020797
+      ],
+      "fk_position_difference_m": 2.0014830212433605e-16,
+      "fk_rotation_difference_rad": 4.423519539427293e-16,
+      "demo_target_position_error_m": 0.0012083995299537915,
+      "demo_target_rotation_error_rad": 0.0023845938101654776
+    },
+    {
+      "step": 5,
+      "q": [
+        0.12323813826729522,
+        0.003678129809145339,
+        -1.573899760573967,
+        1.6290957952873977,
+        0.0038797735455646924,
+        -1.5081897301647764,
+        0.003749748026639266
+      ],
+      "fk_position_difference_m": 3.554447978966673e-16,
+      "fk_rotation_difference_rad": 1.0078304373288753e-16,
+      "demo_target_position_error_m": 0.0012525080935943105,
+      "demo_target_rotation_error_rad": 0.0024652359950544387
+    },
+    {
+      "step": 6,
+      "q": [
+        0.1444376162497888,
+        0.004858426358154165,
+        -1.5748237569225574,
+        1.6372868490648262,
+        0.004937178948491344,
+        -1.495209125778169,
+        0.004757774101187552
+      ],
+      "fk_position_difference_m": 2.237726045655905e-16,
+      "fk_rotation_difference_rad": 4.731770409822465e-16,
+      "demo_target_position_error_m": 0.0012840238803149542,
+      "demo_target_rotation_error_rad": 0.0025204901279128164
+    },
+    {
+      "step": 7,
+      "q": [
+        0.16565695179117199,
+        0.006165440816956493,
+        -1.5758544402615802,
+        1.6449535777015856,
+        0.00604846722524594,
+        -1.4816828093844792,
+        0.005893476516490467
+      ],
+      "fk_position_difference_m": 3.973993651728112e-16,
+      "fk_rotation_difference_rad": 6.558156868890791e-16,
+      "demo_target_position_error_m": 0.0013169499149926008,
+      "demo_target_rotation_error_rad": 0.0025763923775884
+    },
+    {
+      "step": 8,
+      "q": [
+        0.18690249978795598,
+        0.0075965448904122355,
+        -1.5769907758665374,
+        1.6521052958052853,
+        0.007201278883869153,
+        -1.4676065236675775,
+        0.007158412332559586
+      ],
+      "fk_position_difference_m": 2.220446049250313e-16,
+      "fk_rotation_difference_rad": 3.6207245965926695e-16,
+      "demo_target_position_error_m": 0.00134828663195116,
+      "demo_target_rotation_error_rad": 0.0026257126679246913
+    },
+    {
+      "step": 9,
+      "q": [
+        0.2081738520912738,
+        0.009155304811463595,
+        -1.5782317607017229,
+        1.6587373518930073,
+        0.008391607891077029,
+        -1.4529678722472328,
+        0.008547333730638883
+      ],
+      "fk_position_difference_m": 5.551115123125783e-16,
+      "fk_rotation_difference_rad": 3.055374890472027e-16,
+      "demo_target_position_error_m": 0.0013744209067525417,
+      "demo_target_rotation_error_rad": 0.0026603199324857223
+    }
+  ],
+  "metadata": {
+    "method": "RangedIK (official cutoff)",
+    "upstream_url": "https://github.com/uwgraphics/relaxed_ik_core",
+    "upstream_branch": "ranged-ik",
+    "upstream_sha": "1c48d2ae408b4e024ee037641aac1e728267984e",
+    "license": "MIT",
+    "range_mode": "upstream",
+    "mapping": {
+      "bounds": [
+        0.0005773502691896257,
+        0.0005773502691896257,
+        0.0005773502691896257,
+        0.00503833156733364,
+        0.00503833156733364,
+        0.00503833156733364
+      ],
+      "frame": "target frame",
+      "position": "R_target.T @ (p_actual - p_target)",
+      "orientation": "Log(R_target.T @ R_actual), principal scaled-axis vector",
+      "orientation_term": "absolute value of each scaled-axis component",
+      "units": [
+        "m",
+        "m",
+        "m",
+        "rad",
+        "rad",
+        "rad"
+      ],
+      "formula": "nextafter(public_norm_tolerance / sqrt(3), 0)",
+      "conservativeness": "the component box is inside the public norm ball, but native ranges are soft objectives",
+      "native_range_mode": "upstream",
+      "range_activation_cutoff": 0.01,
+      "ranged_loss_active": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    "library_sha256": "ecfb60b19632105b36388cc39ccbf0162640ae763e61c7560260837453579d8a",
+    "native_max_iterations": 100,
+    "native_panoc_tolerance": 0.0005,
+    "native_max_duration_ms": 18,
+    "native_cache": {
+      "tolerance": 1e-14,
+      "lbfgs_memory": 10
+    },
+    "native_weights": {
+      "position_each": 50,
+      "rotation_each": 10,
+      "joint_limit_each": 0.1,
+      "velocity": 0.7,
+      "acceleration": 0.5,
+      "jerk": 0.3,
+      "manipulability": 1,
+      "native_self_collision_each": null
+    },
+    "collision_objective": false,
+    "active_objective_weights": [
+      50,
+      50,
+      50,
+      10,
+      10,
+      10,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.7,
+      0.5,
+      0.3,
+      1
+    ],
+    "active_objective_count": 17,
+    "dynamic_bounds": "unchanged static URDF penalty; hard PANOC Rectangle is narrowed to representable single-frame interval",
+    "history": "actual accepted or held command each frame, never the rejected raw candidate",
+    "native_status": "PANOC convergence only; independent task acceptance may differ",
+    "joint_names": [
+      "right_j0",
+      "right_j1",
+      "right_j2",
+      "right_j3",
+      "right_j4",
+      "right_j5",
+      "right_j6"
+    ],
+    "base_link": "base_link",
+    "end_link": "right_hand",
+    "urdf_sha256": "64cf1d0ac33ec485f0668c9ea77bdbac6cfa1f168f6aeb8b8922501dcd363ff4",
+    "public_kinematics_backend": "confik.kinematics.urdf.URDFKinematics",
+    "native_kinematics_backend": "official relaxed_ik_core::spacetime::Robot / Arm (nalgebra, URDF via k)",
+    "fk_checks": [
+      {
+        "fraction": 0,
+        "position_error": 1.1102230246251565e-16,
+        "orientation_error": 2.2871756414789823e-16
+      },
+      {
+        "fraction": 0.03125,
+        "position_error": 3.7238012298709097e-16,
+        "orientation_error": 4.94051199187169e-16
+      },
+      {
+        "fraction": -0.0625,
+        "position_error": 3.888257972851056e-16,
+        "orientation_error": 4.0781600853066217e-16
+      }
+    ],
+    "collision_scope": "out-of-contract official self-collision tail removed; all other objectives/weights unchanged",
+    "timing_scope": "input conversion through actual accepted/held history update; offline metric/list packaging excluded and reported separately"
+  },
+  "scope": "official Sawyer example FK/order/frame identity check; not a third-robot performance evaluation"
+}
