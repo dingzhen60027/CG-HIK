@@ -111,9 +111,37 @@ def prepare(cfg):
 def check():
     p=json.loads((OUT/'sensitivity/protocol.json').read_text())
     assert p['frozen']==frozen()
-    assert p['code']==study_hashes()
+    check_code(p['code'])
     for name,h in dict(p['original_inputs'],**p['input_hashes']).items():assert sha(ROOT/name)==h
     return p
+
+def check_code(expected):
+    actual=study_hashes()
+    if actual!=expected:
+        amendment=json.loads((OUT/'source_replay/runner_amendment.json').read_text())
+        assert amendment['original_code']==expected and amendment['new_code']==actual
+
+def measured_call(solver,kin,v,query):
+    """Log a known empty-input-box API exception, never produce a replacement q."""
+    start=perf_counter_ns()
+    try:
+        row=solver.solve(query.target.position,query.target.rotation,query.previous_q,query.dt)
+    except ValueError as exc:
+        S=kin.limits.velocity*query.dt+v.config.velocity_tolerance
+        lo=np.maximum(kin.limits.lower+1e-12,query.previous_q-S*(1-1e-12))
+        hi=np.minimum(kin.limits.upper-1e-12,query.previous_q+S*(1-1e-12))
+        # Do not suppress arbitrary implementation errors or change the solver.
+        if str(exc) not in ('empty interval','Empty current step interval') or not np.any(lo>hi):raise
+        verdict=v.check(None,query)
+        row=dict(q=None,accepted=False,internal_status='input_exception:empty interval',internal_ok=False,
+            finite=False,joint_limit_ok=False,velocity_ok=False,position_error=None,orientation_error=None,
+            verification_reasons=list(verdict.reasons),failure_kind='empty_dynamic_box_no_command',
+            velocity_utilization=None,iterations=0,evaluations=0,dual_updates=0,subproblems=[],
+            total_latency_ns=perf_counter_ns()-start,exception=str(exc))
+    row['adapter_total_latency_ns']=row['total_latency_ns']
+    row['total_latency_ns']=perf_counter_ns()-start
+    row['accepted_within_20ms']=bool(row['accepted'] and row['total_latency_ns']<=20_000_000)
+    return row
 
 def run_sensitivity(cfg,robot):
     check()
@@ -281,11 +309,11 @@ def prepare_replay(cfg):
 def run_replay(cfg):
     check()
     seal=json.loads((OUT/'source_replay/replay_protocol.json').read_text())
-    assert seal['code']==study_hashes() and seal['frozen']==frozen()
+    check_code(seal['code']);assert seal['frozen']==frozen()
     for name,h in seal['input_hashes'].items():assert sha(ROOT/name)==h
     head=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     assert head!=cfg['baseline']
-    folder=OUT/'source_replay/run';folder.mkdir(exist_ok=False)
+    folder=OUT/'source_replay/run_complete';folder.mkdir(exist_ok=False)
     items=json.loads((OUT/'source_replay/inputs_evaluation.json').read_text())
     jobs=json.loads((OUT/'source_replay/order.json').read_text())
     cache={m:factory(m,'panda',cfg,dt=1/15) for m in cfg['droid']['methods']}
@@ -294,7 +322,10 @@ def run_replay(cfg):
         for index,(i,m,rep) in enumerate(jobs):
             solver,kin,v,_=cache[m];item=items[i];query=old.old.query_of(item)
             solver.reset(query.previous_q)
-            row=old.OuterTimer(solver).solve(query.target.position,query.target.rotation,query.previous_q,query.dt)
+            row=measured_call(solver,kin,v,query)
+            S=kin.limits.velocity*query.dt+v.config.velocity_tolerance
+            row['empty_dynamic_box']=bool(np.any(np.maximum(kin.limits.lower,query.previous_q-S)>np.minimum(kin.limits.upper,query.previous_q+S)))
+            row['logged_state_outside_project_joint_range']=bool(np.any(query.previous_q<kin.limits.lower) or np.any(query.previous_q>kin.limits.upper))
             row.update(robot='panda',uid=item['uid'],episode_uid=item['episode_uid'],session=item['session'],
                 source_frame=item['source_frame'],input_index=i,method=m,repeat=rep,witness_available=item['witness_available'])
             f.write(json.dumps(clean(row),separators=(',',':'),allow_nan=False)+'\n')

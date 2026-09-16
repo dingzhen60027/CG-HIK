@@ -59,3 +59,13 @@ def test_droid_raw_schema_pairing_and_period_are_not_observation_fk():
     # The helper never imports DROID's hardware-bearing modules.
     source=(ROOT/'src/confik/task_balance_replay.py').read_text()
     assert 'from droid.' not in source and 'import droid' not in source
+
+def test_record_empty_input_box_without_replacement_command():
+    s,k,v,_=entry.factory('relative','panda',CFG)
+    q=(k.limits.lower+k.limits.upper)/2;q[5]=4.1
+    pose=k.forward(q)
+    query=entry.old.old.query_of(dict(previous_q=q,target_position=pose.position,target_rotation=pose.rotation,dt=1/15))
+    r=entry.measured_call(s,k,v,query)
+    assert r['q'] is None and not r['accepted']
+    assert r['internal_status']=='input_exception:empty interval'
+    assert r['total_latency_ns']>=r['adapter_total_latency_ns']>0

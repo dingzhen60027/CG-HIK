@@ -1,0 +1,175 @@
+{
+  "relative": {
+    "initialization_ns": 29566844,
+    "warmup_calls": 3,
+    "settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "max_iterations": 30,
+      "max_dual_updates": 16,
+      "max_backtracking": 8,
+      "forcing": 0.25,
+      "gap_atol": 1e-09,
+      "gap_rtol": 1e-07,
+      "armijo": 0.0001,
+      "deadline_ms": 20.0
+    },
+    "verifier": {
+      "position_tolerance": 0.001,
+      "orientation_tolerance": 0.008726646259971648,
+      "joint_limit_tolerance": 1e-09,
+      "velocity_tolerance": 0.0001,
+      "enforce_velocity": true
+    },
+    "conic_structure_warmup": false,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  },
+  "gn": {
+    "initialization_ns": 1590262,
+    "warmup_calls": 3,
+    "settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "task_stop": 1.0,
+      "maximum_iterations": 30,
+      "deadline_ms": 20.0
+    },
+    "verifier": {
+      "position_tolerance": 0.001,
+      "orientation_tolerance": 0.008726646259971648,
+      "joint_limit_tolerance": 1e-09,
+      "velocity_tolerance": 0.0001,
+      "enforce_velocity": true
+    },
+    "conic_structure_warmup": false,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  },
+  "fixed_qp2": {
+    "initialization_ns": 1461798,
+    "warmup_calls": 3,
+    "settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "max_iterations": 30,
+      "max_dual_updates": 16,
+      "max_backtracking": 8,
+      "forcing": 0.25,
+      "gap_atol": 1e-09,
+      "gap_rtol": 1e-07,
+      "armijo": 0.0001,
+      "deadline_ms": 20.0
+    },
+    "verifier": {
+      "position_tolerance": 0.001,
+      "orientation_tolerance": 0.008726646259971648,
+      "joint_limit_tolerance": 1e-09,
+      "velocity_tolerance": 0.0001,
+      "enforce_velocity": true
+    },
+    "conic_structure_warmup": false,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  },
+  "clarabel": {
+    "initialization_ns": 1716904,
+    "warmup_calls": 3,
+    "settings": {
+      "damping": 0.01,
+      "posture_weight": 1.0,
+      "max_iterations": 30,
+      "max_dual_updates": 16,
+      "max_backtracking": 8,
+      "forcing": null,
+      "gap_atol": 1e-09,
+      "gap_rtol": 1e-07,
+      "armijo": 0.0001,
+      "deadline_ms": 20.0
+    },
+    "verifier": {
+      "position_tolerance": 0.001,
+      "orientation_tolerance": 0.008726646259971648,
+      "joint_limit_tolerance": 1e-09,
+      "velocity_tolerance": 0.0001,
+      "enforce_velocity": true
+    },
+    "conic_structure_warmup": true,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  },
+  "direct_sqp": {
+    "initialization_ns": 1438914,
+    "warmup_calls": 3,
+    "settings": {
+      "maxiter": 100,
+      "deadline_ms": 20.0,
+      "single_start": "actual previous_q",
+      "optimizer": "SLSQP",
+      "ftol": 1e-08,
+      "constraint_interior_guard": 1e-07,
+      "gtol": null,
+      "maxls": 20
+    },
+    "verifier": {
+      "position_tolerance": 0.001,
+      "orientation_tolerance": 0.008726646259971648,
+      "joint_limit_tolerance": 1e-09,
+      "velocity_tolerance": 0.0001,
+      "enforce_velocity": true
+    },
+    "conic_structure_warmup": false,
+    "backend": {
+      "engine": "numpy_supplied_fallback",
+      "versions": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.0",
+        "numba": "0.66.0",
+        "coverage": "7.4.4",
+        "pin": "3.9.0",
+        "pink": null
+      },
+      "import_error": "AttributeError: module 'coverage.types' has no attribute 'Tracer'"
+    }
+  }
+}

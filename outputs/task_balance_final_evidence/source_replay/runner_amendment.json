@@ -1,0 +1,23 @@
+{
+  "reason": "Original frozen solver raises ValueError(empty interval) on a genuine logged state outside the project single-frame reachable joint box; runner must record absence of command, not abort or replace it.",
+  "partial_run_preserved": "source_replay/run/records.jsonl.gz",
+  "partial_completed_calls": 495,
+  "failed_order_index": 495,
+  "failed_input_index": 5753,
+  "failed_method": "clarabel",
+  "failed_repeat": 2,
+  "new_run": "source_replay/run_complete",
+  "rerun_scope": "All 7301 DROID queries x 5 methods x 3 repeats with identical inputs and order, no sensitivity rerun. Partial diagnostics excluded from new main timing but retained.",
+  "method_change": "None: runner records exactly the known empty-interval exception with q=null; original verifier rejects null. No replacement IK, angle wrap, tolerance/bounds change, or dataset replacement.",
+  "source_joint_contract_discrepancy": "215 logged states outside project joint range; 119 have empty dynamic intersection, all in one locked evaluation episode. They remain in all-query results and are separately labelled; these are not witness-confirmed misses or algorithm gains.",
+  "original_code": {
+    "scripts/run_task_balance_final_evidence.py": "902bd6f34ad73340f992f9a9cf7c7a4fd6a1a256d9992ee758470fd49760b4fc",
+    "src/confik/task_balance_replay.py": "7b9ad3b18585f1ed39b44fb54c87fb0b22d76591edcbd7a5b01311a6817b4082",
+    "configs/task_balance_final_evidence.yaml": "15a6dffabb22cebefd68a3440501d69780fc444a5e47b7272bb43ec17ed4bee0"
+  },
+  "new_code": {
+    "scripts/run_task_balance_final_evidence.py": "373096f50d23bfa92d5ca7f591683836461f81ea104f57279e5dbd33f26e5604",
+    "src/confik/task_balance_replay.py": "7b9ad3b18585f1ed39b44fb54c87fb0b22d76591edcbd7a5b01311a6817b4082",
+    "configs/task_balance_final_evidence.yaml": "15a6dffabb22cebefd68a3440501d69780fc444a5e47b7272bb43ec17ed4bee0"
+  }
+}
