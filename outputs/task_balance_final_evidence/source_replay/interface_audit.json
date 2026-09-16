@@ -1,0 +1,1169 @@
+{
+  "episodes": [
+    {
+      "episode_uid": "05b55b7d1e72a8f3fcc4cfc265c169a2bb8923754d17cd5e8fd4018c51194081",
+      "canonical_path": "IPRL/success/2023-08-24/Thu_Aug_24_21:29:53_2023/trajectory.h5",
+      "role": "interface",
+      "session": "IPRL/2023-08-24",
+      "frames": 402,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        1.2530848109516472e-09,
+        1.4139395105606192e-08,
+        3.141621432060843e-08,
+        4.19794720604685e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        5.947772914017839e-10,
+        2.228399214357101e-08,
+        6.472105469518932e-08,
+        8.039124777525485e-08
+      ],
+      "observation_action_joint_difference_max": 0.06564784049987793,
+      "interval_ms_quantiles": [
+        70.0,
+        71.0,
+        72.0,
+        74.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 30,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        69.0
+      ],
+      "source_command_witnesses": 44,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "07a77a42e98db4cccb9c1f7d6ec483714268c3c8f75c3cf6f31f9d87ccf7a75d",
+      "canonical_path": "AUTOLab/success/2023-07-14/Fri_Jul_14_16:55:45_2023/trajectory.h5",
+      "role": "interface",
+      "session": "AUTOLab/2023-07-14",
+      "frames": 93,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        3.2751513581757446e-09,
+        1.5197452677840007e-08,
+        2.742692015497743e-08,
+        2.912802484343542e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        6.637336011253339e-10,
+        7.490411090928107e-09,
+        1.7699721890460512e-08,
+        2.3456614670833212e-08
+      ],
+      "observation_action_joint_difference_max": 0.06004023551940918,
+      "interval_ms_quantiles": [
+        69.0,
+        71.0,
+        72.0,
+        73.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 12,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 19,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "1154c49d3eb6c3c23b4dcc45738f0d2df368b2d47959f071e9ad62452ccc6052",
+      "canonical_path": "AUTOLab/success/2023-10-15/Sun_Oct_15_19:57:21_2023/trajectory.h5",
+      "role": "interface",
+      "session": "AUTOLab/2023-10-15",
+      "frames": 120,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        3.769942743425689e-09,
+        1.9695712004036738e-08,
+        3.2459275895541106e-08,
+        3.787718159214894e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        3.110537914560542e-09,
+        1.4976977226716364e-08,
+        3.899351950260335e-08,
+        6.834804242097228e-08
+      ],
+      "observation_action_joint_difference_max": 0.07723698019981384,
+      "interval_ms_quantiles": [
+        69.0,
+        71.0,
+        72.0,
+        74.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 10,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        70.0
+      ],
+      "source_command_witnesses": 11,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "12c2f491600ba5796e3041ac6e632286147458a4c692a4496d1fd429533a8301",
+      "canonical_path": "TRI/success/2023-10-17/Tue_Oct_17_11:22:01_2023/trajectory.h5",
+      "role": "interface",
+      "session": "TRI/2023-10-17",
+      "frames": 159,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        9.462443568805204e-10,
+        1.5398239470724757e-08,
+        2.6529712291849954e-08,
+        3.692378861053803e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        6.989554358189935e-10,
+        1.4616194925990696e-08,
+        4.152467378584514e-08,
+        5.1799776075460235e-08
+      ],
+      "observation_action_joint_difference_max": 0.0594903826713562,
+      "interval_ms_quantiles": [
+        69.0,
+        71.0,
+        72.0,
+        72.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 14,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        67.0
+      ],
+      "source_command_witnesses": 15,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "1b180a877576299ed17077bacc1e18abb0c7f0b815803744e8aab991358690c3",
+      "canonical_path": "IPRL/success/2023-10-14/Sat_Oct_14_21:06:37_2023/trajectory.h5",
+      "role": "interface",
+      "session": "IPRL/2023-10-14",
+      "frames": 356,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        4.172941818955717e-10,
+        1.3629193304513929e-08,
+        2.6463188799478384e-08,
+        3.09090220573373e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        5.740037847844091e-10,
+        7.565956020853894e-09,
+        2.0660798780125554e-08,
+        4.0663871244163634e-08
+      ],
+      "observation_action_joint_difference_max": 0.04088938236236572,
+      "interval_ms_quantiles": [
+        70.0,
+        71.0,
+        72.30000000000001,
+        75.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 20,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        70.0
+      ],
+      "source_command_witnesses": 22,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "2031442d7f987fe68667bef0a908dbc4f54c7524500a45fc84953a0a2b6e2bd1",
+      "canonical_path": "TRI/success/2024-01-02/Tue_Jan__2_13:33:44_2024/trajectory.h5",
+      "role": "interface",
+      "session": "TRI/2024-01-02",
+      "frames": 218,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        1.934343059103153e-09,
+        1.2982280487227756e-08,
+        1.8480272947644167e-08,
+        2.1036357481866613e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        3.998374249813387e-10,
+        9.729705935912573e-09,
+        2.3186819376815404e-08,
+        3.6184030130070185e-08
+      ],
+      "observation_action_joint_difference_max": 0.05761226266622543,
+      "interval_ms_quantiles": [
+        69.0,
+        70.0,
+        72.0,
+        77.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 20,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        71.0
+      ],
+      "source_command_witnesses": 23,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "24bdc2307075f3882937ee61e53c9d591f228dec69d95aacae52f01d9adc7d55",
+      "canonical_path": "AUTOLab/success/2023-08-12/Sat_Aug_12_18:56:12_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "AUTOLab/2023-08-12",
+      "frames": 1121,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        7.539869729402288e-10,
+        1.3451718605946178e-08,
+        2.8152951047592503e-08,
+        3.1673861589090135e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        1.0797385498961228e-10,
+        9.327102973562457e-09,
+        2.4477060332675403e-08,
+        4.4466714318020464e-08
+      ],
+      "observation_action_joint_difference_max": 0.08451655507087708,
+      "interval_ms_quantiles": [
+        69.0,
+        71.0,
+        72.0,
+        75.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 70,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        70.0
+      ],
+      "source_command_witnesses": 141,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "26f2fa47519ddfcba06a541a3d1cb06e3761e43dfdd9579b62b066fa04cb4643",
+      "canonical_path": "TRI/success/2024-02-08/Thu_Feb__8_15:54:22_2024/trajectory.h5",
+      "role": "evaluation",
+      "session": "TRI/2024-02-08",
+      "frames": 226,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        1.687055059000839e-09,
+        1.4946354473725593e-08,
+        2.8648372620711973e-08,
+        3.189848021569545e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        5.654089879388587e-10,
+        1.3067068049396853e-08,
+        3.469936247976193e-08,
+        7.572252493181703e-08
+      ],
+      "observation_action_joint_difference_max": 0.0635526180267334,
+      "interval_ms_quantiles": [
+        69.0,
+        70.0,
+        72.0,
+        75.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 47,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        70.0
+      ],
+      "source_command_witnesses": 41,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "28005d3e15d6e7c6626cd8e81978d6dc615e6d6e76864f57048db1fb997b20ab",
+      "canonical_path": "TRI/success/2023-12-13/Wed_Dec_13_16:22:03_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "TRI/2023-12-13",
+      "frames": 265,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        1.5425606577650899e-09,
+        1.6998053782052065e-08,
+        3.254136382970948e-08,
+        3.926990833557393e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        6.171032899969784e-10,
+        2.2255902578724183e-08,
+        5.8982699757479713e-08,
+        7.887971445081719e-08
+      ],
+      "observation_action_joint_difference_max": 0.08135950565338135,
+      "interval_ms_quantiles": [
+        69.0,
+        70.0,
+        71.0,
+        74.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 52,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 46,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "29b673f05a46e28dac78a26d41c0c08331fd3bf4e4b137958935e1b5bc5f4a7f",
+      "canonical_path": "TRI/success/2024-02-01/Thu_Feb__1_15:40:45_2024/trajectory.h5",
+      "role": "evaluation",
+      "session": "TRI/2024-02-01",
+      "frames": 337,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        2.5271059895606018e-09,
+        1.3467135436069857e-08,
+        2.008509946656951e-08,
+        3.160453282374555e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        1.4632371918109148e-09,
+        2.5828589512062456e-08,
+        6.694757291745445e-08,
+        8.140381116411487e-08
+      ],
+      "observation_action_joint_difference_max": 0.06339430809020996,
+      "interval_ms_quantiles": [
+        69.0,
+        70.0,
+        71.0,
+        73.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 29,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 74,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "2a4e8a5af58719045d196a0f9a34a8f71a894ca5aaab2bdddb4860e71b515eb4",
+      "canonical_path": "RAIL/success/2023-04-17/Mon_Apr_17_14:48:05_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "RAIL/2023-04-17",
+      "frames": 167,
+      "source_version": "1.1",
+      "position_difference_quantiles_m": [
+        2.6328225695935008e-09,
+        1.4992208910972698e-08,
+        2.895667544481993e-08,
+        3.0404377385880374e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        9.648403128925084e-10,
+        7.1743715244160105e-09,
+        2.0181561889783267e-08,
+        2.7297106502548893e-08
+      ],
+      "observation_action_joint_difference_max": 0.05422082543373108,
+      "interval_ms_quantiles": [
+        70.0,
+        71.0,
+        72.0,
+        74.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 13,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.69999999999999,
+        69.0
+      ],
+      "source_command_witnesses": 25,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "2bb186f04cf0634c7221cf49f6f6e388a73c530ef5b0cb1cefc3386a37cf4505",
+      "canonical_path": "CLVR/success/2023-05-09/Tue_May__9_02:08:20_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "CLVR/2023-05-09",
+      "frames": 168,
+      "source_version": "1.1",
+      "position_difference_quantiles_m": [
+        1.9677833599514566e-09,
+        1.3328904389545932e-08,
+        2.6252296804939368e-08,
+        3.0921361329256307e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        5.6159355144786e-10,
+        4.3883316236731076e-09,
+        1.3549570317504339e-08,
+        1.7743558395856068e-08
+      ],
+      "observation_action_joint_difference_max": 0.06356126815080643,
+      "interval_ms_quantiles": [
+        69.0,
+        70.0,
+        71.0,
+        73.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 40,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 49,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "2dc6d9a8e0897c65215f40c1df598a72d3512039fc66345c5c2a18a664f5bde7",
+      "canonical_path": "RPL/success/2023-06-05/Mon_Jun__5_16:11:49_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "RPL/2023-06-05",
+      "frames": 206,
+      "source_version": "1.1",
+      "position_difference_quantiles_m": [
+        3.791068975800635e-10,
+        1.3311903389467608e-08,
+        2.7850203921395425e-08,
+        3.1082033274083405e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        7.451084525968649e-10,
+        6.474366221127961e-09,
+        2.1835532451707372e-08,
+        4.143831900243146e-08
+      ],
+      "observation_action_joint_difference_max": 0.031708478927612305,
+      "interval_ms_quantiles": [
+        70.0,
+        72.0,
+        73.0,
+        76.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 12,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        68.0,
+        71.0
+      ],
+      "source_command_witnesses": 49,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "3538da01c5587383dcf933c7120ba60d1a5c16b6af60cb97ae2ca8954b96c6db",
+      "canonical_path": "RAIL/failure/2023-10-03/Tue_Oct__3_10:48:21_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "RAIL/2023-10-03",
+      "frames": 130,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        1.3627318227762174e-09,
+        1.2311227418610148e-08,
+        2.6580475628097327e-08,
+        3.0177952655581755e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        7.042678727289307e-10,
+        9.80994088942607e-09,
+        2.1903779901037843e-08,
+        2.9149381138945724e-08
+      ],
+      "observation_action_joint_difference_max": 0.05864447355270386,
+      "interval_ms_quantiles": [
+        70.0,
+        71.0,
+        72.0,
+        73.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 14,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 50,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "36907fcd85c3ea5210aecb4875ca49df775bae853acf28c83e983a0829e09017",
+      "canonical_path": "TRI/success/2023-10-31/Tue_Oct_31_13:47:55_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "TRI/2023-10-31",
+      "frames": 827,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        2.3333492605138616e-09,
+        1.9567083854497146e-08,
+        3.225499316946624e-08,
+        4.084145598256807e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        4.449920163829571e-10,
+        2.497139424935974e-08,
+        6.478528251613696e-08,
+        8.181058902658598e-08
+      ],
+      "observation_action_joint_difference_max": 0.057813405990600586,
+      "interval_ms_quantiles": [
+        69.0,
+        70.0,
+        71.0,
+        76.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 62,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        71.0
+      ],
+      "source_command_witnesses": 62,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "382176c900bb38d8d6b0c2c75ec91a34e200c07278394cd81aca582941b160ba",
+      "canonical_path": "RAIL/failure/2023-07-21/Fri_Jul_21_16:18:07_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "RAIL/2023-07-21",
+      "frames": 149,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        5.428511069236068e-10,
+        1.520421855113566e-08,
+        2.8130877513620585e-08,
+        2.951793478787633e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        9.32486191928944e-10,
+        1.1794511690873578e-08,
+        3.834873608452081e-08,
+        4.1564895190268625e-08
+      ],
+      "observation_action_joint_difference_max": 0.06076240539550781,
+      "interval_ms_quantiles": [
+        69.0,
+        71.0,
+        72.65,
+        75.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 16,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        70.0
+      ],
+      "source_command_witnesses": 27,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "3b31f8b4f72b398ee1e8dba64cb4c6d42935542fe25ea2d5105f7e7b275abebe",
+      "canonical_path": "IRIS/success/2023-06-05/Mon_Jun__5_14:45:46_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "IRIS/2023-06-05",
+      "frames": 190,
+      "source_version": "1.2",
+      "position_difference_quantiles_m": [
+        2.803460884167661e-09,
+        1.5231761995557118e-08,
+        2.9182003740973858e-08,
+        3.2180039471317365e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        1.0563105896312677e-09,
+        1.2479976594402297e-08,
+        3.080148106213381e-08,
+        4.123829676677958e-08
+      ],
+      "observation_action_joint_difference_max": 0.07391858100891113,
+      "interval_ms_quantiles": [
+        70.0,
+        71.0,
+        73.0,
+        75.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 23,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 25,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "3bf56ef7eec39b8204687f66a29e4f8bb413bb4034e7f44ed806094a19114234",
+      "canonical_path": "IRIS/success/2023-03-07/Tue_Mar__7_17_59_19_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "IRIS/2023-03-07",
+      "frames": 127,
+      "source_version": "unknown",
+      "position_difference_quantiles_m": [
+        1.320014094253968e-09,
+        1.4260674032011214e-08,
+        2.8001965896788004e-08,
+        3.148350054989027e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        9.243467312110249e-10,
+        1.9106641015230094e-08,
+        5.1969875341519156e-08,
+        6.842353846361324e-08
+      ],
+      "observation_action_joint_difference_max": 0.0752713680267334,
+      "interval_ms_quantiles": [
+        70.0,
+        71.0,
+        72.0,
+        73.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 3,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 4,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "3c6e0403a1246a9be67c6ba6a34ab37bbd4eac6ad2525fc5b5b95bbff4975368",
+      "canonical_path": "TRI/success/2023-10-18/Wed_Oct_18_15:39:19_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "TRI/2023-10-18",
+      "frames": 143,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        1.033760558670323e-09,
+        9.507599346852725e-09,
+        1.573527734945921e-08,
+        2.022525927050047e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        6.974831003115367e-10,
+        9.855321868422348e-09,
+        3.252698331896815e-08,
+        3.830886922965359e-08
+      ],
+      "observation_action_joint_difference_max": 0.06810140609741211,
+      "interval_ms_quantiles": [
+        70.0,
+        71.0,
+        72.94999999999999,
+        75.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 15,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 20,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "3f69928cdd40062e3e43171049c2ae497ad4080219b377074fac600721199636",
+      "canonical_path": "RAIL/success/2023-09-29/Fri_Sep_29_19:06:22_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "RAIL/2023-09-29",
+      "frames": 125,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        2.578023849984949e-09,
+        1.7850649287892853e-08,
+        2.9335216360808236e-08,
+        3.2052771221501676e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        6.723648218212534e-10,
+        8.800123677912811e-09,
+        2.3511379417139477e-08,
+        4.2120839369039366e-08
+      ],
+      "observation_action_joint_difference_max": 0.04446148872375488,
+      "interval_ms_quantiles": [
+        70.0,
+        71.0,
+        72.0,
+        73.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 19,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 23,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "41e654eabce69701782e25dbab6b3239bf57c9801ffeff0fa2868debc0e7966c",
+      "canonical_path": "REAL/success/2023-06-07/Wed_Jun__7_11:50:12_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "REAL/2023-06-07",
+      "frames": 212,
+      "source_version": "1.1",
+      "position_difference_quantiles_m": [
+        2.933986084200589e-09,
+        1.3388774361145642e-08,
+        2.7265435138589088e-08,
+        3.072084072058926e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        8.648986510649766e-10,
+        1.0341244328889632e-08,
+        4.437733364228294e-08,
+        7.447341191230568e-08
+      ],
+      "observation_action_joint_difference_max": 0.053212881088256836,
+      "interval_ms_quantiles": [
+        69.0,
+        71.0,
+        72.0,
+        75.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 17,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        70.0
+      ],
+      "source_command_witnesses": 21,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "4667ba21320e3a1a89e687e07c722d97f7ce312d150865ccdb25e29e0ad94fe1",
+      "canonical_path": "ILIAD/failure/2023-04-21/Fri_Apr_21_18:25:07_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "ILIAD/2023-04-21",
+      "frames": 130,
+      "source_version": "1.1",
+      "position_difference_quantiles_m": [
+        1.115868337419266e-09,
+        1.5937825640447462e-08,
+        2.8638710906146284e-08,
+        2.989379503808395e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        2.6289771861805265e-09,
+        1.7183705569932546e-08,
+        3.543801845892772e-08,
+        4.3279028289303834e-08
+      ],
+      "observation_action_joint_difference_max": 0.06654712551971897,
+      "interval_ms_quantiles": [
+        71.0,
+        72.0,
+        74.0,
+        76.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 5,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        69.0
+      ],
+      "source_command_witnesses": 9,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "46e834d55af2b58a30e6857c1a341b03f852cfa23010b4dc34edbf2617ca7a8c",
+      "canonical_path": "RPL/success/2023-06-05/Mon_Jun__5_20:15:38_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "RPL/2023-06-05",
+      "frames": 239,
+      "source_version": "1.1",
+      "position_difference_quantiles_m": [
+        1.694153838557932e-09,
+        1.7803234441603647e-08,
+        3.212476600888488e-08,
+        3.619686016280773e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        1.3813714203491203e-09,
+        1.0620151469359606e-08,
+        2.893918586561393e-08,
+        4.028731783981801e-08
+      ],
+      "observation_action_joint_difference_max": 0.05344748497009277,
+      "interval_ms_quantiles": [
+        70.0,
+        72.0,
+        74.0,
+        77.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 12,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        68.0,
+        72.0
+      ],
+      "source_command_witnesses": 24,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "4cdb89faa14ccdba127d52c7c586226cbd80c2f17ac1f36a3e1c7754173d7d83",
+      "canonical_path": "AUTOLab/success/2023-11-30/Thu_Nov_30_14:10:48_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "AUTOLab/2023-11-30",
+      "frames": 1067,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        6.07248235224738e-10,
+        1.3877595823514414e-08,
+        2.8753499315003787e-08,
+        3.2178943250259046e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        4.336373305753843e-10,
+        1.0941268163572502e-08,
+        3.786356536581184e-08,
+        8.231210706268029e-08
+      ],
+      "observation_action_joint_difference_max": 0.0782926082611084,
+      "interval_ms_quantiles": [
+        69.0,
+        70.0,
+        71.0,
+        74.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 14,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        71.0
+      ],
+      "source_command_witnesses": 20,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "4d80502abaea286ed3f42e7c3afc11d0e08fef02bed743ab178d231d269983ae",
+      "canonical_path": "TRI/success/2023-12-05/Tue_Dec__5_16:15:39_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "TRI/2023-12-05",
+      "frames": 332,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        2.29614103631118e-10,
+        1.4627598447418299e-08,
+        2.857188349023228e-08,
+        3.049172591714809e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        9.840704370674104e-10,
+        1.4483847026295053e-08,
+        3.9534340438155636e-08,
+        7.919739673749611e-08
+      ],
+      "observation_action_joint_difference_max": 0.06146109104156494,
+      "interval_ms_quantiles": [
+        69.0,
+        70.0,
+        72.0,
+        77.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 25,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 35,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "4ddc09e3df4e3d0e20b610173570bcf03ac648af37a502a807aaf01f8f8ea192",
+      "canonical_path": "AUTOLab/failure/2023-08-12/Sat_Aug_12_15:24:31_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "AUTOLab/2023-08-12",
+      "frames": 172,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        2.988240982096875e-09,
+        1.3150273246162397e-08,
+        2.8004449779609156e-08,
+        3.083132511730884e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        1.217158611231006e-10,
+        1.2947414955934203e-08,
+        3.6479354146014754e-08,
+        4.387564638184671e-08
+      ],
+      "observation_action_joint_difference_max": 0.05185496807098389,
+      "interval_ms_quantiles": [
+        69.0,
+        71.0,
+        72.0,
+        74.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 17,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 42,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "4f36ab87714840d324777682efdfef96e7e8c48e6a03d0e7c243f19e93b00d3a",
+      "canonical_path": "ILIAD/failure/2023-05-17/Wed_May_17_14:15:12_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "ILIAD/2023-05-17",
+      "frames": 284,
+      "source_version": "1.1",
+      "position_difference_quantiles_m": [
+        2.0877719667651952e-09,
+        1.8312934441073196e-08,
+        3.0453549345286596e-08,
+        3.266586118366011e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        2.4431082938258115e-10,
+        2.554330573790302e-08,
+        6.685116492198143e-08,
+        7.691700611815252e-08
+      ],
+      "observation_action_joint_difference_max": 0.06488704681396484,
+      "interval_ms_quantiles": [
+        70.0,
+        72.0,
+        73.0,
+        74.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 29,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        68.0
+      ],
+      "source_command_witnesses": 29,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "512906a4b1ca563b43ef0be21e64b363223252a17434c8e498d338bff85fa0d4",
+      "canonical_path": "AUTOLab/success/2023-10-13/Fri_Oct_13_18:55:06_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "AUTOLab/2023-10-13",
+      "frames": 115,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        2.38454533164722e-09,
+        1.4223956619261159e-08,
+        2.815405027635795e-08,
+        3.123829706376467e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        2.107800469059809e-10,
+        5.1770465815209495e-09,
+        1.100731324092731e-08,
+        1.6788148729733435e-08
+      ],
+      "observation_action_joint_difference_max": 0.03638853877782822,
+      "interval_ms_quantiles": [
+        69.0,
+        71.0,
+        72.0,
+        74.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 21,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        69.0
+      ],
+      "source_command_witnesses": 26,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "5546f34f3c7f577f6998e61147e4f6adca236c13525e02687283fc2bb5c0431e",
+      "canonical_path": "RPL/success/2023-11-30/Thu_Nov_30_20:25:57_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "RPL/2023-11-30",
+      "frames": 208,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        1.807897695728673e-09,
+        9.93595181535063e-09,
+        2.3202847892966707e-08,
+        2.9357640052895783e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        8.153586079593825e-10,
+        2.2600213417371315e-08,
+        6.450782980425885e-08,
+        7.808897679454268e-08
+      ],
+      "observation_action_joint_difference_max": 0.03909468650817871,
+      "interval_ms_quantiles": [
+        70.0,
+        71.0,
+        73.0,
+        76.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 19,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        69.0
+      ],
+      "source_command_witnesses": 39,
+      "fk_matches": true
+    },
+    {
+      "episode_uid": "55cbd22b550dbf3706b996359a8a6952d1ca0de422e7cc0c639f216d844089ad",
+      "canonical_path": "RAD/failure/2023-12-18/Mon_Dec_18_19:40:57_2023/trajectory.h5",
+      "role": "evaluation",
+      "session": "RAD/2023-12-18",
+      "frames": 361,
+      "source_version": "1.3",
+      "position_difference_quantiles_m": [
+        1.4197094771508773e-09,
+        1.2403133414039622e-08,
+        2.509901797175054e-08,
+        3.068412935223784e-08
+      ],
+      "orientation_difference_quantiles_rad": [
+        1.1287501363315705e-09,
+        1.3468751078570473e-08,
+        3.821048473949621e-08,
+        5.230988893737364e-08
+      ],
+      "observation_action_joint_difference_max": 0.0755610466003418,
+      "interval_ms_quantiles": [
+        69.0,
+        70.0,
+        71.0,
+        73.0
+      ],
+      "gaps_over_two_configured_periods": 0,
+      "nonmonotonic_steps": 0,
+      "source_skipped_action_records": 14,
+      "observation_to_control_ms_quantiles": [
+        66.0,
+        67.0,
+        67.0,
+        70.0
+      ],
+      "source_command_witnesses": 21,
+      "fk_matches": true
+    }
+  ],
+  "interface_passed": true,
+  "all_source_fk_consistent": true,
+  "mapping": "identity panda_link0->panda_link8; no fit or tool transformation; xyz extrinsic Euler, radians/metres",
+  "timing": "fixed 1/15 s, configuration-reconstructed; record interval diagnostics not enlarged movement budget",
+  "missing_provenance": "HDF5 version_number is not a git SHA; exact collection checkout not recorded. Current pinned official control code and timestamp cadence are corroborating evidence.",
+  "thresholds": {
+    "source_commit": "33ae6a67274f36d2e29525b86f23a56616ef43a7",
+    "bucket_prefix": "robotics/droid_100/1.0.0/",
+    "episodes_interface": 6,
+    "episodes_evaluation": 24,
+    "ordering": "sha256(canonical raw episode path), ascending",
+    "source_control_hz": 15,
+    "compute_deadline_ms": 20,
+    "methods": [
+      "relative",
+      "gn",
+      "fixed_qp2",
+      "clarabel",
+      "direct_sqp"
+    ],
+    "fk_interface_max_position_m": 1e-05,
+    "fk_interface_max_orientation_rad": 1e-05,
+    "fk_threshold_reason": "software FK from same paired state; threshold 100x below public pose tolerance, allows source float32",
+    "selection_independent_of": "IK outputs, joint proximity, target motion, balance activation"
+  }
+}

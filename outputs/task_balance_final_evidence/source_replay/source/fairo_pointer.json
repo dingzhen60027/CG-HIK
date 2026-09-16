@@ -1,0 +1,17 @@
+{
+  "name": "fairo",
+  "path": "droid/fairo",
+  "sha": "0a01a7fa7a7c65b2f9a3aebf5e79040940daf9d2",
+  "size": 0,
+  "url": "https://api.github.com/repos/droid-dataset/droid/contents/droid/fairo?ref=33ae6a67274f36d2e29525b86f23a56616ef43a7",
+  "html_url": "https://github.com/facebookresearch/fairo/tree/0a01a7fa7a7c65b2f9a3aebf5e79040940daf9d2",
+  "git_url": "https://api.github.com/repos/facebookresearch/fairo/git/trees/0a01a7fa7a7c65b2f9a3aebf5e79040940daf9d2",
+  "download_url": null,
+  "type": "submodule",
+  "submodule_git_url": "https://github.com/facebookresearch/fairo.git",
+  "_links": {
+    "self": "https://api.github.com/repos/droid-dataset/droid/contents/droid/fairo?ref=33ae6a67274f36d2e29525b86f23a56616ef43a7",
+    "git": "https://api.github.com/repos/facebookresearch/fairo/git/trees/0a01a7fa7a7c65b2f9a3aebf5e79040940daf9d2",
+    "html": "https://github.com/facebookresearch/fairo/tree/0a01a7fa7a7c65b2f9a3aebf5e79040940daf9d2"
+  }
+}

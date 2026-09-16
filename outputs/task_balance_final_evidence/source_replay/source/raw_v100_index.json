@@ -1,0 +1,48 @@
+{
+  "kind": "storage#objects",
+  "prefixes": [
+    "robotics/droid_raw/1.0.0/r2d2-all-blurred-final/"
+  ],
+  "items": [
+    {
+      "kind": "storage#object",
+      "id": "gresearch/robotics/droid_raw/1.0.0/r2d2-all-blurred-final_$folder$/1710519253454885",
+      "selfLink": "https://www.googleapis.com/storage/v1/b/gresearch/o/robotics%2Fdroid_raw%2F1.0.0%2Fr2d2-all-blurred-final_$folder$",
+      "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gresearch/o/robotics%2Fdroid_raw%2F1.0.0%2Fr2d2-all-blurred-final_$folder$?generation=1710519253454885&alt=media",
+      "name": "robotics/droid_raw/1.0.0/r2d2-all-blurred-final_$folder$",
+      "bucket": "gresearch",
+      "generation": "1710519253454885",
+      "metageneration": "1",
+      "contentType": "application/octet-stream",
+      "storageClass": "MULTI_REGIONAL",
+      "size": "6",
+      "md5Hash": "hRFItP2P1650vZEAxcDImA==",
+      "crc32c": "8EZCjQ==",
+      "etag": "CKWg7+PU9oQDEAE=",
+      "timeCreated": "2024-03-15T16:14:13.586Z",
+      "updated": "2024-03-15T16:14:13.586Z",
+      "timeStorageClassUpdated": "2024-03-15T16:14:13.586Z",
+      "timeFinalized": "2024-03-15T16:14:13.586Z"
+    },
+    {
+      "kind": "storage#object",
+      "id": "gresearch/robotics/droid_raw/1.0.0/svo_names.json/1710519253559198",
+      "selfLink": "https://www.googleapis.com/storage/v1/b/gresearch/o/robotics%2Fdroid_raw%2F1.0.0%2Fsvo_names.json",
+      "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gresearch/o/robotics%2Fdroid_raw%2F1.0.0%2Fsvo_names.json?generation=1710519253559198&alt=media",
+      "name": "robotics/droid_raw/1.0.0/svo_names.json",
+      "bucket": "gresearch",
+      "generation": "1710519253559198",
+      "metageneration": "1",
+      "contentType": "application/octet-stream",
+      "storageClass": "MULTI_REGIONAL",
+      "size": "16426795",
+      "md5Hash": "tdQ9GVH/y28ZtPTqrGSF2w==",
+      "crc32c": "Tqr6ZA==",
+      "etag": "CJ7P9ePU9oQDEAE=",
+      "timeCreated": "2024-03-15T16:14:13.630Z",
+      "updated": "2024-03-15T16:14:13.630Z",
+      "timeStorageClassUpdated": "2024-03-15T16:14:13.630Z",
+      "timeFinalized": "2024-03-15T16:14:13.630Z"
+    }
+  ]
+}

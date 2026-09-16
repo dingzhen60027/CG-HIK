@@ -1,0 +1,30 @@
+baseline: 79d3d9324647a51876dca2b2ec612d94599b6559
+source_config: configs/paper_v2.yaml
+cpu: 4
+repeats: 3
+dt: 0.02
+order_seed: 202609161501
+bootstrap_seed: 202609161502
+bootstrap_samples: 4000
+robots: [panda, ur5e]
+anchor_families: [ordinary, near_singular, near_limit]
+displacements: [regular, high_utilization, multijoint_boundary]
+alpha: [0.0, 0.5, 0.95]
+sensitivity:
+  nominal: {position_m: 0.001, orientation_deg: 0.5, methods: [relative, eta010, eta050, gn, direct_sqp]}
+  position_half: {position_m: 0.0005, orientation_deg: 0.5, methods: [relative, gn, direct_sqp]}
+  orientation_half: {position_m: 0.001, orientation_deg: 0.25, methods: [relative, gn, direct_sqp]}
+forcing: {relative: 0.25, eta010: 0.10, eta050: 0.50}
+droid:
+  source_commit: 33ae6a67274f36d2e29525b86f23a56616ef43a7
+  bucket_prefix: robotics/droid_100/1.0.0/
+  episodes_interface: 6
+  episodes_evaluation: 24
+  ordering: sha256(canonical raw episode path), ascending
+  source_control_hz: 15
+  compute_deadline_ms: 20
+  methods: [relative, gn, fixed_qp2, clarabel, direct_sqp]
+  fk_interface_max_position_m: 0.00001
+  fk_interface_max_orientation_rad: 0.00001
+  fk_threshold_reason: software FK from same paired state; threshold 100x below public pose tolerance, allows source float32
+  selection_independent_of: IK outputs, joint proximity, target motion, balance activation

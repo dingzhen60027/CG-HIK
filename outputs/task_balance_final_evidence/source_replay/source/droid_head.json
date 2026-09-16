@@ -1,0 +1,101 @@
+{
+  "sha": "33ae6a67274f36d2e29525b86f23a56616ef43a7",
+  "node_id": "C_kwDOLgZT59oAKDMzYWU2YTY3Mjc0ZjM2ZDJlMjk1MjViODZmMjNhNTY2MTZlZjQzYTc",
+  "commit": {
+    "author": {
+      "name": "droid-dataset",
+      "email": "163351990+droid-dataset@users.noreply.github.com",
+      "date": "2025-09-15T23:51:11Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2025-09-15T23:51:11Z"
+    },
+    "message": "Update pages.yaml",
+    "tree": {
+      "sha": "1b5ae93dadf21b8cf0f6e3b06d42fffc547a9a7e",
+      "url": "https://api.github.com/repos/droid-dataset/droid/git/trees/1b5ae93dadf21b8cf0f6e3b06d42fffc547a9a7e"
+    },
+    "url": "https://api.github.com/repos/droid-dataset/droid/git/commits/33ae6a67274f36d2e29525b86f23a56616ef43a7",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJoyKZvCRC1aQ7uu5UhlAAANYIQAGtvmx29KaB/smbWufOgymOf\nm10L/M0axeQw+mh3qWUBSwPp3+K1/llYaOjF+mMHF+hZW5nw60HxxMP8s/VPUUt/\nsno9b2ozXnqQqRhIf/OMT1U4aNU4HUpmgcduNeD+I7vVXpcBY0N1DpoQHD8jw4Lu\n5LmaV4DKJ/1kkI7psilpKdXnjWIjTzpjyN6ppOcgotiJ4RDL9Hke70L7S7hCI4fM\nYrsQwf7FqFiLqsb2zoHr8LIOJBhq4s+Ie6lvdh48rrNz36HE1+TfCXAJJaxKDPqk\nopkPbC/RS0SFtyuSj6c21+3L35+By4pcm+4EoKv+wnUBsudAVT/8Wqi8aF0rnfb/\n0QVltvduvFaHe6wNm/y5IWOhj7INxk2QP4E9dEuZvd3sMzJRd3FCLfhmW1gUkZYX\n1PjWjhqIutgpEM2O82N5pJTJFrtQ3LL8fIfYHM0TYza7nL/gIAlVqlrlmOqk3kRK\nWqD0w+ohJs1Zrr5WeStgryI+KZV7YIPcyTlTA50sOK9kGfrNrbjW7eP+hgfwkiBL\n6rk8JByXo60LtiwawHkZkei+wR3pDp4AlnfsJhRdMpaPQqAnEhmdQ8QN4L0p7YLL\nTvdIks9znh82eb87cgDDQjzfjCXV4aWqmmUoF0umWeZEb/ryW1MdR+1RScmtGCk8\n70IbzNDA2RztztC6x3/S\n=7k8c\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 1b5ae93dadf21b8cf0f6e3b06d42fffc547a9a7e\nparent f3e7defc1314a66553acfbf3392612e3651449be\nauthor droid-dataset <163351990+droid-dataset@users.noreply.github.com> 1757980271 -0700\ncommitter GitHub <noreply@github.com> 1757980271 -0700\n\nUpdate pages.yaml",
+      "verified_at": "2025-09-15T23:51:11Z"
+    }
+  },
+  "url": "https://api.github.com/repos/droid-dataset/droid/commits/33ae6a67274f36d2e29525b86f23a56616ef43a7",
+  "html_url": "https://github.com/droid-dataset/droid/commit/33ae6a67274f36d2e29525b86f23a56616ef43a7",
+  "comments_url": "https://api.github.com/repos/droid-dataset/droid/commits/33ae6a67274f36d2e29525b86f23a56616ef43a7/comments",
+  "author": {
+    "login": "droid-dataset",
+    "id": 163351990,
+    "node_id": "U_kgDOCbyNtg",
+    "avatar_url": "https://avatars.githubusercontent.com/u/163351990?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/droid-dataset",
+    "html_url": "https://github.com/droid-dataset",
+    "followers_url": "https://api.github.com/users/droid-dataset/followers",
+    "following_url": "https://api.github.com/users/droid-dataset/following{/other_user}",
+    "gists_url": "https://api.github.com/users/droid-dataset/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/droid-dataset/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/droid-dataset/subscriptions",
+    "organizations_url": "https://api.github.com/users/droid-dataset/orgs",
+    "repos_url": "https://api.github.com/users/droid-dataset/repos",
+    "events_url": "https://api.github.com/users/droid-dataset/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/droid-dataset/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "f3e7defc1314a66553acfbf3392612e3651449be",
+      "url": "https://api.github.com/repos/droid-dataset/droid/commits/f3e7defc1314a66553acfbf3392612e3651449be",
+      "html_url": "https://github.com/droid-dataset/droid/commit/f3e7defc1314a66553acfbf3392612e3651449be"
+    }
+  ],
+  "stats": {
+    "total": 6,
+    "additions": 3,
+    "deletions": 3
+  },
+  "files": [
+    {
+      "sha": "7a97e793c30f210830ab6ec9b56f67ba5892aee0",
+      "filename": ".github/workflows/pages.yaml",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/droid-dataset/droid/blob/33ae6a67274f36d2e29525b86f23a56616ef43a7/.github%2Fworkflows%2Fpages.yaml",
+      "raw_url": "https://github.com/droid-dataset/droid/raw/33ae6a67274f36d2e29525b86f23a56616ef43a7/.github%2Fworkflows%2Fpages.yaml",
+      "contents_url": "https://api.github.com/repos/droid-dataset/droid/contents/.github%2Fworkflows%2Fpages.yaml?ref=33ae6a67274f36d2e29525b86f23a56616ef43a7",
+      "patch": "@@ -27,7 +27,7 @@ jobs:\n         working-directory: docs\n     steps:\n       - name: Checkout\n-        uses: actions/checkout@v3\n+        uses: actions/checkout@v4\n       - name: Setup Ruby\n         uses: ruby/setup-ruby@v1\n         with:\n@@ -37,7 +37,7 @@ jobs:\n           working-directory: '${{ github.workspace }}/docs'\n       - name: Setup Pages\n         id: pages\n-        uses: actions/configure-pages@v3\n+        uses: actions/configure-pages@v4\n       - name: Build with Jekyll\n         run: bundle exec jekyll build --baseurl \"${{ steps.pages.outputs.base_path }}\"\n         env:\n@@ -56,4 +56,4 @@ jobs:\n     steps:\n       - name: Deploy to GitHub Pages\n         id: deployment\n-        uses: actions/deploy-pages@v2\n+        uses: actions/deploy-pages@v4"
+    }
+  ]
+}

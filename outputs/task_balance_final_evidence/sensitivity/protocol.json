@@ -1,0 +1,138 @@
+{
+  "utc": "2026-09-16T09:55:42.212362+00:00",
+  "config": {
+    "baseline": "79d3d9324647a51876dca2b2ec612d94599b6559",
+    "source_config": "configs/paper_v2.yaml",
+    "cpu": 4,
+    "repeats": 3,
+    "dt": 0.02,
+    "order_seed": 202609161501,
+    "bootstrap_seed": 202609161502,
+    "bootstrap_samples": 4000,
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "anchor_families": [
+      "ordinary",
+      "near_singular",
+      "near_limit"
+    ],
+    "displacements": [
+      "regular",
+      "high_utilization",
+      "multijoint_boundary"
+    ],
+    "alpha": [
+      0.0,
+      0.5,
+      0.95
+    ],
+    "sensitivity": {
+      "nominal": {
+        "position_m": 0.001,
+        "orientation_deg": 0.5,
+        "methods": [
+          "relative",
+          "eta010",
+          "eta050",
+          "gn",
+          "direct_sqp"
+        ]
+      },
+      "position_half": {
+        "position_m": 0.0005,
+        "orientation_deg": 0.5,
+        "methods": [
+          "relative",
+          "gn",
+          "direct_sqp"
+        ]
+      },
+      "orientation_half": {
+        "position_m": 0.001,
+        "orientation_deg": 0.25,
+        "methods": [
+          "relative",
+          "gn",
+          "direct_sqp"
+        ]
+      }
+    },
+    "forcing": {
+      "relative": 0.25,
+      "eta010": 0.1,
+      "eta050": 0.5
+    },
+    "droid": {
+      "source_commit": "33ae6a67274f36d2e29525b86f23a56616ef43a7",
+      "bucket_prefix": "robotics/droid_100/1.0.0/",
+      "episodes_interface": 6,
+      "episodes_evaluation": 24,
+      "ordering": "sha256(canonical raw episode path), ascending",
+      "source_control_hz": 15,
+      "compute_deadline_ms": 20,
+      "methods": [
+        "relative",
+        "gn",
+        "fixed_qp2",
+        "clarabel",
+        "direct_sqp"
+      ],
+      "fk_interface_max_position_m": 1e-05,
+      "fk_interface_max_orientation_rad": 1e-05,
+      "fk_threshold_reason": "software FK from same paired state; threshold 100x below public pose tolerance, allows source float32",
+      "selection_independent_of": "IK outputs, joint proximity, target motion, balance activation"
+    }
+  },
+  "head": "79d3d9324647a51876dca2b2ec612d94599b6559",
+  "frozen": {
+    "configs/paper_v2.yaml": "c579c282ac3b19e10835b2dae1dc9820c3df195daa0c4e446d49c92a323df70a",
+    "configs/single_solver_development.yaml": "f1eb157af809d37234a9b2f5197e050da2827839db6b72db5c99c1d3a5f7f27e",
+    "configs/task_balance_comparison.yaml": "c4ff00c5b5123bedeadde2380ab2c618189fef15a3b0b566d17ee29b14025c84",
+    "configs/task_set_boundary.yaml": "30f84194b14e61db8adbd47cce842c6b7f7ab895c4d06073fd0badd7afd1df87",
+    "paper/main.pdf": "8a56d0c1ed53d57ba20507849708789c059814e6cc3714482809ced24e7d14fa",
+    "paper/main.tex": "a2e66e41eb4a4e2cfd5e2223754c36db3c56590324d37dd028113bf756dcd939",
+    "scripts/run_single_solver_development.py": "07be50c1034e502c4ed37384a28554f198b9bd5eb67a37215d0cfbdcd80d3ae2",
+    "scripts/run_task_balance_comparison.py": "daac9070e0608562a63d20e9cfb979b3c559bf39c3ca1d80b80b5db31f8d12d7",
+    "scripts/run_task_set_boundary.py": "981591452e5a5eb53c15314a12a5fb9185f40029f963d109c48a5456fb204019",
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/bounded_gn_adapter.py": "ab6212f2f8f70dee4c0eef639f8bb768739376796341df6482de2b915819651a",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/correction_reserve/pink_adapter.py": "311a703fd76e9e26841845b65880ca225b2c565f51fb83cd298c612dbe102078",
+    "src/confik/correction_reserve/reporting.py": "439ffd253c105076eae11ebeba835715812ee2959ace49deaa81b261c259a6a9",
+    "src/confik/correction_reserve/study.py": "b489d082641ec4ed36bcc69aab6df82b6d4935bb16c920f90325bd79313d3a94",
+    "src/confik/revision_compute_allocation/data.py": "c27b9e377de1f03472fd9f06dccc64af1988035a64ce877a2a45c5a784e60d7c",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/task_balance_comparison.py": "0edbbd08647295c25276796e26c14201a446bd98366c2273ebecb9dfae7b8464",
+    "src/confik/task_balance_gn.py": "752a69afede984d0617997d6c412753c327f9f642eb0f08ef2ab33c464a68d57",
+    "src/confik/task_balance_reference.py": "ec3c534e7ff2d27c5ac64625f1fd06c560d5a463886fded9d6aeedd13d9be4fb",
+    "src/confik/task_contract_alignment/outcomes.py": "e9b36e1c59fba49f181fa3cf36f7583e844d3285c2f4c35878c47768a4e885dd",
+    "src/confik/task_contract_alignment/trac_adapter.py": "09a5c40506621c078b7abf4f2086ca79a0a7e605407a586919cbb1c36af2762c",
+    "src/confik/task_set_controls.py": "ad0013c5367a7af5c87f8076be9e123213fe227a6930a694b193be9f281a7c36",
+    "tests/test_task_set_boundary.py": "465411a1eca0f59c9518b6de12803a76e8a875092ba6002228797f9d8e1aa2ac",
+    "tmp/task_contract_build/libcontract_trac.so": "fe9ad2d03a525fcea36e6e8d32659fc47b937418a886adf3ca7aebf63aee3e83"
+  },
+  "original_inputs": {
+    "outputs/single_solver_evidence/task_set_boundary_evaluation/inputs/development_panda.json": "d92fe263b745755cd2c3c52a08c4e71528d5a4c785eeedf08db2735f7b4f25d0",
+    "outputs/single_solver_evidence/task_set_boundary_evaluation/inputs/development_ur5e.json": "1e83a02ce5391a0f893afb925fb28be5313fe916547393233cf5f7b43d4008c9"
+  },
+  "code": {
+    "scripts/run_task_balance_final_evidence.py": "902bd6f34ad73340f992f9a9cf7c7a4fd6a1a256d9992ee758470fd49760b4fc",
+    "src/confik/task_balance_replay.py": "7b9ad3b18585f1ed39b44fb54c87fb0b22d76591edcbd7a5b01311a6817b4082",
+    "configs/task_balance_final_evidence.yaml": "15a6dffabb22cebefd68a3440501d69780fc444a5e47b7272bb43ec17ed4bee0"
+  },
+  "input_hashes": {
+    "outputs/task_balance_final_evidence/sensitivity/inputs_nominal_panda.json": "1618bfa52dda49098061cf32291c923f7f35c627217da92b1a0793ff4431b2d2",
+    "outputs/task_balance_final_evidence/sensitivity/order_ur5e.json": "7806d6d4acc7a2cc9c8f9e9eecd862de5d35fc4d27412efa49453c3bef819b10",
+    "outputs/task_balance_final_evidence/sensitivity/inputs_nominal_ur5e.json": "b4f038f302de2c7bfa724c12d32eb32462e7b053528fe9ff4ebb342a1a1cbc09",
+    "outputs/task_balance_final_evidence/sensitivity/inputs_orientation_half_panda.json": "268d2e0d2bf8b77039eafbb1bee1a64c8c6bafd7475b3966488310ac9cfa28e4",
+    "outputs/task_balance_final_evidence/sensitivity/inputs_position_half_panda.json": "ae22ec761b6409e8230ef69c7177e1ca753bdb02320007bcacfc17402b78be0c",
+    "outputs/task_balance_final_evidence/sensitivity/inputs_orientation_half_ur5e.json": "6afcd53f2c01de4ff1ba5127ddf999f6030b36c66eaf8461f686302f0dc7c78c",
+    "outputs/task_balance_final_evidence/sensitivity/order_panda.json": "6e2fa3b0fd223a5d3829649c7d22184be411dab05d3547e1e7f09f93a1723e3b",
+    "outputs/task_balance_final_evidence/sensitivity/inputs_position_half_ur5e.json": "4b5c19e8fb1caf4bfecf0d93cecf4f4d12b3392895a53a46772167f7607ef72e"
+  },
+  "statistics": "query repeat means; 30 anchor clusters/robot stratified by 3 geometric classes; descriptive unadjusted 95% intervals",
+  "selection": "No selection: eta=.25 main unchanged. Existing development anchors, not fresh."
+}
