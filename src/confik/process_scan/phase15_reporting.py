@@ -67,6 +67,25 @@ def calibration_tables():
     return margin,b2,reference
 
 
+def endpoint_closure(raw):
+    """Disclose assembled endpoint guesses; never call them executed jumps."""
+    rows=[]
+    for r in raw:
+        root=OUT/'runs'/r['slot']/f"{r['method']}_r{r['repeat']}"
+        source=root/'initialization_records.json.gz'
+        if not source.exists():continue
+        with gzip.open(source,'rt') as f:records=json.load(f)
+        q=np.load(root/'path_initialization.npz')['q']
+        rows.append(dict(slot=r['slot'],method=r['method'],repeat=r['repeat'],status=r['status'],
+            local_query_success=bool(r.get('initialization_success')),
+            common_end_substitution_rad=float(np.max(abs(q[-1]-np.array(records[-1]['q'])))),
+            assembled_last_step_rad=float(np.max(abs(q[-1]-q[-2]))) if len(q)>1 else None,
+            local_last_step_rad=float(np.max(abs(np.array(records[-1]['q'])-np.array(records[-2]['q'])))) if len(records)>1 else None,
+            interpretation='Infeasible endpoint-constrained spline guess can be rejected; not a live state overwrite or a verified path'))
+    csv_write(OUT/'reports/endpoint_closure.csv',rows)
+    return rows
+
+
 def figures(main,rows,bottle,margin,b2):
     import matplotlib
     matplotlib.use('Agg')
@@ -97,7 +116,7 @@ def figures(main,rows,bottle,margin,b2):
                 ax.scatter(np.full(len(values),j),values,s=12,color=colors[j],alpha=.7)
                 if values:ax.plot([j-.2,j+.2],[np.median(values)]*2,color='black',lw=1)
         axes[i,0].set(ylim=(0,13),yticks=[0,3,6,9,12],ylabel=f'{robot.upper()}\nQuality-complete / 12')
-        axes[i,1].set_ylabel('Qualified actual cycle time (s)');axes[i,2].set_ylabel('All measured planning work (s)')
+        axes[i,1].set_ylabel('Qualified actual cycle time (s)');axes[i,2].set_ylabel('Method-internal planning work (s)')
         for ax in axes[i]:ax.set_xticks(range(4),METHODS);ax.grid(axis='y',alpha=.15)
     for ax,title in zip(axes[0],('a  All scheduled scenes','b  Qualified scenes only','c  All timed scenes')):ax.set_title(title,loc='left')
     save(fig,'core_baselines')
@@ -146,12 +165,13 @@ def figures(main,rows,bottle,margin,b2):
     save(fig,'bottlenecks_and_paired_times')
 
 
-def markdown_report(main,rows,bottle,work,failures,bridges,refs,b2):
+def markdown_report(main,rows,bottle,work,failures,bridges,refs,b2,closure,intervals):
     available=sum(r['available'] for r in refs);physical=sum(r['physics_executed'] for r in rows)
     motion=sum(r['execution_completed'] is True for r in rows);quality=sum(r['quality_completed'] is True for r in rows)
     fmt=lambda v:'N/E' if v is None else f'{v:.3f}'
     lines=['# Process Scan Phase 1.5：基线收口结果','',
         '本轮仅为原24开发场景的基线收口。没有新方法、正式96场景或论文改写。',
+        '“实际执行”均指同一控制器下的MuJoCo力矩仿真及其真实状态/射线记录，不是实机证据。',
         '旧证据全部保留，新结果根目录为 `outputs/process_scan/phase15_baselines/`。','',
         '## 1. 共同参考与公共余量','',
         f'全部 **{available}/24** 场景取得独立共同参考。三个原Panda cylinder缺失场景均已补齐；',
@@ -159,17 +179,27 @@ def markdown_report(main,rows,bottle,work,failures,bridges,refs,b2):
         '隔离的六条校准路径统一确定：扫描端点延伸3 mm、轮廓重叠余量1 mm、',
         '路径速度系数0.90；共同控制器保持400/40，质量阈值不变。新增轮廓使u/v分别为',
         '10/14条，所有方法共同使用96个C²样条控制点。该公共路线变更不是同一旧路径上的',
-        '纯控制干预，不能把前后总体差异全部归因为一个余量。校准前后12次执行均保存1ms状态。','',
+        '纯控制干预，不能把前后总体差异全部归因为一个余量。校准同时由64改为96个控制点；',
+        '六条校准路径在调整前后都通过质量验收，因此这里证明的是所采用配置的可执行性及',
+        '余量变化，不是六条失败的恢复，也没有分离各项调整的因果贡献。12次执行均保存1ms状态。','',
         f'核心比较共288次规划条件，预指定第一遍中有{physical}/96项产生可执行计划；',
         f'实际运动合格{motion}项，完整扫描质量合格{quality}项。未生成计划的条件不假填物理时间。',
         '所有控制饱和、速度/加速度超限、采样空缺、覆盖不足及孔洞都保留，不能由校准成功推断全部场景可靠通过。','',
         '## 2. 四核心基线','',
-        '|机器人|方法|质量合格/12|执行次数|质量合格实际周期中位/s|全部规划成本中位/s|',
+        '|机器人|方法|质量合格/12|执行次数|质量合格实际周期中位/s|方法内规划成本中位/s|',
         '|---|---|---:|---:|---:|---:|']
     for r in main:
         lines.append(f"|{r['robot']}|{r['method']}|{r['quality_completed_scenes']}|{r['physics_executed_scenes']}|{fmt(r['quality_execution_s_median'])}|{fmt(r['planning_s_median'])}|")
+    executed=[r for r in rows if r['physics_executed']]
+    lines += ['',f"在这{len(executed)}条执行记录中，实际速度最大利用率为{max(r['velocity_utilization_max'] for r in executed):.4f}，"
+        f"实际加速度最大利用率为{max(r['acceleration_utilization_max'] for r in executed):.4f}；"
+        f"最大扫描间隙为{1000*max(r['max_along_scan_gap_m'] for r in executed):.3f} mm，"
+        f"最大孔洞上界为{1000*max(r['max_hole_diameter_upper_bound_m'] for r in executed):.3f} mm，"
+        f"控制饱和比例最大值为{max(r['torque_saturation_fraction'] for r in executed):.1%}。"]
     lines += ['', '每个场景的三遍是规划计时重复，先在场景内平均。实际执行只有预指定r0，不把',
-        '三遍当成三份独立物理证据。表内条件成功集不同，不能用边际周期中位数直接宣称加速。',
+        '三遍当成三份独立物理证据。方法内成本包含初始化、拟合/优化、检查和重定时；',
+        '方法无关共同参考生成及公共超时参照重定时是输入准备，不计入该列，原始记录单独保留。',
+        '表内条件成功集不同，不能用边际周期中位数直接宣称加速。',
         '配对结果在 `paired_intervals.csv`：同机器人6个CAD×放置聚类，两个方向嵌套，',
         '4000次预定聚类bootstrap、95%区间；时间仅比较共同合格场景，并列全样本质量差异。',
         '区间包含零不表示等效。BoundMPC保留官方例程已核对、扫描适配not_evaluable的范围说明，不进入性能表。','',
@@ -183,6 +213,12 @@ def markdown_report(main,rows,bottle,work,failures,bridges,refs,b2):
         improved=sum(r.get('checkpoint_10.0_source')=='nonlinear_validated_iterate' for r in ww)
         later=sum(r.get('checkpoint_30.0_source')=='nonlinear_validated_iterate' for r in ww)
         lines.append(f'- {robot}：{len(ww)}次实际B2调用；10秒采用新可行路径{improved}次，30秒内找到新可行路径{later}次。')
+        p=next(r for r in intervals if r['robot']==robot and r['method']=='B2' and r['metric']=='quality_execution_s')
+        ratio=next(r for r in intervals if r['robot']==robot and r['method']=='B2' and r['metric']=='quality_execution_s_ratio')
+        cost=next(r for r in intervals if r['robot']==robot and r['method']=='B2' and r['metric']=='total_plan_wall_s_ratio')
+        lines.append(f"  共同合格{p['paired_scenes']}场景的聚类配对实际周期差为{p['mean_difference']:.4f} s "
+            f"（95%区间[{p['ci_lower']:.4f}, {p['ci_upper']:.4f}]），周期比{ratio['mean_ratio']:.4f}；"
+            f"配对方法内规划成本比为{cost['mean_ratio']:.3f}。开发集改善幅度小，不能称B2已是低成本替代。")
     lines += ['', '主路径使用10秒已验证incumbent，费用包含完整30秒检查点实验以及构图、回调和验收；',
         'B2还计入获取共同B1初值的成本，不把它称为10秒端到端返回保证。','',
         '## 4. 时间与失败来自哪里','',
@@ -208,6 +244,25 @@ def markdown_report(main,rows,bottle,work,failures,bridges,refs,b2):
     paired_init=[r for r in bridges if 'initial_q_difference_max_rad' in r]
     equal=sum(r['initial_q_difference_max_rad']==0 for r in paired_init)
     lines.append(f'TB/G可比较初始化{len(paired_init)}对，其中逐数值完全一致{equal}对；全部差异见 `bridge_tb_vs_gn.csv`。')
+    for r in paired_init:
+        if r['initial_q_difference_max_rad']>0:
+            source=OUT/'runs'/r['slot']/'B1_r0/initialization_records.json.gz'
+            with gzip.open(source,'rt') as f:records=json.load(f)
+            trace=[t for entry in records for t in entry['trace']]
+            lines.append(f"本轮新公共参考/路线下，{r['slot']} 的初始化最大差为{r['initial_q_difference_max_rad']:.6f} rad；"
+                f"{sum(bool(entry['trace']) for entry in records)}个节点有续迭代记录、共{len(trace)}次更新，"
+                f"theta记录为{sorted(set(t['theta'] for t in trace))}。两种初始化均未形成最终合格路径，"
+                '不构成TB路径收益，也不改写旧输入上两者一致的事实。')
+    affected=[r for r in closure if r['method']=='B1' and r['repeat']==0 and r['assembled_last_step_rad'] is not None and r['assembled_last_step_rad']>.35]
+    lines += ['',f'另有{len(affected)}个B1第一遍的组装初值在末端出现超过0.35 rad的相邻配置差。',
+        '原因是逐点IK自行演化的末态与预先固定的共同关节终态不同。局部查询成功不等于',
+        '端点闭合后的初值完整可行；它只是传给受约束平滑器的候选，仍需全部密集检查。',
+        '这些末端组装发生在离线初值中，不是向真实执行状态写入qpos。',
+        '相同终态是原任务书硬要求，因此本轮没有根据失败更换终态、重选参考或放宽工艺域。',
+        '具体差异、原求解步长和最终状态见 `endpoint_closure.csv`。这限制了全场景基线覆盖，',
+        '不能把共同初值缺失归因为B2优化器、控制余量，或解释为任务数学不可行。',
+        '因此，参考补齐与数值能力验证已经完成，但不能宣称24场景的核心基线覆盖全部闭合；',
+        '本轮保留该缺口并停止，等待验收，不据此自动启动后续方法。']
     lines += ['', '## 5. 后续应该优化什么','',
         '后续只定义为固定扫描直线段、优化换行过渡及相邻边界层，在工艺域、碰撞和物理',
         '执行质量约束下联合调整工具姿态、关节构型与时间。时间敏感性选块、均匀选块、',
@@ -241,8 +296,8 @@ def report():
     for name,values in (('all_conditions',raw),('scene_results',rows),('baseline_main',main),('baseline_families',families),
                         ('bridge_tb_vs_gn',bridges),('bottlenecks',bottle),('failure_breakdown',fails),('numerical_work',work),('paired_intervals',intervals)):
         csv_write(OUT/'reports'/f'{name}.csv',values)
-    margin,b2,refs=calibration_tables();figures(main,rows,bottle,margin,b2)
-    markdown_report(main,rows,bottle,work,fails,bridges,refs,b2)
+    margin,b2,refs=calibration_tables();closure=endpoint_closure(raw);figures(main,rows,bottle,margin,b2)
+    markdown_report(main,rows,bottle,work,fails,bridges,refs,b2,closure,intervals)
     hashes=json.loads((OUT/'inputs/seal.json').read_text())['code_hashes']
     write(OUT/'reports/integrity.json',dict(conditions=len(raw),expected_conditions=288,
         source_unchanged=hashes==code_hashes(),common_references=sum(r['available'] for r in refs),

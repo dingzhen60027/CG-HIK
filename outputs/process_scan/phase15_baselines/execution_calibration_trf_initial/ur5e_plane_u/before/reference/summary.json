@@ -1,0 +1,37 @@
+{
+  "status": "reference_available",
+  "task": {
+    "family": "plane",
+    "placement": 0,
+    "direction": "u",
+    "robot": "ur5e",
+    "endpoint_extension": 0.0,
+    "overlap_margin": 0.0,
+    "calibration": true
+  },
+  "source": "independent_multistart_TRF_continuity_graph",
+  "baseline_outputs_used": false,
+  "keypose_count": 417,
+  "completed_layers": 417,
+  "controls": 64,
+  "elapsed_s": 4.953478498995537,
+  "dense_feasible": true,
+  "min_clearance": 0.017122881253680274,
+  "common_start": [
+    -3.024620144194788,
+    -1.2658701776289911,
+    -1.8075779042391016,
+    -1.638940898311494,
+    -4.712388980589793,
+    3.1276654692903265
+  ],
+  "common_end": [
+    -2.7513924433825507,
+    -1.7973359427833322,
+    -1.2984503262268092,
+    -1.6166027111694448,
+    -4.712388980589793,
+    3.400893170102564
+  ],
+  "path_cost": 8.046256406245211
+}

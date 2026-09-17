@@ -1,0 +1,18 @@
+{
+  "status": "reference_unresolved",
+  "task": {
+    "family": "cylinder",
+    "placement": 0,
+    "direction": "v",
+    "robot": "panda",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": true
+  },
+  "source": "independent_multistart_TRF_continuity_graph",
+  "baseline_outputs_used": false,
+  "keypose_count": 427,
+  "completed_layers": 58,
+  "controls": 96,
+  "elapsed_s": 7.013058208001894
+}

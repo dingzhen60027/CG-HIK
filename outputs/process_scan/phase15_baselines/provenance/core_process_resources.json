@@ -1,0 +1,7 @@
+{
+  "source": "Read-only /proc/263727/environ from the actual core benchmark process while running",
+  "pid": 263727,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv-process-scan/bin/python scripts/run_process_scan_phase15.py run",
+  "thread_environment": {"OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1"},
+  "clarification": "phase15_resources.json describes the metadata-collection shell, whose OMP_NUM_THREADS was unset. This record captures the actual benchmark process. No environment was upgraded."
+}

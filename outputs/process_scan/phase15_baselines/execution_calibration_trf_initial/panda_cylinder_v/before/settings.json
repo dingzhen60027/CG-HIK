@@ -1,0 +1,15 @@
+{
+  "task": {
+    "family": "cylinder",
+    "placement": 0,
+    "direction": "v",
+    "robot": "panda",
+    "endpoint_extension": 0.0,
+    "overlap_margin": 0.0,
+    "calibration": true
+  },
+  "reserve": 0.98,
+  "controls": 64,
+  "quality_thresholds_unchanged": true,
+  "comparison_scene": false
+}

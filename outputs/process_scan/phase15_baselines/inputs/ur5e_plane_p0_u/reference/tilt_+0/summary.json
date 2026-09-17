@@ -1,0 +1,40 @@
+{
+  "status": "reference_available",
+  "task": {
+    "family": "plane",
+    "placement": 0,
+    "direction": "u",
+    "robot": "ur5e",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": false
+  },
+  "source": "independent_multistart_bounded_dogbox_continuity_graph",
+  "baseline_outputs_used": false,
+  "tool_incidence_variant_deg": 0.0,
+  "nominal_surface_centers_unchanged": true,
+  "keypose_count": 419,
+  "completed_layers": 419,
+  "controls": 96,
+  "elapsed_s": 3.3873924180079484,
+  "dense_feasible": true,
+  "min_clearance": 0.017123415076820084,
+  "common_start": [
+    -0.6410736791128118,
+    -1.8594350581747887,
+    1.860247664753132,
+    -1.5716089335783434,
+    -1.5707963265897928,
+    2.5005189742718774
+  ],
+  "common_end": [
+    -0.23993221150138463,
+    -1.8974362196762793,
+    1.8857798455252999,
+    -1.5591399528490206,
+    -1.5707963265897928,
+    2.9016604418833047
+  ],
+  "path_cost": 11.374553754308353,
+  "fit": "common_control_least_squares"
+}

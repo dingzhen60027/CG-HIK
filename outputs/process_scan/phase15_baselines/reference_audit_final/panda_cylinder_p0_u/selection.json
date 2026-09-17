@@ -1,0 +1,89 @@
+{
+  "attempts": [
+    {
+      "status": "reference_unresolved",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.0,
+        "overlap_margin": 0.0,
+        "calibration": false
+      },
+      "source": "independent_multistart_bounded_dogbox_continuity_graph",
+      "baseline_outputs_used": false,
+      "tool_incidence_variant_deg": 0.0,
+      "nominal_surface_centers_unchanged": true,
+      "keypose_count": 417,
+      "completed_layers": 42,
+      "controls": 64,
+      "elapsed_s": 1.049725225995644
+    },
+    {
+      "status": "reference_unresolved",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.0,
+        "overlap_margin": 0.0,
+        "calibration": false
+      },
+      "source": "independent_multistart_bounded_dogbox_continuity_graph",
+      "baseline_outputs_used": false,
+      "tool_incidence_variant_deg": 6.0,
+      "nominal_surface_centers_unchanged": true,
+      "keypose_count": 417,
+      "completed_layers": 38,
+      "controls": 64,
+      "elapsed_s": 1.052816534996964
+    },
+    {
+      "status": "reference_available",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.0,
+        "overlap_margin": 0.0,
+        "calibration": false
+      },
+      "source": "independent_multistart_bounded_dogbox_continuity_graph",
+      "baseline_outputs_used": false,
+      "tool_incidence_variant_deg": -6.0,
+      "nominal_surface_centers_unchanged": true,
+      "keypose_count": 417,
+      "completed_layers": 417,
+      "controls": 64,
+      "elapsed_s": 6.569923645991366,
+      "dense_feasible": true,
+      "min_clearance": 0.015226443392650599,
+      "common_start": [
+        0.6915935080324724,
+        -1.5944272368115886,
+        -0.9653376724063623,
+        -2.8576386794857633,
+        -1.1893436347572337,
+        1.7970077010306462,
+        -1.1112666284011241
+      ],
+      "common_end": [
+        2.466723573190665,
+        -0.8621529806816993,
+        -1.906477916559201,
+        -1.2430099942936736,
+        -0.6959052430794113,
+        1.3755951368480683,
+        -1.130152782811042
+      ],
+      "path_cost": 92.88581060774064,
+      "fit": "independent_C2_interpolating_reference_not_baseline_coefficients"
+    }
+  ],
+  "selected_tilt_deg": -6.0,
+  "status": "reference_available",
+  "selection": "first densely verified variant in fixed order; no method outcome"
+}

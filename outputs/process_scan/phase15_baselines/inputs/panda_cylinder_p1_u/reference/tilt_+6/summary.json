@@ -1,0 +1,20 @@
+{
+  "status": "reference_unresolved",
+  "task": {
+    "family": "cylinder",
+    "placement": 1,
+    "direction": "u",
+    "robot": "panda",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": false
+  },
+  "source": "independent_multistart_bounded_dogbox_continuity_graph",
+  "baseline_outputs_used": false,
+  "tool_incidence_variant_deg": 6.0,
+  "nominal_surface_centers_unchanged": true,
+  "keypose_count": 419,
+  "completed_layers": 31,
+  "controls": 96,
+  "elapsed_s": 1.0520989860087866
+}

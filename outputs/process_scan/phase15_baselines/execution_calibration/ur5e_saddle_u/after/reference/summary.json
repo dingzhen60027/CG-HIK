@@ -1,0 +1,37 @@
+{
+  "status": "reference_available",
+  "task": {
+    "family": "saddle",
+    "placement": 0,
+    "direction": "u",
+    "robot": "ur5e",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": true
+  },
+  "source": "independent_multistart_bounded_dogbox_continuity_graph",
+  "baseline_outputs_used": false,
+  "keypose_count": 419,
+  "completed_layers": 419,
+  "controls": 96,
+  "elapsed_s": 4.545074873996782,
+  "dense_feasible": true,
+  "min_clearance": 0.017125582704635454,
+  "common_start": [
+    -0.5619545293305375,
+    -1.6420547010251894,
+    1.5617278722904495,
+    -1.2068506066680016,
+    4.67973889232716,
+    2.4721169540577854
+  ],
+  "common_end": [
+    -0.011161636828710785,
+    -1.7285811749576454,
+    1.6538703950994602,
+    -1.2787070641182168,
+    4.525910324792296,
+    3.0012214627037195
+  ],
+  "path_cost": 6.480717839827165
+}

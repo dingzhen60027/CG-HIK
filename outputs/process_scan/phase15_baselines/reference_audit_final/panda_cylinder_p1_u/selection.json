@@ -1,0 +1,129 @@
+{
+  "attempts": [
+    {
+      "status": "reference_unresolved",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.0,
+        "overlap_margin": 0.0,
+        "calibration": false
+      },
+      "source": "independent_multistart_bounded_dogbox_continuity_graph",
+      "baseline_outputs_used": false,
+      "tool_incidence_variant_deg": 0.0,
+      "nominal_surface_centers_unchanged": true,
+      "keypose_count": 417,
+      "completed_layers": 38,
+      "controls": 64,
+      "elapsed_s": 1.0608702129975427
+    },
+    {
+      "status": "reference_unresolved",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.0,
+        "overlap_margin": 0.0,
+        "calibration": false
+      },
+      "source": "independent_multistart_bounded_dogbox_continuity_graph",
+      "baseline_outputs_used": false,
+      "tool_incidence_variant_deg": 6.0,
+      "nominal_surface_centers_unchanged": true,
+      "keypose_count": 417,
+      "completed_layers": 35,
+      "controls": 64,
+      "elapsed_s": 1.0424418110051192
+    },
+    {
+      "status": "reference_unresolved",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.0,
+        "overlap_margin": 0.0,
+        "calibration": false
+      },
+      "source": "independent_multistart_bounded_dogbox_continuity_graph",
+      "baseline_outputs_used": false,
+      "tool_incidence_variant_deg": -6.0,
+      "nominal_surface_centers_unchanged": true,
+      "keypose_count": 417,
+      "completed_layers": 43,
+      "controls": 64,
+      "elapsed_s": 1.2188065789960092
+    },
+    {
+      "status": "reference_unresolved",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.0,
+        "overlap_margin": 0.0,
+        "calibration": false
+      },
+      "source": "independent_multistart_bounded_dogbox_continuity_graph",
+      "baseline_outputs_used": false,
+      "tool_incidence_variant_deg": 9.0,
+      "nominal_surface_centers_unchanged": true,
+      "keypose_count": 417,
+      "completed_layers": 33,
+      "controls": 64,
+      "elapsed_s": 1.08445790001133
+    },
+    {
+      "status": "reference_available",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.0,
+        "overlap_margin": 0.0,
+        "calibration": false
+      },
+      "source": "independent_multistart_bounded_dogbox_continuity_graph",
+      "baseline_outputs_used": false,
+      "tool_incidence_variant_deg": -9.0,
+      "nominal_surface_centers_unchanged": true,
+      "keypose_count": 417,
+      "completed_layers": 417,
+      "controls": 64,
+      "elapsed_s": 6.207593116007047,
+      "dense_feasible": true,
+      "min_clearance": 0.0213027859951514,
+      "common_start": [
+        0.13334522261221013,
+        -0.8023200899061125,
+        -0.4587876960695151,
+        -2.890554084891039,
+        -0.14232275582292833,
+        2.589955785236217,
+        -2.0001135030108217
+      ],
+      "common_end": [
+        0.7738715003125167,
+        0.6528420599447086,
+        -0.7957897590067992,
+        -1.2431180375762687,
+        0.40839083316777636,
+        1.530697141710289,
+        -1.8092298655973
+      ],
+      "path_cost": 96.50396812834248,
+      "fit": "independent_C2_interpolating_reference_not_baseline_coefficients"
+    }
+  ],
+  "selected_tilt_deg": -9.0,
+  "status": "reference_available",
+  "selection": "first densely verified variant in fixed order; no method outcome"
+}

@@ -1,0 +1,50 @@
+{
+  "slot": "panda_cylinder_p0_v",
+  "scene_uid": "84054da21481d1359c181b6fcd2262b0249f857876c17df848868534df6762c8",
+  "cluster": "panda_cylinder_p0",
+  "robot": "panda",
+  "family": "cylinder",
+  "placement": 0,
+  "direction": "v",
+  "task": {
+    "family": "cylinder",
+    "placement": 0,
+    "direction": "v",
+    "robot": "panda",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": false
+  },
+  "original_identity_sha256": "9e40009d8bf13a936a23a7ea91111ccfbe69348a7ac68557e4ea439f841e7d33",
+  "reference_geometry_feasible": true,
+  "attempts": [
+    {
+      "tilt": 0.0,
+      "root": "inputs/panda_cylinder_p0_v/reference/tilt_+0",
+      "status": "reference_available"
+    }
+  ],
+  "reference_source": "inputs/panda_cylinder_p0_v/reference/tilt_+0",
+  "common_start": [
+    -0.2718484801573281,
+    -0.8200017386330902,
+    -0.11330916405626554,
+    -2.860150034512689,
+    0.05642382848876207,
+    2.3708242167672458,
+    -0.39703667811933785
+  ],
+  "common_end": [
+    -0.22176468433743055,
+    0.7370685590081805,
+    0.11923247415778132,
+    -0.9122165894107093,
+    -0.12546375555354747,
+    1.2984164918504395,
+    -0.13181740960045088
+  ],
+  "selected_tilt_deg": 0.0,
+  "split": "same_24_development_scenes_calibrated_route",
+  "no_method_outcome_used": true,
+  "quality_thresholds_unchanged": true
+}

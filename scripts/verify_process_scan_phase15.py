@@ -25,6 +25,8 @@ def main():
     for path in FROZEN+['paper/main.tex']:
         original=subprocess.check_output(['git','show','f85613a5a64c229de5d370bc9fbe4e38fc460988:'+path])
         assert (ROOT/path).read_bytes()==original,path
+    subprocess.run(['git','diff','--exit-code','f85613a5a64c229de5d370bc9fbe4e38fc460988','--',
+                    str(OLD.relative_to(ROOT))],cwd=ROOT,check=True,capture_output=True)
     for identity in seal['scenes']:
         original=json.loads((OLD/'inputs'/identity['slot']/'identity.json').read_text())
         assert identity['scene_uid']==original['scene_uid']
@@ -39,7 +41,10 @@ def main():
                     copies.append(dict(slot=identity['slot'],repeat=repeat,identical=True))
                 if not m.get('physical_run'):continue
                 assert repeat==0
-                with h5py.File(root/'execution.h5') as f:h={k:f[k][:] for k in f}
+                with h5py.File(root/'execution.h5') as f:
+                    assert not f.attrs['qpos_runtime_overwrite']
+                    assert f.attrs['source']=='torque_actuators_mj_step'
+                    h={k:f[k][:] for k in f}
                 np.testing.assert_allclose(np.diff(h['t']),.001,atol=1e-10,rtol=0)
                 path=np.load(root/'planned_path.npz');basis=BSpline(path['knots'],np.eye(len(path['coeff'])),3)
                 np.testing.assert_allclose(h['q'][0],basis(0)@path['coeff'],atol=1e-12)
@@ -56,7 +61,23 @@ def main():
                     dt_s=.001,actual_max_velocity_ratio=vu,actual_max_acceleration_ratio=au,
                     planned_max_velocity_ratio=float(np.max(abs(h['dqr'])/(.5*adapter.public.limits.velocity))),
                     planned_max_acceleration_ratio=float(np.max(abs(h['ddqr']))/2),coverage_recomputed=cv,hole_recomputed_m=hole))
-    write(OUT/'reports/qa/record_checks.json',dict(status='passed',issues=issues,executions=executions,b2_copies=copies,
+    videos=[];video_index=OUT/'reports/videos/index.json'
+    if video_index.exists():
+        index=json.loads(video_index.read_text());assert len(index)==24
+        for item in index:
+            if item['status']!='rendered':continue
+            source=ROOT/item['source'];movie=ROOT/item['video']
+            assert sha(source)==item['source_sha256']
+            assert sha(movie)==item['sha256']
+            probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(movie)]))
+            stream=next(s for s in probe['streams'] if s['codec_type']=='video')
+            with h5py.File(source) as f:duration=float(f['t'][-1])
+            assert (stream['width'],stream['height'])==(640,480)
+            assert stream['r_frame_rate']=='10/1'
+            assert abs(float(probe['format']['duration'])-duration)<.11
+            videos.append(dict(video=item['video'],recorded_duration_s=duration,
+                               video_duration_s=float(probe['format']['duration']),source_unchanged=True))
+    write(OUT/'reports/qa/record_checks.json',dict(status='passed',issues=issues,executions=executions,b2_copies=copies,videos=videos,
         frozen_old_source_unchanged=True,all_24_identities_preserved=True,new_ik_or_physics_run=False))
     files={str(p.relative_to(ROOT)):dict(sha256=sha(p),bytes=p.stat().st_size) for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='delivery_manifest.json'}
     write(OUT/'delivery_manifest.json',dict(files=files,complete_conditions=288,formal_scenes=0,old_evidence_overwritten=False))

@@ -1,0 +1,1443 @@
+{
+  "config": {
+    "scope": "phase_1_5_core_baseline_closure",
+    "base": "f85613a5a64c229de5d370bc9fbe4e38fc460988",
+    "methods": [
+      "B0",
+      "B1",
+      "G",
+      "B2"
+    ],
+    "scenes": "same_24_development_scene_identities",
+    "repeats": 3,
+    "physical_repeat": 0,
+    "calibration_placement": {
+      "center_m": [
+        0.485,
+        0.005,
+        0.265
+      ],
+      "yaw_deg": 7.5
+    },
+    "common_endpoint_extension_m": 0.003,
+    "common_overlap_margin_m": 0.001,
+    "common_speed_reserve": 0.9,
+    "controller": "unchanged_computed_torque_400_40",
+    "public_quality_thresholds": "unchanged",
+    "state_record_interval_s": 0.001,
+    "control_points": 96,
+    "geometry_nodes": 401,
+    "dense_geometry_nodes": 3201,
+    "timing_dense_nodes": 6401,
+    "primary_checkpoint_s": 10,
+    "optimization_checkpoints_s": [
+      1,
+      5,
+      10,
+      30
+    ],
+    "b2_full_variable_grid_base_nodes": 201,
+    "b2_all_coefficients_variable": true,
+    "b2_hessian": "analytic_process_and_time_locally_affine_collision",
+    "b2_coordinate_scale_rad": 0.15,
+    "b2_squared_speed_scale": "inverse_initial_duration_squared",
+    "b2_time_acceleration_elimination": "exact",
+    "boundmpc": "official_example_verified_scan_not_evaluable_not_in_core_table",
+    "formal_test_run": false,
+    "future_method_implemented": false
+  },
+  "scenes": [
+    {
+      "slot": "panda_plane_p0_u",
+      "scene_uid": "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609",
+      "cluster": "panda_plane_p0",
+      "robot": "panda",
+      "family": "plane",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "plane",
+        "placement": 0,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "49b4ce751c6b07a6e5fb3509d99677ed92cd4b31f4a90aaf60e04c6ec555a102",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_plane_p0_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_plane_p0_u/reference/tilt_+0",
+      "common_start": [
+        -0.08450803059339765,
+        -0.5117073083438758,
+        -0.18692616000295512,
+        -2.4697629601999544,
+        -0.09866932500313265,
+        1.9637961993046387,
+        -1.7808498589002235
+      ],
+      "common_end": [
+        0.11841220808137598,
+        -0.5507687822662305,
+        0.00034160481216325827,
+        -2.5083556251647146,
+        0.00019303702309962943,
+        1.9575868624094217,
+        -1.4521658466307912
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "scene_uid": "f3f3897b5f524fd2bf769f27b0ff33b7489cd38286aa0a3aef7bd1de2cff55db",
+      "cluster": "panda_plane_p0",
+      "robot": "panda",
+      "family": "plane",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "plane",
+        "placement": 0,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "4be2446f83c25700a316e146bd543b10aebd8eb80392c1df3e8df3daa8a07d77",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_plane_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_plane_p0_v/reference/tilt_+0",
+      "common_start": [
+        -0.3630435204276459,
+        -0.4906872609159104,
+        0.05497125497223536,
+        -2.460877286837379,
+        0.028112444922908538,
+        1.970676325018241,
+        -0.32549436577263285
+      ],
+      "common_end": [
+        -0.36551307398868615,
+        0.2360139149776905,
+        0.1984848657536852,
+        -1.6641007349818049,
+        -0.048665264670664996,
+        1.895288116197429,
+        -0.1568661825794959
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_plane_p1_u",
+      "scene_uid": "dc500163bea8d607c8f6676fccd669f938cace853f762bdc955d3710e5f2bae9",
+      "cluster": "panda_plane_p1",
+      "robot": "panda",
+      "family": "plane",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "plane",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "9286b2ae0e6c2a6937a680a3f9fcbeeac2310574f6b15b7c0ebfadfec4711eac",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_plane_p1_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_plane_p1_u/reference/tilt_+0",
+      "common_start": [
+        1.7691433268220174,
+        -1.75777015966191,
+        -0.8888875895348529,
+        -2.208908147079679,
+        -1.290513787409842,
+        0.9170595333490935,
+        -0.9670684379465706
+      ],
+      "common_end": [
+        2.001207141571427,
+        -1.6816535934075298,
+        -0.909880681528455,
+        -2.3133537253471084,
+        -1.1715622395430643,
+        1.018937683330031,
+        -0.5832452477382926
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "scene_uid": "e283b88390fe538a85d2694079d62454b1b3aa046d100f8504b4a66d9736b8d5",
+      "cluster": "panda_plane_p1",
+      "robot": "panda",
+      "family": "plane",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "plane",
+        "placement": 1,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "6406a165a7ce0a64fe1228e908248444b77f28494bcb6c1b8247f9846a13358d",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_plane_p1_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_plane_p1_v/reference/tilt_+0",
+      "common_start": [
+        -0.2453939731855847,
+        -0.354071370072311,
+        0.08596013532935408,
+        -2.3428404479027836,
+        0.03259162146231885,
+        1.989772941038299,
+        -0.4398046106653555
+      ],
+      "common_end": [
+        -0.19792694129946772,
+        0.36366525365942304,
+        0.2337791650533041,
+        -1.4860781167239347,
+        -0.08557709479379025,
+        1.839728759838915,
+        -0.21794652713643042
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_cylinder_p0_u",
+      "scene_uid": "1d626ca03a345e6601c064a6a0c00a1a9212ee8924f6c3978e4ae4fa19bcc8eb",
+      "cluster": "panda_cylinder_p0",
+      "robot": "panda",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "ccdef18967ef7f79f55e80474086d9bfc7d63cc40030240112871637a0dc7a2b",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_cylinder_p0_u/reference/tilt_+0",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": 6.0,
+          "root": "inputs/panda_cylinder_p0_u/reference/tilt_+6",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": -6.0,
+          "root": "inputs/panda_cylinder_p0_u/reference/tilt_-6",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_cylinder_p0_u/reference/tilt_-6",
+      "common_start": [
+        0.6795700426659539,
+        -1.624832726280558,
+        -0.9693221595697497,
+        -2.8738269411674984,
+        -1.2009073249283628,
+        1.7857713497298007,
+        -1.1145791825964735
+      ],
+      "common_end": [
+        0.8983000386782264,
+        -1.3025269699158901,
+        -0.7018941050113098,
+        -2.954246146834647,
+        -1.0323023105949867,
+        2.0118178816057934,
+        -0.6930912535155501
+      ],
+      "selected_tilt_deg": -6.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "scene_uid": "84054da21481d1359c181b6fcd2262b0249f857876c17df848868534df6762c8",
+      "cluster": "panda_cylinder_p0",
+      "robot": "panda",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "9e40009d8bf13a936a23a7ea91111ccfbe69348a7ac68557e4ea439f841e7d33",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_cylinder_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_cylinder_p0_v/reference/tilt_+0",
+      "common_start": [
+        -0.2718484801573281,
+        -0.8200017386330902,
+        -0.11330916405626554,
+        -2.860150034512689,
+        0.05642382848876207,
+        2.3708242167672458,
+        -0.39703667811933785
+      ],
+      "common_end": [
+        -0.22176468433743055,
+        0.7370685590081805,
+        0.11923247415778132,
+        -0.9122165894107093,
+        -0.12546375555354747,
+        1.2984164918504395,
+        -0.13181740960045088
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_cylinder_p1_u",
+      "scene_uid": "406af3b20ab059ba4ba3b0119a5c6adf254d03bdeae9dfa5c1b0f474ba4cf06d",
+      "cluster": "panda_cylinder_p1",
+      "robot": "panda",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "71e27055183db2a4c1af8a1eaa4cd0e3ef6e4fbe3ed259d3fcd4abcd99f5faba",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_cylinder_p1_u/reference/tilt_+0",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": 6.0,
+          "root": "inputs/panda_cylinder_p1_u/reference/tilt_+6",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": -6.0,
+          "root": "inputs/panda_cylinder_p1_u/reference/tilt_-6",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": 9.0,
+          "root": "inputs/panda_cylinder_p1_u/reference/tilt_+9",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": -9.0,
+          "root": "inputs/panda_cylinder_p1_u/reference/tilt_-9",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_cylinder_p1_u/reference/tilt_-9",
+      "common_start": [
+        0.12706897580364923,
+        -0.8192620280705272,
+        -0.4660788456764944,
+        -2.9068696892066512,
+        -0.14783985112692558,
+        2.5973030112971296,
+        -2.0055045739795645
+      ],
+      "common_end": [
+        0.769373125338577,
+        -1.1512204478165382,
+        -0.6504668857932674,
+        -2.989116077897431,
+        -0.8915327338754043,
+        2.327922602420145,
+        -1.0169091991655521
+      ],
+      "selected_tilt_deg": -9.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_cylinder_p1_v",
+      "scene_uid": "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+      "cluster": "panda_cylinder_p1",
+      "robot": "panda",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "962776d251f2aef10f9f6404e130e69c03fbc2e3cb325deab205115d3ea9cdab",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_cylinder_p1_v/reference/tilt_+0",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": 6.0,
+          "root": "inputs/panda_cylinder_p1_v/reference/tilt_+6",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_cylinder_p1_v/reference/tilt_+6",
+      "common_start": [
+        -2.087452091955844,
+        1.703763068501162,
+        2.0789826747695312,
+        -2.7143209505742285,
+        -1.3261249308215177,
+        1.6661221655184206,
+        0.3797788390992525
+      ],
+      "common_end": [
+        -0.5077023655799097,
+        1.124304999760534,
+        1.4334291976180498,
+        -0.8470014353716329,
+        -1.1211915267355217,
+        1.1319547684730433,
+        0.09591746099273653
+      ],
+      "selected_tilt_deg": 6.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "scene_uid": "f6c31864e2ce3e5c2e19b914f5e5b132c9658310d934a68e88ca62a1b777611b",
+      "cluster": "panda_saddle_p0",
+      "robot": "panda",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "saddle",
+        "placement": 0,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "e74e6f5b17561ae7023f1be6087071208b78d4aaa0ffb3b7ed27161879585ca2",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_saddle_p0_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_saddle_p0_u/reference/tilt_+0",
+      "common_start": [
+        -0.2722781743763952,
+        -0.21383879235790149,
+        -0.07119689740801255,
+        -2.15689886523415,
+        0.051270324757974724,
+        1.665691300369995,
+        -1.90382727481384
+      ],
+      "common_end": [
+        -0.027955686874453874,
+        -0.27981313521065243,
+        0.21364237170664804,
+        -2.220154718033228,
+        -0.05339544731097123,
+        1.683387772997338,
+        -1.4066264562212998
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_saddle_p0_v",
+      "scene_uid": "ddbaccae4d1e1e90b7da2315bf852ee615b4daba879473cd6ddfe24006fb6108",
+      "cluster": "panda_saddle_p0",
+      "robot": "panda",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "saddle",
+        "placement": 0,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "5fb0c7c0a4275ef7a2bb882f4bfbffaa054ecd89fea1b96668f7cc980dfaa1ad",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_saddle_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_saddle_p0_v/reference/tilt_+0",
+      "common_start": [
+        -2.081036519553557,
+        0.6923601571750135,
+        1.979832030981551,
+        -2.1255827592832786,
+        -0.44745441011359804,
+        1.551201473732312,
+        0.10690434775583676
+      ],
+      "common_end": [
+        -1.6526852744387708,
+        0.39596882218967855,
+        1.5045689889997154,
+        -1.9505357764954576,
+        -0.23471929378828518,
+        2.1737784986154307,
+        -0.06056578413496371
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "scene_uid": "9ced85a1ec2cd96c165d3ed941ec82457e30e182c4d037796ec472ed639f71b3",
+      "cluster": "panda_saddle_p1",
+      "robot": "panda",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "saddle",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "83d159b6ab9a94dd1c46576d9a3bcd3c1e90ad3303133ed5e2dde80cb2b69d90",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_saddle_p1_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_saddle_p1_u/reference/tilt_+0",
+      "common_start": [
+        -0.18224692310378415,
+        -0.07855149438115164,
+        0.005380837524408349,
+        -2.008760413592148,
+        0.03925906720397014,
+        1.6472748087017788,
+        -1.9993972407102092
+      ],
+      "common_end": [
+        0.07806038116619335,
+        -0.23477718094249625,
+        0.23952971503390266,
+        -2.1779484124406823,
+        -0.08938606488909255,
+        1.702315357815262,
+        -1.5241493784449807
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_saddle_p1_v",
+      "scene_uid": "5f43b4d6461fcea3fe8ed7073c7de83186d13133f6cb072fc4eb2c12336a6b6c",
+      "cluster": "panda_saddle_p1",
+      "robot": "panda",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "saddle",
+        "placement": 1,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "744e0c14873b06456c11626495af4cd9e6c8d076f50a3d5863a3cc90526bb724",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_saddle_p1_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_saddle_p1_v/reference/tilt_+0",
+      "common_start": [
+        1.5109763171227062,
+        -0.8521380069289345,
+        -1.3068149858056382,
+        -1.954111352621108,
+        -0.6232689178823207,
+        1.4255565005394621,
+        0.12452197560513616
+      ],
+      "common_end": [
+        1.8576671320932703,
+        -0.8435086407492857,
+        -1.5815998915094722,
+        -1.7440703210670632,
+        -0.718709109266603,
+        1.946732345453901,
+        0.13405039857860893
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "scene_uid": "74c4b355832ae88369ec214894ab6b8c7e91246fa0de0bbe376637861cd8eed7",
+      "cluster": "ur5e_plane_p0",
+      "robot": "ur5e",
+      "family": "plane",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "plane",
+        "placement": 0,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "5f84bae3b9f15f5b884a7b9b4906e0235aaec7b4883227a95d13555a01b395b6",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_plane_p0_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_plane_p0_u/reference/tilt_+0",
+      "common_start": [
+        -0.6410736791128118,
+        -1.8594350581747887,
+        1.860247664753132,
+        -1.5716089335783434,
+        -1.5707963265897928,
+        2.5005189742718774
+      ],
+      "common_end": [
+        -0.23993221150138463,
+        -1.8974362196762793,
+        1.8857798455252999,
+        -1.5591399528490206,
+        -1.5707963265897928,
+        2.9016604418833047
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "scene_uid": "b4cbe6298b4c8842e3d61c4c05cef1b634d1de760788b1ccb4c7c2647062845b",
+      "cluster": "ur5e_plane_p0",
+      "robot": "ur5e",
+      "family": "plane",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "plane",
+        "placement": 0,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "245a14b7976f2093f7483a516b9e0adc779b403a43c15336dcb88daa233ed483",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_plane_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_plane_p0_v/reference/tilt_+0",
+      "common_start": [
+        -0.6427007961370657,
+        -1.8496684659649218,
+        1.8534440231546385,
+        -1.574571884189717,
+        -1.5707963265897928,
+        -2.213497123137066
+      ],
+      "common_end": [
+        -0.4008847147935938,
+        -1.272282558259363,
+        1.2699985793156006,
+        -1.5685123480562377,
+        -1.5707963265897928,
+        -1.9716810417935944
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "scene_uid": "403cb6773f1a1675c7f7f184c8e8c74848c8e1cd56930a8f81eb78de27e1428a",
+      "cluster": "ur5e_plane_p1",
+      "robot": "ur5e",
+      "family": "plane",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "plane",
+        "placement": 1,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "a0e28b2181fd79aa4aa6f9c28d5d8aaff8c31c3807212c0e51fba90f9274792f",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_plane_p1_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_plane_p1_u/reference/tilt_+0",
+      "common_start": [
+        3.304479931247412,
+        4.892085826592212,
+        -1.7786881794019318,
+        4.740583986989305,
+        1.5707963265897935,
+        3.0426805436533653
+      ],
+      "common_end": [
+        3.7082108280652735,
+        4.983670777609114,
+        -1.8480878207309865,
+        4.71839867730146,
+        1.5707963265897935,
+        3.446411440471227
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "scene_uid": "26227b24cb54fbd1ee1f9a2ff9548fd6b42ce382e7b92e4713c9a7c4eba0431e",
+      "cluster": "ur5e_plane_p1",
+      "robot": "ur5e",
+      "family": "plane",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "plane",
+        "placement": 1,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "93d858e2628acb80ad5e0a9e99501ec900556aaf1fdbf6009f550686369eb884",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_plane_p1_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_plane_p1_v/reference/tilt_+0",
+      "common_start": [
+        -0.45827257291808665,
+        -1.7405389301522969,
+        1.7706098043825973,
+        -1.6008672012303007,
+        4.712388980589794,
+        3.99231701946235
+      ],
+      "common_end": [
+        -0.20724444872718562,
+        -1.1789136773279358,
+        1.1423972894694083,
+        -1.5342799391414728,
+        4.712388980589793,
+        4.243345143653251
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "scene_uid": "5d9aac3d7faa587a77b4ef01338725dc9ae7ca13f0a04df57de39f2cb095a9ac",
+      "cluster": "ur5e_cylinder_p0",
+      "robot": "ur5e",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "c31998b14c485cc6586646dc87a7c96f5209c984cc9be618d8f4ce0d01e82f76",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_cylinder_p0_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_cylinder_p0_u/reference/tilt_+0",
+      "common_start": [
+        -3.0703457533315004,
+        -0.9924761789561216,
+        -2.2182570950585294,
+        5.139791207937505,
+        1.5457766974449776,
+        -3.074876328396137
+      ],
+      "common_end": [
+        -2.4439163178693657,
+        -0.9155955522069238,
+        -2.2280470789749764,
+        4.994537763391465,
+        1.343061600724987,
+        -2.4761572837089036
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "scene_uid": "b181f4aea3dacadfb66671a2eea89b411650ea76f729a02a7b8c5f249579c5f5",
+      "cluster": "ur5e_cylinder_p0",
+      "robot": "ur5e",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "8d2602f0708662bdce5ec1d7eb7ab1d12f8a4102072d3166c3a4f352a2c936d4",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_cylinder_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_cylinder_p0_v/reference/tilt_+0",
+      "common_start": [
+        5.392812200085976,
+        -2.141013528077463,
+        2.1771316571449097,
+        -1.8326186891262666,
+        -1.30103116748253,
+        3.8527736882864216
+      ],
+      "common_end": [
+        5.943052355218943,
+        -0.9492421977944854,
+        0.8141270885815729,
+        -1.1042990901781995,
+        -1.685428621852603,
+        4.391445748528236
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "scene_uid": "78356a8fe9f1e85ce2b8185467eefe91275f3763ead11629ba2fd1962fc65f9a",
+      "cluster": "ur5e_cylinder_p1",
+      "robot": "ur5e",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "a852b0e66a6a094801628128504fbd8aa9eb5578ed4aa6593c5325bdeee33412",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_cylinder_p1_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_cylinder_p1_u/reference/tilt_+0",
+      "common_start": [
+        -3.016433790371449,
+        -1.1449474580482895,
+        -2.145180970007428,
+        5.216951138639768,
+        -4.66450058053943,
+        -3.269615614996559
+      ],
+      "common_end": [
+        -2.4413452075743867,
+        -0.9879831815697748,
+        -2.2127230947419654,
+        5.099120955208563,
+        -4.862141745589251,
+        -2.727942360775378
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "scene_uid": "2d20f99cf6c82aa207e523443bbea9c8b2f83a71121fed63556e715ac9a2a97f",
+      "cluster": "ur5e_cylinder_p1",
+      "robot": "ur5e",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "8aeb226bddbe9ee995696a4e7a1b8b3ef3c535d81a349e34808287458115041b",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_cylinder_p1_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_cylinder_p1_v/reference/tilt_+0",
+      "common_start": [
+        -0.6873181882779711,
+        -1.9940245570880486,
+        2.1021470414881,
+        -1.8883656860118139,
+        -1.288346514813223,
+        -2.4900294482325767
+      ],
+      "common_end": [
+        -0.14006465043202912,
+        -0.8259523112712414,
+        0.6069784405723404,
+        -1.0277611621932854,
+        -1.705304836844686,
+        -1.9506407886722996
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "scene_uid": "512f782109f8188da0d9abc0c832e86278e011a39690b19c4fd78abb5a46d0f5",
+      "cluster": "ur5e_saddle_p0",
+      "robot": "ur5e",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "saddle",
+        "placement": 0,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "1a7b12c3830d9843ee44a8bf88ba59d26c8bd1ea45a0fccb6200b371c1342ce5",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_saddle_p0_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_saddle_p0_u/reference/tilt_+0",
+      "common_start": [
+        -0.6282105248129684,
+        -1.62384129088849,
+        1.6082118469585567,
+        -1.2700841350091319,
+        -1.5853058086301897,
+        -3.7490040806079814
+      ],
+      "common_end": [
+        -0.08372273974033013,
+        -1.674762148602847,
+        1.6689053257177315,
+        -1.3372017608626865,
+        -1.7443945277338524,
+        -3.2241294674360566
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "scene_uid": "36b3d3486fc1b60616750c9293d770932ac4609219d8fed3920864fd4b552a68",
+      "cluster": "ur5e_saddle_p0",
+      "robot": "ur5e",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "saddle",
+        "placement": 0,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "4a02359a75ff5664c89112389174782b1d409ca69eda600773f62b1c39ac0600",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_saddle_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_saddle_p0_v/reference/tilt_+0",
+      "common_start": [
+        -0.6352813906214093,
+        4.666001418903167,
+        1.6049731608492408,
+        -1.2747771665521423,
+        4.703938549377424,
+        4.059064020766853
+      ],
+      "common_end": [
+        -0.5397051575275702,
+        4.864440042438614,
+        1.4968914069905954,
+        -1.768944960406316,
+        4.9703370988836815,
+        4.207516654283633
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "scene_uid": "131c413eea68307c7e2869678e592255d46b9ff65ebdafcb0874ee15554f5ed5",
+      "cluster": "ur5e_saddle_p1",
+      "robot": "ur5e",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "saddle",
+        "placement": 1,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "98624e93f47228fca766c14a92b99831fbe56e346764c813fb4886063e16f5b7",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_saddle_p1_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_saddle_p1_u/reference/tilt_+0",
+      "common_start": [
+        -0.43169205922573106,
+        4.767483224083223,
+        1.5003147258897658,
+        -1.2718101141732834,
+        4.679560582977182,
+        2.4715048581651935
+      ],
+      "common_end": [
+        0.05724711563630256,
+        4.644380664069726,
+        1.6418318719713885,
+        -1.3683922652763985,
+        4.512793303457792,
+        2.938965490765277
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "scene_uid": "88778a5202fca058c5e99dc6c571ebc77b922de005dac1eb6c79648bfb8c2dc8",
+      "cluster": "ur5e_saddle_p1",
+      "robot": "ur5e",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "saddle",
+        "placement": 1,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "16e29222cdc468e9246c9f1efae6826ea0773a293e12c9bbdcb15add5a2d6027",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_saddle_p1_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_saddle_p1_v/reference/tilt_+0",
+      "common_start": [
+        -0.43763110363886415,
+        4.7750226163749305,
+        1.4952547151061,
+        -1.2751532168035065,
+        4.686003297201027,
+        3.997462988569414
+      ],
+      "common_end": [
+        -0.3415003181645211,
+        4.966044131513086,
+        1.368784591447921,
+        -1.7255231511230138,
+        4.977418532633342,
+        4.142092678118893
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    }
+  ],
+  "code_hashes": {
+    "src/confik/task_balance_gn.py": "752a69afede984d0617997d6c412753c327f9f642eb0f08ef2ab33c464a68d57",
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/process_scan/phase15.py": "9f783f9eeeac43826dd490a417ba42e1ce6fe6979a59a1b3fe47bcfd0dc3a0e3",
+    "src/confik/process_scan/execution.py": "fd75dd0b4a89ed8e0e15e8909cc4f2d3f6f2188863361e038d9133f832a9a312",
+    "src/confik/process_scan/planning.py": "0ff97013fbb81c17316f66dde1607b242635281d370ea6247a2b7d171bf0f5d9",
+    "src/confik/process_scan/task.py": "a7603c2bccfa21906cf3281d74abd0541398e3348b443daef93b9f15652e9333",
+    "src/confik/process_scan/__init__.py": "1027fbff570c813e8dadf870667f7c941415fc908844aa514e39b1a2d8795a0e",
+    "src/confik/process_scan/models.py": "12f519da6af6d4464e57564f99a25a6a71910728d796f73f2d5cff5358264f51",
+    "src/confik/process_scan/boundmpc_check.py": "579396f24701e7a48e0c80d13ca83f95a2bc3c1a3cd0184ef05ebfd6d0a9f251",
+    "src/confik/process_scan/geometry_adapter.py": "40875f89a332b9fe60e466ebc9a8ab13f26fdaa6b2b3c21331e20e7775fe2106",
+    "src/confik/process_scan/collision.py": "eaf8df2c2759c40a1a8cb0f8765442bba16b31e9893bb1d7d20a553425025ae8",
+    "src/confik/process_scan/study.py": "72dc808c622ec67cb3685453448ab6515c94f21ae765cbc8d5312c66b849e136",
+    "scripts/run_process_scan_phase15.py": "9fa7849417228d1fa5684d032ce3ed9f9a4a47ba9bb98828f18af2ca1fb8c32a",
+    "configs/process_scan_phase15.yaml": "73783279a28e11fe0e24005f2b5158e6a7d5459760db2f1f2bf278c347c43076"
+  },
+  "files": {
+    "inputs/ur5e_plane_p0_u/scene.xml": "807ed19dc7de3b14e3beee7eec1927ef9a882dd0313b73268ce72183982128c7",
+    "inputs/ur5e_plane_p0_u/identity.json": "0e0822bdde5fd07b45e462b41510837f8ed594aa5ab4244d07a006506b5cf2bd",
+    "inputs/ur5e_saddle_p1_v/scene.xml": "47dc8236bb457477e55eeaaa64b3fac5837625ec89ec7a5ae3e1860669e17daa",
+    "inputs/ur5e_saddle_p1_v/identity.json": "6e517fc35253d8487bc57bf51a5f755ba28a18e206157a81ff6c87cb1ce7baa3",
+    "inputs/panda_saddle_p0_v/scene.xml": "f00675c67b52a23a8a8fdd3a2b712b8ac80330a53dc15912702f84482087d897",
+    "inputs/panda_saddle_p0_v/identity.json": "0b4af2b2f7f1fd077b2d40646c6e601e40f0f7baeda28bbd887edcdcc2651e7c",
+    "inputs/panda_cylinder_p1_u/scene.xml": "dee3bcbd54649ab098cd77094832a7995d1c22644e1e2e537252972a55a69299",
+    "inputs/panda_cylinder_p1_u/identity.json": "78b9ba86ee6e1d66ca845f3271bebaa7ed689f836307d8ba60cebe0b972dba01",
+    "inputs/panda_cylinder_p0_v/scene.xml": "c51a13d69155db7b37bb34d85918bf48d118c06fc38110a53917e04050375ba7",
+    "inputs/panda_cylinder_p0_v/identity.json": "942c4c2bc6b3cb9a78c7ed871ef872adf076bd384ae71b9723c6cc78954b11b2",
+    "inputs/ur5e_cylinder_p0_u/scene.xml": "7e7b44dca3d7d178e93edf98eec37a86a2ff31d9c36eb118bee9f4e6a50aa613",
+    "inputs/ur5e_cylinder_p0_u/identity.json": "8c4086a40efcc2a2bbe619d098545b1c0c6143e6fffd45355c3253b0a49e671f",
+    "inputs/ur5e_plane_p1_v/scene.xml": "bccf1f5e44df3982845ae4a6ec4ff1da34283aaa1e27472d052bb8f308f6ef41",
+    "inputs/ur5e_plane_p1_v/identity.json": "8613cb87bf72f76f47df205307a683a731aa7328ae9c01997faf73033339b632",
+    "inputs/ur5e_saddle_p0_v/scene.xml": "1677fd7496871350f108b8d7d0d7072ca8667ad176a1ed67dc635052053f087d",
+    "inputs/ur5e_saddle_p0_v/identity.json": "bdadf27ce1d91f421064b40bcf33fadff21c3462063dfe4f08ff29dbc8b0b4dd",
+    "inputs/panda_saddle_p1_v/scene.xml": "d731329df270eba51c34cc89e3bb6e40a2d1d4a2fa40f34de045499a37923433",
+    "inputs/panda_saddle_p1_v/identity.json": "cee5ccba145d3576dc7de91e4c2242c3ab00a2174aac11412f9efa7780c0ad5e",
+    "inputs/panda_plane_p0_v/scene.xml": "ad9a5adfe8c6cf9aecfbd197ded2f92ea8adb6fb6ca790fb4f8fca79550349fb",
+    "inputs/panda_plane_p0_v/identity.json": "c9bc86981536c05c89dfd977ac6b7b00375bd4185704ef0ad028228f456ed14f",
+    "inputs/ur5e_plane_p1_u/scene.xml": "bccf1f5e44df3982845ae4a6ec4ff1da34283aaa1e27472d052bb8f308f6ef41",
+    "inputs/ur5e_plane_p1_u/identity.json": "781071d15821dd24150d4f166d9505e1f5f9f121f1e4bbd0f60e402c94a710aa",
+    "inputs/panda_plane_p1_v/scene.xml": "bf781b7d29878b53da58d90fa793b15fefe2e895eb122b48f5e0b2b800c672e3",
+    "inputs/panda_plane_p1_v/identity.json": "9672ff051c3a748716bd4003b5a7217fba8e513d6342199de369fb96534a32ea",
+    "inputs/panda_plane_p0_u/scene.xml": "ad9a5adfe8c6cf9aecfbd197ded2f92ea8adb6fb6ca790fb4f8fca79550349fb",
+    "inputs/panda_plane_p0_u/identity.json": "ac84d50cee10f7de9189523d2ce69b6a3d3fea8bd48113ddcb1d42dcc4402dbb",
+    "inputs/panda_cylinder_p0_u/scene.xml": "c51a13d69155db7b37bb34d85918bf48d118c06fc38110a53917e04050375ba7",
+    "inputs/panda_cylinder_p0_u/identity.json": "b97389a8845e697f42e4e9e000669b08f680127e365788743c6fc665d12bd52d",
+    "inputs/ur5e_cylinder_p0_v/scene.xml": "7e7b44dca3d7d178e93edf98eec37a86a2ff31d9c36eb118bee9f4e6a50aa613",
+    "inputs/ur5e_cylinder_p0_v/identity.json": "0a727078c56d90737f129e003b28e494cdeecac7767bd51bc3fe3e727c7244ef",
+    "inputs/panda_saddle_p1_u/scene.xml": "d731329df270eba51c34cc89e3bb6e40a2d1d4a2fa40f34de045499a37923433",
+    "inputs/panda_saddle_p1_u/identity.json": "6e322e044f320186111eb7d7622b8ba70852e7b436dfe9e620e3c0e61f420334",
+    "inputs/ur5e_cylinder_p1_u/scene.xml": "e91034b66ae36bda8014b97210f83c76d9332313ba6c1d451545158f3911c89b",
+    "inputs/ur5e_cylinder_p1_u/identity.json": "33a8aadb3524f5949580a792e1fa60840899a8dd3ba502129a9956016a2182f3",
+    "inputs/ur5e_saddle_p0_u/scene.xml": "1677fd7496871350f108b8d7d0d7072ca8667ad176a1ed67dc635052053f087d",
+    "inputs/ur5e_saddle_p0_u/identity.json": "40f3a19e60ef6a9a194ffafa4fcb533552675ba2efc659dc40615260ba2d16f7",
+    "inputs/ur5e_cylinder_p1_v/scene.xml": "e91034b66ae36bda8014b97210f83c76d9332313ba6c1d451545158f3911c89b",
+    "inputs/ur5e_cylinder_p1_v/identity.json": "8a9c3e40d2c8c6603dcf7e7b9cade9bc0b0e9ce4c0f7890efbfca357e4411cfc",
+    "inputs/panda_cylinder_p1_v/scene.xml": "dee3bcbd54649ab098cd77094832a7995d1c22644e1e2e537252972a55a69299",
+    "inputs/panda_cylinder_p1_v/identity.json": "d557da039e5ba6e9f871ec4e6c7036569f7d877e15298c9920c5039bbde5b33e",
+    "inputs/ur5e_saddle_p1_u/scene.xml": "47dc8236bb457477e55eeaaa64b3fac5837625ec89ec7a5ae3e1860669e17daa",
+    "inputs/ur5e_saddle_p1_u/identity.json": "2db208fdf4ed9feb7ed5b0ffebb675a467f9112e3b695c95ab9f33ac9b955a29",
+    "inputs/ur5e_plane_p0_v/scene.xml": "807ed19dc7de3b14e3beee7eec1927ef9a882dd0313b73268ce72183982128c7",
+    "inputs/ur5e_plane_p0_v/identity.json": "2a5ba62535c3a1bc1ae1a8a58b33318dc8684238d9c82d59b2e76ef8cc78aaca",
+    "inputs/panda_saddle_p0_u/scene.xml": "f00675c67b52a23a8a8fdd3a2b712b8ac80330a53dc15912702f84482087d897",
+    "inputs/panda_saddle_p0_u/identity.json": "6db33caff45224d2afae6a8e7edd8d7e621d8ab64ec3444800bc1e2ce33d482f",
+    "inputs/panda_plane_p1_u/scene.xml": "bf781b7d29878b53da58d90fa793b15fefe2e895eb122b48f5e0b2b800c672e3",
+    "inputs/panda_plane_p1_u/identity.json": "f85ba2992a3e3d61535e9fc1085502c90adddad781f4f6c8f0f2fe628b4dcd4d",
+    "inputs/ur5e_plane_p0_u/reference/tilt_+0/reference.npz": "a42411d4411e91597bf4fb6dc680875122a61f655dfb9028f705be9ccc39fe75",
+    "inputs/ur5e_plane_p0_u/reference/tilt_+0/dense_check.json": "56d434f8a31d90c61d026fd8565f61f9a94e439a35e70c1893d4b943300902be",
+    "inputs/ur5e_plane_p0_u/reference/tilt_+0/summary.json": "a4a1bf4964bcffdebcffc58520149ddaafbd2a98ba637b66a5c6a4891409a777",
+    "inputs/ur5e_plane_p0_u/reference/tilt_+0/candidate_graph.json.gz": "6e5b8e54bd828422e9abb3519b450a4fad07ee394b65d3229ebced7113c3b9c8",
+    "inputs/ur5e_saddle_p1_v/reference/tilt_+0/reference.npz": "cd82301fee82d7203dae37f1f9bf2ce4b55e02658a4d199393c65c9d5b191ca6",
+    "inputs/ur5e_saddle_p1_v/reference/tilt_+0/dense_check.json": "78ca1a5f7a845a4f89bc3def1073f19e1caba1b07a736aeaf8d8322d1ef767d2",
+    "inputs/ur5e_saddle_p1_v/reference/tilt_+0/summary.json": "9ee0918fd70f4c063fd7b5db782fabc512d322c175104a332140ca0f0f6634d5",
+    "inputs/ur5e_saddle_p1_v/reference/tilt_+0/candidate_graph.json.gz": "09e0fe0057a74ada41c0ebb573da33d887e415e0e9cf7a2a8cf2f279a280aba2",
+    "inputs/panda_saddle_p0_v/reference/tilt_+0/reference.npz": "b17d74762354370baceefef1bbbd616d57f5ba97f450677b117a2f315d15a117",
+    "inputs/panda_saddle_p0_v/reference/tilt_+0/dense_check.json": "9c2536ac364b5ad945b9ff45010102795d1f8296a0f50ecbacb5d6241930a26c",
+    "inputs/panda_saddle_p0_v/reference/tilt_+0/summary.json": "8de7d37d35c3349c982573dfcd3c7cd7b22431db7e4dc8470e85faddd7758395",
+    "inputs/panda_saddle_p0_v/reference/tilt_+0/candidate_graph.json.gz": "d0ae859c9f315ca017a437b693b6d29dd197d27cc4e782e754e0c5c1a95dbb07",
+    "inputs/panda_cylinder_p1_u/reference/tilt_+0/summary.json": "907f6b5adc29a2d5e6dcdb01e546b08bf2d041afbbb7786b00232a0e4d885196",
+    "inputs/panda_cylinder_p1_u/reference/tilt_+0/candidate_graph.json.gz": "dd8f4a27ac30ddad2ccd1f94600a190ea76c5c0d51317341aaf295cd17a92d68",
+    "inputs/panda_cylinder_p1_u/reference/tilt_-6/summary.json": "90991a64b190539271dcacf09766bcb77d26dd82969d9319e0e4566e9a8585f0",
+    "inputs/panda_cylinder_p1_u/reference/tilt_-6/candidate_graph.json.gz": "28139cfa0496d705d2fb07faf17bc0d898f61fb86b68b8ee2fb88224cfbe406d",
+    "inputs/panda_cylinder_p1_u/reference/tilt_-9/reference.npz": "ad19d7b96b15ca2839d14254918d6e8ce36fad10c6418cb793771dbb7e4fa518",
+    "inputs/panda_cylinder_p1_u/reference/tilt_-9/dense_check.json": "653170ffbf0505424ce5317da3a33d99933a94b4d62c18a1d80758ce71e56de0",
+    "inputs/panda_cylinder_p1_u/reference/tilt_-9/summary.json": "ea336ae18f8acd2cdb86abdb0174a1cd4c8b703d13ef632e60508a39d5cf9530",
+    "inputs/panda_cylinder_p1_u/reference/tilt_-9/candidate_graph.json.gz": "84033f3c9033e9637a440498666f436907d4219296fb5ffd6b35d999b39e9ebe",
+    "inputs/panda_cylinder_p1_u/reference/tilt_+6/summary.json": "848456288895db95c54385d1175fb7ab76d25d78f8e81f571ba4dc23fa855789",
+    "inputs/panda_cylinder_p1_u/reference/tilt_+6/candidate_graph.json.gz": "370119914761ee62cfad220bfb11375a6a3b2078a9d36cf97e9682b3079eb4b8",
+    "inputs/panda_cylinder_p1_u/reference/tilt_+9/summary.json": "595302f0b7896c4cd70e8f0af2a0df02224581a068eea71cab541e4148443459",
+    "inputs/panda_cylinder_p1_u/reference/tilt_+9/candidate_graph.json.gz": "e5342b4200ccb905f2382af6e343e8345e960a24ccc4576d216b335ed822991d",
+    "inputs/panda_cylinder_p0_v/reference/tilt_+0/reference.npz": "af20b649c70f63141a04429d4ab16ac69d20179f817a364776626587d3622697",
+    "inputs/panda_cylinder_p0_v/reference/tilt_+0/dense_check.json": "9dfd2d6450396dc44e4501506eebfd94a1c3d8ea6537e23b9ae5d1d3994ecd75",
+    "inputs/panda_cylinder_p0_v/reference/tilt_+0/summary.json": "a14df46a3bf374c349dc9cc0fb799ea8937882da8e59c5c0e9b0fa87fb605bba",
+    "inputs/panda_cylinder_p0_v/reference/tilt_+0/candidate_graph.json.gz": "158f141330b718c84d4358e5fdddd28e9aba7512b3170f21e22d4e2d06c8110a",
+    "inputs/ur5e_cylinder_p0_u/reference/tilt_+0/reference.npz": "336b06357a83bc1c5430d9e52198734f9661c1f148a021e481b4bafe2a5b2cac",
+    "inputs/ur5e_cylinder_p0_u/reference/tilt_+0/dense_check.json": "b610d3c04b06fa2e6f1928b67340dbb2a5a0e55a9215542005aeaa049a2844ba",
+    "inputs/ur5e_cylinder_p0_u/reference/tilt_+0/summary.json": "186583b7cf536c8c68bc30c1ae3285b39f48cb8e62660354501b80b07bc1eb83",
+    "inputs/ur5e_cylinder_p0_u/reference/tilt_+0/candidate_graph.json.gz": "565518a923e1fb75c7983a31b70c24e27030e0a69653811a4fa64cd88644c5b7",
+    "inputs/ur5e_plane_p1_v/reference/tilt_+0/reference.npz": "322311e544b7e889ab107d777079b4d67f6a65c8ddc7313ceb97ccfe5842ecf2",
+    "inputs/ur5e_plane_p1_v/reference/tilt_+0/dense_check.json": "dcacc94a04b40ea3f827911b300e95699bd2de6acaad1b18478ccc1371c0bef0",
+    "inputs/ur5e_plane_p1_v/reference/tilt_+0/summary.json": "610c81ccccfcfe2e59037201c9c21e1bf89fc93b04b673bd31c65f89891ee832",
+    "inputs/ur5e_plane_p1_v/reference/tilt_+0/candidate_graph.json.gz": "c4d18133da23c89ffe79a80dfac33370101603094726da0a34d5ef40bbfe1a8e",
+    "inputs/ur5e_saddle_p0_v/reference/tilt_+0/reference.npz": "116130d366a224a2a6f125c197f0218c8973a12029127f17fc564244e57f61fa",
+    "inputs/ur5e_saddle_p0_v/reference/tilt_+0/dense_check.json": "d430a032c874840f7a52228290aba6c4a0c4be0ab057ed2a61f8b37ce1b190e4",
+    "inputs/ur5e_saddle_p0_v/reference/tilt_+0/summary.json": "ded04e85aed7904523cfdb947c33e8cf56d005eb51dbc819d18d8a0527a79c8b",
+    "inputs/ur5e_saddle_p0_v/reference/tilt_+0/candidate_graph.json.gz": "cf75fc905302346e09abe5737893c9d07ba442760e88cc2dbafc55ccd3af04e8",
+    "inputs/panda_saddle_p1_v/reference/tilt_+0/reference.npz": "530649b147e2a5600a5fadae185be821c7028b8e89120355a41ac7b9ce3bbdfa",
+    "inputs/panda_saddle_p1_v/reference/tilt_+0/dense_check.json": "faa22e234e828b94d898e1ee1ac41df2199045a121a1828f7dc696d2f981df20",
+    "inputs/panda_saddle_p1_v/reference/tilt_+0/summary.json": "1e84b3cfd5a4ca90e9b270378437e77f42f035409da2741150e45a0515ed46f0",
+    "inputs/panda_saddle_p1_v/reference/tilt_+0/candidate_graph.json.gz": "15ae6670efc4a91f47ee3e400a7ee7d23128da670909afa2fc46a87f08d8fa41",
+    "inputs/panda_plane_p0_v/reference/tilt_+0/reference.npz": "971b59f931c38ea1672b95db29e2c1cc764a635aa980f0c932a87fe5722fe71d",
+    "inputs/panda_plane_p0_v/reference/tilt_+0/dense_check.json": "36192fd9c9eec285c1433b66ce86b8eeb3557a04abf6226ab58a1d86d0b9614a",
+    "inputs/panda_plane_p0_v/reference/tilt_+0/summary.json": "00c7d2e0516093a1a0160f85c6db44acc0860584bb3a16726254f1cfc11d7288",
+    "inputs/panda_plane_p0_v/reference/tilt_+0/candidate_graph.json.gz": "fc944b91622c1047d205faa006ca8893b0dd6bba858292d5b40cb94f728b65ff",
+    "inputs/ur5e_plane_p1_u/reference/tilt_+0/reference.npz": "048464e3301e9db38327cb929a43d65ccc629d8307e46ac9a95cb4607cb247ed",
+    "inputs/ur5e_plane_p1_u/reference/tilt_+0/dense_check.json": "6d832f8d4eb95f200557a98607a910d0de73e107c9645ee04718a820e70f8403",
+    "inputs/ur5e_plane_p1_u/reference/tilt_+0/summary.json": "f32053486d2208de0a484e3d47c0cf86c2985d3be54136b1e89ccaa294674bd3",
+    "inputs/ur5e_plane_p1_u/reference/tilt_+0/candidate_graph.json.gz": "17be190d295ce37c88bc2080a01fdb96fee59ada868b6ee3a336360d0ddcfe47",
+    "inputs/panda_plane_p1_v/reference/tilt_+0/reference.npz": "d8c17da05e62c3e61cc66ddf8fcd8e59c9a2af2eab5a8311ad0a751eef83cb08",
+    "inputs/panda_plane_p1_v/reference/tilt_+0/dense_check.json": "36eb0a9ad8b23883cdd659c23c6da1db5d6fc69aa48ef85ed47817aa7af94680",
+    "inputs/panda_plane_p1_v/reference/tilt_+0/summary.json": "14386bc4547eb640acae2dba774836173b56efccf137b48e2cfd7341dfc2dd19",
+    "inputs/panda_plane_p1_v/reference/tilt_+0/candidate_graph.json.gz": "5a7630a69f22b0e65fb9ca146563a172d64cd9653b6c479ade8e9c60b4f4dd65",
+    "inputs/panda_plane_p0_u/reference/tilt_+0/reference.npz": "a52329c82bd2cca2b66d6182cd5f35c81fe6a242010e3602c72d5f4138a8cfaa",
+    "inputs/panda_plane_p0_u/reference/tilt_+0/dense_check.json": "c5dda1279558b5d50417fdd06f794251d60690d19a82111585483ae67738d249",
+    "inputs/panda_plane_p0_u/reference/tilt_+0/summary.json": "1defebabff3130e4f7755621360e0f132fe987b28210bcbc1ee30092aee272e2",
+    "inputs/panda_plane_p0_u/reference/tilt_+0/candidate_graph.json.gz": "a8cb00e7e4dc75025658a5d48c9bc8c13e9ba63d6545402c64fbbc59e7a2f3b7",
+    "inputs/panda_cylinder_p0_u/reference/tilt_+0/summary.json": "b028395ba05890556eec7347ab552ebdff1118bf799294d6730ca893f01602c0",
+    "inputs/panda_cylinder_p0_u/reference/tilt_+0/candidate_graph.json.gz": "3cbf27807adf98b26bb6880b96d1b60e7a4446a4a4bdeb6624ee532c69fe42f0",
+    "inputs/panda_cylinder_p0_u/reference/tilt_-6/reference.npz": "105bb11551de5088e5c1d824c67eb7f583693c0529c35a3b45d0d08050f110fd",
+    "inputs/panda_cylinder_p0_u/reference/tilt_-6/dense_check.json": "98a584167af3e7629a32b7424ef1b75253aea09c6d8695448fc8c8b45f67e60f",
+    "inputs/panda_cylinder_p0_u/reference/tilt_-6/summary.json": "5672043628e181bfcc453acdbbf4434ea436d0a836d089383daa376b7693480c",
+    "inputs/panda_cylinder_p0_u/reference/tilt_-6/candidate_graph.json.gz": "38fcdc6d0a18bccaa66bb1bdc3501629b33949adb64cb04942e8906c96d80889",
+    "inputs/panda_cylinder_p0_u/reference/tilt_+6/summary.json": "c51fe2aed7cd38b4697b562bee51326bd70eaaf96cae1283c7051776d028abef",
+    "inputs/panda_cylinder_p0_u/reference/tilt_+6/candidate_graph.json.gz": "4a648232d4b9fef25f0c64b8fa334a3f7b9eaf7d9831230fe47a76554f3b2dc6",
+    "inputs/ur5e_cylinder_p0_v/reference/tilt_+0/reference.npz": "1b98422d85f3151874bf0ced3e827e214d59d095fed9119d02ed2f53629062bf",
+    "inputs/ur5e_cylinder_p0_v/reference/tilt_+0/dense_check.json": "fa8f9e2dfb1eb7cddae5a6d356d8811bf781d31dc707e1d885a2bc9ff9431bf4",
+    "inputs/ur5e_cylinder_p0_v/reference/tilt_+0/summary.json": "1e08823cc8173a2bd2a64f9b44162adfc8ab9447c73398ef5c6468818c711e7c",
+    "inputs/ur5e_cylinder_p0_v/reference/tilt_+0/candidate_graph.json.gz": "4506ad0e5f8926adcb637f8e3417b2a3babb0108058a38ff273cbf678f1a64c9",
+    "inputs/panda_saddle_p1_u/reference/tilt_+0/reference.npz": "21ccf0df5a3d764a28f99861f3c796f5699b62d2078bb6edbb01915945d581e0",
+    "inputs/panda_saddle_p1_u/reference/tilt_+0/dense_check.json": "364d2fcd0044ac39c0c752c1e540377a9955fa780517a5d3593de308d53ae179",
+    "inputs/panda_saddle_p1_u/reference/tilt_+0/summary.json": "d7eed2c57d64ea78b6ba80ee3897423969cdad27fde1a4b79487a4b2ee406611",
+    "inputs/panda_saddle_p1_u/reference/tilt_+0/candidate_graph.json.gz": "edc0d83d60833463d1f87da7212394545837bee10204037446195ff18ebe756a",
+    "inputs/ur5e_cylinder_p1_u/reference/tilt_+0/reference.npz": "a109ed815e4c741e121a7696adb6e4feec943f54c12c4d631bed3e51a04640a9",
+    "inputs/ur5e_cylinder_p1_u/reference/tilt_+0/dense_check.json": "33b0b77e45368677bd685780a4492eda5fc93c30db4451c7a83672322783d4c4",
+    "inputs/ur5e_cylinder_p1_u/reference/tilt_+0/summary.json": "7ed080eff142e071cc84df3f80f4bac8a70dc4fdf3beff8f7e668153d57927ea",
+    "inputs/ur5e_cylinder_p1_u/reference/tilt_+0/candidate_graph.json.gz": "238126059e3efee0963d6d3f6e501f9005892ee1f7d9d8f3fef44e378d8e9325",
+    "inputs/ur5e_saddle_p0_u/reference/tilt_+0/reference.npz": "84d7738347ffa88f45bd58ed29faf604c05936d6fe4749e355e0189136cad865",
+    "inputs/ur5e_saddle_p0_u/reference/tilt_+0/dense_check.json": "59771f76ae5ee0239633a333ead0c3186d16415f67a584bf9cfa93526b082704",
+    "inputs/ur5e_saddle_p0_u/reference/tilt_+0/summary.json": "e6aba0c0a35e1b42e5d91511e0d4b3c6b3cb86999db4cf0c0b9f201afc44a41a",
+    "inputs/ur5e_saddle_p0_u/reference/tilt_+0/candidate_graph.json.gz": "ec1e2354c089f13ed70e383408a57923b6cbcef92c92de9d5b8ba0aecb941946",
+    "inputs/ur5e_cylinder_p1_v/reference/tilt_+0/reference.npz": "f23f6f3d93fdfb8692a5a5ddf2af77c883d9bb90cac6ab5fafc802e912be0d19",
+    "inputs/ur5e_cylinder_p1_v/reference/tilt_+0/dense_check.json": "5e6cba961acacfdd83a7cf120bf69b877d31d3d0819cec29f50cb50b10fa09da",
+    "inputs/ur5e_cylinder_p1_v/reference/tilt_+0/summary.json": "cde0eefc792b4d097be2ae49ab1c25b55e6eecad57009e97aa39bac88b175e12",
+    "inputs/ur5e_cylinder_p1_v/reference/tilt_+0/candidate_graph.json.gz": "b379a0cde88acba95009758c0327793277ca3275b58cd984ff06f45d6be8fd95",
+    "inputs/panda_cylinder_p1_v/reference/tilt_+0/summary.json": "5a6d505ac14f8a5db5b11d6e49e408778d347a5fc77b495a577822572252cb07",
+    "inputs/panda_cylinder_p1_v/reference/tilt_+0/candidate_graph.json.gz": "2e876e2f708fa79b60498bfbed842fdd6c293b2fe3550659498aa4a5e3bcc1a9",
+    "inputs/panda_cylinder_p1_v/reference/tilt_+6/reference.npz": "abce5046e956cea04e882dfe58862a7cd76a681a502d8c9360b155906ce5affb",
+    "inputs/panda_cylinder_p1_v/reference/tilt_+6/dense_check.json": "bb3bc5d6ce7cc60e0f391a45ce8782d914ed74d748e4a82434bc2e32b1a678f6",
+    "inputs/panda_cylinder_p1_v/reference/tilt_+6/summary.json": "589dea25da4bd4b00899e5b97d2035cbb14141732494604df01e5681581369e1",
+    "inputs/panda_cylinder_p1_v/reference/tilt_+6/candidate_graph.json.gz": "4a9d04f8a4428468b8a4422a935e00fe46a06dbc404b8dcb210e7058c4c57807",
+    "inputs/ur5e_saddle_p1_u/reference/tilt_+0/reference.npz": "3021f6c9a92b9bcedfb75e855693ea94408dddce217d08268d7ca1e45e79b9f6",
+    "inputs/ur5e_saddle_p1_u/reference/tilt_+0/dense_check.json": "b68ca488e17236dc8aac92620b43c6518130314d4feb02f1a1fabc4fe0bd9ca3",
+    "inputs/ur5e_saddle_p1_u/reference/tilt_+0/summary.json": "69a774f8a03bc4309d10888112588a8d499a9cf221947aa26ff6d4669f3aae1e",
+    "inputs/ur5e_saddle_p1_u/reference/tilt_+0/candidate_graph.json.gz": "6976c2c82afda10c3a24487b599d4b88b291c41206f945fc12ddafa10c13b3dd",
+    "inputs/ur5e_plane_p0_v/reference/tilt_+0/reference.npz": "ffe46506c452f996923a063ee113690baca9765076ab396766ce176d1759b50d",
+    "inputs/ur5e_plane_p0_v/reference/tilt_+0/dense_check.json": "d11e8c5ba0694e6f4d82c5f15423471fdc3e249af965705a9c5e13ae6e35e35e",
+    "inputs/ur5e_plane_p0_v/reference/tilt_+0/summary.json": "12f800e4d49fe59dc47bf968264761edf64d98ce365f4d6abada0308aafd7a2e",
+    "inputs/ur5e_plane_p0_v/reference/tilt_+0/candidate_graph.json.gz": "118fd4c341fed2f12e010fc5afece24f1122a5d9aa823d0623c2347d2f1afe22",
+    "inputs/panda_saddle_p0_u/reference/tilt_+0/reference.npz": "6d84050d0513a6c3d7fc47a1f60f8b175520d44aae918a9c64c76dbfee399396",
+    "inputs/panda_saddle_p0_u/reference/tilt_+0/dense_check.json": "c78a03e0b686a12754e69f96cd03afdd18b0ab6b346f4c7b4bf7a7a22f17d7dd",
+    "inputs/panda_saddle_p0_u/reference/tilt_+0/summary.json": "06d8dfb9c8d9bc7a71aa2247a7c750d984d809ce0da2c2eb99764a1751ec58bf",
+    "inputs/panda_saddle_p0_u/reference/tilt_+0/candidate_graph.json.gz": "b72569415facaee8256b734b499fbb90acbdc2b79d900afaa44c1ba9e782c926",
+    "inputs/panda_plane_p1_u/reference/tilt_+0/reference.npz": "1f595f1b1e31a0f94385105d0e1c16616ace557ee437e97454c9584d45a42931",
+    "inputs/panda_plane_p1_u/reference/tilt_+0/dense_check.json": "9a5c847e53ad1df9b3aae12ae88ff7491e51e10336d7b2b53660006ff40fc104",
+    "inputs/panda_plane_p1_u/reference/tilt_+0/summary.json": "94349336d06db6cde1b12e6c85ac317f7ab1166f2bd68619e0f88b52024210a0",
+    "inputs/panda_plane_p1_u/reference/tilt_+0/candidate_graph.json.gz": "d5c7df74a40668f3843bc4f10e03cafc50e3c80459fa3606f317e7b826fdae3f"
+  },
+  "git_head": "f85613a5a64c229de5d370bc9fbe4e38fc460988",
+  "formal_scenes_run": false
+}

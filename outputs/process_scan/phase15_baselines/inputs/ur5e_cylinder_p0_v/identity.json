@@ -1,0 +1,48 @@
+{
+  "slot": "ur5e_cylinder_p0_v",
+  "scene_uid": "b181f4aea3dacadfb66671a2eea89b411650ea76f729a02a7b8c5f249579c5f5",
+  "cluster": "ur5e_cylinder_p0",
+  "robot": "ur5e",
+  "family": "cylinder",
+  "placement": 0,
+  "direction": "v",
+  "task": {
+    "family": "cylinder",
+    "placement": 0,
+    "direction": "v",
+    "robot": "ur5e",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": false
+  },
+  "original_identity_sha256": "8d2602f0708662bdce5ec1d7eb7ab1d12f8a4102072d3166c3a4f352a2c936d4",
+  "reference_geometry_feasible": true,
+  "attempts": [
+    {
+      "tilt": 0.0,
+      "root": "inputs/ur5e_cylinder_p0_v/reference/tilt_+0",
+      "status": "reference_available"
+    }
+  ],
+  "reference_source": "inputs/ur5e_cylinder_p0_v/reference/tilt_+0",
+  "common_start": [
+    5.392812200085976,
+    -2.141013528077463,
+    2.1771316571449097,
+    -1.8326186891262666,
+    -1.30103116748253,
+    3.8527736882864216
+  ],
+  "common_end": [
+    5.943052355218943,
+    -0.9492421977944854,
+    0.8141270885815729,
+    -1.1042990901781995,
+    -1.685428621852603,
+    4.391445748528236
+  ],
+  "selected_tilt_deg": 0.0,
+  "split": "same_24_development_scenes_calibrated_route",
+  "no_method_outcome_used": true,
+  "quality_thresholds_unchanged": true
+}

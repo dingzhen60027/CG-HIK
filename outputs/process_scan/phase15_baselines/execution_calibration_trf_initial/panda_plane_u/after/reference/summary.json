@@ -1,0 +1,18 @@
+{
+  "status": "reference_unresolved",
+  "task": {
+    "family": "plane",
+    "placement": 0,
+    "direction": "u",
+    "robot": "panda",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": true
+  },
+  "source": "independent_multistart_TRF_continuity_graph",
+  "baseline_outputs_used": false,
+  "keypose_count": 419,
+  "completed_layers": 30,
+  "controls": 96,
+  "elapsed_s": 5.266281820004224
+}

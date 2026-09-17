@@ -1,0 +1,15 @@
+{
+  "task": {
+    "family": "saddle",
+    "placement": 0,
+    "direction": "u",
+    "robot": "ur5e",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": true
+  },
+  "reserve": 0.9,
+  "controls": 96,
+  "quality_thresholds_unchanged": true,
+  "comparison_scene": false
+}

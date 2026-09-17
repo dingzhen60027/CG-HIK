@@ -1,0 +1,37 @@
+{
+  "status": "reference_available",
+  "task": {
+    "family": "cylinder",
+    "placement": 0,
+    "direction": "v",
+    "robot": "ur5e",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": true
+  },
+  "source": "independent_multistart_TRF_continuity_graph",
+  "baseline_outputs_used": false,
+  "keypose_count": 427,
+  "completed_layers": 427,
+  "controls": 96,
+  "elapsed_s": 8.96003925599507,
+  "dense_feasible": true,
+  "min_clearance": 0.017126608827916067,
+  "common_start": [
+    -0.8713411462504815,
+    -2.161431455668758,
+    2.113774925941887,
+    -1.717177858850378,
+    -1.277699127646914,
+    -2.544307600791294
+  ],
+  "common_end": [
+    -0.24845620656394576,
+    -0.9832554491003781,
+    0.8059141919820635,
+    -1.066585747328634,
+    -1.698107586639091,
+    -1.9291302669792902
+  ],
+  "path_cost": 11.861045243643918
+}

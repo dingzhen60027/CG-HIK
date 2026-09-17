@@ -1,0 +1,42 @@
+{
+  "status": "reference_available",
+  "task": {
+    "family": "cylinder",
+    "placement": 1,
+    "direction": "v",
+    "robot": "panda",
+    "endpoint_extension": 0.0,
+    "overlap_margin": 0.0,
+    "calibration": false
+  },
+  "source": "independent_multistart_bounded_dogbox_continuity_graph",
+  "baseline_outputs_used": false,
+  "tool_incidence_variant_deg": 6.0,
+  "nominal_surface_centers_unchanged": true,
+  "keypose_count": 419,
+  "completed_layers": 419,
+  "controls": 64,
+  "elapsed_s": 8.429058851004811,
+  "dense_feasible": true,
+  "min_clearance": 0.021304738381889125,
+  "common_start": [
+    0.03418868931527786,
+    -0.734990644139968,
+    -0.3147020186749709,
+    -2.8434621410854786,
+    0.010548730528890883,
+    2.536918302701686,
+    -0.5149371520927251
+  ],
+  "common_end": [
+    0.2453562375402133,
+    0.6069410248271422,
+    -0.003702229181418382,
+    -1.1205733708032855,
+    -0.00269229719469841,
+    1.4823211523572963,
+    -0.019651791206342424
+  ],
+  "path_cost": 11.540916901622316,
+  "fit": "common_control_least_squares"
+}
