@@ -1,0 +1,88 @@
+{
+  "identity": {
+    "slot": "panda_cylinder_p0_u",
+    "scene_uid": "1d626ca03a345e6601c064a6a0c00a1a9212ee8924f6c3978e4ae4fa19bcc8eb",
+    "cluster": "panda_cylinder_p0",
+    "robot": "panda",
+    "family": "cylinder",
+    "placement": 0,
+    "direction": "u",
+    "task": {
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "u",
+      "robot": "panda",
+      "endpoint_extension": 0.003,
+      "overlap_margin": 0.001,
+      "calibration": false
+    },
+    "original_identity_sha256": "ccdef18967ef7f79f55e80474086d9bfc7d63cc40030240112871637a0dc7a2b",
+    "reference_geometry_feasible": true,
+    "attempts": [
+      {
+        "tilt": 0.0,
+        "root": "inputs/panda_cylinder_p0_u/reference/tilt_+0",
+        "status": "reference_unresolved"
+      },
+      {
+        "tilt": 6.0,
+        "root": "inputs/panda_cylinder_p0_u/reference/tilt_+6",
+        "status": "reference_unresolved"
+      },
+      {
+        "tilt": -6.0,
+        "root": "inputs/panda_cylinder_p0_u/reference/tilt_-6",
+        "status": "reference_available"
+      }
+    ],
+    "reference_source": "inputs/panda_cylinder_p0_u/reference/tilt_-6",
+    "common_start": [
+      0.6795700426659539,
+      -1.624832726280558,
+      -0.9693221595697497,
+      -2.8738269411674984,
+      -1.2009073249283628,
+      1.7857713497298007,
+      -1.1145791825964735
+    ],
+    "common_end": [
+      0.8983000386782264,
+      -1.3025269699158901,
+      -0.7018941050113098,
+      -2.954246146834647,
+      -1.0323023105949867,
+      2.0118178816057934,
+      -0.6930912535155501
+    ],
+    "selected_tilt_deg": -6.0,
+    "split": "same_24_development_scenes_calibrated_route",
+    "no_method_outcome_used": true,
+    "quality_thresholds_unchanged": true
+  },
+  "method": "Proposed",
+  "repeat": 1,
+  "code_hashes": {
+    "src/confik/task_balance_gn.py": "752a69afede984d0617997d6c412753c327f9f642eb0f08ef2ab33c464a68d57",
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/process_scan/phase15.py": "9f783f9eeeac43826dd490a417ba42e1ce6fe6979a59a1b3fe47bcfd0dc3a0e3",
+    "src/confik/process_scan/phase2_optimize.py": "c92793971dd5383da16fff418fe1be89765fd1a4db6ee3d92773a2114f868056",
+    "src/confik/process_scan/phase2_graph.py": "8af8e09059d2c036ecd515d7a5aa24cfc6d176bea6cbf9595c415ac7892f4f8e",
+    "src/confik/process_scan/execution.py": "fd75dd0b4a89ed8e0e15e8909cc4f2d3f6f2188863361e038d9133f832a9a312",
+    "src/confik/process_scan/planning.py": "0ff97013fbb81c17316f66dde1607b242635281d370ea6247a2b7d171bf0f5d9",
+    "src/confik/process_scan/task.py": "a7603c2bccfa21906cf3281d74abd0541398e3348b443daef93b9f15652e9333",
+    "src/confik/process_scan/__init__.py": "1027fbff570c813e8dadf870667f7c941415fc908844aa514e39b1a2d8795a0e",
+    "src/confik/process_scan/models.py": "12f519da6af6d4464e57564f99a25a6a71910728d796f73f2d5cff5358264f51",
+    "src/confik/process_scan/boundmpc_check.py": "579396f24701e7a48e0c80d13ca83f95a2bc3c1a3cd0184ef05ebfd6d0a9f251",
+    "src/confik/process_scan/geometry_adapter.py": "40875f89a332b9fe60e466ebc9a8ab13f26fdaa6b2b3c21331e20e7775fe2106",
+    "src/confik/process_scan/collision.py": "eaf8df2c2759c40a1a8cb0f8765442bba16b31e9893bb1d7d20a553425025ae8",
+    "src/confik/process_scan/study.py": "72dc808c622ec67cb3685453448ab6515c94f21ae765cbc8d5312c66b849e136",
+    "src/confik/process_scan/phase2.py": "3648d7458df7f14ac90d6c2d177c6390d24e6491fe7d10df40270afb97afd17c",
+    "scripts/run_process_scan_phase2.py": "277ef415cb9c759e3e12d5a145ec0dda9c66de07a1ece2c201363ff236236072",
+    "configs/process_scan_phase2.yaml": "da40c39762bc3fcc1c40bd3523c47e99004e612c28fdd521b3b1d8030f5488ad"
+  },
+  "shared_initial_source": "graphs/panda_cylinder_p0_u/r1/time",
+  "old_evidence_not_overwritten": true
+}

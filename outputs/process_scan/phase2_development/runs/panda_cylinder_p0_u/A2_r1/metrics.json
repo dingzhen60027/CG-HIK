@@ -1,0 +1,32 @@
+{
+  "slot": "panda_cylinder_p0_u",
+  "scene_uid": "1d626ca03a345e6601c064a6a0c00a1a9212ee8924f6c3978e4ae4fa19bcc8eb",
+  "cluster": "panda_cylinder_p0",
+  "robot": "panda",
+  "family": "cylinder",
+  "placement": 0,
+  "direction": "u",
+  "method": "A2",
+  "repeat": 1,
+  "planner_feasible": false,
+  "physical_run": false,
+  "quality_completed": null,
+  "execution_completed": null,
+  "T_init": 38.21217714299564,
+  "T_opt": null,
+  "status": "graph_connected_but_no_verified_C2_fit",
+  "total_plan_wall_s": 38.21217714299564,
+  "shared_graph_statistics": {
+    "fine_possible": 25963,
+    "fine_discontinuous": 18748,
+    "fine_geometry_rejected": 779,
+    "fine_collision_rejected": 0,
+    "fine_retained": 6436,
+    "endpoint_nodes": 137,
+    "endpoint_layers": 20,
+    "endpoint_possible": 1062,
+    "endpoint_retained": 358
+  },
+  "endpoint_closure_error_rad": null,
+  "planning_cost_scope": "Includes charged independent candidate validation, shared graph construction, own constrained fit, optimization, dense checks and TOPPRA; historical input-library acquisition excluded and disclosed."
+}

@@ -1,0 +1,22 @@
+{
+  "1": {
+    "post_graph_budget_s": 1,
+    "best_plan_duration_s": 27.23868887159279,
+    "physical_quality_not_yet_verified": true
+  },
+  "5": {
+    "post_graph_budget_s": 5,
+    "best_plan_duration_s": 27.23868887159279,
+    "physical_quality_not_yet_verified": true
+  },
+  "10": {
+    "post_graph_budget_s": 10,
+    "best_plan_duration_s": 27.23868887159279,
+    "physical_quality_not_yet_verified": true
+  },
+  "30": {
+    "post_graph_budget_s": 30,
+    "best_plan_duration_s": 27.23868887159279,
+    "physical_quality_not_yet_verified": true
+  }
+}

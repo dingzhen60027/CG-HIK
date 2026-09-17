@@ -1,0 +1,35 @@
+{
+  "shared_graph_s": 12.066258232007385,
+  "library_preparation_s": 0.14627539199136663,
+  "statistics": {
+    "fine_possible": 51580,
+    "fine_discontinuous": 39349,
+    "fine_geometry_rejected": 619,
+    "fine_collision_rejected": 0,
+    "fine_retained": 11612,
+    "endpoint_nodes": 288,
+    "endpoint_layers": 28,
+    "endpoint_possible": 3047,
+    "endpoint_retained": 1011
+  },
+  "distance": {
+    "feasible": true,
+    "reason": "verified_graph_initial_path",
+    "kind": "distance",
+    "elapsed_s": 1.0684752910019597,
+    "coefficient_bound_correction_max_rad": 0.0,
+    "endpoint_error_rad": 0.0,
+    "selected_node_fit_displacement_max_rad": 0.0004208660710802725,
+    "charged_initialization_s": 13.281008915000712
+  },
+  "time": {
+    "feasible": true,
+    "reason": "verified_graph_initial_path",
+    "kind": "time",
+    "elapsed_s": 1.063336626990349,
+    "coefficient_bound_correction_max_rad": 0.0,
+    "endpoint_error_rad": 0.0,
+    "selected_node_fit_displacement_max_rad": 0.0006944019264997769,
+    "charged_initialization_s": 13.275870250989101
+  }
+}

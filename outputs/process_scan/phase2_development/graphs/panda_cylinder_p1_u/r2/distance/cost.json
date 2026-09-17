@@ -1,0 +1,8 @@
+{
+  "feasible": false,
+  "reason": "graph_connected_but_no_verified_C2_fit",
+  "kind": "distance",
+  "elapsed_s": 33.08690183899307,
+  "coefficient_bound_correction_max_rad": 0.007097418054934579,
+  "charged_initialization_s": 41.65617505800037
+}
