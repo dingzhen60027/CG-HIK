@@ -79,6 +79,13 @@ def fit_graph(task,adapter,collision,library,graph,kind,cfg,root):
     basis=spline_basis(task,cfg['control_points']);coeff=np.linalg.lstsq(basis(selected['s']),selected['q'],rcond=None)[0]
     coeff[0]=selected['q'][0];coeff[-1]=selected['q'][-1]
     np.savez_compressed(root/'raw_fit.npz',coeff=coeff,knots=basis.t)
+    # A densely legal spline can have an out-of-range control coefficient.
+    # B2 bounds coefficients as a sufficient joint-range constraint. Enforce
+    # that SAME representation before any local variable is fixed, then run
+    # the full nonlinear checks (clipping is not an acceptance certificate).
+    bounded=np.clip(coeff,adapter.public.limits.lower,adapter.public.limits.upper)
+    result['coefficient_bound_correction_max_rad']=float(np.max(abs(bounded-coeff)))
+    coeff=bounded
     valid=dense_validate(task,adapter,basis,coeff,collision.numeric)
     # Common constrained C2 fitting, not an unconstrained interpolation accepted
     # as a path. It is charged to A1/A2/Proposed/B2-common alike when necessary.
@@ -89,7 +96,10 @@ def fit_graph(task,adapter,collision,library,graph,kind,cfg,root):
         if not good:
             result.update(reason='graph_connected_but_no_verified_C2_fit',elapsed_s=perf_counter()-start)
             write(root/'fit_summary.json',result);return result
-        coeff=min(good,key=lambda h:h['objective'])['coeff'];valid=dense_validate(task,adapter,basis,coeff,collision.numeric)
+        coeff=min(good,key=lambda h:h['objective'])['coeff']
+        bounded=np.clip(coeff,adapter.public.limits.lower,adapter.public.limits.upper)
+        result['post_fit_coefficient_bound_correction_max_rad']=float(np.max(abs(bounded-coeff)))
+        coeff=bounded;valid=dense_validate(task,adapter,basis,coeff,collision.numeric)
     timed=retime(task,adapter,basis,coeff,speed_reserve=cfg['common_speed_reserve']) if valid['feasible'] else None
     endpoint_error=float(max(np.max(abs(coeff[0]-selected['q'][0])),np.max(abs(coeff[-1]-selected['q'][-1]))))
     feasible=bool(valid['feasible'] and timed and timed['feasible'] and endpoint_error<1e-10)
@@ -196,7 +206,8 @@ def run_new(identity,method,repeat,cfg,task,model,data,adapter,collision,shared)
 
 
 def run(slots=None):
-    seal=json.loads((OUT/'inputs/seal.json').read_text());cfg=seal['config']
+    seal_path=OUT/'runtime_seal.json' if (OUT/'runtime_seal.json').exists() else OUT/'inputs/seal.json'
+    seal=json.loads(seal_path.read_text());cfg=seal['config']
     if seal['code_hashes']!=sources():raise RuntimeError('Numerical code changed after seal')
     for path,digest in seal['files'].items():
         if sha(OUT/path)!=digest:raise RuntimeError('Changed sealed input '+path)

@@ -1,0 +1,27 @@
+{
+  "issue": "A dense-legal spline had a control coefficient 0.0003169184218068 rad outside the full-variable coefficient box, and a local fixed-variable bound could bypass it.",
+  "correction": "Clip the common fitted coefficients to the existing B2 coefficient box and rerun all actual FK/process/collision/timing checks. Assert fixed local coefficients satisfy the same box. No candidate, objective, budget, controller or public quality change.",
+  "retained_conditions": 36,
+  "retained_identity_scopes": [
+    "panda_plane_p0_u",
+    "panda_plane_p0_v"
+  ],
+  "bitwise_no_op_proof": [
+    "graphs/panda_plane_p0_u/r1/distance/raw_fit.npz",
+    "graphs/panda_plane_p0_u/r1/time/raw_fit.npz",
+    "graphs/panda_plane_p0_u/r0/distance/raw_fit.npz",
+    "graphs/panda_plane_p0_u/r0/time/raw_fit.npz",
+    "graphs/panda_plane_p0_u/r2/distance/raw_fit.npz",
+    "graphs/panda_plane_p0_u/r2/time/raw_fit.npz",
+    "graphs/panda_plane_p0_v/r1/distance/raw_fit.npz",
+    "graphs/panda_plane_p0_v/r1/time/raw_fit.npz",
+    "graphs/panda_plane_p0_v/r0/distance/raw_fit.npz",
+    "graphs/panda_plane_p0_v/r0/time/raw_fit.npz",
+    "graphs/panda_plane_p0_v/r2/distance/raw_fit.npz",
+    "graphs/panda_plane_p0_v/r2/time/raw_fit.npz"
+  ],
+  "superseded_completed_conditions": 6,
+  "rerun_scope": "All six settings of panda_plane_p1_u; the interrupted repeat1 graph had no completed output. All remaining scenes use corrected interface.",
+  "not_a_new_algorithm": true,
+  "old_seal_sha256": "c85a1647498b47c079b8577f155d0fdba78e885890d4aad569649be97518df79"
+}

@@ -62,3 +62,11 @@ def test_shared_optimizer_keeps_validated_equations_and_settings():
         if any(k in line for k in ('g.append(','objective=','duration=','qscale=','ipopt.','hess=','H=ca.hessian','timed=retime')) and 'all_coefficients_variable=' not in line:
             assert line in new
     assert 'fixed=np.setdiff1d' in new and 'frozen_time=' in new
+
+
+def test_fixed_coefficients_cannot_bypass_joint_bounds():
+    from types import SimpleNamespace
+    import pytest
+    adapter=SimpleNamespace(public=SimpleNamespace(limits=SimpleNamespace(lower=np.array([0.]),upper=np.array([1.]))))
+    with pytest.raises(ValueError,match='SAME full-variable'):
+        optimize_transition_time(None,adapter,None,np.array([[.2],[-.01],[.8]]),None,None,active_controls=[2])

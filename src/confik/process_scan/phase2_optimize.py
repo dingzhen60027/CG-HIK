@@ -22,6 +22,8 @@ def optimize_transition_time(task,adapter,basis,initial,timing,collision,budget=
     Final dense checks and common TOPPRA remain mandatory.
     """
     start=perf_counter();nctrl,n=initial.shape
+    if active_controls is not None and (np.any(initial<adapter.public.limits.lower) or np.any(initial>adapter.public.limits.upper)):
+        raise ValueError('Fixed local coefficients must satisfy the SAME full-variable coefficient bounds')
     grid=numerical_grid(np.linspace(0,1,grid_n),task.knots,basis.t);m=len(grid);ds=np.diff(grid)
     Y=ca.MX.sym('coefficient_increment',nctrl,n);X=ca.MX.sym('scaled_squared_speed',m-2)
     qscale=.15;xscale=1/timing['duration']**2
@@ -137,4 +139,3 @@ def optimize_transition_time(task,adapter,basis,initial,timing,collision,budget=
         active_controls=None if active_controls is None else np.asarray(active_controls),
         active_intervals=active_intervals,
         timing_u_eliminated_exactly=True,scales=dict(q_rad=qscale,x_per_s2=xscale))
-

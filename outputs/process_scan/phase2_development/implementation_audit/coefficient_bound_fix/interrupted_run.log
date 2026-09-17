@@ -1,0 +1,71 @@
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+GRAPH panda_plane_p0_u 0 {'fine_possible': 70642, 'fine_discontinuous': 58556, 'fine_geometry_rejected': 1198, 'fine_collision_rejected': 0, 'fine_retained': 10888, 'endpoint_nodes': 218, 'endpoint_layers': 20, 'endpoint_possible': 2472, 'endpoint_retained': 776} True False
+CORE panda_plane_p0_u B0 0 planner_feasible True
+CORE panda_plane_p0_u B1 0 planner_feasible True
+PHASE2 panda_plane_p0_u A1 0 planner_feasible True 36.839820424007485
+GRAPH panda_plane_p0_u 1 {'fine_possible': 70642, 'fine_discontinuous': 58556, 'fine_geometry_rejected': 1198, 'fine_collision_rejected': 0, 'fine_retained': 10888, 'endpoint_nodes': 218, 'endpoint_layers': 20, 'endpoint_possible': 2472, 'endpoint_retained': 776} True False
+PHASE2 panda_plane_p0_u A1 1 planner_feasible None 36.73769507500401
+CORE panda_plane_p0_u B0 1 planner_feasible None
+CORE panda_plane_p0_u B1 1 planner_feasible None
+GRAPH panda_plane_p0_u 2 {'fine_possible': 70642, 'fine_discontinuous': 58556, 'fine_geometry_rejected': 1198, 'fine_collision_rejected': 0, 'fine_retained': 10888, 'endpoint_nodes': 218, 'endpoint_layers': 20, 'endpoint_possible': 2472, 'endpoint_retained': 776} True False
+CORE panda_plane_p0_u B0 2 planner_feasible None
+PHASE2 panda_plane_p0_u A1 2 planner_feasible None 36.577972439990845
+CORE panda_plane_p0_u B1 2 planner_feasible None
+GRAPH panda_plane_p0_v 0 {'fine_possible': 109056, 'fine_discontinuous': 89064, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 19992, 'endpoint_nodes': 314, 'endpoint_layers': 28, 'endpoint_possible': 3624, 'endpoint_retained': 815} True True
+CORE panda_plane_p0_v B1 0 planner_feasible True
+PHASE2 panda_plane_p0_v B2-common 0 planner_feasible False 50.16496642900165
+PHASE2 panda_plane_p0_v Proposed 0 planner_feasible True 45.429275738002616
+CORE panda_plane_p0_v B0 0 planner_feasible True
+PHASE2 panda_plane_p0_v A1 0 planner_feasible True 44.488815907010576
+PHASE2 panda_plane_p0_v A2 0 planner_feasible True 19.354251523996936
+GRAPH panda_plane_p0_v 1 {'fine_possible': 109056, 'fine_discontinuous': 89064, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 19992, 'endpoint_nodes': 314, 'endpoint_layers': 28, 'endpoint_possible': 3624, 'endpoint_retained': 815} True True
+CORE panda_plane_p0_v B0 1 planner_feasible None
+PHASE2 panda_plane_p0_v Proposed 1 planner_feasible None 45.46966005100694
+PHASE2 panda_plane_p0_v B2-common 1 planner_feasible None 50.377778277004836
+PHASE2 panda_plane_p0_v A2 1 planner_feasible None 19.41401987799327
+PHASE2 panda_plane_p0_v A1 1 planner_feasible None 44.16594607499428
+CORE panda_plane_p0_v B1 1 planner_feasible None
+GRAPH panda_plane_p0_v 2 {'fine_possible': 109056, 'fine_discontinuous': 89064, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 19992, 'endpoint_nodes': 314, 'endpoint_layers': 28, 'endpoint_possible': 3624, 'endpoint_retained': 815} True True
+CORE panda_plane_p0_v B0 2 planner_feasible None
+PHASE2 panda_plane_p0_v A1 2 planner_feasible None 44.07440491201123
+CORE panda_plane_p0_v B1 2 planner_feasible None
+PHASE2 panda_plane_p0_v A2 2 planner_feasible None 19.258990749993245
+PHASE2 panda_plane_p0_v Proposed 2 planner_feasible None 45.285578679002356
+PHASE2 panda_plane_p0_v B2-common 2 planner_feasible None 50.279770899011055
+GRAPH panda_plane_p1_u 0 {'fine_possible': 86575, 'fine_discontinuous': 71729, 'fine_geometry_rejected': 2094, 'fine_collision_rejected': 0, 'fine_retained': 12752, 'endpoint_nodes': 218, 'endpoint_layers': 20, 'endpoint_possible': 2472, 'endpoint_retained': 495} True True
+PHASE2 panda_plane_p1_u A1 0 planner_feasible True 34.18246606500179
+PHASE2 panda_plane_p1_u Proposed 0 planner_feasible True 34.246595188000356
+PHASE2 panda_plane_p1_u B2-common 0 planner_feasible True 45.10340394900413
+PHASE2 panda_plane_p1_u A2 0 planner_feasible True 13.365968060999876
+Traceback (most recent call last):
+  File "/home/eric/wjg/btry/scripts/run_process_scan_phase2.py", line 17, in <module>
+    elif a.stage=='run':run(a.slot)
+                        ^^^^^^^^^^^
+  File "/home/eric/wjg/btry/src/confik/process_scan/phase2.py", line 211, in run
+    shared=graph_stage(identity,repeat,task,adapter,collision,cfg)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/wjg/btry/src/confik/process_scan/phase2.py", line 111, in graph_stage
+    graph=build_graph(library,task,adapter,collision,cfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/wjg/btry/src/confik/process_scan/phase2_graph.py", line 107, in build_graph
+    if not task.process_legal(pose.position,pose.rotation,s):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/wjg/btry/src/confik/process_scan/task.py", line 92, in process_legal
+    v=self.process_values(position,rotation,s)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/wjg/btry/src/confik/process_scan/task.py", line 83, in process_values
+    c,n,b,_,_=self.references([s]);c,n,b=c[0],n[0],b[0]
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/wjg/btry/src/confik/process_scan/task.py", line 74, in references
+    b/=np.linalg.norm(b,axis=1)[:,None]
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric/anaconda3/envs/isaaclab_3/lib/python3.12/site-packages/numpy/linalg/_linalg.py", line 2804, in norm
+    return sqrt(add.reduce(s, axis=axis, keepdims=keepdims))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
