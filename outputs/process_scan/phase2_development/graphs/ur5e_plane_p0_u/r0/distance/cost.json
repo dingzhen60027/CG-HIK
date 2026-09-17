@@ -1,0 +1,10 @@
+{
+  "feasible": true,
+  "reason": "verified_graph_initial_path",
+  "kind": "distance",
+  "elapsed_s": 1.0488764159963466,
+  "coefficient_bound_correction_max_rad": 0.0,
+  "endpoint_error_rad": 0.0,
+  "selected_node_fit_displacement_max_rad": 4.208198396327134e-05,
+  "charged_initialization_s": 2.4974100129766157
+}
