@@ -72,14 +72,14 @@ def actual_state_derivatives(raw):
     return extra
 
 
-def scene_rows(raw):
+def scene_rows(raw,methods=METHODS):
     rows=[]
     for slot in sorted(set(r['slot'] for r in raw)):
-        for method in METHODS:
+        for method in methods:
             group=[r for r in raw if r['slot']==slot and r['method']==method]
             first=next(r for r in group if r['repeat']==0)
             row={k:first[k] for k in ('scene_uid','slot','cluster','robot','family','placement','direction','method')}
-            row.update(repeats=len(group),implementation_ready=all(r['implementation_ready'] for r in group),
+            row.update(repeats=len(group),implementation_ready=all(r.get('implementation_ready',True) for r in group),
                        statuses=[r['status'] for r in group],
                        planner_feasible_repeat_mean=float(np.mean([r['planner_feasible'] for r in group])),
                        physics_executed=bool(first.get('physical_run')),quality_completed=first.get('quality_completed'),
@@ -161,7 +161,7 @@ def paired(rows):
     return out
 
 
-def bridge(rows):
+def bridge(rows,root=OUT):
     out=[]
     for a in [r for r in rows if r['method']=='B1']:
         b=next(r for r in rows if r['slot']==a['slot'] and r['method']=='G')
@@ -172,7 +172,7 @@ def bridge(rows):
                           'smoothing_displacement_rms_rad','planner_feasible_repeat_mean','quality_completed',
                           'quality_execution_s','T_retime','total_plan_wall_s'):
                 row[prefix+'_'+field]=r.get(field)
-        left=OUT/'runs'/a['slot']/'B1_r0/path_initialization.npz';right=left.parent.parent/'G_r0/path_initialization.npz'
+        left=root/'runs'/a['slot']/'B1_r0/path_initialization.npz';right=left.parent.parent/'G_r0/path_initialization.npz'
         if left.exists() and right.exists():
             l=np.load(left);r=np.load(right)
             if l['q'].shape==r['q'].shape:row['initial_q_difference_max_rad']=float(np.max(abs(l['q']-r['q'])))
@@ -221,12 +221,12 @@ def bottlenecks(rows):
     return out,segments
 
 
-def numerical_work(raw):
+def numerical_work(raw,root=OUT):
     """Describe actually validated incumbents, not just optimizer return codes."""
     result=[]
     for r in raw:
         if r['method'] not in ('B1','B2','G'):continue
-        path=OUT/'runs'/r['slot']/f"{r['method']}_r{r['repeat']}"/'optimizer_trace.json.gz'
+        path=root/'runs'/r['slot']/f"{r['method']}_r{r['repeat']}"/'optimizer_trace.json.gz'
         row={k:r[k] for k in ('slot','robot','family','method','repeat','status')}
         if path.exists():
             with gzip.open(path,'rt') as f:a=json.load(f)
@@ -247,10 +247,10 @@ def numerical_work(raw):
     return result
 
 
-def failure_breakdown(rows):
+def failure_breakdown(rows,root=OUT):
     result=[]
     for r in rows:
-        raw=json.loads((OUT/'runs'/r['slot']/f"{r['method']}_r0"/'metrics.json').read_text())
+        raw=json.loads((root/'runs'/r['slot']/f"{r['method']}_r0"/'metrics.json').read_text())
         reasons=[]
         if not r['physics_executed']:reasons=[raw['status']]
         else:

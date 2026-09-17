@@ -13,13 +13,16 @@ from .models import physical_model
 from .task import ScanTask
 
 
-def render():
+def render(output_root=None,phase15=False):
+    global OUT
+    if output_root is not None:OUT=output_root
     target=OUT/'reports/videos';target.mkdir(parents=True,exist_ok=True);index=[]
     # Fixed selection: placement 0, u direction, every family and robot, first
     # execution repeat. Do not select a successful run after seeing outcomes.
     for robot in ('panda','ur5e'):
         for family in ('plane','cylinder','saddle'):
-            slot=f'{robot}_{family}_p0_u';task=ScanTask(family,0,'u',robot)
+            slot=f'{robot}_{family}_p0_u'
+            task=ScanTask(**json.loads((OUT/'inputs'/slot/'identity.json').read_text())['task']) if phase15 else ScanTask(family,0,'u',robot)
             model,_,_,_=physical_model(robot,task)
             camera=mj.MjvCamera();camera.type=mj.mjtCamera.mjCAMERA_FREE
             camera.lookat[:]=[.35,0,.32];camera.distance=1.4;camera.azimuth=125;camera.elevation=-28
@@ -63,7 +66,7 @@ def render():
     lines=['# Recorded execution videos','',
            'Fixed selection: both robots, every surface, placement0/u, first execution repeat.',
            'These are replays of immutable torque-actuated MuJoCo measurements, not new executions.',
-           'Review previews are640×480 at10 fps; saved feedback is200 Hz and physical extrema were checked at1 kHz.',
+           'Review previews are640×480 at10 fps; saved feedback is1 kHz.' if phase15 else 'Review previews are640×480 at10 fps; saved feedback is200 Hz and physical extrema were checked at1 kHz.',
            'Every fourth measured ray is drawn for visibility; all81 rays remain in the raw files.','',
            '|Scene|Method|Status|Video or reason|','|---|---|---|---|']
     for row in index:

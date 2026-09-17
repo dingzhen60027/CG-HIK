@@ -1,0 +1,28 @@
+scope: phase_1_5_core_baseline_closure
+base: f85613a5a64c229de5d370bc9fbe4e38fc460988
+methods: [B0, B1, G, B2]
+scenes: same_24_development_scene_identities
+repeats: 3
+physical_repeat: 0
+calibration_placement: {center_m: [0.485, 0.005, 0.265], yaw_deg: 7.5}
+common_endpoint_extension_m: 0.003
+common_overlap_margin_m: 0.001
+common_speed_reserve: 0.90
+controller: unchanged_computed_torque_400_40
+public_quality_thresholds: unchanged
+state_record_interval_s: 0.001
+control_points: 96
+geometry_nodes: 401
+dense_geometry_nodes: 3201
+timing_dense_nodes: 6401
+primary_checkpoint_s: 10
+optimization_checkpoints_s: [1, 5, 10, 30]
+b2_full_variable_grid_base_nodes: 201
+b2_all_coefficients_variable: true
+b2_hessian: analytic_process_and_time_locally_affine_collision
+b2_coordinate_scale_rad: 0.15
+b2_squared_speed_scale: inverse_initial_duration_squared
+b2_time_acceleration_elimination: exact
+boundmpc: official_example_verified_scan_not_evaluable_not_in_core_table
+formal_test_run: false
+future_method_implemented: false

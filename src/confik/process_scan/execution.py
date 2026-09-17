@@ -56,7 +56,7 @@ def coverage(task,points):
     return float(np.sum(weights*covered)/sum(weights)),diameter,covered.reshape(u.shape)
 
 
-def execute(model,data,task,adapter,basis,coeff,timing,common_reference_duration):
+def execute(model,data,task,adapter,basis,coeff,timing,common_reference_duration,state_stride=5):
     started=perf_counter();plan=TimedPath(basis,coeff,timing);n=model.nv
     # ONLY reset writes the live generalized position/velocity.
     mj.mj_resetData(model,data);data.qpos[:]=plan.at(0)[0];data.qvel[:]=0.;mj.mj_forward(model,data)
@@ -86,8 +86,9 @@ def execute(model,data,task,adapter,basis,coeff,timing,common_reference_duration
         if step%5==0:
             _,_,_,_,tags=task.references([s]);profile=scan_profile(model,data,task,site,s) if tags[0] and t<=plan.duration else None
             if profile is not None:profiles.append(dict(t=t,s=s,**profile))
+        if step%state_stride==0:
             histories.append(dict(t=t,s=s,q=data.qpos.copy(),dq=data.qvel.copy(),qacc=data.qacc.copy(),
-                qr=qr,tau=tau.copy(),pre_tau=pre.copy(),tcp=data.site_xpos[site].copy(),
+                qr=qr,dqr=dqr,ddqr=ddqr,tau=tau.copy(),pre_tau=pre.copy(),tcp=data.site_xpos[site].copy(),
                 rotation=data.site_xmat[site].copy(),ncon=int(data.ncon)))
         # Physical contact excludes welded/adjacent joints via MuJoCo's standard
         # filter; workpiece/support collisions always count.
@@ -131,9 +132,9 @@ def execute(model,data,task,adapter,basis,coeff,timing,common_reference_duration
         torque_saturation_fraction=saturation_steps/(step+1),torque_requested_utilization_max=torque_util,
         velocity_exceed_duration_s=velocity_exceed*.001,acceleration_exceed_duration_s=acceleration_exceed*.001,
         scan_duration_s=scan_steps*.001,transition_duration_s=turn_steps*.001,settling_duration_s=wait_steps*.001,
-        sample_state_dt_s=.005,physical_extrema_dt_s=.001,
+        sample_state_dt_s=.001*state_stride,physical_extrema_dt_s=.001,
         acceleration_rms_rad_s2=float(np.sqrt(np.mean(acc*acc))),
-        jerk_rms_rad_s3=float(np.sqrt(np.mean((np.diff(acc,axis=0)/.005)**2))),
+        jerk_rms_rad_s3=float(np.sqrt(np.mean((np.diff(acc,axis=0)/(.001*state_stride))**2))),
         hole_measurement='conservative_3d_component_bounding_box_diagonal')
     for key in ('standoff_m','center_error_m','incidence_rad','line_error_rad'):
         values=np.array([p['process'][key] for p in profiles])

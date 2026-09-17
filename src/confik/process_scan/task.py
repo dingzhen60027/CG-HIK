@@ -12,25 +12,35 @@ class ScanTask:
     placement: int
     direction: str
     robot: str
+    endpoint_extension: float = 0.
+    overlap_margin: float = 0.
+    calibration: bool = False
 
     def __post_init__(self):
         self.center=np.array([.50 if self.placement==0 else .53,
                               -.035 if self.placement==0 else .045, .24])
         self.world_R=Rotation.from_euler('z', 0 if self.placement==0 else 15, degrees=True).as_matrix()
+        if self.calibration:
+            # Separate, predefined calibration placement; never a comparison scene.
+            self.center=np.array([.485,.005,.265])
+            self.world_R=Rotation.from_euler('z',7.5,degrees=True).as_matrix()
         self.long=.24 if self.direction=='u' else .16
         self.short=.16 if self.direction=='u' else .24
         self.rows=9 if self.direction=='u' else 13
+        if self.overlap_margin:
+            self.rows=int(np.ceil(self.short/(.02-self.overlap_margin)))+1
         # Piecewise polynomials match first and second derivatives at every join.
         # Turns occupy a small extension outside the ROI; only straight lines scan.
         segments=[]; knots=[0.]
-        L=self.long; turn=.04
+        L=self.long+2*self.endpoint_extension; turn=.04
         for row in range(self.rows):
             sign=1 if row%2==0 else -1
-            y=-self.short/2+.02*row
+            pitch=self.short/(self.rows-1) if self.overlap_margin else .02
+            y=-self.short/2+pitch*row
             a=np.array([-sign*L/2,y]); b=np.array([sign*L/2,y]); tangent=np.array([sign,0.])
             segments.append((a,b,tangent,tangent,L,True,row)); knots.append(knots[-1]+L)
             if row<self.rows-1:
-                end=np.array([sign*L/2,y+.02])
+                end=np.array([sign*L/2,y+pitch])
                 segments.append((b,end,tangent,-tangent,turn,False,row));knots.append(knots[-1]+turn)
         self.length_parameter=knots[-1];self.knots=np.array(knots)/knots[-1]
         self.segments=segments
