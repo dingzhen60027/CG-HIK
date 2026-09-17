@@ -1,0 +1,30 @@
+{
+  "timestamp_utc": "2026-09-17T07:12:53.539449+00:00",
+  "host_topology": "CPU CORE SOCKET ONLINE    MAXMHZ\n  0    0      0     是 5300.0000\n  1    0      0     是 5300.0000\n  2    1      0     是 5300.0000\n  3    1      0     是 5300.0000\n  4    2      0     是 5300.0000\n  5    2      0     是 5300.0000\n  6    3      0     是 5300.0000\n  7    3      0     是 5300.0000\n  8    4      0     是 5400.0000\n  9    4      0     是 5400.0000\n 10    5      0     是 5400.0000\n 11    5      0     是 5400.0000\n 12    6      0     是 5300.0000\n 13    6      0     是 5300.0000\n 14    7      0     是 5300.0000\n 15    7      0     是 5300.0000\n 16    8      0     是 4200.0000\n 17    9      0     是 4200.0000\n 18   10      0     是 4200.0000\n 19   11      0     是 4200.0000\n 20   12      0     是 4200.0000\n 21   13      0     是 4200.0000\n 22   14      0     是 4200.0000\n 23   15      0     是 4200.0000\n",
+  "initial_stage": {
+    "conditions": 36,
+    "scenes": [
+      "panda_plane_p0_u",
+      "panda_plane_p0_v"
+    ],
+    "single_worker": true,
+    "affinity": "OS default 0-23",
+    "threads": 1
+  },
+  "resumed_stage": {
+    "panda_cpu": 2,
+    "ur5e_cpu": 4,
+    "physical_cores": [
+      1,
+      2
+    ],
+    "same_max_clock_mhz": 5300,
+    "threads_per_worker": 1,
+    "disjoint_scene_partition": "by robot; no simultaneous conditions of the same robot",
+    "actual_frequency_not_locked": true
+  },
+  "statistical_comparison": "Within-scene paired methods; robot results separate. Absolute time across resource strata is descriptive, not an isolated algorithm effect.",
+  "method_order": "unchanged seeded permutation within every repeat",
+  "no_new_scenes": true,
+  "no_omission_or_method_specific_budget": true
+}
