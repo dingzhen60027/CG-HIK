@@ -1,0 +1,1436 @@
+{
+  "config": {
+    "scope": "phase2_endpoint_graph_and_local_transition_development",
+    "baseline": "74d127c712d771b6ba03ab22432ff3ad2f3ac21b",
+    "methods": [
+      "B0",
+      "B1",
+      "B2-common",
+      "A1",
+      "A2",
+      "Proposed"
+    ],
+    "scene_source": "outputs/process_scan/phase15_baselines/inputs/seal.json",
+    "repeats": 3,
+    "physical_repeat": 0,
+    "seed": 2026091801,
+    "endpoint_candidate_cap": 12,
+    "candidate_dedup_rad": 0.001,
+    "candidate_source": "frozen_independent_reference_multistart_layers",
+    "fine_edge_max_joint_delta_rad": 0.35,
+    "fine_edge_interior_checks": 3,
+    "control_points": 96,
+    "boundary_layer_parameter_m": 0.02,
+    "common_speed_reserve": 0.9,
+    "geometry_fit_budget_s": 30,
+    "optimization_budget_s": 30,
+    "checkpoints_s": [
+      1,
+      5,
+      10,
+      30
+    ],
+    "primary_checkpoint_s": 30,
+    "optimizer_grid_base_nodes": 201,
+    "graph_boundary_velocities": "joint_range_and_acceleration_reachability_envelope",
+    "non_scanning_process_domain": "unchanged_phase15_full_process_domain",
+    "paired_bootstrap_seed": 2026091607,
+    "paired_bootstrap_resamples": 4000,
+    "video_selection": "placement0_u_all_families_robots_methods_repeat0",
+    "formal_scenes_run": false
+  },
+  "scenes": [
+    {
+      "slot": "panda_plane_p0_u",
+      "scene_uid": "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609",
+      "cluster": "panda_plane_p0",
+      "robot": "panda",
+      "family": "plane",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "plane",
+        "placement": 0,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "49b4ce751c6b07a6e5fb3509d99677ed92cd4b31f4a90aaf60e04c6ec555a102",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_plane_p0_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_plane_p0_u/reference/tilt_+0",
+      "common_start": [
+        -0.08450803059339765,
+        -0.5117073083438758,
+        -0.18692616000295512,
+        -2.4697629601999544,
+        -0.09866932500313265,
+        1.9637961993046387,
+        -1.7808498589002235
+      ],
+      "common_end": [
+        0.11841220808137598,
+        -0.5507687822662305,
+        0.00034160481216325827,
+        -2.5083556251647146,
+        0.00019303702309962943,
+        1.9575868624094217,
+        -1.4521658466307912
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "scene_uid": "f3f3897b5f524fd2bf769f27b0ff33b7489cd38286aa0a3aef7bd1de2cff55db",
+      "cluster": "panda_plane_p0",
+      "robot": "panda",
+      "family": "plane",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "plane",
+        "placement": 0,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "4be2446f83c25700a316e146bd543b10aebd8eb80392c1df3e8df3daa8a07d77",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_plane_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_plane_p0_v/reference/tilt_+0",
+      "common_start": [
+        -0.3630435204276459,
+        -0.4906872609159104,
+        0.05497125497223536,
+        -2.460877286837379,
+        0.028112444922908538,
+        1.970676325018241,
+        -0.32549436577263285
+      ],
+      "common_end": [
+        -0.36551307398868615,
+        0.2360139149776905,
+        0.1984848657536852,
+        -1.6641007349818049,
+        -0.048665264670664996,
+        1.895288116197429,
+        -0.1568661825794959
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_plane_p1_u",
+      "scene_uid": "dc500163bea8d607c8f6676fccd669f938cace853f762bdc955d3710e5f2bae9",
+      "cluster": "panda_plane_p1",
+      "robot": "panda",
+      "family": "plane",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "plane",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "9286b2ae0e6c2a6937a680a3f9fcbeeac2310574f6b15b7c0ebfadfec4711eac",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_plane_p1_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_plane_p1_u/reference/tilt_+0",
+      "common_start": [
+        1.7691433268220174,
+        -1.75777015966191,
+        -0.8888875895348529,
+        -2.208908147079679,
+        -1.290513787409842,
+        0.9170595333490935,
+        -0.9670684379465706
+      ],
+      "common_end": [
+        2.001207141571427,
+        -1.6816535934075298,
+        -0.909880681528455,
+        -2.3133537253471084,
+        -1.1715622395430643,
+        1.018937683330031,
+        -0.5832452477382926
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "scene_uid": "e283b88390fe538a85d2694079d62454b1b3aa046d100f8504b4a66d9736b8d5",
+      "cluster": "panda_plane_p1",
+      "robot": "panda",
+      "family": "plane",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "plane",
+        "placement": 1,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "6406a165a7ce0a64fe1228e908248444b77f28494bcb6c1b8247f9846a13358d",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_plane_p1_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_plane_p1_v/reference/tilt_+0",
+      "common_start": [
+        -0.2453939731855847,
+        -0.354071370072311,
+        0.08596013532935408,
+        -2.3428404479027836,
+        0.03259162146231885,
+        1.989772941038299,
+        -0.4398046106653555
+      ],
+      "common_end": [
+        -0.19792694129946772,
+        0.36366525365942304,
+        0.2337791650533041,
+        -1.4860781167239347,
+        -0.08557709479379025,
+        1.839728759838915,
+        -0.21794652713643042
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_cylinder_p0_u",
+      "scene_uid": "1d626ca03a345e6601c064a6a0c00a1a9212ee8924f6c3978e4ae4fa19bcc8eb",
+      "cluster": "panda_cylinder_p0",
+      "robot": "panda",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "ccdef18967ef7f79f55e80474086d9bfc7d63cc40030240112871637a0dc7a2b",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_cylinder_p0_u/reference/tilt_+0",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": 6.0,
+          "root": "inputs/panda_cylinder_p0_u/reference/tilt_+6",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": -6.0,
+          "root": "inputs/panda_cylinder_p0_u/reference/tilt_-6",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_cylinder_p0_u/reference/tilt_-6",
+      "common_start": [
+        0.6795700426659539,
+        -1.624832726280558,
+        -0.9693221595697497,
+        -2.8738269411674984,
+        -1.2009073249283628,
+        1.7857713497298007,
+        -1.1145791825964735
+      ],
+      "common_end": [
+        0.8983000386782264,
+        -1.3025269699158901,
+        -0.7018941050113098,
+        -2.954246146834647,
+        -1.0323023105949867,
+        2.0118178816057934,
+        -0.6930912535155501
+      ],
+      "selected_tilt_deg": -6.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "scene_uid": "84054da21481d1359c181b6fcd2262b0249f857876c17df848868534df6762c8",
+      "cluster": "panda_cylinder_p0",
+      "robot": "panda",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "9e40009d8bf13a936a23a7ea91111ccfbe69348a7ac68557e4ea439f841e7d33",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_cylinder_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_cylinder_p0_v/reference/tilt_+0",
+      "common_start": [
+        -0.2718484801573281,
+        -0.8200017386330902,
+        -0.11330916405626554,
+        -2.860150034512689,
+        0.05642382848876207,
+        2.3708242167672458,
+        -0.39703667811933785
+      ],
+      "common_end": [
+        -0.22176468433743055,
+        0.7370685590081805,
+        0.11923247415778132,
+        -0.9122165894107093,
+        -0.12546375555354747,
+        1.2984164918504395,
+        -0.13181740960045088
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_cylinder_p1_u",
+      "scene_uid": "406af3b20ab059ba4ba3b0119a5c6adf254d03bdeae9dfa5c1b0f474ba4cf06d",
+      "cluster": "panda_cylinder_p1",
+      "robot": "panda",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "71e27055183db2a4c1af8a1eaa4cd0e3ef6e4fbe3ed259d3fcd4abcd99f5faba",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_cylinder_p1_u/reference/tilt_+0",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": 6.0,
+          "root": "inputs/panda_cylinder_p1_u/reference/tilt_+6",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": -6.0,
+          "root": "inputs/panda_cylinder_p1_u/reference/tilt_-6",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": 9.0,
+          "root": "inputs/panda_cylinder_p1_u/reference/tilt_+9",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": -9.0,
+          "root": "inputs/panda_cylinder_p1_u/reference/tilt_-9",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_cylinder_p1_u/reference/tilt_-9",
+      "common_start": [
+        0.12706897580364923,
+        -0.8192620280705272,
+        -0.4660788456764944,
+        -2.9068696892066512,
+        -0.14783985112692558,
+        2.5973030112971296,
+        -2.0055045739795645
+      ],
+      "common_end": [
+        0.769373125338577,
+        -1.1512204478165382,
+        -0.6504668857932674,
+        -2.989116077897431,
+        -0.8915327338754043,
+        2.327922602420145,
+        -1.0169091991655521
+      ],
+      "selected_tilt_deg": -9.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_cylinder_p1_v",
+      "scene_uid": "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+      "cluster": "panda_cylinder_p1",
+      "robot": "panda",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "962776d251f2aef10f9f6404e130e69c03fbc2e3cb325deab205115d3ea9cdab",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_cylinder_p1_v/reference/tilt_+0",
+          "status": "reference_unresolved"
+        },
+        {
+          "tilt": 6.0,
+          "root": "inputs/panda_cylinder_p1_v/reference/tilt_+6",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_cylinder_p1_v/reference/tilt_+6",
+      "common_start": [
+        -2.087452091955844,
+        1.703763068501162,
+        2.0789826747695312,
+        -2.7143209505742285,
+        -1.3261249308215177,
+        1.6661221655184206,
+        0.3797788390992525
+      ],
+      "common_end": [
+        -0.5077023655799097,
+        1.124304999760534,
+        1.4334291976180498,
+        -0.8470014353716329,
+        -1.1211915267355217,
+        1.1319547684730433,
+        0.09591746099273653
+      ],
+      "selected_tilt_deg": 6.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "scene_uid": "f6c31864e2ce3e5c2e19b914f5e5b132c9658310d934a68e88ca62a1b777611b",
+      "cluster": "panda_saddle_p0",
+      "robot": "panda",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "saddle",
+        "placement": 0,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "e74e6f5b17561ae7023f1be6087071208b78d4aaa0ffb3b7ed27161879585ca2",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_saddle_p0_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_saddle_p0_u/reference/tilt_+0",
+      "common_start": [
+        -0.2722781743763952,
+        -0.21383879235790149,
+        -0.07119689740801255,
+        -2.15689886523415,
+        0.051270324757974724,
+        1.665691300369995,
+        -1.90382727481384
+      ],
+      "common_end": [
+        -0.027955686874453874,
+        -0.27981313521065243,
+        0.21364237170664804,
+        -2.220154718033228,
+        -0.05339544731097123,
+        1.683387772997338,
+        -1.4066264562212998
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_saddle_p0_v",
+      "scene_uid": "ddbaccae4d1e1e90b7da2315bf852ee615b4daba879473cd6ddfe24006fb6108",
+      "cluster": "panda_saddle_p0",
+      "robot": "panda",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "saddle",
+        "placement": 0,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "5fb0c7c0a4275ef7a2bb882f4bfbffaa054ecd89fea1b96668f7cc980dfaa1ad",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_saddle_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_saddle_p0_v/reference/tilt_+0",
+      "common_start": [
+        -2.081036519553557,
+        0.6923601571750135,
+        1.979832030981551,
+        -2.1255827592832786,
+        -0.44745441011359804,
+        1.551201473732312,
+        0.10690434775583676
+      ],
+      "common_end": [
+        -1.6526852744387708,
+        0.39596882218967855,
+        1.5045689889997154,
+        -1.9505357764954576,
+        -0.23471929378828518,
+        2.1737784986154307,
+        -0.06056578413496371
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "scene_uid": "9ced85a1ec2cd96c165d3ed941ec82457e30e182c4d037796ec472ed639f71b3",
+      "cluster": "panda_saddle_p1",
+      "robot": "panda",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "saddle",
+        "placement": 1,
+        "direction": "u",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "83d159b6ab9a94dd1c46576d9a3bcd3c1e90ad3303133ed5e2dde80cb2b69d90",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_saddle_p1_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_saddle_p1_u/reference/tilt_+0",
+      "common_start": [
+        -0.18224692310378415,
+        -0.07855149438115164,
+        0.005380837524408349,
+        -2.008760413592148,
+        0.03925906720397014,
+        1.6472748087017788,
+        -1.9993972407102092
+      ],
+      "common_end": [
+        0.07806038116619335,
+        -0.23477718094249625,
+        0.23952971503390266,
+        -2.1779484124406823,
+        -0.08938606488909255,
+        1.702315357815262,
+        -1.5241493784449807
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "panda_saddle_p1_v",
+      "scene_uid": "5f43b4d6461fcea3fe8ed7073c7de83186d13133f6cb072fc4eb2c12336a6b6c",
+      "cluster": "panda_saddle_p1",
+      "robot": "panda",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "saddle",
+        "placement": 1,
+        "direction": "v",
+        "robot": "panda",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "744e0c14873b06456c11626495af4cd9e6c8d076f50a3d5863a3cc90526bb724",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/panda_saddle_p1_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/panda_saddle_p1_v/reference/tilt_+0",
+      "common_start": [
+        1.5109763171227062,
+        -0.8521380069289345,
+        -1.3068149858056382,
+        -1.954111352621108,
+        -0.6232689178823207,
+        1.4255565005394621,
+        0.12452197560513616
+      ],
+      "common_end": [
+        1.8576671320932703,
+        -0.8435086407492857,
+        -1.5815998915094722,
+        -1.7440703210670632,
+        -0.718709109266603,
+        1.946732345453901,
+        0.13405039857860893
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "scene_uid": "74c4b355832ae88369ec214894ab6b8c7e91246fa0de0bbe376637861cd8eed7",
+      "cluster": "ur5e_plane_p0",
+      "robot": "ur5e",
+      "family": "plane",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "plane",
+        "placement": 0,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "5f84bae3b9f15f5b884a7b9b4906e0235aaec7b4883227a95d13555a01b395b6",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_plane_p0_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_plane_p0_u/reference/tilt_+0",
+      "common_start": [
+        -0.6410736791128118,
+        -1.8594350581747887,
+        1.860247664753132,
+        -1.5716089335783434,
+        -1.5707963265897928,
+        2.5005189742718774
+      ],
+      "common_end": [
+        -0.23993221150138463,
+        -1.8974362196762793,
+        1.8857798455252999,
+        -1.5591399528490206,
+        -1.5707963265897928,
+        2.9016604418833047
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "scene_uid": "b4cbe6298b4c8842e3d61c4c05cef1b634d1de760788b1ccb4c7c2647062845b",
+      "cluster": "ur5e_plane_p0",
+      "robot": "ur5e",
+      "family": "plane",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "plane",
+        "placement": 0,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "245a14b7976f2093f7483a516b9e0adc779b403a43c15336dcb88daa233ed483",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_plane_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_plane_p0_v/reference/tilt_+0",
+      "common_start": [
+        -0.6427007961370657,
+        -1.8496684659649218,
+        1.8534440231546385,
+        -1.574571884189717,
+        -1.5707963265897928,
+        -2.213497123137066
+      ],
+      "common_end": [
+        -0.4008847147935938,
+        -1.272282558259363,
+        1.2699985793156006,
+        -1.5685123480562377,
+        -1.5707963265897928,
+        -1.9716810417935944
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "scene_uid": "403cb6773f1a1675c7f7f184c8e8c74848c8e1cd56930a8f81eb78de27e1428a",
+      "cluster": "ur5e_plane_p1",
+      "robot": "ur5e",
+      "family": "plane",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "plane",
+        "placement": 1,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "a0e28b2181fd79aa4aa6f9c28d5d8aaff8c31c3807212c0e51fba90f9274792f",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_plane_p1_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_plane_p1_u/reference/tilt_+0",
+      "common_start": [
+        3.304479931247412,
+        4.892085826592212,
+        -1.7786881794019318,
+        4.740583986989305,
+        1.5707963265897935,
+        3.0426805436533653
+      ],
+      "common_end": [
+        3.7082108280652735,
+        4.983670777609114,
+        -1.8480878207309865,
+        4.71839867730146,
+        1.5707963265897935,
+        3.446411440471227
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "scene_uid": "26227b24cb54fbd1ee1f9a2ff9548fd6b42ce382e7b92e4713c9a7c4eba0431e",
+      "cluster": "ur5e_plane_p1",
+      "robot": "ur5e",
+      "family": "plane",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "plane",
+        "placement": 1,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "93d858e2628acb80ad5e0a9e99501ec900556aaf1fdbf6009f550686369eb884",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_plane_p1_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_plane_p1_v/reference/tilt_+0",
+      "common_start": [
+        -0.45827257291808665,
+        -1.7405389301522969,
+        1.7706098043825973,
+        -1.6008672012303007,
+        4.712388980589794,
+        3.99231701946235
+      ],
+      "common_end": [
+        -0.20724444872718562,
+        -1.1789136773279358,
+        1.1423972894694083,
+        -1.5342799391414728,
+        4.712388980589793,
+        4.243345143653251
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "scene_uid": "5d9aac3d7faa587a77b4ef01338725dc9ae7ca13f0a04df57de39f2cb095a9ac",
+      "cluster": "ur5e_cylinder_p0",
+      "robot": "ur5e",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "c31998b14c485cc6586646dc87a7c96f5209c984cc9be618d8f4ce0d01e82f76",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_cylinder_p0_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_cylinder_p0_u/reference/tilt_+0",
+      "common_start": [
+        -3.0703457533315004,
+        -0.9924761789561216,
+        -2.2182570950585294,
+        5.139791207937505,
+        1.5457766974449776,
+        -3.074876328396137
+      ],
+      "common_end": [
+        -2.4439163178693657,
+        -0.9155955522069238,
+        -2.2280470789749764,
+        4.994537763391465,
+        1.343061600724987,
+        -2.4761572837089036
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "scene_uid": "b181f4aea3dacadfb66671a2eea89b411650ea76f729a02a7b8c5f249579c5f5",
+      "cluster": "ur5e_cylinder_p0",
+      "robot": "ur5e",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "cylinder",
+        "placement": 0,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "8d2602f0708662bdce5ec1d7eb7ab1d12f8a4102072d3166c3a4f352a2c936d4",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_cylinder_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_cylinder_p0_v/reference/tilt_+0",
+      "common_start": [
+        5.392812200085976,
+        -2.141013528077463,
+        2.1771316571449097,
+        -1.8326186891262666,
+        -1.30103116748253,
+        3.8527736882864216
+      ],
+      "common_end": [
+        5.943052355218943,
+        -0.9492421977944854,
+        0.8141270885815729,
+        -1.1042990901781995,
+        -1.685428621852603,
+        4.391445748528236
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "scene_uid": "78356a8fe9f1e85ce2b8185467eefe91275f3763ead11629ba2fd1962fc65f9a",
+      "cluster": "ur5e_cylinder_p1",
+      "robot": "ur5e",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "a852b0e66a6a094801628128504fbd8aa9eb5578ed4aa6593c5325bdeee33412",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_cylinder_p1_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_cylinder_p1_u/reference/tilt_+0",
+      "common_start": [
+        -3.016433790371449,
+        -1.1449474580482895,
+        -2.145180970007428,
+        5.216951138639768,
+        -4.66450058053943,
+        -3.269615614996559
+      ],
+      "common_end": [
+        -2.4413452075743867,
+        -0.9879831815697748,
+        -2.2127230947419654,
+        5.099120955208563,
+        -4.862141745589251,
+        -2.727942360775378
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "scene_uid": "2d20f99cf6c82aa207e523443bbea9c8b2f83a71121fed63556e715ac9a2a97f",
+      "cluster": "ur5e_cylinder_p1",
+      "robot": "ur5e",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "cylinder",
+        "placement": 1,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "8aeb226bddbe9ee995696a4e7a1b8b3ef3c535d81a349e34808287458115041b",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_cylinder_p1_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_cylinder_p1_v/reference/tilt_+0",
+      "common_start": [
+        -0.6873181882779711,
+        -1.9940245570880486,
+        2.1021470414881,
+        -1.8883656860118139,
+        -1.288346514813223,
+        -2.4900294482325767
+      ],
+      "common_end": [
+        -0.14006465043202912,
+        -0.8259523112712414,
+        0.6069784405723404,
+        -1.0277611621932854,
+        -1.705304836844686,
+        -1.9506407886722996
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "scene_uid": "512f782109f8188da0d9abc0c832e86278e011a39690b19c4fd78abb5a46d0f5",
+      "cluster": "ur5e_saddle_p0",
+      "robot": "ur5e",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "u",
+      "task": {
+        "family": "saddle",
+        "placement": 0,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "1a7b12c3830d9843ee44a8bf88ba59d26c8bd1ea45a0fccb6200b371c1342ce5",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_saddle_p0_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_saddle_p0_u/reference/tilt_+0",
+      "common_start": [
+        -0.6282105248129684,
+        -1.62384129088849,
+        1.6082118469585567,
+        -1.2700841350091319,
+        -1.5853058086301897,
+        -3.7490040806079814
+      ],
+      "common_end": [
+        -0.08372273974033013,
+        -1.674762148602847,
+        1.6689053257177315,
+        -1.3372017608626865,
+        -1.7443945277338524,
+        -3.2241294674360566
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "scene_uid": "36b3d3486fc1b60616750c9293d770932ac4609219d8fed3920864fd4b552a68",
+      "cluster": "ur5e_saddle_p0",
+      "robot": "ur5e",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "v",
+      "task": {
+        "family": "saddle",
+        "placement": 0,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "4a02359a75ff5664c89112389174782b1d409ca69eda600773f62b1c39ac0600",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_saddle_p0_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_saddle_p0_v/reference/tilt_+0",
+      "common_start": [
+        -0.6352813906214093,
+        4.666001418903167,
+        1.6049731608492408,
+        -1.2747771665521423,
+        4.703938549377424,
+        4.059064020766853
+      ],
+      "common_end": [
+        -0.5397051575275702,
+        4.864440042438614,
+        1.4968914069905954,
+        -1.768944960406316,
+        4.9703370988836815,
+        4.207516654283633
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "scene_uid": "131c413eea68307c7e2869678e592255d46b9ff65ebdafcb0874ee15554f5ed5",
+      "cluster": "ur5e_saddle_p1",
+      "robot": "ur5e",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "u",
+      "task": {
+        "family": "saddle",
+        "placement": 1,
+        "direction": "u",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "98624e93f47228fca766c14a92b99831fbe56e346764c813fb4886063e16f5b7",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_saddle_p1_u/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_saddle_p1_u/reference/tilt_+0",
+      "common_start": [
+        -0.43169205922573106,
+        4.767483224083223,
+        1.5003147258897658,
+        -1.2718101141732834,
+        4.679560582977182,
+        2.4715048581651935
+      ],
+      "common_end": [
+        0.05724711563630256,
+        4.644380664069726,
+        1.6418318719713885,
+        -1.3683922652763985,
+        4.512793303457792,
+        2.938965490765277
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "scene_uid": "88778a5202fca058c5e99dc6c571ebc77b922de005dac1eb6c79648bfb8c2dc8",
+      "cluster": "ur5e_saddle_p1",
+      "robot": "ur5e",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "v",
+      "task": {
+        "family": "saddle",
+        "placement": 1,
+        "direction": "v",
+        "robot": "ur5e",
+        "endpoint_extension": 0.003,
+        "overlap_margin": 0.001,
+        "calibration": false
+      },
+      "original_identity_sha256": "16e29222cdc468e9246c9f1efae6826ea0773a293e12c9bbdcb15add5a2d6027",
+      "reference_geometry_feasible": true,
+      "attempts": [
+        {
+          "tilt": 0.0,
+          "root": "inputs/ur5e_saddle_p1_v/reference/tilt_+0",
+          "status": "reference_available"
+        }
+      ],
+      "reference_source": "inputs/ur5e_saddle_p1_v/reference/tilt_+0",
+      "common_start": [
+        -0.43763110363886415,
+        4.7750226163749305,
+        1.4952547151061,
+        -1.2751532168035065,
+        4.686003297201027,
+        3.997462988569414
+      ],
+      "common_end": [
+        -0.3415003181645211,
+        4.966044131513086,
+        1.368784591447921,
+        -1.7255231511230138,
+        4.977418532633342,
+        4.142092678118893
+      ],
+      "selected_tilt_deg": 0.0,
+      "split": "same_24_development_scenes_calibrated_route",
+      "no_method_outcome_used": true,
+      "quality_thresholds_unchanged": true
+    }
+  ],
+  "source_seal_sha256": "2e01a4157d60ce38da9dd3da1a1ac504581f894bd43926d3585ae278fb9eba74",
+  "code_hashes": {
+    "src/confik/task_balance_gn.py": "752a69afede984d0617997d6c412753c327f9f642eb0f08ef2ab33c464a68d57",
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/process_scan/phase15.py": "9f783f9eeeac43826dd490a417ba42e1ce6fe6979a59a1b3fe47bcfd0dc3a0e3",
+    "src/confik/process_scan/phase2_optimize.py": "6ef78d94cbdae90e759ec6c895bcd86e6ebfe6252cef8687409ab5f5adf90bfd",
+    "src/confik/process_scan/phase2_graph.py": "8af8e09059d2c036ecd515d7a5aa24cfc6d176bea6cbf9595c415ac7892f4f8e",
+    "src/confik/process_scan/execution.py": "fd75dd0b4a89ed8e0e15e8909cc4f2d3f6f2188863361e038d9133f832a9a312",
+    "src/confik/process_scan/planning.py": "0ff97013fbb81c17316f66dde1607b242635281d370ea6247a2b7d171bf0f5d9",
+    "src/confik/process_scan/task.py": "a7603c2bccfa21906cf3281d74abd0541398e3348b443daef93b9f15652e9333",
+    "src/confik/process_scan/__init__.py": "1027fbff570c813e8dadf870667f7c941415fc908844aa514e39b1a2d8795a0e",
+    "src/confik/process_scan/models.py": "12f519da6af6d4464e57564f99a25a6a71910728d796f73f2d5cff5358264f51",
+    "src/confik/process_scan/boundmpc_check.py": "579396f24701e7a48e0c80d13ca83f95a2bc3c1a3cd0184ef05ebfd6d0a9f251",
+    "src/confik/process_scan/geometry_adapter.py": "40875f89a332b9fe60e466ebc9a8ab13f26fdaa6b2b3c21331e20e7775fe2106",
+    "src/confik/process_scan/collision.py": "eaf8df2c2759c40a1a8cb0f8765442bba16b31e9893bb1d7d20a553425025ae8",
+    "src/confik/process_scan/study.py": "72dc808c622ec67cb3685453448ab6515c94f21ae765cbc8d5312c66b849e136",
+    "src/confik/process_scan/phase2.py": "4672bd268c5851f05cf819944e242b185702f2347aa8aa514db5b3e5f56fdaff",
+    "scripts/run_process_scan_phase2.py": "277ef415cb9c759e3e12d5a145ec0dda9c66de07a1ece2c201363ff236236072",
+    "configs/process_scan_phase2.yaml": "da40c39762bc3fcc1c40bd3523c47e99004e612c28fdd521b3b1d8030f5488ad"
+  },
+  "files": {
+    "inputs/ur5e_plane_p0_u/candidate_library.json.gz": "39aba3f2e9f73258bc2d1aa74d23bce30f2d24595cba3e4c7d4e47dd7056a8ba",
+    "inputs/ur5e_plane_p0_u/scene.xml": "807ed19dc7de3b14e3beee7eec1927ef9a882dd0313b73268ce72183982128c7",
+    "inputs/ur5e_plane_p0_u/identity.json": "0e0822bdde5fd07b45e462b41510837f8ed594aa5ab4244d07a006506b5cf2bd",
+    "inputs/ur5e_plane_p0_u/timeout_reference.json": "b67c7b060001c3cc1320e3d7eb4f9aba44b58720b38943f0966e1932e8b27bf3",
+    "inputs/ur5e_saddle_p1_v/candidate_library.json.gz": "347d15eaaccfb2f78685dac656d76062886a90d8ae460c3567eeb0a596cbfa37",
+    "inputs/ur5e_saddle_p1_v/scene.xml": "47dc8236bb457477e55eeaaa64b3fac5837625ec89ec7a5ae3e1860669e17daa",
+    "inputs/ur5e_saddle_p1_v/identity.json": "6e517fc35253d8487bc57bf51a5f755ba28a18e206157a81ff6c87cb1ce7baa3",
+    "inputs/ur5e_saddle_p1_v/timeout_reference.json": "b66e2aa78d81657304d5dfa0e840539d288a1a9c787621e4183a567b9f0b8865",
+    "inputs/panda_saddle_p0_v/candidate_library.json.gz": "74d44c108872b8b552d161af47065392c58c1d026534fd8d5ffc5bd3900c5c2e",
+    "inputs/panda_saddle_p0_v/scene.xml": "f00675c67b52a23a8a8fdd3a2b712b8ac80330a53dc15912702f84482087d897",
+    "inputs/panda_saddle_p0_v/identity.json": "0b4af2b2f7f1fd077b2d40646c6e601e40f0f7baeda28bbd887edcdcc2651e7c",
+    "inputs/panda_saddle_p0_v/timeout_reference.json": "d6e76d0b42ad65eb6bc5ef355654ff454fe95384af99c3fa1a24fac970b9a33e",
+    "inputs/panda_cylinder_p1_u/candidate_library.json.gz": "368b4ff924274113dcb372b758e0079fc374794683dbf46ee8f9ed9fa16aaa17",
+    "inputs/panda_cylinder_p1_u/scene.xml": "dee3bcbd54649ab098cd77094832a7995d1c22644e1e2e537252972a55a69299",
+    "inputs/panda_cylinder_p1_u/identity.json": "78b9ba86ee6e1d66ca845f3271bebaa7ed689f836307d8ba60cebe0b972dba01",
+    "inputs/panda_cylinder_p1_u/timeout_reference.json": "fbc1a4413fb8ea9c846facac6a3a8a37f22c3c341b30c2e4a958634c261849a6",
+    "inputs/panda_cylinder_p0_v/candidate_library.json.gz": "220657715f138bb1ee062dc8033c2d66c5a1c4242ccc05052e4b5a33627d102a",
+    "inputs/panda_cylinder_p0_v/scene.xml": "c51a13d69155db7b37bb34d85918bf48d118c06fc38110a53917e04050375ba7",
+    "inputs/panda_cylinder_p0_v/identity.json": "942c4c2bc6b3cb9a78c7ed871ef872adf076bd384ae71b9723c6cc78954b11b2",
+    "inputs/panda_cylinder_p0_v/timeout_reference.json": "8b09158e92d3073510920daa54822671571415f0783da8aa7a2c4de36b29773e",
+    "inputs/ur5e_cylinder_p0_u/candidate_library.json.gz": "d198e680c8aa0e3a713bd76b9ac965432f3a327bbc4e362c76731d72dee1f71a",
+    "inputs/ur5e_cylinder_p0_u/scene.xml": "7e7b44dca3d7d178e93edf98eec37a86a2ff31d9c36eb118bee9f4e6a50aa613",
+    "inputs/ur5e_cylinder_p0_u/identity.json": "8c4086a40efcc2a2bbe619d098545b1c0c6143e6fffd45355c3253b0a49e671f",
+    "inputs/ur5e_cylinder_p0_u/timeout_reference.json": "4870a28c7230cf8a091e5dd4a1622570b5c07d0afbdf23a00512b2b86e01267d",
+    "inputs/ur5e_plane_p1_v/candidate_library.json.gz": "f12b735655c17b694db40b8f0dcd5cf8c40c96a57961c034f220a529aef372a2",
+    "inputs/ur5e_plane_p1_v/scene.xml": "bccf1f5e44df3982845ae4a6ec4ff1da34283aaa1e27472d052bb8f308f6ef41",
+    "inputs/ur5e_plane_p1_v/identity.json": "8613cb87bf72f76f47df205307a683a731aa7328ae9c01997faf73033339b632",
+    "inputs/ur5e_plane_p1_v/timeout_reference.json": "04b7027e8b06894b007547e66274a32c604792c3e4d6f7b82b96f5a9258e3ab6",
+    "inputs/ur5e_saddle_p0_v/candidate_library.json.gz": "06053777f5ac7a073da40a5cc8b8617e9cd515195e8bfc00eef3780ffcb8dfc2",
+    "inputs/ur5e_saddle_p0_v/scene.xml": "1677fd7496871350f108b8d7d0d7072ca8667ad176a1ed67dc635052053f087d",
+    "inputs/ur5e_saddle_p0_v/identity.json": "bdadf27ce1d91f421064b40bcf33fadff21c3462063dfe4f08ff29dbc8b0b4dd",
+    "inputs/ur5e_saddle_p0_v/timeout_reference.json": "2efd88a965c0154a61eb2c5da901ce44413f79bbbc379720651f641fc1fc7f49",
+    "inputs/panda_saddle_p1_v/candidate_library.json.gz": "400601926cc036d23f7794804d9c3ba91371d0eada4e4faa46b95dcc725a0dca",
+    "inputs/panda_saddle_p1_v/scene.xml": "d731329df270eba51c34cc89e3bb6e40a2d1d4a2fa40f34de045499a37923433",
+    "inputs/panda_saddle_p1_v/identity.json": "cee5ccba145d3576dc7de91e4c2242c3ab00a2174aac11412f9efa7780c0ad5e",
+    "inputs/panda_saddle_p1_v/timeout_reference.json": "4acf720bb1150ccd46ac1cdda92d1a970c8f77beed851dba4b526f224ce44fbd",
+    "inputs/panda_plane_p0_v/candidate_library.json.gz": "4f5921b54626c67ec74eaeaabae45822056ce3791f95b8cd90f718ddcabb99ae",
+    "inputs/panda_plane_p0_v/scene.xml": "ad9a5adfe8c6cf9aecfbd197ded2f92ea8adb6fb6ca790fb4f8fca79550349fb",
+    "inputs/panda_plane_p0_v/identity.json": "c9bc86981536c05c89dfd977ac6b7b00375bd4185704ef0ad028228f456ed14f",
+    "inputs/panda_plane_p0_v/timeout_reference.json": "e627f412a8168367f25cd8b552cf0a576e4331a513fd845daa7a6751ed296834",
+    "inputs/ur5e_plane_p1_u/candidate_library.json.gz": "713a755f69bc7e3be814dcfd6ee94382495ec22ace9049580462e5525addefd6",
+    "inputs/ur5e_plane_p1_u/scene.xml": "bccf1f5e44df3982845ae4a6ec4ff1da34283aaa1e27472d052bb8f308f6ef41",
+    "inputs/ur5e_plane_p1_u/identity.json": "781071d15821dd24150d4f166d9505e1f5f9f121f1e4bbd0f60e402c94a710aa",
+    "inputs/ur5e_plane_p1_u/timeout_reference.json": "7a218d12bf7972105575766a0db508e4b20adeed4b41885efc4acca5282dd216",
+    "inputs/panda_plane_p1_v/candidate_library.json.gz": "4a097df909690d3c2a54e7403835fa402aa4b056a17b06d2034e6fd4a153c0b8",
+    "inputs/panda_plane_p1_v/scene.xml": "bf781b7d29878b53da58d90fa793b15fefe2e895eb122b48f5e0b2b800c672e3",
+    "inputs/panda_plane_p1_v/identity.json": "9672ff051c3a748716bd4003b5a7217fba8e513d6342199de369fb96534a32ea",
+    "inputs/panda_plane_p1_v/timeout_reference.json": "38a5b18749f4ccb5cbdf66c01de2a14782d519b67861e4bece8ee3fd1f9def7d",
+    "inputs/panda_plane_p0_u/candidate_library.json.gz": "1be6209d92579220ec5e0eefb43db419c32732e890b1c8cad811e91b62a446f2",
+    "inputs/panda_plane_p0_u/scene.xml": "ad9a5adfe8c6cf9aecfbd197ded2f92ea8adb6fb6ca790fb4f8fca79550349fb",
+    "inputs/panda_plane_p0_u/identity.json": "ac84d50cee10f7de9189523d2ce69b6a3d3fea8bd48113ddcb1d42dcc4402dbb",
+    "inputs/panda_plane_p0_u/timeout_reference.json": "49f1c73b092dea404a6cba2c2c49efe848b5f054b638bb186d3369cdd8537f39",
+    "inputs/panda_cylinder_p0_u/candidate_library.json.gz": "2c77c97ef8e2627aa8fd78141c4c83ddf8d5af44d90034929249cf0b1b3bbd2e",
+    "inputs/panda_cylinder_p0_u/scene.xml": "c51a13d69155db7b37bb34d85918bf48d118c06fc38110a53917e04050375ba7",
+    "inputs/panda_cylinder_p0_u/identity.json": "b97389a8845e697f42e4e9e000669b08f680127e365788743c6fc665d12bd52d",
+    "inputs/panda_cylinder_p0_u/timeout_reference.json": "a55e80e0184e8ab3d3e346d3f620c668a1cf3ad3dd5492f2a58665e987e83d73",
+    "inputs/ur5e_cylinder_p0_v/candidate_library.json.gz": "aa34f454204cb1eef868ae8ae7a7f196c713ca003a1b84a0ff346e12ad8b30ba",
+    "inputs/ur5e_cylinder_p0_v/scene.xml": "7e7b44dca3d7d178e93edf98eec37a86a2ff31d9c36eb118bee9f4e6a50aa613",
+    "inputs/ur5e_cylinder_p0_v/identity.json": "0a727078c56d90737f129e003b28e494cdeecac7767bd51bc3fe3e727c7244ef",
+    "inputs/ur5e_cylinder_p0_v/timeout_reference.json": "31f4dda595a1c1207d4433ef69711de1c5ef14029022bc084d75ecb4c3a515ab",
+    "inputs/panda_saddle_p1_u/candidate_library.json.gz": "7879ce0fabca491035026af84cf578fe77d55205b6ff7b80efead3f565aa295b",
+    "inputs/panda_saddle_p1_u/scene.xml": "d731329df270eba51c34cc89e3bb6e40a2d1d4a2fa40f34de045499a37923433",
+    "inputs/panda_saddle_p1_u/identity.json": "6e322e044f320186111eb7d7622b8ba70852e7b436dfe9e620e3c0e61f420334",
+    "inputs/panda_saddle_p1_u/timeout_reference.json": "88e9c9466ae7f6b9e35ef72d6e91708ec00e1a171d0e540f3429eac8a01d5ac1",
+    "inputs/ur5e_cylinder_p1_u/candidate_library.json.gz": "f1918b38c852517066ab0a0a498592315823717ae907013c4fbca55e00a5b6dc",
+    "inputs/ur5e_cylinder_p1_u/scene.xml": "e91034b66ae36bda8014b97210f83c76d9332313ba6c1d451545158f3911c89b",
+    "inputs/ur5e_cylinder_p1_u/identity.json": "33a8aadb3524f5949580a792e1fa60840899a8dd3ba502129a9956016a2182f3",
+    "inputs/ur5e_cylinder_p1_u/timeout_reference.json": "94d0fbd148fc3f9207f399a57a51aafe5e61060972af8879601d526eefee71c7",
+    "inputs/ur5e_saddle_p0_u/candidate_library.json.gz": "7f1740bc173bd2ccbd69b4189c7773fee505c70b3650639bf4827f6b0b03109f",
+    "inputs/ur5e_saddle_p0_u/scene.xml": "1677fd7496871350f108b8d7d0d7072ca8667ad176a1ed67dc635052053f087d",
+    "inputs/ur5e_saddle_p0_u/identity.json": "40f3a19e60ef6a9a194ffafa4fcb533552675ba2efc659dc40615260ba2d16f7",
+    "inputs/ur5e_saddle_p0_u/timeout_reference.json": "c98dfe17afa1d87c6f098732e71ca6e5819cbcacf1f86dc2891f4d6ffe691d8e",
+    "inputs/ur5e_cylinder_p1_v/candidate_library.json.gz": "e629a1abce969c1252c0a57ca0bc5aba4607def5af4bd547601b4ac119df1af6",
+    "inputs/ur5e_cylinder_p1_v/scene.xml": "e91034b66ae36bda8014b97210f83c76d9332313ba6c1d451545158f3911c89b",
+    "inputs/ur5e_cylinder_p1_v/identity.json": "8a9c3e40d2c8c6603dcf7e7b9cade9bc0b0e9ce4c0f7890efbfca357e4411cfc",
+    "inputs/ur5e_cylinder_p1_v/timeout_reference.json": "eade7a642c280c43862bc8d809fcfb9637f4454d3eb047dd1f8ed0fd4f229845",
+    "inputs/panda_cylinder_p1_v/candidate_library.json.gz": "7a3cd4dd95b8a6721c11281dfd9b251e4654c3b7b8f674b395cca5d3c7f2f28c",
+    "inputs/panda_cylinder_p1_v/scene.xml": "dee3bcbd54649ab098cd77094832a7995d1c22644e1e2e537252972a55a69299",
+    "inputs/panda_cylinder_p1_v/identity.json": "d557da039e5ba6e9f871ec4e6c7036569f7d877e15298c9920c5039bbde5b33e",
+    "inputs/panda_cylinder_p1_v/timeout_reference.json": "7e2b4c17911ab652d1d30fc4d2c976464f9bafaf342f43062ba996124742e6bb",
+    "inputs/ur5e_saddle_p1_u/candidate_library.json.gz": "150d8ec0ddd45035b88efad0ec483a986a8ac86de0845ea98a383d9840ff7979",
+    "inputs/ur5e_saddle_p1_u/scene.xml": "47dc8236bb457477e55eeaaa64b3fac5837625ec89ec7a5ae3e1860669e17daa",
+    "inputs/ur5e_saddle_p1_u/identity.json": "2db208fdf4ed9feb7ed5b0ffebb675a467f9112e3b695c95ab9f33ac9b955a29",
+    "inputs/ur5e_saddle_p1_u/timeout_reference.json": "638d00fd56da80508d5ffc3f3489234ac60e43ee111a361eba2f52e67afef7f9",
+    "inputs/ur5e_plane_p0_v/candidate_library.json.gz": "4ab21435dfd7f8abfd8956caa64a082958dcc2563c3bfb2467e3a6e7277087e5",
+    "inputs/ur5e_plane_p0_v/scene.xml": "807ed19dc7de3b14e3beee7eec1927ef9a882dd0313b73268ce72183982128c7",
+    "inputs/ur5e_plane_p0_v/identity.json": "2a5ba62535c3a1bc1ae1a8a58b33318dc8684238d9c82d59b2e76ef8cc78aaca",
+    "inputs/ur5e_plane_p0_v/timeout_reference.json": "eb833e15648c0d2e865e04169b9127ffc86080f57e44fe0aafb7d3f108b6fcc7",
+    "inputs/panda_saddle_p0_u/candidate_library.json.gz": "acbefa2232cee78edc89d9514c082b4550c3859b1684624d3762d1ed86e523a4",
+    "inputs/panda_saddle_p0_u/scene.xml": "f00675c67b52a23a8a8fdd3a2b712b8ac80330a53dc15912702f84482087d897",
+    "inputs/panda_saddle_p0_u/identity.json": "6db33caff45224d2afae6a8e7edd8d7e621d8ab64ec3444800bc1e2ce33d482f",
+    "inputs/panda_saddle_p0_u/timeout_reference.json": "c0689ce7aa08d2f160f6c2b715279d0183d2665d4023cfb0f466af117e5ea365",
+    "inputs/panda_plane_p1_u/candidate_library.json.gz": "ca4bb5375183d1b5aacd486a13bd26157bc247dc183c56b558082773a657e6ea",
+    "inputs/panda_plane_p1_u/scene.xml": "bf781b7d29878b53da58d90fa793b15fefe2e895eb122b48f5e0b2b800c672e3",
+    "inputs/panda_plane_p1_u/identity.json": "f85ba2992a3e3d61535e9fc1085502c90adddad781f4f6c8f0f2fe628b4dcd4d",
+    "inputs/panda_plane_p1_u/timeout_reference.json": "1f15727e966112579611856225bb79e56fdd11a777ea339f519f8478c8609708",
+    "inputs/ur5e_plane_p0_u/reference/tilt_+0/reference.npz": "a42411d4411e91597bf4fb6dc680875122a61f655dfb9028f705be9ccc39fe75",
+    "inputs/ur5e_saddle_p1_v/reference/tilt_+0/reference.npz": "cd82301fee82d7203dae37f1f9bf2ce4b55e02658a4d199393c65c9d5b191ca6",
+    "inputs/panda_saddle_p0_v/reference/tilt_+0/reference.npz": "b17d74762354370baceefef1bbbd616d57f5ba97f450677b117a2f315d15a117",
+    "inputs/panda_cylinder_p1_u/reference/tilt_-9/reference.npz": "ad19d7b96b15ca2839d14254918d6e8ce36fad10c6418cb793771dbb7e4fa518",
+    "inputs/panda_cylinder_p0_v/reference/tilt_+0/reference.npz": "af20b649c70f63141a04429d4ab16ac69d20179f817a364776626587d3622697",
+    "inputs/ur5e_cylinder_p0_u/reference/tilt_+0/reference.npz": "336b06357a83bc1c5430d9e52198734f9661c1f148a021e481b4bafe2a5b2cac",
+    "inputs/ur5e_plane_p1_v/reference/tilt_+0/reference.npz": "322311e544b7e889ab107d777079b4d67f6a65c8ddc7313ceb97ccfe5842ecf2",
+    "inputs/ur5e_saddle_p0_v/reference/tilt_+0/reference.npz": "116130d366a224a2a6f125c197f0218c8973a12029127f17fc564244e57f61fa",
+    "inputs/panda_saddle_p1_v/reference/tilt_+0/reference.npz": "530649b147e2a5600a5fadae185be821c7028b8e89120355a41ac7b9ce3bbdfa",
+    "inputs/panda_plane_p0_v/reference/tilt_+0/reference.npz": "971b59f931c38ea1672b95db29e2c1cc764a635aa980f0c932a87fe5722fe71d",
+    "inputs/ur5e_plane_p1_u/reference/tilt_+0/reference.npz": "048464e3301e9db38327cb929a43d65ccc629d8307e46ac9a95cb4607cb247ed",
+    "inputs/panda_plane_p1_v/reference/tilt_+0/reference.npz": "d8c17da05e62c3e61cc66ddf8fcd8e59c9a2af2eab5a8311ad0a751eef83cb08",
+    "inputs/panda_plane_p0_u/reference/tilt_+0/reference.npz": "a52329c82bd2cca2b66d6182cd5f35c81fe6a242010e3602c72d5f4138a8cfaa",
+    "inputs/panda_cylinder_p0_u/reference/tilt_-6/reference.npz": "105bb11551de5088e5c1d824c67eb7f583693c0529c35a3b45d0d08050f110fd",
+    "inputs/ur5e_cylinder_p0_v/reference/tilt_+0/reference.npz": "1b98422d85f3151874bf0ced3e827e214d59d095fed9119d02ed2f53629062bf",
+    "inputs/panda_saddle_p1_u/reference/tilt_+0/reference.npz": "21ccf0df5a3d764a28f99861f3c796f5699b62d2078bb6edbb01915945d581e0",
+    "inputs/ur5e_cylinder_p1_u/reference/tilt_+0/reference.npz": "a109ed815e4c741e121a7696adb6e4feec943f54c12c4d631bed3e51a04640a9",
+    "inputs/ur5e_saddle_p0_u/reference/tilt_+0/reference.npz": "84d7738347ffa88f45bd58ed29faf604c05936d6fe4749e355e0189136cad865",
+    "inputs/ur5e_cylinder_p1_v/reference/tilt_+0/reference.npz": "f23f6f3d93fdfb8692a5a5ddf2af77c883d9bb90cac6ab5fafc802e912be0d19",
+    "inputs/panda_cylinder_p1_v/reference/tilt_+6/reference.npz": "abce5046e956cea04e882dfe58862a7cd76a681a502d8c9360b155906ce5affb",
+    "inputs/ur5e_saddle_p1_u/reference/tilt_+0/reference.npz": "3021f6c9a92b9bcedfb75e855693ea94408dddce217d08268d7ca1e45e79b9f6",
+    "inputs/ur5e_plane_p0_v/reference/tilt_+0/reference.npz": "ffe46506c452f996923a063ee113690baca9765076ab396766ce176d1759b50d",
+    "inputs/panda_saddle_p0_u/reference/tilt_+0/reference.npz": "6d84050d0513a6c3d7fc47a1f60f8b175520d44aae918a9c64c76dbfee399396",
+    "inputs/panda_plane_p1_u/reference/tilt_+0/reference.npz": "1f595f1b1e31a0f94385105d0e1c16616ace557ee437e97454c9584d45a42931"
+  },
+  "git_head": "74d127c712d771b6ba03ab22432ff3ad2f3ac21b",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+  "cpu": "processor\t: 0\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 0\ncpu cores\t: 16\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 0\ncpu cores\t: 16\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 2\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.283\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 4\ncpu cores\t: 16\napicid\t\t: 8\ninitial apicid\t: 8\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 3\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 4\ncpu cores\t: 16\napicid\t\t: 9\ninitial apicid\t: 9\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 4\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 8\ncpu cores\t: 16\napicid\t\t: 16\ninitial apicid\t: 16\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 5\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 8\ncpu cores\t: 16\napicid\t\t: 17\ninitial apicid\t: 17\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 6\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 12\ncpu cores\t: 16\napicid\t\t: 24\ninitial apicid\t: 24\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 7\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.319\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 12\ncpu cores\t: 16\napicid\t\t: 25\ninitial apicid\t: 25\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 8\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 16\ncpu cores\t: 16\napicid\t\t: 32\ninitial apicid\t: 32\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 9\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 16\ncpu cores\t: 16\napicid\t\t: 33\ninitial apicid\t: 33\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 10\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 20\ncpu cores\t: 16\napicid\t\t: 40\ninitial apicid\t: 40\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 11\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 20\ncpu cores\t: 16\napicid\t\t: 41\ninitial apicid\t: 41\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 12\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 24\ncpu cores\t: 16\napicid\t\t: 48\ninitial apicid\t: 48\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 13\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 24\ncpu cores\t: 16\napicid\t\t: 49\ninitial apicid\t: 49\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 14\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5288.552\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 28\ncpu cores\t: 16\napicid\t\t: 56\ninitial apicid\t: 56\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 15\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 28\ncpu cores\t: 16\napicid\t\t: 57\ninitial apicid\t: 57\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 16\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 4195.566\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 32\ncpu cores\t: 16\napicid\t\t: 64\ninitial apicid\t: 64\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 17\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 4225.384\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 33\ncpu cores\t: 16\napicid\t\t: 66\ninitial apicid\t: 66\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 18\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 4232.500\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 34\ncpu cores\t: 16\napicid\t\t: 68\ninitial apicid\t: 68\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 19\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 4196.142\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 35\ncpu cores\t: 16\napicid\t\t: 70\ninitial apicid\t: 70\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 20\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 4199.528\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 36\ncpu cores\t: 16\napicid\t\t: 72\ninitial apicid\t: 72\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 21\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 4165.697\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 37\ncpu cores\t: 16\napicid\t\t: 74\ninitial apicid\t: 74\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 22\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 4196.628\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 38\ncpu cores\t: 16\napicid\t\t: 76\ninitial apicid\t: 76\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 23\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 4199.813\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 39\ncpu cores\t: 16\napicid\t\t: 78\ninitial apicid\t: 78\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\n",
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "threads": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "formal_test_run": false,
+  "old_methods_and_verifier_unchanged": true,
+  "candidate_library_source": "Phase15 independent multistart reference only; no baseline planned_path reads"
+}

@@ -1,0 +1,48 @@
+{
+  "slot": "ur5e_plane_p1_v",
+  "scene_uid": "26227b24cb54fbd1ee1f9a2ff9548fd6b42ce382e7b92e4713c9a7c4eba0431e",
+  "cluster": "ur5e_plane_p1",
+  "robot": "ur5e",
+  "family": "plane",
+  "placement": 1,
+  "direction": "v",
+  "task": {
+    "family": "plane",
+    "placement": 1,
+    "direction": "v",
+    "robot": "ur5e",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": false
+  },
+  "original_identity_sha256": "93d858e2628acb80ad5e0a9e99501ec900556aaf1fdbf6009f550686369eb884",
+  "reference_geometry_feasible": true,
+  "attempts": [
+    {
+      "tilt": 0.0,
+      "root": "inputs/ur5e_plane_p1_v/reference/tilt_+0",
+      "status": "reference_available"
+    }
+  ],
+  "reference_source": "inputs/ur5e_plane_p1_v/reference/tilt_+0",
+  "common_start": [
+    -0.45827257291808665,
+    -1.7405389301522969,
+    1.7706098043825973,
+    -1.6008672012303007,
+    4.712388980589794,
+    3.99231701946235
+  ],
+  "common_end": [
+    -0.20724444872718562,
+    -1.1789136773279358,
+    1.1423972894694083,
+    -1.5342799391414728,
+    4.712388980589793,
+    4.243345143653251
+  ],
+  "selected_tilt_deg": 0.0,
+  "split": "same_24_development_scenes_calibrated_route",
+  "no_method_outcome_used": true,
+  "quality_thresholds_unchanged": true
+}

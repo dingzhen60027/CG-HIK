@@ -1,0 +1,26 @@
+scope: phase2_endpoint_graph_and_local_transition_development
+baseline: 74d127c712d771b6ba03ab22432ff3ad2f3ac21b
+methods: [B0, B1, B2-common, A1, A2, Proposed]
+scene_source: outputs/process_scan/phase15_baselines/inputs/seal.json
+repeats: 3
+physical_repeat: 0
+seed: 2026091801
+endpoint_candidate_cap: 12
+candidate_dedup_rad: 0.001
+candidate_source: frozen_independent_reference_multistart_layers
+fine_edge_max_joint_delta_rad: 0.35
+fine_edge_interior_checks: 3
+control_points: 96
+boundary_layer_parameter_m: 0.020
+common_speed_reserve: 0.90
+geometry_fit_budget_s: 30
+optimization_budget_s: 30
+checkpoints_s: [1, 5, 10, 30]
+primary_checkpoint_s: 30
+optimizer_grid_base_nodes: 201
+graph_boundary_velocities: joint_range_and_acceleration_reachability_envelope
+non_scanning_process_domain: unchanged_phase15_full_process_domain
+paired_bootstrap_seed: 2026091607
+paired_bootstrap_resamples: 4000
+video_selection: placement0_u_all_families_robots_methods_repeat0
+formal_scenes_run: false

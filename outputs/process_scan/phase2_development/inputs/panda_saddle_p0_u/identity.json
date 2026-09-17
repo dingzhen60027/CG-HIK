@@ -1,0 +1,50 @@
+{
+  "slot": "panda_saddle_p0_u",
+  "scene_uid": "f6c31864e2ce3e5c2e19b914f5e5b132c9658310d934a68e88ca62a1b777611b",
+  "cluster": "panda_saddle_p0",
+  "robot": "panda",
+  "family": "saddle",
+  "placement": 0,
+  "direction": "u",
+  "task": {
+    "family": "saddle",
+    "placement": 0,
+    "direction": "u",
+    "robot": "panda",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": false
+  },
+  "original_identity_sha256": "e74e6f5b17561ae7023f1be6087071208b78d4aaa0ffb3b7ed27161879585ca2",
+  "reference_geometry_feasible": true,
+  "attempts": [
+    {
+      "tilt": 0.0,
+      "root": "inputs/panda_saddle_p0_u/reference/tilt_+0",
+      "status": "reference_available"
+    }
+  ],
+  "reference_source": "inputs/panda_saddle_p0_u/reference/tilt_+0",
+  "common_start": [
+    -0.2722781743763952,
+    -0.21383879235790149,
+    -0.07119689740801255,
+    -2.15689886523415,
+    0.051270324757974724,
+    1.665691300369995,
+    -1.90382727481384
+  ],
+  "common_end": [
+    -0.027955686874453874,
+    -0.27981313521065243,
+    0.21364237170664804,
+    -2.220154718033228,
+    -0.05339544731097123,
+    1.683387772997338,
+    -1.4066264562212998
+  ],
+  "selected_tilt_deg": 0.0,
+  "split": "same_24_development_scenes_calibrated_route",
+  "no_method_outcome_used": true,
+  "quality_thresholds_unchanged": true
+}

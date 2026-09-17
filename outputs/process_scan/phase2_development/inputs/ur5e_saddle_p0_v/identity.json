@@ -1,0 +1,48 @@
+{
+  "slot": "ur5e_saddle_p0_v",
+  "scene_uid": "36b3d3486fc1b60616750c9293d770932ac4609219d8fed3920864fd4b552a68",
+  "cluster": "ur5e_saddle_p0",
+  "robot": "ur5e",
+  "family": "saddle",
+  "placement": 0,
+  "direction": "v",
+  "task": {
+    "family": "saddle",
+    "placement": 0,
+    "direction": "v",
+    "robot": "ur5e",
+    "endpoint_extension": 0.003,
+    "overlap_margin": 0.001,
+    "calibration": false
+  },
+  "original_identity_sha256": "4a02359a75ff5664c89112389174782b1d409ca69eda600773f62b1c39ac0600",
+  "reference_geometry_feasible": true,
+  "attempts": [
+    {
+      "tilt": 0.0,
+      "root": "inputs/ur5e_saddle_p0_v/reference/tilt_+0",
+      "status": "reference_available"
+    }
+  ],
+  "reference_source": "inputs/ur5e_saddle_p0_v/reference/tilt_+0",
+  "common_start": [
+    -0.6352813906214093,
+    4.666001418903167,
+    1.6049731608492408,
+    -1.2747771665521423,
+    4.703938549377424,
+    4.059064020766853
+  ],
+  "common_end": [
+    -0.5397051575275702,
+    4.864440042438614,
+    1.4968914069905954,
+    -1.768944960406316,
+    4.9703370988836815,
+    4.207516654283633
+  ],
+  "selected_tilt_deg": 0.0,
+  "split": "same_24_development_scenes_calibrated_route",
+  "no_method_outcome_used": true,
+  "quality_thresholds_unchanged": true
+}
