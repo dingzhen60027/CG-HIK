@@ -1,0 +1,78 @@
+{
+  "identity": {
+    "slot": "panda_plane_p0_u",
+    "scene_uid": "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609",
+    "cluster": "panda_plane_p0",
+    "robot": "panda",
+    "family": "plane",
+    "placement": 0,
+    "direction": "u",
+    "task": {
+      "family": "plane",
+      "placement": 0,
+      "direction": "u",
+      "robot": "panda",
+      "endpoint_extension": 0.003,
+      "overlap_margin": 0.001,
+      "calibration": false
+    },
+    "original_identity_sha256": "49b4ce751c6b07a6e5fb3509d99677ed92cd4b31f4a90aaf60e04c6ec555a102",
+    "reference_geometry_feasible": true,
+    "attempts": [
+      {
+        "tilt": 0.0,
+        "root": "inputs/panda_plane_p0_u/reference/tilt_+0",
+        "status": "reference_available"
+      }
+    ],
+    "reference_source": "inputs/panda_plane_p0_u/reference/tilt_+0",
+    "common_start": [
+      -0.08450803059339765,
+      -0.5117073083438758,
+      -0.18692616000295512,
+      -2.4697629601999544,
+      -0.09866932500313265,
+      1.9637961993046387,
+      -1.7808498589002235
+    ],
+    "common_end": [
+      0.11841220808137598,
+      -0.5507687822662305,
+      0.00034160481216325827,
+      -2.5083556251647146,
+      0.00019303702309962943,
+      1.9575868624094217,
+      -1.4521658466307912
+    ],
+    "selected_tilt_deg": 0.0,
+    "split": "same_24_development_scenes_calibrated_route",
+    "no_method_outcome_used": true,
+    "quality_thresholds_unchanged": true
+  },
+  "method": "A1",
+  "repeat": 1,
+  "code_hashes": {
+    "src/confik/task_balance_gn.py": "752a69afede984d0617997d6c412753c327f9f642eb0f08ef2ab33c464a68d57",
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/process_scan/phase15.py": "9f783f9eeeac43826dd490a417ba42e1ce6fe6979a59a1b3fe47bcfd0dc3a0e3",
+    "src/confik/process_scan/phase2_optimize.py": "6ef78d94cbdae90e759ec6c895bcd86e6ebfe6252cef8687409ab5f5adf90bfd",
+    "src/confik/process_scan/phase2_graph.py": "8af8e09059d2c036ecd515d7a5aa24cfc6d176bea6cbf9595c415ac7892f4f8e",
+    "src/confik/process_scan/execution.py": "fd75dd0b4a89ed8e0e15e8909cc4f2d3f6f2188863361e038d9133f832a9a312",
+    "src/confik/process_scan/planning.py": "0ff97013fbb81c17316f66dde1607b242635281d370ea6247a2b7d171bf0f5d9",
+    "src/confik/process_scan/task.py": "a7603c2bccfa21906cf3281d74abd0541398e3348b443daef93b9f15652e9333",
+    "src/confik/process_scan/__init__.py": "1027fbff570c813e8dadf870667f7c941415fc908844aa514e39b1a2d8795a0e",
+    "src/confik/process_scan/models.py": "12f519da6af6d4464e57564f99a25a6a71910728d796f73f2d5cff5358264f51",
+    "src/confik/process_scan/boundmpc_check.py": "579396f24701e7a48e0c80d13ca83f95a2bc3c1a3cd0184ef05ebfd6d0a9f251",
+    "src/confik/process_scan/geometry_adapter.py": "40875f89a332b9fe60e466ebc9a8ab13f26fdaa6b2b3c21331e20e7775fe2106",
+    "src/confik/process_scan/collision.py": "eaf8df2c2759c40a1a8cb0f8765442bba16b31e9893bb1d7d20a553425025ae8",
+    "src/confik/process_scan/study.py": "72dc808c622ec67cb3685453448ab6515c94f21ae765cbc8d5312c66b849e136",
+    "src/confik/process_scan/phase2.py": "4672bd268c5851f05cf819944e242b185702f2347aa8aa514db5b3e5f56fdaff",
+    "scripts/run_process_scan_phase2.py": "277ef415cb9c759e3e12d5a145ec0dda9c66de07a1ece2c201363ff236236072",
+    "configs/process_scan_phase2.yaml": "da40c39762bc3fcc1c40bd3523c47e99004e612c28fdd521b3b1d8030f5488ad"
+  },
+  "shared_initial_source": "graphs/panda_plane_p0_u/r1/distance",
+  "old_evidence_not_overwritten": true
+}

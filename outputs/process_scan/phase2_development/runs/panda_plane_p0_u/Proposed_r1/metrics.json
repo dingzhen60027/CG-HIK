@@ -1,0 +1,32 @@
+{
+  "slot": "panda_plane_p0_u",
+  "scene_uid": "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609",
+  "cluster": "panda_plane_p0",
+  "robot": "panda",
+  "family": "plane",
+  "placement": 0,
+  "direction": "u",
+  "method": "Proposed",
+  "repeat": 1,
+  "planner_feasible": false,
+  "physical_run": false,
+  "quality_completed": null,
+  "execution_completed": null,
+  "T_init": 43.71692567500577,
+  "T_opt": null,
+  "status": "graph_connected_but_no_verified_C2_fit",
+  "total_plan_wall_s": 43.71692567500577,
+  "shared_graph_statistics": {
+    "fine_possible": 70642,
+    "fine_discontinuous": 58556,
+    "fine_geometry_rejected": 1198,
+    "fine_collision_rejected": 0,
+    "fine_retained": 10888,
+    "endpoint_nodes": 218,
+    "endpoint_layers": 20,
+    "endpoint_possible": 2472,
+    "endpoint_retained": 776
+  },
+  "endpoint_closure_error_rad": null,
+  "planning_cost_scope": "Includes charged independent candidate validation, shared graph construction, own constrained fit, optimization, dense checks and TOPPRA; historical input-library acquisition excluded and disclosed."
+}
