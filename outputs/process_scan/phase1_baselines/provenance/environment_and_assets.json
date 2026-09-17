@@ -1,0 +1,177 @@
+{
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+  "executable": "/home/eric/wjg/btry/.venv-process-scan/bin/python",
+  "versions": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.0",
+    "pin": "3.9.0",
+    "coal": "3.0.2",
+    "mujoco": "3.10.0",
+    "casadi": "3.7.2",
+    "toppra": "0.6.3",
+    "matplotlib": "3.10.8",
+    "h5py": "3.16.0"
+  },
+  "packaging_time_utc": "2026-09-16T17:25:01.794717+00:00",
+  "os_release": "PRETTY_NAME=\"Ubuntu 22.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"22.04\"\nVERSION=\"22.04.5 LTS (Jammy Jellyfish)\"\nVERSION_CODENAME=jammy\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=jammy\n",
+  "provided_design_files": {
+    "MASTER_PLAN_V2.md": "1047cd1f041ba9d7a85849f74ef62671ebf568eb85093c223d5d376e33442860",
+    "CODEX_PHASE1_REUSE_BASELINES.md": "0fb8dc274eae9638edab5bd2c03f11d645a5dc1d6ac6a1885d3d4bcb3db21706",
+    "protocol_draft.yaml": "275c754c20a17d1f98973faaac030b68cd7596621d4cfaef9027bc3d9489dd9f",
+    "metrics_schema.json": "d8be31f992a6e6e1ee638a90055c8ca30ae072492d0d4d04a7132b374f117a9f",
+    "scene_design.json": "0a5dbf75b3083bb00659134df0f42d01efdaffd9800d3b656fc9cdf0e4d519b2",
+    "REFERENCE_LINES.md": "3c61c5c9811a96277a8458c88e2173253067c21c663e347503d72db98a9bca54",
+    "previous_reference_notes.md": "7ae44a85e9cfb8e4cd633462d75e3cd36f6d39b49aa430c8dc2110ed32f51751"
+  },
+  "models": {
+    "panda": {
+      "urdf": "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/robots/panda_arm.urdf",
+      "urdf_sha256": "e1fb335ca060722abc830206e23af0ae8d7b32d135e52ee914132d9b19b3e29c",
+      "joint_names": [
+        "panda_joint1",
+        "panda_joint2",
+        "panda_joint3",
+        "panda_joint4",
+        "panda_joint5",
+        "panda_joint6",
+        "panda_joint7"
+      ],
+      "lower": [
+        -2.8973,
+        -1.7628,
+        -2.8973,
+        -3.0718,
+        -2.8973,
+        -0.0175,
+        -2.8973
+      ],
+      "upper": [
+        2.8973,
+        1.7628,
+        2.8973,
+        -0.0698,
+        2.8973,
+        3.7525,
+        2.8973
+      ],
+      "original_velocity": [
+        2.175,
+        2.175,
+        2.175,
+        2.175,
+        2.61,
+        2.61,
+        2.61
+      ],
+      "optimizer_backend": "Pinocchio NativeGeometry",
+      "geometry_acceptance_backend": "frozen NumPy URDFKinematics",
+      "nonlinear_program_backend": "CasADi/Ipopt/MUMPS",
+      "physics_backend": "MuJoCo 3.10.0"
+    },
+    "ur5e": {
+      "urdf": "/home/eric/isaacsim/extsDeprecated/isaacsim.robot_motion.motion_generation/motion_policy_configs/universal_robots/ur5e/ur5e.urdf",
+      "urdf_sha256": "e806cecaa2b9c56de58d74177ec6479351bc359f4ef779c7368e09a64116cb12",
+      "joint_names": [
+        "shoulder_pan_joint",
+        "shoulder_lift_joint",
+        "elbow_joint",
+        "wrist_1_joint",
+        "wrist_2_joint",
+        "wrist_3_joint"
+      ],
+      "lower": [
+        -6.283185307179586,
+        -6.283185307179586,
+        -3.141592653589793,
+        -6.283185307179586,
+        -6.283185307179586,
+        -6.283185307179586
+      ],
+      "upper": [
+        6.283185307179586,
+        6.283185307179586,
+        3.141592653589793,
+        6.283185307179586,
+        6.283185307179586,
+        6.283185307179586
+      ],
+      "original_velocity": [
+        3.141592653589793,
+        3.141592653589793,
+        3.141592653589793,
+        3.141592653589793,
+        3.141592653589793,
+        3.141592653589793
+      ],
+      "optimizer_backend": "Pinocchio NativeGeometry",
+      "geometry_acceptance_backend": "frozen NumPy URDFKinematics",
+      "nonlinear_program_backend": "CasADi/Ipopt/MUMPS",
+      "physics_backend": "MuJoCo 3.10.0"
+    }
+  },
+  "mesh_assets": {
+    "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/meshes/collision/link0.stl": {
+      "sha256": "dfc6d94330de8ddb005b311bfdba9f3b8e1aa7c256b71592ee7ff32cb9a9a5aa",
+      "bytes": 10084
+    },
+    "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/meshes/collision/link1.stl": {
+      "sha256": "e41a39a94108fcf56aacff603fc91ec80541f4c1af17b51a0de5617f5566e6d2",
+      "bytes": 15084
+    },
+    "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/meshes/collision/link2.stl": {
+      "sha256": "370f7605a0fae3529db169ded50f52f171024aa792d4d773bc84197301f6a039",
+      "bytes": 15084
+    },
+    "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/meshes/collision/link3.stl": {
+      "sha256": "0a8d638b9349c6c0eefc4e888636ac4838c4b27170f18a51699321118af709c1",
+      "bytes": 15084
+    },
+    "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/meshes/collision/link4.stl": {
+      "sha256": "0180ebb5772ec9840cb049750cffb29a9ddc90311752a16ea34757782ef9e48d",
+      "bytes": 15084
+    },
+    "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/meshes/collision/link5.stl": {
+      "sha256": "dd17e688c7870e722283525879643d53a74c0024d328b0e14b034b54c8b6c31a",
+      "bytes": 15084
+    },
+    "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/meshes/collision/link6.stl": {
+      "sha256": "20b768e99a0e0440b5754dcca108016434e57937cc356acd9c352ccd3cb27f77",
+      "bytes": 10084
+    },
+    "/home/eric/isaacsim/exts/isaacsim.asset.importer.urdf/data/urdf/robots/franka_description/meshes/collision/link7.stl": {
+      "sha256": "92ac6afcf7574c034d3170d8a68e95ac9048ab9d0dd5bbd8311b86e551b9ab1c",
+      "bytes": 10084
+    },
+    "/home/eric/wjg/btry/tmp/process_scan_dependencies/ur_description/meshes/ur5e/collision/base.stl": {
+      "sha256": "9a145e0d46f2130afdf2a2e8825a00a929870c4c3d6d8e4d1adc5f04db3aac1b",
+      "bytes": 21084
+    },
+    "/home/eric/wjg/btry/tmp/process_scan_dependencies/ur_description/meshes/ur5e/collision/shoulder.stl": {
+      "sha256": "ceb92532177daa77682f5fbd628e01c2137d168f949a7a706ce1dabe9f002387",
+      "bytes": 70084
+    },
+    "/home/eric/wjg/btry/tmp/process_scan_dependencies/ur_description/meshes/ur5e/collision/upperarm.stl": {
+      "sha256": "ee893044caf00075cb55b4cf666d1f1311c7979786212a501009f33bee945209",
+      "bytes": 99684
+    },
+    "/home/eric/wjg/btry/tmp/process_scan_dependencies/ur_description/meshes/ur5e/collision/forearm.stl": {
+      "sha256": "2e7423cab807c34160ec4f770daee5e747d70e777eb01b7beeace2b8c5751816",
+      "bytes": 53284
+    },
+    "/home/eric/wjg/btry/tmp/process_scan_dependencies/ur_description/meshes/ur5e/collision/wrist1.stl": {
+      "sha256": "f8c9f9337b6fd98c75f052e96de10e14a107ddb6874ba6b904e546f8a4e4f43a",
+      "bytes": 59584
+    },
+    "/home/eric/wjg/btry/tmp/process_scan_dependencies/ur_description/meshes/ur5e/collision/wrist2.stl": {
+      "sha256": "2964a63f60ce3e3cf3ad55bcf190d7876d50e373cb64b70a57cea5885eaf3c86",
+      "bytes": 67584
+    },
+    "/home/eric/wjg/btry/tmp/process_scan_dependencies/ur_description/meshes/ur5e/collision/wrist3.stl": {
+      "sha256": "83b3666b4ae2badd54af0d2c25a921682ecbc29e849eec646c3ed55fb74c78a3",
+      "bytes": 7184
+    }
+  },
+  "asset_hash_capture_scope": "Captured during result packaging; XML/FK equivalence and numerical-source input seal were captured before the comparison.",
+  "old_environment_upgraded": false,
+  "external_asset_paths_required": true
+}

@@ -1,0 +1,1600 @@
+{
+  "config": {
+    "protocol": "surface_scan_continuity_v2",
+    "scope": "development_baselines_only",
+    "old_evidence_base": "bf9ccc4e0314c0d289101d89ff4e40577de392f9",
+    "robots": [
+      "panda",
+      "ur5e"
+    ],
+    "families": [
+      "plane",
+      "cylinder",
+      "saddle"
+    ],
+    "placements": [
+      0,
+      1
+    ],
+    "directions": [
+      "u",
+      "v"
+    ],
+    "methods": [
+      "B0",
+      "B1",
+      "B2",
+      "B3",
+      "G"
+    ],
+    "repeats": 3,
+    "control_points": 64,
+    "geometry_nodes": 401,
+    "dense_validation_nodes": 3201,
+    "timing_grid": 801,
+    "timing_grid_additions": "all_task_joins_and_spline_knots",
+    "timing_dense_validation_nodes": 6401,
+    "timing_validation_dilation": "max_1_velocity_ratio_sqrt_acceleration_ratio_div_0.98",
+    "sensor_planning_speed_m_s": 0.198,
+    "public_sensor_max_gap_m": 0.001,
+    "public_sensor_profiles_hz": 200,
+    "geometry_continuity_radius_rad": 0.35,
+    "geometry_step_scale_rad": 0.15,
+    "geometry_node_budget_s": 1.0,
+    "geometry_max_iterations": 30,
+    "kappa": 1.0,
+    "forcing": 0.25,
+    "seed_tolerances": {
+      "position_m": 0.001,
+      "orientation_deg": 0.5
+    },
+    "nominal_tolerances": {
+      "position_m": 5e-05,
+      "orientation_deg": 0.05
+    },
+    "reference_construction": "single_TRF_start_then_continuous_GN_geometry_only_before_comparison",
+    "post_initialization_checkpoints_s": [
+      1,
+      5,
+      10,
+      30
+    ],
+    "primary_checkpoint_s": 10,
+    "max_optimization_s": 30,
+    "controller": "computed_torque_inertia_scaled_PD",
+    "controller_kp_per_s2": 400.0,
+    "controller_kd_per_s": 40.0,
+    "physics_dt_s": 0.001,
+    "controller_dt_s": 0.002,
+    "scanner_mount_tool_z_m": 0.08,
+    "scanner_mass_kg": 0.15,
+    "scanner_diagonal_inertia_kg_m2": [
+      6.5e-05,
+      6.5e-05,
+      4e-05
+    ],
+    "joint_speed_factor": 0.5,
+    "joint_acceleration_limit_rad_s2": 2.0,
+    "rate_validation_relative_tolerance": 0.001,
+    "joint_position_numerical_tolerance_rad": 1e-06,
+    "settle_velocity_rad_s": 0.01,
+    "settle_position_rad": 0.001,
+    "settle_hold_s": 0.2,
+    "timeout_common_reference_factor": 3,
+    "paired_cluster": "robot_family_placement",
+    "bootstrap_samples": 4000,
+    "bootstrap_seed": 2026091607,
+    "schedule_seed": 2026091611,
+    "official_boundmpc_commit": "b286df18641145bb97b31f29387227e4089a1ba4",
+    "ur_description_commit": "18e6f603b3ebc2ec479fecb62d6be544b15755e9",
+    "menagerie_inspected_not_used_commit": "8161bba264d7fa7c99ca301e91e7fb44737676ad",
+    "physical_robot_model": "frozen_URDF_geometry_inertia_plus_original_collision_meshes",
+    "collision_distance_backend": "Coal_3.0.2_same_convex_meshes",
+    "collision_surface_envelope": "conservative_CAD_bounding_box_for_planning_hfield_for_execution_and_rays",
+    "old_methods_modified": false,
+    "formal_tests_run": false
+  },
+  "code_hashes": {
+    "configs/process_scan_phase1.yaml": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+    "scripts/run_process_scan.py": "43b002c976b85d865f454882c1b0b12dd30a11b4ad2176f8f6714e351c4f486e",
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/process_scan/__init__.py": "1027fbff570c813e8dadf870667f7c941415fc908844aa514e39b1a2d8795a0e",
+    "src/confik/process_scan/boundmpc_check.py": "579396f24701e7a48e0c80d13ca83f95a2bc3c1a3cd0184ef05ebfd6d0a9f251",
+    "src/confik/process_scan/collision.py": "eaf8df2c2759c40a1a8cb0f8765442bba16b31e9893bb1d7d20a553425025ae8",
+    "src/confik/process_scan/execution.py": "60dd0a784720e919bae6fb612495a03b2144ed8829f8866367e36f6e2625d443",
+    "src/confik/process_scan/geometry_adapter.py": "40875f89a332b9fe60e466ebc9a8ab13f26fdaa6b2b3c21331e20e7775fe2106",
+    "src/confik/process_scan/models.py": "12f519da6af6d4464e57564f99a25a6a71910728d796f73f2d5cff5358264f51",
+    "src/confik/process_scan/planning.py": "077f4c999f3fd8bee0315c33f2d45b383e24a9e54ba84f8a8da10d8a35b52b0b",
+    "src/confik/process_scan/study.py": "72dc808c622ec67cb3685453448ab6515c94f21ae765cbc8d5312c66b849e136",
+    "src/confik/process_scan/task.py": "3934a7602b9529fc99d844c5e7af97a4c6c208c48a857e56bb7b9a2150ec7abd",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/task_balance_gn.py": "752a69afede984d0617997d6c412753c327f9f642eb0f08ef2ab33c464a68d57"
+  },
+  "scenes": [
+    {
+      "slot": "panda_plane_p0_u",
+      "family": "plane",
+      "placement": 0,
+      "direction": "u",
+      "robot": "panda",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.37237564832425596,
+        -0.49406924478426073,
+        0.0696105146088131,
+        -2.463149574381345,
+        0.03580388130475155,
+        1.969862418731956,
+        -1.8957808291772285
+      ],
+      "common_end": [
+        -0.031191392973809413,
+        0.20228721855571513,
+        0.1137686596826247,
+        -1.7067472658795677,
+        -0.024167861745760962,
+        1.9076750151058544,
+        -1.4825291890325358
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.022036240911041227,
+      "cluster": "panda_plane_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "ad9a5adfe8c6cf9aecfbd197ded2f92ea8adb6fb6ca790fb4f8fca79550349fb",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609"
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "family": "plane",
+      "placement": 0,
+      "direction": "v",
+      "robot": "panda",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.3785338444093598,
+        -0.49427523372717336,
+        0.07506736580050889,
+        -2.4631259122249896,
+        0.03861996021305504,
+        1.969760442651148,
+        -0.32743196050020684
+      ],
+      "common_end": [
+        0.04510392581944213,
+        0.20107148788160753,
+        0.03001391062605783,
+        -1.7069452569975352,
+        -0.0063454015308532915,
+        1.907924181384746,
+        0.0766139923040271
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.022066023158668818,
+      "cluster": "panda_plane_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "ad9a5adfe8c6cf9aecfbd197ded2f92ea8adb6fb6ca790fb4f8fca79550349fb",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "f3f3897b5f524fd2bf769f27b0ff33b7489cd38286aa0a3aef7bd1de2cff55db"
+    },
+    {
+      "slot": "panda_plane_p1_u",
+      "family": "plane",
+      "placement": 1,
+      "direction": "u",
+      "robot": "panda",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        0.4023916422945765,
+        -0.40792572109013125,
+        -0.49189826617658716,
+        -2.3418102537811656,
+        -0.20480219800643337,
+        1.9702292947772182,
+        -1.8067156945069276
+      ],
+      "common_end": [
+        0.04360994114727693,
+        0.2797934711623774,
+        0.22625036034948082,
+        -1.6052346343109896,
+        -0.06502914875072387,
+        1.8776443686207824,
+        -1.55158487823501
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.022036537865727804,
+      "cluster": "panda_plane_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "bf781b7d29878b53da58d90fa793b15fefe2e895eb122b48f5e0b2b800c672e3",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "dc500163bea8d607c8f6676fccd669f938cace853f762bdc955d3710e5f2bae9"
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "family": "plane",
+      "placement": 1,
+      "direction": "v",
+      "robot": "panda",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.05420865740225268,
+        -0.35772129395751817,
+        -0.08220731953042722,
+        -2.346286969500168,
+        -0.03147526911543381,
+        1.9894896907876687,
+        -0.38023231799116847
+      ],
+      "common_end": [
+        0.1479200252444177,
+        0.2748260045394045,
+        0.10619623061870981,
+        -1.605699311926498,
+        -0.03019341067958423,
+        1.8789230010440667,
+        -0.002481483478033229
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.02203116364084549,
+      "cluster": "panda_plane_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "bf781b7d29878b53da58d90fa793b15fefe2e895eb122b48f5e0b2b800c672e3",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "e283b88390fe538a85d2694079d62454b1b3aa046d100f8504b4a66d9736b8d5"
+    },
+    {
+      "slot": "panda_cylinder_p0_u",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "u",
+      "robot": "panda",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.11958344394348212,
+        0.9944723274197087,
+        -0.07406075858527622,
+        -0.46960608223671885,
+        -0.002369283564934936,
+        1.0882933433115698,
+        -1.7433967609890566
+      ],
+      "common_end": [
+        -0.11958344394348212,
+        0.9944723274197087,
+        -0.07406075858527622,
+        -0.46960608223671885,
+        -0.002369283564934936,
+        1.0882933433115698,
+        -1.7433967609890566
+      ],
+      "reference_geometry_feasible": false,
+      "reference_pose_ok": false,
+      "reference_min_clearance": 0.02131090999891404,
+      "cluster": "panda_cylinder_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "c51a13d69155db7b37bb34d85918bf48d118c06fc38110a53917e04050375ba7",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "1d626ca03a345e6601c064a6a0c00a1a9212ee8924f6c3978e4ae4fa19bcc8eb"
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "v",
+      "robot": "panda",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.055570082452378135,
+        -0.8589146362353833,
+        -0.3306624846353994,
+        -2.859714897246991,
+        -0.2001137235003645,
+        2.3580226223203886,
+        -0.19983484430424422
+      ],
+      "common_end": [
+        0.05006349083489871,
+        0.683027641783202,
+        0.017782246890524416,
+        -0.9989409890979939,
+        0.011670045278365654,
+        1.3326574559391282,
+        0.06658969688061582
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.02140453522419018,
+      "cluster": "panda_cylinder_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "c51a13d69155db7b37bb34d85918bf48d118c06fc38110a53917e04050375ba7",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "84054da21481d1359c181b6fcd2262b0249f857876c17df848868534df6762c8"
+    },
+    {
+      "slot": "panda_cylinder_p1_u",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "u",
+      "robot": "panda",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        0.06911828557475733,
+        0.9880622471158614,
+        -0.10592595322568801,
+        -0.4656164227795651,
+        0.0017036738218281712,
+        1.1540147939087328,
+        -1.8360512820638473
+      ],
+      "common_end": [
+        0.06911828557475733,
+        0.9880622471158614,
+        -0.10592595322568801,
+        -0.4656164227795651,
+        0.0017036738218281712,
+        1.1540147939087328,
+        -1.8360512820638473
+      ],
+      "reference_geometry_feasible": false,
+      "reference_pose_ok": false,
+      "reference_min_clearance": 0.02146442277042588,
+      "cluster": "panda_cylinder_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "dee3bcbd54649ab098cd77094832a7995d1c22644e1e2e537252972a55a69299",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "406af3b20ab059ba4ba3b0119a5c6adf254d03bdeae9dfa5c1b0f474ba4cf06d"
+    },
+    {
+      "slot": "panda_cylinder_p1_v",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "v",
+      "robot": "panda",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        0.04928718848945676,
+        0.9827411469937828,
+        -0.10199847484130234,
+        -0.4676481398530273,
+        -0.0038390267837938165,
+        1.1406177299917006,
+        -0.2835329256581428
+      ],
+      "common_end": [
+        0.04928718848945676,
+        0.9827411469937828,
+        -0.10199847484130234,
+        -0.4676481398530273,
+        -0.0038390267837938165,
+        1.1406177299917006,
+        -0.2835329256581428
+      ],
+      "reference_geometry_feasible": false,
+      "reference_pose_ok": false,
+      "reference_min_clearance": 0.021372697397190638,
+      "cluster": "panda_cylinder_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "dee3bcbd54649ab098cd77094832a7995d1c22644e1e2e537252972a55a69299",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609"
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "u",
+      "robot": "panda",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.370323135174184,
+        -0.20986569527873097,
+        0.0204693387733394,
+        -2.1550304185110423,
+        0.06976539648532847,
+        1.6715675859700854,
+        -1.9199683967772607
+      ],
+      "common_end": [
+        0.1084410390030783,
+        0.0027987171085423175,
+        0.045693132447227676,
+        -2.018049698527837,
+        -0.23687427823831533,
+        2.216657572837168,
+        -1.2739771346747304
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.021254363428584857,
+      "cluster": "panda_saddle_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "f00675c67b52a23a8a8fdd3a2b712b8ac80330a53dc15912702f84482087d897",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "f6c31864e2ce3e5c2e19b914f5e5b132c9658310d934a68e88ca62a1b777611b"
+    },
+    {
+      "slot": "panda_saddle_p0_v",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "v",
+      "robot": "panda",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        0.012768002246062305,
+        -0.2231798359229064,
+        -0.33416973135276035,
+        -2.1556626476800846,
+        0.0051524784930573,
+        1.67439522765026,
+        -0.32363102797252336
+      ],
+      "common_end": [
+        0.07540279708691376,
+        0.0028421966517127393,
+        0.07877083801989404,
+        -2.0180019751483287,
+        -0.23704368284629798,
+        2.2166253747062767,
+        0.2600680002861685
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.021299099364541163,
+      "cluster": "panda_saddle_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "f00675c67b52a23a8a8fdd3a2b712b8ac80330a53dc15912702f84482087d897",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "ddbaccae4d1e1e90b7da2315bf852ee615b4daba879473cd6ddfe24006fb6108"
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "u",
+      "robot": "panda",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        0.572366975276868,
+        -0.10150598497333649,
+        -0.7213712697036717,
+        -2.007083288869149,
+        -0.014912476575624903,
+        1.6545304913306718,
+        -1.948122276900944
+      ],
+      "common_end": [
+        0.16409002607811848,
+        0.054390015720877274,
+        0.14774496090538902,
+        -1.9600569962199466,
+        -0.22020338566078654,
+        2.2300125497007617,
+        -1.387259128381452
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.021256352652786605,
+      "cluster": "panda_saddle_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "d731329df270eba51c34cc89e3bb6e40a2d1d4a2fa40f34de045499a37923433",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "9ced85a1ec2cd96c165d3ed941ec82457e30e182c4d037796ec472ed639f71b3"
+    },
+    {
+      "slot": "panda_saddle_p1_v",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "v",
+      "robot": "panda",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.05183334716702564,
+        -0.07589263574697694,
+        -0.12033007205062037,
+        -2.0069662148719565,
+        0.03399422493838757,
+        1.6540161797409654,
+        -0.4584889354669081
+      ],
+      "common_end": [
+        0.1655752514492734,
+        0.05414033572810733,
+        0.14621214196178953,
+        -1.9604121836518307,
+        -0.22023771709367576,
+        2.230458291311324,
+        0.14671424181129972
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.021308541883908093,
+      "cluster": "panda_saddle_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "d731329df270eba51c34cc89e3bb6e40a2d1d4a2fa40f34de045499a37923433",
+      "fk_max_error": 1.7763568394002505e-15,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "5f43b4d6461fcea3fe8ed7073c7de83186d13133f6cb072fc4eb2c12336a6b6c"
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "family": "plane",
+      "placement": 0,
+      "direction": "u",
+      "robot": "ur5e",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.6362719674370575,
+        -1.851955952232094,
+        1.8550464399081412,
+        -1.573886814676047,
+        -1.5707963265897928,
+        2.505320685947632
+      ],
+      "common_end": [
+        -0.14366068891948572,
+        -1.2961188585717143,
+        1.3011364902786067,
+        -1.5758139249222147,
+        -1.5707963188838172,
+        2.997931950009043
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.017125886955016278,
+      "cluster": "ur5e_plane_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "807ed19dc7de3b14e3beee7eec1927ef9a882dd0313b73268ce72183982128c7",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "74c4b355832ae88369ec214894ab6b8c7e91246fa0de0bbe376637861cd8eed7"
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "family": "plane",
+      "placement": 0,
+      "direction": "v",
+      "robot": "ur5e",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.6362719674370577,
+        -1.8519559522320945,
+        1.8550464399081419,
+        -1.5738868146760476,
+        -1.5707963265897928,
+        -2.2070682944370583
+      ],
+      "common_end": [
+        -0.14366467513901143,
+        -1.2962009573389517,
+        1.3012433192565598,
+        -1.575838655539429,
+        -1.5707963240290754,
+        -1.71446099585652
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.01712661335129586,
+      "cluster": "ur5e_plane_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "807ed19dc7de3b14e3beee7eec1927ef9a882dd0313b73268ce72183982128c7",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "b4cbe6298b4c8842e3d61c4c05cef1b634d1de760788b1ccb4c7c2647062845b"
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "family": "plane",
+      "placement": 1,
+      "direction": "u",
+      "robot": "ur5e",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.452881216690338,
+        -1.743547792557824,
+        1.7730627950294235,
+        -1.6003113294715996,
+        -1.5707963265897928,
+        2.426912048895202
+      ],
+      "common_end": [
+        0.03192169715126318,
+        -1.2403094947343165,
+        1.227307852706883,
+        -1.557794651210627,
+        -1.570796318823004,
+        2.9117149486971075
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.017125890201276493,
+      "cluster": "ur5e_plane_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "bccf1f5e44df3982845ae4a6ec4ff1da34283aaa1e27472d052bb8f308f6ef41",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "403cb6773f1a1675c7f7f184c8e8c74848c8e1cd56930a8f81eb78de27e1428a"
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "family": "plane",
+      "placement": 1,
+      "direction": "v",
+      "robot": "ur5e",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.4528812166903379,
+        -1.7435477925578238,
+        1.7730627950294238,
+        -1.6003113294716003,
+        -1.5707963265897928,
+        -2.285476931489488
+      ],
+      "common_end": [
+        0.03190898892696767,
+        -1.2403907537549772,
+        1.2274177778154867,
+        -1.557823317098181,
+        -1.5707963239201352,
+        -1.800686719069903
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.01712406878761705,
+      "cluster": "ur5e_plane_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "bccf1f5e44df3982845ae4a6ec4ff1da34283aaa1e27472d052bb8f308f6ef41",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "26227b24cb54fbd1ee1f9a2ff9548fd6b42ce382e7b92e4713c9a7c4eba0431e"
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "u",
+      "robot": "ur5e",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.8830536120861089,
+        -2.1447319892894625,
+        2.179154545596941,
+        -1.8328889128948749,
+        -1.3026762365080011,
+        2.289375544116309
+      ],
+      "common_end": [
+        -0.12120992440614109,
+        -0.9727859078637463,
+        0.8484871663537896,
+        -1.0989059307763798,
+        -1.6122642058094185,
+        3.0276641213284594
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.01712535993488358,
+      "cluster": "ur5e_cylinder_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "7e7b44dca3d7d178e93edf98eec37a86a2ff31d9c36eb118bee9f4e6a50aa613",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "5d9aac3d7faa587a77b4ef01338725dc9ae7ca13f0a04df57de39f2cb095a9ac"
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "family": "cylinder",
+      "placement": 0,
+      "direction": "v",
+      "robot": "ur5e",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.8830536120861088,
+        -2.1447319892894625,
+        2.179154545596941,
+        -1.8328889128948749,
+        -1.3026762365080011,
+        -2.4230134362683806
+      ],
+      "common_end": [
+        -0.1212123087382504,
+        -0.9728722488891813,
+        0.8486239941394798,
+        -1.0989440717012464,
+        -1.6122664073899087,
+        -1.6847260403507622
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.017127399947205326,
+      "cluster": "ur5e_cylinder_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "7e7b44dca3d7d178e93edf98eec37a86a2ff31d9c36eb118bee9f4e6a50aa613",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "b181f4aea3dacadfb66671a2eea89b411650ea76f729a02a7b8c5f249579c5f5"
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "u",
+      "robot": "ur5e",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.6816969236002745,
+        -1.998463904136745,
+        2.1049874798282784,
+        -1.8883587035821738,
+        -1.2895196614431497,
+        2.228082867711327
+      ],
+      "common_end": [
+        0.06660445152007757,
+        -0.8988472803716724,
+        0.7274162409898078,
+        -1.0555384153131888,
+        -1.6373452366051366,
+        2.9579565497480274
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.01712946816955833,
+      "cluster": "ur5e_cylinder_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "e91034b66ae36bda8014b97210f83c76d9332313ba6c1d451545158f3911c89b",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "78356a8fe9f1e85ce2b8185467eefe91275f3763ead11629ba2fd1962fc65f9a"
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "family": "cylinder",
+      "placement": 1,
+      "direction": "v",
+      "robot": "ur5e",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.6816969236002745,
+        -1.998463904136745,
+        2.104987479828278,
+        -1.8883587035821736,
+        -1.2895196614431497,
+        -2.4843061126733628
+      ],
+      "common_end": [
+        0.06659668649394879,
+        -0.8989390835057295,
+        0.7275675313364789,
+        -1.0555870202890019,
+        -1.637349924758024,
+        -1.7544382218908008
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.017130107545512134,
+      "cluster": "ur5e_cylinder_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "e91034b66ae36bda8014b97210f83c76d9332313ba6c1d451545158f3911c89b",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "2d20f99cf6c82aa207e523443bbea9c8b2f83a71121fed63556e715ac9a2a97f"
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "u",
+      "robot": "ur5e",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.6268108293429235,
+        -1.621329821723531,
+        1.6077046569624465,
+        -1.2765500470704005,
+        -1.581549347160464,
+        -3.7485868416196055
+      ],
+      "common_end": [
+        -0.06965588847671966,
+        -1.4538534715904101,
+        1.5666328313822606,
+        -1.9290763447614687,
+        -1.7085396746348902,
+        -3.209977734113112
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.017124274339880934,
+      "cluster": "ur5e_saddle_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "1677fd7496871350f108b8d7d0d7072ca8667ad176a1ed67dc635052053f087d",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "512f782109f8188da0d9abc0c832e86278e011a39690b19c4fd78abb5a46d0f5"
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "family": "saddle",
+      "placement": 0,
+      "direction": "v",
+      "robot": "ur5e",
+      "center": [
+        0.5,
+        -0.035,
+        0.24
+      ],
+      "world_R": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.6268108293429236,
+        -1.621329821723531,
+        1.6077046569624465,
+        -1.2765500470704008,
+        -1.5815493471604642,
+        -2.2146695836220776
+      ],
+      "common_end": [
+        -0.06965584521394458,
+        -1.4538289295175533,
+        1.5666081709721598,
+        -1.9290754690534375,
+        -1.7085416249266114,
+        -1.6760535185031853
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.017123089420212605,
+      "cluster": "ur5e_saddle_p0",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "1677fd7496871350f108b8d7d0d7072ca8667ad176a1ed67dc635052053f087d",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "36b3d3486fc1b60616750c9293d770932ac4609219d8fed3920864fd4b552a68"
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "u",
+      "robot": "ur5e",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.43029139121007204,
+        -1.5132730304106896,
+        1.4995420874123984,
+        -1.2776855860773195,
+        -1.5995957816463842,
+        2.4718494000665667
+      ],
+      "common_end": [
+        0.09027272731097065,
+        -1.4132209527981288,
+        1.523014073198679,
+        -1.9385018857280438,
+        -1.6831401628415292,
+        2.973767469048768
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.017123506001615964,
+      "cluster": "ur5e_saddle_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "47dc8236bb457477e55eeaaa64b3fac5837625ec89ec7a5ae3e1860669e17daa",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "131c413eea68307c7e2869678e592255d46b9ff65ebdafcb0874ee15554f5ed5"
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "family": "saddle",
+      "placement": 1,
+      "direction": "v",
+      "robot": "ur5e",
+      "center": [
+        0.53,
+        0.045,
+        0.24
+      ],
+      "world_R": [
+        [
+          0.9659258262890682,
+          -0.25881904510252074,
+          0.0
+        ],
+        [
+          0.25881904510252074,
+          0.9659258262890682,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "common_start": [
+        -0.430291391210072,
+        -1.5132730304106896,
+        1.4995420874123984,
+        -1.2776855860773202,
+        -1.5995957816463842,
+        -2.2774186491154915
+      ],
+      "common_end": [
+        0.09027123248740364,
+        -1.4131966113683205,
+        1.5229881497838185,
+        -1.9385008811150761,
+        -1.6831485252070228,
+        -1.7754901436509418
+      ],
+      "reference_geometry_feasible": true,
+      "reference_pose_ok": true,
+      "reference_min_clearance": 0.017125235468529627,
+      "cluster": "ur5e_saddle_p1",
+      "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+      "source_model_sha256": "47dc8236bb457477e55eeaaa64b3fac5837625ec89ec7a5ae3e1860669e17daa",
+      "fk_max_error": 2.392081711315702e-16,
+      "no_method_outcome_used": true,
+      "split": "development",
+      "scene_uid": "88778a5202fca058c5e99dc6c571ebc77b922de005dac1eb6c79648bfb8c2dc8"
+    }
+  ],
+  "files": {
+    "inputs/panda_cylinder_p0_u/identity.json": "ccdef18967ef7f79f55e80474086d9bfc7d63cc40030240112871637a0dc7a2b",
+    "inputs/panda_cylinder_p0_u/reference_construction.json.gz": "569a80f429d9d77ec5f28eee55a36bbeedd8d90b007c11fdf005593e5ae08e51",
+    "inputs/panda_cylinder_p0_u/reference_geometry.npz": "8e569de270f7c444698d2a4f29013e32e156fe1410f1362e5c08c2a9a1f962b0",
+    "inputs/panda_cylinder_p0_u/scene.xml": "c51a13d69155db7b37bb34d85918bf48d118c06fc38110a53917e04050375ba7",
+    "inputs/panda_cylinder_p0_v/identity.json": "9e40009d8bf13a936a23a7ea91111ccfbe69348a7ac68557e4ea439f841e7d33",
+    "inputs/panda_cylinder_p0_v/reference_construction.json.gz": "df16c93d9a0cb8ee31a685e791cbba14e7868756be5be3bf6afcdc8f359f61d0",
+    "inputs/panda_cylinder_p0_v/reference_geometry.npz": "30324ab116c5c7889efb9b26c68fd305e1f7130dde9a222f25a04e502b7c006c",
+    "inputs/panda_cylinder_p0_v/scene.xml": "c51a13d69155db7b37bb34d85918bf48d118c06fc38110a53917e04050375ba7",
+    "inputs/panda_cylinder_p1_u/identity.json": "71e27055183db2a4c1af8a1eaa4cd0e3ef6e4fbe3ed259d3fcd4abcd99f5faba",
+    "inputs/panda_cylinder_p1_u/reference_construction.json.gz": "9a3855b66f30e381a62c8cbee42f28784cc009affb7c800eeae02ef450292942",
+    "inputs/panda_cylinder_p1_u/reference_geometry.npz": "e2f9679f6df6e42a41a70a24a3ad471088d64d8d227e0d72ad05a11a31613c93",
+    "inputs/panda_cylinder_p1_u/scene.xml": "dee3bcbd54649ab098cd77094832a7995d1c22644e1e2e537252972a55a69299",
+    "inputs/panda_cylinder_p1_v/identity.json": "962776d251f2aef10f9f6404e130e69c03fbc2e3cb325deab205115d3ea9cdab",
+    "inputs/panda_cylinder_p1_v/reference_construction.json.gz": "fc7a5f8aa697d9fc1ed0e9bd810d460dc515d76f45a194a18173d508c3a52b1c",
+    "inputs/panda_cylinder_p1_v/reference_geometry.npz": "e68c942f0382664c7b0a1652697ebc83f3bd96b556b4305e33b78d70ce5d3de5",
+    "inputs/panda_cylinder_p1_v/scene.xml": "dee3bcbd54649ab098cd77094832a7995d1c22644e1e2e537252972a55a69299",
+    "inputs/panda_plane_p0_u/identity.json": "49b4ce751c6b07a6e5fb3509d99677ed92cd4b31f4a90aaf60e04c6ec555a102",
+    "inputs/panda_plane_p0_u/reference_construction.json.gz": "5a8fd1677c43481e97115e1deba7ef3d0dfe5bfeef2f2af501ba55e87fa68f23",
+    "inputs/panda_plane_p0_u/reference_geometry.npz": "58858685375f8662d612e98a4fc799c6be4f9acf933821f8b2a840891e4086c7",
+    "inputs/panda_plane_p0_u/scene.xml": "ad9a5adfe8c6cf9aecfbd197ded2f92ea8adb6fb6ca790fb4f8fca79550349fb",
+    "inputs/panda_plane_p0_v/identity.json": "4be2446f83c25700a316e146bd543b10aebd8eb80392c1df3e8df3daa8a07d77",
+    "inputs/panda_plane_p0_v/reference_construction.json.gz": "bcc5ace5c8ee16499398bfabd3b9a6853268ca76c2fb43c6911e2c8880ea937e",
+    "inputs/panda_plane_p0_v/reference_geometry.npz": "241f8bea58aa1a8dc5f131cd983181d7ae33a24d09fc0df6d3b74df4a120dcf5",
+    "inputs/panda_plane_p0_v/scene.xml": "ad9a5adfe8c6cf9aecfbd197ded2f92ea8adb6fb6ca790fb4f8fca79550349fb",
+    "inputs/panda_plane_p1_u/identity.json": "9286b2ae0e6c2a6937a680a3f9fcbeeac2310574f6b15b7c0ebfadfec4711eac",
+    "inputs/panda_plane_p1_u/reference_construction.json.gz": "970668d527d885785d7021030aba3283dae3d8782e786a3c2e9be30dd8dfef6d",
+    "inputs/panda_plane_p1_u/reference_geometry.npz": "be4a2e6f7ec5c01a9f1116cafa1764511c3101f778b9abc357b878cc292760eb",
+    "inputs/panda_plane_p1_u/scene.xml": "bf781b7d29878b53da58d90fa793b15fefe2e895eb122b48f5e0b2b800c672e3",
+    "inputs/panda_plane_p1_v/identity.json": "6406a165a7ce0a64fe1228e908248444b77f28494bcb6c1b8247f9846a13358d",
+    "inputs/panda_plane_p1_v/reference_construction.json.gz": "6f30242f73db1d1fab9c39e859ed92fa3ab6263def13cd2ea1e7604b35e64de4",
+    "inputs/panda_plane_p1_v/reference_geometry.npz": "598471ccfc4ca3178d7890bb9b9681dc61db6b38667653fdfb6eae7799264684",
+    "inputs/panda_plane_p1_v/scene.xml": "bf781b7d29878b53da58d90fa793b15fefe2e895eb122b48f5e0b2b800c672e3",
+    "inputs/panda_saddle_p0_u/identity.json": "e74e6f5b17561ae7023f1be6087071208b78d4aaa0ffb3b7ed27161879585ca2",
+    "inputs/panda_saddle_p0_u/reference_construction.json.gz": "a61c4a5452ff62981086854da274ae3f38d77a4fe925b701f10569e821071ede",
+    "inputs/panda_saddle_p0_u/reference_geometry.npz": "dbcc973110f83ef1d100d0e042959c770240b5f935c721f2de1f9f6d39063ae0",
+    "inputs/panda_saddle_p0_u/scene.xml": "f00675c67b52a23a8a8fdd3a2b712b8ac80330a53dc15912702f84482087d897",
+    "inputs/panda_saddle_p0_v/identity.json": "5fb0c7c0a4275ef7a2bb882f4bfbffaa054ecd89fea1b96668f7cc980dfaa1ad",
+    "inputs/panda_saddle_p0_v/reference_construction.json.gz": "cdddb1db11ac732d073e08d8be8044daacc24f81b7fdd8344360834dfab67040",
+    "inputs/panda_saddle_p0_v/reference_geometry.npz": "1f1fbce75acd12792de6086e51992c04c9559a35f3319ec8fb655f4f90efe978",
+    "inputs/panda_saddle_p0_v/scene.xml": "f00675c67b52a23a8a8fdd3a2b712b8ac80330a53dc15912702f84482087d897",
+    "inputs/panda_saddle_p1_u/identity.json": "83d159b6ab9a94dd1c46576d9a3bcd3c1e90ad3303133ed5e2dde80cb2b69d90",
+    "inputs/panda_saddle_p1_u/reference_construction.json.gz": "93a9470db0c76a9a8e0446461c2ec5a2b7cb027dc5d71376057c42cb150ee867",
+    "inputs/panda_saddle_p1_u/reference_geometry.npz": "62da63567e683e3842fa5ae802efda6f470fd1ec6a9c7e4bbb9c9e410c728499",
+    "inputs/panda_saddle_p1_u/scene.xml": "d731329df270eba51c34cc89e3bb6e40a2d1d4a2fa40f34de045499a37923433",
+    "inputs/panda_saddle_p1_v/identity.json": "744e0c14873b06456c11626495af4cd9e6c8d076f50a3d5863a3cc90526bb724",
+    "inputs/panda_saddle_p1_v/reference_construction.json.gz": "62b7dfc6ffa02bdca2ecc715642eaba189c39a9d991ccaa16ca0900ccdfc0bcd",
+    "inputs/panda_saddle_p1_v/reference_geometry.npz": "01e1a3a7feea7fbda6c68557ccbb8edc314fbbe1ce93b7c9b150ce343e32b09c",
+    "inputs/panda_saddle_p1_v/scene.xml": "d731329df270eba51c34cc89e3bb6e40a2d1d4a2fa40f34de045499a37923433",
+    "inputs/ur5e_cylinder_p0_u/identity.json": "c31998b14c485cc6586646dc87a7c96f5209c984cc9be618d8f4ce0d01e82f76",
+    "inputs/ur5e_cylinder_p0_u/reference_construction.json.gz": "1fc877f7ea4008a213928854368d87c15d6b97a70dae6e250d641a757f6a5543",
+    "inputs/ur5e_cylinder_p0_u/reference_geometry.npz": "198f8c4ea023c35fa6c52236daa919a4b9b9754d4e863219a7a9ed8005ac32cb",
+    "inputs/ur5e_cylinder_p0_u/scene.xml": "7e7b44dca3d7d178e93edf98eec37a86a2ff31d9c36eb118bee9f4e6a50aa613",
+    "inputs/ur5e_cylinder_p0_v/identity.json": "8d2602f0708662bdce5ec1d7eb7ab1d12f8a4102072d3166c3a4f352a2c936d4",
+    "inputs/ur5e_cylinder_p0_v/reference_construction.json.gz": "89dee8a7cf7a30bd50d8403b13f1b6a6062bdd6f550be7f66e0e1720664c796c",
+    "inputs/ur5e_cylinder_p0_v/reference_geometry.npz": "3ab62ce8e12f0255a22ef44fd08ce949ce396f73ba8406e7d01308899450e847",
+    "inputs/ur5e_cylinder_p0_v/scene.xml": "7e7b44dca3d7d178e93edf98eec37a86a2ff31d9c36eb118bee9f4e6a50aa613",
+    "inputs/ur5e_cylinder_p1_u/identity.json": "a852b0e66a6a094801628128504fbd8aa9eb5578ed4aa6593c5325bdeee33412",
+    "inputs/ur5e_cylinder_p1_u/reference_construction.json.gz": "6416f62d8a783361706a09e57ba29e29fdc5cfbb7032f2c345031136987dcc3e",
+    "inputs/ur5e_cylinder_p1_u/reference_geometry.npz": "e1db33378fc61ebcb8dec705bf8fc3122b285525fec021977249bcfd6d38bea0",
+    "inputs/ur5e_cylinder_p1_u/scene.xml": "e91034b66ae36bda8014b97210f83c76d9332313ba6c1d451545158f3911c89b",
+    "inputs/ur5e_cylinder_p1_v/identity.json": "8aeb226bddbe9ee995696a4e7a1b8b3ef3c535d81a349e34808287458115041b",
+    "inputs/ur5e_cylinder_p1_v/reference_construction.json.gz": "5ed0bd015634ff888ee27871a658e2aa8385c545431602eaede5e8642ab03fb8",
+    "inputs/ur5e_cylinder_p1_v/reference_geometry.npz": "091af2551e53817b8a8c3853c33d44d4c4a144be3ea7dfd4af189d0ebf027bab",
+    "inputs/ur5e_cylinder_p1_v/scene.xml": "e91034b66ae36bda8014b97210f83c76d9332313ba6c1d451545158f3911c89b",
+    "inputs/ur5e_plane_p0_u/identity.json": "5f84bae3b9f15f5b884a7b9b4906e0235aaec7b4883227a95d13555a01b395b6",
+    "inputs/ur5e_plane_p0_u/reference_construction.json.gz": "5fabe61e15469fccd39c414c43e15535933f517ff02e5b8b6f815a38cc8b9522",
+    "inputs/ur5e_plane_p0_u/reference_geometry.npz": "117795f1898d5844d11cb79e9a71dfa2679927a46d47bd450aec075e77ef931d",
+    "inputs/ur5e_plane_p0_u/scene.xml": "807ed19dc7de3b14e3beee7eec1927ef9a882dd0313b73268ce72183982128c7",
+    "inputs/ur5e_plane_p0_v/identity.json": "245a14b7976f2093f7483a516b9e0adc779b403a43c15336dcb88daa233ed483",
+    "inputs/ur5e_plane_p0_v/reference_construction.json.gz": "77de384b49d16227e98e4318ce6c49f28cc68e7642008297eec584372a55d5c2",
+    "inputs/ur5e_plane_p0_v/reference_geometry.npz": "5df43fe53d7bec4b09be4d38f27ee29af61cc293e9c74430fced0446c52d93b6",
+    "inputs/ur5e_plane_p0_v/scene.xml": "807ed19dc7de3b14e3beee7eec1927ef9a882dd0313b73268ce72183982128c7",
+    "inputs/ur5e_plane_p1_u/identity.json": "a0e28b2181fd79aa4aa6f9c28d5d8aaff8c31c3807212c0e51fba90f9274792f",
+    "inputs/ur5e_plane_p1_u/reference_construction.json.gz": "d357182d23d1a5e2b55eb3c4c6063f8e085303fa10501acedb58f14d0d3b76b3",
+    "inputs/ur5e_plane_p1_u/reference_geometry.npz": "09ee8630e6c844d4bc32dd83c79c16297d3b9f754b7ccfaaf2b06daf9575cca5",
+    "inputs/ur5e_plane_p1_u/scene.xml": "bccf1f5e44df3982845ae4a6ec4ff1da34283aaa1e27472d052bb8f308f6ef41",
+    "inputs/ur5e_plane_p1_v/identity.json": "93d858e2628acb80ad5e0a9e99501ec900556aaf1fdbf6009f550686369eb884",
+    "inputs/ur5e_plane_p1_v/reference_construction.json.gz": "5a82db142c76200e326f73ebe2e1057e0c5d741778309f0d10b642f2cf42240e",
+    "inputs/ur5e_plane_p1_v/reference_geometry.npz": "0e9175ce7463414ba811e9cf31bd7bf66d268a7bcf3ba9edc2898dfea4cca11c",
+    "inputs/ur5e_plane_p1_v/scene.xml": "bccf1f5e44df3982845ae4a6ec4ff1da34283aaa1e27472d052bb8f308f6ef41",
+    "inputs/ur5e_saddle_p0_u/identity.json": "1a7b12c3830d9843ee44a8bf88ba59d26c8bd1ea45a0fccb6200b371c1342ce5",
+    "inputs/ur5e_saddle_p0_u/reference_construction.json.gz": "d72b1147d3bdcd308a1e46ba965d1015427becb924fbc7a27b20044247a0678f",
+    "inputs/ur5e_saddle_p0_u/reference_geometry.npz": "02ac28c3c565b7879ffc3aabdccf5d3d4a201ad6da43af97f4a67ed2b11376ab",
+    "inputs/ur5e_saddle_p0_u/scene.xml": "1677fd7496871350f108b8d7d0d7072ca8667ad176a1ed67dc635052053f087d",
+    "inputs/ur5e_saddle_p0_v/identity.json": "4a02359a75ff5664c89112389174782b1d409ca69eda600773f62b1c39ac0600",
+    "inputs/ur5e_saddle_p0_v/reference_construction.json.gz": "535ac4842f652189103be46e21d3416c2a6d151f2a81479bb0a830a18d9a34eb",
+    "inputs/ur5e_saddle_p0_v/reference_geometry.npz": "35cba716b610ae5986182fe8c39b7825fb748b188493bec020f3b5c76f7f85f2",
+    "inputs/ur5e_saddle_p0_v/scene.xml": "1677fd7496871350f108b8d7d0d7072ca8667ad176a1ed67dc635052053f087d",
+    "inputs/ur5e_saddle_p1_u/identity.json": "98624e93f47228fca766c14a92b99831fbe56e346764c813fb4886063e16f5b7",
+    "inputs/ur5e_saddle_p1_u/reference_construction.json.gz": "5dc5976ae9c7b5c16c30637a0e0ea79749752b41702a66d25eb9052bb39808e9",
+    "inputs/ur5e_saddle_p1_u/reference_geometry.npz": "efc1adfe77a3ae9b446912f53c086f8dfd1ceefb847666358b30d700bfeaf06e",
+    "inputs/ur5e_saddle_p1_u/scene.xml": "47dc8236bb457477e55eeaaa64b3fac5837625ec89ec7a5ae3e1860669e17daa",
+    "inputs/ur5e_saddle_p1_v/identity.json": "16e29222cdc468e9246c9f1efae6826ea0773a293e12c9bbdcb15add5a2d6027",
+    "inputs/ur5e_saddle_p1_v/reference_construction.json.gz": "afa984bde851d21fd0a0435934cd6c2090c2ce63efef67e0e6d414ac4fcd4ec1",
+    "inputs/ur5e_saddle_p1_v/reference_geometry.npz": "94d26c94f92e6ff18d875062a38239c4770a0ce28521ccd2e7bd73f6891d1faa",
+    "inputs/ur5e_saddle_p1_v/scene.xml": "47dc8236bb457477e55eeaaa64b3fac5837625ec89ec7a5ae3e1860669e17daa"
+  },
+  "git_base": "bf9ccc4e0314c0d289101d89ff4e40577de392f9",
+  "platform": "Linux-6.8.0-48-generic-x86_64-with-glibc2.35",
+  "formal_test_outcomes_generated": false,
+  "cpu": "processor\t: 0\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 0\ncpu cores\t: 16\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 0\ncpu cores\t: 16\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 2\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 4\ncpu cores\t: 16\napicid\t\t: 8\ninitial apicid\t: 8\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 3\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 4\ncpu cores\t: 16\napicid\t\t: 9\ninitial apicid\t: 9\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 4\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 8\ncpu cores\t: 16\napicid\t\t: 16\ninitial apicid\t: 16\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 5\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 8\ncpu cores\t: 16\napicid\t\t: 17\ninitial apicid\t: 17\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 6\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 12\ncpu cores\t: 16\napicid\t\t: 24\ninitial apicid\t: 24\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 7\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5301.254\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 12\ncpu cores\t: 16\napicid\t\t: 25\ninitial apicid\t: 25\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 8\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 16\ncpu cores\t: 16\napicid\t\t: 32\ninitial apicid\t: 32\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 9\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 16\ncpu cores\t: 16\napicid\t\t: 33\ninitial apicid\t: 33\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 10\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 20\ncpu cores\t: 16\napicid\t\t: 40\ninitial apicid\t: 40\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 11\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5299.454\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 20\ncpu cores\t: 16\napicid\t\t: 41\ninitial apicid\t: 41\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 12\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 24\ncpu cores\t: 16\napicid\t\t: 48\ninitial apicid\t: 48\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 13\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 24\ncpu cores\t: 16\napicid\t\t: 49\ninitial apicid\t: 49\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 14\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 5300.157\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 28\ncpu cores\t: 16\napicid\t\t: 56\ninitial apicid\t: 56\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 15\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 28\ncpu cores\t: 16\napicid\t\t: 57\ninitial apicid\t: 57\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 16\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 4200.109\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 32\ncpu cores\t: 16\napicid\t\t: 64\ninitial apicid\t: 64\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 17\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 33\ncpu cores\t: 16\napicid\t\t: 66\ninitial apicid\t: 66\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 18\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 34\ncpu cores\t: 16\napicid\t\t: 68\ninitial apicid\t: 68\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 19\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 35\ncpu cores\t: 16\napicid\t\t: 70\ninitial apicid\t: 70\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 20\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 4206.601\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 36\ncpu cores\t: 16\napicid\t\t: 72\ninitial apicid\t: 72\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 21\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 37\ncpu cores\t: 16\napicid\t\t: 74\ninitial apicid\t: 74\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 22\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 38\ncpu cores\t: 16\napicid\t\t: 76\ninitial apicid\t: 76\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 23\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 183\nmodel name\t: 13th Gen Intel(R) Core(TM) i7-13700K\nstepping\t: 1\nmicrocode\t: 0x129\ncpu MHz\t\t: 800.000\ncache size\t: 30720 KB\nphysical id\t: 0\nsiblings\t: 24\ncore id\t\t: 39\ncpu cores\t: 16\napicid\t\t: 78\ninitial apicid\t: 78\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 32\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid ple shadow_vmcs ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi\nbogomips\t: 6835.20\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 48 bits virtual\npower management:\n\n",
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": null
+  },
+  "calibration_status": "1ms extrema and actual rays checked before comparisons",
+  "boundmpc_task_status": "not_evaluable_semantic_adaptation_incomplete",
+  "numerical_revision": "roundoff_duplicate_grid_repair",
+  "original_input_seal_sha256": "6b4e344cd4c15966bd67123d7e2940899754db3e73b7ae5feb45d400f2353eb4",
+  "unchanged_scene_identity": true,
+  "revision_utc": "2026-09-16T15:30:24.480469+00:00"
+}

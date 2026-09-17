@@ -1,0 +1,84 @@
+{
+  "identity": {
+    "slot": "panda_plane_p0_u",
+    "family": "plane",
+    "placement": 0,
+    "direction": "u",
+    "robot": "panda",
+    "center": [
+      0.5,
+      -0.035,
+      0.24
+    ],
+    "world_R": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "common_start": [
+      -0.37237564832425596,
+      -0.49406924478426073,
+      0.0696105146088131,
+      -2.463149574381345,
+      0.03580388130475155,
+      1.969862418731956,
+      -1.8957808291772285
+    ],
+    "common_end": [
+      -0.031191392973809413,
+      0.20228721855571513,
+      0.1137686596826247,
+      -1.7067472658795677,
+      -0.024167861745760962,
+      1.9076750151058544,
+      -1.4825291890325358
+    ],
+    "reference_geometry_feasible": true,
+    "reference_pose_ok": true,
+    "reference_min_clearance": 0.022036240911041227,
+    "cluster": "panda_plane_p0",
+    "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+    "source_model_sha256": "ad9a5adfe8c6cf9aecfbd197ded2f92ea8adb6fb6ca790fb4f8fca79550349fb",
+    "fk_max_error": 1.7763568394002505e-15,
+    "no_method_outcome_used": true,
+    "split": "development",
+    "scene_uid": "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609"
+  },
+  "method": "B0",
+  "repeat": 2,
+  "code_hashes": {
+    "configs/process_scan_phase1.yaml": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+    "scripts/run_process_scan.py": "43b002c976b85d865f454882c1b0b12dd30a11b4ad2176f8f6714e351c4f486e",
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/process_scan/__init__.py": "1027fbff570c813e8dadf870667f7c941415fc908844aa514e39b1a2d8795a0e",
+    "src/confik/process_scan/boundmpc_check.py": "579396f24701e7a48e0c80d13ca83f95a2bc3c1a3cd0184ef05ebfd6d0a9f251",
+    "src/confik/process_scan/collision.py": "eaf8df2c2759c40a1a8cb0f8765442bba16b31e9893bb1d7d20a553425025ae8",
+    "src/confik/process_scan/execution.py": "60dd0a784720e919bae6fb612495a03b2144ed8829f8866367e36f6e2625d443",
+    "src/confik/process_scan/geometry_adapter.py": "40875f89a332b9fe60e466ebc9a8ab13f26fdaa6b2b3c21331e20e7775fe2106",
+    "src/confik/process_scan/models.py": "12f519da6af6d4464e57564f99a25a6a71910728d796f73f2d5cff5358264f51",
+    "src/confik/process_scan/planning.py": "077f4c999f3fd8bee0315c33f2d45b383e24a9e54ba84f8a8da10d8a35b52b0b",
+    "src/confik/process_scan/study.py": "72dc808c622ec67cb3685453448ab6515c94f21ae765cbc8d5312c66b849e136",
+    "src/confik/process_scan/task.py": "3934a7602b9529fc99d844c5e7af97a4c6c208c48a857e56bb7b9a2150ec7abd",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/task_balance_gn.py": "752a69afede984d0617997d6c412753c327f9f642eb0f08ef2ab33c464a68d57"
+  },
+  "old_online_interface_called": false,
+  "physical_rate_in_geometry": false,
+  "nearest_projection_claim": false,
+  "controller": "common_torque_limited_computed_torque_PD",
+  "timing_repeats_are_not_independent_scenes": true
+}

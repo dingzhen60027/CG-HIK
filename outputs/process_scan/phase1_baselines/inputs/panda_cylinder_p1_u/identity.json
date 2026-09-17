@@ -1,0 +1,57 @@
+{
+  "slot": "panda_cylinder_p1_u",
+  "family": "cylinder",
+  "placement": 1,
+  "direction": "u",
+  "robot": "panda",
+  "center": [
+    0.53,
+    0.045,
+    0.24
+  ],
+  "world_R": [
+    [
+      0.9659258262890682,
+      -0.25881904510252074,
+      0.0
+    ],
+    [
+      0.25881904510252074,
+      0.9659258262890682,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "common_start": [
+    0.06911828557475733,
+    0.9880622471158614,
+    -0.10592595322568801,
+    -0.4656164227795651,
+    0.0017036738218281712,
+    1.1540147939087328,
+    -1.8360512820638473
+  ],
+  "common_end": [
+    0.06911828557475733,
+    0.9880622471158614,
+    -0.10592595322568801,
+    -0.4656164227795651,
+    0.0017036738218281712,
+    1.1540147939087328,
+    -1.8360512820638473
+  ],
+  "reference_geometry_feasible": false,
+  "reference_pose_ok": false,
+  "reference_min_clearance": 0.02146442277042588,
+  "cluster": "panda_cylinder_p1",
+  "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+  "source_model_sha256": "dee3bcbd54649ab098cd77094832a7995d1c22644e1e2e537252972a55a69299",
+  "fk_max_error": 1.7763568394002505e-15,
+  "no_method_outcome_used": true,
+  "split": "development",
+  "scene_uid": "406af3b20ab059ba4ba3b0119a5c6adf254d03bdeae9dfa5c1b0f474ba4cf06d"
+}

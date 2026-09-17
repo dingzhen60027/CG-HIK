@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py", line 8, in <module>
+    from rosidl_generator_py import generate_py
+ImportError: cannot import name 'generate_py' from 'rosidl_generator_py' (/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py)
+gmake[2]: *** [bound_mpc_msg__py/CMakeFiles/bound_mpc_msg__py.dir/build.make:200：rosidl_generator_py/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_fastrtps_c.c] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:590：bound_mpc_msg__py/CMakeFiles/bound_mpc_msg__py.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

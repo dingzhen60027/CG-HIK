@@ -1,0 +1,427 @@
+[0.139s] Invoking command in '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/eric/wjg/btry/tmp/process_scan_dependencies/BoundMPC/boundmpcmsg -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg
+[0.168s] -- The C compiler identification is GNU 9.5.0
+[0.198s] -- The CXX compiler identification is GNU 9.5.0
+[0.202s] -- Detecting C compiler ABI info
+[0.240s] -- Detecting C compiler ABI info - done
+[0.244s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.244s] -- Detecting C compile features
+[0.244s] -- Detecting C compile features - done
+[0.246s] -- Detecting CXX compiler ABI info
+[0.287s] -- Detecting CXX compiler ABI info - done
+[0.292s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.292s] -- Detecting CXX compile features
+[0.292s] -- Detecting CXX compile features - done
+[0.293s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.378s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.423s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[0.424s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.447s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.450s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.454s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.459s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.467s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.489s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.491s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.539s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.555s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.582s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.586s] -- Looking for pthread.h
+[0.627s] -- Looking for pthread.h - found
+[0.627s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.665s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.666s] -- Found Threads: TRUE  
+[0.692s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.698s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.707s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.893s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.129s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.227s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.240s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.241s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.256s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.256s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.256s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.256s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.268s] -- Found PythonExtra: .so  
+[1.304s] -- Configuring done
+[1.324s] -- Generating done
+[1.330s] -- Build files have been written to: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg
+[30.569s] Invoked command in '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/eric/wjg/btry/tmp/process_scan_dependencies/BoundMPC/boundmpcmsg -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg
+[30.570s] Invoking command in '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg -- -j24 -l24
+[30.595s] [  1%] Generating C code for ROS interfaces
+[30.601s] [  2%] Generating C++ code for ROS interfaces
+[30.605s] [  2%] Built target ament_cmake_python_copy_bound_mpc_msg
+[30.727s] running egg_info
+[30.727s] creating bound_mpc_msg.egg-info
+[30.727s] writing bound_mpc_msg.egg-info/PKG-INFO
+[30.727s] writing dependency_links to bound_mpc_msg.egg-info/dependency_links.txt
+[30.727s] writing top-level names to bound_mpc_msg.egg-info/top_level.txt
+[30.728s] writing manifest file 'bound_mpc_msg.egg-info/SOURCES.txt'
+[30.729s] reading manifest file 'bound_mpc_msg.egg-info/SOURCES.txt'
+[30.729s] writing manifest file 'bound_mpc_msg.egg-info/SOURCES.txt'
+[30.742s] [  2%] Built target ament_cmake_python_build_bound_mpc_msg_egg
+[30.994s] [  5%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/msg/detail/vector__functions.c.o
+[30.994s] [  5%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/msg/detail/mpc_data__functions.c.o
+[30.995s] [  6%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/msg/detail/handover_location__functions.c.o
+[30.996s] [  7%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/msg/detail/handover_data__functions.c.o
+[30.996s] [  8%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/msg/detail/mujoco_data__functions.c.o
+[30.996s] [ 10%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/srv/detail/mpc_params__functions.c.o
+[30.997s] [ 11%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/srv/detail/trajectory__functions.c.o
+[31.002s] [ 11%] Built target bound_mpc_msg__cpp
+[31.008s] [ 12%] Generating C++ type support dispatch for ROS interfaces
+[31.008s] [ 13%] Generating C++ introspection for ROS interfaces
+[31.009s] [ 15%] Generating C++ type support for eProsima Fast-RTPS
+[31.037s] [ 16%] Linking C shared library libbound_mpc_msg__rosidl_generator_c.so
+[31.062s] [ 16%] Built target bound_mpc_msg__rosidl_generator_c
+[31.067s] [ 17%] Generating C type support for eProsima Fast-RTPS
+[31.067s] [ 18%] Generating C introspection for ROS interfaces
+[31.069s] [ 20%] Generating C type support dispatch for ROS interfaces
+[31.304s] [ 21%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/msg/mujoco_data__type_support.cpp.o
+[31.305s] [ 22%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/srv/trajectory__type_support.cpp.o
+[31.306s] [ 25%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/msg/vector__type_support.cpp.o
+[31.306s] [ 25%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/msg/mpc_data__type_support.cpp.o
+[31.306s] [ 27%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/msg/handover_location__type_support.cpp.o
+[31.306s] [ 27%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/msg/handover_data__type_support.cpp.o
+[31.306s] [ 29%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/srv/mpc_params__type_support.cpp.o
+[31.354s] [ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/msg/detail/handover_data__type_support.cpp.o
+[31.354s] [ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/msg/detail/handover_location__type_support.cpp.o
+[31.354s] [ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/msg/detail/vector__type_support.cpp.o
+[31.354s] [ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/msg/detail/mpc_data__type_support.cpp.o
+[31.354s] [ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/srv/detail/mpc_params__type_support.cpp.o
+[31.354s] [ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/msg/detail/mujoco_data__type_support.cpp.o
+[31.354s] [ 37%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/srv/detail/trajectory__type_support.cpp.o
+[31.386s] [ 41%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/msg/handover_data__type_support.cpp.o
+[31.386s] [ 41%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/msg/mujoco_data__type_support.cpp.o
+[31.386s] [ 41%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/msg/handover_location__type_support.cpp.o
+[31.386s] [ 43%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/msg/mpc_data__type_support.cpp.o
+[31.387s] [ 44%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/srv/trajectory__type_support.cpp.o
+[31.387s] [ 45%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/srv/mpc_params__type_support.cpp.o
+[31.388s] [ 46%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/msg/vector__type_support.cpp.o
+[31.420s] [ 48%] Linking CXX shared library libbound_mpc_msg__rosidl_typesupport_c.so
+[31.446s] [ 48%] Built target bound_mpc_msg__rosidl_typesupport_c
+[31.453s] [ 49%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/msg/detail/mujoco_data__type_support.c.o
+[31.453s] [ 50%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/msg/detail/mpc_data__type_support.c.o
+[31.453s] [ 51%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/msg/detail/handover_location__type_support.c.o
+[31.453s] [ 53%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/msg/detail/vector__type_support.c.o
+[31.453s] [ 54%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/msg/detail/handover_data__type_support.c.o
+[31.455s] [ 55%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/srv/detail/trajectory__type_support.c.o
+[31.455s] [ 56%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/srv/detail/mpc_params__type_support.c.o
+[31.465s] [ 58%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/msg/detail/dds_fastrtps/vector__type_support.cpp.o
+[31.466s] [ 59%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/msg/detail/dds_fastrtps/handover_data__type_support.cpp.o
+[31.468s] [ 60%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/msg/detail/dds_fastrtps/mujoco_data__type_support.cpp.o
+[31.468s] [ 62%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/msg/detail/dds_fastrtps/mpc_data__type_support.cpp.o
+[31.468s] [ 63%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/msg/detail/dds_fastrtps/handover_location__type_support.cpp.o
+[31.469s] [ 64%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/srv/detail/dds_fastrtps/mpc_params__type_support.cpp.o
+[31.480s] [ 65%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/srv/detail/dds_fastrtps/trajectory__type_support.cpp.o
+[31.504s] [ 67%] Linking CXX shared library libbound_mpc_msg__rosidl_typesupport_cpp.so
+[31.512s] [ 69%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/msg/detail/handover_location__type_support_c.cpp.o
+[31.512s] [ 69%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/msg/detail/mpc_data__type_support_c.cpp.o
+[31.512s] [ 70%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/msg/detail/mujoco_data__type_support_c.cpp.o
+[31.512s] [ 73%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/srv/detail/mpc_params__type_support_c.cpp.o
+[31.512s] [ 72%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/msg/detail/handover_data__type_support_c.cpp.o
+[31.512s] [ 74%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/msg/detail/vector__type_support_c.cpp.o
+[31.512s] [ 75%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/srv/detail/trajectory__type_support_c.cpp.o
+[31.536s] [ 75%] Built target bound_mpc_msg__rosidl_typesupport_cpp
+[31.558s] [ 77%] Linking C shared library libbound_mpc_msg__rosidl_typesupport_introspection_c.so
+[31.586s] [ 77%] Built target bound_mpc_msg__rosidl_typesupport_introspection_c
+[31.745s] [ 78%] Linking CXX shared library libbound_mpc_msg__rosidl_typesupport_fastrtps_c.so
+[31.774s] [ 79%] Linking CXX shared library libbound_mpc_msg__rosidl_typesupport_introspection_cpp.so
+[31.785s] [ 79%] Built target bound_mpc_msg__rosidl_typesupport_fastrtps_c
+[31.817s] [ 81%] Linking CXX shared library libbound_mpc_msg__rosidl_typesupport_fastrtps_cpp.so
+[31.817s] [ 81%] Built target bound_mpc_msg__rosidl_typesupport_introspection_cpp
+[31.861s] [ 81%] Built target bound_mpc_msg__rosidl_typesupport_fastrtps_cpp
+[31.873s] [ 81%] Built target bound_mpc_msg
+[31.885s] [ 82%] Generating Python code for ROS interfaces
+[32.602s] [ 82%] Built target bound_mpc_msg__py
+[32.612s] [ 83%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/msg/_mpc_data_s.c.o
+[32.612s] [ 86%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/msg/_mujoco_data_s.c.o
+[32.612s] [ 86%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/srv/_mpc_params_s.c.o
+[32.613s] [ 87%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/msg/_vector_s.c.o
+[32.613s] [ 88%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/msg/_handover_location_s.c.o
+[32.614s] [ 91%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/srv/_trajectory_s.c.o
+[32.614s] [ 91%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/msg/_handover_data_s.c.o
+[32.722s] [ 92%] Linking C shared library rosidl_generator_py/bound_mpc_msg/libbound_mpc_msg__rosidl_generator_py.so
+[32.747s] [ 92%] Built target bound_mpc_msg__rosidl_generator_py
+[32.757s] [ 93%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_introspection_c.c.o
+[32.760s] [ 94%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_c.c.o
+[32.760s] [ 96%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[32.808s] [ 97%] Linking C shared library rosidl_generator_py/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[32.810s] [ 98%] Linking C shared library rosidl_generator_py/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[32.812s] [100%] Linking C shared library rosidl_generator_py/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[32.832s] [100%] Built target bound_mpc_msg__rosidl_typesupport_introspection_c__pyext
+[32.833s] [100%] Built target bound_mpc_msg__rosidl_typesupport_c__pyext
+[32.836s] [100%] Built target bound_mpc_msg__rosidl_typesupport_fastrtps_c__pyext
+[32.843s] Invoked command in '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg -- -j24 -l24
+[32.848s] Invoking command in '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg
+[32.851s] -- Install configuration: ""
+[32.851s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/ament_index/resource_index/rosidl_interfaces/bound_mpc_msg
+[32.851s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg
+[32.851s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv
+[32.851s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/trajectory.h
+[32.851s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/mpc_params.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__functions.c
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__struct.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__functions.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__type_support.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__type_support.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__struct.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__functions.c
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__functions.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/rosidl_generator_c__visibility_control.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/handover_location.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/mpc_data.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/handover_data.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__functions.c
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__functions.c
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__functions.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__functions.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__type_support.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__struct.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__type_support.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__struct.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__functions.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__type_support.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__functions.c
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__type_support.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__struct.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__struct.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__struct.h
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__functions.c
+[32.852s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__functions.c
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__functions.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__type_support.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__functions.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/mujoco_data.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/vector.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/library_path.sh
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/library_path.dsv
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_generator_c.so
+[32.853s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_generator_c.so" to ""
+[32.853s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg
+[32.853s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv
+[32.853s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__rosidl_typesupport_fastrtps_c.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__rosidl_typesupport_fastrtps_c.h
+[32.853s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg
+[32.853s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__rosidl_typesupport_fastrtps_c.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__rosidl_typesupport_fastrtps_c.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__rosidl_typesupport_fastrtps_c.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__rosidl_typesupport_fastrtps_c.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__rosidl_typesupport_fastrtps_c.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_fastrtps_c.so
+[32.853s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_fastrtps_c.so" to ""
+[32.853s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg
+[32.853s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/mpc_params.hpp
+[32.853s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail
+[32.853s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__struct.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__builder.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__builder.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__struct.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__traits.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__traits.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/trajectory.hpp
+[32.854s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/handover_data.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/handover_location.hpp
+[32.854s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__traits.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__builder.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__traits.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__traits.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__struct.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__struct.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__builder.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__builder.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__struct.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__traits.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__struct.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__struct.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__builder.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__traits.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__builder.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/mujoco_data.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/vector.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/mpc_data.hpp
+[32.854s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg
+[32.854s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv
+[32.854s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__rosidl_typesupport_fastrtps_cpp.hpp
+[32.854s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/dds_fastrtps
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[32.855s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg
+[32.855s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__rosidl_typesupport_fastrtps_cpp.hpp
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/dds_fastrtps
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__rosidl_typesupport_fastrtps_cpp.hpp
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__rosidl_typesupport_fastrtps_cpp.hpp
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__rosidl_typesupport_fastrtps_cpp.hpp
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__rosidl_typesupport_fastrtps_cpp.hpp
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_fastrtps_cpp.so
+[32.855s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_fastrtps_cpp.so" to ""
+[32.855s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg
+[32.855s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv
+[32.855s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__type_support.c
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__rosidl_typesupport_introspection_c.h
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__type_support.c
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__rosidl_typesupport_introspection_c.h
+[32.855s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg
+[32.855s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__rosidl_typesupport_introspection_c.h
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__type_support.c
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__type_support.c
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__type_support.c
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__rosidl_typesupport_introspection_c.h
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__type_support.c
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__rosidl_typesupport_introspection_c.h
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__rosidl_typesupport_introspection_c.h
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__rosidl_typesupport_introspection_c.h
+[32.855s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__type_support.c
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_introspection_c.so
+[32.856s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_introspection_c.so" to ""
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_c.so
+[32.856s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_c.so" to ""
+[32.856s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg
+[32.856s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv
+[32.856s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__type_support.cpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__type_support.cpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__rosidl_typesupport_introspection_cpp.hpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__rosidl_typesupport_introspection_cpp.hpp
+[32.856s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg
+[32.856s] -- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__rosidl_typesupport_introspection_cpp.hpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__type_support.cpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__type_support.cpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__rosidl_typesupport_introspection_cpp.hpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__type_support.cpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__rosidl_typesupport_introspection_cpp.hpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__type_support.cpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__rosidl_typesupport_introspection_cpp.hpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__rosidl_typesupport_introspection_cpp.hpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__type_support.cpp
+[32.856s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_introspection_cpp.so
+[32.857s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_introspection_cpp.so" to ""
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_cpp.so
+[32.857s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_cpp.so" to ""
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/pythonpath.sh
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/pythonpath.dsv
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg-0.0.0-py3.10.egg-info
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg-0.0.0-py3.10.egg-info/top_level.txt
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg-0.0.0-py3.10.egg-info/dependency_links.txt
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg-0.0.0-py3.10.egg-info/SOURCES.txt
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg-0.0.0-py3.10.egg-info/PKG-INFO
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_introspection_c.c
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_c.c
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/libbound_mpc_msg__rosidl_generator_py.so
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_trajectory.py
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_mpc_params.py
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_mpc_params_s.c
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/__init__.py
+[32.857s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_trajectory_s.c
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/__init__.py
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mpc_data.py
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mujoco_data_s.c
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_vector_s.c
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_location_s.c
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mpc_data_s.c
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/__init__.py
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_vector.py
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_location.py
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_data_s.c
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mujoco_data.py
+[32.858s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_data.py
+[32.884s] Listing '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg'...
+[32.884s] Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/__init__.py'...
+[32.884s] Listing '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg'...
+[32.884s] Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/__init__.py'...
+[32.884s] Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_data.py'...
+[32.884s] Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_location.py'...
+[32.884s] Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mpc_data.py'...
+[32.884s] Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mujoco_data.py'...
+[32.884s] Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_vector.py'...
+[32.884s] Listing '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv'...
+[32.884s] Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/__init__.py'...
+[32.884s] Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_mpc_params.py'...
+[32.884s] Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_trajectory.py'...
+[32.886s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[32.886s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[32.886s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[32.886s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[32.886s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[32.886s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_generator_py.so
+[32.887s] -- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_generator_py.so" to ""
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/Vector.idl
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/MPCData.idl
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/HandoverLocation.idl
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/HandoverData.idl
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/MujocoData.idl
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/MPCParams.idl
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/Trajectory.idl
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/Vector.msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/MPCData.msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/HandoverLocation.msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/HandoverData.msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/MujocoData.msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/MPCParams.srv
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/MPCParams_Request.msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/MPCParams_Response.msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/Trajectory.srv
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/Trajectory_Request.msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/Trajectory_Response.msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/ament_index/resource_index/package_run_dependencies/bound_mpc_msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/ament_index/resource_index/parent_prefix_path/bound_mpc_msg
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/ament_prefix_path.sh
+[32.887s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/ament_prefix_path.dsv
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/path.sh
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/path.dsv
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/local_setup.bash
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/local_setup.sh
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/local_setup.zsh
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/local_setup.dsv
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/package.dsv
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/ament_index/resource_index/packages/bound_mpc_msg
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_generator_cExport.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_generator_cExport-noconfig.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_typesupport_fastrtps_cExport.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_generator_cppExport.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_typesupport_fastrtps_cppExport.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_introspection_cExport.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_cExport.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_cExport-noconfig.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_introspection_cppExport.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_cppExport.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_cppExport-noconfig.cmake
+[32.888s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_generator_pyExport.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_generator_pyExport-noconfig.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/rosidl_cmake-extras.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/ament_cmake_export_dependencies-extras.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/ament_cmake_export_include_directories-extras.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/ament_cmake_export_libraries-extras.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/ament_cmake_export_targets-extras.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msgConfig.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msgConfig-version.cmake
+[32.889s] -- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/package.xml
+[32.890s] Invoked command in '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg

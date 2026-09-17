@@ -1,0 +1,16 @@
+{
+  "execution_completed": true,
+  "quality_completed": true,
+  "simulated_completion_time_s": 15.518999999996838,
+  "elapsed_until_stop_s": 15.518999999996838,
+  "simulation_wall_s": 1.498980117001338,
+  "valid_coverage_fraction": 1.0,
+  "raw_coverage_fraction": 1.0,
+  "max_hole_diameter_upper_bound_m": 0.0,
+  "max_along_scan_gap_m": 0.0009580311757344405,
+  "collision_steps": 0,
+  "velocity_utilization_max": 0.37629450199579667,
+  "acceleration_utilization_max": 0.9956392634001803,
+  "tracking_error_max_rad": 0.00013949963697190704,
+  "torque_saturation_fraction": 0.0
+}

@@ -1,0 +1,279 @@
+# DESIGN ONLY. Resolve geometry/model/calibration fields before running comparisons.
+protocol_version: surface_scan_continuity_v2
+date: '2026-09-16'
+status: DESIGN_ONLY_NOT_EXECUTED
+repository:
+  full_name: dingzhen60027/CG-HIK
+  branch: codex/hierarchical-v5
+  old_evidence_base: bf9ccc4e0314c0d289101d89ff4e40577de392f9
+authorization:
+  current_phase: phase1_baselines
+  implement_proposed_method_now: false
+  run_final_test_now: false
+  write_paper_now: false
+  actuate_real_robot: false
+task:
+  name: known_cad_noncontact_surface_profile_scan
+  scope: Fixed spatial coverage order, optimize only admissible poses/configuration
+    and timing
+  parameter_provenance: All numeric process values below are proposed simulation assumptions,
+    not a hardware specification
+  roi_m:
+  - 0.24
+  - 0.16
+  raster_pitch_m: 0.02
+  directions:
+  - u
+  - v
+  lines:
+    u: 9
+    v: 13
+  continuous_turns: common_C2_surface_domain_connector
+  scan_transition_tags: freeze_before_comparison
+  scanner:
+    model: geometric_line_profiler
+    profiles_hz: 200
+    nominal_standoff_m: 0.15
+    standoff_range_m:
+    - 0.145
+    - 0.155
+    max_incidence_deg: 10.0
+    center_ray_path_error_m: 0.001
+    line_orientation_error_deg: 5.0
+    line_sign_equivalence: true
+    unrestricted_roll: false
+    width_at_nominal_m: 0.04
+    rays_per_profile: 81
+    normal_convention: outward surface normal; ray axis points towards object; incidence
+      cosine=-dot(a,n)
+  quality:
+    max_along_scan_gap_m: 0.001
+    coverage_area_grid_spacing_m: 0.001
+    coverage_neighbor_radius_m: 0.00075
+    min_valid_coverage_fraction: 0.99
+    max_uncovered_connected_hole_diameter_m: 0.002
+    planning_clearance_m: 0.005
+    all_quality_evaluated_from: actual simulated feedback, raycasts, timestamps; not
+      ideal plan
+environment:
+  os_target: Ubuntu 22.04
+  ros_interface: ROS 2 Humble
+  simulation: MuJoCo
+  isolate_from_old_environment: true
+  physics_dt_s: 0.001
+  low_level_dt_s: 0.002
+  controller: common torque-limited inverse-dynamics feedforward plus PD
+  runtime_qpos_overwrite_allowed: false
+  models:
+  - panda
+  - ur5e
+  joint_speed_factor: 0.5
+  joint_acceleration_default_rad_s2: 2.0
+  acceleration_provenance: research assumption if no authoritative model-specific
+    limit; freeze per-joint vector after calibration
+  model_commits: null
+  controller_gains: null
+  tool_mass_inertia_tcp: null
+  calibration_required_fields:
+  - model_commits
+  - controller_gains
+  - tool_mass_inertia_tcp
+  real_hardware: NOT_CONFIRMED_AND_NOT_AUTHORIZED
+parameterization:
+  basis: cubic B-spline C2
+  nominal_control_points: 64
+  scaling_control_points:
+  - 32
+  - 64
+  - 128
+  timing_grid_dev_checks:
+  - 401
+  - 801
+  final_timing_grid: freeze after common interpolation/constraint accuracy check
+  path_end_conditions: same q endpoints and rest-to-rest timing
+  full_retiming_after_update: true
+baselines:
+- id: B0
+  name: nominal_ik_toppra
+  mode: offline
+  purpose: nominal continuous path plus strong timing
+- id: B1
+  name: tb_smooth_toppra
+  mode: offline
+  purpose: Task Balance geometric initialization, constrained geometry-only smoothing,
+    then TOPP-RA
+  initialization_identity: geometry_adaptation_of_frozen_TB_not_unmodified_online_solver
+- id: B2
+  name: dense_joint_time
+  mode: offline
+  purpose: same objective and parameterization, all-variable joint-time optimization
+  prior_art: Fried & Paternain arXiv:2412.07859
+  identity: matched local implementation, not claimed official reproduction
+- id: B3
+  name: boundmpc
+  mode: online
+  purpose: mature error-bounded progress control
+  official_repository: TU-Wien-ACIN-CDS/BoundMPC
+  requested_update_hz: 10
+  actual_backend: record; public MA57 performance dependency must be disclosed
+  incomplete_adaptation_status: implementation_incomplete_not_algorithm_failure
+future_methods:
+- id: M
+  name: time_feasible_blocks
+  max_active_control_fraction: 0.25
+  status: proposed_not_implemented
+- id: A1
+  name: uniform_blocks
+  same_variable_budget: true
+- id: A2
+  name: geometric_blocks
+  same_variable_budget: true
+scenes:
+  file: scene_design.json
+  dev_per_robot: 12
+  same_family_test_per_robot: 36
+  new_shape_test_per_robot: 12
+  test_changes:
+  - workpiece placement
+  - scan direction
+  - held-out surface shape
+  test_unchanged:
+  - quality requirements
+  - sensor model
+  - model/controller settings
+  - method parameters
+  - budgets
+  avoid_selection_by_solver_outcome: true
+  candidate_attempt_ledger_required: true
+run_plan:
+  planning_or_online_timing_repeats: 3
+  offline_nominal_execution_repeat_index: 0
+  phase1:
+    scenes: 24
+    settings: 5
+    timing_trials: 360
+    primary_scene_method_conditions: 120
+    actual_nominal_simulation_trials_planned: 168
+    main_settings: 4
+    bridge_settings: 1
+    main_timing_trials: 288
+    bridge_timing_trials: 72
+  phase2:
+    scenes: 24
+    new_settings: 3
+    timing_trials: 216
+    nominal_simulation_trials_planned: 72
+  scaling_development:
+    scenes: 6
+    settings:
+    - B2
+    - M
+    - A1
+    control_counts:
+    - 32
+    - 64
+    - 128
+    timing_trials: 162
+  phase3:
+    scenes: 96
+    settings: 7
+    timing_trials: 2016
+    primary_scene_method_conditions: 672
+    actual_nominal_simulation_trials_planned: 864
+  perturbations:
+    scene_subset: 12
+    settings: 7
+    paired_seeds:
+    - 41
+    - 73
+    - 107
+    - 149
+    - 191
+    execution_trials_planned: 420
+    tool_mass_relative_range:
+    - 0.9
+    - 1.1
+    controller_delay_cycles: 1
+    low_frequency_torque_vector: freeze in dev before test
+    offline_reuse_plans: true
+    online_rerun_original_controller: true
+  failures: No replacement; counts are scheduled conditions, not a claim every plan
+    will be executable
+budgets:
+  post_initialization_max_s: 30.0
+  checkpoints_s:
+  - 1.0
+  - 5.0
+  - 10.0
+  - 30.0
+  primary_post_initialization_s: 10.0
+  include_initialization_in_total_plan_time: true
+  joint_reference_gap_fraction: 0.05
+  time_cycle_repeated_jobs:
+  - 1
+  - 10
+  - 100
+  online_accounting: Advance simulation under old command/remaining sequence during
+    measured compute latency; no double count of CPU inside execution duration
+statistics:
+  independent_cluster: robot x CAD x placement
+  scan_direction: paired correlated subcase
+  robots_reported_separately: true
+  confidence: paired 95 percent cluster bootstrap, 4000 resamples
+  success_and_common_quality_complete_time_both_reported: true
+  planning_repeats: nested within scene; not new samples
+  bootstrap_seed: 2026091607
+design_targets_not_claimed_results:
+  vs_B1_exec_time_median_reduction: 0.15
+  aspirational_reduction: 0.2
+  vs_B2_execution_time_gap_at_most: 0.05
+  vs_B2_planning_speedup_at_least: 2.0
+  require_support_over_uniform_geometric_blocks: true
+  no_all_metrics_win_gate: true
+output_root: outputs/process_scan
+phase1_report: docs/PROCESS_SCAN_BASELINE_REPORT.md
+stop_after_phase1_for_review: true
+execution_acceptance_calibration:
+  joint_limit_numerical_tolerances: null
+  settle_velocity_threshold_rad_s: 0.01
+  settle_hold_s: 0.2
+  torque_saturation_record_threshold_fraction: 0.999
+  physical_timeout_factor_of_common_reference: 3.0
+  require_before_performance: true
+  note: Numerical/physical thresholds are common calibrated study settings, not tuned
+    per algorithm; timeout uses a common reference, not each method own predicted
+    duration.
+bridge_control:
+  id: G
+  name: gn_same_tolerance_smooth_toppra
+  phase: development_only
+  changes_only: B1 initialization task objective/direction; common geometry box/scale/seed,
+    pose tolerances, smoothing and retiming
+  requires_equal_process_domain: true
+geometry_adapter:
+  freeze_old_online_solver: true
+  interface:
+  - target_pose
+  - seed_q
+  - physical_joint_bounds
+  - continuity_box
+  - step_scale
+  - pose_tolerances
+  allow_fake_dt_or_velocity: false
+  physical_speed_checked_after_retiming: true
+  calls_existing_local_core: true
+  nearest_projection_claim: false
+  seed_pose_tolerances:
+    position_m: 0.001
+    orientation_deg: 0.5
+  seed_pose_tolerances_are_process_constraints: false
+  continuity_radius_rad: null
+  step_scale_rad: null
+  require_explicit_calibration_before_comparison: true
+  geometric_smoothing_beta_initial: 1.0
+reuse_reporting:
+  required: true
+  path: docs/PROCESS_SCAN_REUSE_MAP.md
+  bridge_table: reports/bridge_tb_vs_gn.csv
+  same_seed_for_dense_sparse: true
+  no_forced_TB_superiority: true

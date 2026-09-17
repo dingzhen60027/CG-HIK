@@ -1,0 +1,57 @@
+{
+  "slot": "panda_plane_p0_v",
+  "family": "plane",
+  "placement": 0,
+  "direction": "v",
+  "robot": "panda",
+  "center": [
+    0.5,
+    -0.035,
+    0.24
+  ],
+  "world_R": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "common_start": [
+    -0.3785338444093598,
+    -0.49427523372717336,
+    0.07506736580050889,
+    -2.4631259122249896,
+    0.03861996021305504,
+    1.969760442651148,
+    -0.32743196050020684
+  ],
+  "common_end": [
+    0.04510392581944213,
+    0.20107148788160753,
+    0.03001391062605783,
+    -1.7069452569975352,
+    -0.0063454015308532915,
+    1.907924181384746,
+    0.0766139923040271
+  ],
+  "reference_geometry_feasible": true,
+  "reference_pose_ok": true,
+  "reference_min_clearance": 0.022066023158668818,
+  "cluster": "panda_plane_p0",
+  "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+  "source_model_sha256": "ad9a5adfe8c6cf9aecfbd197ded2f92ea8adb6fb6ca790fb4f8fca79550349fb",
+  "fk_max_error": 1.7763568394002505e-15,
+  "no_method_outcome_used": true,
+  "split": "development",
+  "scene_uid": "f3f3897b5f524fd2bf769f27b0ff33b7489cd38286aa0a3aef7bd1de2cff55db"
+}

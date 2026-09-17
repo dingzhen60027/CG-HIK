@@ -1,0 +1,18 @@
+{
+  "question": "Do initialized paths yield physically quality-complete scans, and at what measured cost?",
+  "sources": [
+    "scene_results.csv",
+    "baseline_main.csv",
+    "bottlenecks.csv"
+  ],
+  "independent_unit": "robot/family/placement cluster; 6 per robot",
+  "timing_repeat_reduction": "mean within scene",
+  "uncertainty": "paired cluster intervals in paired_intervals.csv; plotted points are descriptive scene values",
+  "negative_results": "missing input, implementation incomplete and physical/quality failure retained separately",
+  "exports": [
+    "PNG 300dpi",
+    "editable SVG",
+    "vector PDF"
+  ],
+  "target": "Phase-1 review, not a journal submission"
+}

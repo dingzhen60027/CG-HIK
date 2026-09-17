@@ -1,0 +1,55 @@
+{
+  "slot": "ur5e_plane_p0_v",
+  "family": "plane",
+  "placement": 0,
+  "direction": "v",
+  "robot": "ur5e",
+  "center": [
+    0.5,
+    -0.035,
+    0.24
+  ],
+  "world_R": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "common_start": [
+    -0.6362719674370577,
+    -1.8519559522320945,
+    1.8550464399081419,
+    -1.5738868146760476,
+    -1.5707963265897928,
+    -2.2070682944370583
+  ],
+  "common_end": [
+    -0.14366467513901143,
+    -1.2962009573389517,
+    1.3012433192565598,
+    -1.575838655539429,
+    -1.5707963240290754,
+    -1.71446099585652
+  ],
+  "reference_geometry_feasible": true,
+  "reference_pose_ok": true,
+  "reference_min_clearance": 0.01712661335129586,
+  "cluster": "ur5e_plane_p0",
+  "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+  "source_model_sha256": "807ed19dc7de3b14e3beee7eec1927ef9a882dd0313b73268ce72183982128c7",
+  "fk_max_error": 2.392081711315702e-16,
+  "no_method_outcome_used": true,
+  "split": "development",
+  "scene_uid": "b4cbe6298b4c8842e3d61c4c05cef1b634d1de760788b1ccb4c7c2647062845b"
+}

@@ -1,0 +1,37 @@
+{
+  "identity": "Official experiment1 path/robot/weights, first 3 headless updates; no hardware/scan claim",
+  "linear_solver": "Ipopt bundled MUMPS (MA57 not configured)",
+  "build_seconds": 0.937713752999116,
+  "updates": [
+    {
+      "step": 0,
+      "outer_seconds": 0.050571592000778764,
+      "reported_seconds": 0.03389157000128762,
+      "iterations": 13,
+      "error_count": 0,
+      "phi": [
+        0.0001963340109792704
+      ]
+    },
+    {
+      "step": 1,
+      "outer_seconds": 0.04785144999914337,
+      "reported_seconds": 0.03138930699788034,
+      "iterations": 14,
+      "error_count": 0,
+      "phi": [
+        0.0028604452102313034
+      ]
+    },
+    {
+      "step": 2,
+      "outer_seconds": 0.04372935599894845,
+      "reported_seconds": 0.027800109000963857,
+      "iterations": 11,
+      "error_count": 0,
+      "phi": [
+        0.011433583934290675
+      ]
+    }
+  ]
+}

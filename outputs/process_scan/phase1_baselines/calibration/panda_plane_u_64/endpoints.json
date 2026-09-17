@@ -1,0 +1,342 @@
+[
+  {
+    "q": [
+      1.0395351279213236,
+      -1.1354569402628638,
+      -1.1386927626389518,
+      -2.5194795980094318,
+      -0.9775757990909215,
+      1.6941049768941154,
+      -1.093325136894145
+    ],
+    "accepted": false,
+    "reason": "position_tolerance+orientation_tolerance",
+    "position_error": 0.00018240687746418584,
+    "orientation_error": 0.0017510811252711954,
+    "method": "gn",
+    "status": "iteration_limit",
+    "trace": [
+      {
+        "iteration": 0,
+        "objective": 18494298.723959193,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 1,
+        "objective": 4808642.1717127375,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 2,
+        "objective": 2688925.0164733394,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 3,
+        "objective": 1809429.126553091,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 4,
+        "objective": 1134042.3559743746,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 5,
+        "objective": 655649.6326997221,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 6,
+        "objective": 358805.71717846475,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 7,
+        "objective": 149225.6549438121,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 8,
+        "objective": 34270.64929700793,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 9,
+        "objective": 44.29521316839805,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 10,
+        "objective": 14.084292309997734,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 11,
+        "objective": 13.56445349937412,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 12,
+        "objective": 12.949751524143934,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 13,
+        "objective": 12.507097032861648,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 14,
+        "objective": 12.214247088689875,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 15,
+        "objective": 12.052147968971004,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 16,
+        "objective": 12.004537061458723,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 17,
+        "objective": 11.638722182796421,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 18,
+        "objective": 11.296996477325694,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 19,
+        "objective": 10.978033017481957,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 20,
+        "objective": 10.680589389398655,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 21,
+        "objective": 10.403502663253,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 22,
+        "objective": 10.145684679709325,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 23,
+        "objective": 9.906117633214834,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 24,
+        "objective": 9.68384993443602,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 25,
+        "objective": 9.477992335114454,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 26,
+        "objective": 9.287714299579967,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 27,
+        "objective": 9.112240608330312,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 28,
+        "objective": 8.950848179930727,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 29,
+        "objective": 8.802863098318209,
+        "reason": "original_gn",
+        "dual_updates": 1
+      }
+    ],
+    "residual_evaluations": 156,
+    "elapsed_ns": 24769701,
+    "physical_velocity_checked": false,
+    "nearest_projection_claim": false
+  },
+  {
+    "q": [
+      -0.086250074760192,
+      0.2597829440023089,
+      0.17242472750568702,
+      -1.838502577048879,
+      -0.05094397317808339,
+      2.09405291995941,
+      -1.4648274436341
+    ],
+    "accepted": true,
+    "reason": "accepted",
+    "position_error": 9.3158249389802e-06,
+    "orientation_error": 3.9391954602186594e-05,
+    "method": "gn",
+    "status": "first_qp_accepted",
+    "trace": [
+      {
+        "iteration": 0,
+        "objective": 22262064.920778368,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 1,
+        "objective": 7791700.469808506,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 2,
+        "objective": 3233393.941976451,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 3,
+        "objective": 1292527.6225137706,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 4,
+        "objective": 802023.0093877248,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 5,
+        "objective": 524919.5249063532,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 6,
+        "objective": 395886.4246006725,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 7,
+        "objective": 272966.12328029476,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 8,
+        "objective": 146098.59075596594,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 9,
+        "objective": 50212.65052616407,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 10,
+        "objective": 16205.138003991806,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 11,
+        "objective": 11616.04319842849,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 12,
+        "objective": 8197.943456588537,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 13,
+        "objective": 5684.802657291052,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 14,
+        "objective": 3911.5565079233193,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 15,
+        "objective": 2701.0687910164115,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 16,
+        "objective": 1890.749002311298,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 17,
+        "objective": 1353.3390562813902,
+        "reason": "original_gn",
+        "dual_updates": 1
+      },
+      {
+        "iteration": 18,
+        "objective": 998.4033775288121,
+        "reason": "original_gn",
+        "dual_updates": 1
+      }
+    ],
+    "residual_evaluations": 48,
+    "elapsed_ns": 9042557,
+    "physical_velocity_checked": false,
+    "nearest_projection_claim": false
+  }
+]

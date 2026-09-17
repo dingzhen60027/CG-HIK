@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "unique_conditions": 360,
+  "physical_records_checked": 84,
+  "identical_B1_snapshot_checks": 63,
+  "numerical_and_input_hashes_unchanged": true,
+  "max_common_start_displacement_rad": 0.0,
+  "new_solver_calls": 0,
+  "new_physics_calls": 0,
+  "scope": "saved lineage, timestamps, common starts, time grids, source hashes and recorded acceptance invariants; not a continuous-time proof"
+}

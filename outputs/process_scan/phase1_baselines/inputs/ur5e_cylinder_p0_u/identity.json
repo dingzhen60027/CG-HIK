@@ -1,0 +1,55 @@
+{
+  "slot": "ur5e_cylinder_p0_u",
+  "family": "cylinder",
+  "placement": 0,
+  "direction": "u",
+  "robot": "ur5e",
+  "center": [
+    0.5,
+    -0.035,
+    0.24
+  ],
+  "world_R": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "common_start": [
+    -0.8830536120861089,
+    -2.1447319892894625,
+    2.179154545596941,
+    -1.8328889128948749,
+    -1.3026762365080011,
+    2.289375544116309
+  ],
+  "common_end": [
+    -0.12120992440614109,
+    -0.9727859078637463,
+    0.8484871663537896,
+    -1.0989059307763798,
+    -1.6122642058094185,
+    3.0276641213284594
+  ],
+  "reference_geometry_feasible": true,
+  "reference_pose_ok": true,
+  "reference_min_clearance": 0.01712535993488358,
+  "cluster": "ur5e_cylinder_p0",
+  "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+  "source_model_sha256": "7e7b44dca3d7d178e93edf98eec37a86a2ff31d9c36eb118bee9f4e6a50aa613",
+  "fk_max_error": 2.392081711315702e-16,
+  "no_method_outcome_used": true,
+  "split": "development",
+  "scene_uid": "5d9aac3d7faa587a77b4ef01338725dc9ae7ca13f0a04df57de39f2cb095a9ac"
+}

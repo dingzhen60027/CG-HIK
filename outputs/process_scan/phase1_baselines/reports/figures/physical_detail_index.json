@@ -1,0 +1,57 @@
+[
+  {
+    "slot": "panda_plane_p0_u",
+    "status": "rendered",
+    "selection": "fixed placement0/u for every robot/family",
+    "files": [
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_panda_plane_p0_u.pdf",
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_panda_plane_p0_u.svg",
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_panda_plane_p0_u.png"
+    ]
+  },
+  {
+    "slot": "panda_cylinder_p0_u",
+    "status": "no_physical_record",
+    "files": null
+  },
+  {
+    "slot": "panda_saddle_p0_u",
+    "status": "rendered",
+    "selection": "fixed placement0/u for every robot/family",
+    "files": [
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_panda_saddle_p0_u.pdf",
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_panda_saddle_p0_u.svg",
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_panda_saddle_p0_u.png"
+    ]
+  },
+  {
+    "slot": "ur5e_plane_p0_u",
+    "status": "rendered",
+    "selection": "fixed placement0/u for every robot/family",
+    "files": [
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_ur5e_plane_p0_u.pdf",
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_ur5e_plane_p0_u.svg",
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_ur5e_plane_p0_u.png"
+    ]
+  },
+  {
+    "slot": "ur5e_cylinder_p0_u",
+    "status": "rendered",
+    "selection": "fixed placement0/u for every robot/family",
+    "files": [
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_ur5e_cylinder_p0_u.pdf",
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_ur5e_cylinder_p0_u.svg",
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_ur5e_cylinder_p0_u.png"
+    ]
+  },
+  {
+    "slot": "ur5e_saddle_p0_u",
+    "status": "rendered",
+    "selection": "fixed placement0/u for every robot/family",
+    "files": [
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_ur5e_saddle_p0_u.pdf",
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_ur5e_saddle_p0_u.svg",
+      "outputs/process_scan/phase1_baselines/reports/figures/physical_details_ur5e_saddle_p0_u.png"
+    ]
+  }
+]

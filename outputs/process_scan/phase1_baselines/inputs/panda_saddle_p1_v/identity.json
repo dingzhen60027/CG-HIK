@@ -1,0 +1,57 @@
+{
+  "slot": "panda_saddle_p1_v",
+  "family": "saddle",
+  "placement": 1,
+  "direction": "v",
+  "robot": "panda",
+  "center": [
+    0.53,
+    0.045,
+    0.24
+  ],
+  "world_R": [
+    [
+      0.9659258262890682,
+      -0.25881904510252074,
+      0.0
+    ],
+    [
+      0.25881904510252074,
+      0.9659258262890682,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "common_start": [
+    -0.05183334716702564,
+    -0.07589263574697694,
+    -0.12033007205062037,
+    -2.0069662148719565,
+    0.03399422493838757,
+    1.6540161797409654,
+    -0.4584889354669081
+  ],
+  "common_end": [
+    0.1655752514492734,
+    0.05414033572810733,
+    0.14621214196178953,
+    -1.9604121836518307,
+    -0.22023771709367576,
+    2.230458291311324,
+    0.14671424181129972
+  ],
+  "reference_geometry_feasible": true,
+  "reference_pose_ok": true,
+  "reference_min_clearance": 0.021308541883908093,
+  "cluster": "panda_saddle_p1",
+  "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+  "source_model_sha256": "d731329df270eba51c34cc89e3bb6e40a2d1d4a2fa40f34de045499a37923433",
+  "fk_max_error": 1.7763568394002505e-15,
+  "no_method_outcome_used": true,
+  "split": "development",
+  "scene_uid": "5f43b4d6461fcea3fe8ed7073c7de83186d13133f6cb072fc4eb2c12336a6b6c"
+}

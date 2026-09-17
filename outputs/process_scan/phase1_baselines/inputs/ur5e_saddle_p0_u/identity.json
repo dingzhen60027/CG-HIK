@@ -1,0 +1,55 @@
+{
+  "slot": "ur5e_saddle_p0_u",
+  "family": "saddle",
+  "placement": 0,
+  "direction": "u",
+  "robot": "ur5e",
+  "center": [
+    0.5,
+    -0.035,
+    0.24
+  ],
+  "world_R": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "common_start": [
+    -0.6268108293429235,
+    -1.621329821723531,
+    1.6077046569624465,
+    -1.2765500470704005,
+    -1.581549347160464,
+    -3.7485868416196055
+  ],
+  "common_end": [
+    -0.06965588847671966,
+    -1.4538534715904101,
+    1.5666328313822606,
+    -1.9290763447614687,
+    -1.7085396746348902,
+    -3.209977734113112
+  ],
+  "reference_geometry_feasible": true,
+  "reference_pose_ok": true,
+  "reference_min_clearance": 0.017124274339880934,
+  "cluster": "ur5e_saddle_p0",
+  "config_sha256": "a5fd821829c20cdcfcf39c29470445cf4ec8cf1072d7f0f884d3cdfd7cae4e22",
+  "source_model_sha256": "1677fd7496871350f108b8d7d0d7072ca8667ad176a1ed67dc635052053f087d",
+  "fk_max_error": 2.392081711315702e-16,
+  "no_method_outcome_used": true,
+  "split": "development",
+  "scene_uid": "512f782109f8188da0d9abc0c832e86278e011a39690b19c4fd78abb5a46d0f5"
+}

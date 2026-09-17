@@ -1,0 +1,59 @@
+protocol: surface_scan_continuity_v2
+scope: development_baselines_only
+old_evidence_base: bf9ccc4e0314c0d289101d89ff4e40577de392f9
+robots: [panda, ur5e]
+families: [plane, cylinder, saddle]
+placements: [0, 1]
+directions: [u, v]
+methods: [B0, B1, B2, B3, G]
+repeats: 3
+control_points: 64
+geometry_nodes: 401
+dense_validation_nodes: 3201
+timing_grid: 801
+timing_grid_additions: all_task_joins_and_spline_knots
+timing_dense_validation_nodes: 6401
+timing_validation_dilation: max_1_velocity_ratio_sqrt_acceleration_ratio_div_0.98
+sensor_planning_speed_m_s: 0.198
+public_sensor_max_gap_m: 0.001
+public_sensor_profiles_hz: 200
+geometry_continuity_radius_rad: 0.35
+geometry_step_scale_rad: 0.15
+geometry_node_budget_s: 1.0
+geometry_max_iterations: 30
+kappa: 1.0
+forcing: 0.25
+seed_tolerances: {position_m: 0.001, orientation_deg: 0.5}
+nominal_tolerances: {position_m: 0.00005, orientation_deg: 0.05}
+reference_construction: single_TRF_start_then_continuous_GN_geometry_only_before_comparison
+post_initialization_checkpoints_s: [1, 5, 10, 30]
+primary_checkpoint_s: 10
+max_optimization_s: 30
+controller: computed_torque_inertia_scaled_PD
+controller_kp_per_s2: 400.0
+controller_kd_per_s: 40.0
+physics_dt_s: 0.001
+controller_dt_s: 0.002
+scanner_mount_tool_z_m: 0.08
+scanner_mass_kg: 0.15
+scanner_diagonal_inertia_kg_m2: [0.000065, 0.000065, 0.00004]
+joint_speed_factor: 0.5
+joint_acceleration_limit_rad_s2: 2.0
+rate_validation_relative_tolerance: 0.001
+joint_position_numerical_tolerance_rad: 0.000001
+settle_velocity_rad_s: 0.01
+settle_position_rad: 0.001
+settle_hold_s: 0.2
+timeout_common_reference_factor: 3
+paired_cluster: robot_family_placement
+bootstrap_samples: 4000
+bootstrap_seed: 2026091607
+schedule_seed: 2026091611
+official_boundmpc_commit: b286df18641145bb97b31f29387227e4089a1ba4
+ur_description_commit: 18e6f603b3ebc2ec479fecb62d6be544b15755e9
+menagerie_inspected_not_used_commit: 8161bba264d7fa7c99ca301e91e7fb44737676ad
+physical_robot_model: frozen_URDF_geometry_inertia_plus_original_collision_meshes
+collision_distance_backend: Coal_3.0.2_same_convex_meshes
+collision_surface_envelope: conservative_CAD_bounding_box_for_planning_hfield_for_execution_and_rays
+old_methods_modified: false
+formal_tests_run: false

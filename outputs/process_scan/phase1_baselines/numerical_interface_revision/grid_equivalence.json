@@ -1,0 +1,170 @@
+[
+  {
+    "slot": "panda_plane_p0_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "panda_plane_p0_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "panda_plane_p1_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "panda_plane_p1_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "panda_cylinder_p0_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "panda_cylinder_p0_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "panda_cylinder_p1_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "panda_cylinder_p1_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "panda_saddle_p0_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "panda_saddle_p0_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "panda_saddle_p1_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "panda_saddle_p1_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "ur5e_plane_p0_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "ur5e_plane_p0_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "ur5e_plane_p1_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "ur5e_plane_p1_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "ur5e_cylinder_p0_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "ur5e_cylinder_p0_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "ur5e_cylinder_p1_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "ur5e_cylinder_p1_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "ur5e_saddle_p0_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "ur5e_saddle_p0_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  },
+  {
+    "slot": "ur5e_saddle_p1_u",
+    "removed_roundoff_duplicates": 0,
+    "before_min_step": 4.032258064512462e-05,
+    "after_min_step": 4.032258064512462e-05,
+    "max_point_displacement": 0.0
+  },
+  {
+    "slot": "ur5e_saddle_p1_v",
+    "removed_roundoff_duplicates": 7,
+    "before_min_step": 2.7755575615628914e-17,
+    "after_min_step": 0.0001562499999998579,
+    "max_point_displacement": 1.1102230246251565e-16
+  }
+]

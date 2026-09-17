@@ -1,0 +1,717 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:btry:surface-scan-metrics:v1",
+  "title": "Surface scan metrics — continuity v2",
+  "description": "One run record. Performance values must be observed. No zero completion time for failed runs. Reuses v1 fields; adds mandatory lineage and stagewise initialization diagnostics.",
+  "type": "object",
+  "properties": {
+    "identity": {
+      "type": "object",
+      "properties": {
+        "scene_uid": {
+          "type": "string"
+        },
+        "scene_slot": {
+          "type": "string"
+        },
+        "cluster_id": {
+          "type": "string"
+        },
+        "robot": {
+          "enum": [
+            "panda",
+            "ur5e"
+          ]
+        },
+        "method_id": {
+          "enum": [
+            "B0",
+            "B1",
+            "G",
+            "B2",
+            "B3",
+            "M",
+            "A1",
+            "A2"
+          ]
+        },
+        "split": {
+          "enum": [
+            "calibration",
+            "development",
+            "locked_same_family",
+            "locked_new_shape",
+            "robustness",
+            "hardware"
+          ]
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "repeat_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "perturbation_seed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "scene_uid",
+        "scene_slot",
+        "cluster_id",
+        "robot",
+        "method_id",
+        "split",
+        "run_id",
+        "repeat_index",
+        "perturbation_seed"
+      ],
+      "additionalProperties": true
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "implementation_ready": {
+          "type": "boolean"
+        },
+        "planner_feasible": {
+          "type": "boolean"
+        },
+        "execution_completed": {
+          "type": "boolean"
+        },
+        "quality_completed": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "implementation_ready",
+        "planner_feasible",
+        "execution_completed",
+        "quality_completed",
+        "reason"
+      ],
+      "additionalProperties": true
+    },
+    "planning": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "offline",
+            "online"
+          ]
+        },
+        "post_init_budget_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "initialization_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "optimization_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "time_parameterization_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "validation_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "total_plan_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "first_command_latency_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "online_update_p50_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "online_update_p95_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "online_deadline_misses": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "best_plan_predicted_execution_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "incumbents_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "mode",
+        "post_init_budget_s",
+        "initialization_s",
+        "optimization_s",
+        "time_parameterization_s",
+        "validation_s",
+        "total_plan_s",
+        "first_command_latency_s",
+        "online_update_p50_s",
+        "online_update_p95_s",
+        "online_deadline_misses",
+        "best_plan_predicted_execution_s",
+        "incumbents_file"
+      ],
+      "additionalProperties": true
+    },
+    "execution": {
+      "type": "object",
+      "properties": {
+        "wall_time_to_completion_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "sim_time_to_completion_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "elapsed_until_stop_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "scan_time_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "transition_time_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "online_wait_time_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "completion_progress": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "settled": {
+          "type": "boolean"
+        },
+        "physics_dt_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "controller_dt_s": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "wall_time_to_completion_s",
+        "sim_time_to_completion_s",
+        "elapsed_until_stop_s",
+        "scan_time_s",
+        "transition_time_s",
+        "online_wait_time_s",
+        "completion_progress",
+        "settled",
+        "physics_dt_s",
+        "controller_dt_s"
+      ],
+      "additionalProperties": true
+    },
+    "quality": {
+      "type": "object",
+      "properties": {
+        "raw_coverage_fraction": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "valid_coverage_fraction": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "maximum_hole_diameter_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "valid_profile_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_along_scan_gap_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "standoff_error_p95_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "standoff_error_max_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "incidence_p95_deg": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "incidence_max_deg": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "center_ray_path_error_max_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "line_orientation_error_max_deg": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "quality_violation_duration_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "measurement_source": {
+          "enum": [
+            "simulated_actual_state_raycast",
+            "physical_calibrated_sensor",
+            "not_measured"
+          ]
+        }
+      },
+      "required": [
+        "raw_coverage_fraction",
+        "valid_coverage_fraction",
+        "maximum_hole_diameter_m",
+        "valid_profile_count",
+        "max_along_scan_gap_m",
+        "standoff_error_p95_m",
+        "standoff_error_max_m",
+        "incidence_p95_deg",
+        "incidence_max_deg",
+        "center_ray_path_error_max_m",
+        "line_orientation_error_max_deg",
+        "quality_violation_duration_s",
+        "measurement_source"
+      ],
+      "additionalProperties": true
+    },
+    "motion": {
+      "type": "object",
+      "properties": {
+        "max_joint_speed_utilization": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "max_joint_acceleration_utilization": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "max_torque_utilization_pre_saturation": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "torque_saturation_fraction": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "tracking_joint_error_p95_rad": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "tracking_joint_error_max_rad": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "minimum_collision_clearance_m": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "collision_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "jerk_rms_rad_s3": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "derivative_rule": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "max_joint_speed_utilization",
+        "max_joint_acceleration_utilization",
+        "max_torque_utilization_pre_saturation",
+        "torque_saturation_fraction",
+        "tracking_joint_error_p95_rad",
+        "tracking_joint_error_max_rad",
+        "minimum_collision_clearance_m",
+        "collision_count",
+        "jerk_rms_rad_s3",
+        "derivative_rule"
+      ],
+      "additionalProperties": true
+    },
+    "mechanism": {
+      "type": "object",
+      "properties": {
+        "outer_iterations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "full_timing_solves": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mean_active_controls": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "max_active_controls": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "sensor_limited_time_lower_bound_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "bottleneck_trace_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "outer_iterations",
+        "full_timing_solves",
+        "mean_active_controls",
+        "max_active_controls",
+        "sensor_limited_time_lower_bound_s",
+        "bottleneck_trace_file"
+      ],
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "git_sha": {
+          "type": "string"
+        },
+        "scene_manifest_hash": {
+          "type": "string"
+        },
+        "protocol_hash": {
+          "type": "string"
+        },
+        "robot_model_hash": {
+          "type": "string"
+        },
+        "tool_model_hash": {
+          "type": "string"
+        },
+        "controller_hash": {
+          "type": "string"
+        },
+        "software_versions": {
+          "type": "object"
+        },
+        "compute_resource": {
+          "type": "object"
+        },
+        "planned_path_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "actual_state_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scan_samples_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "optimizer_trace_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "video_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "git_sha",
+        "scene_manifest_hash",
+        "protocol_hash",
+        "robot_model_hash",
+        "tool_model_hash",
+        "controller_hash",
+        "software_versions",
+        "compute_resource",
+        "planned_path_file",
+        "actual_state_file",
+        "scan_samples_file",
+        "optimizer_trace_file",
+        "video_file"
+      ],
+      "additionalProperties": true
+    },
+    "lineage": {
+      "type": "object",
+      "required": [
+        "initialization_method",
+        "shared_seed_id",
+        "geometry_adapter_version",
+        "old_source_hashes",
+        "nearest_projection_claim",
+        "physical_velocity_enforced_in_geometry"
+      ],
+      "properties": {
+        "initialization_method": {
+          "type": "string"
+        },
+        "shared_seed_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geometry_adapter_version": {
+          "type": "string"
+        },
+        "old_source_hashes": {
+          "type": "object"
+        },
+        "nearest_projection_claim": {
+          "const": false
+        },
+        "physical_velocity_enforced_in_geometry": {
+          "const": false
+        },
+        "pose_seed_checks": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "process_node_checks": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "process_dense_checks": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "identity",
+    "status",
+    "planning",
+    "execution",
+    "quality",
+    "motion",
+    "mechanism",
+    "provenance",
+    "lineage"
+  ],
+  "additionalProperties": true,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "properties": {
+              "quality_completed": {
+                "const": true
+              }
+            },
+            "required": [
+              "quality_completed"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "status": {
+            "properties": {
+              "execution_completed": {
+                "const": true
+              },
+              "planner_feasible": {
+                "const": true
+              }
+            }
+          },
+          "quality": {
+            "properties": {
+              "valid_coverage_fraction": {
+                "type": "number",
+                "minimum": 0.99
+              },
+              "maximum_hole_diameter_m": {
+                "type": "number",
+                "maximum": 0.002
+              }
+            }
+          },
+          "execution": {
+            "properties": {
+              "sim_time_to_completion_s": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "properties": {
+              "execution_completed": {
+                "const": false
+              }
+            },
+            "required": [
+              "execution_completed"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "execution": {
+            "properties": {
+              "sim_time_to_completion_s": {
+                "type": "null"
+              },
+              "wall_time_to_completion_s": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

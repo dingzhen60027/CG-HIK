@@ -1,0 +1,178 @@
+[0.315s] Invoking command in '/home/eric/wjg/btry/tmp/process_scan_dependencies/BoundMPC/bound_mpc': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../ros_build_310/bound_mpc build --build-base /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build install --record /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/install.log --single-version-externally-managed install_data
+[0.435s] running egg_info
+[0.435s] creating ../../ros_build_310/bound_mpc/bound_mpc.egg-info
+[0.436s] writing ../../ros_build_310/bound_mpc/bound_mpc.egg-info/PKG-INFO
+[0.436s] writing dependency_links to ../../ros_build_310/bound_mpc/bound_mpc.egg-info/dependency_links.txt
+[0.436s] writing entry points to ../../ros_build_310/bound_mpc/bound_mpc.egg-info/entry_points.txt
+[0.436s] writing requirements to ../../ros_build_310/bound_mpc/bound_mpc.egg-info/requires.txt
+[0.436s] writing top-level names to ../../ros_build_310/bound_mpc/bound_mpc.egg-info/top_level.txt
+[0.436s] writing manifest file '../../ros_build_310/bound_mpc/bound_mpc.egg-info/SOURCES.txt'
+[0.437s] reading manifest file '../../ros_build_310/bound_mpc/bound_mpc.egg-info/SOURCES.txt'
+[0.437s] reading manifest template 'MANIFEST.in'
+[0.438s] warning: no files found matching '*.so' anywhere in distribution
+[0.439s] writing manifest file '../../ros_build_310/bound_mpc/bound_mpc.egg-info/SOURCES.txt'
+[0.439s] running build
+[0.439s] running build_py
+[0.439s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build
+[0.439s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib
+[0.439s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc
+[0.439s] copying bound_mpc/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc
+[0.439s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes
+[0.439s] copying nodes/experiment2_runner.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes
+[0.439s] copying nodes/bound_mpc_node.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes
+[0.439s] copying nodes/experiment1_runner.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes
+[0.439s] copying nodes/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes
+[0.439s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils
+[0.439s] copying bound_mpc/utils/lie_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils
+[0.439s] copying bound_mpc/utils/path_utils.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils
+[0.439s] copying bound_mpc/utils/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils
+[0.439s] copying bound_mpc/utils/util_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils
+[0.439s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Logger
+[0.439s] copying bound_mpc/Logger/Logger.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Logger
+[0.439s] copying bound_mpc/Logger/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Logger
+[0.439s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/ReferencePath
+[0.439s] copying bound_mpc/ReferencePath/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/ReferencePath
+[0.439s] copying bound_mpc/ReferencePath/ReferencePath.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/ReferencePath
+[0.439s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Plotter
+[0.439s] copying bound_mpc/Plotter/Plotter.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Plotter
+[0.439s] copying bound_mpc/Plotter/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Plotter
+[0.439s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC
+[0.439s] copying bound_mpc/BoundMPC/bound_mpc_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC
+[0.439s] copying bound_mpc/BoundMPC/BoundMPC.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC
+[0.440s] copying bound_mpc/BoundMPC/casadi_ocp_formulation.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC
+[0.440s] copying bound_mpc/BoundMPC/jerk_trajectory_casadi.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC
+[0.440s] copying bound_mpc/BoundMPC/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC
+[0.440s] copying bound_mpc/BoundMPC/mpc_utils_casadi.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC
+[0.440s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Rviz_Tools
+[0.440s] copying bound_mpc/Rviz_Tools/rviz_tools.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Rviz_Tools
+[0.440s] copying bound_mpc/Rviz_Tools/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Rviz_Tools
+[0.440s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/RobotModel
+[0.440s] copying bound_mpc/RobotModel/RobotModel.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/RobotModel
+[0.440s] copying bound_mpc/RobotModel/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/RobotModel
+[0.440s] running install
+[0.440s] running install_lib
+[0.441s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc
+[0.441s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils/lie_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils/path_utils.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils/util_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils
+[0.441s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Logger
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Logger/Logger.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Logger
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Logger/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Logger
+[0.441s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/ReferencePath
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/ReferencePath/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/ReferencePath
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/ReferencePath/ReferencePath.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/ReferencePath
+[0.441s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Plotter
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Plotter/Plotter.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Plotter
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Plotter/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Plotter
+[0.441s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/bound_mpc_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/BoundMPC.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/casadi_ocp_formulation.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/jerk_trajectory_casadi.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC
+[0.441s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/mpc_utils_casadi.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC
+[0.441s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Rviz_Tools
+[0.442s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Rviz_Tools/rviz_tools.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Rviz_Tools
+[0.442s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Rviz_Tools/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Rviz_Tools
+[0.442s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/RobotModel
+[0.442s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/RobotModel/RobotModel.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/RobotModel
+[0.442s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/RobotModel/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/RobotModel
+[0.442s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc
+[0.442s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes
+[0.442s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes/experiment2_runner.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes
+[0.442s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes/bound_mpc_node.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes
+[0.442s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes/experiment1_runner.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes
+[0.442s] copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes
+[0.442s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils/lie_functions.py to lie_functions.cpython-310.pyc
+[0.442s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils/path_utils.py to path_utils.cpython-310.pyc
+[0.442s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils/__init__.py to __init__.cpython-310.pyc
+[0.442s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils/util_functions.py to util_functions.cpython-310.pyc
+[0.443s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Logger/Logger.py to Logger.cpython-310.pyc
+[0.444s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Logger/__init__.py to __init__.cpython-310.pyc
+[0.444s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/ReferencePath/__init__.py to __init__.cpython-310.pyc
+[0.444s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/ReferencePath/ReferencePath.py to ReferencePath.cpython-310.pyc
+[0.445s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Plotter/Plotter.py to Plotter.cpython-310.pyc
+[0.447s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Plotter/__init__.py to __init__.cpython-310.pyc
+[0.447s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/bound_mpc_functions.py to bound_mpc_functions.cpython-310.pyc
+[0.448s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/BoundMPC.py to BoundMPC.cpython-310.pyc
+[0.450s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/casadi_ocp_formulation.py to casadi_ocp_formulation.cpython-310.pyc
+[0.451s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/jerk_trajectory_casadi.py to jerk_trajectory_casadi.cpython-310.pyc
+[0.451s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/__init__.py to __init__.cpython-310.pyc
+[0.451s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/mpc_utils_casadi.py to mpc_utils_casadi.cpython-310.pyc
+[0.452s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Rviz_Tools/rviz_tools.py to rviz_tools.cpython-310.pyc
+[0.453s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Rviz_Tools/__init__.py to __init__.cpython-310.pyc
+[0.453s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/RobotModel/RobotModel.py to RobotModel.cpython-310.pyc
+[0.459s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/RobotModel/__init__.py to __init__.cpython-310.pyc
+[0.459s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/__init__.py to __init__.cpython-310.pyc
+[0.459s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes/experiment2_runner.py to experiment2_runner.cpython-310.pyc
+[0.459s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes/bound_mpc_node.py to bound_mpc_node.cpython-310.pyc
+[0.460s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes/experiment1_runner.py to experiment1_runner.cpython-310.pyc
+[0.460s] byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes/__init__.py to __init__.cpython-310.pyc
+[0.460s] running install_data
+[0.461s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/ament_index
+[0.461s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/ament_index/resource_index
+[0.461s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/ament_index/resource_index/packages
+[0.461s] copying resource/bound_mpc -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/ament_index/resource_index/packages
+[0.461s] copying package.xml -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc
+[0.461s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/config
+[0.461s] copying config/config_exp2.rviz -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/config
+[0.461s] copying config/config_exp1.rviz -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/config
+[0.461s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf
+[0.461s] copying urdf/main.xacro -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf
+[0.461s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/Gripper
+[0.461s] copying urdf/Gripper/GripperLowRes.STL -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/Gripper
+[0.462s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body
+[0.462s] copying urdf/body/iiwa.gazebo.xacro -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body
+[0.462s] copying urdf/body/iiwa14.xacro -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body
+[0.462s] copying urdf/body/utilities.xacro -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body
+[0.462s] copying urdf/body/body.xacro -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body
+[0.462s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes
+[0.462s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14
+[0.462s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.462s] copying urdf/body/meshes/iiwa14/collision/link_4.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.462s] copying urdf/body/meshes/iiwa14/collision/link_7.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.465s] copying urdf/body/meshes/iiwa14/collision/link_5.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.465s] copying urdf/body/meshes/iiwa14/collision/link_1.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.465s] copying urdf/body/meshes/iiwa14/collision/link_6.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.466s] copying urdf/body/meshes/iiwa14/collision/link_5.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.467s] copying urdf/body/meshes/iiwa14/collision/link_2.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.469s] copying urdf/body/meshes/iiwa14/collision/link_6.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.470s] copying urdf/body/meshes/iiwa14/collision/link_3.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.471s] copying urdf/body/meshes/iiwa14/collision/link_0.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.471s] copying urdf/body/meshes/iiwa14/collision/link_1.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.473s] copying urdf/body/meshes/iiwa14/collision/link_4.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.475s] copying urdf/body/meshes/iiwa14/collision/link_7.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.477s] copying urdf/body/meshes/iiwa14/collision/link_2.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.477s] copying urdf/body/meshes/iiwa14/collision/link_0.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.479s] copying urdf/body/meshes/iiwa14/collision/link_3.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision
+[0.480s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.480s] copying urdf/body/meshes/iiwa14/visual/link_4.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.481s] copying urdf/body/meshes/iiwa14/visual/link_7.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.481s] copying urdf/body/meshes/iiwa14/visual/link_5.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.482s] copying urdf/body/meshes/iiwa14/visual/link_1.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.482s] copying urdf/body/meshes/iiwa14/visual/link_6.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.482s] copying urdf/body/meshes/iiwa14/visual/link_5.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.482s] copying urdf/body/meshes/iiwa14/visual/link_2.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.482s] copying urdf/body/meshes/iiwa14/visual/base_link.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.483s] copying urdf/body/meshes/iiwa14/visual/link_6.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.483s] copying urdf/body/meshes/iiwa14/visual/link_3.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.483s] copying urdf/body/meshes/iiwa14/visual/link_1.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.483s] copying urdf/body/meshes/iiwa14/visual/link_4.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.484s] copying urdf/body/meshes/iiwa14/visual/link_7.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.485s] copying urdf/body/meshes/iiwa14/visual/link_2.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.486s] copying urdf/body/meshes/iiwa14/visual/link_0.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.486s] copying urdf/body/meshes/iiwa14/visual/link_3.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual
+[0.486s] creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/launch
+[0.486s] copying launch/experiment1.launch.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/launch
+[0.486s] copying launch/experiment2.launch.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/launch
+[0.486s] copying launch/rviz.launch.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/launch
+[0.486s] running install_egg_info
+[0.487s] Copying ../../ros_build_310/bound_mpc/bound_mpc.egg-info to /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc-0.0.0-py3.10.egg-info
+[0.487s] running install_scripts
+[0.497s] Installing bound_mpc script to /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/bound_mpc
+[0.497s] Installing run_experiment1 script to /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/bound_mpc
+[0.497s] Installing run_experiment2 script to /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/bound_mpc
+[0.497s] writing list of installed files to '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/install.log'
+[0.543s] Invoked command in '/home/eric/wjg/btry/tmp/process_scan_dependencies/BoundMPC/bound_mpc' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../ros_build_310/bound_mpc build --build-base /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build install --record /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/install.log --single-version-externally-managed install_data

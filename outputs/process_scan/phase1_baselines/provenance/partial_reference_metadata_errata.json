@@ -1,0 +1,26 @@
+[
+  {
+    "slot": "panda_cylinder_p0_u",
+    "count": 42,
+    "erratum": "Unavailable reference only: original saved s stretched partial prefix to 1; use corrected index/400 file. Placeholder common endpoints were not executed.",
+    "original_preserved": true,
+    "used_by_any_baseline": false,
+    "corrected": "outputs/process_scan/phase1_baselines/provenance/partial_reference_indices/panda_cylinder_p0_u.npz"
+  },
+  {
+    "slot": "panda_cylinder_p1_u",
+    "count": 39,
+    "erratum": "Unavailable reference only: original saved s stretched partial prefix to 1; use corrected index/400 file. Placeholder common endpoints were not executed.",
+    "original_preserved": true,
+    "used_by_any_baseline": false,
+    "corrected": "outputs/process_scan/phase1_baselines/provenance/partial_reference_indices/panda_cylinder_p1_u.npz"
+  },
+  {
+    "slot": "panda_cylinder_p1_v",
+    "count": 373,
+    "erratum": "Unavailable reference only: original saved s stretched partial prefix to 1; use corrected index/400 file. Placeholder common endpoints were not executed.",
+    "original_preserved": true,
+    "used_by_any_baseline": false,
+    "corrected": "outputs/process_scan/phase1_baselines/provenance/partial_reference_indices/panda_cylinder_p1_v.npz"
+  }
+]

@@ -1,0 +1,944 @@
+[0.000000] (-) TimerEvent: {}
+[0.000070] (bound_mpc) JobQueued: {'identifier': 'bound_mpc', 'dependencies': OrderedDict()}
+[0.000092] (bound_mpc_msg) JobQueued: {'identifier': 'bound_mpc_msg', 'dependencies': OrderedDict()}
+[0.000109] (bound_mpc) JobStarted: {'identifier': 'bound_mpc'}
+[0.003257] (bound_mpc_msg) JobStarted: {'identifier': 'bound_mpc_msg'}
+[0.099687] (-) TimerEvent: {}
+[0.140854] (bound_mpc_msg) JobProgress: {'identifier': 'bound_mpc_msg', 'progress': 'cmake'}
+[0.141248] (bound_mpc_msg) Command: {'cmd': ['/usr/bin/cmake', '/home/eric/wjg/btry/tmp/process_scan_dependencies/BoundMPC/boundmpcmsg', '-DPYTHON_EXECUTABLE=/usr/bin/python3', '-DPython3_EXECUTABLE=/usr/bin/python3', '-DCMAKE_INSTALL_PREFIX=/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg'], 'cwd': '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('HTTPS_PROXY', 'http://127.0.0.1:7897'), ('CODEX_CI', '1'), ('GZ_SIM_RESOURCE_PATH', '/home/eric/.gz/models'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'eric'), ('LC_TIME', 'en_US.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eric/.mujoco/mujoco-2.3.1/lib:/usr/local/cuda-12.8/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/nvidia'), ('HOME', '/home/eric'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/eric/wjg'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,::1'), ('NVM_BIN', '/home/eric/.nvm/versions/node/v20.20.1/bin'), ('NVM_INC', '/home/eric/.nvm/versions/node/v20.20.1/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'en_US.UTF-8'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '12552'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('NVM_DIR', '/home/eric/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('https_proxy', 'http://127.0.0.1:7897'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'eric'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897'), ('_', '/usr/bin/python3'), ('ROS_VERSION', '2'), ('PHOXI_CONTROL_PATH', '/opt/Photoneo/PhoXiControl-1.16.5'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'eric'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ISAAC_ROS_WS', '/home/eric/workspaces/isaac_ros-dev/'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/bin:/bin:/opt/ros/humble/bin'), ('SESSION_MANAGER', 'local/eric-server:@/tmp/.ICE-unix/1817,unix/eric-server:/tmp/.ICE-unix/1817'), ('CODEX_VERSION', '0.154.0'), ('CODEX_SESSION_ID', '01a0194e-bfef-7b52-91a7-ed1553a8261d'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/21900418_528d_4d1a_b9d8_d04eaa6a24c6'), ('MUJOCO_PATH', '/home/eric/.mujoco/mujoco-2.3.1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('MUJOCO_GL', 'egl'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.208'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/eric/anaconda3/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/eric/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('CODEX_THREAD_ID', '01a0194e-bfef-7b52-91a7-ed1553a8261d'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/eric/anaconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/eric/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/eric/anaconda3'), ('GSETTINGS_SCHEMA_DIR_CONDA_BACKUP', ''), ('LC_PAPER', 'en_US.UTF-8'), ('PYOPENGL_PLATFORM', 'egl'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.171682] (bound_mpc_msg) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.5.0\n'}
+[0.199755] (-) TimerEvent: {}
+[0.201150] (bound_mpc_msg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.5.0\n'}
+[0.205289] (bound_mpc_msg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.243839] (bound_mpc_msg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.247418] (bound_mpc_msg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.247552] (bound_mpc_msg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.247746] (bound_mpc_msg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.249161] (bound_mpc_msg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.290397] (bound_mpc_msg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.295189] (bound_mpc_msg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.295332] (bound_mpc_msg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.295555] (bound_mpc_msg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.296670] (bound_mpc_msg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299808] (-) TimerEvent: {}
+[0.314675] (bound_mpc) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../ros_build_310/bound_mpc', 'build', '--build-base', '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build', 'install', '--record', '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/eric/wjg/btry/tmp/process_scan_dependencies/BoundMPC/bound_mpc', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '(base)', 'HTTPS_PROXY': 'http://127.0.0.1:7897', 'CODEX_CI': '1', 'GZ_SIM_RESOURCE_PATH': '/home/eric/.gz/models', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'LANGUAGE': 'zh_CN:en', 'USER': 'eric', 'LC_TIME': 'en_US.UTF-8', 'all_proxy': 'socks://127.0.0.1:7897/', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/eric/.mujoco/mujoco-2.3.1/lib:/usr/local/cuda-12.8/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/nvidia', 'HOME': '/home/eric', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/eric/wjg', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,::1', 'NVM_BIN': '/home/eric/.nvm/versions/node/v20.20.1/bin', 'NVM_INC': '/home/eric/.nvm/versions/node/v20.20.1/include/node', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PAGER': 'cat', 'LC_MONETARY': 'en_US.UTF-8', 'LC_CTYPE': 'C.UTF-8', 'SYSTEMD_EXEC_PID': '12552', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', 'NVM_DIR': '/home/eric/.nvm', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'https_proxy': 'http://127.0.0.1:7897', 'CODEX_PERMISSION_PROFILE': ':workspace', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'eric', 'ALL_PROXY': 'socks://127.0.0.1:7897/', 'http_proxy': 'http://127.0.0.1:7897', '_': '/usr/bin/python3', 'ROS_VERSION': '2', 'PHOXI_CONTROL_PATH': '/opt/Photoneo/PhoXiControl-1.16.5', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'eric', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ISAAC_ROS_WS': '/home/eric/workspaces/isaac_ros-dev/', '_CE_CONDA': '', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/bin:/bin:/opt/ros/humble/bin', 'SESSION_MANAGER': 'local/eric-server:@/tmp/.ICE-unix/1817,unix/eric-server:/tmp/.ICE-unix/1817', 'CODEX_VERSION': '0.154.0', 'CODEX_SESSION_ID': '01a0194e-bfef-7b52-91a7-ed1553a8261d', 'PAPERSIZE': 'letter', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'en_US.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/21900418_528d_4d1a_b9d8_d04eaa6a24c6', 'MUJOCO_PATH': '/home/eric/.mujoco/mujoco-2.3.1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'MUJOCO_GL': 'egl', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'en_US.UTF-8', 'XMODIFIERS': '@im=ibus', 'GH_PAGER': 'cat', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.208', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/eric/anaconda3/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'CONDA_PYTHON_EXE': '/home/eric/anaconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': 'base', 'CODEX_THREAD_ID': '01a0194e-bfef-7b52-91a7-ed1553a8261d', 'LC_MEASUREMENT': 'en_US.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc', 'LC_ALL': 'en_US.UTF-8', 'CUDA_HOME': '/usr/local/cuda', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/eric/anaconda3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/eric/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'HTTP_PROXY': 'http://127.0.0.1:7897', 'LC_NUMERIC': 'en_US.UTF-8', 'CONDA_PREFIX': '/home/eric/anaconda3', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'LC_PAPER': 'en_US.UTF-8', 'PYOPENGL_PLATFORM': 'egl', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.381047] (bound_mpc_msg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.399884] (-) TimerEvent: {}
+[0.426617] (bound_mpc_msg) StdoutLine: {'line': b'-- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.427894] (bound_mpc_msg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.435182] (bound_mpc) StdoutLine: {'line': b'running egg_info\n'}
+[0.435443] (bound_mpc) StdoutLine: {'line': b'creating ../../ros_build_310/bound_mpc/bound_mpc.egg-info\n'}
+[0.435609] (bound_mpc) StdoutLine: {'line': b'writing ../../ros_build_310/bound_mpc/bound_mpc.egg-info/PKG-INFO\n'}
+[0.435666] (bound_mpc) StdoutLine: {'line': b'writing dependency_links to ../../ros_build_310/bound_mpc/bound_mpc.egg-info/dependency_links.txt\n'}
+[0.435718] (bound_mpc) StdoutLine: {'line': b'writing entry points to ../../ros_build_310/bound_mpc/bound_mpc.egg-info/entry_points.txt\n'}
+[0.435741] (bound_mpc) StdoutLine: {'line': b'writing requirements to ../../ros_build_310/bound_mpc/bound_mpc.egg-info/requires.txt\n'}
+[0.435760] (bound_mpc) StdoutLine: {'line': b'writing top-level names to ../../ros_build_310/bound_mpc/bound_mpc.egg-info/top_level.txt\n'}
+[0.436283] (bound_mpc) StdoutLine: {'line': b"writing manifest file '../../ros_build_310/bound_mpc/bound_mpc.egg-info/SOURCES.txt'\n"}
+[0.437353] (bound_mpc) StdoutLine: {'line': b"reading manifest file '../../ros_build_310/bound_mpc/bound_mpc.egg-info/SOURCES.txt'\n"}
+[0.437403] (bound_mpc) StdoutLine: {'line': b"reading manifest template 'MANIFEST.in'\n"}
+[0.438224] (bound_mpc) StderrLine: {'line': b"warning: no files found matching '*.so' anywhere in distribution\n"}
+[0.438621] (bound_mpc) StdoutLine: {'line': b"writing manifest file '../../ros_build_310/bound_mpc/bound_mpc.egg-info/SOURCES.txt'\n"}
+[0.438665] (bound_mpc) StdoutLine: {'line': b'running build\n'}
+[0.438685] (bound_mpc) StdoutLine: {'line': b'running build_py\n'}
+[0.438722] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build\n'}
+[0.438774] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib\n'}
+[0.438794] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc\n'}
+[0.438814] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc\n'}
+[0.438855] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes\n'}
+[0.438876] (bound_mpc) StdoutLine: {'line': b'copying nodes/experiment2_runner.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes\n'}
+[0.438917] (bound_mpc) StdoutLine: {'line': b'copying nodes/bound_mpc_node.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes\n'}
+[0.438938] (bound_mpc) StdoutLine: {'line': b'copying nodes/experiment1_runner.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes\n'}
+[0.438976] (bound_mpc) StdoutLine: {'line': b'copying nodes/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes\n'}
+[0.439027] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils\n'}
+[0.439049] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/utils/lie_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils\n'}
+[0.439090] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/utils/path_utils.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils\n'}
+[0.439112] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/utils/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils\n'}
+[0.439151] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/utils/util_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils\n'}
+[0.439192] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Logger\n'}
+[0.439213] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/Logger/Logger.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Logger\n'}
+[0.439252] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/Logger/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Logger\n'}
+[0.439292] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/ReferencePath\n'}
+[0.439312] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/ReferencePath/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/ReferencePath\n'}
+[0.439351] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/ReferencePath/ReferencePath.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/ReferencePath\n'}
+[0.439392] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Plotter\n'}
+[0.439413] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/Plotter/Plotter.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Plotter\n'}
+[0.439452] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/Plotter/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Plotter\n'}
+[0.439504] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC\n'}
+[0.439556] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/BoundMPC/bound_mpc_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC\n'}
+[0.439576] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/BoundMPC/BoundMPC.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC\n'}
+[0.439619] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/BoundMPC/casadi_ocp_formulation.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC\n'}
+[0.439662] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/BoundMPC/jerk_trajectory_casadi.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC\n'}
+[0.439683] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/BoundMPC/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC\n'}
+[0.439734] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/BoundMPC/mpc_utils_casadi.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC\n'}
+[0.439755] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Rviz_Tools\n'}
+[0.439796] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/Rviz_Tools/rviz_tools.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Rviz_Tools\n'}
+[0.439815] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/Rviz_Tools/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Rviz_Tools\n'}
+[0.439855] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/RobotModel\n'}
+[0.439874] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/RobotModel/RobotModel.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/RobotModel\n'}
+[0.439910] (bound_mpc) StdoutLine: {'line': b'copying bound_mpc/RobotModel/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/RobotModel\n'}
+[0.440400] (bound_mpc) StdoutLine: {'line': b'running install\n'}
+[0.440543] (bound_mpc) StdoutLine: {'line': b'running install_lib\n'}
+[0.440864] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc\n'}
+[0.440905] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils\n'}
+[0.440946] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils/lie_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils\n'}
+[0.440990] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils/path_utils.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils\n'}
+[0.441013] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils\n'}
+[0.441074] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/utils/util_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils\n'}
+[0.441114] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Logger\n'}
+[0.441134] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Logger/Logger.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Logger\n'}
+[0.441155] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Logger/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Logger\n'}
+[0.441198] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/ReferencePath\n'}
+[0.441219] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/ReferencePath/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/ReferencePath\n'}
+[0.441240] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/ReferencePath/ReferencePath.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/ReferencePath\n'}
+[0.441281] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Plotter\n'}
+[0.441330] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Plotter/Plotter.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Plotter\n'}
+[0.441351] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Plotter/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Plotter\n'}
+[0.441370] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC\n'}
+[0.441390] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/bound_mpc_functions.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC\n'}
+[0.441443] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/BoundMPC.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC\n'}
+[0.441466] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/casadi_ocp_formulation.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC\n'}
+[0.441487] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/jerk_trajectory_casadi.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC\n'}
+[0.441534] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC\n'}
+[0.441556] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/BoundMPC/mpc_utils_casadi.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC\n'}
+[0.441576] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Rviz_Tools\n'}
+[0.441600] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Rviz_Tools/rviz_tools.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Rviz_Tools\n'}
+[0.441704] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/Rviz_Tools/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Rviz_Tools\n'}
+[0.441727] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/RobotModel\n'}
+[0.441747] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/RobotModel/RobotModel.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/RobotModel\n'}
+[0.441768] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/RobotModel/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/RobotModel\n'}
+[0.441788] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/bound_mpc/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc\n'}
+[0.441807] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes\n'}
+[0.441854] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes/experiment2_runner.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes\n'}
+[0.441877] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes/bound_mpc_node.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes\n'}
+[0.441895] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes/experiment1_runner.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes\n'}
+[0.441913] (bound_mpc) StdoutLine: {'line': b'copying /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/build/lib/nodes/__init__.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes\n'}
+[0.442003] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils/lie_functions.py to lie_functions.cpython-310.pyc\n'}
+[0.442294] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils/path_utils.py to path_utils.cpython-310.pyc\n'}
+[0.442494] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils/__init__.py to __init__.cpython-310.pyc\n'}
+[0.442550] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/utils/util_functions.py to util_functions.cpython-310.pyc\n'}
+[0.443118] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Logger/Logger.py to Logger.cpython-310.pyc\n'}
+[0.443906] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Logger/__init__.py to __init__.cpython-310.pyc\n'}
+[0.443968] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/ReferencePath/__init__.py to __init__.cpython-310.pyc\n'}
+[0.444025] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/ReferencePath/ReferencePath.py to ReferencePath.cpython-310.pyc\n'}
+[0.444813] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Plotter/Plotter.py to Plotter.cpython-310.pyc\n'}
+[0.447265] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Plotter/__init__.py to __init__.cpython-310.pyc\n'}
+[0.447332] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/bound_mpc_functions.py to bound_mpc_functions.cpython-310.pyc\n'}
+[0.448167] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/BoundMPC.py to BoundMPC.cpython-310.pyc\n'}
+[0.450143] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/casadi_ocp_formulation.py to casadi_ocp_formulation.cpython-310.pyc\n'}
+[0.450776] (bound_mpc_msg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.450939] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/jerk_trajectory_casadi.py to jerk_trajectory_casadi.cpython-310.pyc\n'}
+[0.451434] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/__init__.py to __init__.cpython-310.pyc\n'}
+[0.451488] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/BoundMPC/mpc_utils_casadi.py to mpc_utils_casadi.cpython-310.pyc\n'}
+[0.451875] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Rviz_Tools/rviz_tools.py to rviz_tools.cpython-310.pyc\n'}
+[0.453188] (bound_mpc_msg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.453412] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/Rviz_Tools/__init__.py to __init__.cpython-310.pyc\n'}
+[0.453478] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/RobotModel/RobotModel.py to RobotModel.cpython-310.pyc\n'}
+[0.457197] (bound_mpc_msg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.458532] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/RobotModel/__init__.py to __init__.cpython-310.pyc\n'}
+[0.458700] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc/__init__.py to __init__.cpython-310.pyc\n'}
+[0.458733] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes/experiment2_runner.py to experiment2_runner.cpython-310.pyc\n'}
+[0.459177] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes/bound_mpc_node.py to bound_mpc_node.cpython-310.pyc\n'}
+[0.460179] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes/experiment1_runner.py to experiment1_runner.cpython-310.pyc\n'}
+[0.460531] (bound_mpc) StdoutLine: {'line': b'byte-compiling /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/nodes/__init__.py to __init__.cpython-310.pyc\n'}
+[0.460581] (bound_mpc) StdoutLine: {'line': b'running install_data\n'}
+[0.460699] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/ament_index\n'}
+[0.460768] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/ament_index/resource_index\n'}
+[0.460794] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/ament_index/resource_index/packages\n'}
+[0.460816] (bound_mpc) StdoutLine: {'line': b'copying resource/bound_mpc -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/ament_index/resource_index/packages\n'}
+[0.460838] (bound_mpc) StdoutLine: {'line': b'copying package.xml -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc\n'}
+[0.460899] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/config\n'}
+[0.460921] (bound_mpc) StdoutLine: {'line': b'copying config/config_exp2.rviz -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/config\n'}
+[0.460944] (bound_mpc) StdoutLine: {'line': b'copying config/config_exp1.rviz -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/config\n'}
+[0.460962] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf\n'}
+[0.460980] (bound_mpc) StdoutLine: {'line': b'copying urdf/main.xacro -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf\n'}
+[0.460998] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/Gripper\n'}
+[0.461015] (bound_mpc) StdoutLine: {'line': b'copying urdf/Gripper/GripperLowRes.STL -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/Gripper\n'}
+[0.461656] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body\n'}
+[0.461697] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/iiwa.gazebo.xacro -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body\n'}
+[0.461750] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/iiwa14.xacro -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body\n'}
+[0.461772] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/utilities.xacro -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body\n'}
+[0.461791] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/body.xacro -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body\n'}
+[0.461835] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes\n'}
+[0.461856] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14\n'}
+[0.461874] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.461894] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_4.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.462115] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_7.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.462898] (bound_mpc_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.464826] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_5.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.465015] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_1.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.465202] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_6.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.465692] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_5.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.467065] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_2.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.469116] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_6.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.470581] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_3.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.470630] (bound_mpc_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.470768] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_0.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.471194] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_1.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.473205] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_4.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.475099] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_7.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.476594] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_2.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.476836] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_0.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.478782] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/collision/link_3.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/collision\n'}
+[0.480269] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.480315] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_4.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.480772] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_7.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.481418] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_5.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.481627] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_1.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.481803] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_6.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.482103] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_5.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.482351] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_2.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.482554] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/base_link.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.482967] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_6.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.483122] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_3.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.483309] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_1.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.483492] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_4.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.483698] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_7.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.485390] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_2.dae -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.485632] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_0.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.485807] (bound_mpc) StdoutLine: {'line': b'copying urdf/body/meshes/iiwa14/visual/link_3.stl -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/urdf/body/meshes/iiwa14/visual\n'}
+[0.486014] (bound_mpc) StdoutLine: {'line': b'creating /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/launch\n'}
+[0.486064] (bound_mpc) StdoutLine: {'line': b'copying launch/experiment1.launch.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/launch\n'}
+[0.486106] (bound_mpc) StdoutLine: {'line': b'copying launch/experiment2.launch.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/launch\n'}
+[0.486126] (bound_mpc) StdoutLine: {'line': b'copying launch/rviz.launch.py -> /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/share/bound_mpc/launch\n'}
+[0.486144] (bound_mpc) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.487047] (bound_mpc) StdoutLine: {'line': b'Copying ../../ros_build_310/bound_mpc/bound_mpc.egg-info to /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/python3.10/site-packages/bound_mpc-0.0.0-py3.10.egg-info\n'}
+[0.487309] (bound_mpc) StdoutLine: {'line': b'running install_scripts\n'}
+[0.492611] (bound_mpc_msg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.493946] (bound_mpc_msg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.496595] (bound_mpc) StdoutLine: {'line': b'Installing bound_mpc script to /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/bound_mpc\n'}
+[0.496648] (bound_mpc) StdoutLine: {'line': b'Installing run_experiment1 script to /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/bound_mpc\n'}
+[0.496697] (bound_mpc) StdoutLine: {'line': b'Installing run_experiment2 script to /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc/lib/bound_mpc\n'}
+[0.497067] (bound_mpc) StdoutLine: {'line': b"writing list of installed files to '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc/install.log'\n"}
+[0.499938] (-) TimerEvent: {}
+[0.542429] (bound_mpc_msg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.542545] (bound_mpc) CommandEnded: {'returncode': 0}
+[0.546849] (bound_mpc) JobEnded: {'identifier': 'bound_mpc', 'rc': 0}
+[0.558457] (bound_mpc_msg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.585028] (bound_mpc_msg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.589133] (bound_mpc_msg) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.600007] (-) TimerEvent: {}
+[0.630611] (bound_mpc_msg) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.630726] (bound_mpc_msg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.668531] (bound_mpc_msg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.669323] (bound_mpc_msg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.695178] (bound_mpc_msg) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.700064] (-) TimerEvent: {}
+[0.701758] (bound_mpc_msg) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.710308] (bound_mpc_msg) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.800141] (-) TimerEvent: {}
+[0.896684] (bound_mpc_msg) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.900195] (-) TimerEvent: {}
+[1.000284] (-) TimerEvent: {}
+[1.100450] (-) TimerEvent: {}
+[1.131945] (bound_mpc_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.200576] (-) TimerEvent: {}
+[1.230177] (bound_mpc_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.243351] (bound_mpc_msg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.244150] (bound_mpc_msg) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.259454] (bound_mpc_msg) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.259531] (bound_mpc_msg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.259556] (bound_mpc_msg) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.259577] (bound_mpc_msg) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.270982] (bound_mpc_msg) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.300695] (-) TimerEvent: {}
+[1.307594] (bound_mpc_msg) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.327653] (bound_mpc_msg) StdoutLine: {'line': b'-- Generating done\n'}
+[1.333605] (bound_mpc_msg) StdoutLine: {'line': b'-- Build files have been written to: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg\n'}
+[1.400817] (-) TimerEvent: {}
+[1.500966] (-) TimerEvent: {}
+[1.601097] (-) TimerEvent: {}
+[1.701195] (-) TimerEvent: {}
+[1.801330] (-) TimerEvent: {}
+[1.901421] (-) TimerEvent: {}
+[2.001549] (-) TimerEvent: {}
+[2.101701] (-) TimerEvent: {}
+[2.201801] (-) TimerEvent: {}
+[2.301909] (-) TimerEvent: {}
+[2.402008] (-) TimerEvent: {}
+[2.502197] (-) TimerEvent: {}
+[2.602348] (-) TimerEvent: {}
+[2.702508] (-) TimerEvent: {}
+[2.802662] (-) TimerEvent: {}
+[2.902758] (-) TimerEvent: {}
+[3.002897] (-) TimerEvent: {}
+[3.103034] (-) TimerEvent: {}
+[3.203130] (-) TimerEvent: {}
+[3.303226] (-) TimerEvent: {}
+[3.403352] (-) TimerEvent: {}
+[3.503441] (-) TimerEvent: {}
+[3.603595] (-) TimerEvent: {}
+[3.703729] (-) TimerEvent: {}
+[3.803859] (-) TimerEvent: {}
+[3.903945] (-) TimerEvent: {}
+[4.004068] (-) TimerEvent: {}
+[4.104202] (-) TimerEvent: {}
+[4.204348] (-) TimerEvent: {}
+[4.304504] (-) TimerEvent: {}
+[4.404650] (-) TimerEvent: {}
+[4.504792] (-) TimerEvent: {}
+[4.604941] (-) TimerEvent: {}
+[4.705075] (-) TimerEvent: {}
+[4.805165] (-) TimerEvent: {}
+[4.905309] (-) TimerEvent: {}
+[5.005449] (-) TimerEvent: {}
+[5.105581] (-) TimerEvent: {}
+[5.205682] (-) TimerEvent: {}
+[5.305827] (-) TimerEvent: {}
+[5.405923] (-) TimerEvent: {}
+[5.506060] (-) TimerEvent: {}
+[5.606229] (-) TimerEvent: {}
+[5.706412] (-) TimerEvent: {}
+[5.806597] (-) TimerEvent: {}
+[5.906766] (-) TimerEvent: {}
+[6.006872] (-) TimerEvent: {}
+[6.107045] (-) TimerEvent: {}
+[6.207205] (-) TimerEvent: {}
+[6.307409] (-) TimerEvent: {}
+[6.407626] (-) TimerEvent: {}
+[6.507771] (-) TimerEvent: {}
+[6.607916] (-) TimerEvent: {}
+[6.708105] (-) TimerEvent: {}
+[6.808322] (-) TimerEvent: {}
+[6.908534] (-) TimerEvent: {}
+[7.008759] (-) TimerEvent: {}
+[7.108968] (-) TimerEvent: {}
+[7.209142] (-) TimerEvent: {}
+[7.309353] (-) TimerEvent: {}
+[7.409484] (-) TimerEvent: {}
+[7.509578] (-) TimerEvent: {}
+[7.609670] (-) TimerEvent: {}
+[7.709754] (-) TimerEvent: {}
+[7.809835] (-) TimerEvent: {}
+[7.909913] (-) TimerEvent: {}
+[8.010000] (-) TimerEvent: {}
+[8.110087] (-) TimerEvent: {}
+[8.210173] (-) TimerEvent: {}
+[8.310264] (-) TimerEvent: {}
+[8.410360] (-) TimerEvent: {}
+[8.510440] (-) TimerEvent: {}
+[8.610516] (-) TimerEvent: {}
+[8.710597] (-) TimerEvent: {}
+[8.810677] (-) TimerEvent: {}
+[8.910758] (-) TimerEvent: {}
+[9.010838] (-) TimerEvent: {}
+[9.110917] (-) TimerEvent: {}
+[9.211019] (-) TimerEvent: {}
+[9.311125] (-) TimerEvent: {}
+[9.411213] (-) TimerEvent: {}
+[9.511306] (-) TimerEvent: {}
+[9.611393] (-) TimerEvent: {}
+[9.711477] (-) TimerEvent: {}
+[9.811562] (-) TimerEvent: {}
+[9.911690] (-) TimerEvent: {}
+[10.011779] (-) TimerEvent: {}
+[10.111872] (-) TimerEvent: {}
+[10.211961] (-) TimerEvent: {}
+[10.312060] (-) TimerEvent: {}
+[10.412195] (-) TimerEvent: {}
+[10.512278] (-) TimerEvent: {}
+[10.612359] (-) TimerEvent: {}
+[10.712437] (-) TimerEvent: {}
+[10.812516] (-) TimerEvent: {}
+[10.912636] (-) TimerEvent: {}
+[11.012722] (-) TimerEvent: {}
+[11.112828] (-) TimerEvent: {}
+[11.212947] (-) TimerEvent: {}
+[11.313043] (-) TimerEvent: {}
+[11.413131] (-) TimerEvent: {}
+[11.513216] (-) TimerEvent: {}
+[11.613298] (-) TimerEvent: {}
+[11.713382] (-) TimerEvent: {}
+[11.813473] (-) TimerEvent: {}
+[11.913554] (-) TimerEvent: {}
+[12.013629] (-) TimerEvent: {}
+[12.113712] (-) TimerEvent: {}
+[12.213803] (-) TimerEvent: {}
+[12.313898] (-) TimerEvent: {}
+[12.413983] (-) TimerEvent: {}
+[12.514063] (-) TimerEvent: {}
+[12.614144] (-) TimerEvent: {}
+[12.714224] (-) TimerEvent: {}
+[12.814310] (-) TimerEvent: {}
+[12.914397] (-) TimerEvent: {}
+[13.014486] (-) TimerEvent: {}
+[13.114570] (-) TimerEvent: {}
+[13.214663] (-) TimerEvent: {}
+[13.314752] (-) TimerEvent: {}
+[13.414836] (-) TimerEvent: {}
+[13.514920] (-) TimerEvent: {}
+[13.615006] (-) TimerEvent: {}
+[13.715091] (-) TimerEvent: {}
+[13.815174] (-) TimerEvent: {}
+[13.915283] (-) TimerEvent: {}
+[14.015367] (-) TimerEvent: {}
+[14.115448] (-) TimerEvent: {}
+[14.215541] (-) TimerEvent: {}
+[14.315635] (-) TimerEvent: {}
+[14.415722] (-) TimerEvent: {}
+[14.515805] (-) TimerEvent: {}
+[14.615883] (-) TimerEvent: {}
+[14.715965] (-) TimerEvent: {}
+[14.816049] (-) TimerEvent: {}
+[14.916141] (-) TimerEvent: {}
+[15.016216] (-) TimerEvent: {}
+[15.116294] (-) TimerEvent: {}
+[15.216382] (-) TimerEvent: {}
+[15.316485] (-) TimerEvent: {}
+[15.416587] (-) TimerEvent: {}
+[15.516673] (-) TimerEvent: {}
+[15.616758] (-) TimerEvent: {}
+[15.716844] (-) TimerEvent: {}
+[15.816929] (-) TimerEvent: {}
+[15.917020] (-) TimerEvent: {}
+[16.017102] (-) TimerEvent: {}
+[16.117190] (-) TimerEvent: {}
+[16.217292] (-) TimerEvent: {}
+[16.317387] (-) TimerEvent: {}
+[16.417473] (-) TimerEvent: {}
+[16.517559] (-) TimerEvent: {}
+[16.617597] (-) TimerEvent: {}
+[16.717680] (-) TimerEvent: {}
+[16.817817] (-) TimerEvent: {}
+[16.917914] (-) TimerEvent: {}
+[17.017997] (-) TimerEvent: {}
+[17.118130] (-) TimerEvent: {}
+[17.218223] (-) TimerEvent: {}
+[17.318315] (-) TimerEvent: {}
+[17.418427] (-) TimerEvent: {}
+[17.518527] (-) TimerEvent: {}
+[17.618617] (-) TimerEvent: {}
+[17.718700] (-) TimerEvent: {}
+[17.818785] (-) TimerEvent: {}
+[17.918864] (-) TimerEvent: {}
+[18.018943] (-) TimerEvent: {}
+[18.119025] (-) TimerEvent: {}
+[18.219114] (-) TimerEvent: {}
+[18.319209] (-) TimerEvent: {}
+[18.419297] (-) TimerEvent: {}
+[18.519380] (-) TimerEvent: {}
+[18.619459] (-) TimerEvent: {}
+[18.719557] (-) TimerEvent: {}
+[18.819686] (-) TimerEvent: {}
+[18.919791] (-) TimerEvent: {}
+[19.019873] (-) TimerEvent: {}
+[19.119947] (-) TimerEvent: {}
+[19.220027] (-) TimerEvent: {}
+[19.320109] (-) TimerEvent: {}
+[19.420200] (-) TimerEvent: {}
+[19.520304] (-) TimerEvent: {}
+[19.620399] (-) TimerEvent: {}
+[19.720494] (-) TimerEvent: {}
+[19.820600] (-) TimerEvent: {}
+[19.920692] (-) TimerEvent: {}
+[20.020773] (-) TimerEvent: {}
+[20.120871] (-) TimerEvent: {}
+[20.220963] (-) TimerEvent: {}
+[20.321051] (-) TimerEvent: {}
+[20.421143] (-) TimerEvent: {}
+[20.521234] (-) TimerEvent: {}
+[20.621333] (-) TimerEvent: {}
+[20.721426] (-) TimerEvent: {}
+[20.821502] (-) TimerEvent: {}
+[20.921587] (-) TimerEvent: {}
+[21.021685] (-) TimerEvent: {}
+[21.121774] (-) TimerEvent: {}
+[21.221859] (-) TimerEvent: {}
+[21.321946] (-) TimerEvent: {}
+[21.422030] (-) TimerEvent: {}
+[21.522115] (-) TimerEvent: {}
+[21.622198] (-) TimerEvent: {}
+[21.722279] (-) TimerEvent: {}
+[21.822372] (-) TimerEvent: {}
+[21.922462] (-) TimerEvent: {}
+[22.022542] (-) TimerEvent: {}
+[22.122661] (-) TimerEvent: {}
+[22.222748] (-) TimerEvent: {}
+[22.322831] (-) TimerEvent: {}
+[22.422920] (-) TimerEvent: {}
+[22.523014] (-) TimerEvent: {}
+[22.623096] (-) TimerEvent: {}
+[22.723174] (-) TimerEvent: {}
+[22.823258] (-) TimerEvent: {}
+[22.923338] (-) TimerEvent: {}
+[23.023413] (-) TimerEvent: {}
+[23.123490] (-) TimerEvent: {}
+[23.223573] (-) TimerEvent: {}
+[23.323675] (-) TimerEvent: {}
+[23.423770] (-) TimerEvent: {}
+[23.523849] (-) TimerEvent: {}
+[23.623926] (-) TimerEvent: {}
+[23.724001] (-) TimerEvent: {}
+[23.824086] (-) TimerEvent: {}
+[23.924172] (-) TimerEvent: {}
+[24.024253] (-) TimerEvent: {}
+[24.124343] (-) TimerEvent: {}
+[24.224440] (-) TimerEvent: {}
+[24.324544] (-) TimerEvent: {}
+[24.424643] (-) TimerEvent: {}
+[24.524723] (-) TimerEvent: {}
+[24.624799] (-) TimerEvent: {}
+[24.724875] (-) TimerEvent: {}
+[24.824969] (-) TimerEvent: {}
+[24.925052] (-) TimerEvent: {}
+[25.025127] (-) TimerEvent: {}
+[25.125206] (-) TimerEvent: {}
+[25.225295] (-) TimerEvent: {}
+[25.325390] (-) TimerEvent: {}
+[25.425480] (-) TimerEvent: {}
+[25.525564] (-) TimerEvent: {}
+[25.625601] (-) TimerEvent: {}
+[25.725698] (-) TimerEvent: {}
+[25.825787] (-) TimerEvent: {}
+[25.925874] (-) TimerEvent: {}
+[26.025956] (-) TimerEvent: {}
+[26.126038] (-) TimerEvent: {}
+[26.226126] (-) TimerEvent: {}
+[26.326223] (-) TimerEvent: {}
+[26.426364] (-) TimerEvent: {}
+[26.526505] (-) TimerEvent: {}
+[26.626646] (-) TimerEvent: {}
+[26.726777] (-) TimerEvent: {}
+[26.826903] (-) TimerEvent: {}
+[26.927034] (-) TimerEvent: {}
+[27.027164] (-) TimerEvent: {}
+[27.127252] (-) TimerEvent: {}
+[27.227344] (-) TimerEvent: {}
+[27.327476] (-) TimerEvent: {}
+[27.427607] (-) TimerEvent: {}
+[27.527739] (-) TimerEvent: {}
+[27.627825] (-) TimerEvent: {}
+[27.727907] (-) TimerEvent: {}
+[27.828003] (-) TimerEvent: {}
+[27.928099] (-) TimerEvent: {}
+[28.028182] (-) TimerEvent: {}
+[28.128262] (-) TimerEvent: {}
+[28.228354] (-) TimerEvent: {}
+[28.328447] (-) TimerEvent: {}
+[28.428533] (-) TimerEvent: {}
+[28.528617] (-) TimerEvent: {}
+[28.628704] (-) TimerEvent: {}
+[28.728786] (-) TimerEvent: {}
+[28.828863] (-) TimerEvent: {}
+[28.928948] (-) TimerEvent: {}
+[29.029049] (-) TimerEvent: {}
+[29.129140] (-) TimerEvent: {}
+[29.229253] (-) TimerEvent: {}
+[29.329383] (-) TimerEvent: {}
+[29.429491] (-) TimerEvent: {}
+[29.529608] (-) TimerEvent: {}
+[29.629729] (-) TimerEvent: {}
+[29.729853] (-) TimerEvent: {}
+[29.829958] (-) TimerEvent: {}
+[29.930038] (-) TimerEvent: {}
+[30.030132] (-) TimerEvent: {}
+[30.130231] (-) TimerEvent: {}
+[30.230323] (-) TimerEvent: {}
+[30.330416] (-) TimerEvent: {}
+[30.430520] (-) TimerEvent: {}
+[30.530605] (-) TimerEvent: {}
+[30.572269] (bound_mpc_msg) CommandEnded: {'returncode': 0}
+[30.572681] (bound_mpc_msg) JobProgress: {'identifier': 'bound_mpc_msg', 'progress': 'build'}
+[30.573127] (bound_mpc_msg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg', '--', '-j24', '-l24'], 'cwd': '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('HTTPS_PROXY', 'http://127.0.0.1:7897'), ('CODEX_CI', '1'), ('GZ_SIM_RESOURCE_PATH', '/home/eric/.gz/models'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'eric'), ('LC_TIME', 'en_US.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eric/.mujoco/mujoco-2.3.1/lib:/usr/local/cuda-12.8/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/nvidia'), ('HOME', '/home/eric'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/eric/wjg'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,::1'), ('NVM_BIN', '/home/eric/.nvm/versions/node/v20.20.1/bin'), ('NVM_INC', '/home/eric/.nvm/versions/node/v20.20.1/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'en_US.UTF-8'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '12552'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('NVM_DIR', '/home/eric/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('https_proxy', 'http://127.0.0.1:7897'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'eric'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897'), ('_', '/usr/bin/python3'), ('ROS_VERSION', '2'), ('PHOXI_CONTROL_PATH', '/opt/Photoneo/PhoXiControl-1.16.5'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'eric'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ISAAC_ROS_WS', '/home/eric/workspaces/isaac_ros-dev/'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/bin:/bin:/opt/ros/humble/bin'), ('SESSION_MANAGER', 'local/eric-server:@/tmp/.ICE-unix/1817,unix/eric-server:/tmp/.ICE-unix/1817'), ('CODEX_VERSION', '0.154.0'), ('CODEX_SESSION_ID', '01a0194e-bfef-7b52-91a7-ed1553a8261d'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/21900418_528d_4d1a_b9d8_d04eaa6a24c6'), ('MUJOCO_PATH', '/home/eric/.mujoco/mujoco-2.3.1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('MUJOCO_GL', 'egl'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.208'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/eric/anaconda3/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/eric/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('CODEX_THREAD_ID', '01a0194e-bfef-7b52-91a7-ed1553a8261d'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/eric/anaconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/eric/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/eric/anaconda3'), ('GSETTINGS_SCHEMA_DIR_CONDA_BACKUP', ''), ('LC_PAPER', 'en_US.UTF-8'), ('PYOPENGL_PLATFORM', 'egl'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[30.598691] (bound_mpc_msg) StdoutLine: {'line': b'[  1%] Generating C code for ROS interfaces\n'}
+[30.603925] (bound_mpc_msg) StdoutLine: {'line': b'[  2%] Generating C++ code for ROS interfaces\n'}
+[30.608016] (bound_mpc_msg) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_bound_mpc_msg\n'}
+[30.630670] (-) TimerEvent: {}
+[30.730052] (bound_mpc_msg) StdoutLine: {'line': b'running egg_info\n'}
+[30.730265] (bound_mpc_msg) StdoutLine: {'line': b'creating bound_mpc_msg.egg-info\n'}
+[30.730384] (bound_mpc_msg) StdoutLine: {'line': b'writing bound_mpc_msg.egg-info/PKG-INFO\n'}
+[30.730509] (bound_mpc_msg) StdoutLine: {'line': b'writing dependency_links to bound_mpc_msg.egg-info/dependency_links.txt\n'}
+[30.730559] (bound_mpc_msg) StdoutLine: {'line': b'writing top-level names to bound_mpc_msg.egg-info/top_level.txt\n'}
+[30.730723] (-) TimerEvent: {}
+[30.731084] (bound_mpc_msg) StdoutLine: {'line': b"writing manifest file 'bound_mpc_msg.egg-info/SOURCES.txt'\n"}
+[30.731953] (bound_mpc_msg) StdoutLine: {'line': b"reading manifest file 'bound_mpc_msg.egg-info/SOURCES.txt'\n"}
+[30.732165] (bound_mpc_msg) StdoutLine: {'line': b"writing manifest file 'bound_mpc_msg.egg-info/SOURCES.txt'\n"}
+[30.745234] (bound_mpc_msg) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_bound_mpc_msg_egg\n'}
+[30.830793] (-) TimerEvent: {}
+[30.930876] (-) TimerEvent: {}
+[30.997319] (bound_mpc_msg) StdoutLine: {'line': b'[  5%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/msg/detail/vector__functions.c.o\n'}
+[30.997443] (bound_mpc_msg) StdoutLine: {'line': b'[  5%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/msg/detail/mpc_data__functions.c.o\n'}
+[30.998099] (bound_mpc_msg) StdoutLine: {'line': b'[  6%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/msg/detail/handover_location__functions.c.o\n'}
+[30.999096] (bound_mpc_msg) StdoutLine: {'line': b'[  7%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/msg/detail/handover_data__functions.c.o\n'}
+[30.999444] (bound_mpc_msg) StdoutLine: {'line': b'[  8%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/msg/detail/mujoco_data__functions.c.o\n'}
+[30.999659] (bound_mpc_msg) StdoutLine: {'line': b'[ 10%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/srv/detail/mpc_params__functions.c.o\n'}
+[31.000006] (bound_mpc_msg) StdoutLine: {'line': b'[ 11%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_c.dir/rosidl_generator_c/bound_mpc_msg/srv/detail/trajectory__functions.c.o\n'}
+[31.005800] (bound_mpc_msg) StdoutLine: {'line': b'[ 11%] Built target bound_mpc_msg__cpp\n'}
+[31.011240] (bound_mpc_msg) StdoutLine: {'line': b'[ 12%] Generating C++ type support dispatch for ROS interfaces\n'}
+[31.011694] (bound_mpc_msg) StdoutLine: {'line': b'[ 13%] Generating C++ introspection for ROS interfaces\n'}
+[31.012301] (bound_mpc_msg) StdoutLine: {'line': b'[ 15%] Generating C++ type support for eProsima Fast-RTPS\n'}
+[31.030972] (-) TimerEvent: {}
+[31.040661] (bound_mpc_msg) StdoutLine: {'line': b'[ 16%] Linking C shared library libbound_mpc_msg__rosidl_generator_c.so\n'}
+[31.064932] (bound_mpc_msg) StdoutLine: {'line': b'[ 16%] Built target bound_mpc_msg__rosidl_generator_c\n'}
+[31.070231] (bound_mpc_msg) StdoutLine: {'line': b'[ 17%] Generating C type support for eProsima Fast-RTPS\n'}
+[31.070377] (bound_mpc_msg) StdoutLine: {'line': b'[ 18%] Generating C introspection for ROS interfaces\n'}
+[31.071987] (bound_mpc_msg) StdoutLine: {'line': b'[ 20%] Generating C type support dispatch for ROS interfaces\n'}
+[31.131054] (-) TimerEvent: {}
+[31.231195] (-) TimerEvent: {}
+[31.307746] (bound_mpc_msg) StdoutLine: {'line': b'[ 21%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/msg/mujoco_data__type_support.cpp.o\n'}
+[31.307994] (bound_mpc_msg) StdoutLine: {'line': b'[ 22%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/srv/trajectory__type_support.cpp.o\n'}
+[31.308922] (bound_mpc_msg) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/msg/vector__type_support.cpp.o\n'}
+[31.309000] (bound_mpc_msg) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/msg/mpc_data__type_support.cpp.o\n'}
+[31.309170] (bound_mpc_msg) StdoutLine: {'line': b'[ 27%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/msg/handover_location__type_support.cpp.o\n'}
+[31.309226] (bound_mpc_msg) StdoutLine: {'line': b'[ 27%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/msg/handover_data__type_support.cpp.o\n'}
+[31.309508] (bound_mpc_msg) StdoutLine: {'line': b'[ 29%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bound_mpc_msg/srv/mpc_params__type_support.cpp.o\n'}
+[31.331289] (-) TimerEvent: {}
+[31.357222] (bound_mpc_msg) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/msg/detail/handover_data__type_support.cpp.o\n'}
+[31.357377] (bound_mpc_msg) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/msg/detail/handover_location__type_support.cpp.o\n'}
+[31.357439] (bound_mpc_msg) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/msg/detail/vector__type_support.cpp.o\n'}
+[31.357495] (bound_mpc_msg) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/msg/detail/mpc_data__type_support.cpp.o\n'}
+[31.357546] (bound_mpc_msg) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/srv/detail/mpc_params__type_support.cpp.o\n'}
+[31.357747] (bound_mpc_msg) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/msg/detail/mujoco_data__type_support.cpp.o\n'}
+[31.357800] (bound_mpc_msg) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bound_mpc_msg/srv/detail/trajectory__type_support.cpp.o\n'}
+[31.389109] (bound_mpc_msg) StdoutLine: {'line': b'[ 41%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/msg/handover_data__type_support.cpp.o\n'}
+[31.389227] (bound_mpc_msg) StdoutLine: {'line': b'[ 41%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/msg/mujoco_data__type_support.cpp.o\n'}
+[31.389264] (bound_mpc_msg) StdoutLine: {'line': b'[ 41%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/msg/handover_location__type_support.cpp.o\n'}
+[31.389296] (bound_mpc_msg) StdoutLine: {'line': b'[ 43%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/msg/mpc_data__type_support.cpp.o\n'}
+[31.390180] (bound_mpc_msg) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/srv/trajectory__type_support.cpp.o\n'}
+[31.390264] (bound_mpc_msg) StdoutLine: {'line': b'[ 45%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/srv/mpc_params__type_support.cpp.o\n'}
+[31.391010] (bound_mpc_msg) StdoutLine: {'line': b'[ 46%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/bound_mpc_msg/msg/vector__type_support.cpp.o\n'}
+[31.423748] (bound_mpc_msg) StdoutLine: {'line': b'[ 48%] Linking CXX shared library libbound_mpc_msg__rosidl_typesupport_c.so\n'}
+[31.431367] (-) TimerEvent: {}
+[31.449748] (bound_mpc_msg) StdoutLine: {'line': b'[ 48%] Built target bound_mpc_msg__rosidl_typesupport_c\n'}
+[31.456409] (bound_mpc_msg) StdoutLine: {'line': b'[ 49%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/msg/detail/mujoco_data__type_support.c.o\n'}
+[31.456646] (bound_mpc_msg) StdoutLine: {'line': b'[ 50%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/msg/detail/mpc_data__type_support.c.o\n'}
+[31.456704] (bound_mpc_msg) StdoutLine: {'line': b'[ 51%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/msg/detail/handover_location__type_support.c.o\n'}
+[31.456744] (bound_mpc_msg) StdoutLine: {'line': b'[ 53%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/msg/detail/vector__type_support.c.o\n'}
+[31.456876] (bound_mpc_msg) StdoutLine: {'line': b'[ 54%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/msg/detail/handover_data__type_support.c.o\n'}
+[31.458014] (bound_mpc_msg) StdoutLine: {'line': b'[ 55%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/srv/detail/trajectory__type_support.c.o\n'}
+[31.458204] (bound_mpc_msg) StdoutLine: {'line': b'[ 56%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bound_mpc_msg/srv/detail/mpc_params__type_support.c.o\n'}
+[31.468780] (bound_mpc_msg) StdoutLine: {'line': b'[ 58%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/msg/detail/dds_fastrtps/vector__type_support.cpp.o\n'}
+[31.468933] (bound_mpc_msg) StdoutLine: {'line': b'[ 59%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/msg/detail/dds_fastrtps/handover_data__type_support.cpp.o\n'}
+[31.471397] (bound_mpc_msg) StdoutLine: {'line': b'[ 60%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/msg/detail/dds_fastrtps/mujoco_data__type_support.cpp.o\n'}
+[31.471543] (bound_mpc_msg) StdoutLine: {'line': b'[ 62%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/msg/detail/dds_fastrtps/mpc_data__type_support.cpp.o\n'}
+[31.471600] (bound_mpc_msg) StdoutLine: {'line': b'[ 63%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/msg/detail/dds_fastrtps/handover_location__type_support.cpp.o\n'}
+[31.472575] (bound_mpc_msg) StdoutLine: {'line': b'[ 64%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/srv/detail/dds_fastrtps/mpc_params__type_support.cpp.o\n'}
+[31.483678] (bound_mpc_msg) StdoutLine: {'line': b'[ 65%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bound_mpc_msg/srv/detail/dds_fastrtps/trajectory__type_support.cpp.o\n'}
+[31.507825] (bound_mpc_msg) StdoutLine: {'line': b'[ 67%] Linking CXX shared library libbound_mpc_msg__rosidl_typesupport_cpp.so\n'}
+[31.515154] (bound_mpc_msg) StdoutLine: {'line': b'[ 69%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/msg/detail/handover_location__type_support_c.cpp.o\n'}
+[31.515297] (bound_mpc_msg) StdoutLine: {'line': b'[ 69%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/msg/detail/mpc_data__type_support_c.cpp.o\n'}
+[31.515392] (bound_mpc_msg) StdoutLine: {'line': b'[ 70%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/msg/detail/mujoco_data__type_support_c.cpp.o\n'}
+[31.515458] (bound_mpc_msg) StdoutLine: {'line': b'[ 73%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/srv/detail/mpc_params__type_support_c.cpp.o\n'}
+[31.515501] (bound_mpc_msg) StdoutLine: {'line': b'[ 72%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/msg/detail/handover_data__type_support_c.cpp.o\n'}
+[31.515537] (bound_mpc_msg) StdoutLine: {'line': b'[ 74%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/msg/detail/vector__type_support_c.cpp.o\n'}
+[31.515605] (bound_mpc_msg) StdoutLine: {'line': b'[ 75%] Building CXX object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bound_mpc_msg/srv/detail/trajectory__type_support_c.cpp.o\n'}
+[31.531473] (-) TimerEvent: {}
+[31.539878] (bound_mpc_msg) StdoutLine: {'line': b'[ 75%] Built target bound_mpc_msg__rosidl_typesupport_cpp\n'}
+[31.561708] (bound_mpc_msg) StdoutLine: {'line': b'[ 77%] Linking C shared library libbound_mpc_msg__rosidl_typesupport_introspection_c.so\n'}
+[31.589296] (bound_mpc_msg) StdoutLine: {'line': b'[ 77%] Built target bound_mpc_msg__rosidl_typesupport_introspection_c\n'}
+[31.631566] (-) TimerEvent: {}
+[31.731725] (-) TimerEvent: {}
+[31.748267] (bound_mpc_msg) StdoutLine: {'line': b'[ 78%] Linking CXX shared library libbound_mpc_msg__rosidl_typesupport_fastrtps_c.so\n'}
+[31.777034] (bound_mpc_msg) StdoutLine: {'line': b'[ 79%] Linking CXX shared library libbound_mpc_msg__rosidl_typesupport_introspection_cpp.so\n'}
+[31.788310] (bound_mpc_msg) StdoutLine: {'line': b'[ 79%] Built target bound_mpc_msg__rosidl_typesupport_fastrtps_c\n'}
+[31.820249] (bound_mpc_msg) StdoutLine: {'line': b'[ 81%] Linking CXX shared library libbound_mpc_msg__rosidl_typesupport_fastrtps_cpp.so\n'}
+[31.820727] (bound_mpc_msg) StdoutLine: {'line': b'[ 81%] Built target bound_mpc_msg__rosidl_typesupport_introspection_cpp\n'}
+[31.831776] (-) TimerEvent: {}
+[31.863913] (bound_mpc_msg) StdoutLine: {'line': b'[ 81%] Built target bound_mpc_msg__rosidl_typesupport_fastrtps_cpp\n'}
+[31.876262] (bound_mpc_msg) StdoutLine: {'line': b'[ 81%] Built target bound_mpc_msg\n'}
+[31.888070] (bound_mpc_msg) StdoutLine: {'line': b'[ 82%] Generating Python code for ROS interfaces\n'}
+[31.931858] (-) TimerEvent: {}
+[32.032047] (-) TimerEvent: {}
+[32.132234] (-) TimerEvent: {}
+[32.232425] (-) TimerEvent: {}
+[32.332553] (-) TimerEvent: {}
+[32.432691] (-) TimerEvent: {}
+[32.532825] (-) TimerEvent: {}
+[32.605452] (bound_mpc_msg) StdoutLine: {'line': b'[ 82%] Built target bound_mpc_msg__py\n'}
+[32.614916] (bound_mpc_msg) StdoutLine: {'line': b'[ 83%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/msg/_mpc_data_s.c.o\n'}
+[32.615428] (bound_mpc_msg) StdoutLine: {'line': b'[ 86%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/msg/_mujoco_data_s.c.o\n'}
+[32.615493] (bound_mpc_msg) StdoutLine: {'line': b'[ 86%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/srv/_mpc_params_s.c.o\n'}
+[32.616604] (bound_mpc_msg) StdoutLine: {'line': b'[ 87%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/msg/_vector_s.c.o\n'}
+[32.616784] (bound_mpc_msg) StdoutLine: {'line': b'[ 88%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/msg/_handover_location_s.c.o\n'}
+[32.617072] (bound_mpc_msg) StdoutLine: {'line': b'[ 91%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/srv/_trajectory_s.c.o\n'}
+[32.617129] (bound_mpc_msg) StdoutLine: {'line': b'[ 91%] Building C object CMakeFiles/bound_mpc_msg__rosidl_generator_py.dir/rosidl_generator_py/bound_mpc_msg/msg/_handover_data_s.c.o\n'}
+[32.632924] (-) TimerEvent: {}
+[32.725801] (bound_mpc_msg) StdoutLine: {'line': b'[ 92%] Linking C shared library rosidl_generator_py/bound_mpc_msg/libbound_mpc_msg__rosidl_generator_py.so\n'}
+[32.732984] (-) TimerEvent: {}
+[32.750507] (bound_mpc_msg) StdoutLine: {'line': b'[ 92%] Built target bound_mpc_msg__rosidl_generator_py\n'}
+[32.760744] (bound_mpc_msg) StdoutLine: {'line': b'[ 93%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_introspection_c.c.o\n'}
+[32.763085] (bound_mpc_msg) StdoutLine: {'line': b'[ 94%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_c.c.o\n'}
+[32.763479] (bound_mpc_msg) StdoutLine: {'line': b'[ 96%] Building C object CMakeFiles/bound_mpc_msg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_fastrtps_c.c.o\n'}
+[32.810969] (bound_mpc_msg) StdoutLine: {'line': b'[ 97%] Linking C shared library rosidl_generator_py/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[32.813089] (bound_mpc_msg) StdoutLine: {'line': b'[ 98%] Linking C shared library rosidl_generator_py/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[32.815323] (bound_mpc_msg) StdoutLine: {'line': b'[100%] Linking C shared library rosidl_generator_py/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[32.833070] (-) TimerEvent: {}
+[32.835870] (bound_mpc_msg) StdoutLine: {'line': b'[100%] Built target bound_mpc_msg__rosidl_typesupport_introspection_c__pyext\n'}
+[32.836471] (bound_mpc_msg) StdoutLine: {'line': b'[100%] Built target bound_mpc_msg__rosidl_typesupport_c__pyext\n'}
+[32.839869] (bound_mpc_msg) StdoutLine: {'line': b'[100%] Built target bound_mpc_msg__rosidl_typesupport_fastrtps_c__pyext\n'}
+[32.846136] (bound_mpc_msg) CommandEnded: {'returncode': 0}
+[32.846468] (bound_mpc_msg) JobProgress: {'identifier': 'bound_mpc_msg', 'progress': 'install'}
+[32.850822] (bound_mpc_msg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg'], 'cwd': '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('HTTPS_PROXY', 'http://127.0.0.1:7897'), ('CODEX_CI', '1'), ('GZ_SIM_RESOURCE_PATH', '/home/eric/.gz/models'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'eric'), ('LC_TIME', 'en_US.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/eric/.mujoco/mujoco-2.3.1/lib:/usr/local/cuda-12.8/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/nvidia'), ('HOME', '/home/eric'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/eric/wjg'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,::1'), ('NVM_BIN', '/home/eric/.nvm/versions/node/v20.20.1/bin'), ('NVM_INC', '/home/eric/.nvm/versions/node/v20.20.1/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'en_US.UTF-8'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '12552'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('NVM_DIR', '/home/eric/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('https_proxy', 'http://127.0.0.1:7897'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'eric'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897'), ('_', '/usr/bin/python3'), ('ROS_VERSION', '2'), ('PHOXI_CONTROL_PATH', '/opt/Photoneo/PhoXiControl-1.16.5'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'eric'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ISAAC_ROS_WS', '/home/eric/workspaces/isaac_ros-dev/'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/bin:/bin:/opt/ros/humble/bin'), ('SESSION_MANAGER', 'local/eric-server:@/tmp/.ICE-unix/1817,unix/eric-server:/tmp/.ICE-unix/1817'), ('CODEX_VERSION', '0.154.0'), ('CODEX_SESSION_ID', '01a0194e-bfef-7b52-91a7-ed1553a8261d'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/21900418_528d_4d1a_b9d8_d04eaa6a24c6'), ('MUJOCO_PATH', '/home/eric/.mujoco/mujoco-2.3.1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('MUJOCO_GL', 'egl'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.208'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/eric/anaconda3/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/eric/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('CODEX_THREAD_ID', '01a0194e-bfef-7b52-91a7-ed1553a8261d'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_build_310/bound_mpc_msg'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/eric/anaconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/eric/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/eric/anaconda3'), ('GSETTINGS_SCHEMA_DIR_CONDA_BACKUP', ''), ('LC_PAPER', 'en_US.UTF-8'), ('PYOPENGL_PLATFORM', 'egl'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[32.854656] (bound_mpc_msg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[32.854743] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/ament_index/resource_index/rosidl_interfaces/bound_mpc_msg\n'}
+[32.854808] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg\n'}
+[32.854862] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv\n'}
+[32.854884] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/trajectory.h\n'}
+[32.854928] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/mpc_params.h\n'}
+[32.854970] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail\n'}
+[32.854992] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__functions.c\n'}
+[32.855034] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__struct.h\n'}
+[32.855089] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__functions.h\n'}
+[32.855127] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__type_support.h\n'}
+[32.855165] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__type_support.h\n'}
+[32.855187] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__struct.h\n'}
+[32.855208] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__functions.c\n'}
+[32.855253] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__functions.h\n'}
+[32.855276] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg\n'}
+[32.855298] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/rosidl_generator_c__visibility_control.h\n'}
+[32.855354] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/handover_location.h\n'}
+[32.855377] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/mpc_data.h\n'}
+[32.855399] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/handover_data.h\n'}
+[32.855419] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail\n'}
+[32.855475] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__functions.c\n'}
+[32.855497] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__functions.c\n'}
+[32.855518] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__functions.h\n'}
+[32.855540] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__functions.h\n'}
+[32.855596] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__type_support.h\n'}
+[32.855622] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__struct.h\n'}
+[32.855644] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__type_support.h\n'}
+[32.855695] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__struct.h\n'}
+[32.855717] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__functions.h\n'}
+[32.855737] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__type_support.h\n'}
+[32.855757] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__functions.c\n'}
+[32.855811] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__type_support.h\n'}
+[32.855832] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__struct.h\n'}
+[32.855853] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__struct.h\n'}
+[32.855906] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__struct.h\n'}
+[32.855926] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__functions.c\n'}
+[32.855946] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__functions.c\n'}
+[32.855966] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__functions.h\n'}
+[32.856020] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__type_support.h\n'}
+[32.856041] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__functions.h\n'}
+[32.856060] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/mujoco_data.h\n'}
+[32.856080] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/vector.h\n'}
+[32.856122] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/library_path.sh\n'}
+[32.856142] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/library_path.dsv\n'}
+[32.856181] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_generator_c.so\n'}
+[32.856304] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_generator_c.so" to ""\n'}
+[32.856376] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg\n'}
+[32.856397] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv\n'}
+[32.856418] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail\n'}
+[32.856438] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__rosidl_typesupport_fastrtps_c.h\n'}
+[32.856483] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__rosidl_typesupport_fastrtps_c.h\n'}
+[32.856505] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg\n'}
+[32.856525] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail\n'}
+[32.856545] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__rosidl_typesupport_fastrtps_c.h\n'}
+[32.856566] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__rosidl_typesupport_fastrtps_c.h\n'}
+[32.856615] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__rosidl_typesupport_fastrtps_c.h\n'}
+[32.856658] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__rosidl_typesupport_fastrtps_c.h\n'}
+[32.856677] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__rosidl_typesupport_fastrtps_c.h\n'}
+[32.856696] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[32.856714] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_fastrtps_c.so\n'}
+[32.856781] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[32.856824] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg\n'}
+[32.856845] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv\n'}
+[32.856865] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/mpc_params.hpp\n'}
+[32.856907] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail\n'}
+[32.856944] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__struct.hpp\n'}
+[32.856964] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__builder.hpp\n'}
+[32.856985] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__builder.hpp\n'}
+[32.857027] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__struct.hpp\n'}
+[32.857050] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__traits.hpp\n'}
+[32.857070] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__traits.hpp\n'}
+[32.857124] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/trajectory.hpp\n'}
+[32.857147] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg\n'}
+[32.857169] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/handover_data.hpp\n'}
+[32.857189] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/handover_location.hpp\n'}
+[32.857233] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail\n'}
+[32.857255] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__traits.hpp\n'}
+[32.857275] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__builder.hpp\n'}
+[32.857296] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__traits.hpp\n'}
+[32.857339] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__traits.hpp\n'}
+[32.857361] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__struct.hpp\n'}
+[32.857382] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__struct.hpp\n'}
+[32.857434] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__builder.hpp\n'}
+[32.857455] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__builder.hpp\n'}
+[32.857497] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__struct.hpp\n'}
+[32.857518] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__traits.hpp\n'}
+[32.857573] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__struct.hpp\n'}
+[32.857600] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__struct.hpp\n'}
+[32.857623] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__builder.hpp\n'}
+[32.857715] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__traits.hpp\n'}
+[32.857738] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__builder.hpp\n'}
+[32.857758] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/mujoco_data.hpp\n'}
+[32.857779] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/vector.hpp\n'}
+[32.857841] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/mpc_data.hpp\n'}
+[32.857862] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg\n'}
+[32.857883] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv\n'}
+[32.857903] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail\n'}
+[32.857923] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[32.857943] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/dds_fastrtps\n'}
+[32.858003] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[32.858024] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg\n'}
+[32.858045] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail\n'}
+[32.858066] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[32.858116] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/dds_fastrtps\n'}
+[32.858152] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[32.858171] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[32.858190] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[32.858212] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[32.858232] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[32.858250] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_fastrtps_cpp.so\n'}
+[32.858331] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[32.858385] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg\n'}
+[32.858406] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv\n'}
+[32.858426] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail\n'}
+[32.858445] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__type_support.c\n'}
+[32.858498] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__rosidl_typesupport_introspection_c.h\n'}
+[32.858520] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__type_support.c\n'}
+[32.858539] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__rosidl_typesupport_introspection_c.h\n'}
+[32.858584] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg\n'}
+[32.858607] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail\n'}
+[32.858628] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__rosidl_typesupport_introspection_c.h\n'}
+[32.858647] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__type_support.c\n'}
+[32.858688] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__type_support.c\n'}
+[32.858707] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__type_support.c\n'}
+[32.858758] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__rosidl_typesupport_introspection_c.h\n'}
+[32.858780] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__type_support.c\n'}
+[32.858800] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__rosidl_typesupport_introspection_c.h\n'}
+[32.858853] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__rosidl_typesupport_introspection_c.h\n'}
+[32.858873] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__rosidl_typesupport_introspection_c.h\n'}
+[32.858892] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__type_support.c\n'}
+[32.858953] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[32.859004] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_introspection_c.so\n'}
+[32.859169] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_introspection_c.so" to ""\n'}
+[32.859209] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_c.so\n'}
+[32.859284] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_c.so" to ""\n'}
+[32.859341] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg\n'}
+[32.859362] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv\n'}
+[32.859382] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail\n'}
+[32.859403] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__type_support.cpp\n'}
+[32.859445] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__type_support.cpp\n'}
+[32.859468] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/trajectory__rosidl_typesupport_introspection_cpp.hpp\n'}
+[32.859489] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/srv/detail/mpc_params__rosidl_typesupport_introspection_cpp.hpp\n'}
+[32.859534] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg\n'}
+[32.859555] (bound_mpc_msg) StdoutLine: {'line': b'-- Up-to-date: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail\n'}
+[32.859575] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__rosidl_typesupport_introspection_cpp.hpp\n'}
+[32.859599] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_location__type_support.cpp\n'}
+[32.859642] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__type_support.cpp\n'}
+[32.859664] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__rosidl_typesupport_introspection_cpp.hpp\n'}
+[32.859685] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/vector__type_support.cpp\n'}
+[32.859734] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/handover_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[32.859757] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__type_support.cpp\n'}
+[32.859778] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[32.859817] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mujoco_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[32.859837] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/include/bound_mpc_msg/bound_mpc_msg/msg/detail/mpc_data__type_support.cpp\n'}
+[32.859887] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_introspection_cpp.so\n'}
+[32.860120] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[32.860160] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_cpp.so\n'}
+[32.860241] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_typesupport_cpp.so" to ""\n'}
+[32.860278] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/pythonpath.sh\n'}
+[32.860317] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/pythonpath.dsv\n'}
+[32.860357] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg-0.0.0-py3.10.egg-info\n'}
+[32.860396] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[32.860435] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[32.860485] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[32.860506] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[32.860556] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg\n'}
+[32.860576] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[32.860619] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_c.c\n'}
+[32.860659] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/libbound_mpc_msg__rosidl_generator_py.so\n'}
+[32.860728] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv\n'}
+[32.860768] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_trajectory.py\n'}
+[32.860807] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_mpc_params.py\n'}
+[32.860859] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_mpc_params_s.c\n'}
+[32.860896] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/__init__.py\n'}
+[32.860915] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_trajectory_s.c\n'}
+[32.860952] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[32.860990] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[32.861029] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[32.861081] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/__init__.py\n'}
+[32.861105] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/_bound_mpc_msg_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[32.861147] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg\n'}
+[32.861168] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mpc_data.py\n'}
+[32.861205] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mujoco_data_s.c\n'}
+[32.861244] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_vector_s.c\n'}
+[32.861295] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_location_s.c\n'}
+[32.861315] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mpc_data_s.c\n'}
+[32.861368] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/__init__.py\n'}
+[32.861406] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_vector.py\n'}
+[32.861457] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_location.py\n'}
+[32.861477] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_data_s.c\n'}
+[32.861525] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mujoco_data.py\n'}
+[32.861546] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_data.py\n'}
+[32.886974] (bound_mpc_msg) StdoutLine: {'line': b"Listing '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg'...\n"}
+[32.887029] (bound_mpc_msg) StdoutLine: {'line': b"Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/__init__.py'...\n"}
+[32.887054] (bound_mpc_msg) StdoutLine: {'line': b"Listing '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg'...\n"}
+[32.887073] (bound_mpc_msg) StdoutLine: {'line': b"Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/__init__.py'...\n"}
+[32.887092] (bound_mpc_msg) StdoutLine: {'line': b"Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_data.py'...\n"}
+[32.887113] (bound_mpc_msg) StdoutLine: {'line': b"Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_handover_location.py'...\n"}
+[32.887131] (bound_mpc_msg) StdoutLine: {'line': b"Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mpc_data.py'...\n"}
+[32.887149] (bound_mpc_msg) StdoutLine: {'line': b"Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_mujoco_data.py'...\n"}
+[32.887167] (bound_mpc_msg) StdoutLine: {'line': b"Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/msg/_vector.py'...\n"}
+[32.887186] (bound_mpc_msg) StdoutLine: {'line': b"Listing '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv'...\n"}
+[32.887204] (bound_mpc_msg) StdoutLine: {'line': b"Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/__init__.py'...\n"}
+[32.887222] (bound_mpc_msg) StdoutLine: {'line': b"Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_mpc_params.py'...\n"}
+[32.887241] (bound_mpc_msg) StdoutLine: {'line': b"Compiling '/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/srv/_trajectory.py'...\n"}
+[32.889445] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[32.889572] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[32.889646] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[32.889753] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[32.889815] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[32.889920] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/local/lib/python3.10/dist-packages/bound_mpc_msg/bound_mpc_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[32.889962] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_generator_py.so\n'}
+[32.890094] (bound_mpc_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/lib/libbound_mpc_msg__rosidl_generator_py.so" to ""\n'}
+[32.890134] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/Vector.idl\n'}
+[32.890171] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/MPCData.idl\n'}
+[32.890303] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/HandoverLocation.idl\n'}
+[32.890325] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/HandoverData.idl\n'}
+[32.890345] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/MujocoData.idl\n'}
+[32.890401] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/MPCParams.idl\n'}
+[32.890422] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/Trajectory.idl\n'}
+[32.890470] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/Vector.msg\n'}
+[32.890490] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/MPCData.msg\n'}
+[32.890511] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/HandoverLocation.msg\n'}
+[32.890552] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/HandoverData.msg\n'}
+[32.890574] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/msg/MujocoData.msg\n'}
+[32.890618] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/MPCParams.srv\n'}
+[32.890640] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/MPCParams_Request.msg\n'}
+[32.890688] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/MPCParams_Response.msg\n'}
+[32.890708] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/Trajectory.srv\n'}
+[32.890758] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/Trajectory_Request.msg\n'}
+[32.890781] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/srv/Trajectory_Response.msg\n'}
+[32.890818] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/ament_index/resource_index/package_run_dependencies/bound_mpc_msg\n'}
+[32.890860] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/ament_index/resource_index/parent_prefix_path/bound_mpc_msg\n'}
+[32.890900] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/ament_prefix_path.sh\n'}
+[32.890937] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/ament_prefix_path.dsv\n'}
+[32.890974] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/path.sh\n'}
+[32.891011] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/environment/path.dsv\n'}
+[32.891048] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/local_setup.bash\n'}
+[32.891083] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/local_setup.sh\n'}
+[32.891120] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/local_setup.zsh\n'}
+[32.891156] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/local_setup.dsv\n'}
+[32.891192] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/package.dsv\n'}
+[32.891243] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/ament_index/resource_index/packages/bound_mpc_msg\n'}
+[32.891297] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_generator_cExport.cmake\n'}
+[32.891339] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_generator_cExport-noconfig.cmake\n'}
+[32.891385] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[32.891427] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[32.891468] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_generator_cppExport.cmake\n'}
+[32.891512] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[32.891552] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[32.891597] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_introspection_cExport.cmake\n'}
+[32.891636] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[32.891680] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_cExport.cmake\n'}
+[32.891720] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[32.891763] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[32.891802] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[32.891846] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_cppExport.cmake\n'}
+[32.891886] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msg__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[32.891929] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_generator_pyExport.cmake\n'}
+[32.891968] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/export_bound_mpc_msg__rosidl_generator_pyExport-noconfig.cmake\n'}
+[32.892009] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/rosidl_cmake-extras.cmake\n'}
+[32.892048] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[32.892099] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[32.892140] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[32.892182] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[32.892220] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[32.892260] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[32.892297] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msgConfig.cmake\n'}
+[32.892335] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/cmake/bound_mpc_msgConfig-version.cmake\n'}
+[32.892373] (bound_mpc_msg) StdoutLine: {'line': b'-- Installing: /home/eric/wjg/btry/tmp/process_scan_dependencies/ros_install_310/bound_mpc_msg/share/bound_mpc_msg/package.xml\n'}
+[32.893219] (bound_mpc_msg) CommandEnded: {'returncode': 0}
+[32.899386] (bound_mpc_msg) JobEnded: {'identifier': 'bound_mpc_msg', 'rc': 0}
+[32.899566] (-) EventReactorShutdown: {}
