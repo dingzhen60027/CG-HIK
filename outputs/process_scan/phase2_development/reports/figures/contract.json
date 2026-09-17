@@ -1,0 +1,14 @@
+{
+  "archetype": "quantitative grid",
+  "backend": "Python matplotlib",
+  "questions": [
+    "Does all-scene quality improve?",
+    "What is paired qualified execution cost?",
+    "What planning work was spent?",
+    "Where does endpoint graph closure stop before continuous feasibility?"
+  ],
+  "units": "Scene; timing repeats averaged within scene; no inferential bars on raw-scene plots",
+  "source": "reports CSV; unqualified durations excluded only from cost axes and retained in completion counts",
+  "adaptation": "Style-only inheritance from Phase15; new method/paired fields; no old statistics reused",
+  "export": "Editable SVG/PDF and 300dpi PNG; >=6pt text"
+}

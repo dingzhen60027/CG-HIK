@@ -1,0 +1,14 @@
+{
+  "old_evidence_and_kernels_unchanged": true,
+  "conditions": 432,
+  "physics": 121,
+  "recomputed_time_bound_edges": 26883,
+  "shared_initial_copies": 189,
+  "verified_physical_histories": 121,
+  "recomputed_actual_scan_profiles": 370056,
+  "coverage_holes_and_along_scan_gaps_recomputed": true,
+  "failures_not_imputed_zero": true,
+  "formal_scenes_run": false,
+  "numerical_run_manifest_hashes_checked": true,
+  "manifest_note": "Legacy baseline manifests also enumerate read-only reporting files that are not called during run; those incidental hashes are not numerical implementation hashes."
+}

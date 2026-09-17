@@ -1,0 +1,169 @@
+{
+  "fixed_index_rows": 36,
+  "rendered": 27,
+  "not_executed": 9,
+  "checks": [
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/panda_plane_p0_u_B0.mp4",
+      "frames": 208,
+      "duration_s": 20.8,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/panda_plane_p0_u_B1.mp4",
+      "frames": 200,
+      "duration_s": 20,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/panda_plane_p0_u_A1.mp4",
+      "frames": 198,
+      "duration_s": 19.8,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/panda_saddle_p0_u_B0.mp4",
+      "frames": 213,
+      "duration_s": 21.3,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/panda_saddle_p0_u_B1.mp4",
+      "frames": 212,
+      "duration_s": 21.2,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/panda_saddle_p0_u_B2-common.mp4",
+      "frames": 215,
+      "duration_s": 21.5,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/panda_saddle_p0_u_A1.mp4",
+      "frames": 203,
+      "duration_s": 20.3,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/panda_saddle_p0_u_A2.mp4",
+      "frames": 338,
+      "duration_s": 33.8,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/panda_saddle_p0_u_Proposed.mp4",
+      "frames": 314,
+      "duration_s": 31.4,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_plane_p0_u_B0.mp4",
+      "frames": 194,
+      "duration_s": 19.4,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_plane_p0_u_B1.mp4",
+      "frames": 194,
+      "duration_s": 19.4,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_plane_p0_u_B2-common.mp4",
+      "frames": 186,
+      "duration_s": 18.6,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_plane_p0_u_A1.mp4",
+      "frames": 194,
+      "duration_s": 19.4,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_plane_p0_u_A2.mp4",
+      "frames": 194,
+      "duration_s": 19.4,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_plane_p0_u_Proposed.mp4",
+      "frames": 194,
+      "duration_s": 19.4,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_cylinder_p0_u_B0.mp4",
+      "frames": 238,
+      "duration_s": 23.8,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_cylinder_p0_u_B1.mp4",
+      "frames": 237,
+      "duration_s": 23.7,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_cylinder_p0_u_B2-common.mp4",
+      "frames": 235,
+      "duration_s": 23.5,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_cylinder_p0_u_A1.mp4",
+      "frames": 238,
+      "duration_s": 23.8,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_cylinder_p0_u_A2.mp4",
+      "frames": 238,
+      "duration_s": 23.8,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_cylinder_p0_u_Proposed.mp4",
+      "frames": 238,
+      "duration_s": 23.8,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_saddle_p0_u_B0.mp4",
+      "frames": 193,
+      "duration_s": 19.3,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_saddle_p0_u_B1.mp4",
+      "frames": 196,
+      "duration_s": 19.6,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_saddle_p0_u_B2-common.mp4",
+      "frames": 183,
+      "duration_s": 18.3,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_saddle_p0_u_A1.mp4",
+      "frames": 193,
+      "duration_s": 19.3,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_saddle_p0_u_A2.mp4",
+      "frames": 193,
+      "duration_s": 19.3,
+      "raw_hash_verified": true
+    },
+    {
+      "video": "outputs/process_scan/phase2_development/reports/videos/ur5e_saddle_p0_u_Proposed.mp4",
+      "frames": 193,
+      "duration_s": 19.3,
+      "raw_hash_verified": true
+    }
+  ]
+}

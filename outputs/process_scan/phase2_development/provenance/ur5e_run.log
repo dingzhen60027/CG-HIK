@@ -1,0 +1,259 @@
+GRAPH ur5e_plane_p0_u 0 {'fine_possible': 7789, 'fine_discontinuous': 6018, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 1771, 'endpoint_nodes': 74, 'endpoint_layers': 20, 'endpoint_possible': 280, 'endpoint_retained': 70} True True
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+PHASE2 ur5e_plane_p0_u A1 0 planner_feasible True 25.134301618978498
+PHASE2 ur5e_plane_p0_u A2 0 planner_feasible True 3.5283376119914465
+CORE ur5e_plane_p0_u B1 0 planner_feasible True
+PHASE2 ur5e_plane_p0_u B2-common 0 planner_feasible True 34.32738314798917
+CORE ur5e_plane_p0_u B0 0 planner_feasible True
+PHASE2 ur5e_plane_p0_u Proposed 0 planner_feasible True 24.958056922987453
+GRAPH ur5e_plane_p0_u 1 {'fine_possible': 7789, 'fine_discontinuous': 6018, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 1771, 'endpoint_nodes': 74, 'endpoint_layers': 20, 'endpoint_possible': 280, 'endpoint_retained': 70} True True
+CORE ur5e_plane_p0_u B0 1 planner_feasible None
+PHASE2 ur5e_plane_p0_u A2 1 planner_feasible None 3.532566773981671
+PHASE2 ur5e_plane_p0_u A1 1 planner_feasible None 24.87440930097364
+CORE ur5e_plane_p0_u B1 1 planner_feasible None
+PHASE2 ur5e_plane_p0_u Proposed 1 planner_feasible None 25.12345706396445
+PHASE2 ur5e_plane_p0_u B2-common 1 planner_feasible None 34.43944380496396
+GRAPH ur5e_plane_p0_u 2 {'fine_possible': 7789, 'fine_discontinuous': 6018, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 1771, 'endpoint_nodes': 74, 'endpoint_layers': 20, 'endpoint_possible': 280, 'endpoint_retained': 70} True True
+PHASE2 ur5e_plane_p0_u A1 2 planner_feasible None 24.957379987987224
+CORE ur5e_plane_p0_u B1 2 planner_feasible None
+PHASE2 ur5e_plane_p0_u B2-common 2 planner_feasible None 34.3681812609866
+PHASE2 ur5e_plane_p0_u Proposed 2 planner_feasible None 25.01937004098727
+PHASE2 ur5e_plane_p0_u A2 2 planner_feasible None 3.5315311269805534
+CORE ur5e_plane_p0_u B0 2 planner_feasible None
+GRAPH ur5e_plane_p0_v 0 {'fine_possible': 26896, 'fine_discontinuous': 23520, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3376, 'endpoint_nodes': 210, 'endpoint_layers': 28, 'endpoint_possible': 1616, 'endpoint_retained': 202} True True
+PHASE2 ur5e_plane_p0_v B2-common 0 planner_feasible True 36.10152551198553
+PHASE2 ur5e_plane_p0_v A1 0 planner_feasible True 35.89977723798074
+CORE ur5e_plane_p0_v B1 0 planner_feasible True
+PHASE2 ur5e_plane_p0_v A2 0 planner_feasible True 5.162981513989507
+CORE ur5e_plane_p0_v B0 0 planner_feasible True
+PHASE2 ur5e_plane_p0_v Proposed 0 planner_feasible True 35.923480820973055
+GRAPH ur5e_plane_p0_v 1 {'fine_possible': 26896, 'fine_discontinuous': 23520, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3376, 'endpoint_nodes': 210, 'endpoint_layers': 28, 'endpoint_possible': 1616, 'endpoint_retained': 202} True True
+CORE ur5e_plane_p0_v B1 1 planner_feasible None
+PHASE2 ur5e_plane_p0_v A2 1 planner_feasible None 5.116967049980303
+PHASE2 ur5e_plane_p0_v B2-common 1 planner_feasible None 35.9577031719964
+PHASE2 ur5e_plane_p0_v A1 1 planner_feasible None 36.02330567299214
+CORE ur5e_plane_p0_v B0 1 planner_feasible None
+PHASE2 ur5e_plane_p0_v Proposed 1 planner_feasible None 35.894898445985746
+GRAPH ur5e_plane_p0_v 2 {'fine_possible': 26896, 'fine_discontinuous': 23520, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3376, 'endpoint_nodes': 210, 'endpoint_layers': 28, 'endpoint_possible': 1616, 'endpoint_retained': 202} True True
+PHASE2 ur5e_plane_p0_v A1 2 planner_feasible None 36.11572307399183
+PHASE2 ur5e_plane_p0_v A2 2 planner_feasible None 5.155338811979163
+CORE ur5e_plane_p0_v B1 2 planner_feasible None
+PHASE2 ur5e_plane_p0_v Proposed 2 planner_feasible None 36.073472843985655
+CORE ur5e_plane_p0_v B0 2 planner_feasible None
+PHASE2 ur5e_plane_p0_v B2-common 2 planner_feasible None 36.99457141298626
+GRAPH ur5e_plane_p1_u 0 {'fine_possible': 27078, 'fine_discontinuous': 23725, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3353, 'endpoint_nodes': 144, 'endpoint_layers': 20, 'endpoint_possible': 1080, 'endpoint_retained': 136} True True
+CORE ur5e_plane_p1_u B0 0 planner_feasible True
+PHASE2 ur5e_plane_p1_u Proposed 0 planner_feasible True 29.597942606997094
+PHASE2 ur5e_plane_p1_u A2 0 planner_feasible True 4.8237489799939794
+PHASE2 ur5e_plane_p1_u B2-common 0 planner_feasible True 25.790890915013733
+CORE ur5e_plane_p1_u B1 0 planner_feasible True
+PHASE2 ur5e_plane_p1_u A1 0 planner_feasible True 29.524873456015484
+GRAPH ur5e_plane_p1_u 1 {'fine_possible': 27078, 'fine_discontinuous': 23725, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3353, 'endpoint_nodes': 144, 'endpoint_layers': 20, 'endpoint_possible': 1080, 'endpoint_retained': 136} True True
+CORE ur5e_plane_p1_u B0 1 planner_feasible None
+PHASE2 ur5e_plane_p1_u A2 1 planner_feasible None 4.852512628000113
+CORE ur5e_plane_p1_u B1 1 planner_feasible None
+PHASE2 ur5e_plane_p1_u B2-common 1 planner_feasible None 25.857393735001097
+PHASE2 ur5e_plane_p1_u Proposed 1 planner_feasible None 29.495270272003836
+PHASE2 ur5e_plane_p1_u A1 1 planner_feasible None 29.484780750004575
+GRAPH ur5e_plane_p1_u 2 {'fine_possible': 27078, 'fine_discontinuous': 23725, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3353, 'endpoint_nodes': 144, 'endpoint_layers': 20, 'endpoint_possible': 1080, 'endpoint_retained': 136} True True
+PHASE2 ur5e_plane_p1_u A2 2 planner_feasible None 4.838908317004098
+CORE ur5e_plane_p1_u B0 2 planner_feasible None
+PHASE2 ur5e_plane_p1_u A1 2 planner_feasible None 29.37165356699552
+PHASE2 ur5e_plane_p1_u B2-common 2 planner_feasible None 25.798205907005467
+PHASE2 ur5e_plane_p1_u Proposed 2 planner_feasible None 29.36457550500927
+CORE ur5e_plane_p1_u B1 2 planner_feasible None
+GRAPH ur5e_plane_p1_v 0 {'fine_possible': 46904, 'fine_discontinuous': 42557, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 4347, 'endpoint_nodes': 268, 'endpoint_layers': 28, 'endpoint_possible': 2790, 'endpoint_retained': 256} True True
+PHASE2 ur5e_plane_p1_v Proposed 0 planner_feasible True 37.15341713599628
+PHASE2 ur5e_plane_p1_v A2 0 planner_feasible True 6.009990684004151
+CORE ur5e_plane_p1_v B1 0 planner_feasible True
+CORE ur5e_plane_p1_v B0 0 planner_feasible True
+PHASE2 ur5e_plane_p1_v B2-common 0 planner_feasible False 26.715393072008737
+PHASE2 ur5e_plane_p1_v A1 0 planner_feasible True 36.74079689399514
+GRAPH ur5e_plane_p1_v 1 {'fine_possible': 46904, 'fine_discontinuous': 42557, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 4347, 'endpoint_nodes': 268, 'endpoint_layers': 28, 'endpoint_possible': 2790, 'endpoint_retained': 256} True True
+PHASE2 ur5e_plane_p1_v Proposed 1 planner_feasible None 36.92639368100208
+CORE ur5e_plane_p1_v B0 1 planner_feasible None
+PHASE2 ur5e_plane_p1_v B2-common 1 planner_feasible None 26.68403796700295
+PHASE2 ur5e_plane_p1_v A1 1 planner_feasible None 37.16232430501259
+PHASE2 ur5e_plane_p1_v A2 1 planner_feasible None 5.986952748004114
+CORE ur5e_plane_p1_v B1 1 planner_feasible None
+GRAPH ur5e_plane_p1_v 2 {'fine_possible': 46904, 'fine_discontinuous': 42557, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 4347, 'endpoint_nodes': 268, 'endpoint_layers': 28, 'endpoint_possible': 2790, 'endpoint_retained': 256} True True
+PHASE2 ur5e_plane_p1_v A2 2 planner_feasible None 6.014681305008708
+PHASE2 ur5e_plane_p1_v Proposed 2 planner_feasible None 36.99089636700228
+CORE ur5e_plane_p1_v B1 2 planner_feasible None
+PHASE2 ur5e_plane_p1_v B2-common 2 planner_feasible None 26.798389699004474
+PHASE2 ur5e_plane_p1_v A1 2 planner_feasible None 37.12514822999947
+CORE ur5e_plane_p1_v B0 2 planner_feasible None
+GRAPH ur5e_cylinder_p0_u 0 {'fine_possible': 7988, 'fine_discontinuous': 6209, 'fine_geometry_rejected': 3, 'fine_collision_rejected': 0, 'fine_retained': 1776, 'endpoint_nodes': 74, 'endpoint_layers': 20, 'endpoint_possible': 280, 'endpoint_retained': 70} True True
+CORE ur5e_cylinder_p0_u B0 0 planner_feasible True
+PHASE2 ur5e_cylinder_p0_u A2 0 planner_feasible True 3.6358903819782427
+CORE ur5e_cylinder_p0_u B1 0 planner_feasible True
+PHASE2 ur5e_cylinder_p0_u A1 0 planner_feasible True 23.011750254008803
+PHASE2 ur5e_cylinder_p0_u B2-common 0 planner_feasible True 34.82243796098919
+PHASE2 ur5e_cylinder_p0_u Proposed 0 planner_feasible True 22.953099845981342
+GRAPH ur5e_cylinder_p0_u 1 {'fine_possible': 7988, 'fine_discontinuous': 6209, 'fine_geometry_rejected': 3, 'fine_collision_rejected': 0, 'fine_retained': 1776, 'endpoint_nodes': 74, 'endpoint_layers': 20, 'endpoint_possible': 280, 'endpoint_retained': 70} True True
+PHASE2 ur5e_cylinder_p0_u B2-common 1 planner_feasible None 34.78785010399588
+PHASE2 ur5e_cylinder_p0_u Proposed 1 planner_feasible None 22.95023906600545
+PHASE2 ur5e_cylinder_p0_u A2 1 planner_feasible None 3.6357667359989136
+CORE ur5e_cylinder_p0_u B0 1 planner_feasible None
+CORE ur5e_cylinder_p0_u B1 1 planner_feasible None
+PHASE2 ur5e_cylinder_p0_u A1 1 planner_feasible None 22.870639476008364
+GRAPH ur5e_cylinder_p0_u 2 {'fine_possible': 7988, 'fine_discontinuous': 6209, 'fine_geometry_rejected': 3, 'fine_collision_rejected': 0, 'fine_retained': 1776, 'endpoint_nodes': 74, 'endpoint_layers': 20, 'endpoint_possible': 280, 'endpoint_retained': 70} True True
+PHASE2 ur5e_cylinder_p0_u A2 2 planner_feasible None 3.6505387910001446
+PHASE2 ur5e_cylinder_p0_u A1 2 planner_feasible None 22.95670496400271
+CORE ur5e_cylinder_p0_u B0 2 planner_feasible None
+PHASE2 ur5e_cylinder_p0_u B2-common 2 planner_feasible None 34.96771615000034
+CORE ur5e_cylinder_p0_u B1 2 planner_feasible None
+PHASE2 ur5e_cylinder_p0_u Proposed 2 planner_feasible None 23.047685340003227
+GRAPH ur5e_cylinder_p0_v 0 {'fine_possible': 28676, 'fine_discontinuous': 25292, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3384, 'endpoint_nodes': 211, 'endpoint_layers': 28, 'endpoint_possible': 1733, 'endpoint_retained': 202} True True
+PHASE2 ur5e_cylinder_p0_v A1 0 planner_feasible True 36.690593908992014
+PHASE2 ur5e_cylinder_p0_v B2-common 0 planner_feasible True 37.04936286500015
+PHASE2 ur5e_cylinder_p0_v A2 0 planner_feasible True 5.312105437988066
+CORE ur5e_cylinder_p0_v B0 0 planner_feasible True
+CORE ur5e_cylinder_p0_v B1 0 planner_feasible True
+PHASE2 ur5e_cylinder_p0_v Proposed 0 planner_feasible True 36.535614619002445
+GRAPH ur5e_cylinder_p0_v 1 {'fine_possible': 28676, 'fine_discontinuous': 25292, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3384, 'endpoint_nodes': 211, 'endpoint_layers': 28, 'endpoint_possible': 1733, 'endpoint_retained': 202} True True
+PHASE2 ur5e_cylinder_p0_v B2-common 1 planner_feasible None 37.05753187998198
+PHASE2 ur5e_cylinder_p0_v A1 1 planner_feasible None 36.79778495999926
+CORE ur5e_cylinder_p0_v B0 1 planner_feasible None
+PHASE2 ur5e_cylinder_p0_v A2 1 planner_feasible None 5.304271676970529
+PHASE2 ur5e_cylinder_p0_v Proposed 1 planner_feasible None 36.631169576969114
+CORE ur5e_cylinder_p0_v B1 1 planner_feasible None
+GRAPH ur5e_cylinder_p0_v 2 {'fine_possible': 28676, 'fine_discontinuous': 25292, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3384, 'endpoint_nodes': 211, 'endpoint_layers': 28, 'endpoint_possible': 1733, 'endpoint_retained': 202} True True
+PHASE2 ur5e_cylinder_p0_v A2 2 planner_feasible None 5.291256790980697
+CORE ur5e_cylinder_p0_v B0 2 planner_feasible None
+PHASE2 ur5e_cylinder_p0_v Proposed 2 planner_feasible None 36.62351031097933
+PHASE2 ur5e_cylinder_p0_v B2-common 2 planner_feasible None 37.031104140987736
+PHASE2 ur5e_cylinder_p0_v A1 2 planner_feasible None 36.672294040967245
+CORE ur5e_cylinder_p0_v B1 2 planner_feasible None
+GRAPH ur5e_cylinder_p1_u 0 {'fine_possible': 14290, 'fine_discontinuous': 11865, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 2425, 'endpoint_nodes': 104, 'endpoint_layers': 20, 'endpoint_possible': 562, 'endpoint_retained': 98} True True
+PHASE2 ur5e_cylinder_p1_u B2-common 0 planner_feasible True 35.35318001000269
+CORE ur5e_cylinder_p1_u B1 0 planner_feasible True
+PHASE2 ur5e_cylinder_p1_u A2 0 planner_feasible True 4.195866965994355
+CORE ur5e_cylinder_p1_u B0 0 planner_feasible True
+PHASE2 ur5e_cylinder_p1_u A1 0 planner_feasible True 31.00148520201037
+PHASE2 ur5e_cylinder_p1_u Proposed 0 planner_feasible True 30.918589384004008
+GRAPH ur5e_cylinder_p1_u 1 {'fine_possible': 14290, 'fine_discontinuous': 11865, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 2425, 'endpoint_nodes': 104, 'endpoint_layers': 20, 'endpoint_possible': 562, 'endpoint_retained': 98} True True
+PHASE2 ur5e_cylinder_p1_u A2 1 planner_feasible None 4.1839705769962166
+CORE ur5e_cylinder_p1_u B1 1 planner_feasible None
+CORE ur5e_cylinder_p1_u B0 1 planner_feasible None
+PHASE2 ur5e_cylinder_p1_u Proposed 1 planner_feasible None 30.905279063998023
+PHASE2 ur5e_cylinder_p1_u A1 1 planner_feasible None 31.211955092003336
+PHASE2 ur5e_cylinder_p1_u B2-common 1 planner_feasible None 35.3241694640019
+GRAPH ur5e_cylinder_p1_u 2 {'fine_possible': 14290, 'fine_discontinuous': 11865, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 2425, 'endpoint_nodes': 104, 'endpoint_layers': 20, 'endpoint_possible': 562, 'endpoint_retained': 98} True True
+CORE ur5e_cylinder_p1_u B1 2 planner_feasible None
+PHASE2 ur5e_cylinder_p1_u A2 2 planner_feasible None 4.186518932998297
+CORE ur5e_cylinder_p1_u B0 2 planner_feasible None
+PHASE2 ur5e_cylinder_p1_u A1 2 planner_feasible None 31.051642194986925
+PHASE2 ur5e_cylinder_p1_u B2-common 2 planner_feasible None 35.29476735400385
+PHASE2 ur5e_cylinder_p1_u Proposed 2 planner_feasible None 30.858309233997716
+GRAPH ur5e_cylinder_p1_v 0 {'fine_possible': 18744, 'fine_discontinuous': 16018, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 2726, 'endpoint_nodes': 168, 'endpoint_layers': 28, 'endpoint_possible': 1108, 'endpoint_retained': 160} True True
+PHASE2 ur5e_cylinder_p1_v A2 0 planner_feasible True 4.659310805014684
+CORE ur5e_cylinder_p1_v B1 0 planner_feasible True
+CORE ur5e_cylinder_p1_v B0 0 planner_feasible True
+PHASE2 ur5e_cylinder_p1_v B2-common 0 planner_feasible False 36.15588218200719
+PHASE2 ur5e_cylinder_p1_v A1 0 planner_feasible True 33.54328509402694
+PHASE2 ur5e_cylinder_p1_v Proposed 0 planner_feasible True 33.36954593601695
+GRAPH ur5e_cylinder_p1_v 1 {'fine_possible': 18744, 'fine_discontinuous': 16018, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 2726, 'endpoint_nodes': 168, 'endpoint_layers': 28, 'endpoint_possible': 1108, 'endpoint_retained': 160} True True
+CORE ur5e_cylinder_p1_v B1 1 planner_feasible None
+PHASE2 ur5e_cylinder_p1_v A2 1 planner_feasible None 4.651141110996832
+PHASE2 ur5e_cylinder_p1_v B2-common 1 planner_feasible None 36.323451750999084
+PHASE2 ur5e_cylinder_p1_v A1 1 planner_feasible None 33.57206896600837
+PHASE2 ur5e_cylinder_p1_v Proposed 1 planner_feasible None 33.68900999499601
+CORE ur5e_cylinder_p1_v B0 1 planner_feasible None
+GRAPH ur5e_cylinder_p1_v 2 {'fine_possible': 18744, 'fine_discontinuous': 16018, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 2726, 'endpoint_nodes': 168, 'endpoint_layers': 28, 'endpoint_possible': 1108, 'endpoint_retained': 160} True True
+PHASE2 ur5e_cylinder_p1_v A2 2 planner_feasible None 4.7834253769833595
+PHASE2 ur5e_cylinder_p1_v B2-common 2 planner_feasible None 36.39873124299629
+PHASE2 ur5e_cylinder_p1_v A1 2 planner_feasible None 33.713881250994746
+CORE ur5e_cylinder_p1_v B0 2 planner_feasible None
+PHASE2 ur5e_cylinder_p1_v Proposed 2 planner_feasible None 33.78247679999913
+CORE ur5e_cylinder_p1_v B1 2 planner_feasible None
+GRAPH ur5e_saddle_p0_u 0 {'fine_possible': 20482, 'fine_discontinuous': 17556, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 2926, 'endpoint_nodes': 128, 'endpoint_layers': 20, 'endpoint_possible': 847, 'endpoint_retained': 121} True True
+PHASE2 ur5e_saddle_p0_u A1 0 planner_feasible True 33.27262776099087
+CORE ur5e_saddle_p0_u B1 0 planner_feasible True
+PHASE2 ur5e_saddle_p0_u Proposed 0 planner_feasible True 33.38688095098769
+PHASE2 ur5e_saddle_p0_u A2 0 planner_feasible True 4.661420918971999
+CORE ur5e_saddle_p0_u B0 0 planner_feasible True
+PHASE2 ur5e_saddle_p0_u B2-common 0 planner_feasible True 36.40628868699423
+GRAPH ur5e_saddle_p0_u 1 {'fine_possible': 20482, 'fine_discontinuous': 17556, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 2926, 'endpoint_nodes': 128, 'endpoint_layers': 20, 'endpoint_possible': 847, 'endpoint_retained': 121} True True
+PHASE2 ur5e_saddle_p0_u B2-common 1 planner_feasible None 36.57159134797985
+PHASE2 ur5e_saddle_p0_u A1 1 planner_feasible None 33.216499645976
+CORE ur5e_saddle_p0_u B1 1 planner_feasible None
+CORE ur5e_saddle_p0_u B0 1 planner_feasible None
+PHASE2 ur5e_saddle_p0_u A2 1 planner_feasible None 4.6858644019812346
+PHASE2 ur5e_saddle_p0_u Proposed 1 planner_feasible None 34.35910536297888
+GRAPH ur5e_saddle_p0_u 2 {'fine_possible': 20482, 'fine_discontinuous': 17556, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 2926, 'endpoint_nodes': 128, 'endpoint_layers': 20, 'endpoint_possible': 847, 'endpoint_retained': 121} True True
+CORE ur5e_saddle_p0_u B0 2 planner_feasible None
+CORE ur5e_saddle_p0_u B1 2 planner_feasible None
+PHASE2 ur5e_saddle_p0_u A2 2 planner_feasible None 4.745573614985915
+PHASE2 ur5e_saddle_p0_u Proposed 2 planner_feasible None 33.35532580198196
+PHASE2 ur5e_saddle_p0_u A1 2 planner_feasible None 33.372569764978834
+PHASE2 ur5e_saddle_p0_u B2-common 2 planner_feasible None 36.719959237991134
+GRAPH ur5e_saddle_p0_v 0 {'fine_possible': 42600, 'fine_discontinuous': 38340, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 4260, 'endpoint_nodes': 262, 'endpoint_layers': 28, 'endpoint_possible': 2520, 'endpoint_retained': 252} True True
+PHASE2 ur5e_saddle_p0_v Proposed 0 planner_feasible True 36.203937899001176
+PHASE2 ur5e_saddle_p0_v B2-common 0 planner_feasible True 37.174037518998375
+CORE ur5e_saddle_p0_v B0 0 planner_feasible True
+PHASE2 ur5e_saddle_p0_v A1 0 planner_feasible True 36.248937561991625
+CORE ur5e_saddle_p0_v B1 0 planner_feasible True
+PHASE2 ur5e_saddle_p0_v A2 0 planner_feasible True 6.124810077002621
+GRAPH ur5e_saddle_p0_v 1 {'fine_possible': 42600, 'fine_discontinuous': 38340, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 4260, 'endpoint_nodes': 262, 'endpoint_layers': 28, 'endpoint_possible': 2520, 'endpoint_retained': 252} True True
+CORE ur5e_saddle_p0_v B0 1 planner_feasible None
+PHASE2 ur5e_saddle_p0_v A2 1 planner_feasible None 6.140468759986106
+CORE ur5e_saddle_p0_v B1 1 planner_feasible None
+PHASE2 ur5e_saddle_p0_v A1 1 planner_feasible None 36.34732713199628
+PHASE2 ur5e_saddle_p0_v B2-common 1 planner_feasible None 37.31952529397677
+PHASE2 ur5e_saddle_p0_v Proposed 1 planner_feasible None 36.48193584498949
+GRAPH ur5e_saddle_p0_v 2 {'fine_possible': 42600, 'fine_discontinuous': 38340, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 4260, 'endpoint_nodes': 262, 'endpoint_layers': 28, 'endpoint_possible': 2520, 'endpoint_retained': 252} True True
+PHASE2 ur5e_saddle_p0_v Proposed 2 planner_feasible None 36.3691456259985
+PHASE2 ur5e_saddle_p0_v B2-common 2 planner_feasible None 37.31494414199551
+CORE ur5e_saddle_p0_v B0 2 planner_feasible None
+PHASE2 ur5e_saddle_p0_v A2 2 planner_feasible None 6.191294678996201
+CORE ur5e_saddle_p0_v B1 2 planner_feasible None
+PHASE2 ur5e_saddle_p0_v A1 2 planner_feasible None 36.2342387639801
+GRAPH ur5e_saddle_p1_u 0 {'fine_possible': 23686, 'fine_discontinuous': 20579, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3107, 'endpoint_nodes': 137, 'endpoint_layers': 20, 'endpoint_possible': 999, 'endpoint_retained': 129} True True
+PHASE2 ur5e_saddle_p1_u B2-common 0 planner_feasible True 36.6726098350191
+PHASE2 ur5e_saddle_p1_u A2 0 planner_feasible True 4.853038389017456
+CORE ur5e_saddle_p1_u B0 0 planner_feasible True
+PHASE2 ur5e_saddle_p1_u A1 0 planner_feasible True 32.42534478699963
+PHASE2 ur5e_saddle_p1_u Proposed 0 planner_feasible True 31.852635540999472
+CORE ur5e_saddle_p1_u B1 0 planner_feasible True
+GRAPH ur5e_saddle_p1_u 1 {'fine_possible': 23686, 'fine_discontinuous': 20579, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3107, 'endpoint_nodes': 137, 'endpoint_layers': 20, 'endpoint_possible': 999, 'endpoint_retained': 129} True True
+PHASE2 ur5e_saddle_p1_u A1 1 planner_feasible None 31.828499061011826
+PHASE2 ur5e_saddle_p1_u A2 1 planner_feasible None 4.824365344000398
+PHASE2 ur5e_saddle_p1_u Proposed 1 planner_feasible None 31.886161359012476
+CORE ur5e_saddle_p1_u B0 1 planner_feasible None
+PHASE2 ur5e_saddle_p1_u B2-common 1 planner_feasible None 36.25881944100547
+CORE ur5e_saddle_p1_u B1 1 planner_feasible None
+GRAPH ur5e_saddle_p1_u 2 {'fine_possible': 23686, 'fine_discontinuous': 20579, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3107, 'endpoint_nodes': 137, 'endpoint_layers': 20, 'endpoint_possible': 999, 'endpoint_retained': 129} True True
+PHASE2 ur5e_saddle_p1_u Proposed 2 planner_feasible None 31.86006544799602
+PHASE2 ur5e_saddle_p1_u A1 2 planner_feasible None 31.773450184002286
+CORE ur5e_saddle_p1_u B1 2 planner_feasible None
+PHASE2 ur5e_saddle_p1_u B2-common 2 planner_feasible None 36.50316189498699
+PHASE2 ur5e_saddle_p1_u A2 2 planner_feasible None 4.879251865990227
+CORE ur5e_saddle_p1_u B0 2 planner_feasible None
+GRAPH ur5e_saddle_p1_v 0 {'fine_possible': 28000, 'fine_discontinuous': 24552, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3448, 'endpoint_nodes': 210, 'endpoint_layers': 28, 'endpoint_possible': 1616, 'endpoint_retained': 202} True True
+PHASE2 ur5e_saddle_p1_v A2 0 planner_feasible True 5.319564345001709
+PHASE2 ur5e_saddle_p1_v B2-common 0 planner_feasible True 37.05342921799456
+CORE ur5e_saddle_p1_v B1 0 planner_feasible True
+PHASE2 ur5e_saddle_p1_v Proposed 0 planner_feasible True 27.79516910998791
+CORE ur5e_saddle_p1_v B0 0 planner_feasible True
+PHASE2 ur5e_saddle_p1_v A1 0 planner_feasible True 27.914477319995058
+GRAPH ur5e_saddle_p1_v 1 {'fine_possible': 28000, 'fine_discontinuous': 24552, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3448, 'endpoint_nodes': 210, 'endpoint_layers': 28, 'endpoint_possible': 1616, 'endpoint_retained': 202} True True
+PHASE2 ur5e_saddle_p1_v B2-common 1 planner_feasible None 36.26365812699078
+PHASE2 ur5e_saddle_p1_v A1 1 planner_feasible None 28.11149044400372
+CORE ur5e_saddle_p1_v B0 1 planner_feasible None
+PHASE2 ur5e_saddle_p1_v Proposed 1 planner_feasible None 27.874626188990078
+PHASE2 ur5e_saddle_p1_v A2 1 planner_feasible None 5.3502929319947725
+CORE ur5e_saddle_p1_v B1 1 planner_feasible None
+GRAPH ur5e_saddle_p1_v 2 {'fine_possible': 28000, 'fine_discontinuous': 24552, 'fine_geometry_rejected': 0, 'fine_collision_rejected': 0, 'fine_retained': 3448, 'endpoint_nodes': 210, 'endpoint_layers': 28, 'endpoint_possible': 1616, 'endpoint_retained': 202} True True
+CORE ur5e_saddle_p1_v B0 2 planner_feasible None
+PHASE2 ur5e_saddle_p1_v Proposed 2 planner_feasible None 27.758737448995817
+CORE ur5e_saddle_p1_v B1 2 planner_feasible None
+PHASE2 ur5e_saddle_p1_v A1 2 planner_feasible None 27.870979664992774
+PHASE2 ur5e_saddle_p1_v A2 2 planner_feasible None 5.324909053990268
+PHASE2 ur5e_saddle_p1_v B2-common 2 planner_feasible None 37.0908026759862

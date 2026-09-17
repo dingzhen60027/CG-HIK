@@ -2,6 +2,7 @@
   "baseline": "74d127c712d771b6ba03ab22432ff3ad2f3ac21b",
   "initial_code_and_inputs": "93f357cc0",
   "coefficient_interface_fix": "fbb530e6c",
+  "reporting_and_handover_code": "8cac4dfc6a0c46d9ff98d1d1a3ef5400f4de5c23",
   "original_input_seal": "inputs/seal.json",
   "active_runtime_source_seal": "runtime_seal.json",
   "note": "Original seal git_head records input-preparation HEAD, before the code+input commit. Full byte hashes identify numerical sources. The runtime seal retains original input identities and adds the audited representation fix."

@@ -1,0 +1,25 @@
+slot,robot,B2_final_quality,Proposed_final_quality,A2_initial_quality,target_cycle_s,B2_certified_planning_s,Proposed_certified_planning_s,time_ratio,status,B2-common_initial_execution_exact_match,Proposed_initial_execution_exact_match
+panda_cylinder_p0_u,panda,False,False,False,,,,,B2_final_not_quality_qualified,,
+panda_cylinder_p0_v,panda,False,True,True,,,,,B2_final_not_quality_qualified,,
+panda_cylinder_p1_u,panda,False,False,False,,,,,B2_final_not_quality_qualified,,
+panda_cylinder_p1_v,panda,False,True,True,,,,,B2_final_not_quality_qualified,,
+panda_plane_p0_u,panda,False,False,False,,,,,B2_final_not_quality_qualified,,
+panda_plane_p0_v,panda,False,True,True,,,,,B2_final_not_quality_qualified,,
+panda_plane_p1_u,panda,True,True,True,20.582100000001024,31.7304337950045,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+panda_plane_p1_v,panda,True,True,True,18.489449999998467,33.52061391998723,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+panda_saddle_p0_u,panda,True,True,True,22.496250000003364,40.88302249701519,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+panda_saddle_p0_v,panda,True,True,True,18.87059999999893,32.536522483002045,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+panda_saddle_p1_u,panda,True,True,True,19.354649999999523,40.40884542002459,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+panda_saddle_p1_v,panda,True,True,True,18.865349999998926,30.70446599800198,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+ur5e_cylinder_p0_u,ur5e,True,True,True,24.66870000000602,2.5756659309845418,2.5756659309845418,1.0,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+ur5e_cylinder_p0_v,ur5e,True,True,True,20.76795000000125,34.141371439996874,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+ur5e_cylinder_p1_u,ur5e,True,True,True,25.60215000000716,3.13393809000263,3.13393809000263,1.0,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+ur5e_cylinder_p1_v,ur5e,False,True,True,,,,,B2_final_not_quality_qualified,,
+ur5e_plane_p0_u,ur5e,True,True,True,19.429199999999614,2.491494181987946,2.491494181987946,1.0,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+ur5e_plane_p0_v,ur5e,True,True,True,20.602050000001046,4.127049486982287,4.127049486982287,1.0,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+ur5e_plane_p1_u,ur5e,True,True,True,19.516349999999722,3.792917511003907,3.792917511003907,1.0,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+ur5e_plane_p1_v,ur5e,False,True,True,,,,,B2_final_not_quality_qualified,,
+ur5e_saddle_p0_u,ur5e,True,True,True,19.18034999999931,25.040372190982453,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+ur5e_saddle_p0_v,ur5e,True,True,True,20.100150000000433,32.059139625998796,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+ur5e_saddle_p1_u,ur5e,True,True,True,18.482099999998457,10.413176865011337,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True
+ur5e_saddle_p1_v,ur5e,True,True,True,20.001450000000315,31.64825119500165,,,Only actually executed matching timed paths certify quality; both methods credited for common A2 initial witness,True,True

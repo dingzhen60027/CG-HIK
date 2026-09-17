@@ -1,0 +1,186 @@
+{
+  "pass_all": false,
+  "checks": {
+    "panda_quality_at_least_10": false,
+    "ur5e_quality_12": true,
+    "common_B1_transition_reduction_15pct": false,
+    "common_B1_cycle_reduction_5pct": false,
+    "common_B2_cycle_within_105pct": false,
+    "certified_path_availability_within_50pct_B2": false,
+    "increment_over_A1": false,
+    "increment_over_A2": false
+  },
+  "by_robot": {
+    "panda": {
+      "scheduled": 12,
+      "quality_complete": 9,
+      "B1": {
+        "robot": "panda",
+        "baseline": "B1",
+        "common_quality_scenes": 5,
+        "lost_uids": [
+          "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609"
+        ],
+        "gained_uids": [
+          "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+          "dc500163bea8d607c8f6676fccd669f938cace853f762bdc955d3710e5f2bae9",
+          "ddbaccae4d1e1e90b7da2315bf852ee615b4daba879473cd6ddfe24006fb6108",
+          "5f43b4d6461fcea3fe8ed7073c7de83186d13133f6cb072fc4eb2c12336a6b6c"
+        ],
+        "quality_execution_s_median_ratio": 1.0254380211749548,
+        "quality_transition_s_median_ratio": 1.039621791985556,
+        "total_plan_wall_s_median_ratio": 1.3826083789537194
+      },
+      "B2-common": {
+        "robot": "panda",
+        "baseline": "B2-common",
+        "common_quality_scenes": 6,
+        "lost_uids": [],
+        "gained_uids": [
+          "84054da21481d1359c181b6fcd2262b0249f857876c17df848868534df6762c8",
+          "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+          "f3f3897b5f524fd2bf769f27b0ff33b7489cd38286aa0a3aef7bd1de2cff55db"
+        ],
+        "quality_execution_s_median_ratio": 1.1653295480844523,
+        "quality_transition_s_median_ratio": 1.5720235333969754,
+        "total_plan_wall_s_median_ratio": 0.8473695081346589,
+        "certified_time_to_target_ratio_median": null,
+        "certified_scene_count": 0
+      },
+      "A1": {
+        "robot": "panda",
+        "baseline": "A1",
+        "common_quality_scenes": 9,
+        "lost_uids": [
+          "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609"
+        ],
+        "gained_uids": [],
+        "quality_execution_s_median_ratio": 1.0,
+        "quality_transition_s_median_ratio": 1.0,
+        "total_plan_wall_s_median_ratio": 1.0002334465849942
+      },
+      "A2": {
+        "robot": "panda",
+        "baseline": "A2",
+        "common_quality_scenes": 9,
+        "lost_uids": [],
+        "gained_uids": [],
+        "quality_execution_s_median_ratio": 1.0,
+        "quality_transition_s_median_ratio": 1.0,
+        "total_plan_wall_s_median_ratio": 2.7765455340926444
+      }
+    },
+    "ur5e": {
+      "scheduled": 12,
+      "quality_complete": 12,
+      "B1": {
+        "robot": "ur5e",
+        "baseline": "B1",
+        "common_quality_scenes": 12,
+        "lost_uids": [],
+        "gained_uids": [],
+        "quality_execution_s_median_ratio": 0.997413127501575,
+        "quality_transition_s_median_ratio": 0.9956604439298229,
+        "total_plan_wall_s_median_ratio": 1.0009333502393638
+      },
+      "B2-common": {
+        "robot": "ur5e",
+        "baseline": "B2-common",
+        "common_quality_scenes": 10,
+        "lost_uids": [],
+        "gained_uids": [
+          "2d20f99cf6c82aa207e523443bbea9c8b2f83a71121fed63556e715ac9a2a97f",
+          "26227b24cb54fbd1ee1f9a2ff9548fd6b42ce382e7b92e4713c9a7c4eba0431e"
+        ],
+        "quality_execution_s_median_ratio": 1.0506124361033269,
+        "quality_transition_s_median_ratio": 1.150685177589768,
+        "total_plan_wall_s_median_ratio": 0.8981123581908055,
+        "certified_time_to_target_ratio_median": 1.0,
+        "certified_scene_count": 5
+      },
+      "A1": {
+        "robot": "ur5e",
+        "baseline": "A1",
+        "common_quality_scenes": 12,
+        "lost_uids": [],
+        "gained_uids": [],
+        "quality_execution_s_median_ratio": 1.0,
+        "quality_transition_s_median_ratio": 1.0,
+        "total_plan_wall_s_median_ratio": 1.0002496143669417
+      },
+      "A2": {
+        "robot": "ur5e",
+        "baseline": "A2",
+        "common_quality_scenes": 12,
+        "lost_uids": [],
+        "gained_uids": [],
+        "quality_execution_s_median_ratio": 1.0,
+        "quality_transition_s_median_ratio": 1.0,
+        "total_plan_wall_s_median_ratio": 6.734550374184695
+      }
+    },
+    "all": {
+      "scheduled": 24,
+      "quality_complete": 21,
+      "B1": {
+        "robot": "all",
+        "baseline": "B1",
+        "common_quality_scenes": 17,
+        "lost_uids": [
+          "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609"
+        ],
+        "gained_uids": [
+          "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+          "dc500163bea8d607c8f6676fccd669f938cace853f762bdc955d3710e5f2bae9",
+          "ddbaccae4d1e1e90b7da2315bf852ee615b4daba879473cd6ddfe24006fb6108",
+          "5f43b4d6461fcea3fe8ed7073c7de83186d13133f6cb072fc4eb2c12336a6b6c"
+        ],
+        "quality_execution_s_median_ratio": 0.9988270980788665,
+        "quality_transition_s_median_ratio": 0.9994098554145769,
+        "total_plan_wall_s_median_ratio": 1.11533011465801
+      },
+      "B2-common": {
+        "robot": "all",
+        "baseline": "B2-common",
+        "common_quality_scenes": 16,
+        "lost_uids": [],
+        "gained_uids": [
+          "84054da21481d1359c181b6fcd2262b0249f857876c17df848868534df6762c8",
+          "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+          "f3f3897b5f524fd2bf769f27b0ff33b7489cd38286aa0a3aef7bd1de2cff55db",
+          "2d20f99cf6c82aa207e523443bbea9c8b2f83a71121fed63556e715ac9a2a97f",
+          "26227b24cb54fbd1ee1f9a2ff9548fd6b42ce382e7b92e4713c9a7c4eba0431e"
+        ],
+        "quality_execution_s_median_ratio": 1.0677018195996681,
+        "quality_transition_s_median_ratio": 1.1599015848256986,
+        "total_plan_wall_s_median_ratio": 0.8740805087474189,
+        "certified_time_to_target_ratio_median": 1.0,
+        "certified_scene_count": 5
+      },
+      "A1": {
+        "robot": "all",
+        "baseline": "A1",
+        "common_quality_scenes": 21,
+        "lost_uids": [
+          "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609"
+        ],
+        "gained_uids": [],
+        "quality_execution_s_median_ratio": 1.0,
+        "quality_transition_s_median_ratio": 1.0,
+        "total_plan_wall_s_median_ratio": 1.0002334465849942
+      },
+      "A2": {
+        "robot": "all",
+        "baseline": "A2",
+        "common_quality_scenes": 21,
+        "lost_uids": [],
+        "gained_uids": [],
+        "quality_execution_s_median_ratio": 1.0,
+        "quality_transition_s_median_ratio": 1.0,
+        "total_plan_wall_s_median_ratio": 5.908735945788554
+      }
+    }
+  },
+  "status": "Development evidence only; no formal test authorized or run",
+  "interpretation": "Availability uses own physically qualified final path or the exactly matching common A2 initial execution, credited to BOTH optimizers. Unexecuted checkpoint timing is not a physical certificate."
+}
