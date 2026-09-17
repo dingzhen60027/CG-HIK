@@ -1,0 +1,21 @@
+{
+  "slot": "panda_saddle_p0_v",
+  "scene_uid": "ddbaccae4d1e1e90b7da2315bf852ee615b4daba879473cd6ddfe24006fb6108",
+  "cluster": "panda_saddle_p0",
+  "robot": "panda",
+  "family": "saddle",
+  "placement": 0,
+  "direction": "v",
+  "method": "B2",
+  "repeat": 1,
+  "status": "common_b1_initialization_missing",
+  "planner_feasible": false,
+  "physical_run": false,
+  "quality_completed": null,
+  "execution_completed": null,
+  "T_init": null,
+  "T_smooth": null,
+  "T_opt": null,
+  "T_retime": null,
+  "T_validate": null
+}

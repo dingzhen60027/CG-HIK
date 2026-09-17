@@ -1,0 +1,21 @@
+{
+  "slot": "panda_cylinder_p1_v",
+  "scene_uid": "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+  "cluster": "panda_cylinder_p1",
+  "robot": "panda",
+  "family": "cylinder",
+  "placement": 1,
+  "direction": "v",
+  "method": "B2",
+  "repeat": 1,
+  "status": "common_b1_initialization_missing",
+  "planner_feasible": false,
+  "physical_run": false,
+  "quality_completed": null,
+  "execution_completed": null,
+  "T_init": null,
+  "T_smooth": null,
+  "T_opt": null,
+  "T_retime": null,
+  "T_validate": null
+}

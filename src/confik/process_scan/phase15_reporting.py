@@ -30,9 +30,18 @@ def bottlenecks(rows):
         ray=ray_center_function(task,adapter)
         sr=np.array([np.linalg.norm(np.asarray(ray(qq)[1])@dd)*np.sqrt(xx)/.198 for qq,dd,xx in zip(q,qs,x)])
         scan=task.references(s)[4];total=float(sum(dt))
+        with h5py.File(path.parent/'execution.h5') as f:
+            times=f['t'][:];progress=f['s'][:]
+        actual_dt=np.diff(times);wait=times[:-1]>raw['t'][-1]
+        actual_scan=task.references(progress[:-1])[4]&~wait
+        actual_turn=~actual_scan&~wait
+        parts=[float(np.sum(actual_dt[mask])) for mask in (actual_scan,actual_turn,wait)]
+        np.testing.assert_allclose(sum(parts),times[-1]-times[0],atol=1e-10)
         answer.append(dict(slot=row['slot'],robot=row['robot'],family=row['family'],method=row['method'],
             planned_total_s=total,planned_scan_s=float(sum(dt[scan])),planned_turn_s=float(sum(dt[~scan])),
-            actual_scan_s=row.get('scan_duration_s'),actual_turn_s=row.get('transition_duration_s'),actual_settle_s=row.get('settling_duration_s'),
+            actual_scan_s=parts[0],actual_turn_s=parts[1],actual_settle_s=parts[2],
+            raw_scan_count_s=row.get('scan_duration_s'),raw_turn_count_s=row.get('transition_duration_s'),raw_settle_count_s=row.get('settling_duration_s'),
+            interval_partition_source='Left endpoint labels weighted by actual 1ms timestamp intervals; final timestamp has no extra duration',
             near_public_joint_speed_fraction=float(sum(dt[vr>=.95])/total),
             near_reserved_joint_speed_fraction=float(sum(dt[vr/.90>=.95])/total),
             near_public_acceleration_fraction=float(sum(dt[ar>=.95])/total),
@@ -207,6 +216,8 @@ def markdown_report(main,rows,bottle,work,failures,bridges,refs,b2,closure,inter
         '三个独立冗余慢路径校准均采用了非初始、密集验证且实际执行更快的路径。',
         '目标及约束的有限差分和检查点复算通过；完整物理扫描通过。',
         '因此它已不是只会返回初值的无效实现，但仍是有限预算局部参照，不是全局最优解。',
+        '校准的预先已知较快参照仅比构造初值快约0.07%–1.34%，未充分形成三个明显',
+        '退化的强压力初值；不能用B2后来找到的更大改善倒证校准构造本身足够强。',
         '详见 `PROCESS_SCAN_B2_VALIDATION.md`。','']
     for robot in ('panda','ur5e'):
         ww=[r for r in work if r['robot']==robot and r['method']=='B2' and 'optimizer_status' in r]
@@ -222,8 +233,8 @@ def markdown_report(main,rows,bottle,work,failures,bridges,refs,b2,closure,inter
     lines += ['', '主路径使用10秒已验证incumbent，费用包含完整30秒检查点实验以及构图、回调和验收；',
         'B2还计入获取共同B1初值的成本，不把它称为10秒端到端返回保证。','',
         '## 4. 时间与失败来自哪里','',
-        '|机器人|方法|计划扫描占比|计划换行占比|近预留加速度占比|近预留关节速度占比|实际等待均值/s|',
-        '|---|---|---:|---:|---:|---:|---:|']
+        '|机器人|方法|计划扫描占比|计划换行占比|近预留加速度占比|近预留关节速度占比|实际扫描均值/s|实际换行均值/s|实际等待均值/s|',
+        '|---|---|---:|---:|---:|---:|---:|---:|---:|']
     for robot in ('panda','ur5e'):
         for method in METHODS:
             bb=[r for r in bottle if r['robot']==robot and r['method']==method]
@@ -231,10 +242,13 @@ def markdown_report(main,rows,bottle,work,failures,bridges,refs,b2,closure,inter
             total=sum(r['planned_total_s'] for r in bb);wait=[r['actual_settle_s'] for r in bb if r['actual_settle_s'] is not None]
             acc=sum(r['near_reserved_acceleration_fraction']*r['planned_total_s'] for r in bb)/total
             vel=sum(r['near_reserved_joint_speed_fraction']*r['planned_total_s'] for r in bb)/total
-            lines.append(f"|{robot}|{method}|{sum(r['planned_scan_s'] for r in bb)/total:.1%}|{sum(r['planned_turn_s'] for r in bb)/total:.1%}|{acc:.1%}|{vel:.1%}|{fmt(float(np.mean(wait)) if wait else None)}|")
+            lines.append(f"|{robot}|{method}|{sum(r['planned_scan_s'] for r in bb)/total:.1%}|{sum(r['planned_turn_s'] for r in bb)/total:.1%}|{acc:.1%}|{vel:.1%}|{np.mean([r['actual_scan_s'] for r in bb]):.3f}|{np.mean([r['actual_turn_s'] for r in bb]):.3f}|{fmt(float(np.mean(wait)) if wait else None)}|")
     lines += ['', '扫描/换行/稳定等待按预定义段累加。加速度和速度是非互斥约束占用，不能与',
         '扫描时间再相加当成独立时间份额；“控制耗时”这里仅指实际稳定等待和跟踪/饱和记录，',
-        '不虚构控制器导致的反事实时间贡献。近预留加速度按公共0.90²额度计，近预留速度按0.90额度计。','']
+        '不虚构控制器导致的反事实时间贡献。近预留加速度按公共0.90²额度计，近预留速度按0.90额度计。',
+        '原状态分类计数包含终止采样点，三项计数合计比真实经过时间多1 ms；这里按保存的',
+        '相邻时间戳和左端点标签复算分段耗时，等待约0.199 s。原始计数另列在CSV中，',
+        '不重写原始记录、不修改控制器或验收，也不改变由MuJoCo时间戳记录的实际cycle time。','']
     counts={}
     for r in failures:
         for reason in r['nonexclusive_reasons']:counts[reason]=counts.get(reason,0)+1

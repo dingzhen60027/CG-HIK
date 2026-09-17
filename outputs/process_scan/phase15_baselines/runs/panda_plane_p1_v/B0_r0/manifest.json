@@ -1,0 +1,75 @@
+{
+  "identity": {
+    "slot": "panda_plane_p1_v",
+    "scene_uid": "e283b88390fe538a85d2694079d62454b1b3aa046d100f8504b4a66d9736b8d5",
+    "cluster": "panda_plane_p1",
+    "robot": "panda",
+    "family": "plane",
+    "placement": 1,
+    "direction": "v",
+    "task": {
+      "family": "plane",
+      "placement": 1,
+      "direction": "v",
+      "robot": "panda",
+      "endpoint_extension": 0.003,
+      "overlap_margin": 0.001,
+      "calibration": false
+    },
+    "original_identity_sha256": "6406a165a7ce0a64fe1228e908248444b77f28494bcb6c1b8247f9846a13358d",
+    "reference_geometry_feasible": true,
+    "attempts": [
+      {
+        "tilt": 0.0,
+        "root": "inputs/panda_plane_p1_v/reference/tilt_+0",
+        "status": "reference_available"
+      }
+    ],
+    "reference_source": "inputs/panda_plane_p1_v/reference/tilt_+0",
+    "common_start": [
+      -0.2453939731855847,
+      -0.354071370072311,
+      0.08596013532935408,
+      -2.3428404479027836,
+      0.03259162146231885,
+      1.989772941038299,
+      -0.4398046106653555
+    ],
+    "common_end": [
+      -0.19792694129946772,
+      0.36366525365942304,
+      0.2337791650533041,
+      -1.4860781167239347,
+      -0.08557709479379025,
+      1.839728759838915,
+      -0.21794652713643042
+    ],
+    "selected_tilt_deg": 0.0,
+    "split": "same_24_development_scenes_calibrated_route",
+    "no_method_outcome_used": true,
+    "quality_thresholds_unchanged": true
+  },
+  "method": "B0",
+  "repeat": 0,
+  "code_hashes": {
+    "src/confik/task_balance_gn.py": "752a69afede984d0617997d6c412753c327f9f642eb0f08ef2ab33c464a68d57",
+    "src/confik/bounded_gn.py": "efb81e50a998505511660bdf22733858789d90409474f703fff4c06dd87b6a7a",
+    "src/confik/correction_reserve/geometry.py": "553bdc260cadcbf0fca8dba829e17c9f013f46b488e97d14a03cb2a56ae5817e",
+    "src/confik/correction_reserve/native_geometry.py": "6c980ead3feabe25f28a34aad133e8d779a801d052d75170405a8fb12a7c3196",
+    "src/confik/solvers/verifier.py": "3c6b9007588a6d805e313c2b3fa753f9fe0e7abfd7aeeb8c4eb6a45d08126f88",
+    "src/confik/process_scan/phase15.py": "9f783f9eeeac43826dd490a417ba42e1ce6fe6979a59a1b3fe47bcfd0dc3a0e3",
+    "src/confik/process_scan/execution.py": "fd75dd0b4a89ed8e0e15e8909cc4f2d3f6f2188863361e038d9133f832a9a312",
+    "src/confik/process_scan/planning.py": "0ff97013fbb81c17316f66dde1607b242635281d370ea6247a2b7d171bf0f5d9",
+    "src/confik/process_scan/task.py": "a7603c2bccfa21906cf3281d74abd0541398e3348b443daef93b9f15652e9333",
+    "src/confik/process_scan/__init__.py": "1027fbff570c813e8dadf870667f7c941415fc908844aa514e39b1a2d8795a0e",
+    "src/confik/process_scan/models.py": "12f519da6af6d4464e57564f99a25a6a71910728d796f73f2d5cff5358264f51",
+    "src/confik/process_scan/boundmpc_check.py": "579396f24701e7a48e0c80d13ca83f95a2bc3c1a3cd0184ef05ebfd6d0a9f251",
+    "src/confik/process_scan/geometry_adapter.py": "40875f89a332b9fe60e466ebc9a8ab13f26fdaa6b2b3c21331e20e7775fe2106",
+    "src/confik/process_scan/collision.py": "eaf8df2c2759c40a1a8cb0f8765442bba16b31e9893bb1d7d20a553425025ae8",
+    "src/confik/process_scan/study.py": "72dc808c622ec67cb3685453448ab6515c94f21ae765cbc8d5312c66b849e136",
+    "scripts/run_process_scan_phase15.py": "9fa7849417228d1fa5684d032ce3ed9f9a4a47ba9bb98828f18af2ca1fb8c32a",
+    "configs/process_scan_phase15.yaml": "73783279a28e11fe0e24005f2b5158e6a7d5459760db2f1f2bf278c347c43076"
+  },
+  "physical_qpos_runtime_overwrite": false,
+  "old_online_interface_called": false
+}

@@ -1,0 +1,21 @@
+{
+  "slot": "panda_plane_p1_u",
+  "scene_uid": "dc500163bea8d607c8f6676fccd669f938cace853f762bdc955d3710e5f2bae9",
+  "cluster": "panda_plane_p1",
+  "robot": "panda",
+  "family": "plane",
+  "placement": 1,
+  "direction": "u",
+  "method": "B2",
+  "repeat": 1,
+  "status": "common_b1_initialization_missing",
+  "planner_feasible": false,
+  "physical_run": false,
+  "quality_completed": null,
+  "execution_completed": null,
+  "T_init": null,
+  "T_smooth": null,
+  "T_opt": null,
+  "T_retime": null,
+  "T_validate": null
+}
