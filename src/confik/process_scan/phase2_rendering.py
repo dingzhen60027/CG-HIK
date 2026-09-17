@@ -34,7 +34,11 @@ def render():
                 if not movie.exists():
                     pending=movie.with_name(movie.stem+'.rendering.mp4')
                     with h5py.File(source) as f:history={k:f[k][:] for k in ('t','q','tcp')}
-                    rays=np.load(root/'scan_samples.npz');metrics=json.loads((root/'metrics.json').read_text())
+                    # Materialize compressed arrays once. Re-indexing an NpzFile
+                    # decompresses the complete member for every displayed ray.
+                    with np.load(root/'scan_samples.npz') as archive:
+                        rays={key:archive[key] for key in ('t','points','raw_valid','quality_valid')}
+                    metrics=json.loads((root/'metrics.json').read_text())
                     # Separate renderer-only state: assigning qpos here replays
                     # an immutable measurement. The execution file is untouched.
                     render_data=mj.MjData(model);renderer=mj.Renderer(model,height=480,width=640)

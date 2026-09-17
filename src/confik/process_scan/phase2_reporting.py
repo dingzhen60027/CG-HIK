@@ -305,15 +305,19 @@ def plots(main,rows,graphs,changes):
     fig,axes=plt.subplots(2,2,figsize=(8.5,6),layout='constrained')
     for i,robot in enumerate(('panda','ur5e')):
         pp=[r for r in rows if r['robot']==robot and r['method']=='Proposed']
+        counts=[]
         for j,base in enumerate(('B1','B2-common','A1','A2')):
             pairs=[(next(b for b in rows if b['slot']==p['slot'] and b['method']==base),p) for p in pp]
             pairs=[(b,p) for b,p in pairs if b['quality_completed'] and p['quality_completed']]
+            counts.append(len(pairs))
             for ax,key in ((axes[i,0],'quality_execution_s'),(axes[i,1],'quality_transition_s')):
                 values=[100*(p[key]/b[key]-1) for b,p in pairs]
                 ax.scatter(np.full(len(values),j),values,s=16,color=colors[j+1])
                 if values:ax.plot([j-.2,j+.2],[np.median(values)]*2,color='black',lw=1)
-                ax.text(j,.97,f'n={len(values)}',transform=ax.get_xaxis_transform(),ha='center',va='top',fontsize=7)
-        for ax in axes[i]:ax.axhline(0,color='black',ls='--',lw=.7);ax.set_xticks(range(4),['B1','B2-C','A1','A2']);ax.grid(axis='y',alpha=.15)
+        for ax in axes[i]:
+            ax.axhline(0,color='black',ls='--',lw=.7)
+            ax.set_xticks(range(4),[f'{name}\n(n={n})' for name,n in zip(('B1','B2-C','A1','A2'),counts)])
+            ax.grid(axis='y',alpha=.15)
         axes[i,0].set_ylabel(f'{robot.upper()} cycle change (%)');axes[i,1].set_ylabel('Transition change (%)')
     axes[0,0].set_title('a  Proposed minus reference: paired quality-complete scenes',loc='left',fontsize=8)
     axes[0,1].set_title('b  Turn-time changes, same paired subset',loc='left',fontsize=8)
@@ -323,7 +327,10 @@ def plots(main,rows,graphs,changes):
     for label,offset,color in (('distance',-.15,colors[3]),('time',.15,colors[4])):
         values=[np.mean([g[label+'_fit_feasible'] for g in graphs if g['slot']==n]) for n in names]
         axes[0].bar(xx+offset,values,width=.3,color=color,label=label.capitalize()+' graph')
-    axes[0].set(ylim=(0,1.15),ylabel='Verified C² fit fraction (3 timing runs)',xticks=xx,xticklabels=[str(i+1) for i in xx],xlabel='All 24 fixed scene IDs (source-data order)');axes[0].legend(fontsize=7)
+        failed=np.flatnonzero(np.array(values)==0)
+        axes[0].plot(xx[failed]+offset,np.zeros(len(failed)),'x',color=color,ms=4,clip_on=False)
+    ticks=[0,3,7,11,15,19,23]
+    axes[0].set(ylim=(0,1.15),ylabel='Verified C² fit fraction (3 timing runs)',xticks=ticks,xticklabels=[str(i+1) for i in ticks],xlabel='All 24 fixed scene IDs (source-data order)');axes[0].legend(fontsize=7)
     for method,color in (('A1',colors[3]),('Proposed',colors[5]),('B2-common',colors[2])):
         for slot in names:
             c=[r for r in changes if r['slot']==slot and r['method']==method and r['repeat']==0]
@@ -379,7 +386,7 @@ def documents(raw,rows,main,graphs,changes,gate):
         '## 图、端点闭合与连续路径','',
         f"72个共享图阶段中，距离图形成可行样条{sum(g['distance_fit_feasible'] for g in graphs)}次，时间下界图{sum(g['time_fit_feasible'] for g in graphs)}次。",
         '候选均来自独立参考IK库，首尾层强制共同关节状态。图边的内部离散合法性不能保证',
-        '选中序列可由固定96维C²参数化表达；若约束拟合未形成合法路径，则记录失败而不',
+        '选中序列可由固定96控制点C²参数化表达；若约束拟合未形成合法路径，则记录失败而不',
         '回退到B1、参考最终路径或更换候选。内部选中节点与拟合值偏差另存，首尾仍必须完全闭合。',
         'Panda首个接口检查已出现“图连通但C²拟合失败”，未隐去，也没有据此追加边代价。','',
         '## 局部精修与强参照','',
@@ -388,6 +395,24 @@ def documents(raw,rows,main,graphs,changes,gate):
         '这不是B2数值能力失败。工具允许域、时间模型、密集验收与物理执行未按方法改变。',
         f"记录中有{sum(c['update']>0 for c in changes)}个真正降低全路径TOPPRA时间的已验收更新；逐次幅度、时刻与实际改变的换行段见transition_improvements.csv。",
         '这些是完整重新定时后的计划改善；只有预指定最终路径做物理执行，不能把未执行检查点称为物理质量已通过。','',
+        '## 完整任务与消融回答','']
+    for robot in ('panda','ur5e'):
+        d=gate['by_robot'][robot]
+        lines.extend([f"**{robot}**：Proposed质量完成{d['quality_complete']}/12。",''])
+        for base in ('B1','A1','A2','B2-common'):
+            c=d[base]
+            lines.append(f"- 相对{base}：恢复{len(c['gained_uids'])}个、损失{len(c['lost_uids'])}个UID；"
+                f"共同成功{c['common_quality_scenes']}个场景中的周期比中位{fmt(c['quality_execution_s_median_ratio'])}，"
+                f"换行比中位{fmt(c['quality_transition_s_median_ratio'])}。")
+        first=[r for r in raw if r['robot']==robot and r['method']=='Proposed' and r['repeat']==0]
+        legal=[r for r in first if r['planner_feasible']]
+        changed=sum((r.get('adopted_updates') or 0)>0 for r in legal)
+        lines.extend(['',f"局部精修在{len(legal)}个已有合法图初值的repeat0条件中，{changed}个采用了真正缩短重定时时间的更新。"])
+        lines.append('')
+    lines+=['距离图与时间下界图使用同一节点/边集合，但最小松弛下界不保证最短实际执行时间，',
+        '也不保证选中离散序列能在固定样条表示中闭合。A1对照反映这项图选择差异，',
+        'A2对照反映局部连续精修；完整任务收益仍由两者之后的共同物理验收决定。',
+        '本轮结果不支持把“图连通”替代连续可行性，或把“真实计划时间下降”替代扫描质量。','',
         '## 成本与证据边界','',
         '全部成本包含候选复核、共享图费用、各自约束拟合、优化、密集验证和重定时。冻结',
         '独立多启动库的历史采集属于已有输入准备，未伪称本轮从零候选生成。图构建每遍',
@@ -413,7 +438,7 @@ def documents(raw,rows,main,graphs,changes,gate):
            '|目标项|结果|','|---|---|']
     lines += [f"|{k}|{'达到' if v else '未达到'}|" for k,v in gate['checks'].items()]
     for robot,d in gate['by_robot'].items():
-        lines+=['',f"## {robot}",f"Proposed全样本质量完成：{d['quality_complete']}/{d['scheduled']}。"]
+        lines+=['',f"## {robot}",'',f"Proposed全样本质量完成：{d['quality_complete']}/{d['scheduled']}。",'']
         for base in ('B1','B2-common','A1','A2'):
             a=d[base];lines.append(f"- 相对{base}：共同质量合格{a['common_quality_scenes']}，新增{len(a['gained_uids'])}，损失{len(a['lost_uids'])}；周期比中位{fmt(a['quality_execution_s_median_ratio'])}，换行比{fmt(a['quality_transition_s_median_ratio'])}，全规划成本比{fmt(a['total_plan_wall_s_median_ratio'])}。")
     lines+=['','时间目标按共同质量合格场景的逐场景比值中位数计算，全样本完成率另列。',
@@ -425,9 +450,27 @@ def documents(raw,rows,main,graphs,changes,gate):
         '不自动证明因果增量；候选相同、图序列和局部更新记录必须共同解释。','',
         '无正式测试授权。本轮无论结果如何均停止，等待用户与ChatGPT验收。']
     (ROOT/'docs/PROCESS_SCAN_PHASE2_GATE.md').write_text('\n'.join(lines)+'\n')
-    (ROOT/'docs/PROCESS_SCAN_PHASE2_HANDOVER.md').write_text('''# Phase 2 交接
+    p=gate['by_robot']['panda'];u=gate['by_robot']['ur5e'];a=gate['by_robot']['all']
+    (ROOT/'docs/PROCESS_SCAN_PHASE2_HANDOVER.md').write_text(f'''# Phase 2 交接
 
 当前阶段止于开发结果，不自动执行正式96场景或写论文。
+
+## 验收结论
+
+{len(raw)}次规划、{sum(r.get('physical_run',False) for r in raw)}次预指定MuJoCo力矩执行已经完成。
+Proposed质量完成为Panda {p['quality_complete']}/12、UR5e {u['quality_complete']}/12；
+Panda相对B1恢复{len(p['B1']['gained_uids'])}个UID、损失{len(p['B1']['lost_uids'])}个。
+距离图A1在Panda达到{next(r['quality_completed_scenes'] for r in main if r['robot']=='panda' and r['method']=='A1')}/12。
+共同成功场景中，相对B1的换行和周期中位降幅为
+{100*(1-a['B1']['quality_transition_s_median_ratio']):.3f}%与{100*(1-a['B1']['quality_execution_s_median_ratio']):.3f}%。
+相对B2-common的周期比中位为{a['B2-common']['quality_execution_s_median_ratio']:.3f}。
+开发Gate{'通过' if gate['pass_all'] else '未通过'}；完整目标和消融结论见Gate报告。
+本轮停止，正式测试不启动，不因局部计划时间确有下降而改写整体判断。
+
+数值/输入验收见`reports/verification.json`，回归测试见
+`provenance/verification_tests.xml`，图与视频复算及视觉检查见`reports/figures/QA.md`。
+
+## 交付索引
 
 - 方法：`docs/PROCESS_SCAN_PHASE2_METHOD.md`。
 - 结果与Gate：`docs/PROCESS_SCAN_PHASE2_RESULTS.md`、`docs/PROCESS_SCAN_PHASE2_GATE.md`。
@@ -455,6 +498,32 @@ def documents(raw,rows,main,graphs,changes,gate):
 ''')
 
 
+def verify_recorded_scan(root, task, row):
+    """Recompute quality from immutable actual ray returns, without simulation."""
+    from .execution import coverage
+    rays=np.load(root/'scan_samples.npz')
+    points=rays['points'];valid=rays['quality_valid'];raw=rays['raw_valid']
+    assert points.shape[:2]==valid.shape==raw.shape
+    assert points.shape[1:]==(81,3)
+    assert np.all(~valid|raw)
+    cover,hole,mask=coverage(task,points[valid])
+    rawcover,_,_=coverage(task,points[raw])
+    for value,key in ((cover,'valid_coverage_fraction'),(rawcover,'raw_coverage_fraction'),
+                      (hole,'max_hole_diameter_upper_bound_m')):
+        np.testing.assert_allclose(value,row[key],rtol=0,atol=1e-12)
+    np.testing.assert_array_equal(mask,rays['coverage_mask'])
+    uv=task.uv(rays['s'])[0]
+    same_line=np.abs(np.diff(uv[:,1 if task.direction=='u' else 0]))<1e-8
+    center=points[:,40];center_ok=raw[:,40]
+    pair_ok=same_line&center_ok[:-1]&center_ok[1:]
+    gaps=np.linalg.norm(np.diff(center,axis=0),axis=1)[pair_ok]
+    maxgap=float(np.max(gaps)) if len(gaps) else np.inf
+    np.testing.assert_allclose(maxgap,row['max_along_scan_gap_m'],rtol=0,atol=1e-12)
+    expected=bool(row['execution_completed'] and cover>=.99 and hole<=.002 and maxgap<=.001)
+    assert expected==row['quality_completed']
+    return len(rays['t'])
+
+
 def verify():
     seal_path=OUT/'runtime_seal.json' if (OUT/'runtime_seal.json').exists() else OUT/'inputs/seal.json'
     seal=json.loads(seal_path.read_text());checks={}
@@ -470,7 +539,7 @@ def verify():
     assert not old;checks['old_evidence_and_kernels_unchanged']=True
     raw,rows=collect();checks['conditions']=len(raw);checks['physics']=sum(r.get('physical_run',False) for r in raw)
     original=json.loads((OUT/'inputs/seal.json').read_text())
-    verified_edges=0;physics=0;shared=0
+    verified_edges=0;physics=0;shared=0;profiles=0
     for p in sorted((OUT/'graphs').glob('*/*/graph.json.gz')):
         g=read_gz(p)
         for layer in g['edges']:
@@ -504,8 +573,11 @@ def verify():
                 np.testing.assert_allclose(f['q'][0],identity['common_start'],atol=1e-10)
                 np.testing.assert_allclose(np.max(abs(f['dq'][:])/(.5*adapter.public.limits.velocity)),r['velocity_utilization_max'],atol=1e-12)
                 np.testing.assert_allclose(np.max(abs(f['qacc'][:]))/2,r['acceleration_utilization_max'],atol=1e-12)
+                assert int(np.sum(f['ncon'][:]>0))==r['collision_steps']
+            profiles+=verify_recorded_scan(root,task,r)
             physics+=1
     checks.update(recomputed_time_bound_edges=verified_edges,shared_initial_copies=shared,verified_physical_histories=physics,
+                  recomputed_actual_scan_profiles=profiles,coverage_holes_and_along_scan_gaps_recomputed=True,
                   failures_not_imputed_zero=True,formal_scenes_run=False,numerical_run_manifest_hashes_checked=True,
                   manifest_note='Legacy baseline manifests also enumerate read-only reporting files that are not called during run; those incidental hashes are not numerical implementation hashes.')
     write(OUT/'reports/verification.json',checks);print(checks)
