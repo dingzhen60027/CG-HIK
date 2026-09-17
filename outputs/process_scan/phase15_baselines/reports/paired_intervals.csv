@@ -1,0 +1,49 @@
+robot,baseline,method,metric,paired_scenes,interpretation,mean_difference,ci_lower,ci_upper,cluster_count,mean_ratio
+panda,G,B1,quality_completed,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.0,0.0,0.0,6.0,
+panda,G,B1,quality_execution_s,6,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.0,0.0,0.0,5.0,
+panda,G,B1,quality_execution_s_ratio,6,,,1.0,1.0,5,1.0
+panda,G,B1,total_plan_wall_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-0.031209696443612305,-0.12323958574820064,0.042247769968515494,6.0,
+panda,G,B1,total_plan_wall_s_ratio,12,,,0.9961508117598689,1.0013142324988666,6,0.9990266841380986
+panda,G,B1,T_init,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.00105281547156563,0.00048308886790537697,0.001596513498144397,6.0,
+panda,G,B1,predicted_execution_s,6,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.0,0.0,0.0,5.0,
+panda,G,B1,predicted_execution_s_ratio,6,,,1.0,1.0,5,1.0
+panda,B0,B1,quality_completed,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.0,0.0,0.0,6.0,
+panda,B0,B1,quality_execution_s,6,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-0.42820000000052333,-0.8358000000010215,-0.14380000000017573,5.0,
+panda,B0,B1,quality_execution_s_ratio,6,,,0.9610219333570167,0.9937807072174873,5,0.9808577789301262
+panda,B0,B1,total_plan_wall_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",31.157295752361986,30.953352787824798,31.36428623128207,6.0,
+panda,B0,B1,total_plan_wall_s_ratio,12,,,26.893655422389365,57.72747472674617,6,36.5341529534164
+panda,B0,B1,T_init,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-0.031235099637544613,-0.09169328402640531,0.031229153774701344,6.0,
+panda,B0,B1,predicted_execution_s,6,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-0.4283130285506168,-0.8357869023918199,-0.14401089287169883,5.0,
+panda,B0,B1,predicted_execution_s_ratio,6,,,0.9606507291900395,0.9937174153892637,5,0.980680420834689
+panda,B1,B2,quality_completed,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.0,0.0,0.0,6.0,
+panda,B1,B2,quality_execution_s,6,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-0.08350000000010205,-0.1693000000002069,-0.019200000000023466,5.0,
+panda,B1,B2,quality_execution_s_ratio,6,,,0.9921514518917969,0.9991276533876114,5,0.9961943740542863
+panda,B1,B2,total_plan_wall_s,6,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",32.49144701403371,32.18045475050167,32.7558787675652,5.0,
+panda,B1,B2,total_plan_wall_s_ratio,6,,,1.9700700155747815,2.0124597644171773,5,1.9908388001782966
+panda,B1,B2,T_init,6,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",32.613178164099615,32.027387112789995,33.27142788896841,5.0,
+panda,B1,B2,predicted_execution_s,6,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-0.08326788295526662,-0.168871384964579,-0.019047884939102033,5.0,
+panda,B1,B2,predicted_execution_s_ratio,6,,,0.9920989125495246,0.9991266453212886,5,0.996170109165035
+ur5e,G,B1,quality_completed,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.0,0.0,0.0,6.0,
+ur5e,G,B1,quality_execution_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.0,0.0,0.0,6.0,
+ur5e,G,B1,quality_execution_s_ratio,12,,,1.0,1.0,6,1.0
+ur5e,G,B1,total_plan_wall_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-0.07087515613764328,-0.19065560711007645,0.02749821524127297,6.0,
+ur5e,G,B1,total_plan_wall_s_ratio,12,,,0.9941208642505127,1.0008439925584738,6,0.9978108962362359
+ur5e,G,B1,T_init,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-7.711666209335907e-07,-0.0021765692763437983,0.0014002183876679387,6.0,
+ur5e,G,B1,predicted_execution_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.0,0.0,0.0,6.0,
+ur5e,G,B1,predicted_execution_s_ratio,12,,,1.0,1.0,6,1.0
+ur5e,B0,B1,quality_completed,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.0,0.0,0.0,6.0,
+ur5e,B0,B1,quality_execution_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.06225000000007608,-0.08250000000010083,0.18291666666689022,6.0,
+ur5e,B0,B1,quality_execution_s_ratio,12,,,0.9964104423495251,1.0088931410186641,6,1.0029075764357895
+ur5e,B0,B1,total_plan_wall_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",30.942585153276422,30.77005348200937,31.19094663372137,6.0,
+ur5e,B0,B1,total_plan_wall_s_ratio,12,,,23.371982580735104,24.047145953299236,6,23.70391569554162
+ur5e,B0,B1,T_init,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-0.09950505533359116,-0.1138934859465937,-0.0847412601463778,6.0,
+ur5e,B0,B1,predicted_execution_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.062144402760313966,-0.08259483017076086,0.18267411826823654,6.0,
+ur5e,B0,B1,predicted_execution_s_ratio,12,,,0.996374860003244,1.0089720081483686,6,1.0029299413748118
+ur5e,B1,B2,quality_completed,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",0.0,0.0,0.0,6.0,
+ur5e,B1,B2,quality_execution_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-0.047416666666724616,-0.08383333333343579,-0.019583333333357267,6.0,
+ur5e,B1,B2,quality_execution_s_ratio,12,,,0.995982075102441,0.9991132752035954,6,0.9977916805737727
+ur5e,B1,B2,total_plan_wall_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",31.903538598168875,31.239486514639182,32.29314087027848,6.0,
+ur5e,B1,B2,total_plan_wall_s_ratio,12,,,1.9682617353598832,2.002069771291673,6,1.9875587301217486
+ur5e,B1,B2,T_init,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",32.064258572194376,31.877429555720784,32.31073380708606,6.0,
+ur5e,B1,B2,predicted_execution_s,12,"quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",-0.047341222924864944,-0.08358562885875169,-0.019583756370926093,6.0,
+ur5e,B1,B2,predicted_execution_s_ratio,12,,,0.9959552412118488,0.9991064172299068,6,0.9977745092800451

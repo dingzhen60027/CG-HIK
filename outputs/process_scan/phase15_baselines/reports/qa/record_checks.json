@@ -1,0 +1,1267 @@
+{
+  "status": "passed",
+  "issues": [],
+  "executions": [
+    {
+      "slot": "panda_plane_p0_u",
+      "method": "B0",
+      "samples": 20717,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.6562644433479291,
+      "actual_max_acceleration_ratio": 0.8227929986174363,
+      "planned_max_velocity_ratio": 0.6561638383460725,
+      "planned_max_acceleration_ratio": 0.810015548866796,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p0_u",
+      "method": "B1",
+      "samples": 19919,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.6656207194298325,
+      "actual_max_acceleration_ratio": 0.8275860578287187,
+      "planned_max_velocity_ratio": 0.6651176179694878,
+      "planned_max_acceleration_ratio": 0.8100036057047146,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p0_u",
+      "method": "G",
+      "samples": 19919,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.6656207194298325,
+      "actual_max_acceleration_ratio": 0.8275860578287187,
+      "planned_max_velocity_ratio": 0.6651176179694878,
+      "planned_max_acceleration_ratio": 0.8100036057047146,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p0_u",
+      "method": "B2",
+      "samples": 19904,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.6641666409843232,
+      "actual_max_acceleration_ratio": 0.8304471169443729,
+      "planned_max_velocity_ratio": 0.6640146729387159,
+      "planned_max_acceleration_ratio": 0.8100027764607897,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "method": "B0",
+      "samples": 23029,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.5501254040381578,
+      "actual_max_acceleration_ratio": 0.8155232392091947,
+      "planned_max_velocity_ratio": 0.5500413485946135,
+      "planned_max_acceleration_ratio": 0.8099997105056356,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "method": "B1",
+      "samples": 21347,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.5648225910578073,
+      "actual_max_acceleration_ratio": 0.8121656490652894,
+      "planned_max_velocity_ratio": 0.5645357657472305,
+      "planned_max_acceleration_ratio": 0.8100022766127939,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "method": "G",
+      "samples": 21347,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.5648225910578073,
+      "actual_max_acceleration_ratio": 0.8121656490652894,
+      "planned_max_velocity_ratio": 0.5645357657472305,
+      "planned_max_acceleration_ratio": 0.8100022766127939,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "method": "B2",
+      "samples": 21323,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.564597797187401,
+      "actual_max_acceleration_ratio": 0.8111600724139578,
+      "planned_max_velocity_ratio": 0.5645842538385726,
+      "planned_max_acceleration_ratio": 0.8099687588614832,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "method": "B0",
+      "samples": 22223,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.5415587425160846,
+      "actual_max_acceleration_ratio": 0.8170959443419555,
+      "planned_max_velocity_ratio": 0.5412657157836044,
+      "planned_max_acceleration_ratio": 0.8105813130664308,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "method": "B1",
+      "samples": 21837,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4823580825717864,
+      "actual_max_acceleration_ratio": 0.8151313311958304,
+      "planned_max_velocity_ratio": 0.4825794626984891,
+      "planned_max_acceleration_ratio": 0.8102464312212581,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "method": "G",
+      "samples": 21837,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4823580825717864,
+      "actual_max_acceleration_ratio": 0.8151313311958304,
+      "planned_max_velocity_ratio": 0.4825794626984891,
+      "planned_max_acceleration_ratio": 0.8102464312212581,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "method": "B2",
+      "samples": 21596,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4860886453678995,
+      "actual_max_acceleration_ratio": 0.821464213714447,
+      "planned_max_velocity_ratio": 0.48642705303408573,
+      "planned_max_acceleration_ratio": 0.8101197010941067,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "method": "B0",
+      "samples": 26592,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.48162684477598,
+      "actual_max_acceleration_ratio": 0.8179829623381897,
+      "planned_max_velocity_ratio": 0.4818588238811212,
+      "planned_max_acceleration_ratio": 0.8104960946037688,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "method": "B1",
+      "samples": 26519,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.49510465957785166,
+      "actual_max_acceleration_ratio": 0.8173375061719423,
+      "planned_max_velocity_ratio": 0.4952254612914418,
+      "planned_max_acceleration_ratio": 0.8101832931759481,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "method": "G",
+      "samples": 26519,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.49510465957785166,
+      "actual_max_acceleration_ratio": 0.8173375061719423,
+      "planned_max_velocity_ratio": 0.4952254612914418,
+      "planned_max_acceleration_ratio": 0.8101832931759481,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "method": "B2",
+      "samples": 26470,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.49466563755453924,
+      "actual_max_acceleration_ratio": 0.8165001109338962,
+      "planned_max_velocity_ratio": 0.4936427604281946,
+      "planned_max_acceleration_ratio": 0.8102344419636468,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "method": "B0",
+      "samples": 21265,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4529092952693496,
+      "actual_max_acceleration_ratio": 0.8286659430303003,
+      "planned_max_velocity_ratio": 0.45239090956542855,
+      "planned_max_acceleration_ratio": 0.8100040271001602,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "method": "B1",
+      "samples": 21134,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.45399070613799275,
+      "actual_max_acceleration_ratio": 0.8285969687746543,
+      "planned_max_velocity_ratio": 0.4539181701734399,
+      "planned_max_acceleration_ratio": 0.8100059416629322,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "method": "G",
+      "samples": 21134,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.45399070613799275,
+      "actual_max_acceleration_ratio": 0.8285969687746543,
+      "planned_max_velocity_ratio": 0.4539181701734399,
+      "planned_max_acceleration_ratio": 0.8100059416629322,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "method": "B2",
+      "samples": 21130,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.45514104973174785,
+      "actual_max_acceleration_ratio": 0.8290135182126213,
+      "planned_max_velocity_ratio": 0.4535208528167915,
+      "planned_max_acceleration_ratio": 0.8099768501100695,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "method": "B0",
+      "samples": 19899,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3989752722606046,
+      "actual_max_acceleration_ratio": 0.8173343132250517,
+      "planned_max_velocity_ratio": 0.39854455381805665,
+      "planned_max_acceleration_ratio": 0.8101594090620456,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "method": "B1",
+      "samples": 19588,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3970533038238718,
+      "actual_max_acceleration_ratio": 0.8294800588480533,
+      "planned_max_velocity_ratio": 0.39628234859732814,
+      "planned_max_acceleration_ratio": 0.8100376092272074,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "method": "G",
+      "samples": 19588,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3970533038238718,
+      "actual_max_acceleration_ratio": 0.8294800588480533,
+      "planned_max_velocity_ratio": 0.39628234859732814,
+      "planned_max_acceleration_ratio": 0.8100376092272074,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "method": "B2",
+      "samples": 19484,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3959737910259577,
+      "actual_max_acceleration_ratio": 0.8295602333948008,
+      "planned_max_velocity_ratio": 0.39521765263490194,
+      "planned_max_acceleration_ratio": 0.8101911893439722,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "method": "B0",
+      "samples": 19327,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.34365518826682107,
+      "actual_max_acceleration_ratio": 0.8370248855060729,
+      "planned_max_velocity_ratio": 0.34346435733771885,
+      "planned_max_acceleration_ratio": 0.810556263774574,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "method": "B1",
+      "samples": 19386,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3430800331091066,
+      "actual_max_acceleration_ratio": 0.8268765189111223,
+      "planned_max_velocity_ratio": 0.34271636741325345,
+      "planned_max_acceleration_ratio": 0.8110879303737183,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "method": "G",
+      "samples": 19386,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3430800331091066,
+      "actual_max_acceleration_ratio": 0.8268765189111223,
+      "planned_max_velocity_ratio": 0.34271636741325345,
+      "planned_max_acceleration_ratio": 0.8110879303737183,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "method": "B2",
+      "samples": 19356,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3433494657485429,
+      "actual_max_acceleration_ratio": 0.8255286857117841,
+      "planned_max_velocity_ratio": 0.3424592259428518,
+      "planned_max_acceleration_ratio": 0.810893490985128,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "method": "B0",
+      "samples": 20238,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.28738982819560727,
+      "actual_max_acceleration_ratio": 0.810218507807489,
+      "planned_max_velocity_ratio": 0.2873894342311758,
+      "planned_max_acceleration_ratio": 0.8099557198497191,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "method": "B1",
+      "samples": 20177,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.28854699058572353,
+      "actual_max_acceleration_ratio": 0.810643199331075,
+      "planned_max_velocity_ratio": 0.28850909840234124,
+      "planned_max_acceleration_ratio": 0.8100378680081819,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "method": "G",
+      "samples": 20177,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.28854699058572353,
+      "actual_max_acceleration_ratio": 0.810643199331075,
+      "planned_max_velocity_ratio": 0.28850909840234124,
+      "planned_max_acceleration_ratio": 0.8100378680081819,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "method": "B2",
+      "samples": 20069,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.2890355382133951,
+      "actual_max_acceleration_ratio": 0.8102726531728865,
+      "planned_max_velocity_ratio": 0.28902515418835145,
+      "planned_max_acceleration_ratio": 0.8100988852277724,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "method": "B0",
+      "samples": 18963,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3773717143741403,
+      "actual_max_acceleration_ratio": 0.8245953845358528,
+      "planned_max_velocity_ratio": 0.37765586785336924,
+      "planned_max_acceleration_ratio": 0.8103433057130578,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "method": "B1",
+      "samples": 19120,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.37506278900688333,
+      "actual_max_acceleration_ratio": 0.8366680939846745,
+      "planned_max_velocity_ratio": 0.37511320580162605,
+      "planned_max_acceleration_ratio": 0.8099985914417538,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "method": "G",
+      "samples": 19120,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.37506278900688333,
+      "actual_max_acceleration_ratio": 0.8366680939846745,
+      "planned_max_velocity_ratio": 0.37511320580162605,
+      "planned_max_acceleration_ratio": 0.8099985914417538,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "method": "B2",
+      "samples": 19117,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3751232848448184,
+      "actual_max_acceleration_ratio": 0.8264346446545763,
+      "planned_max_velocity_ratio": 0.37496968505490147,
+      "planned_max_acceleration_ratio": 0.8099980274898617,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "method": "B0",
+      "samples": 20698,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.25258927907600076,
+      "actual_max_acceleration_ratio": 0.8145377357165978,
+      "planned_max_velocity_ratio": 0.2525651541689546,
+      "planned_max_acceleration_ratio": 0.8101659049025451,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "method": "B1",
+      "samples": 20679,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.252902052990675,
+      "actual_max_acceleration_ratio": 0.8120744331022127,
+      "planned_max_velocity_ratio": 0.25284945299640865,
+      "planned_max_acceleration_ratio": 0.8102526376824386,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "method": "G",
+      "samples": 20679,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.252902052990675,
+      "actual_max_acceleration_ratio": 0.8120744331022127,
+      "planned_max_velocity_ratio": 0.25284945299640865,
+      "planned_max_acceleration_ratio": 0.8102526376824386,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "method": "B2",
+      "samples": 20661,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.2528547563008476,
+      "actual_max_acceleration_ratio": 0.8166360429188066,
+      "planned_max_velocity_ratio": 0.2528116022013567,
+      "planned_max_acceleration_ratio": 0.8101813317116779,
+      "coverage_recomputed": 1.0,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "method": "B0",
+      "samples": 23751,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.7587967600742008,
+      "actual_max_acceleration_ratio": 0.8415035271558083,
+      "planned_max_velocity_ratio": 0.7583231035203728,
+      "planned_max_acceleration_ratio": 0.8100077526938577,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "method": "B1",
+      "samples": 23658,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.7617303788439524,
+      "actual_max_acceleration_ratio": 0.866601843549579,
+      "planned_max_velocity_ratio": 0.7604043719956576,
+      "planned_max_acceleration_ratio": 0.8100088191488971,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "method": "G",
+      "samples": 23658,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.7617303788439524,
+      "actual_max_acceleration_ratio": 0.866601843549579,
+      "planned_max_velocity_ratio": 0.7604043719956576,
+      "planned_max_acceleration_ratio": 0.8100088191488971,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "method": "B2",
+      "samples": 23652,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.7606276609046289,
+      "actual_max_acceleration_ratio": 0.8452850524395044,
+      "planned_max_velocity_ratio": 0.7601292518350623,
+      "planned_max_acceleration_ratio": 0.8100073027114535,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "method": "B0",
+      "samples": 24853,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3792296551133035,
+      "actual_max_acceleration_ratio": 0.8177114924838065,
+      "planned_max_velocity_ratio": 0.3791266846920138,
+      "planned_max_acceleration_ratio": 0.811854728086219,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "method": "B1",
+      "samples": 25141,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.37511468959382677,
+      "actual_max_acceleration_ratio": 0.821888183783452,
+      "planned_max_velocity_ratio": 0.37511245260666704,
+      "planned_max_acceleration_ratio": 0.8110084228567495,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "method": "G",
+      "samples": 25141,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.37511468959382677,
+      "actual_max_acceleration_ratio": 0.821888183783452,
+      "planned_max_velocity_ratio": 0.37511245260666704,
+      "planned_max_acceleration_ratio": 0.8110084228567495,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "method": "B2",
+      "samples": 25095,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3755291982417307,
+      "actual_max_acceleration_ratio": 0.8192643709009071,
+      "planned_max_velocity_ratio": 0.37556253195780476,
+      "planned_max_acceleration_ratio": 0.8110483940729621,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "method": "B0",
+      "samples": 24662,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.8424692872034334,
+      "actual_max_acceleration_ratio": 0.8236067712991467,
+      "planned_max_velocity_ratio": 0.8413799470345851,
+      "planned_max_acceleration_ratio": 0.8100135560077637,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "method": "B1",
+      "samples": 24119,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.8647820701098079,
+      "actual_max_acceleration_ratio": 0.8462637921302216,
+      "planned_max_velocity_ratio": 0.8633391997432615,
+      "planned_max_acceleration_ratio": 0.810023932215854,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "method": "G",
+      "samples": 24119,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.8647820701098079,
+      "actual_max_acceleration_ratio": 0.8462637921302216,
+      "planned_max_velocity_ratio": 0.8633391997432615,
+      "planned_max_acceleration_ratio": 0.810023932215854,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "method": "B2",
+      "samples": 24119,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.8647820701098079,
+      "actual_max_acceleration_ratio": 0.8462637921302216,
+      "planned_max_velocity_ratio": 0.8633391997432615,
+      "planned_max_acceleration_ratio": 0.810023932215854,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "method": "B0",
+      "samples": 24702,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3189644766575784,
+      "actual_max_acceleration_ratio": 0.8148560740617657,
+      "planned_max_velocity_ratio": 0.31876195648140887,
+      "planned_max_acceleration_ratio": 0.8100749963984333,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "method": "B1",
+      "samples": 24726,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.31911642331218404,
+      "actual_max_acceleration_ratio": 0.814809708938799,
+      "planned_max_velocity_ratio": 0.3189332445757916,
+      "planned_max_acceleration_ratio": 0.8102299510826301,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "method": "G",
+      "samples": 24726,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.31911642331218404,
+      "actual_max_acceleration_ratio": 0.814809708938799,
+      "planned_max_velocity_ratio": 0.3189332445757916,
+      "planned_max_acceleration_ratio": 0.8102299510826301,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "method": "B2",
+      "samples": 24681,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3191312539666134,
+      "actual_max_acceleration_ratio": 0.8150387022410068,
+      "planned_max_velocity_ratio": 0.31904512040833427,
+      "planned_max_acceleration_ratio": 0.8102389566970318,
+      "coverage_recomputed": 0.999999999999979,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "method": "B0",
+      "samples": 19249,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.2855157587869395,
+      "actual_max_acceleration_ratio": 0.8242993385521957,
+      "planned_max_velocity_ratio": 0.2855177868351388,
+      "planned_max_acceleration_ratio": 0.8102590716892961,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "method": "B1",
+      "samples": 19545,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.28129283760490775,
+      "actual_max_acceleration_ratio": 0.82473769557263,
+      "planned_max_velocity_ratio": 0.2812946358610167,
+      "planned_max_acceleration_ratio": 0.8105855031192144,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "method": "G",
+      "samples": 19545,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.28129283760490775,
+      "actual_max_acceleration_ratio": 0.82473769557263,
+      "planned_max_velocity_ratio": 0.2812946358610167,
+      "planned_max_acceleration_ratio": 0.8105855031192144,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "method": "B2",
+      "samples": 19529,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.28142876265645017,
+      "actual_max_acceleration_ratio": 0.82584716708677,
+      "planned_max_velocity_ratio": 0.2814310270027227,
+      "planned_max_acceleration_ratio": 0.8106322660028961,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "method": "B0",
+      "samples": 20302,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4506670253304393,
+      "actual_max_acceleration_ratio": 0.8527671120903632,
+      "planned_max_velocity_ratio": 0.45067062189026474,
+      "planned_max_acceleration_ratio": 0.81000166104557,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "method": "B1",
+      "samples": 20380,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4493272575891009,
+      "actual_max_acceleration_ratio": 0.8460528370160137,
+      "planned_max_velocity_ratio": 0.4493254387386218,
+      "planned_max_acceleration_ratio": 0.8100955580255939,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "method": "G",
+      "samples": 20380,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4493272575891009,
+      "actual_max_acceleration_ratio": 0.8460528370160137,
+      "planned_max_velocity_ratio": 0.4493254387386218,
+      "planned_max_acceleration_ratio": 0.8100955580255939,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "method": "B2",
+      "samples": 20348,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4480966618068075,
+      "actual_max_acceleration_ratio": 0.846616803235979,
+      "planned_max_velocity_ratio": 0.44810329592453396,
+      "planned_max_acceleration_ratio": 0.8100925136480958,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "method": "B0",
+      "samples": 19587,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.270628042272693,
+      "actual_max_acceleration_ratio": 0.8234389076782671,
+      "planned_max_velocity_ratio": 0.270629276169678,
+      "planned_max_acceleration_ratio": 0.8099265885172344,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "method": "B1",
+      "samples": 19557,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.27104284254174565,
+      "actual_max_acceleration_ratio": 0.8234507535373204,
+      "planned_max_velocity_ratio": 0.2710438072298205,
+      "planned_max_acceleration_ratio": 0.8099651652001141,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "method": "G",
+      "samples": 19557,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.27104284254174565,
+      "actual_max_acceleration_ratio": 0.8234507535373204,
+      "planned_max_velocity_ratio": 0.2710438072298205,
+      "planned_max_acceleration_ratio": 0.8099651652001141,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "method": "B2",
+      "samples": 19551,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.27100940274380236,
+      "actual_max_acceleration_ratio": 0.8242020093357381,
+      "planned_max_velocity_ratio": 0.2710158266452258,
+      "planned_max_acceleration_ratio": 0.8099602919519496,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "method": "B0",
+      "samples": 20595,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4074598064641106,
+      "actual_max_acceleration_ratio": 0.8180385763127317,
+      "planned_max_velocity_ratio": 0.40743830493263883,
+      "planned_max_acceleration_ratio": 0.8100446177037404,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "method": "B1",
+      "samples": 21186,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4025418985392132,
+      "actual_max_acceleration_ratio": 0.8222719628833453,
+      "planned_max_velocity_ratio": 0.40246901256805384,
+      "planned_max_acceleration_ratio": 0.8099832645128504,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "method": "G",
+      "samples": 21186,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.4025418985392132,
+      "actual_max_acceleration_ratio": 0.8222719628833453,
+      "planned_max_velocity_ratio": 0.40246901256805384,
+      "planned_max_acceleration_ratio": 0.8099832645128504,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "method": "B2",
+      "samples": 20927,
+      "dt_s": 0.001,
+      "actual_max_velocity_ratio": 0.3968599103235179,
+      "actual_max_acceleration_ratio": 0.8188934366085938,
+      "planned_max_velocity_ratio": 0.3968582628526478,
+      "planned_max_acceleration_ratio": 0.8101072007420044,
+      "coverage_recomputed": 0.9999999999999961,
+      "hole_recomputed_m": 0.0
+    }
+  ],
+  "b2_copies": [
+    {
+      "slot": "panda_plane_p0_u",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "panda_plane_p0_u",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "panda_plane_p0_u",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "repeat": 2,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "repeat": 0,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "repeat": 1,
+      "identical": true
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "repeat": 2,
+      "identical": true
+    }
+  ],
+  "videos": [
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/panda_plane_p0_u_B0.mp4",
+      "recorded_duration_s": 20.716000000002335,
+      "video_duration_s": 20.8,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/panda_plane_p0_u_B1.mp4",
+      "recorded_duration_s": 19.91800000000136,
+      "video_duration_s": 20.0,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/panda_plane_p0_u_B2.mp4",
+      "recorded_duration_s": 19.90300000000134,
+      "video_duration_s": 20.0,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/panda_plane_p0_u_G.mp4",
+      "recorded_duration_s": 19.91800000000136,
+      "video_duration_s": 20.0,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/panda_saddle_p0_u_B0.mp4",
+      "recorded_duration_s": 21.264000000003005,
+      "video_duration_s": 21.3,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/panda_saddle_p0_u_B1.mp4",
+      "recorded_duration_s": 21.133000000002845,
+      "video_duration_s": 21.2,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/panda_saddle_p0_u_B2.mp4",
+      "recorded_duration_s": 21.12900000000284,
+      "video_duration_s": 21.2,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/panda_saddle_p0_u_G.mp4",
+      "recorded_duration_s": 21.133000000002845,
+      "video_duration_s": 21.2,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_plane_p0_u_B0.mp4",
+      "recorded_duration_s": 19.326000000000636,
+      "video_duration_s": 19.4,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_plane_p0_u_B1.mp4",
+      "recorded_duration_s": 19.38500000000071,
+      "video_duration_s": 19.4,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_plane_p0_u_B2.mp4",
+      "recorded_duration_s": 19.355000000000672,
+      "video_duration_s": 19.4,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_plane_p0_u_G.mp4",
+      "recorded_duration_s": 19.38500000000071,
+      "video_duration_s": 19.4,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_cylinder_p0_u_B0.mp4",
+      "recorded_duration_s": 23.750000000006043,
+      "video_duration_s": 23.8,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_cylinder_p0_u_B1.mp4",
+      "recorded_duration_s": 23.65700000000593,
+      "video_duration_s": 23.7,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_cylinder_p0_u_B2.mp4",
+      "recorded_duration_s": 23.651000000005922,
+      "video_duration_s": 23.7,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_cylinder_p0_u_G.mp4",
+      "recorded_duration_s": 23.65700000000593,
+      "video_duration_s": 23.7,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_saddle_p0_u_B0.mp4",
+      "recorded_duration_s": 19.24800000000054,
+      "video_duration_s": 19.3,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_saddle_p0_u_B1.mp4",
+      "recorded_duration_s": 19.544000000000903,
+      "video_duration_s": 19.6,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_saddle_p0_u_B2.mp4",
+      "recorded_duration_s": 19.528000000000883,
+      "video_duration_s": 19.6,
+      "source_unchanged": true
+    },
+    {
+      "video": "outputs/process_scan/phase15_baselines/reports/videos/ur5e_saddle_p0_u_G.mp4",
+      "recorded_duration_s": 19.544000000000903,
+      "video_duration_s": 19.6,
+      "source_unchanged": true
+    }
+  ],
+  "frozen_old_source_unchanged": true,
+  "all_24_identities_preserved": true,
+  "new_ik_or_physics_run": false
+}

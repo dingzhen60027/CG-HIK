@@ -1,0 +1,1755 @@
+{
+  "main": [
+    {
+      "robot": "panda",
+      "method": "B0",
+      "scheduled_scenes": 12,
+      "implementation_ready": true,
+      "timed_scenes": 12,
+      "reference_missing_scenes": 0,
+      "shared_b1_missing_scenes": 0,
+      "planner_feasible_scene_equivalents": 6.0,
+      "initialization_attempted_scenes": 12,
+      "initialization_success_scene_equivalents": 7.0,
+      "physics_executed_scenes": 6,
+      "execution_completed_scenes": 6,
+      "quality_completed_scenes": 6,
+      "quality_rate_all_scheduled": 0.5,
+      "quality_execution_s_mean": 22.286500000004256,
+      "quality_execution_s_median": 21.74300000000359,
+      "planning_s_mean": 0.8768267473044236,
+      "planning_s_median": 1.2843544893306293,
+      "planning_s_p95": 1.4598309366025206,
+      "predicted_execution_s_mean": 22.086976520209337,
+      "initial_s_mean": 0.25683973533280857,
+      "smoothing_s_mean": null,
+      "optimization_s_mean": null,
+      "retime_s_mean": 0.032237699498687614,
+      "validation_s_mean": 1.0054714893818268,
+      "valid_coverage_mean_executed": 0.9999999999999952,
+      "acceleration_max_mean_executed": 0.8198992334603546
+    },
+    {
+      "robot": "panda",
+      "method": "B1",
+      "scheduled_scenes": 12,
+      "implementation_ready": true,
+      "timed_scenes": 12,
+      "reference_missing_scenes": 0,
+      "shared_b1_missing_scenes": 0,
+      "planner_feasible_scene_equivalents": 6.0,
+      "initialization_attempted_scenes": 12,
+      "initialization_success_scene_equivalents": 12.0,
+      "physics_executed_scenes": 6,
+      "execution_completed_scenes": 6,
+      "quality_completed_scenes": 6,
+      "quality_rate_all_scheduled": 0.5,
+      "quality_execution_s_mean": 21.723000000003566,
+      "quality_execution_s_median": 21.239500000002977,
+      "planning_s_mean": 32.03412249966642,
+      "planning_s_median": 31.89119942283287,
+      "planning_s_p95": 33.57497188361667,
+      "predicted_execution_s_mean": 21.523390914718764,
+      "initial_s_mean": 0.2256046356952639,
+      "smoothing_s_mean": 31.00415074350005,
+      "optimization_s_mean": null,
+      "retime_s_mean": 0.0323558633341842,
+      "validation_s_mean": 1.0004134096121158,
+      "valid_coverage_mean_executed": 0.9999999999999952,
+      "acceleration_max_mean_executed": 0.821716261980748
+    },
+    {
+      "robot": "panda",
+      "method": "G",
+      "scheduled_scenes": 12,
+      "implementation_ready": true,
+      "timed_scenes": 12,
+      "reference_missing_scenes": 0,
+      "shared_b1_missing_scenes": 0,
+      "planner_feasible_scene_equivalents": 6.0,
+      "initialization_attempted_scenes": 12,
+      "initialization_success_scene_equivalents": 12.0,
+      "physics_executed_scenes": 6,
+      "execution_completed_scenes": 6,
+      "quality_completed_scenes": 6,
+      "quality_rate_all_scheduled": 0.5,
+      "quality_execution_s_mean": 21.723000000003566,
+      "quality_execution_s_median": 21.239500000002977,
+      "planning_s_mean": 32.06533219611001,
+      "planning_s_median": 31.994326494830602,
+      "planning_s_p95": 33.6416666650987,
+      "predicted_execution_s_mean": 21.523390914718764,
+      "initial_s_mean": 0.22455182022369832,
+      "smoothing_s_mean": 31.037423882165356,
+      "optimization_s_mean": null,
+      "retime_s_mean": 0.032278326334360626,
+      "validation_s_mean": 1.0021864326109708,
+      "valid_coverage_mean_executed": 0.9999999999999952,
+      "acceleration_max_mean_executed": 0.821716261980748
+    },
+    {
+      "robot": "panda",
+      "method": "B2",
+      "scheduled_scenes": 12,
+      "implementation_ready": true,
+      "timed_scenes": 6,
+      "reference_missing_scenes": 0,
+      "shared_b1_missing_scenes": 6,
+      "planner_feasible_scene_equivalents": 6.0,
+      "initialization_attempted_scenes": 0,
+      "initialization_success_scene_equivalents": 0,
+      "physics_executed_scenes": 6,
+      "execution_completed_scenes": 6,
+      "quality_completed_scenes": 6,
+      "quality_rate_all_scheduled": 0.5,
+      "quality_execution_s_mean": 21.650166666670145,
+      "quality_execution_s_median": 21.22550000000296,
+      "planning_s_mean": 65.1728154955013,
+      "planning_s_median": 64.9866485268382,
+      "planning_s_p95": 66.42948781591258,
+      "predicted_execution_s_mean": 21.450761053993148,
+      "initial_s_mean": 32.75341055166791,
+      "smoothing_s_mean": null,
+      "optimization_s_mean": 30.559298416112142,
+      "retime_s_mean": 0.0322394495572856,
+      "validation_s_mean": 1.0049816963300044,
+      "valid_coverage_mean_executed": 0.9999999999999952,
+      "acceleration_max_mean_executed": 0.8230242109356826
+    },
+    {
+      "robot": "ur5e",
+      "method": "B0",
+      "scheduled_scenes": 12,
+      "implementation_ready": true,
+      "timed_scenes": 12,
+      "reference_missing_scenes": 0,
+      "shared_b1_missing_scenes": 0,
+      "planner_feasible_scene_equivalents": 12.0,
+      "initialization_attempted_scenes": 12,
+      "initialization_success_scene_equivalents": 12.0,
+      "physics_executed_scenes": 12,
+      "execution_completed_scenes": 12,
+      "quality_completed_scenes": 12,
+      "quality_rate_all_scheduled": 1.0,
+      "quality_execution_s_mean": 21.409583333336517,
+      "quality_execution_s_median": 20.44750000000201,
+      "planning_s_mean": 1.3628743855559957,
+      "planning_s_median": 1.3754388866679317,
+      "planning_s_p95": 1.4237231887510764,
+      "predicted_execution_s_mean": 21.21011815955072,
+      "initial_s_mean": 0.30805816880618087,
+      "smoothing_s_mean": null,
+      "optimization_s_mean": null,
+      "retime_s_mean": 0.032750295972719966,
+      "validation_s_mean": 0.9987608308894981,
+      "valid_coverage_mean_executed": 0.9999999999999919,
+      "acceleration_max_mean_executed": 0.8252165261000083
+    },
+    {
+      "robot": "ur5e",
+      "method": "B1",
+      "scheduled_scenes": 12,
+      "implementation_ready": true,
+      "timed_scenes": 12,
+      "reference_missing_scenes": 0,
+      "shared_b1_missing_scenes": 0,
+      "planner_feasible_scene_equivalents": 12.0,
+      "initialization_attempted_scenes": 12,
+      "initialization_success_scene_equivalents": 12.0,
+      "physics_executed_scenes": 12,
+      "execution_completed_scenes": 12,
+      "quality_completed_scenes": 12,
+      "quality_rate_all_scheduled": 1.0,
+      "quality_execution_s_mean": 21.47183333333659,
+      "quality_execution_s_median": 20.528500000002104,
+      "planning_s_mean": 32.305459538832416,
+      "planning_s_median": 32.42900555649976,
+      "planning_s_p95": 32.92406271345171,
+      "predicted_execution_s_mean": 21.27226256231103,
+      "initial_s_mean": 0.20855311347258976,
+      "smoothing_s_mean": 30.777586226028987,
+      "optimization_s_mean": null,
+      "retime_s_mean": 0.0327691059723697,
+      "validation_s_mean": 1.0000365533350204,
+      "valid_coverage_mean_executed": 0.9999999999999919,
+      "acceleration_max_mean_executed": 0.8293615852283706
+    },
+    {
+      "robot": "ur5e",
+      "method": "G",
+      "scheduled_scenes": 12,
+      "implementation_ready": true,
+      "timed_scenes": 12,
+      "reference_missing_scenes": 0,
+      "shared_b1_missing_scenes": 0,
+      "planner_feasible_scene_equivalents": 12.0,
+      "initialization_attempted_scenes": 12,
+      "initialization_success_scene_equivalents": 12.0,
+      "physics_executed_scenes": 12,
+      "execution_completed_scenes": 12,
+      "quality_completed_scenes": 12,
+      "quality_rate_all_scheduled": 1.0,
+      "quality_execution_s_mean": 21.47183333333659,
+      "quality_execution_s_median": 20.528500000002104,
+      "planning_s_mean": 32.37633469497006,
+      "planning_s_median": 32.37083904516476,
+      "planning_s_p95": 32.91422611546222,
+      "predicted_execution_s_mean": 21.27226256231103,
+      "initial_s_mean": 0.20855388463921068,
+      "smoothing_s_mean": 30.849749142335188,
+      "optimization_s_mean": null,
+      "retime_s_mean": 0.03274411272165404,
+      "validation_s_mean": 0.9994278364174534,
+      "valid_coverage_mean_executed": 0.9999999999999919,
+      "acceleration_max_mean_executed": 0.8293615852283706
+    },
+    {
+      "robot": "ur5e",
+      "method": "B2",
+      "scheduled_scenes": 12,
+      "implementation_ready": true,
+      "timed_scenes": 12,
+      "reference_missing_scenes": 0,
+      "shared_b1_missing_scenes": 0,
+      "planner_feasible_scene_equivalents": 12.0,
+      "initialization_attempted_scenes": 0,
+      "initialization_success_scene_equivalents": 0,
+      "physics_executed_scenes": 12,
+      "execution_completed_scenes": 12,
+      "quality_completed_scenes": 12,
+      "quality_rate_all_scheduled": 1.0,
+      "quality_execution_s_mean": 21.424416666669867,
+      "quality_execution_s_median": 20.503500000002077,
+      "planning_s_mean": 64.2089981370013,
+      "planning_s_median": 64.56028897767101,
+      "planning_s_p95": 65.19549467409306,
+      "predicted_execution_s_mean": 21.224921339386174,
+      "initial_s_mean": 32.272811685666966,
+      "smoothing_s_mean": null,
+      "optimization_s_mean": 30.204391864637728,
+      "retime_s_mean": 0.03272308297285539,
+      "validation_s_mean": 1.0048393988052138,
+      "valid_coverage_mean_executed": 0.9999999999999919,
+      "acceleration_max_mean_executed": 0.8266902800363978
+    }
+  ],
+  "b2_calibration": [
+    {
+      "problem": "cylinder",
+      "status": "validated",
+      "initial_s": 26.34881928876321,
+      "known_faster_s": 26.107938915370084,
+      "adopted_s": 18.265929848590638,
+      "initial_actual_s": 26.548000000009463,
+      "adopted_actual_s": 18.464999999999584,
+      "known_faster_actual_s": 26.307000000009168,
+      "objective_directional_error": 1.024836118745931e-11,
+      "constraints_directional_max_error": 7.103843649436392e-08,
+      "constraints_scaled_relative_error": 5.766005640051446e-08,
+      "epsilon": 1e-06
+    },
+    {
+      "problem": "plane",
+      "status": "validated",
+      "initial_s": 19.435180326239788,
+      "known_faster_s": 19.421907379752458,
+      "adopted_s": 18.089187062358995,
+      "initial_actual_s": 19.635000000001014,
+      "adopted_actual_s": 18.28899999999937,
+      "known_faster_actual_s": 19.621000000000997,
+      "objective_directional_error": 2.3106298970530792e-10,
+      "constraints_directional_max_error": 5.754999255879606e-08,
+      "constraints_scaled_relative_error": 5.7455052962075365e-08,
+      "epsilon": 1e-06
+    },
+    {
+      "problem": "saddle",
+      "status": "validated",
+      "initial_s": 20.216123911545765,
+      "known_faster_s": 19.94546434206216,
+      "adopted_s": 18.335461016949804,
+      "initial_actual_s": 20.41600000000197,
+      "adopted_actual_s": 18.53499999999967,
+      "known_faster_actual_s": 20.145000000001637,
+      "objective_directional_error": 2.651170857013215e-10,
+      "constraints_directional_max_error": 5.64234433619859e-08,
+      "constraints_scaled_relative_error": 4.9862233982332834e-08,
+      "epsilon": 1e-06
+    }
+  ],
+  "reference_count": 24,
+  "failure_rows": [
+    {
+      "slot": "panda_cylinder_p0_u",
+      "scene_uid": "1d626ca03a345e6601c064a6a0c00a1a9212ee8924f6c3978e4ae4fa19bcc8eb",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "geometric_initialization_failed"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p0_u",
+      "scene_uid": "1d626ca03a345e6601c064a6a0c00a1a9212ee8924f6c3978e4ae4fa19bcc8eb",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p0_u",
+      "scene_uid": "1d626ca03a345e6601c064a6a0c00a1a9212ee8924f6c3978e4ae4fa19bcc8eb",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p0_u",
+      "scene_uid": "1d626ca03a345e6601c064a6a0c00a1a9212ee8924f6c3978e4ae4fa19bcc8eb",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "common_b1_initialization_missing"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "scene_uid": "84054da21481d1359c181b6fcd2262b0249f857876c17df848868534df6762c8",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "scene_uid": "84054da21481d1359c181b6fcd2262b0249f857876c17df848868534df6762c8",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "scene_uid": "84054da21481d1359c181b6fcd2262b0249f857876c17df848868534df6762c8",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_cylinder_p0_v",
+      "scene_uid": "84054da21481d1359c181b6fcd2262b0249f857876c17df848868534df6762c8",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_cylinder_p1_u",
+      "scene_uid": "406af3b20ab059ba4ba3b0119a5c6adf254d03bdeae9dfa5c1b0f474ba4cf06d",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "geometric_initialization_failed"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p1_u",
+      "scene_uid": "406af3b20ab059ba4ba3b0119a5c6adf254d03bdeae9dfa5c1b0f474ba4cf06d",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p1_u",
+      "scene_uid": "406af3b20ab059ba4ba3b0119a5c6adf254d03bdeae9dfa5c1b0f474ba4cf06d",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p1_u",
+      "scene_uid": "406af3b20ab059ba4ba3b0119a5c6adf254d03bdeae9dfa5c1b0f474ba4cf06d",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "common_b1_initialization_missing"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p1_v",
+      "scene_uid": "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "geometric_initialization_failed"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p1_v",
+      "scene_uid": "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p1_v",
+      "scene_uid": "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_cylinder_p1_v",
+      "scene_uid": "be62d5dee820b8e320fc3af1c85548a704ca13694693c4f95b1ee71fb14e2609",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "common_b1_initialization_missing"
+      ]
+    },
+    {
+      "slot": "panda_plane_p0_u",
+      "scene_uid": "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p0_u",
+      "scene_uid": "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p0_u",
+      "scene_uid": "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p0_u",
+      "scene_uid": "5d5a023d5f637f0869c78b3e99c42c4dfd57402d820a31236667cdffd46ab609",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "scene_uid": "f3f3897b5f524fd2bf769f27b0ff33b7489cd38286aa0a3aef7bd1de2cff55db",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "scene_uid": "f3f3897b5f524fd2bf769f27b0ff33b7489cd38286aa0a3aef7bd1de2cff55db",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "scene_uid": "f3f3897b5f524fd2bf769f27b0ff33b7489cd38286aa0a3aef7bd1de2cff55db",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p0_v",
+      "scene_uid": "f3f3897b5f524fd2bf769f27b0ff33b7489cd38286aa0a3aef7bd1de2cff55db",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p1_u",
+      "scene_uid": "dc500163bea8d607c8f6676fccd669f938cace853f762bdc955d3710e5f2bae9",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "geometric_initialization_failed"
+      ]
+    },
+    {
+      "slot": "panda_plane_p1_u",
+      "scene_uid": "dc500163bea8d607c8f6676fccd669f938cace853f762bdc955d3710e5f2bae9",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_plane_p1_u",
+      "scene_uid": "dc500163bea8d607c8f6676fccd669f938cace853f762bdc955d3710e5f2bae9",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_plane_p1_u",
+      "scene_uid": "dc500163bea8d607c8f6676fccd669f938cace853f762bdc955d3710e5f2bae9",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "common_b1_initialization_missing"
+      ]
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "scene_uid": "e283b88390fe538a85d2694079d62454b1b3aa046d100f8504b4a66d9736b8d5",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "scene_uid": "e283b88390fe538a85d2694079d62454b1b3aa046d100f8504b4a66d9736b8d5",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "scene_uid": "e283b88390fe538a85d2694079d62454b1b3aa046d100f8504b4a66d9736b8d5",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_plane_p1_v",
+      "scene_uid": "e283b88390fe538a85d2694079d62454b1b3aa046d100f8504b4a66d9736b8d5",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "scene_uid": "f6c31864e2ce3e5c2e19b914f5e5b132c9658310d934a68e88ca62a1b777611b",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "scene_uid": "f6c31864e2ce3e5c2e19b914f5e5b132c9658310d934a68e88ca62a1b777611b",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "scene_uid": "f6c31864e2ce3e5c2e19b914f5e5b132c9658310d934a68e88ca62a1b777611b",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_saddle_p0_u",
+      "scene_uid": "f6c31864e2ce3e5c2e19b914f5e5b132c9658310d934a68e88ca62a1b777611b",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_saddle_p0_v",
+      "scene_uid": "ddbaccae4d1e1e90b7da2315bf852ee615b4daba879473cd6ddfe24006fb6108",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "geometric_initialization_failed"
+      ]
+    },
+    {
+      "slot": "panda_saddle_p0_v",
+      "scene_uid": "ddbaccae4d1e1e90b7da2315bf852ee615b4daba879473cd6ddfe24006fb6108",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_saddle_p0_v",
+      "scene_uid": "ddbaccae4d1e1e90b7da2315bf852ee615b4daba879473cd6ddfe24006fb6108",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_saddle_p0_v",
+      "scene_uid": "ddbaccae4d1e1e90b7da2315bf852ee615b4daba879473cd6ddfe24006fb6108",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "common_b1_initialization_missing"
+      ]
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "scene_uid": "9ced85a1ec2cd96c165d3ed941ec82457e30e182c4d037796ec472ed639f71b3",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "scene_uid": "9ced85a1ec2cd96c165d3ed941ec82457e30e182c4d037796ec472ed639f71b3",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "scene_uid": "9ced85a1ec2cd96c165d3ed941ec82457e30e182c4d037796ec472ed639f71b3",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_saddle_p1_u",
+      "scene_uid": "9ced85a1ec2cd96c165d3ed941ec82457e30e182c4d037796ec472ed639f71b3",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "panda_saddle_p1_v",
+      "scene_uid": "5f43b4d6461fcea3fe8ed7073c7de83186d13133f6cb072fc4eb2c12336a6b6c",
+      "robot": "panda",
+      "method": "B0",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "dense_geometry_or_timing_failed"
+      ]
+    },
+    {
+      "slot": "panda_saddle_p1_v",
+      "scene_uid": "5f43b4d6461fcea3fe8ed7073c7de83186d13133f6cb072fc4eb2c12336a6b6c",
+      "robot": "panda",
+      "method": "B1",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_saddle_p1_v",
+      "scene_uid": "5f43b4d6461fcea3fe8ed7073c7de83186d13133f6cb072fc4eb2c12336a6b6c",
+      "robot": "panda",
+      "method": "G",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "no_verified_path_at_primary_checkpoint"
+      ]
+    },
+    {
+      "slot": "panda_saddle_p1_v",
+      "scene_uid": "5f43b4d6461fcea3fe8ed7073c7de83186d13133f6cb072fc4eb2c12336a6b6c",
+      "robot": "panda",
+      "method": "B2",
+      "quality_completed": null,
+      "physics_executed": false,
+      "nonexclusive_reasons": [
+        "common_b1_initialization_missing"
+      ]
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "scene_uid": "5d9aac3d7faa587a77b4ef01338725dc9ae7ca13f0a04df57de39f2cb095a9ac",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "scene_uid": "5d9aac3d7faa587a77b4ef01338725dc9ae7ca13f0a04df57de39f2cb095a9ac",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "scene_uid": "5d9aac3d7faa587a77b4ef01338725dc9ae7ca13f0a04df57de39f2cb095a9ac",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p0_u",
+      "scene_uid": "5d9aac3d7faa587a77b4ef01338725dc9ae7ca13f0a04df57de39f2cb095a9ac",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "scene_uid": "b181f4aea3dacadfb66671a2eea89b411650ea76f729a02a7b8c5f249579c5f5",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "scene_uid": "b181f4aea3dacadfb66671a2eea89b411650ea76f729a02a7b8c5f249579c5f5",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "scene_uid": "b181f4aea3dacadfb66671a2eea89b411650ea76f729a02a7b8c5f249579c5f5",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p0_v",
+      "scene_uid": "b181f4aea3dacadfb66671a2eea89b411650ea76f729a02a7b8c5f249579c5f5",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "scene_uid": "78356a8fe9f1e85ce2b8185467eefe91275f3763ead11629ba2fd1962fc65f9a",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "scene_uid": "78356a8fe9f1e85ce2b8185467eefe91275f3763ead11629ba2fd1962fc65f9a",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "scene_uid": "78356a8fe9f1e85ce2b8185467eefe91275f3763ead11629ba2fd1962fc65f9a",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p1_u",
+      "scene_uid": "78356a8fe9f1e85ce2b8185467eefe91275f3763ead11629ba2fd1962fc65f9a",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "scene_uid": "2d20f99cf6c82aa207e523443bbea9c8b2f83a71121fed63556e715ac9a2a97f",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "scene_uid": "2d20f99cf6c82aa207e523443bbea9c8b2f83a71121fed63556e715ac9a2a97f",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "scene_uid": "2d20f99cf6c82aa207e523443bbea9c8b2f83a71121fed63556e715ac9a2a97f",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_cylinder_p1_v",
+      "scene_uid": "2d20f99cf6c82aa207e523443bbea9c8b2f83a71121fed63556e715ac9a2a97f",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "scene_uid": "74c4b355832ae88369ec214894ab6b8c7e91246fa0de0bbe376637861cd8eed7",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "scene_uid": "74c4b355832ae88369ec214894ab6b8c7e91246fa0de0bbe376637861cd8eed7",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "scene_uid": "74c4b355832ae88369ec214894ab6b8c7e91246fa0de0bbe376637861cd8eed7",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p0_u",
+      "scene_uid": "74c4b355832ae88369ec214894ab6b8c7e91246fa0de0bbe376637861cd8eed7",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "scene_uid": "b4cbe6298b4c8842e3d61c4c05cef1b634d1de760788b1ccb4c7c2647062845b",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "scene_uid": "b4cbe6298b4c8842e3d61c4c05cef1b634d1de760788b1ccb4c7c2647062845b",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "scene_uid": "b4cbe6298b4c8842e3d61c4c05cef1b634d1de760788b1ccb4c7c2647062845b",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p0_v",
+      "scene_uid": "b4cbe6298b4c8842e3d61c4c05cef1b634d1de760788b1ccb4c7c2647062845b",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "scene_uid": "403cb6773f1a1675c7f7f184c8e8c74848c8e1cd56930a8f81eb78de27e1428a",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "scene_uid": "403cb6773f1a1675c7f7f184c8e8c74848c8e1cd56930a8f81eb78de27e1428a",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "scene_uid": "403cb6773f1a1675c7f7f184c8e8c74848c8e1cd56930a8f81eb78de27e1428a",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p1_u",
+      "scene_uid": "403cb6773f1a1675c7f7f184c8e8c74848c8e1cd56930a8f81eb78de27e1428a",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "scene_uid": "26227b24cb54fbd1ee1f9a2ff9548fd6b42ce382e7b92e4713c9a7c4eba0431e",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "scene_uid": "26227b24cb54fbd1ee1f9a2ff9548fd6b42ce382e7b92e4713c9a7c4eba0431e",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "scene_uid": "26227b24cb54fbd1ee1f9a2ff9548fd6b42ce382e7b92e4713c9a7c4eba0431e",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_plane_p1_v",
+      "scene_uid": "26227b24cb54fbd1ee1f9a2ff9548fd6b42ce382e7b92e4713c9a7c4eba0431e",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "scene_uid": "512f782109f8188da0d9abc0c832e86278e011a39690b19c4fd78abb5a46d0f5",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "scene_uid": "512f782109f8188da0d9abc0c832e86278e011a39690b19c4fd78abb5a46d0f5",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "scene_uid": "512f782109f8188da0d9abc0c832e86278e011a39690b19c4fd78abb5a46d0f5",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p0_u",
+      "scene_uid": "512f782109f8188da0d9abc0c832e86278e011a39690b19c4fd78abb5a46d0f5",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "scene_uid": "36b3d3486fc1b60616750c9293d770932ac4609219d8fed3920864fd4b552a68",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "scene_uid": "36b3d3486fc1b60616750c9293d770932ac4609219d8fed3920864fd4b552a68",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "scene_uid": "36b3d3486fc1b60616750c9293d770932ac4609219d8fed3920864fd4b552a68",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p0_v",
+      "scene_uid": "36b3d3486fc1b60616750c9293d770932ac4609219d8fed3920864fd4b552a68",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "scene_uid": "131c413eea68307c7e2869678e592255d46b9ff65ebdafcb0874ee15554f5ed5",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "scene_uid": "131c413eea68307c7e2869678e592255d46b9ff65ebdafcb0874ee15554f5ed5",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "scene_uid": "131c413eea68307c7e2869678e592255d46b9ff65ebdafcb0874ee15554f5ed5",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p1_u",
+      "scene_uid": "131c413eea68307c7e2869678e592255d46b9ff65ebdafcb0874ee15554f5ed5",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "scene_uid": "88778a5202fca058c5e99dc6c571ebc77b922de005dac1eb6c79648bfb8c2dc8",
+      "robot": "ur5e",
+      "method": "B0",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "scene_uid": "88778a5202fca058c5e99dc6c571ebc77b922de005dac1eb6c79648bfb8c2dc8",
+      "robot": "ur5e",
+      "method": "B1",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "scene_uid": "88778a5202fca058c5e99dc6c571ebc77b922de005dac1eb6c79648bfb8c2dc8",
+      "robot": "ur5e",
+      "method": "G",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    },
+    {
+      "slot": "ur5e_saddle_p1_v",
+      "scene_uid": "88778a5202fca058c5e99dc6c571ebc77b922de005dac1eb6c79648bfb8c2dc8",
+      "robot": "ur5e",
+      "method": "B2",
+      "quality_completed": true,
+      "physics_executed": true,
+      "nonexclusive_reasons": []
+    }
+  ],
+  "paired_intervals": [
+    {
+      "robot": "panda",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "quality_completed",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "quality_execution_s",
+      "paired_scenes": 6,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "cluster_count": 5.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "quality_execution_s_ratio",
+      "paired_scenes": 6,
+      "mean_ratio": 1.0,
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "cluster_count": 5
+    },
+    {
+      "robot": "panda",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "total_plan_wall_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -0.031209696443612305,
+      "ci_lower": -0.12323958574820064,
+      "ci_upper": 0.042247769968515494,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "total_plan_wall_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 0.9990266841380986,
+      "ci_lower": 0.9961508117598689,
+      "ci_upper": 1.0013142324988666,
+      "cluster_count": 6
+    },
+    {
+      "robot": "panda",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "T_init",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.00105281547156563,
+      "ci_lower": 0.00048308886790537697,
+      "ci_upper": 0.001596513498144397,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "predicted_execution_s",
+      "paired_scenes": 6,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "cluster_count": 5.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "predicted_execution_s_ratio",
+      "paired_scenes": 6,
+      "mean_ratio": 1.0,
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "cluster_count": 5
+    },
+    {
+      "robot": "panda",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "quality_completed",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "quality_execution_s",
+      "paired_scenes": 6,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -0.42820000000052333,
+      "ci_lower": -0.8358000000010215,
+      "ci_upper": -0.14380000000017573,
+      "cluster_count": 5.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "quality_execution_s_ratio",
+      "paired_scenes": 6,
+      "mean_ratio": 0.9808577789301262,
+      "ci_lower": 0.9610219333570167,
+      "ci_upper": 0.9937807072174873,
+      "cluster_count": 5
+    },
+    {
+      "robot": "panda",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "total_plan_wall_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 31.157295752361986,
+      "ci_lower": 30.953352787824798,
+      "ci_upper": 31.36428623128207,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "total_plan_wall_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 36.5341529534164,
+      "ci_lower": 26.893655422389365,
+      "ci_upper": 57.72747472674617,
+      "cluster_count": 6
+    },
+    {
+      "robot": "panda",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "T_init",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -0.031235099637544613,
+      "ci_lower": -0.09169328402640531,
+      "ci_upper": 0.031229153774701344,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "predicted_execution_s",
+      "paired_scenes": 6,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -0.4283130285506168,
+      "ci_lower": -0.8357869023918199,
+      "ci_upper": -0.14401089287169883,
+      "cluster_count": 5.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "predicted_execution_s_ratio",
+      "paired_scenes": 6,
+      "mean_ratio": 0.980680420834689,
+      "ci_lower": 0.9606507291900395,
+      "ci_upper": 0.9937174153892637,
+      "cluster_count": 5
+    },
+    {
+      "robot": "panda",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "quality_completed",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "quality_execution_s",
+      "paired_scenes": 6,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -0.08350000000010205,
+      "ci_lower": -0.1693000000002069,
+      "ci_upper": -0.019200000000023466,
+      "cluster_count": 5.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "quality_execution_s_ratio",
+      "paired_scenes": 6,
+      "mean_ratio": 0.9961943740542863,
+      "ci_lower": 0.9921514518917969,
+      "ci_upper": 0.9991276533876114,
+      "cluster_count": 5
+    },
+    {
+      "robot": "panda",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "total_plan_wall_s",
+      "paired_scenes": 6,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 32.49144701403371,
+      "ci_lower": 32.18045475050167,
+      "ci_upper": 32.7558787675652,
+      "cluster_count": 5.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "total_plan_wall_s_ratio",
+      "paired_scenes": 6,
+      "mean_ratio": 1.9908388001782966,
+      "ci_lower": 1.9700700155747815,
+      "ci_upper": 2.0124597644171773,
+      "cluster_count": 5
+    },
+    {
+      "robot": "panda",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "T_init",
+      "paired_scenes": 6,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 32.613178164099615,
+      "ci_lower": 32.027387112789995,
+      "ci_upper": 33.27142788896841,
+      "cluster_count": 5.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "predicted_execution_s",
+      "paired_scenes": 6,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -0.08326788295526662,
+      "ci_lower": -0.168871384964579,
+      "ci_upper": -0.019047884939102033,
+      "cluster_count": 5.0
+    },
+    {
+      "robot": "panda",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "predicted_execution_s_ratio",
+      "paired_scenes": 6,
+      "mean_ratio": 0.996170109165035,
+      "ci_lower": 0.9920989125495246,
+      "ci_upper": 0.9991266453212886,
+      "cluster_count": 5
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "quality_completed",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "quality_execution_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "quality_execution_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 1.0,
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "cluster_count": 6
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "total_plan_wall_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -0.07087515613764328,
+      "ci_lower": -0.19065560711007645,
+      "ci_upper": 0.02749821524127297,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "total_plan_wall_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 0.9978108962362359,
+      "ci_lower": 0.9941208642505127,
+      "ci_upper": 1.0008439925584738,
+      "cluster_count": 6
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "T_init",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -7.711666209335907e-07,
+      "ci_lower": -0.0021765692763437983,
+      "ci_upper": 0.0014002183876679387,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "predicted_execution_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "G",
+      "method": "B1",
+      "metric": "predicted_execution_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 1.0,
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "cluster_count": 6
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "quality_completed",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "quality_execution_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.06225000000007608,
+      "ci_lower": -0.08250000000010083,
+      "ci_upper": 0.18291666666689022,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "quality_execution_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 1.0029075764357895,
+      "ci_lower": 0.9964104423495251,
+      "ci_upper": 1.0088931410186641,
+      "cluster_count": 6
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "total_plan_wall_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 30.942585153276422,
+      "ci_lower": 30.77005348200937,
+      "ci_upper": 31.19094663372137,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "total_plan_wall_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 23.70391569554162,
+      "ci_lower": 23.371982580735104,
+      "ci_upper": 24.047145953299236,
+      "cluster_count": 6
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "T_init",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -0.09950505533359116,
+      "ci_lower": -0.1138934859465937,
+      "ci_upper": -0.0847412601463778,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "predicted_execution_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.062144402760313966,
+      "ci_lower": -0.08259483017076086,
+      "ci_upper": 0.18267411826823654,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B0",
+      "method": "B1",
+      "metric": "predicted_execution_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 1.0029299413748118,
+      "ci_lower": 0.996374860003244,
+      "ci_upper": 1.0089720081483686,
+      "cluster_count": 6
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "quality_completed",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "quality_execution_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -0.047416666666724616,
+      "ci_lower": -0.08383333333343579,
+      "ci_upper": -0.019583333333357267,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "quality_execution_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 0.9977916805737727,
+      "ci_lower": 0.995982075102441,
+      "ci_upper": 0.9991132752035954,
+      "cluster_count": 6
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "total_plan_wall_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 31.903538598168875,
+      "ci_lower": 31.239486514639182,
+      "ci_upper": 32.29314087027848,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "total_plan_wall_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 1.9875587301217486,
+      "ci_lower": 1.9682617353598832,
+      "ci_upper": 2.002069771291673,
+      "cluster_count": 6
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "T_init",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": 32.064258572194376,
+      "ci_lower": 31.877429555720784,
+      "ci_upper": 32.31073380708606,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "predicted_execution_s",
+      "paired_scenes": 12,
+      "interpretation": "quality durations only on jointly quality-complete scenes; missing non-time outcomes count in all-scene yield, not as algorithm infeasibility",
+      "mean_difference": -0.047341222924864944,
+      "ci_lower": -0.08358562885875169,
+      "ci_upper": -0.019583756370926093,
+      "cluster_count": 6.0
+    },
+    {
+      "robot": "ur5e",
+      "baseline": "B1",
+      "method": "B2",
+      "metric": "predicted_execution_s_ratio",
+      "paired_scenes": 12,
+      "mean_ratio": 0.9977745092800451,
+      "ci_lower": 0.9959552412118488,
+      "ci_upper": 0.9991064172299068,
+      "cluster_count": 6
+    }
+  ]
+}

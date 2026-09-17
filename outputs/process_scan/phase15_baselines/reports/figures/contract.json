@@ -1,0 +1,11 @@
+{
+  "conclusion": "Distinguish verified baseline capability, realized quality, and execution bottlenecks.",
+  "archetype": "quantitative grid",
+  "backend": "Python matplotlib",
+  "unit": "scene; timing repeats averaged within scene",
+  "paired_intervals": "six CAD-placement clusters per robot; directions nested",
+  "plots": "all scene values or explicitly qualified paired subsets; no plotted inferential bars",
+  "limits": "Missing/failing paths count against all-scene yield; no formal or proposed-method result",
+  "export": "editable SVG, vector PDF, 300 dpi PNG; minimum 6 pt",
+  "source": "reports CSV and immutable recorded execution"
+}
